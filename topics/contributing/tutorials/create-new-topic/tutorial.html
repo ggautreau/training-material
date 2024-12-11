@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@8e77bd1ffe6fae868d4dba1efb603799812490c1",
+		release: "galaxy-training-network@5101fc4d5cd04c451b953c3721f4b4f93b626698",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2021,8 +2021,283 @@ We decided to put it in “Sequence analysis” because this is the most general
 	
 		
 	
+		
+	
+		
+	
 
 	
+	
+		
+			
+			
+			
+
+			<blockquote class="tip">
+
+	<div class="box-title">
+		
+		<button type="button" aria-expanded="true" aria-label="Toggle tip box: community_ctas">
+			<i class="far fa-lightbulb" aria-hidden="true"></i>
+			
+				<code>community_ctas</code>
+			
+			<span role="button" class="fold-unfold fa fa-plus-square"></span>
+		</button>
+		
+	</div>
+
+<b>List of Items</b>
+
+<p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+		
+		<blockquote class="tip">
+
+	<div class="box-title">
+		
+		<button type="button" aria-expanded="true" aria-label="Toggle tip box: Sequence Value (List of items)">
+			<i class="far fa-lightbulb" aria-hidden="true"></i>
+			
+				<code>Sequence Value (List of items)</code>
+			
+			<span role="button" class="fold-unfold fa fa-plus-square"></span>
+		</button>
+		
+	</div>
+
+<b>A dictionary/map</b>
+
+<p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+			
+			
+			
+
+			<blockquote class="comment">
+
+	<div class="box-title">
+		
+			
+				(Required) <code>description</code>
+			
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+<p>Some text to go along with the call to action</p>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+		
+	
+		
+			
+			
+			
+
+			<blockquote class="comment">
+
+	<div class="box-title">
+		
+			
+				(Required) <code>link</code>
+			
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+<p>A link target (full qualified please)</p>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+		
+	
+		
+			
+			
+			
+
+			<blockquote class="comment">
+
+	<div class="box-title">
+		
+			
+				(Required) <code>link_text</code>
+			
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+<p>What goes on the button</p>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+		
+	
+		
+	
+
+	
+	
+		
+	
+		
+			
+			
+			
+
+			<blockquote class="tip">
+
+	<div class="box-title">
+		
+		<button type="button" aria-expanded="true" aria-label="Toggle tip box: icon">
+			<i class="far fa-lightbulb" aria-hidden="true"></i>
+			
+				<code>icon</code>
+			
+			<span role="button" class="fold-unfold fa fa-plus-square"></span>
+		</button>
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+<p>One of the icons from _config.yml</p>
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+		
+	
+		
+	
+		
+	
+
+</blockquote>
+
+	
+
+</blockquote>
+
+		
 	
 		
 			
@@ -2346,6 +2621,111 @@ We decided to put it in “Sequence analysis” because this is the most general
 
 
 
+
+</blockquote>
+
+		
+	
+		
+			
+			
+			
+
+			<blockquote class="tip">
+
+	<div class="box-title">
+		
+		<button type="button" aria-expanded="true" aria-label="Toggle tip box: learning_path_ctas">
+			<i class="far fa-lightbulb" aria-hidden="true"></i>
+			
+				<code>learning_path_ctas</code>
+			
+			<span role="button" class="fold-unfold fa fa-plus-square"></span>
+		</button>
+		
+	</div>
+
+<b>A dictionary/map</b>
+
+<p>
+<p>The specific learning path you wish to reference as a call-to-action for views who aren’t sure where to get started.</p>
+
+<p>It must be the name of a file in learning-pathways, without the <code class="language-plaintext highlighter-rouge">.md</code> suffix. This is not validated so, please make sure it’s correct :)</p>
+
+</p>
+
+
+
+
+
+
+
+
+<p>
+	<b>Example(s)</b><div>
+        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">For Beginners</span><span class="pi">:</span> <span class="s">intro_single_cell</span>
+<span class="na">For Intermediate Users</span><span class="pi">:</span> <span class="s">intermediate_single_cell</span>
+<span class="na">For Coding Enthusiasts</span><span class="pi">:</span> <span class="s">coding_single_cell</span>
+
+</code></pre></div>        </div>
+      </div></p>
+
+
+
+
+
+
+
+
+
+	
+	
+		
+			
+			
+			
+
+			<blockquote class="comment">
+
+	<div class="box-title">
+		
+			
+				Any key permitted
+			
+		
+	</div>
+
+<b>Free Text</b>
+
+<p>
+
+
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</blockquote>
+
+		
+	
+
+	
+	
+		
+	
 
 </blockquote>
 
@@ -4074,7 +4454,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8e77bd1ffe6fae868d4dba1efb603799812490c1">8e77bd1</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5101fc4d5cd04c451b953c3721f4b4f93b626698">5101fc4</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

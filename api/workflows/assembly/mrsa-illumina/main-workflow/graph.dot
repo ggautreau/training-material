@@ -8,23 +8,23 @@ digraph main {
   3[label="fastp"]
   1 -> 3 [label="output"]
   0 -> 3 [label="output"]
-  k80423ceed7ed441f92de09d97f7562fd[color=lightseagreen,label="Output\nfastp_json"]
-  3 -> k80423ceed7ed441f92de09d97f7562fd
+  k6e707bc2cc55482b925826b6532135d7[color=lightseagreen,label="Output\nfastp_json"]
+  3 -> k6e707bc2cc55482b925826b6532135d7
   4[label="FastQC"]
   1 -> 4 [label="output"]
   5[label="Shovill"]
   3 -> 5 [label="out1"]
   3 -> 5 [label="out2"]
-  k1a31d12c5a0141ac9a7a9d1f23959460[color=lightseagreen,label="Output\nshovill_log"]
-  5 -> k1a31d12c5a0141ac9a7a9d1f23959460
+  k4653c2ed9eea4bc2beef6fe28ce318dc[color=lightseagreen,label="Output\nshovill_log"]
+  5 -> k4653c2ed9eea4bc2beef6fe28ce318dc
   6[label="Quast"]
   5 -> 6 [label="contigs"]
-  k700b53150aae44658d9519ae1c6b0aac[color=lightseagreen,label="Output\nquast_output"]
-  6 -> k700b53150aae44658d9519ae1c6b0aac
+  kb2ccbd0cf2ff432ca7b10b8f7079e136[color=lightseagreen,label="Output\nquast_output"]
+  6 -> kb2ccbd0cf2ff432ca7b10b8f7079e136
   7[label="Bandage Image"]
   5 -> 7 [label="contigs_graph"]
   8[label="Bandage Info"]
   5 -> 8 [label="contigs_graph"]
-  k8f6ec576bcc741e486ab2962a16c190b[color=lightseagreen,label="Output\nbandage_info_output"]
-  8 -> k8f6ec576bcc741e486ab2962a16c190b
+  k1adf00d6591f485ea65d3f0e7e47ed1f[color=lightseagreen,label="Output\nbandage_info_output"]
+  8 -> k1adf00d6591f485ea65d3f0e7e47ed1f
 }
