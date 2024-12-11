@@ -73,6 +73,7 @@
 
   <ul class="link-list" role="directory">
     <li ><a href="#method-c-discover_faqs">::discover_faqs</a>
+    <li ><a href="#method-i-acceptable_tool-3F">#acceptable_tool?</a>
     <li ><a href="#method-i-all_date_sorted_materials">#all_date_sorted_materials</a>
     <li ><a href="#method-i-automagic_loading">#automagic_loading</a>
     <li ><a href="#method-i-build_news">#build_news</a>
@@ -89,6 +90,7 @@
     <li ><a href="#method-i-find_duration">#find_duration</a>
     <li ><a href="#method-i-fixEvents">#fixEvents</a>
     <li ><a href="#method-i-fixNews">#fixNews</a>
+    <li ><a href="#method-i-fix_version">#fix_version</a>
     <li ><a href="#method-i-format_contents">#format_contents</a>
     <li ><a href="#method-i-format_events">#format_events</a>
     <li ><a href="#method-i-format_news">#format_news</a>
@@ -130,6 +132,7 @@
     <li ><a href="#method-i-test_workflow">#test_workflow</a>
     <li ><a href="#method-i-timefmt">#timefmt</a>
     <li ><a href="#method-i-titleize">#titleize</a>
+    <li ><a href="#method-i-tool_id_extractor">#tool_id_extractor</a>
     <li ><a href="#method-i-track">#track</a>
     <li ><a href="#method-i-translate">#translate</a>
     <li ><a href="#method-i-unsafe_slugify">#unsafe_slugify</a>
@@ -162,6 +165,10 @@
         <h3>Constants</h3>
       </header>
       <dl>
+        <dt id="ALLOWED_LOWER_SHORT_IDS">ALLOWED_LOWER_SHORT_IDS
+        <dd>
+        <dt id="ALLOWED_SHORT_IDS">ALLOWED_SHORT_IDS
+        <dd>
         <dt id="APPROVED_VOICES">APPROVED_VOICES
         <dd>
         <dt id="ARI_MAP">ARI_MAP
@@ -271,6 +278,62 @@
        <header>
          <h3>Public Instance Methods</h3>
        </header>
+
+      <div id="method-i-acceptable_tool-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">acceptable_tool?</span><span
+              class="method-args">(tool_id)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="acceptable_tool-3F-source">
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 103</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">acceptable_tool?</span>(<span class="ruby-identifier">tool_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Public TS links are fine</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&#39;toolshed.g2.bx.psu.edu&#39;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># These are always allowed (mostly built-ins)</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">ALLOWED_LOWER_SHORT_IDS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">downcase</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">tool_id</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/^__.*__$/</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&#39;interactive_tool_&#39;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&#39;CONVERTER_&#39;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Templated tool IDs are hopefully fine!</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&#39;{{&#39;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Just the tutorial</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tool_id</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-string">&#39;Toolshed ID&#39;</span>)
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Unacceptable</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
 
       <div id="method-i-all_date_sorted_materials" class="method-detail ">
         <div class="method-header">
@@ -651,7 +714,7 @@
           
 
           <div class="method-source-code" id="collapse_event_date_pretty-source">
-            <pre><span class="ruby-comment"># File _plugins/util.rb, line 9</span>
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 41</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">collapse_event_date_pretty</span>(<span class="ruby-identifier">event</span>)
   <span class="ruby-identifier">s</span> = <span class="ruby-identifier">event</span>[<span class="ruby-string">&#39;date_start&#39;</span>]
   <span class="ruby-identifier">e</span> = <span class="ruby-keyword">if</span> <span class="ruby-identifier">event</span>[<span class="ruby-string">&#39;date_end&#39;</span>].<span class="ruby-identifier">nil?</span>
@@ -995,6 +1058,36 @@
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fixNews</span>(<span class="ruby-identifier">n</span>)
   <span class="ruby-comment"># news/_posts/2021-11-10-api.html =&gt; news/2021/11/10/api.html</span>
   <span class="ruby-identifier">n</span>[<span class="ruby-value">:md</span>].<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">%r{news/_posts/(....)-(..)-(..)-(.*.html)}</span>, <span class="ruby-string">&#39;news/\1/\2/\3/\4&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-fix_version" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">fix_version</span><span
+              class="method-args">(version)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="fix_version-source">
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fix_version</span>(<span class="ruby-identifier">version</span>)
+  <span class="ruby-identifier">version</span>
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;_beta+galaxy&#39;</span>, <span class="ruby-string">&#39;+galaxy&#39;</span>)
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^([0-9]+)_([0-9]+)_([0-9]+)\+galaxy(.+)/</span>, <span class="ruby-string">&#39;\1.\2.\3galaxy\4&#39;</span>)
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^([0-9]+)\+galaxy(.+)/</span>, <span class="ruby-string">&#39;\1.0.0galaxy\2&#39;</span>)
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^([0-9.]+)_([0-9]+)/</span>, <span class="ruby-string">&#39;\1galaxy\2&#39;</span>)
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/_rc(.*)galaxy/</span>, <span class="ruby-string">&#39;rc\1galaxy&#39;</span>)
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;+&#39;</span>, <span class="ruby-string">&#39;&#39;</span>)
+  .<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/^v/</span>, <span class="ruby-string">&#39;&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
         </div>
@@ -2094,7 +2187,7 @@
 <p>Returns: <code>Hash</code> of contributor information</p>
 
           <div class="method-source-code" id="mapContributor-source">
-            <pre><span class="ruby-comment"># File _plugins/api.rb, line 53</span>
+            <pre><span class="ruby-comment"># File _plugins/api.rb, line 55</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">mapContributor</span>(<span class="ruby-identifier">site</span>, <span class="ruby-identifier">c</span>)
   <span class="ruby-identifier">contrib_type</span>, <span class="ruby-identifier">contrib</span> = <span class="ruby-constant">Gtn</span><span class="ruby-operator">::</span><span class="ruby-constant">Contributors</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-identifier">site</span>, <span class="ruby-identifier">c</span>)
   <span class="ruby-identifier">x</span> = <span class="ruby-identifier">contrib</span>
@@ -2133,7 +2226,7 @@
 <p>Returns: <code>String</code> of markdown text</p>
 
           <div class="method-source-code" id="markdownify-source">
-            <pre><span class="ruby-comment"># File _plugins/api.rb, line 19</span>
+            <pre><span class="ruby-comment"># File _plugins/api.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">markdownify</span>(<span class="ruby-identifier">site</span>, <span class="ruby-identifier">text</span>)
   <span class="ruby-identifier">site</span>.<span class="ruby-identifier">find_converter_instance</span>(
     <span class="ruby-constant">Jekyll</span><span class="ruby-operator">::</span><span class="ruby-constant">Converters</span><span class="ruby-operator">::</span><span class="ruby-constant">Markdown</span>
@@ -2460,7 +2553,7 @@
           
 
           <div class="method-source-code" id="safe_load_yaml-source">
-            <pre><span class="ruby-comment"># File _plugins/util.rb, line 3</span>
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">safe_load_yaml</span>(<span class="ruby-identifier">file</span>)
   <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">file</span>)
 <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span>
@@ -2485,7 +2578,7 @@
           
 
           <div class="method-source-code" id="safe_site_config-source">
-            <pre><span class="ruby-comment"># File _plugins/util.rb, line 33</span>
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">safe_site_config</span>(<span class="ruby-identifier">site</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">default</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">site</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">site</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-identifier">key</span>)
     <span class="ruby-identifier">site</span>.<span class="ruby-identifier">config</span>[<span class="ruby-identifier">key</span>]
@@ -2884,6 +2977,37 @@
 
       </div>
 
+      <div id="method-i-tool_id_extractor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">tool_id_extractor</span><span
+              class="method-args">(wf, path: [])</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="tool_id_extractor-source">
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">tool_id_extractor</span>(<span class="ruby-identifier">wf</span>, <span class="ruby-value">path:</span> [])
+  <span class="ruby-identifier">res</span> = []
+  <span class="ruby-identifier">wf</span>[<span class="ruby-string">&#39;steps&#39;</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">step_id</span>, <span class="ruby-identifier">step</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">step</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;subworkflow&#39;</span>)
+      <span class="ruby-identifier">res</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">tool_id_extractor</span>(<span class="ruby-identifier">step</span>[<span class="ruby-string">&#39;subworkflow&#39;</span>], <span class="ruby-value">path:</span> <span class="ruby-identifier">path</span> <span class="ruby-operator">+</span> [<span class="ruby-identifier">step_id</span>])
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">step</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;tool_id&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span> <span class="ruby-identifier">step</span>[<span class="ruby-string">&#39;tool_id&#39;</span>].<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">res</span>.<span class="ruby-identifier">push</span>([<span class="ruby-node">&quot;#{path.join(&#39;/&#39;)}/#{step_id}&quot;</span>, <span class="ruby-identifier">step</span>[<span class="ruby-string">&#39;tool_id&#39;</span>]])
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">res</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
       <div id="method-i-track" class="method-detail ">
         <div class="method-header">
           <div class="method-heading">
@@ -2969,7 +3093,7 @@
           
 
           <div class="method-source-code" id="unsafe_slugify-source">
-            <pre><span class="ruby-comment"># File _plugins/util.rb, line 56</span>
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 88</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">unsafe_slugify</span>(<span class="ruby-identifier">text</span>)
   <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">%r{[&quot;&#39;\\/;:,.!@#$%^&amp;*()]}</span>, <span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/\s/</span>, <span class="ruby-string">&#39;-&#39;</span>).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp">/-+/</span>, <span class="ruby-string">&#39;-&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -3091,7 +3215,7 @@
           
 
           <div class="method-source-code" id="url_prefix-source">
-            <pre><span class="ruby-comment"># File _plugins/util.rb, line 42</span>
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 74</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">url_prefix</span>(<span class="ruby-identifier">site</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">site</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">site</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&#39;url&#39;</span>)
     <span class="ruby-node">&quot;#{site.config[&#39;url&#39;]}#{site.config[&#39;baseurl&#39;]}&quot;</span>
@@ -3153,7 +3277,7 @@
 <p>Returns: <code>Hash</code> with all strings markdownified</p>
 
           <div class="method-source-code" id="visitAndMarkdownify-source">
-            <pre><span class="ruby-comment"># File _plugins/api.rb, line 32</span>
+            <pre><span class="ruby-comment"># File _plugins/api.rb, line 34</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">visitAndMarkdownify</span>(<span class="ruby-identifier">site</span>, <span class="ruby-identifier">f</span>)
   <span class="ruby-keyword">case</span> <span class="ruby-identifier">f</span>
   <span class="ruby-keyword">when</span> <span class="ruby-constant">Array</span>

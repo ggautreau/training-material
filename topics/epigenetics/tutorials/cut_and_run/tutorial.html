@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@8a7506ce418a7c9bc01cf4ab266a9c12bee82951",
+		release: "galaxy-training-network@8e77bd1ffe6fae868d4dba1efb603799812490c1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="CUT&RUN data analysis">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-03-06 07:59:37 +0000">
+<meta name="DC.date" content="2024-12-11 11:18:54 +0000">
 <meta name="DC.creator" content="Florian Heyl"><meta name="description" content="DNA methylation is an epigenetic mechanism used by higher eukaryotes and involved in e.g. gene expression, X-Chromosome inactivating, imprinting, and gene silencing of germline specific gene and repetitive elements.">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Epigenetics / CUT&RUN data analysis / Hands-on: CUT&RUN data analysis">
@@ -188,7 +188,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Draft",
-  "dateModified": "2024-03-06 07:59:37 +0000",
+  "dateModified": "2024-12-11 11:18:54 +0000",
   "datePublished": "2024-03-06 07:59:37 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -246,17 +246,17 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "description": "DNA methylation is an epigenetic mechanism used by higher eukaryotes and involved in e.g. gene expression, X-Chromosome inactivating, imprinting, and gene silencing of germline specific gene and repetitive elements.",
     "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/"
   },
-  "abstract": "# Introduction",
+  "abstract": "In many organism, transcription factors (TF) play an important tole in the regulation of the gene expression. In human, we have up to 2,800 proteins and more than 1,600 are",
   "learningResourceType": "e-learning",
   "name": "CUT&RUN data analysis",
   "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/cut_and_run/tutorial.html",
-  "version": 1,
+  "version": 2,
   "timeRequired": "PT3H",
   "teaches": "- Apply appropriate analysis and quality control steps for CUT&RUN\n- Apply an enrichment analysis and a robust peak detection\n- Find protein binding motifs",
   "keywords": [
     "Epigenetics"
   ],
-  "description": "## Abstract\n\n# Introduction\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - Which binding motif has the transcription factor GATA1?\n - What kind of quality control do I have to do?\n - How to analyse and visualise CUT&RUN data?\n\n\n## Learning Objectives\n\n- Apply appropriate analysis and quality control steps for CUT&RUN\n- Apply an enrichment analysis and a robust peak detection\n- Find protein binding motifs\n\n",
+  "description": "## Abstract\n\nIn many organism, transcription factors (TF) play an important tole in the regulation of the gene expression. In human, we have up to 2,800 proteins and more than 1,600 are\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - Which binding motif has the transcription factor GATA1?\n - What kind of quality control do I have to do?\n - How to analyse and visualise CUT&RUN data?\n\n\n## Learning Objectives\n\n- Apply appropriate analysis and quality control steps for CUT&RUN\n- Apply an enrichment analysis and a robust peak detection\n- Find protein binding motifs\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -927,6 +927,66 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
+      "url": "https://bio.tools/tool/deeptools",
+      "name": "DeepTools"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/deeptools",
+      "name": "DeepTools"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/bowtie2",
+      "name": "Bowtie 2"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/fastqc",
+      "name": "FastQC"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/bedtools",
+      "name": "BEDTools"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/bedtools",
+      "name": "BEDTools"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/bedtools",
+      "name": "BEDTools"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/idr",
+      "name": "IDR"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/macs",
+      "name": "MACS"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/meme",
+      "name": "MEME"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/seqcode",
+      "name": "SeqCode"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/galaxy",
+      "name": "Galaxy"
+    },
+    {
+      "@type": "Thing",
       "url": "https://zenodo.org/record/3862793",
       "name": "Associated Training Datasets"
     }
@@ -1380,13 +1440,33 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
+    </a>
+    <ul class="dropdown-menu">
+        
+    
+	<li class="dropdown-header">
+		<b>Possibly Working</b>
+	</li>
+    
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.cz/" title="">
+			UseGalaxy.cz
+		</a>
+	</li>
+    
+    
+
+    </ul>
+
 </li>
                 
             
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Mar 6, 2024 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 6, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 11, 2024 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1406,7 +1486,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">3.5</a> (2 recent ratings, 2 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 1 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
 
     </blockquote>
     </section>
@@ -1421,8 +1501,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                  
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
-                <h1 id="introduction">Introduction</h1>
-<p>In many organism, transcription factors (TF) play an important tole in the regulation of the gene expression. In human, we have up to 2,800 proteins and more than 1,600 are
+                <p>In many organism, transcription factors (TF) play an important tole in the regulation of the gene expression. In human, we have up to 2,800 proteins and more than 1,600 are
 TF (<a href="https://en.wikipedia.org/wiki/List_of_human_transcription_factors">list of transcription factors</a>), although the number might change over timer.
 Investigating the role of TFs, such as <a href="https://en.wikipedia.org/wiki/GATA1">GATA1</a>, is a very important task to understand the regulatory mechanisms in the cell and thus ascertain
 the source of a disease, such as <a href="https://en.wikipedia.org/wiki/Primary_myelofibrosis">myelofibrosis</a> a type of blood cancer.</p>
@@ -1453,10 +1532,7 @@ It is often recommended to use a positive or negative control as a comparison. S
   <p>In this tutorial, we will cover:</p>
 
 <ol id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ol>
-      <li><a href="#when-working-with-real-data" id="markdown-toc-when-working-with-real-data">When working with real data</a></li>
-    </ol>
-  </li>
+  <li><a href="#when-working-with-real-data" id="markdown-toc-when-working-with-real-data">When working with real data</a></li>
   <li><a href="#step-1-preprocessing" id="markdown-toc-step-1-preprocessing">Step 1: Preprocessing</a>    <ol>
       <li><a href="#get-data" id="markdown-toc-get-data">Get Data</a></li>
       <li><a href="#quality-control" id="markdown-toc-quality-control">Quality Control</a></li>
@@ -1651,7 +1727,7 @@ simply by the PCR itself. We will remove these duplicates later on.</p>
   <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
 
   <ol>
-    <li><span class="tool" data-tool=" https://toolshed.g2.bx.psu.edu/view/bgruening/trim_galore/cd7e644cae1d" title="Trim Galore! tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Trim Galore!</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version cd7e644cae1d)</span> with the following parameters:
+    <li><span><strong>Trim Galore!</strong> <i class="fas fa-wrench" aria-hidden="true"></i></span> with the following parameters:
       <ul>
         <li><em>“Is this library paired- or single-end?”</em>: <code class="language-plaintext highlighter-rouge">Paired Collection</code>
           <ul>
@@ -2754,7 +2830,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8a7506ce418a7c9bc01cf4ab266a9c12bee82951">8a7506c</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8e77bd1ffe6fae868d4dba1efb603799812490c1">8e77bd1</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -229,8 +229,8 @@
       "id": "data-science/data-manipulation-olympics",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-12-11 07:29:22 +0000",
-      "pub_date": "2024-12-11 07:29:22 +0000",
+      "mod_date": "2024-12-11 11:20:39 +0000",
+      "pub_date": "2024-12-11 11:20:39 +0000",
       "version": 0,
       "workflows": [
         {
@@ -267,7 +267,7 @@
 
           ],
           "test_results": null,
-          "modified": "2024-12-11 07:29:22 +0000",
+          "modified": "2024-12-11 11:20:39 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nolympics.tsv\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\ncountry-information.tsv\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nolympics_2022.tsv\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Line/Word/Character count\"];\n  0 -->|output| 3;\n  4[\"tabular-to-csv\"];\n  0 -->|output| 4;\n  5[\"Sort\"];\n  0 -->|output| 5;\n  6[\"Sort\"];\n  0 -->|output| 6;\n  7[\"Sort\"];\n  0 -->|output| 7;\n  8[\"Sort\"];\n  0 -->|output| 8;\n  9[\"Sort\"];\n  0 -->|output| 9;\n  10[\"Sort\"];\n  0 -->|output| 10;\n  11[\"Filter\"];\n  0 -->|output| 11;\n  12[\"Filter\"];\n  0 -->|output| 12;\n  13[\"Count\"];\n  0 -->|output| 13;\n  14[\"Count\"];\n  0 -->|output| 14;\n  15[\"Count\"];\n  0 -->|output| 15;\n  16[\"Count\"];\n  0 -->|output| 16;\n  17[\"Datamash\"];\n  0 -->|output| 17;\n  18[\"Count\"];\n  0 -->|output| 18;\n  19[\"Datamash\"];\n  0 -->|output| 19;\n  20[\"Filter\"];\n  0 -->|output| 20;\n  21[\"Filter\"];\n  0 -->|output| 21;\n  22[\"Filter\"];\n  0 -->|output| 22;\n  23[\"Filter\"];\n  0 -->|output| 23;\n  24[\"Filter\"];\n  0 -->|output| 24;\n  25[\"Filter\"];\n  0 -->|output| 25;\n  26[\"Filter\"];\n  0 -->|output| 26;\n  27[\"Compute\"];\n  0 -->|output| 27;\n  28[\"Compute\"];\n  0 -->|output| 28;\n  29[\"Cut\"];\n  0 -->|output| 29;\n  30[\"Column Regex Find And Replace\"];\n  0 -->|output| 30;\n  31[\"Column Regex Find And Replace\"];\n  0 -->|output| 31;\n  32[\"Column Regex Find And Replace\"];\n  0 -->|output| 32;\n  33[\"Cut\"];\n  0 -->|output| 33;\n  34[\"Cut\"];\n  0 -->|output| 34;\n  35[\"Datamash\"];\n  0 -->|output| 35;\n  36[\"Datamash\"];\n  0 -->|output| 36;\n  37[\"Datamash\"];\n  0 -->|output| 37;\n  38[\"Datamash\"];\n  0 -->|output| 38;\n  39[\"Datamash\"];\n  0 -->|output| 39;\n  40[\"Count\"];\n  0 -->|output| 40;\n  41[\"Column Regex Find And Replace\"];\n  0 -->|output| 41;\n  42[\"Split file\"];\n  0 -->|output| 42;\n  43[\"Join two Datasets\"];\n  0 -->|output| 43;\n  1 -->|output| 43;\n  44[\"Remove beginning\"];\n  2 -->|output| 44;\n  45[\"Sort\"];\n  11 -->|out_file1| 45;\n  46[\"Filter\"];\n  12 -->|out_file1| 46;\n  47[\"Cut\"];\n  28 -->|out_file1| 47;\n  48[\"Unique\"];\n  29 -->|out_file1| 48;\n  49[\"Count\"];\n  41 -->|out_file1| 49;\n  50[\"Datamash\"];\n  41 -->|out_file1| 50;\n  51[\"Concatenate datasets\"];\n  0 -->|output| 51;\n  44 -->|out_file1| 51;\n  52[\"Filter\"];\n  45 -->|outfile| 52;\n  53[\"Sort\"];\n  46 -->|out_file1| 53;\n  54[\"Remove beginning\"];\n  47 -->|out_file1| 54;\n  55[\"Select first\"];\n  47 -->|out_file1| 55;\n  56[\"Sort\"];\n  48 -->|outfile| 56;\n  57[\"Unique\"];\n  54 -->|out_file1| 57;\n  58[\"Concatenate datasets\"];\n  55 -->|out_file1| 58;\n  57 -->|outfile| 58;\n  59[\"Join two Datasets\"];\n  0 -->|output| 59;\n  58 -->|out_file1| 59;\n  60[\"Cut\"];\n  59 -->|out_file1| 60;\n  61[\"Line/Word/Character count\"];\n  60 -->|out_file1| 61;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nolympics.tsv\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\ncountry-information.tsv\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nolympics_2022.tsv\"]\n  3[label=\"Line/Word/Character count\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"tabular-to-csv\"]\n  0 -> 4 [label=\"output\"]\n  5[label=\"Sort\"]\n  0 -> 5 [label=\"output\"]\n  6[label=\"Sort\"]\n  0 -> 6 [label=\"output\"]\n  7[label=\"Sort\"]\n  0 -> 7 [label=\"output\"]\n  8[label=\"Sort\"]\n  0 -> 8 [label=\"output\"]\n  9[label=\"Sort\"]\n  0 -> 9 [label=\"output\"]\n  10[label=\"Sort\"]\n  0 -> 10 [label=\"output\"]\n  11[label=\"Filter\"]\n  0 -> 11 [label=\"output\"]\n  12[label=\"Filter\"]\n  0 -> 12 [label=\"output\"]\n  13[label=\"Count\"]\n  0 -> 13 [label=\"output\"]\n  14[label=\"Count\"]\n  0 -> 14 [label=\"output\"]\n  15[label=\"Count\"]\n  0 -> 15 [label=\"output\"]\n  16[label=\"Count\"]\n  0 -> 16 [label=\"output\"]\n  17[label=\"Datamash\"]\n  0 -> 17 [label=\"output\"]\n  18[label=\"Count\"]\n  0 -> 18 [label=\"output\"]\n  19[label=\"Datamash\"]\n  0 -> 19 [label=\"output\"]\n  20[label=\"Filter\"]\n  0 -> 20 [label=\"output\"]\n  21[label=\"Filter\"]\n  0 -> 21 [label=\"output\"]\n  22[label=\"Filter\"]\n  0 -> 22 [label=\"output\"]\n  23[label=\"Filter\"]\n  0 -> 23 [label=\"output\"]\n  24[label=\"Filter\"]\n  0 -> 24 [label=\"output\"]\n  25[label=\"Filter\"]\n  0 -> 25 [label=\"output\"]\n  26[label=\"Filter\"]\n  0 -> 26 [label=\"output\"]\n  27[label=\"Compute\"]\n  0 -> 27 [label=\"output\"]\n  28[label=\"Compute\"]\n  0 -> 28 [label=\"output\"]\n  29[label=\"Cut\"]\n  0 -> 29 [label=\"output\"]\n  30[label=\"Column Regex Find And Replace\"]\n  0 -> 30 [label=\"output\"]\n  31[label=\"Column Regex Find And Replace\"]\n  0 -> 31 [label=\"output\"]\n  32[label=\"Column Regex Find And Replace\"]\n  0 -> 32 [label=\"output\"]\n  33[label=\"Cut\"]\n  0 -> 33 [label=\"output\"]\n  34[label=\"Cut\"]\n  0 -> 34 [label=\"output\"]\n  35[label=\"Datamash\"]\n  0 -> 35 [label=\"output\"]\n  36[label=\"Datamash\"]\n  0 -> 36 [label=\"output\"]\n  37[label=\"Datamash\"]\n  0 -> 37 [label=\"output\"]\n  38[label=\"Datamash\"]\n  0 -> 38 [label=\"output\"]\n  39[label=\"Datamash\"]\n  0 -> 39 [label=\"output\"]\n  40[label=\"Count\"]\n  0 -> 40 [label=\"output\"]\n  41[label=\"Column Regex Find And Replace\"]\n  0 -> 41 [label=\"output\"]\n  42[label=\"Split file\"]\n  0 -> 42 [label=\"output\"]\n  43[label=\"Join two Datasets\"]\n  0 -> 43 [label=\"output\"]\n  1 -> 43 [label=\"output\"]\n  44[label=\"Remove beginning\"]\n  2 -> 44 [label=\"output\"]\n  45[label=\"Sort\"]\n  11 -> 45 [label=\"out_file1\"]\n  46[label=\"Filter\"]\n  12 -> 46 [label=\"out_file1\"]\n  47[label=\"Cut\"]\n  28 -> 47 [label=\"out_file1\"]\n  48[label=\"Unique\"]\n  29 -> 48 [label=\"out_file1\"]\n  49[label=\"Count\"]\n  41 -> 49 [label=\"out_file1\"]\n  50[label=\"Datamash\"]\n  41 -> 50 [label=\"out_file1\"]\n  51[label=\"Concatenate datasets\"]\n  0 -> 51 [label=\"output\"]\n  44 -> 51 [label=\"out_file1\"]\n  52[label=\"Filter\"]\n  45 -> 52 [label=\"outfile\"]\n  53[label=\"Sort\"]\n  46 -> 53 [label=\"out_file1\"]\n  54[label=\"Remove beginning\"]\n  47 -> 54 [label=\"out_file1\"]\n  55[label=\"Select first\"]\n  47 -> 55 [label=\"out_file1\"]\n  56[label=\"Sort\"]\n  48 -> 56 [label=\"outfile\"]\n  57[label=\"Unique\"]\n  54 -> 57 [label=\"out_file1\"]\n  58[label=\"Concatenate datasets\"]\n  55 -> 58 [label=\"out_file1\"]\n  57 -> 58 [label=\"outfile\"]\n  59[label=\"Join two Datasets\"]\n  0 -> 59 [label=\"output\"]\n  58 -> 59 [label=\"out_file1\"]\n  60[label=\"Cut\"]\n  59 -> 60 [label=\"out_file1\"]\n  61[label=\"Line/Word/Character count\"]\n  60 -> 61 [label=\"out_file1\"]\n}",
           "workflow_tools": [
@@ -571,7 +571,7 @@
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
-            "usegalaxy": false
+            "usegalaxy": true
           },
           {
             "url": "https://usegalaxy.no/",
@@ -2664,8 +2664,8 @@
                 "state": "inexact",
                 "versions": [
                   "1.2.0",
-                  "1.3.0",
                   "1.5",
+                  "1.3.0",
                   "1.1.0"
                 ],
                 "server": "https://usegalaxy.be/"
@@ -2673,8 +2673,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.0",
                   "1.4",
+                  "2.0",
                   "1.1.0"
                 ],
                 "server": "https://usegalaxy.cz/"
@@ -6391,7 +6391,7 @@
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
-            "usegalaxy": false
+            "usegalaxy": true
           },
           {
             "url": "https://usegalaxy.org",
@@ -6571,7 +6571,7 @@
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
-            "usegalaxy": false
+            "usegalaxy": true
           },
           {
             "url": "https://usegalaxy.no/",
@@ -6653,9 +6653,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.3.3",
                   "2.10.1+galaxy1",
-                  "2.14.1+galaxy2"
+                  "2.14.1+galaxy2",
+                  "0.3.3"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -6724,11 +6724,11 @@
                 "state": "inexact",
                 "versions": [
                   "0.3.1",
-                  "0.3.3",
                   "2.14.1+galaxy2",
+                  "0.3.3",
+                  "0.3.0",
                   "0.1.07",
-                  "0.0.11",
-                  "0.3.0"
+                  "0.0.11"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -7596,6 +7596,62 @@
         "Queries should be written using parameter substitution, not string formatting.",
         "R has multiple helper functions to make working with databases easier."
       ],
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "short_name": "Avans",
+          "name": "Avans Hogeschool",
+          "joined": "2020-11",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
+          "avatar": "/training-material/shared/images/logo-avans.png",
+          "ror": "015d5s513",
+          "members": [
+            "bazante1"
+          ],
+          "former_members": [
+            "dirowa",
+            "hexylena"
+          ],
+          "id": "avans-atgm",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
+        }
+      ],
       "subtopic": "sql",
       "notebook": {
         "language": "r"
@@ -7610,20 +7666,6 @@
       },
       "short_id": "T00110",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "avans-atgm"
-        ],
-        "reviewing": [
-          "abretaud",
-          "mvdbeek",
-          "hexylena",
-          "pvanheus",
-          "shiltemann"
-        ]
-      },
       "url": "/topics/data-science/tutorials/sql-r/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-r",
@@ -7705,166 +7747,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "short_name": "Avans",
-          "name": "Avans Hogeschool",
-          "joined": "2020-11",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
-          "avatar": "/training-material/shared/images/logo-avans.png",
-          "ror": "015d5s513",
-          "members": [
-            "bazante1"
-          ],
-          "former_members": [
-            "dirowa",
-            "hexylena"
-          ],
-          "id": "avans-atgm",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
-        },
-        {
-          "name": "Anthony Bretaudeau",
-          "email": "anthony.bretaudeau@inrae.fr",
-          "twitter": "abretau",
-          "matrix": "abretaud:matrix.org",
-          "orcid": "0000-0003-0914-2470",
-          "joined": "2017-09",
-          "elixir_node": "fr",
-          "contact_for_training": true,
-          "location": {
-            "country": "FR",
-            "lat": 48.11,
-            "lon": -1.64
-          },
-          "fediverse": "https://genomic.social/@abretaud",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "gallantries",
-            "eurosciencegateway",
-            "elixir-europe"
-          ],
-          "id": "abretaud",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
-        },
-        {
-          "name": "Marius van den Beek",
-          "joined": "2018-06",
-          "id": "mvdbeek",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/mvdbeek.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mvdbeek/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Peter van Heusden",
-          "twitter": "pvanheus",
-          "orcid": "0000-0001-6553-5274",
-          "joined": "2017-09",
-          "bio": "Research at the South African National Bioinformatics Institute",
-          "id": "pvanheus",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/pvanheus.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pvanheus/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-r/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-r/tutorial.json"
@@ -7953,6 +7835,62 @@
         "Programs can read query results in batches or all at once.",
         "Queries should be written using parameter substitution, not string formatting."
       ],
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "short_name": "Avans",
+          "name": "Avans Hogeschool",
+          "joined": "2020-11",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
+          "avatar": "/training-material/shared/images/logo-avans.png",
+          "ror": "015d5s513",
+          "members": [
+            "bazante1"
+          ],
+          "former_members": [
+            "dirowa",
+            "hexylena"
+          ],
+          "id": "avans-atgm",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
+        }
+      ],
       "subtopic": "sql",
       "notebook": {
         "language": "sql"
@@ -7969,21 +7907,6 @@
       },
       "short_id": "T00106",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "avans-atgm"
-        ],
-        "reviewing": [
-          "bebatut",
-          "abretaud",
-          "shiltemann",
-          "mvdbeek",
-          "hexylena",
-          "pvanheus"
-        ]
-      },
       "url": "/topics/data-science/tutorials/sql-advanced/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-advanced",
@@ -8075,192 +7998,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "short_name": "Avans",
-          "name": "Avans Hogeschool",
-          "joined": "2020-11",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
-          "avatar": "/training-material/shared/images/logo-avans.png",
-          "ror": "015d5s513",
-          "members": [
-            "bazante1"
-          ],
-          "former_members": [
-            "dirowa",
-            "hexylena"
-          ],
-          "id": "avans-atgm",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
-        },
-        {
-          "name": "Bérénice Batut",
-          "email": "berenice.batut@gmail.com",
-          "twitter": "bebatut",
-          "linkedin": "berenicebatut",
-          "matrix": "bebatut:matrix.org",
-          "orcid": "0000-0001-9852-1987",
-          "joined": "2017-09",
-          "elixir_node": "fr",
-          "contact_for_training": true,
-          "location": {
-            "country": "FR",
-            "lat": 45.77,
-            "lon": 3.08
-          },
-          "fediverse": "https://piaille.fr/@bebatut",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "gallantries",
-            "ifb",
-            "elixir-europe"
-          ],
-          "id": "bebatut",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bebatut.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bebatut/"
-        },
-        {
-          "name": "Anthony Bretaudeau",
-          "email": "anthony.bretaudeau@inrae.fr",
-          "twitter": "abretau",
-          "matrix": "abretaud:matrix.org",
-          "orcid": "0000-0003-0914-2470",
-          "joined": "2017-09",
-          "elixir_node": "fr",
-          "contact_for_training": true,
-          "location": {
-            "country": "FR",
-            "lat": 48.11,
-            "lon": -1.64
-          },
-          "fediverse": "https://genomic.social/@abretaud",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "gallantries",
-            "eurosciencegateway",
-            "elixir-europe"
-          ],
-          "id": "abretaud",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Marius van den Beek",
-          "joined": "2018-06",
-          "id": "mvdbeek",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/mvdbeek.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mvdbeek/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Peter van Heusden",
-          "twitter": "pvanheus",
-          "orcid": "0000-0001-6553-5274",
-          "joined": "2017-09",
-          "bio": "Research at the South African National Bioinformatics Institute",
-          "id": "pvanheus",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/pvanheus.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pvanheus/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-advanced/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-advanced/tutorial.json"
@@ -8304,6 +8041,76 @@
         "But it is more complex than using Galaxy"
       ],
       "subtopic": "sciwms",
+      "contributors": [
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "short_name": "Avans",
+          "name": "Avans Hogeschool",
+          "joined": "2020-11",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
+          "avatar": "/training-material/shared/images/logo-avans.png",
+          "ror": "015d5s513",
+          "members": [
+            "bazante1"
+          ],
+          "former_members": [
+            "dirowa",
+            "hexylena"
+          ],
+          "id": "avans-atgm",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
+        }
+      ],
       "abbreviations": {
         "SciWMS": "Scientific Workflow Management System",
         "DAG": "Directed Acyclic Graph"
@@ -8314,21 +8121,6 @@
       },
       "short_id": "T00105",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "bazante1",
-          "dirowa",
-          "avans-atgm"
-        ],
-        "reviewing": [
-          "abretaud",
-          "shiltemann",
-          "bgruening",
-          "hexylena",
-          "dirowa"
-        ]
-      },
       "url": "/topics/data-science/tutorials/snakemake/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "snakemake",
@@ -8410,206 +8202,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "short_name": "Avans",
-          "name": "Avans Hogeschool",
-          "joined": "2020-11",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
-          "avatar": "/training-material/shared/images/logo-avans.png",
-          "ror": "015d5s513",
-          "members": [
-            "bazante1"
-          ],
-          "former_members": [
-            "dirowa",
-            "hexylena"
-          ],
-          "id": "avans-atgm",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
-        },
-        {
-          "name": "Anthony Bretaudeau",
-          "email": "anthony.bretaudeau@inrae.fr",
-          "twitter": "abretau",
-          "matrix": "abretaud:matrix.org",
-          "orcid": "0000-0003-0914-2470",
-          "joined": "2017-09",
-          "elixir_node": "fr",
-          "contact_for_training": true,
-          "location": {
-            "country": "FR",
-            "lat": 48.11,
-            "lon": -1.64
-          },
-          "fediverse": "https://genomic.social/@abretaud",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "gallantries",
-            "eurosciencegateway",
-            "elixir-europe"
-          ],
-          "id": "abretaud",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Björn Grüning",
-          "email": "bjoern.gruening@gmail.com",
-          "twitter": "bjoerngruening",
-          "fediverse": "https://fosstodon.org/@bgruening",
-          "fediverse_flavor": "mastodon",
-          "matrix": "bgruening:matrix.org",
-          "orcid": "0000-0002-3079-6586",
-          "elixir_node": "de",
-          "linkedin": "bgruening",
-          "contact_for_training": true,
-          "joined": "2017-09",
-          "location": {
-            "country": "DE",
-            "lat": 47.997791,
-            "lon": 7.842609
-          },
-          "affiliations": [
-            "eurosciencegateway",
-            "eosc-life",
-            "by-covid",
-            "deNBI",
-            "sfb992",
-            "elixir-converge",
-            "uni-freiburg",
-            "elixir-europe"
-          ],
-          "id": "bgruening",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bgruening.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/snakemake/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/snakemake/tutorial.json"
@@ -9528,7 +9120,7 @@
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
-            "usegalaxy": false
+            "usegalaxy": true
           },
           {
             "url": "https://usegalaxy.no/",
@@ -10229,7 +9821,7 @@
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
-            "usegalaxy": false
+            "usegalaxy": true
           },
           {
             "url": "https://usegalaxy.no/",
@@ -12243,6 +11835,59 @@
         "Did you forget how a particular module or function works? Try `help()`"
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 1,
       "notebook": {
         "language": "python",
@@ -12254,21 +11899,6 @@
       },
       "short_id": "T00094",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "shiltemann",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-math/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-math",
@@ -12350,173 +11980,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-math/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-math/tutorial.json"
@@ -12580,6 +12043,84 @@
         "Almost all operations on NULL produce NULL.",
         "Queries can test for NULLs using IS NULL and IS NOT NULL."
       ],
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        },
+        {
+          "short_name": "Avans",
+          "name": "Avans Hogeschool",
+          "joined": "2020-11",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
+          "avatar": "/training-material/shared/images/logo-avans.png",
+          "ror": "015d5s513",
+          "members": [
+            "bazante1"
+          ],
+          "former_members": [
+            "dirowa",
+            "hexylena"
+          ],
+          "id": "avans-atgm",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
+        }
+      ],
       "subtopic": "sql",
       "notebook": {
         "language": "sql"
@@ -12596,22 +12137,6 @@
       },
       "short_id": "T00107",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "dirowa",
-          "bazante1",
-          "avans-atgm"
-        ],
-        "reviewing": [
-          "abretaud",
-          "mvdbeek",
-          "hexylena",
-          "pvanheus",
-          "shiltemann"
-        ]
-      },
       "url": "/topics/data-science/tutorials/sql-basic/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-basic",
@@ -12703,6 +12228,44 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
+      "urls": {
+        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-basic/tutorial.json",
+        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-basic/tutorial.json"
+      }
+    },
+    {
+      "layout": "tutorial_hands_on",
+      "title": "SQL with Python",
+      "level": "Intermediate",
+      "zenodo_link": null,
+      "requirements": [
+        {
+          "type": "internal",
+          "topic_name": "data-science",
+          "tutorials": [
+            "sql-advanced"
+          ]
+        }
+      ],
+      "follow_up_training": [
+
+      ],
+      "questions": [
+        "How can I access databases from programs written in Python?"
+      ],
+      "objectives": [
+        "Write short programs that execute SQL queries.",
+        "Trace the execution of a program that contains an SQL query.",
+        "Explain why most database applications are written in a general-purpose language rather than in SQL."
+      ],
+      "time_estimation": "45M",
+      "key_points": [
+        "General-purpose languages have libraries for accessing databases.",
+        "To connect to a database, a program must use a library specific to that database manager.",
+        "These libraries use a connection-and-cursor model.",
+        "Programs can read query results in batches or all at once.",
+        "Queries should be written using parameter substitution, not string formatting."
+      ],
       "contributors": [
         {
           "name": "The Carpentries",
@@ -12742,28 +12305,6 @@
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
         },
         {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
           "short_name": "Avans",
           "name": "Avans Hogeschool",
           "joined": "2020-11",
@@ -12779,149 +12320,7 @@
           ],
           "id": "avans-atgm",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
-        },
-        {
-          "name": "Anthony Bretaudeau",
-          "email": "anthony.bretaudeau@inrae.fr",
-          "twitter": "abretau",
-          "matrix": "abretaud:matrix.org",
-          "orcid": "0000-0003-0914-2470",
-          "joined": "2017-09",
-          "elixir_node": "fr",
-          "contact_for_training": true,
-          "location": {
-            "country": "FR",
-            "lat": 48.11,
-            "lon": -1.64
-          },
-          "fediverse": "https://genomic.social/@abretaud",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "gallantries",
-            "eurosciencegateway",
-            "elixir-europe"
-          ],
-          "id": "abretaud",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
-        },
-        {
-          "name": "Marius van den Beek",
-          "joined": "2018-06",
-          "id": "mvdbeek",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/mvdbeek.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mvdbeek/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Peter van Heusden",
-          "twitter": "pvanheus",
-          "orcid": "0000-0001-6553-5274",
-          "joined": "2017-09",
-          "bio": "Research at the South African National Bioinformatics Institute",
-          "id": "pvanheus",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/pvanheus.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pvanheus/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
         }
-      ],
-      "urls": {
-        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-basic/tutorial.json",
-        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-basic/tutorial.json"
-      }
-    },
-    {
-      "layout": "tutorial_hands_on",
-      "title": "SQL with Python",
-      "level": "Intermediate",
-      "zenodo_link": null,
-      "requirements": [
-        {
-          "type": "internal",
-          "topic_name": "data-science",
-          "tutorials": [
-            "sql-advanced"
-          ]
-        }
-      ],
-      "follow_up_training": [
-
-      ],
-      "questions": [
-        "How can I access databases from programs written in Python?"
-      ],
-      "objectives": [
-        "Write short programs that execute SQL queries.",
-        "Trace the execution of a program that contains an SQL query.",
-        "Explain why most database applications are written in a general-purpose language rather than in SQL."
-      ],
-      "time_estimation": "45M",
-      "key_points": [
-        "General-purpose languages have libraries for accessing databases.",
-        "To connect to a database, a program must use a library specific to that database manager.",
-        "These libraries use a connection-and-cursor model.",
-        "Programs can read query results in batches or all at once.",
-        "Queries should be written using parameter substitution, not string formatting."
       ],
       "subtopic": "sql",
       "notebook": {
@@ -12937,20 +12336,6 @@
       },
       "short_id": "T00109",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "avans-atgm"
-        ],
-        "reviewing": [
-          "abretaud",
-          "mvdbeek",
-          "hexylena",
-          "pvanheus",
-          "shiltemann"
-        ]
-      },
       "url": "/topics/data-science/tutorials/sql-python/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "sql-python",
@@ -13032,166 +12417,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "short_name": "Avans",
-          "name": "Avans Hogeschool",
-          "joined": "2020-11",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/avans-atgm.json",
-          "avatar": "/training-material/shared/images/logo-avans.png",
-          "ror": "015d5s513",
-          "members": [
-            "bazante1"
-          ],
-          "former_members": [
-            "dirowa",
-            "hexylena"
-          ],
-          "id": "avans-atgm",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/avans-atgm/"
-        },
-        {
-          "name": "Anthony Bretaudeau",
-          "email": "anthony.bretaudeau@inrae.fr",
-          "twitter": "abretau",
-          "matrix": "abretaud:matrix.org",
-          "orcid": "0000-0003-0914-2470",
-          "joined": "2017-09",
-          "elixir_node": "fr",
-          "contact_for_training": true,
-          "location": {
-            "country": "FR",
-            "lat": 48.11,
-            "lon": -1.64
-          },
-          "fediverse": "https://genomic.social/@abretaud",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "gallantries",
-            "eurosciencegateway",
-            "elixir-europe"
-          ],
-          "id": "abretaud",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/abretaud.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/abretaud/"
-        },
-        {
-          "name": "Marius van den Beek",
-          "joined": "2018-06",
-          "id": "mvdbeek",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/mvdbeek.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/mvdbeek/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Peter van Heusden",
-          "twitter": "pvanheus",
-          "orcid": "0000-0001-6553-5274",
-          "joined": "2017-09",
-          "bio": "Research at the South African National Bioinformatics Institute",
-          "id": "pvanheus",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/pvanheus.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/pvanheus/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-python/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-python/tutorial.json"
@@ -13464,7 +12689,7 @@
           {
             "url": "https://usegalaxy.fr/",
             "name": "UseGalaxy.fr",
-            "usegalaxy": false
+            "usegalaxy": true
           },
           {
             "url": "https://usegalaxy.no/",
@@ -14408,6 +13633,67 @@
         "Deciding what part of your code should, or should not be, a function is something that will come with practice."
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 2,
       "notebook": {
         "language": "python",
@@ -14422,22 +13708,6 @@
       },
       "short_id": "T00089",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "shiltemann",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-functions/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-functions",
@@ -14519,181 +13789,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-functions/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-functions/tutorial.json"
@@ -16103,6 +15198,67 @@
         "Variables only change value when something is assigned to them."
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 3,
       "notebook": {
         "language": "python",
@@ -16114,21 +15270,6 @@
       },
       "short_id": "T00099",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-types/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-types",
@@ -16210,6 +15351,42 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
+      "urls": {
+        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-types/tutorial.json",
+        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-types/tutorial.json"
+      }
+    },
+    {
+      "layout": "tutorial_hands_on",
+      "title": "Python - Lists & Strings & Dictionaries",
+      "level": "Introductory",
+      "requirements": [
+
+      ],
+      "follow_up_training": [
+
+      ],
+      "questions": [
+        "How can I store multiple values?"
+      ],
+      "objectives": [
+        "Explain why programs need collections of values.",
+        "Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
+      ],
+      "time_estimation": "1H",
+      "key_points": [
+        "A list stores many values in a single structure.",
+        "Use an item's index to fetch it from a list.",
+        "Lists' values can be replaced by assigning to them.",
+        "Appending items to a list lengthens it.",
+        "Use `del` to remove items from a list entirely.",
+        "The empty list contains no values.",
+        "Lists may contain values of different types.",
+        "Character strings can be indexed like lists.",
+        "Character strings are immutable.",
+        "Indexing beyond the end of the collection is an error."
+      ],
+      "subtopic": "python-modular",
       "contributors": [
         {
           "name": "The Carpentries",
@@ -16269,125 +15446,8 @@
           "id": "bazante1",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
         }
       ],
-      "urls": {
-        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-types/tutorial.json",
-        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-types/tutorial.json"
-      }
-    },
-    {
-      "layout": "tutorial_hands_on",
-      "title": "Python - Lists & Strings & Dictionaries",
-      "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
-      "questions": [
-        "How can I store multiple values?"
-      ],
-      "objectives": [
-        "Explain why programs need collections of values.",
-        "Write programs that create flat lists, index them, slice them, and modify them through assignment and method calls."
-      ],
-      "time_estimation": "1H",
-      "key_points": [
-        "A list stores many values in a single structure.",
-        "Use an item's index to fetch it from a list.",
-        "Lists' values can be replaced by assigning to them.",
-        "Appending items to a list lengthens it.",
-        "Use `del` to remove items from a list entirely.",
-        "The empty list contains no values.",
-        "Lists may contain values of different types.",
-        "Character strings can be indexed like lists.",
-        "Character strings are immutable.",
-        "Indexing beyond the end of the collection is an error."
-      ],
-      "subtopic": "python-modular",
       "priority": 4,
       "notebook": {
         "language": "python",
@@ -16399,22 +15459,6 @@
       },
       "short_id": "T00091",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "shiltemann",
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-iterables/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-iterables",
@@ -16496,181 +15540,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-iterables/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-iterables/tutorial.json"
@@ -17332,6 +16201,67 @@
         "`not` can be used to invert the condition"
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 5,
       "notebook": {
         "language": "python",
@@ -17343,21 +16273,6 @@
       },
       "short_id": "T00088",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-flow/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-flow",
@@ -17439,148 +16354,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-flow/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-flow/tutorial.json"
@@ -17789,6 +16562,67 @@
         "The Accumulator pattern turns many values into one."
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "The Carpentries",
+          "joined": "2021-09",
+          "ror": "0356fgm10",
+          "id": "carpentries",
+          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
+        },
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 6,
       "notebook": {
         "language": "python",
@@ -17800,21 +16634,6 @@
       },
       "short_id": "T00093",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "carpentries",
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-loops/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-loops",
@@ -17896,148 +16715,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "The Carpentries",
-          "joined": "2021-09",
-          "ror": "0356fgm10",
-          "id": "carpentries",
-          "url": "https://training.galaxyproject.org/training-material/api/organisations/carpentries.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/carpentries/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-loops/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-loops/tutorial.json"
@@ -18072,6 +16749,59 @@
         "Use a `with` block to open a file."
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 7,
       "notebook": {
         "language": "python",
@@ -18083,21 +16813,6 @@
       },
       "short_id": "T00087",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "shiltemann",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-files/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-files",
@@ -18179,173 +16894,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-files/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-files/tutorial.json"
@@ -18541,6 +17089,59 @@
         "finally lets you cleanup your temporary files, if you created some."
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 8,
       "notebook": {
         "language": "python",
@@ -18552,20 +17153,6 @@
       },
       "short_id": "T00086",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-exceptions/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-exceptions",
@@ -18647,6 +17234,46 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
+      "urls": {
+        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-exceptions/tutorial.json",
+        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-exceptions/tutorial.json"
+      }
+    },
+    {
+      "layout": "tutorial_hands_on",
+      "title": "Python - Introductory Graduation",
+      "level": "Introductory",
+      "requirements": [
+        {
+          "type": "internal",
+          "topic_name": "data-science",
+          "tutorials": [
+            "python-math",
+            "python-functions",
+            "python-types",
+            "python-iterables",
+            "python-flow",
+            "python-loops",
+            "python-files",
+            "python-exceptions"
+          ]
+        }
+      ],
+      "follow_up_training": [
+
+      ],
+      "questions": [
+        "What all did I learn up until now?"
+      ],
+      "objectives": [
+        "Recap all previous modules.",
+        "Use exercises to ensure that all previous knowledge is sufficiently covered."
+      ],
+      "time_estimation": "1H30M",
+      "key_points": [
+
+      ],
+      "subtopic": "python-modular",
       "contributors": [
         {
           "name": "Helena Rasche",
@@ -18698,129 +17325,8 @@
           "id": "bazante1",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
         }
       ],
-      "urls": {
-        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-exceptions/tutorial.json",
-        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-exceptions/tutorial.json"
-      }
-    },
-    {
-      "layout": "tutorial_hands_on",
-      "title": "Python - Introductory Graduation",
-      "level": "Introductory",
-      "requirements": [
-        {
-          "type": "internal",
-          "topic_name": "data-science",
-          "tutorials": [
-            "python-math",
-            "python-functions",
-            "python-types",
-            "python-iterables",
-            "python-flow",
-            "python-loops",
-            "python-files",
-            "python-exceptions"
-          ]
-        }
-      ],
-      "follow_up_training": [
-
-      ],
-      "questions": [
-        "What all did I learn up until now?"
-      ],
-      "objectives": [
-        "Recap all previous modules.",
-        "Use exercises to ensure that all previous knowledge is sufficiently covered."
-      ],
-      "time_estimation": "1H30M",
-      "key_points": [
-
-      ],
-      "subtopic": "python-modular",
       "priority": 9,
       "notebook": {
         "language": "python",
@@ -18835,21 +17341,6 @@
       },
       "short_id": "T00084",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "shiltemann",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-basics-recap/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-basics-recap",
@@ -18931,173 +17422,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Saskia Hiltemann",
-          "maintainer_contact": "gitter",
-          "email": "saskia.hiltemann@gmail.com",
-          "fediverse": "https://mstdn.science/@shiltemann",
-          "fediverse_flavor": "mastodon",
-          "bluesky": "shiltemann.bsky.social",
-          "linkedin": "shiltemann",
-          "matrix": "shiltemann:matrix.org",
-          "orcid": "0000-0003-3803-468X",
-          "joined": "2017-09",
-          "bio": "Researcher at Erasmus Medical Center",
-          "elixir_node": "nl",
-          "contact_for_training": true,
-          "affiliations": [
-            "uni-freiburg",
-            "nfdi4plants",
-            "elixir-europe"
-          ],
-          "former_affiliations": [
-            "CINECA-Project",
-            "gallantries",
-            "erasmusmc"
-          ],
-          "location": {
-            "country": "NL",
-            "lat": 51.912,
-            "lon": 4.462
-          },
-          "id": "shiltemann",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/shiltemann.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-basics-recap/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-basics-recap/tutorial.json"
@@ -20695,6 +19019,59 @@
         "If your data is ordering dependent, sort your globs!"
       ],
       "subtopic": "python-modular",
+      "contributors": [
+        {
+          "name": "Helena Rasche",
+          "orcid": "0000-0001-9760-8992",
+          "maintainer_contact": "gitter",
+          "matrix": "hexylena:matrix.org",
+          "joined": "2017-09",
+          "elixir_node": "nl",
+          "affiliations": [
+            "erasmusmc",
+            "gallantries",
+            "by-covid",
+            "elixir-europe",
+            "elixir-converge"
+          ],
+          "former_affiliations": [
+            "deNBI",
+            "avans-atgm",
+            "uni-freiburg"
+          ],
+          "contact_for_training": false,
+          "location": {
+            "country": "NL",
+            "lat": 51.91,
+            "lon": 4.46
+          },
+          "id": "hexylena",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
+        },
+        {
+          "name": "Donny Vrins",
+          "joined": "2021-10",
+          "linkedin": "Donny Vrins",
+          "email": "D.vrins@live.nl",
+          "former_affiliations": [
+            "avans-atgm"
+          ],
+          "id": "dirowa",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
+        },
+        {
+          "name": "Bazante Sanders",
+          "joined": "2020-12",
+          "affiliations": [
+            "avans-atgm"
+          ],
+          "id": "bazante1",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
+        }
+      ],
       "priority": 11,
       "notebook": {
         "language": "python",
@@ -20706,20 +19083,6 @@
       },
       "short_id": "T00090",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-glob/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-glob",
@@ -20801,6 +19164,38 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
+      "urls": {
+        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-glob/tutorial.json",
+        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-glob/tutorial.json"
+      }
+    },
+    {
+      "layout": "tutorial_hands_on",
+      "title": "Python - Subprocess",
+      "level": "Intermediate",
+      "requirements": [
+
+      ],
+      "follow_up_training": [
+
+      ],
+      "questions": [
+        "How can I run another program?"
+      ],
+      "objectives": [
+        "Run a command in a subprocess.",
+        "Learn about `check_call` and `check_output` and when to use each of these.",
+        "Read it's output."
+      ],
+      "time_estimation": "45M",
+      "key_points": [
+        "**DO NOT USE `os.system`**",
+        "**DO NOT USE shell=True**",
+        "👍Use `subprocess.check_call()` if you don't care about the output, just that it succeeds.",
+        "👍Use `subprocess.check_output()` if you want the output",
+        "Use `.decode('utf-8')` to read the output of `check_output()`"
+      ],
+      "subtopic": "python-modular",
       "contributors": [
         {
           "name": "Helena Rasche",
@@ -20852,121 +19247,8 @@
           "id": "bazante1",
           "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
           "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
         }
       ],
-      "urls": {
-        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-glob/tutorial.json",
-        "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-glob/tutorial.json"
-      }
-    },
-    {
-      "layout": "tutorial_hands_on",
-      "title": "Python - Subprocess",
-      "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
-      "questions": [
-        "How can I run another program?"
-      ],
-      "objectives": [
-        "Run a command in a subprocess.",
-        "Learn about `check_call` and `check_output` and when to use each of these.",
-        "Read it's output."
-      ],
-      "time_estimation": "45M",
-      "key_points": [
-        "**DO NOT USE `os.system`**",
-        "**DO NOT USE shell=True**",
-        "👍Use `subprocess.check_call()` if you don't care about the output, just that it succeeds.",
-        "👍Use `subprocess.check_output()` if you want the output",
-        "Use `.decode('utf-8')` to read the output of `check_output()`"
-      ],
-      "subtopic": "python-modular",
       "priority": 12,
       "notebook": {
         "language": "python",
@@ -20978,20 +19260,6 @@
       },
       "short_id": "T00097",
       "symlink": null,
-      "contributions": {
-        "authorship": [
-          "hexylena",
-          "dirowa",
-          "bazante1"
-        ],
-        "reviewing": [
-          "dirowa",
-          "hexylena",
-          "bazante1",
-          "beatrizserrano",
-          "nomadscientist"
-        ]
-      },
       "url": "/topics/data-science/tutorials/python-subprocess/tutorial.html",
       "topic_name": "data-science",
       "tutorial_name": "python-subprocess",
@@ -21073,140 +19341,6 @@
       },
       "license": "CC-BY-4.0",
       "type": "tutorial",
-      "contributors": [
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Donny Vrins",
-          "joined": "2021-10",
-          "linkedin": "Donny Vrins",
-          "email": "D.vrins@live.nl",
-          "former_affiliations": [
-            "avans-atgm"
-          ],
-          "id": "dirowa",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/dirowa.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/dirowa/"
-        },
-        {
-          "name": "Helena Rasche",
-          "orcid": "0000-0001-9760-8992",
-          "maintainer_contact": "gitter",
-          "matrix": "hexylena:matrix.org",
-          "joined": "2017-09",
-          "elixir_node": "nl",
-          "affiliations": [
-            "erasmusmc",
-            "gallantries",
-            "by-covid",
-            "elixir-europe",
-            "elixir-converge"
-          ],
-          "former_affiliations": [
-            "deNBI",
-            "avans-atgm",
-            "uni-freiburg"
-          ],
-          "contact_for_training": false,
-          "location": {
-            "country": "NL",
-            "lat": 51.91,
-            "lon": 4.46
-          },
-          "id": "hexylena",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/hexylena.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/"
-        },
-        {
-          "name": "Bazante Sanders",
-          "joined": "2020-12",
-          "affiliations": [
-            "avans-atgm"
-          ],
-          "id": "bazante1",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/bazante1.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/bazante1/"
-        },
-        {
-          "name": "Beatriz Serrano-Solano",
-          "email": "beatrizserrano.galaxy@gmail.com",
-          "twitter": "BSerranoSolano",
-          "linkedin": "beatriz-serrano",
-          "matrix": "beatrizserrano:matrix.org",
-          "orcid": "0000-0002-5862-6132",
-          "joined": "2020-07",
-          "id": "beatrizserrano",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/beatrizserrano.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/beatrizserrano/"
-        },
-        {
-          "name": "Wendi Bacon",
-          "email": "wendi.bacon@open.ac.uk",
-          "twitter": "WendiBacon1",
-          "matrix": "nomadscientist:matrix.org",
-          "joined": "2020-03",
-          "elixir_node": "uk",
-          "orcid": "0000-0002-8170-8806",
-          "bio": "Senior Lecturer at The Open University",
-          "fediverse": "https://mstdn.science/@wendibacon1",
-          "fediverse_flavor": "mastodon",
-          "affiliations": [
-            "elixir-europe"
-          ],
-          "id": "nomadscientist",
-          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
-          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
-        }
-      ],
       "urls": {
         "hands_on": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-subprocess/tutorial.json",
         "slides": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-subprocess/tutorial.json"

@@ -72,6 +72,7 @@
   <h3>Methods</h3>
 
   <ul class="link-list" role="directory">
+    <li ><a href="#method-i-test_bad_versions">#test_bad_versions</a>
     <li ><a href="#method-i-test_exact">#test_exact</a>
   </ul>
 </div>
@@ -88,6 +89,8 @@
     
 <p>Testing for the class</p>
 
+<p>Testing for the class</p>
+
   </section>
 
   <section id="5Buntitled-5D" class="documentation-section">
@@ -100,6 +103,39 @@
        <header>
          <h3>Public Instance Methods</h3>
        </header>
+
+      <div id="method-i-test_bad_versions" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">test_bad_versions</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="test_bad_versions-source">
+            <pre><span class="ruby-comment"># File _plugins/util.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">test_bad_versions</span>
+  <span class="ruby-comment"># toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_info/0.1.8_1</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">fix_version</span>(<span class="ruby-string">&quot;0.1.8_1&quot;</span>), <span class="ruby-string">&quot;0.1.8galaxy1&quot;</span>)
+
+  <span class="ruby-comment"># toolshed.g2.bx.psu.edu/repos/iuc/snap_training/snap_training/2013_11_29+galaxy1</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">fix_version</span>(<span class="ruby-string">&quot;2013_11_29+galaxy1&quot;</span>), <span class="ruby-string">&quot;2013.11.29galaxy1&quot;</span>)
+
+  <span class="ruby-comment"># toolshed.g2.bx.psu.edu/repos/devteam/vcffilter/vcffilter2/1.0.0_rc1+galaxy3</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">fix_version</span>(<span class="ruby-string">&quot;1.0.0_rc1+galaxy3&quot;</span>), <span class="ruby-string">&quot;1.0.0rc1galaxy3&quot;</span>)
+
+  <span class="ruby-comment">#</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-identifier">fix_version</span>(<span class="ruby-string">&quot;3+galaxy0&quot;</span>), <span class="ruby-string">&quot;3.0.0galaxy0&quot;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
 
       <div id="method-i-test_exact" class="method-detail ">
         <div class="method-header">

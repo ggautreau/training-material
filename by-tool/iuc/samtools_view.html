@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@8a7506ce418a7c9bc01cf4ab266a9c12bee82951",
+		release: "galaxy-training-network@8e77bd1ffe6fae868d4dba1efb603799812490c1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -208,7 +208,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 		Samtools view:
 		- reformat, filter, or subsample SAM, BAM or CRAM
 	</h1>
-	<pre>toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy31.9+galaxy3</pre>
+	<pre>toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.20+galaxy3</pre>
 </hgroup>
 
 <section>
@@ -216,75 +216,70 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 		<div class="row">
 			<div class="col-md-3">
 				<h2>Metadata</h2>
-				<h3>Servers Offering this Tool</h3>
-				<a href="https://usegalaxy.eu/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3">UseGalaxy.eu (1.9+galaxy3)</a>
-				<p class="text-muted">This is a guess, we are not currently checking if that is actually present.</p>
 
-				<hgroup>
-					<h3>Observed Tool Versions</h3>
-					<p>Within GTN tutorials</p>
-				</hgroup>
+				<h3>Links</h3>
 				<ul>
 					
-					<li>1.9+galaxy3</li>
+					<li>
+						<a href="https://bio.tools/samtools">
+						bio.tools: SAMtools
+						</a>
+					</li>
 					
-					<li>1.9+galaxy2</li>
-					
-					<li>1.9+galaxy1</li>
-					
-					<li>1.20+galaxy3</li>
-					
-					<li>1.15.1+galaxy2</li>
-					
-					<li>1.15.1+galaxy0</li>
-					
-					<li>1.13+galaxy2</li>
 					
 				</ul>
 
+				
 				
 				<h3>EDAM Operations</h3>
 				<ul>
 				
 					<li>
-						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_3096">
-						operation_3096
-						</a>
-					</li>
-				
-					<li>
-						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_3802">
-						operation_3802
-						</a>
-					</li>
-				
-					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_3695">
-						operation_3695
+							Filtering
 						</a>
 					</li>
 				
 					<li>
-						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_1812">
-						operation_1812
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_3802">
+							Sorting
 						</a>
 					</li>
 				
 					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_0337">
-						operation_0337
+							Visualisation
 						</a>
 					</li>
 				
 					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_1812">
+							Parsing
+						</a>
+					</li>
+				
+					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_3096">
+							Editing
+						</a>
+					</li>
+				
+					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_0335">
-						operation_0335
+							Formatting
 						</a>
 					</li>
 				
 					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_0227">
-						operation_0227
+							Indexing
 						</a>
 					</li>
 				
@@ -292,35 +287,367 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				
 
 				
+				
 				<h3>EDAM Topics</h3>
 				<ul>
 				
 					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_0080">
-						topic_0080
+							Sequence analysis
 						</a>
 					</li>
 				
 					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_0102">
-						topic_0102
+							Mapping
 						</a>
 					</li>
 				
 					<li>
-						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_3168">
-						topic_3168
-						</a>
-					</li>
-				
-					<li>
+						
 						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_3325">
-						topic_3325
+							Rare diseases
+						</a>
+					</li>
+				
+					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_3168">
+							Sequencing
 						</a>
 					</li>
 				
 				</ul>
 				
+
+				<hgroup>
+					<h3>Observed Tool Versions</h3>
+					<p>Within GTN tutorials</p>
+				</hgroup>
+
+				
+				<details>
+					<summary>1.20+galaxy3</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.20+galaxy3&version=1.20+galaxy3">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.20+galaxy3&version=1.20+galaxy3">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.20+galaxy3&version=1.20+galaxy3">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.20+galaxy3&version=1.20+galaxy3">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+					</ul>
+				</details>
+				
+				<details>
+					<summary>1.15.1+galaxy2</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy2&version=1.15.1+galaxy2">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy2&version=1.15.1+galaxy2">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy2&version=1.15.1+galaxy2">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy2&version=1.15.1+galaxy2">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+						<li>
+								<a href="https://galaxy.mesocentre.uca.fr?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy2&version=1.15.1+galaxy2">
+								Galaxy@AuBi
+							</a>
+						</li>
+						
+						<li>
+								<a href="https://mississippi.sorbonne-universite.fr?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy2&version=1.15.1+galaxy2">
+								MISSISSIPPI
+							</a>
+						</li>
+						
+					</ul>
+				</details>
+				
+				<details>
+					<summary>1.15.1+galaxy0</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0&version=1.15.1+galaxy0">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0&version=1.15.1+galaxy0">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0&version=1.15.1+galaxy0">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0&version=1.15.1+galaxy0">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+						<li>
+								<a href="https://usegalaxy.cz/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0&version=1.15.1+galaxy0">
+								UseGalaxy.cz
+							</a>
+						</li>
+						
+						<li>
+								<a href="https://usegalaxy.no/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0&version=1.15.1+galaxy0">
+								UseGalaxy.no
+							</a>
+						</li>
+						
+					</ul>
+				</details>
+				
+				<details>
+					<summary>1.13+galaxy2</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2&version=1.13+galaxy2">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2&version=1.13+galaxy2">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2&version=1.13+galaxy2">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2&version=1.13+galaxy2">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+						<li>
+								<a href="https://usegalaxy.no/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2&version=1.13+galaxy2">
+								UseGalaxy.no
+							</a>
+						</li>
+						
+					</ul>
+				</details>
+				
+				<details>
+					<summary>1.9+galaxy3</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3&version=1.9+galaxy3">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3&version=1.9+galaxy3">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3&version=1.9+galaxy3">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3&version=1.9+galaxy3">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+						<li>
+								<a href="https://galaxytrakr.org/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3&version=1.9+galaxy3">
+								GalaxyTrakr
+							</a>
+						</li>
+						
+						<li>
+								<a href="https://usegalaxy.no/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3&version=1.9+galaxy3">
+								UseGalaxy.no
+							</a>
+						</li>
+						
+					</ul>
+				</details>
+				
+				<details>
+					<summary>1.9+galaxy2</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy2&version=1.9+galaxy2">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy2&version=1.9+galaxy2">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy2&version=1.9+galaxy2">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy2&version=1.9+galaxy2">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+						<li>
+								<a href="https://usegalaxy.no/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy2&version=1.9+galaxy2">
+								UseGalaxy.no
+							</a>
+						</li>
+						
+					</ul>
+				</details>
+				
+				<details>
+					<summary>1.9+galaxy1</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy1&version=1.9+galaxy1">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy1&version=1.9+galaxy1">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy1&version=1.9+galaxy1">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy1&version=1.9+galaxy1">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+						<li>
+								<a href="https://usegalaxy.be/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy1&version=1.9+galaxy1">
+								UseGalaxy.be
+							</a>
+						</li>
+						
+						<li>
+								<a href="https://usegalaxy.no/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy1&version=1.9+galaxy1">
+								UseGalaxy.no
+							</a>
+						</li>
+						
+					</ul>
+				</details>
+				
+
 			</div>
 
 			<div class="col-md-9">
@@ -389,6 +716,24 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	</div>
 </section>
 
+<style>
+details {
+	border: 1px solid black;
+	margin-bottom: 0.2rem;
+	cursor: pointer;
+
+	summary {
+		padding: 0.5rem
+	}
+}
+details:hover {
+	box-shadow: 5px 5px var(--brand-color)
+}
+details:active {
+	box-shadow: 3px 3px var(--brand-color)
+}
+</style>
+
         </div>
         <footer>
 	<hr />
@@ -448,7 +793,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8a7506ce418a7c9bc01cf4ab266a9c12bee82951">8a7506c</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8e77bd1ffe6fae868d4dba1efb603799812490c1">8e77bd1</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
