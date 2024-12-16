@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@370c83bc7b2cab41b8316839bbd7ae2a9cc2bda7",
+		release: "galaxy-training-network@52f53f75c2d868ce5305c0a0be90507c1390ad74",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1030,17 +1030,161 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 </code></pre></div></div>
 
-<div>
-  <blockquote class="question">
-    <div class="box-title" aria-label="quiz box: Test Quiz"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Test Quiz</div>
-    <p>Check your knowledge with a quiz!</p>
+<blockquote class="comment" id="a-yaml">
+	<div class="box-title comment-title">
+		<i class="far fa-comment-dots" aria-hidden="true"></i>
+		Quiz: Test Quiz
+	</div>
 
-    <ul>
-      <li><a href="/training-material/quiz/quiz.html?mode=self&amp;quiz=/training-material/topics/contributing/tutorials/create-new-tutorial-quiz/quiz/a.yaml">Self Study Mode</a> - do the quiz at your own pace, to check your understanding.</li>
-      <li><a href="/training-material/quiz/quiz.html?mode=teacher&amp;quiz=/training-material/topics/contributing/tutorials/create-new-tutorial-quiz/quiz/a.yaml">Classroom Mode</a> - do the quiz synchronously with a classroom of students.</li>
-    </ul>
-  </blockquote>
+
+
+	
+	<form class="quiz-a-yaml question-1">
+	<b class="question-title"><span class="result"></span> Question 1: The answer is A and C</b>
+
+	
+
+		
+		<ul>
+		<li class="answer correct">
+			<span class="result"></span>
+			
+			<input type="checkbox" id="a-1-1" name="answer" value="A" class="answer-input  correct" />
+			
+
+			<label for="a-1-1">A</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="checkbox" id="a-1-2" name="answer" value="B" class="answer-input  " />
+			
+
+			<label for="a-1-2">B</label>
+		</li>
+		<li class="answer correct">
+			<span class="result"></span>
+			
+			<input type="checkbox" id="a-1-3" name="answer" value="C" class="answer-input  correct" />
+			
+
+			<label for="a-1-3">C</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="checkbox" id="a-1-4" name="answer" value="D" class="answer-input  " />
+			
+
+			<label for="a-1-4">D</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-a-yaml question-2">
+	<b class="question-title"><span class="result"></span> Question 2: The answer is Ananas</b>
+
+	
+		<img src="/training-material/topics/data-science/images/carpentries-sql/sql-join-structure.svg" alt="Image for question 2" />
+	
+
+		
+		<ul>
+		<li class="answer correct">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-1" name="answer" value="Ananas" class="answer-input correct" />
+			
+
+			<label for="a-2-1">Ananas</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-2" name="answer" value="Apple" class="answer-input " />
+			
+
+			<label for="a-2-2">Apple</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-3" name="answer" value="Pear" class="answer-input " />
+			
+
+			<label for="a-2-3">Pear</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-4" name="answer" value="Watermelon" class="answer-input " />
+			
+
+			<label for="a-2-4">Watermelon</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-a-yaml question-3">
+	<b class="question-title"><span class="result"></span> Question 3: How are you feeling?</b>
+
+	
+
+		
+	</form>
+
+
+<div class="quiz-results" aria-live="polite" role="status">
 </div>
+
+<button type="submit" class="btn btn-primary" id="check-answers" onclick="checkQuiz('a-yaml')">Check Answers</button>
+</blockquote>
+
+<script>
+function checkQuiz(id){
+	var quiz = document.getElementById(id);
+	var correct = 0;
+	var total = document.querySelectorAll(`#${id} form`).length;
+	var questions = document.querySelectorAll(`#${id} form`);
+	for (var i = 0; i < questions.length; i++) {
+		var question = questions[i];
+		var answer = question.querySelectorAll("li.answer");
+		// Only grade completed questions.
+
+		var any_wrong = false;
+		var any_selected = [...answer].map(e => e.querySelector("input").checked).includes(true);
+		// Loop over the inputs for this question
+		if (any_selected) {
+			question.querySelectorAll("input").forEach((input) => {
+				if (input.checked != input.classList.contains('correct')) {
+					any_wrong = true;
+				}
+			});
+
+			answer.forEach((li) => {
+				li.querySelector('.result').innerHTML = li.classList.contains('correct') ? "✅" : "❌";
+			});
+
+			if (any_wrong) {
+				question.querySelector(".result").innerHTML = "❌";
+			} else {
+				question.querySelector(".result").innerHTML = "✅";
+				correct++;
+			}
+		} else {
+			question.querySelector(".result").innerHTML = "❓";
+		}
+	}
+	var result = correct / total * 100;
+	quiz.querySelector('.quiz-results').innerHTML = `<p>You got ${correct} out of ${total} correct (${parseInt(result)}%)</p>`;
+}
+</script>
 
 <p>And then it’s available!</p>
 
@@ -1090,6 +1234,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
                 <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
 
+		<!--
                 
                 <h1 data-toc-skip>Quizzes</h1>
                 <p>Check your understanding with these quizzes</p>
@@ -1109,6 +1254,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                     </ul>
                     
                 
+		-->
 
                 
 
@@ -1473,7 +1619,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/370c83bc7b2cab41b8316839bbd7ae2a9cc2bda7">370c83b</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/52f53f75c2d868ce5305c0a0be90507c1390ad74">52f53f7</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@370c83bc7b2cab41b8316839bbd7ae2a9cc2bda7",
+		release: "galaxy-training-network@52f53f75c2d868ce5305c0a0be90507c1390ad74",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1585,14 +1585,86 @@ So how can we now use the knowledge we have gathered during this time in the cou
 <!--
 
 
-<div markdown="1">
-> <div class="box-title" aria-label="quiz box: Learning metaphors"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Learning metaphors</div>
-> Check your knowledge with a quiz!
->
->  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/learning_metaphors.yaml) - do the quiz at your own pace, to check your understanding.
->  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/learning_metaphors.yaml) - do the quiz synchronously with a classroom of students.
-{: .question}
+<blockquote class="comment" id="learning-metaphors-yaml">
+	<div class="box-title comment-title">
+		<i class="far fa-comment-dots" aria-hidden="true"></i>
+		Quiz: Learning metaphors
+	</div>
+
+
+
+	
+	<form class="quiz-learning-metaphors-yaml question-1">
+	<b class="question-title"><span class="result"></span> Question 1: Think about the following metaphors "A mind is a fire to be kindled". How this metaphors may affect your way of teaching?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-learning-metaphors-yaml question-2">
+	<b class="question-title"><span class="result"></span> Question 2: Think about the following metaphors "Teaching is growing a garden". How this metaphors may affect your way of teaching?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+
+<div class="quiz-results" aria-live="polite" role="status">
 </div>
+
+<button type="submit" class="btn btn-primary" id="check-answers"  onclick="checkQuiz('learning-metaphors-yaml')">Check Answers</button>
+</blockquote>
+
+<script>
+function checkQuiz(id){
+	var quiz = document.getElementById(id);
+	var correct = 0;
+	var total = document.querySelectorAll(`#${id} form`).length;
+	var questions = document.querySelectorAll(`#${id} form`);
+	for (var i = 0; i < questions.length; i++) {
+		var question = questions[i];
+		var answer = question.querySelectorAll("li.answer");
+		// Only grade completed questions.
+
+		var any_wrong = false;
+		var any_selected = [...answer].map(e => e.querySelector("input").checked).includes(true);
+		// Loop over the inputs for this question
+		if (any_selected) {
+			question.querySelectorAll("input").forEach((input) => {
+				if (input.checked != input.classList.contains('correct')) {
+					any_wrong = true;
+				}
+			});
+
+			answer.forEach((li) => {
+				li.querySelector('.result').innerHTML = li.classList.contains('correct') ? "✅" : "❌";
+			});
+
+			if (any_wrong) {
+				question.querySelector(".result").innerHTML = "❌";
+			} else {
+				question.querySelector(".result").innerHTML = "✅";
+				correct++;
+			}
+		} else {
+			question.querySelector(".result").innerHTML = "❓";
+		}
+	}
+	var result = correct / total * 100;
+	quiz.querySelector('.quiz-results').innerHTML = `<p>You got ${correct} out of ${total} correct (${parseInt(result)}%)</p>`;
+}
+</script>
 -->
 
 <blockquote class="notranslate hands_on">
@@ -1842,14 +1914,202 @@ So how can we now use the knowledge we have gathered during this time in the cou
 <!--
 
 
-<div markdown="1">
-> <div class="box-title" aria-label="quiz box: How short is your short term memory?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: How short is your short term memory?</div>
-> Check your knowledge with a quiz!
->
->  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml) - do the quiz at your own pace, to check your understanding.
->  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml) - do the quiz synchronously with a classroom of students.
-{: .question}
+<blockquote class="comment" id="short-term-memory-yaml">
+	<div class="box-title comment-title">
+		<i class="far fa-comment-dots" aria-hidden="true"></i>
+		Quiz: How short is your short term memory?
+	</div>
+
+
+
+	
+	<form class="quiz-short-term-memory-yaml question-1">
+	<b class="question-title"><span class="result"></span> Question 1: Read and try to remember the following letter combination `APH D BDN A CKG B DCI A`</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-1-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-1-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-1-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-1-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-2">
+	<b class="question-title"><span class="result"></span> Question 2: Take a piece of paper and write what you remember</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-2-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-2-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-3">
+	<b class="question-title"><span class="result"></span> Question 3: Answer `APH D BDN A CKG B DCI A`. How many consecutive letters you can remember?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-4">
+	<b class="question-title"><span class="result"></span> Question 4: Read and try to remember the following letter combination `A   PHD   B   DNA   C   KGB   D   CIA`</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-4-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-4-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-4-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-4-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-5">
+	<b class="question-title"><span class="result"></span> Question 5: Take a piece of paper and write what you remember</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-5-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-5-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-5-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-5-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-6">
+	<b class="question-title"><span class="result"></span> Question 6: Answer `A   PHD   B   DNA   C   KGB   D   CIA`. How many consecutive letters you can remember?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+
+<div class="quiz-results" aria-live="polite" role="status">
 </div>
+
+<button type="submit" class="btn btn-primary" id="check-answers"  onclick="checkQuiz('short-term-memory-yaml')">Check Answers</button>
+</blockquote>
+
+<script>
+function checkQuiz(id){
+	var quiz = document.getElementById(id);
+	var correct = 0;
+	var total = document.querySelectorAll(`#${id} form`).length;
+	var questions = document.querySelectorAll(`#${id} form`);
+	for (var i = 0; i < questions.length; i++) {
+		var question = questions[i];
+		var answer = question.querySelectorAll("li.answer");
+		// Only grade completed questions.
+
+		var any_wrong = false;
+		var any_selected = [...answer].map(e => e.querySelector("input").checked).includes(true);
+		// Loop over the inputs for this question
+		if (any_selected) {
+			question.querySelectorAll("input").forEach((input) => {
+				if (input.checked != input.classList.contains('correct')) {
+					any_wrong = true;
+				}
+			});
+
+			answer.forEach((li) => {
+				li.querySelector('.result').innerHTML = li.classList.contains('correct') ? "✅" : "❌";
+			});
+
+			if (any_wrong) {
+				question.querySelector(".result").innerHTML = "❌";
+			} else {
+				question.querySelector(".result").innerHTML = "✅";
+				correct++;
+			}
+		} else {
+			question.querySelector(".result").innerHTML = "❓";
+		}
+	}
+	var result = correct / total * 100;
+	quiz.querySelector('.quiz-results').innerHTML = `<p>You got ${correct} out of ${total} correct (${parseInt(result)}%)</p>`;
+}
+</script>
 -->
 
 <p>The amount of space in working memory does not depend on the number of letters. It depends on the <strong>number of meaningful objects</strong>. In the 2nd round, the meaning of the words (long-term memory) or connecting words with a story helps to remember. It make room in working memory.</p>
@@ -1861,14 +2121,202 @@ So how can we now use the knowledge we have gathered during this time in the cou
 <!--
 
 
-<div markdown="1">
-> <div class="box-title" aria-label="quiz box: How short is your short term memory?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: How short is your short term memory?</div>
-> Check your knowledge with a quiz!
->
->  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml) - do the quiz at your own pace, to check your understanding.
->  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/short_term_memory.yaml) - do the quiz synchronously with a classroom of students.
-{: .question}
+<blockquote class="comment" id="short-term-memory-yaml">
+	<div class="box-title comment-title">
+		<i class="far fa-comment-dots" aria-hidden="true"></i>
+		Quiz: How short is your short term memory?
+	</div>
+
+
+
+	
+	<form class="quiz-short-term-memory-yaml question-1">
+	<b class="question-title"><span class="result"></span> Question 1: Read and try to remember the following letter combination `APH D BDN A CKG B DCI A`</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-1-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-1-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-1-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-1-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-2">
+	<b class="question-title"><span class="result"></span> Question 2: Take a piece of paper and write what you remember</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-2-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-2-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-2-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-3">
+	<b class="question-title"><span class="result"></span> Question 3: Answer `APH D BDN A CKG B DCI A`. How many consecutive letters you can remember?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-4">
+	<b class="question-title"><span class="result"></span> Question 4: Read and try to remember the following letter combination `A   PHD   B   DNA   C   KGB   D   CIA`</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-4-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-4-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-4-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-4-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-5">
+	<b class="question-title"><span class="result"></span> Question 5: Take a piece of paper and write what you remember</b>
+
+	
+
+		
+		<ul>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-5-1" name="answer" value="Yes" class="answer-input "/>
+			
+
+			<label for="a-5-1">Yes</label>
+		</li>
+		<li class="answer ">
+			<span class="result"></span>
+			
+			<input type="radio" id="a-5-2" name="answer" value="No" class="answer-input "/>
+			
+
+			<label for="a-5-2">No</label>
+		</li>
+		
+		</ul>
+		
+	</form>
+
+	
+	<form class="quiz-short-term-memory-yaml question-6">
+	<b class="question-title"><span class="result"></span> Question 6: Answer `A   PHD   B   DNA   C   KGB   D   CIA`. How many consecutive letters you can remember?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+
+<div class="quiz-results" aria-live="polite" role="status">
 </div>
+
+<button type="submit" class="btn btn-primary" id="check-answers"  onclick="checkQuiz('short-term-memory-yaml')">Check Answers</button>
+</blockquote>
+
+<script>
+function checkQuiz(id){
+	var quiz = document.getElementById(id);
+	var correct = 0;
+	var total = document.querySelectorAll(`#${id} form`).length;
+	var questions = document.querySelectorAll(`#${id} form`);
+	for (var i = 0; i < questions.length; i++) {
+		var question = questions[i];
+		var answer = question.querySelectorAll("li.answer");
+		// Only grade completed questions.
+
+		var any_wrong = false;
+		var any_selected = [...answer].map(e => e.querySelector("input").checked).includes(true);
+		// Loop over the inputs for this question
+		if (any_selected) {
+			question.querySelectorAll("input").forEach((input) => {
+				if (input.checked != input.classList.contains('correct')) {
+					any_wrong = true;
+				}
+			});
+
+			answer.forEach((li) => {
+				li.querySelector('.result').innerHTML = li.classList.contains('correct') ? "✅" : "❌";
+			});
+
+			if (any_wrong) {
+				question.querySelector(".result").innerHTML = "❌";
+			} else {
+				question.querySelector(".result").innerHTML = "✅";
+				correct++;
+			}
+		} else {
+			question.querySelector(".result").innerHTML = "❓";
+		}
+	}
+	var result = correct / total * 100;
+	quiz.querySelector('.quiz-results').innerHTML = `<p>You got ${correct} out of ${total} correct (${parseInt(result)}%)</p>`;
+}
+</script>
 -->
 
 <blockquote class="notranslate hands_on">
@@ -2186,14 +2634,73 @@ So how can we now use the knowledge we have gathered during this time in the cou
 <!--
 
 
-<div markdown="1">
-> <div class="box-title" aria-label="quiz box: Teaching or training?"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden"></span> Quiz: Teaching or training?</div>
-> Check your knowledge with a quiz!
->
->  - [Self Study Mode](/training-material/quiz/quiz.html?mode=self&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml) - do the quiz at your own pace, to check your understanding.
->  - [Classroom Mode](/training-material/quiz/quiz.html?mode=teacher&quiz=/training-material/topics/contributing/tutorials/learning-principles/quiz/teaching_or_training.yaml) - do the quiz synchronously with a classroom of students.
-{: .question}
+<blockquote class="comment" id="teaching-or-training-yaml">
+	<div class="box-title comment-title">
+		<i class="far fa-comment-dots" aria-hidden="true"></i>
+		Quiz: Teaching or training?
+	</div>
+
+
+
+	
+	<form class="quiz-teaching-or-training-yaml question-1">
+	<b class="question-title"><span class="result"></span> Question 1: Based on your experience, what are the differences between teaching and training?</b>
+
+	
+
+		
+		<ul>
+		
+		</ul>
+		
+	</form>
+
+
+<div class="quiz-results" aria-live="polite" role="status">
 </div>
+
+<button type="submit" class="btn btn-primary" id="check-answers"  onclick="checkQuiz('teaching-or-training-yaml')">Check Answers</button>
+</blockquote>
+
+<script>
+function checkQuiz(id){
+	var quiz = document.getElementById(id);
+	var correct = 0;
+	var total = document.querySelectorAll(`#${id} form`).length;
+	var questions = document.querySelectorAll(`#${id} form`);
+	for (var i = 0; i < questions.length; i++) {
+		var question = questions[i];
+		var answer = question.querySelectorAll("li.answer");
+		// Only grade completed questions.
+
+		var any_wrong = false;
+		var any_selected = [...answer].map(e => e.querySelector("input").checked).includes(true);
+		// Loop over the inputs for this question
+		if (any_selected) {
+			question.querySelectorAll("input").forEach((input) => {
+				if (input.checked != input.classList.contains('correct')) {
+					any_wrong = true;
+				}
+			});
+
+			answer.forEach((li) => {
+				li.querySelector('.result').innerHTML = li.classList.contains('correct') ? "✅" : "❌";
+			});
+
+			if (any_wrong) {
+				question.querySelector(".result").innerHTML = "❌";
+			} else {
+				question.querySelector(".result").innerHTML = "✅";
+				correct++;
+			}
+		} else {
+			question.querySelector(".result").innerHTML = "❓";
+		}
+	}
+	var result = correct / total * 100;
+	quiz.querySelector('.quiz-results').innerHTML = `<p>You got ${correct} out of ${total} correct (${parseInt(result)}%)</p>`;
+}
+</script>
 -->
 
 <blockquote class="notranslate hands_on">
@@ -2276,6 +2783,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                 If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
                 <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
 
+		<!--
                 
                 <h1 data-toc-skip>Quizzes</h1>
                 <p>Check your understanding with these quizzes</p>
@@ -2351,6 +2859,7 @@ So how can we now use the knowledge we have gathered during this time in the cou
                     </ul>
                     
                 
+		-->
 
                 
 
@@ -2773,7 +3282,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/370c83bc7b2cab41b8316839bbd7ae2a9cc2bda7">370c83b</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/52f53f75c2d868ce5305c0a0be90507c1390ad74">52f53f7</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

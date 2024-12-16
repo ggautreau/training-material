@@ -21679,25 +21679,27 @@ video::cue {
   color: white;
 }
 
-#playlist {
+.playlist {
   display: flex;
   flex-direction: row;
-  overflow: auto;
+  flex-wrap: wrap;
 }
-#playlist.vertical {
+.playlist.vertical {
   flex-direction: column;
 }
-#playlist .pl-item a {
+.playlist .pl-item {
+  width: 16em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
 }
-#playlist .pl-item a .title {
+.playlist .pl-item .title {
   font-weight: 700;
 }
-#playlist .pl-item a .topic {
+.playlist .pl-item .topic {
   font-style: italic;
 }
-#playlist .pl-item a .cover {
+.playlist .pl-item .cover {
   width: 200px;
 }
 
@@ -22111,7 +22113,7 @@ body[data-brightness=dark] .modal-content button.close {
 .recording-video {
   width: 75%;
 }
-.recording-video iframe {
+.recording-video iframe, .recording-video video {
   width: 100%;
   height: 100%;
   aspect-ratio: 16/9;

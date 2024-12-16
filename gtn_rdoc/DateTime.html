@@ -109,10 +109,14 @@
         </div>
 
         <div class="method-description">
-          
+          <p>Convert a given <a href="DateTime.html"><code>DateTime</code></a> stamp roughly to an African/European lunch time</p>
+
+<p>Why that time? It is when the majority of our users are online and wanting to read the news.</p>
+
+<p>This is really only available in the feeds plugin, should not be assumed to be available elsewhere.</p>
 
           <div class="method-source-code" id="to_euro_lunch-source">
-            <pre><span class="ruby-comment"># File _plugins/feeds.rb, line 9</span>
+            <pre><span class="ruby-comment"># File _plugins/feeds.rb, line 15</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">to_euro_lunch</span>
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">to_date</span>.<span class="ruby-identifier">to_datetime</span> <span class="ruby-operator">+</span> <span class="ruby-value">0.6</span>
 <span class="ruby-keyword">end</span></pre>

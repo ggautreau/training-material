@@ -66,6 +66,8 @@
   <h3>Methods</h3>
 
   <ul class="link-list" role="directory">
+    <li ><a href="#method-c-fix_missing_redirs">::fix_missing_redirs</a>
+    <li ><a href="#method-c-html_redirect">::html_redirect</a>
     <li ><a href="#method-c-mapped-3F">::mapped?</a>
     <li ><a href="#method-c-update">::update</a>
   </ul>
@@ -81,7 +83,9 @@
 
   <section class="description">
     
-<p>This module is responsible for generating shortlinks for tutorials and FAQs</p>
+<p>This module is responsible for generating shortlinks for tutorials and FAQs and any other pages we add.</p>
+
+<p>Every category gets its own prefix letter.</p>
 
   </section>
 
@@ -107,6 +111,8 @@
         <dd>
         <dt id="CATEGORY_WORKFLOW">CATEGORY_WORKFLOW
         <dd>
+        <dt id="REDIRECT_TEMPLATE">REDIRECT_TEMPLATE
+        <dd>
       </dl>
     </section>
 
@@ -116,6 +122,67 @@
        <header>
          <h3>Public Class Methods</h3>
        </header>
+
+      <div id="method-c-fix_missing_redirs" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">fix_missing_redirs</span><span
+              class="method-args">(site)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Fix missing symlinks (usually exist because the target file has been renamed and doesn’t exist anymore.) However, a redirect <strong>will</strong> be present for the original filename so we just fix the missing symlink.</p>
+
+<p>Params:</p>
+<dl class="rdoc-list note-list"><dt><code>site</code>
+<dd>
+<p>The <a href="../Jekyll.html"><code>Jekyll</code></a> site object</p>
+</dd></dl>
+
+          <div class="method-source-code" id="fix_missing_redirs-source">
+            <pre><span class="ruby-comment"># File _plugins/gtn/shortlinks.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">fix_missing_redirs</span>(<span class="ruby-identifier">site</span>)
+  <span class="ruby-identifier">missing_redirs</span> = <span class="ruby-identifier">site</span>.<span class="ruby-identifier">data</span>[<span class="ruby-string">&#39;shortlinks&#39;</span>][<span class="ruby-string">&#39;id&#39;</span>].<span class="ruby-identifier">select</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span>, <span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">short_link</span> = <span class="ruby-node">&quot;short/#{id}.html&quot;</span>
+    <span class="ruby-operator">!</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span>(<span class="ruby-identifier">site</span>.<span class="ruby-identifier">in_dest_dir</span>(<span class="ruby-identifier">short_link</span>))
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">missing_redirs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">id</span>, <span class="ruby-identifier">target</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">short_link</span> = <span class="ruby-node">&quot;short/#{id}.html&quot;</span>
+    <span class="ruby-constant">Jekyll</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">warn</span> <span class="ruby-string">&quot;[GTN/Shortlink]&quot;</span> <span class="ruby-node">&quot;Shortlink target #{target} does not exist for shortlink #{short_link}, fixing.&quot;</span>
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">site</span>.<span class="ruby-identifier">in_dest_dir</span>(<span class="ruby-identifier">short_link</span>), <span class="ruby-constant">Gtn</span><span class="ruby-operator">::</span><span class="ruby-constant">Shortlinks</span>.<span class="ruby-identifier">html_redirect</span>(<span class="ruby-identifier">target</span>))
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-html_redirect" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">html_redirect</span><span
+              class="method-args">(target)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Duplicate of the jekyll-redirect-from plugin template. We can’t use that for, reasons.</p>
+
+          <div class="method-source-code" id="html_redirect-source">
+            <pre><span class="ruby-comment"># File _plugins/gtn/shortlinks.rb, line 37</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">html_redirect</span>(<span class="ruby-identifier">target</span>)
+  <span class="ruby-constant">REDIRECT_TEMPLATE</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39;REDIRECT_URL&#39;</span>, <span class="ruby-identifier">target</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
 
       <div id="method-c-mapped-3F" class="method-detail ">
         <div class="method-header">
@@ -130,7 +197,7 @@
           
 
           <div class="method-source-code" id="mapped-3F-source">
-            <pre><span class="ruby-comment"># File _plugins/gtn/shortlinks.rb, line 14</span>
+            <pre><span class="ruby-comment"># File _plugins/gtn/shortlinks.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">mapped?</span>(<span class="ruby-identifier">tutorial</span>, <span class="ruby-identifier">current_mapping</span>)
   <span class="ruby-identifier">current_mapping</span>[<span class="ruby-string">&#39;id&#39;</span>].<span class="ruby-identifier">values</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">tutorial</span>
 <span class="ruby-keyword">end</span></pre>
@@ -153,7 +220,7 @@
           
 
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File _plugins/gtn/shortlinks.rb, line 18</span>
+            <pre><span class="ruby-comment"># File _plugins/gtn/shortlinks.rb, line 61</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">update</span>(<span class="ruby-identifier">current_mapping</span>)
   <span class="ruby-identifier">current_mapping</span>[<span class="ruby-string">&#39;id&#39;</span>] = {} <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">current_mapping</span>.<span class="ruby-identifier">key?</span> <span class="ruby-string">&#39;id&#39;</span>
 
