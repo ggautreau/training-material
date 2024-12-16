@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@52f53f75c2d868ce5305c0a0be90507c1390ad74",
+		release: "galaxy-training-network@b237c4f459e7e5359638b788a76d4314378d6cc6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -329,13 +329,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
+					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/epigenetics-tal1-binding-site-identification/versions/tal1-binding-site-identification-workflow">Galaxy Main</a></li>
+					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/epigenetics-tal1-binding-site-identification/versions/tal1-binding-site-identification-workflow">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/epigenetics-tal1-binding-site-identification/versions/tal1-binding-site-identification-workflow">Galaxy Europe</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/epigenetics-tal1-binding-site-identification/versions/tal1-binding-site-identification-workflow">Galaxy France</a></li>
-					
-					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/epigenetics-tal1-binding-site-identification/versions/tal1-binding-site-identification-workflow">Galaxy Main</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/epigenetics-tal1-binding-site-identification/versions/tal1-binding-site-identification-workflow">Import to another server (≥23.0+ only!)</a>
@@ -495,21 +495,21 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   60["bedtools Intersect intervals"];
   47 -->|output_narrowpeaks| 60;
   56 -->|output_narrowpeaks| 60;
-  378d16e3-63d4-4a6b-88fc-0153195cfdda["Output\noutput_overlapping_peaks"];
-  60 --> 378d16e3-63d4-4a6b-88fc-0153195cfdda;
-  style 378d16e3-63d4-4a6b-88fc-0153195cfdda stroke:#2c3143,stroke-width:4px;
+  790da48c-3117-4f8c-b743-f19f5e29d514["Output\noutput_overlapping_peaks"];
+  60 --> 790da48c-3117-4f8c-b743-f19f5e29d514;
+  style 790da48c-3117-4f8c-b743-f19f5e29d514 stroke:#2c3143,stroke-width:4px;
   61["bedtools Intersect intervals"];
   47 -->|output_narrowpeaks| 61;
   56 -->|output_narrowpeaks| 61;
-  4b8060cd-27f9-4108-9c36-c35c22b4e801["Output\noutput_g1e_peaks"];
-  61 --> 4b8060cd-27f9-4108-9c36-c35c22b4e801;
-  style 4b8060cd-27f9-4108-9c36-c35c22b4e801 stroke:#2c3143,stroke-width:4px;
+  00e71a85-3149-4dde-8130-f16ae0866186["Output\noutput_g1e_peaks"];
+  61 --> 00e71a85-3149-4dde-8130-f16ae0866186;
+  style 00e71a85-3149-4dde-8130-f16ae0866186 stroke:#2c3143,stroke-width:4px;
   62["bedtools Intersect intervals"];
   56 -->|output_narrowpeaks| 62;
   47 -->|output_narrowpeaks| 62;
-  767b4caf-a88c-47c2-b65e-e1ae46bebe9e["Output\noutput_megakaryocyte_peaks"];
-  62 --> 767b4caf-a88c-47c2-b65e-e1ae46bebe9e;
-  style 767b4caf-a88c-47c2-b65e-e1ae46bebe9e stroke:#2c3143,stroke-width:4px;
+  4aa5602e-e434-41bb-befc-4f70d9c7f379["Output\noutput_megakaryocyte_peaks"];
+  62 --> 4aa5602e-e434-41bb-befc-4f70d9c7f379;
+  style 4aa5602e-e434-41bb-befc-4f70d9c7f379 stroke:#2c3143,stroke-width:4px;
   63["computeMatrix"];
   52 -->|outFileName| 63;
   57 -->|outFileName| 63;
@@ -903,7 +903,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/52f53f75c2d868ce5305c0a0be90507c1390ad74">52f53f7</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/b237c4f459e7e5359638b788a76d4314378d6cc6">b237c4f</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

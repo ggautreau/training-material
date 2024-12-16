@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@52f53f75c2d868ce5305c0a0be90507c1390ad74",
+		release: "galaxy-training-network@b237c4f459e7e5359638b788a76d4314378d6cc6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -331,11 +331,11 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Main</a></li>
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy France</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Europe</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy France</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Import to another server (≥23.0+ only!)</a>
@@ -353,23 +353,23 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 1;
   2["Datamash"];
   1 -->|tabular| 2;
-  32bba1f5-03e7-4511-a0d8-d4023c995b88["Output\ndatamash_output"];
-  2 --> 32bba1f5-03e7-4511-a0d8-d4023c995b88;
-  style 32bba1f5-03e7-4511-a0d8-d4023c995b88 stroke:#2c3143,stroke-width:4px;
+  ba72f869-e413-4fbd-80cc-43d1904fc305["Output\ndatamash_output"];
+  2 --> ba72f869-e413-4fbd-80cc-43d1904fc305;
+  style ba72f869-e413-4fbd-80cc-43d1904fc305 stroke:#2c3143,stroke-width:4px;
   3["Remove beginning"];
   1 -->|tabular| 3;
   4["Cut"];
   3 -->|out_file1| 4;
   5["Group"];
   3 -->|out_file1| 5;
-  41dac631-8b45-486e-bb14-f002f238435e["Output\ngroup1"];
-  5 --> 41dac631-8b45-486e-bb14-f002f238435e;
-  style 41dac631-8b45-486e-bb14-f002f238435e stroke:#2c3143,stroke-width:4px;
+  55a3c994-0bc3-4f81-8c96-fd06342d10b4["Output\ngroup1"];
+  5 --> 55a3c994-0bc3-4f81-8c96-fd06342d10b4;
+  style 55a3c994-0bc3-4f81-8c96-fd06342d10b4 stroke:#2c3143,stroke-width:4px;
   6["Group"];
   3 -->|out_file1| 6;
-  c99f638d-914c-4c27-97c3-6cad4818df92["Output\ngroup2"];
-  6 --> c99f638d-914c-4c27-97c3-6cad4818df92;
-  style c99f638d-914c-4c27-97c3-6cad4818df92 stroke:#2c3143,stroke-width:4px;
+  da4fd865-81ab-413d-9d96-117355d48cc7["Output\ngroup2"];
+  6 --> da4fd865-81ab-413d-9d96-117355d48cc7;
+  style da4fd865-81ab-413d-9d96-117355d48cc7 stroke:#2c3143,stroke-width:4px;
   7["Scatterplot w ggplot2"];
   3 -->|out_file1| 7;
   8["Scatterplot w ggplot2"];
@@ -634,7 +634,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/52f53f75c2d868ce5305c0a0be90507c1390ad74">52f53f7</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/b237c4f459e7e5359638b788a76d4314378d6cc6">b237c4f</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
