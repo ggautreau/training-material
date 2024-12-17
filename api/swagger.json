@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "Galaxy Training Network API",
-    "description": "A collection of tutorials generated and maintained by Galaxy Community Members across the world",
+    "description": "A collection of e-learning materials produced and maintained by GTN Members\nacross the world.\n\nIMPORTANT! IF you build anything based off of this API, you must contact us\nto let us know. This API is UNSTABLE and subject to CHANGE WITHOUT WARNING.\nWhen you contact us, if we are interested in supporting the project, then\nwe can advise you to the best APIs that are useful for your use case, or\nhelp build new ones that are more useful to you and do not impose\nunnecessary load on the GTN. Additionally we will consider providing\nadditional stability guarantees for those specific routes you rely on.\n",
     "license": {
       "name": "MIT & CC-BY 4.0",
       "url": "https://github.com/galaxyproject/training-material/blob/main/LICENSE.md"
@@ -32,7 +32,11 @@
     },
     {
       "name": "galaxy",
-      "description": "API's with higher reliability guarantee because they are being used inside Galaxy"
+      "description": "APIs being used inside Galaxy"
+    },
+    {
+      "name": "stable",
+      "description": "APIs with higher reliability guarantees"
     }
   ],
   "paths": {
@@ -131,7 +135,8 @@
     "/top-tools.json": {
       "get": {
         "tags": [
-          "galaxy"
+          "galaxy",
+          "stable"
         ],
         "summary": "List available tutorials by tool",
         "responses": {
