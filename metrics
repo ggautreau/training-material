@@ -1,0 +1,88 @@
+
+# HELP gtn_pages_total Total number of Pages
+# TYPE gtn_pages_total counter
+gtn_pages_total{layout=""} 0
+gtn_pages_total{layout="base"} 11
+gtn_pages_total{layout="by_tool"} 1911
+gtn_pages_total{layout="embed"} 1
+gtn_pages_total{layout="event"} 10
+gtn_pages_total{layout="event-external"} 12
+gtn_pages_total{layout="event-track"} 10
+gtn_pages_total{layout="faq"} 467
+gtn_pages_total{layout="faq-page"} 397
+gtn_pages_total{layout="hall-of-fame"} 1
+gtn_pages_total{layout="home"} 1
+gtn_pages_total{layout="introduction_slides"} 15
+gtn_pages_total{layout="learning-pathway"} 26
+gtn_pages_total{layout="none"} 1
+gtn_pages_total{layout="page"} 18
+gtn_pages_total{layout="topic"} 33
+gtn_pages_total{layout="topic-maintainer"} 22
+gtn_pages_total{layout="training_philosophy"} 6
+gtn_pages_total{layout="tutorial_hands_on"} 464
+gtn_pages_total{layout="tutorial_slides"} 111
+gtn_pages_total{layout="tutorial_slides_ai4life"} 3
+gtn_pages_total{layout="workflow-list"} 242
+
+# HELP gtn_contributors_total Total number of contributors
+# TYPE gtn_contributors_total counter
+gtn_contributors_total{orcid="true"} 156
+gtn_contributors_total{orcid="false"} 278
+
+# HELP gtn_organisations_total Total number of organisations
+# TYPE gtn_organisations_total counter
+gtn_organisations_total{orcid="true"} 0
+gtn_organisations_total{orcid="false"} 49
+
+# HELP gtn_grants_total Total number of grants
+# TYPE gtn_grants_total counter
+gtn_grants_total{orcid="true"} 0
+gtn_grants_total{orcid="false"} 20
+
+# HELP gtn_tutorials_total Total number of Hands-on Tutorials
+# TYPE gtn_tutorials_total counter
+gtn_tutorials_total 464
+
+# HELP gtn_faqs_total Total number of FAQs
+# TYPE gtn_faqs_total counter
+gtn_faqs_total 467
+
+# HELP gtn_project_years_total Total years of project lifetime
+# TYPE gtn_project_years_total counter
+gtn_project_years_total 9.476712328767123
+
+# HELP tutorial_update_age_days How recently was every single Hands-on Tutorial touched within the GTN, grouped by days since last edited.
+# TYPE tutorial_update_age_days histogram
+tutorial_update_age_days{le="1"} 11
+tutorial_update_age_days{le="7"} 15
+tutorial_update_age_days{le="28"} 29
+tutorial_update_age_days{le="90"} 99
+tutorial_update_age_days{le="365"} 182
+tutorial_update_age_days{le="730"} 119
+tutorial_update_age_days{le="1095"} 9
+tutorial_update_age_days{le="1825"} 0
+tutorial_update_age_days{le="+Inf"} 0
+
+# HELP tutorial_published_age_days How recently was every single Hands-on Tutorial published within the GTN, grouped by days since first published.
+# TYPE tutorial_published_age_days histogram
+tutorial_published_age_days{le="1"} 11
+tutorial_published_age_days{le="7"} 2
+tutorial_published_age_days{le="28"} 5
+tutorial_published_age_days{le="90"} 10
+tutorial_published_age_days{le="365"} 58
+tutorial_published_age_days{le="730"} 63
+tutorial_published_age_days{le="1095"} 73
+tutorial_published_age_days{le="1825"} 108
+tutorial_published_age_days{le="+Inf"} 134
+
+# HELP contributor_join_age_days When did contributors join? Buckets of their ages by days since joined.
+# TYPE contributor_join_age_days histogram
+contributor_join_age_days{le="1"} 0
+contributor_join_age_days{le="7"} 0
+contributor_join_age_days{le="28"} 4
+contributor_join_age_days{le="90"} 12
+contributor_join_age_days{le="365"} 78
+contributor_join_age_days{le="730"} 51
+contributor_join_age_days{le="1095"} 57
+contributor_join_age_days{le="1825"} 79
+contributor_join_age_days{le="+Inf"} 156
