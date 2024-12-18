@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@02b464884982eb6c17396df5046bc94d26c80942",
+		release: "galaxy-training-network@f9600ca39c637b3869325f36c77e7e66f6417e17",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Training Infrastructure as a Service (TIaaS)">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-06-14 09:56:50 +0000">
+<meta name="DC.date" content="2024-12-18 12:57:04 +0000">
 <meta name="DC.creator" content="Helena Rasche">
 <meta name="DC.creator" content="Saskia Hiltemann"><meta name="description" content="Here you can learn everything you need to become a Pro Galaxy Administrator! These resources cover everything from setup, to configuration, to monitoring, to customisation. ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -189,7 +189,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-06-14 09:56:50 +0000",
+  "dateModified": "2024-12-18 12:57:04 +0000",
   "datePublished": "2020-02-12 14:46:40 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -251,7 +251,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Training Infrastructure as a Service (TIaaS)",
   "url": "https://training.galaxyproject.org/training-material/topics/admin/tutorials/tiaas/tutorial.html",
-  "version": 37,
+  "version": 38,
   "timeRequired": "PT30M",
   "teaches": "- Setup TIaaS\n- Request and manage trainings\n- Join a training",
   "keywords": [
@@ -2508,7 +2508,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 12, 2020 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 14, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 18, 2024 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -2528,7 +2528,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (0 recent ratings, 1 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 37 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 38 </div>
 
     </blockquote>
     </section>
@@ -2697,11 +2697,12 @@ to perform this process every night at midnight. You can control when this runs 
 
       <div data-commit="Add nginx routes for TIaaS" class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">--- a/templates/nginx/galaxy.j2
 </span><span class="gi">+++ b/templates/nginx/galaxy.j2
-</span><span class="p">@@ -113,4 +113,6 @@</span> server {
+</span><span class="p">@@ -114,4 +114,7 @@</span> server {
+ 		proxy_pass http://127.0.0.1:3000/;
  		proxy_set_header Host $http_host;
  	}
-    
-<span class="gi">+	{{ tiaas_nginx_routes }}
+<span class="gi">+
++	{{ tiaas_nginx_routes }}
 +
 </span> }
    
@@ -3235,7 +3236,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/02b464884982eb6c17396df5046bc94d26c80942">02b4648</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f9600ca39c637b3869325f36c77e7e66f6417e17">f9600ca</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

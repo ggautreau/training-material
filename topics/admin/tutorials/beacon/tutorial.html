@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@02b464884982eb6c17396df5046bc94d26c80942",
+		release: "galaxy-training-network@f9600ca39c637b3869325f36c77e7e66f6417e17",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Deploying a Beacon v1 in Galaxy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-12-09 16:53:36 +0000">
+<meta name="DC.date" content="2024-12-18 12:57:04 +0000">
 <meta name="DC.creator" content="Helena Rasche"><meta name="description" content="Here you can learn everything you need to become a Pro Galaxy Administrator! These resources cover everything from setup, to configuration, to monitoring, to customisation. ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Galaxy Server administration / Deploying a Beacon v1 in Galaxy / Hands-on: Deploying a Beacon v1 in Galaxy">
@@ -188,7 +188,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-12-09 16:53:36 +0000",
+  "dateModified": "2024-12-18 12:57:04 +0000",
   "datePublished": "2023-04-16 09:02:56 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -267,7 +267,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Deploying a Beacon v1 in Galaxy",
   "url": "https://training.galaxyproject.org/training-material/topics/admin/tutorials/beacon/tutorial.html",
-  "version": 4,
+  "version": 5,
   "timeRequired": "PT30M",
   "teaches": "- Deploy a Beacon",
   "keywords": [
@@ -1380,7 +1380,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Apr 16, 2023 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 9, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 18, 2024 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1398,7 +1398,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 4 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 5 </div>
 
     </blockquote>
     </section>
@@ -1716,7 +1716,7 @@ We declare a host group called ‘beacon’ with no hosts of its own.</p>
 
       <div data-commit="Add beacon routes to nginx" class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gd">--- a/templates/nginx/galaxy.j2
 </span><span class="gi">+++ b/templates/nginx/galaxy.j2
-</span><span class="p">@@ -115,4 +115,14 @@</span> server {
+</span><span class="p">@@ -117,4 +117,14 @@</span> server {
     
  	{{ tiaas_nginx_routes }}
     
@@ -2043,7 +2043,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/02b464884982eb6c17396df5046bc94d26c80942">02b4648</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f9600ca39c637b3869325f36c77e7e66f6417e17">f9600ca</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
