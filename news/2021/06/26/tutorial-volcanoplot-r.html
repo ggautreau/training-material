@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,11 +68,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="New Tutorial: Visualization of RNA-Seq results with Volcano Plot in R">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-06-11 11:55:25 +0000">
-<meta name="DC.creator" content="Maria Doyle"><meta name="description" content="The Volcano plot tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A short video for the tutorial is also available on YouTube, created for the GCC2021 Training week.  Happy plotting! ">
+<meta name="DC.date" content="2024-12-19 14:39:45 +0000">
+<meta name="DC.creator" content="Maria Doyle"><meta name="description" content="The Volcano plot tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A short video for the tutorial is also available on YouTube, created for the GCC2021 Training week. Happy plotting! ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="New Tutorial: Visualization of RNA-Seq results with Volcano Plot in R">
-        <meta property="og:description" content="The Volcano plot tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A short video for the tutorial is also available on YouTube, created for the GCC2021 Training week.  Happy plotting! ">
+        <meta property="og:description" content="The Volcano plot tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A short video for the tutorial is also available on YouTube, created for the GCC2021 Training week. Happy plotting! ">
         <meta property="og:image" content="https://training.galaxyproject.org/training-material/topics/transcriptomics/images/rna-seq-viz-with-volcanoplot-r/volcano_categories.png"></head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
         <script  src='/training-material/assets/js/bundle.theme.f1f2de89.js'></script>
@@ -256,11 +256,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-<span class="label label-default tutorial_tag" id="new tutorial" style="--color-primary: #ffc38a; --color-darker: #fca600; --color-dimmed: #ffb45c;">new tutorial</span>
+<span class="label label-default tutorial_tag" id="new tutorial" style="--color-primary: #ffc793; --color-darker: #ffa801; --color-dimmed: #ffb769;">new tutorial</span>
 
 
 
-<span class="label label-default tutorial_tag" id="visualization" style="--color-primary: #ffbcd8; --color-darker: #ff98c6; --color-dimmed: #ffaacf;">visualization</span>
+<span class="label label-default tutorial_tag" id="visualisation" style="--color-primary: #b9d3ff; --color-darker: #8fbcff; --color-dimmed: #a5c8ff;">visualisation</span>
+
+
+
+<span class="label label-default tutorial_tag" id="transcriptomics" style="--color-primary: #e6d400; --color-darker: #cdbd00; --color-dimmed: #dac800;">transcriptomics</span>
 
 
 
@@ -277,7 +281,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       </span>
     </p>
 
-    <p>The <a href="/training-material/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tutorial.html">Volcano plot</a> tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A <a href="https://www.youtube.com/embed/4dspgiwkuxk">short video</a> for the tutorial is also available on YouTube, created for the <a href="https://galaxyproject.org/events/gcc2021/training/">GCC2021 Training week</a>. 
+    <p>The <a href="/training-material/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tutorial.html">Volcano plot</a> tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A <a href="https://www.youtube.com/embed/4dspgiwkuxk">short video</a> for the tutorial is also available on YouTube, created for the <a href="https://galaxyproject.org/events/gcc2021/training/">GCC2021 Training week</a>.
 Happy plotting!</p>
 
 <figure>
@@ -320,12 +324,13 @@ Happy plotting!</p>
   "headline": "<p>The <a href=\"/training-material/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tuto",
   "keywords": [
     "new tutorial",
-    "visualization"
+    "visualisation",
+    "transcriptomics"
   ],
   "description": "<p>The <a href=\"/training-material/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tuto",
-  "articleBody": "<p>The <a href=\"/training-material/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tutorial.html\">Volcano plot</a> tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A <a href=\"https://www.youtube.com/embed/4dspgiwkuxk\">short video</a> for the tutorial is also available on YouTube, created for the <a href=\"https://galaxyproject.org/events/gcc2021/training/\">GCC2021 Training week</a>. \nHappy plotting!</p>\n\n<figure>\n\n<iframe credentialless=\"\" allowfullscreen=\"\" referrerpolicy=\"no-referrer\" sandbox=\"allow-scripts allow-same-origin allow-popups\" allow=\"accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'\" csp=\"sandbox allow-scripts allow-same-origin;\" width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/4dspgiwkuxk\" title=\"GTN Tutorial: Volcano Plots in R\" frameborder=\"0\" loading=\"lazy\"></iframe>\n\n<figcaption>\n  <span class=\"figcaption-prefix\"><strong>Video</strong>:</span> GTN Tutorial: Volcano Plots in R</figcaption>\n</figure>\n\n",
+  "articleBody": "<p>The <a href=\"/training-material/topics/transcriptomics/tutorials/rna-seq-viz-with-volcanoplot/tutorial.html\">Volcano plot</a> tutorial introduced volcano plots and showed how they can be easily generated with the Galaxy Volcano plot tool. This new tutorial shows how you can customise a plot using the R script output from the tool and RStudio in Galaxy. A <a href=\"https://www.youtube.com/embed/4dspgiwkuxk\">short video</a> for the tutorial is also available on YouTube, created for the <a href=\"https://galaxyproject.org/events/gcc2021/training/\">GCC2021 Training week</a>.\nHappy plotting!</p>\n\n<figure>\n\n<iframe credentialless=\"\" allowfullscreen=\"\" referrerpolicy=\"no-referrer\" sandbox=\"allow-scripts allow-same-origin allow-popups\" allow=\"accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'\" csp=\"sandbox allow-scripts allow-same-origin;\" width=\"560\" height=\"315\" src=\"https://www.youtube-nocookie.com/embed/4dspgiwkuxk\" title=\"GTN Tutorial: Volcano Plots in R\" frameborder=\"0\" loading=\"lazy\"></iframe>\n\n<figcaption>\n  <span class=\"figcaption-prefix\"><strong>Video</strong>:</span> GTN Tutorial: Volcano Plots in R</figcaption>\n</figure>\n\n",
   "datePublished": "2021-06-26 00:00:00 +0000",
-  "dateModified": "2024-06-11 11:55:25 +0000",
+  "dateModified": "2024-12-19 14:39:45 +0000",
   "author": [
     {
       "@context": "https://schema.org",
@@ -443,9 +448,15 @@ Happy plotting!</p>
 	<p>
 	17 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e5ec; --color-darker: #00ccd2; --color-dimmed: #00d8df;">event</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -464,9 +475,9 @@ Happy plotting!</p>
 	<p>
 	6 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e7d5; --color-darker: #00cebe; --color-dimmed: #00dbc9;">single-cell</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;">single-cell</span>
 	
 	</p>
 	<p class="card-text">
@@ -485,11 +496,15 @@ Happy plotting!</p>
 	<p>
 	2 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d8c6ff; --color-darker: #c7a9ff; --color-dimmed: #cfb8ff;">automation</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;">automation</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -508,11 +523,13 @@ Happy plotting!</p>
 	<p>
 	29 November 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ee66; --color-darker: #00d45a; --color-dimmed: #00e160;">bioimaging</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00f168; --color-darker: #00d75c; --color-dimmed: #00e462;">bioimaging</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fac900; --color-darker: #dfb300; --color-dimmed: #edbe00;">mitoflash</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">mitoflash</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #5cec00; --color-darker: #51d200; --color-dimmed: #56df00;">mitochondria</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #5def00; --color-darker: #52d500; --color-dimmed: #57e200;">mitochondria</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe5; --color-darker: #ff9ad9; --color-dimmed: #ffaddf;">imaging</span>
 	
 	</p>
 	<p class="card-text">
@@ -531,11 +548,13 @@ Happy plotting!</p>
 	<p>
 	22 July 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc0b5; --color-darker: #ff9f8a; --color-dimmed: #ffafa0;">deploying</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc4b9; --color-darker: #ffa28f; --color-dimmed: #ffb3a5;">deploying</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cec9ff; --color-darker: #b7afff; --color-dimmed: #c2bcff;">maintenance</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #d1ccff; --color-darker: #b9b2ff; --color-dimmed: #c5bfff;">maintenance</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c7cbff; --color-darker: #abb2ff; --color-dimmed: #b9bfff;">survey</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #caceff; --color-darker: #aeb5ff; --color-dimmed: #bcc2ff;">survey</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef99; --color-darker: #00d588; --color-dimmed: #00e290;">admin</span>
 	
 	</p>
 	<p class="card-text">
@@ -618,7 +637,7 @@ Happy plotting!</p>
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

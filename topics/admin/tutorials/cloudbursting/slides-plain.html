@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Galaxy on the Cloud">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2022-03-01 14:10:50 +0000">
+<meta name="DC.date" content="2024-12-19 13:58:47 +0000">
 <meta name="DC.creator" content="Simon Gladman"><meta name="description" content="# All these Clouds ## It's positively meterological..   ---  # Overview  .large[ * Galaxy in the Clouds? * AWS and other Clouds * CloudMan and CloudLaunch (& cloud agnosticisim) * Genomics Virtual Lab * Architecture * Persistence * Integration with the cloud: CloudBridge ]  ???   ---  # Help!  .large[ * Galaxy server flat out? * Queue longer than a Grateful Dead concert? * An urgent job to run?  What do you do now? ]   ---  # Help!  .large[ * Galaxy server flat out? * Queue longer than a Grateful Dead concert? * An urgent job to run?  What do you do now?  .special[Use the cloud man!] ] .center[![cloudman](../../images/cloudman_logo.png)]   ---  # Clouds?  **Cloud computing** ... is a model for enabling ubiquitous, **on-demand** access to a **shared pool** of configurable **computing resources** ... which can be **rapidly provisioned and released** with minimal management effort. Cloud computing and storage ... may be located far from the user – ranging in distance from **across a ci...">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Galaxy Server administration / Galaxy on the Cloud / Slides: Galaxy on the Cloud">
@@ -210,9 +210,49 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	<div class="contributors-line">
 		
+<table class="contributions">
+	
+	<tr>
+		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
+		<td>
+			
   <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/slugger70?s=36" alt="Simon Gladman avatar" width="36" class="avatar" />
     Simon Gladman</a>
   
+		</td>
+	</tr>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	<tr>
+		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
+		<td>
+			
+  <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
+    Helena Rasche</a>
+  </td>
+	</tr>
+	
+
+	
+
+	
+
+	
+
+	
+
+</table>
+
+
 	</div>
 
 </div>
@@ -225,7 +265,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 		
 
 		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Published:</strong> Jan 31, 2019 </div>
-		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last Updated:</strong> Mar 1, 2022 </div>
+		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last Updated:</strong> Dec 19, 2024 </div>
 
 	<hr />
 
@@ -312,7 +352,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <li>Academic:
     <ul>
       <li>OpenStack: open source community project</li>
-      <li>NeCTAR in Australia, Jetstream in USA, CLIMB in UK, lots of others</li>
+      <li>NeCTAR in Australia, Jetstream in USA, CLIMB in UK, SURF in Netherlands, lots of others</li>
       <li>Some free for researchers (NeCTAR, CLIMB), some with project grants (Jetstream)
 ]</li>
     </ul>
@@ -373,7 +413,7 @@ whenever they need.</p>
       <li>with Galaxy pre-installed</li>
       <li>with different sets of tools installed</li>
       <li>with access to reference data</li>
-      <li>for different clouds (AWS globally, Jetstream, NeCTAR, CLIMB etc.)</li>
+      <li>for different clouds (AWS globally, Jetstream, NeCTAR, CLIMB, SURF etc.)</li>
     </ul>
   </li>
   <li>You just need credentials for the cloud you want to “launch” on.
@@ -557,14 +597,23 @@ whenever they need.</p>
       <span class="nt">&lt;tool</span> <span class="na">id=</span><span class="s">"toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.3.1"</span> <span class="na">destination=</span><span class="s">"slurm_4slots"</span> <span class="nt">/&gt;</span>
 ...
 </code></pre></div>    </div>
-    <div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># COMPUTE NODES
+  </li>
+</ul>
+
+<hr />
+
+<h1 id="cloudman-galaxy-3">CloudMan Galaxy</h1>
+
+<ul>
+  <li>Configured for Slurm out of the box</li>
+</ul>
+
+<div class="language-ini highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># COMPUTE NODES
 </span><span class="py">NodeName</span><span class="p">=</span><span class="s">master NodeAddr=45.113.232.91 CPUs=15 RealMemory=64431 Weight=10 State=UNKNOWN</span>
 <span class="py">NodeName</span><span class="p">=</span><span class="s">w1 NodeAddr=45.113.232.83 CPUs=16 RealMemory=64431 Weight=5 State=UNKNOWN</span>
 <span class="py">NodeName</span><span class="p">=</span><span class="s">w2 NodeAddr=45.113.232.92 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOWN</span>
 <span class="py">NodeName</span><span class="p">=</span><span class="s">w3 NodeAddr=45.113.232.93 CPUs=8 RealMemory=32176 Weight=5 State=UNKNOWN</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
+</code></pre></div></div>
 
 <hr />
 
@@ -636,6 +685,8 @@ Tutorial Content is licensed under
 
 
 
+
+
         </div>
         <footer>
 	<hr />
@@ -695,7 +746,7 @@ Tutorial Content is licensed under
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

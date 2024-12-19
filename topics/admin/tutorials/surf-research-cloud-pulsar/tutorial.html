@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Pulsar usage on SURF Research Cloud">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-12-18 15:46:23 +0000">
+<meta name="DC.date" content="2024-12-19 13:58:47 +0000">
 <meta name="DC.creator" content="Helena Rasche">
 <meta name="DC.creator" content="Mirela Minkova"><meta name="description" content="Here you can learn everything you need to become a Pro Galaxy Administrator! These resources cover everything from setup, to configuration, to monitoring, to customisation. ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -189,7 +189,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-12-18 15:46:23 +0000",
+  "dateModified": "2024-12-19 13:58:47 +0000",
   "datePublished": "2024-12-18 14:49:11 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -262,14 +262,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Pulsar usage on SURF Research Cloud",
   "url": "https://training.galaxyproject.org/training-material/topics/admin/tutorials/surf-research-cloud-pulsar/tutorial.html",
-  "version": 2,
+  "version": 3,
   "timeRequired": "PT30M",
-  "teaches": "- Be able to attach a Pulsar node to Galaxy and use interactive tools",
+  "teaches": "- Be able to attach a Pulsar node to Galaxy\n- Send jobs to Pulsar",
   "keywords": [
     "Galaxy Server administration",
     "deploying"
   ],
-  "description": "## Abstract\n\nUsing Pulsar via the SURF Research Cloud (SRC) allows researchers to start Pulsar instances on-demand to expand their computational resources and even access GPUs to help and analyze their data in a secure environment following the General Data Protection Regulations (GDPR).\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How do I start a Pulsar instance on SURF Research Cloud?\n - How do I connect to Pulsar?\n\n\n## Learning Objectives\n\n- Be able to attach a Pulsar node to Galaxy and use interactive tools\n\n",
+  "description": "## Abstract\n\nUsing Pulsar via the SURF Research Cloud (SRC) allows researchers to start Pulsar instances on-demand to expand their computational resources and even access GPUs to help and analyze their data in a secure environment following the General Data Protection Regulations (GDPR).\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How do I start a Pulsar instance on SURF Research Cloud?\n - How do I connect to Pulsar?\n\n\n## Learning Objectives\n\n- Be able to attach a Pulsar node to Galaxy\n- Send jobs to Pulsar\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -701,7 +701,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <strong><i class="fas fa-bullseye" aria-hidden="true"></i> Objectives: </strong>
         <ul>
         
-        <li><p>Be able to attach a Pulsar node to Galaxy and use interactive tools</p>
+        <li><p>Be able to attach a Pulsar node to Galaxy</p>
+</li>
+        
+        <li><p>Send jobs to Pulsar</p>
 </li>
         
         </ul>
@@ -801,7 +804,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Dec 18, 2024 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 18, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 19, 2024 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -817,7 +820,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 3 </div>
 
     </blockquote>
     </section>
@@ -834,9 +837,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 <section aria-label="Tutorial Content" id="tutorial-content">
                 <p>Using Pulsar via the SURF Research Cloud (SRC) allows researchers to start Pulsar instances on-demand to expand their computational resources and even access GPUs to help and analyze their data in a secure environment following the General Data Protection Regulations (GDPR).</p>
 
-<p>The instance provides secure authentication, where users must have a SURF Research account prior to this tutorial, have set the SURF Research Access Management (SRAM) authentication method, and connect an SSH key to their accounts. In case you are not familiar with <abbr title="SURF Research Cloud">SRC</abbr> and need help in setting up your accounts, please follow the instructions on the <a href="https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Cloud">SURF Knowledge Base</a></p>
+<p>There are two main use cases we envision this role being useful for:</p>
 
-<p>Pulsar instances can be started and stopped on demand, depending on personal cases and requirements. Inside the SRC members should have access to all publicly available catalog items. If you are not able to create a catalog item, please <a href="mailto:servicedesk@surf.nl">contact SURF servicedesk</a>.</p>
+<dl>
+  <dt>Saving costs on SRC</dt>
+  <dd>Maybe you’re already running Galaxy in SRC, but you don’t want to run a GPU node because it is very expensive. By using the SRC Pulsar Catalog Item, you can launch a node to do computations and then shut it down when you’re done, saving money. Pulsar instances can be started and stopped on demand, depending on personal cases and requirements, giving you a lot of freedom!</dd>
+  <dt>Accessing a GPU from a local (in UMC/hospital Galaxy)</dt>
+  <dd>If you do not have a GPU easily available within your institute, it may be attractive to send jobs securely to SRC, by launching a Pulsar node in SRC and attaching it to your institute’s Galaxy instance.</dd>
+</dl>
 
 <blockquote class="agenda">
   <div class="box-title agenda-title" id="agenda">Agenda</div>
@@ -852,6 +860,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <h1 id="prerequisites">Prerequisites</h1>
+
+<p>The instance provides secure authentication, where users must have a SURF Research account prior to this tutorial, have set the SURF Research Access Management (SRAM) authentication method, and connect an SSH key to their accounts. In case you are not familiar with <abbr title="SURF Research Cloud">SRC</abbr> and need help in setting up your accounts, please follow the instructions on the <a href="https://servicedesk.surf.nl/wiki/display/WIKI/SURF+Research+Cloud">SURF Knowledge Base</a></p>
+
+<p>Inside the SRC members should have access to all publicly available catalog items. If you are not able to create a catalog item, please <a href="mailto:servicedesk@surf.nl">contact SURF servicedesk</a>.</p>
 
 <p>This tutorial assumes you are member of a Collaborative Organisation (CO) in <abbr title="SURF Research Access Management">SRAM</abbr> that has access to <abbr title="SURF Research Cloud">SRC</abbr> and a wallet with budget in SRC with enough sources to create Galaxy and Pulsar catalog items. (For more information please refer to the <a href="https://servicedesk.surf.nl/wiki/display/WIKI/Budgets%2C+wallets%2C+contracts">SURF Knowledge Base</a>.</p>
 
@@ -1053,6 +1065,21 @@ You can find the tool ID from the dropdown at the top right, just to the left of
 
 <p>With that, you’re done, and for the length of time your node is running, your chosen tools (or everything) will be executed on that Pulsar node with more memory and CPU than the Galaxy host, and maybe a GPU as well!</p>
 
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-launch-a-job-on-pulsar"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Launch a Job on Pulsar</div>
+  <ol>
+    <li>Login to your Galaxy</li>
+    <li>Run one of the tools you have decided to send to Pulsar</li>
+    <li>
+      <p>On the pulsar machine, you can check that it runs by following the logs:</p>
+
+      <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>journalctl <span class="nt">-fu</span> pulsar
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+</blockquote>
+
 <p>Congratulations on launching Pulsar in SRC! 🌌</p>
 
                 </section>
@@ -1080,6 +1107,22 @@ You can find the tool ID from the dropdown at the top right, just to the left of
                         }
                         </script>
 
+                
+                <blockquote class="key_points">
+                    <div class="box-title"><i class="fas fa-key" aria-hidden="true"></i> Key points</div>
+                    <ul>
+                        
+                        <li><p>With SRC you can start your own Pulsar on-demand instance in a secure environment.</p>
+</li>
+                        
+                        <li><p>The Pulsar node is publicly accessible for a Galaxy with the credentials to use.</p>
+</li>
+                        
+                        <li><p>You can send jobs to a Pulsar node from either a Galaxy instance running on SRC, or even inside your own network.</p>
+</li>
+                        
+                    </ul>
+                </blockquote>
                 
 
                 <h1>Frequently Asked Questions</h1>
@@ -1327,6 +1370,10 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                     
                 
                     
+                
+                    
+                
+                    
                         
                         
                             
@@ -1335,10 +1382,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                                 </li>
                             
                         
-                    
-                
-                    
-                
                     
                 
                     
@@ -1428,6 +1471,26 @@ tools: []
  <tbody>
  
  
+ <tr>
+  <td class="eventtable-date"> January 28, 2025 </td>
+  <td>
+
+	  <a class="eventtable-title" href="/training-material/events/2025-01-28-src.html?utm_source=gtn&utm_medium=event-table&utm_campaign=via-tutorial">Galaxy at SURF Research Cloud workshop</a>
+   <div class="eventtable-description"> Half-day workshop demonstrating the local Galaxy instance built for users of SURF Research Cloud.
+
+**Registration**: To sign up for the event, please send an email to [Mirela Minkova](mailto:mirela.minkova@surf.nl?subject=Registering%20SRC%20Galaxy%20Workshop)
+ </div>
+  </td>
+  <td> <a href="https://www.openstreetmap.org/search?query=SURF Amsterdam, Science Park 140, Amsterdam, The Netherlands, 1098 XG">SURF Amsterdam, Amsterdam, The Netherlands</a>  </td>
+  <td> 
+			<a href="/training-material/hall-of-fame/mirelaminkova/" class="contributor-badge-inline contributor-mirelaminkova">
+  <img src="https://avatars.githubusercontent.com/mirelaminkova?s=36" alt="Mirela Minkova avatar" width="36" class="avatar" />
+  Mirela Minkova</a>
+
+		
+  </td>
+ </tr>
+ 
  
  </tbody>
 </table>
@@ -1505,7 +1568,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

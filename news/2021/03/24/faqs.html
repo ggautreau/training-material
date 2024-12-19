@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="New Feature: FAQs">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-05-19 16:32:29 +0000">
+<meta name="DC.date" content="2024-12-19 14:39:45 +0000">
 <meta name="DC.creator" content="Saskia Hiltemann">
 <meta name="DC.creator" content="Helena Rasche">
 <meta name="DC.creator" content="Bérénice Batut"><meta name="description" content="Snippets have received an major overhaul! Snippets/FAQs are small reusable bits of training, often answering a single question. In addition to the general Galaxy snippets, we now also support topic-level and tutorial-level FAQs. This will allow contributors to add common questions and answers to their tutorials, which not only can be included in the tutorial text itself, but are also used to autogenerate an FAQ page for the tutorial or topic listing all common questions (and answers).This will be useful both to participants following tutorials via self-study, and also to instructors preparing for a training event. ">
@@ -264,19 +264,23 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-<span class="label label-default tutorial_tag" id="gtn infrastructure" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" id="gtn infrastructure" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 
 
 
-<span class="label label-default tutorial_tag" id="contributors" style="--color-primary: #00e5ed; --color-darker: #00ccd3; --color-dimmed: #00d8e0;">contributors</span>
+<span class="label label-default tutorial_tag" id="contributors" style="--color-primary: #00e8f0; --color-darker: #00cfd6; --color-dimmed: #00dbe3;">contributors</span>
 
 
 
-<span class="label label-default tutorial_tag" id="instructors" style="--color-primary: #00e9c3; --color-darker: #00cfad; --color-dimmed: #00dcb8;">instructors</span>
+<span class="label label-default tutorial_tag" id="instructors" style="--color-primary: #00ecc5; --color-darker: #00d2af; --color-dimmed: #00dfba;">instructors</span>
 
 
 
-<span class="label label-default tutorial_tag" id="new feature" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+<span class="label label-default tutorial_tag" id="new feature" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
+
+
+
+<span class="label label-default tutorial_tag" id="contributing" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
 
 
 
@@ -335,12 +339,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "gtn infrastructure",
     "contributors",
     "instructors",
-    "new feature"
+    "new feature",
+    "contributing"
   ],
   "description": "<p>Snippets have received an major overhaul! Snippets/FAQs are small reusable bits of training, often",
   "articleBody": "<p>Snippets have received an major overhaul! Snippets/FAQs are small reusable bits of training, often answering a single question. In addition to the general Galaxy snippets, we now also support topic-level and tutorial-level FAQs. This will allow contributors to add common questions and answers to their tutorials, which not only can be included in the tutorial text itself, but are also used to autogenerate an FAQ page for the tutorial or topic listing all common questions (and answers).This will be useful both to participants following tutorials via self-study, and also to instructors preparing for a training event.</p>\n\n<p>Did you teach a training and get some good questions you think might be helpful for learners or other instructors? Add your FAQ to the GTN! To learn more about using these snippets/FAQs in your tutorials or how to add your own, please view the contributors training below.</p>\n\n<p>Check out the <a href=\"/training-material/faqs\">FAQ overview page</a> now.</p>\n\n<figure id=\"figure-1\" style=\"max-width: 90%;\"><img src=\"https://user-images.githubusercontent.com/2563865/111332389-07c9ee00-8672-11eb-9d11-5811f4987622.png\" alt=\"Example of a link to a FAQ page from the tutorial overview box. \" width=\"75%\" loading=\"lazy\" /><a target=\"_blank\" href=\"https://user-images.githubusercontent.com/2563865/111332389-07c9ee00-8672-11eb-9d11-5811f4987622.png\" rel=\"noopener noreferrer\"><small>Open image in new tab</small></a><br /><br /><figcaption><span class=\"figcaption-prefix\"><strong>Figure 1</strong>:</span> A link to the tutorial-level FAQ page is displayed in the overview box, if such a page is present</figcaption></figure>\n\n",
   "datePublished": "2021-03-24 00:00:00 +0000",
-  "dateModified": "2023-05-19 16:32:29 +0000",
+  "dateModified": "2024-12-19 14:39:45 +0000",
   "author": [
     {
       "@context": "https://schema.org",
@@ -676,9 +681,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	17 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e5ec; --color-darker: #00ccd2; --color-dimmed: #00d8df;">event</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -697,9 +708,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	6 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e7d5; --color-darker: #00cebe; --color-dimmed: #00dbc9;">single-cell</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;">single-cell</span>
 	
 	</p>
 	<p class="card-text">
@@ -718,11 +729,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	2 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d8c6ff; --color-darker: #c7a9ff; --color-dimmed: #cfb8ff;">automation</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;">automation</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -741,11 +756,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	29 November 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ee66; --color-darker: #00d45a; --color-dimmed: #00e160;">bioimaging</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00f168; --color-darker: #00d75c; --color-dimmed: #00e462;">bioimaging</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fac900; --color-darker: #dfb300; --color-dimmed: #edbe00;">mitoflash</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">mitoflash</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #5cec00; --color-darker: #51d200; --color-dimmed: #56df00;">mitochondria</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #5def00; --color-darker: #52d500; --color-dimmed: #57e200;">mitochondria</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe5; --color-darker: #ff9ad9; --color-dimmed: #ffaddf;">imaging</span>
 	
 	</p>
 	<p class="card-text">
@@ -764,11 +781,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	22 July 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc0b5; --color-darker: #ff9f8a; --color-dimmed: #ffafa0;">deploying</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc4b9; --color-darker: #ffa28f; --color-dimmed: #ffb3a5;">deploying</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cec9ff; --color-darker: #b7afff; --color-dimmed: #c2bcff;">maintenance</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #d1ccff; --color-darker: #b9b2ff; --color-dimmed: #c5bfff;">maintenance</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c7cbff; --color-darker: #abb2ff; --color-dimmed: #b9bfff;">survey</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #caceff; --color-darker: #aeb5ff; --color-dimmed: #bcc2ff;">survey</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef99; --color-darker: #00d588; --color-dimmed: #00e290;">admin</span>
 	
 	</p>
 	<p class="card-text">
@@ -851,7 +870,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

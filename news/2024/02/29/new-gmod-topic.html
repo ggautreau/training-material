@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="GTN ❤️ GMOD">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-02-29 13:37:23 +0000">
+<meta name="DC.date" content="2024-12-19 14:39:45 +0000">
 <meta name="DC.creator" content="Helena Rasche">
 <meta name="DC.creator" content="Anthony Bretaudeau"><meta name="description" content="Building upon the work previously done for the SARS-Cov-2 Topic we have further expanded the ‘tag based topics’ to support a new GMOD topic. ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -269,15 +269,19 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-<span class="label label-default tutorial_tag" id="new topic" style="--color-primary: #cbcaff; --color-darker: #b3b0ff; --color-dimmed: #bfbdff;">new topic</span>
+<span class="label label-default tutorial_tag" id="new topic" style="--color-primary: #cfcdff; --color-darker: #b6b3ff; --color-dimmed: #c2c0ff;">new topic</span>
 
 
 
-<span class="label label-default tutorial_tag" id="new feature" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+<span class="label label-default tutorial_tag" id="new feature" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 
 
 
-<span class="label label-default tutorial_tag" id="genome annotation" style="--color-primary: #ffbaeb; --color-darker: #ff93e2; --color-dimmed: #ffa7e7;">genome annotation</span>
+<span class="label label-default tutorial_tag" id="genome-annotation" style="--color-primary: #afe300; --color-darker: #9bca00; --color-dimmed: #a5d600;">genome-annotation</span>
+
+
+
+<span class="label label-default tutorial_tag" id="GMOD" style="--color-primary: #00f24e; --color-darker: #00d745; --color-dimmed: #00e549;">GMOD</span>
 
 
 
@@ -352,12 +356,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "keywords": [
     "new topic",
     "new feature",
-    "genome annotation"
+    "genome-annotation",
+    "GMOD"
   ],
   "description": "<p>Building upon the work previously done for the <a href=\"/training-material/news/2023/01/23/new-cov",
   "articleBody": "<p>Building upon the work previously done for the <a href=\"/training-material/news/2023/01/23/new-covid19-topic.html\">SARS-Cov-2 Topic</a> we have further expanded the ‘tag based topics’ to support a new GMOD topic.</p>\n\n<h1 id=\"generic-model-organism-database\">Generic Model Organism Database</h1>\n\n<blockquote class=\"quote\" cite=\"http://gmod.org/wiki/Main_Page\">\n  <p>the Generic Model Organism Database (GMOD) project, a collection of open source software tools for managing, visualising, storing, and disseminating genetic and genomic data.</p>\n</blockquote>\n\n<p>Galaxy Project itself has long been a GMOD component, but you’ll recognise some other familiar faces there as well, if you are interested in Genome Annotation. JBrowse, used throughout the GTN in a number of tutorials to render genomic data, and Apollo are both members that you’ll find tutorials for within the GTN.</p>\n\n<h2 id=\"current-state\">Current State</h2>\n\n<p>As such we’ve created a new topic to help aggregate all of the GMOD related material together. This currently includes tutorials on the use of <a href=\"/training-material/topics/gmod/#st-jbrowse1\">JBrowse</a>, <a href=\"/training-material/topics/gmod/#st-apollo2\">Apollo</a>, <a href=\"/training-material/topics/gmod/#st-intermine\">InterMine</a>, and <a href=\"/training-material/topics/gmod/#st-maker\">MAKER</a>!</p>\n\n<p>For teachers, tag based topics now support a second level of organisation, in ‘subtopics’. We’ve used that to add a new topic, using subtopics to organise each GMOD component.</p>\n\n<h2 id=\"future\">Future</h2>\n\n<p>For now the topic includes all GTN tutorials which use a GMOD component (that isn’t galaxy), all of these tutorials generally also include Galaxy based steps. In the future we may expand this to include tutorials for other GMOD components which don’t necessary interface with Galaxy. <a href=\"/training-material/hall-of-fame/hexylena/\" class=\"contributor-badge-inline contributor-hexylena\">\n  <img src=\"https://avatars.githubusercontent.com/hexylena?s=36\" alt=\"Helena Rasche avatar\" width=\"36\" class=\"avatar\" />\n  Helena Rasche</a>\n has some ideas about a Chado tutorial using the new <a href=\"https://github.com/electric-sql/pglite\"><code class=\"language-plaintext highlighter-rouge\">pglite</code></a> project, and perhaps <a href=\"/training-material/hall-of-fame/abretaud/\" class=\"contributor-badge-inline contributor-abretaud\">\n  <img src=\"https://avatars.githubusercontent.com/abretaud?s=36\" alt=\"Anthony Bretaudeau avatar\" width=\"36\" class=\"avatar\" />\n  Anthony Bretaudeau</a>\n will contribute a Tripal tutorial!</p>\n",
   "datePublished": "2024-02-29 00:00:00 +0000",
-  "dateModified": "2024-02-29 13:37:23 +0000",
+  "dateModified": "2024-12-19 14:39:45 +0000",
   "author": [
     {
       "@context": "https://schema.org",
@@ -614,9 +619,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	17 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e5ec; --color-darker: #00ccd2; --color-dimmed: #00d8df;">event</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -635,9 +646,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	6 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e7d5; --color-darker: #00cebe; --color-dimmed: #00dbc9;">single-cell</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;">single-cell</span>
 	
 	</p>
 	<p class="card-text">
@@ -656,11 +667,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	2 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d8c6ff; --color-darker: #c7a9ff; --color-dimmed: #cfb8ff;">automation</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;">automation</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -679,11 +694,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	29 November 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ee66; --color-darker: #00d45a; --color-dimmed: #00e160;">bioimaging</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00f168; --color-darker: #00d75c; --color-dimmed: #00e462;">bioimaging</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fac900; --color-darker: #dfb300; --color-dimmed: #edbe00;">mitoflash</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">mitoflash</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #5cec00; --color-darker: #51d200; --color-dimmed: #56df00;">mitochondria</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #5def00; --color-darker: #52d500; --color-dimmed: #57e200;">mitochondria</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe5; --color-darker: #ff9ad9; --color-dimmed: #ffaddf;">imaging</span>
 	
 	</p>
 	<p class="card-text">
@@ -702,11 +719,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	22 July 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc0b5; --color-darker: #ff9f8a; --color-dimmed: #ffafa0;">deploying</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc4b9; --color-darker: #ffa28f; --color-dimmed: #ffb3a5;">deploying</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cec9ff; --color-darker: #b7afff; --color-dimmed: #c2bcff;">maintenance</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #d1ccff; --color-darker: #b9b2ff; --color-dimmed: #c5bfff;">maintenance</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c7cbff; --color-darker: #abb2ff; --color-dimmed: #b9bfff;">survey</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #caceff; --color-darker: #aeb5ff; --color-dimmed: #bcc2ff;">survey</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef99; --color-darker: #00d588; --color-dimmed: #00e290;">admin</span>
 	
 	</p>
 	<p class="card-text">
@@ -789,7 +808,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Standards compliant™ training news via RSS/Atom">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-06-18 12:43:20 +0000">
+<meta name="DC.date" content="2024-12-19 14:39:45 +0000">
 <meta name="DC.creator" content="Helena Rasche"><meta name="description" content=" ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Standards compliant™ training news via RSS/Atom">
@@ -265,7 +265,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-<span class="label label-default tutorial_tag" id="gtn infrastructure" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+<span class="label label-default tutorial_tag" id="gtn infrastructure" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
+
+
+
+<span class="label label-default tutorial_tag" id="contributing" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
 
 
 
@@ -380,12 +384,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "name": "Standards compliant™ training news via RSS/Atom",
   "headline": "<!-- GTN:IGNORE:003 --> ",
   "keywords": [
-    "gtn infrastructure"
+    "gtn infrastructure",
+    "contributing"
   ],
   "description": "<!-- GTN:IGNORE:003 --> ",
   "articleBody": "<!-- GTN:IGNORE:003 -->\n\n<p>The GTN loves leveraging existing standards for both old and new purposes. One of our favourite standards that we adhere to is providing an RSS/Atom news feed for sharing news and events and updates!</p>\n\n<p><strong>Update 2024 Jun 18</strong>: We’ve added a new home page for all of our feeds: <a href=\"/training-material/feeds/index.html\">GTN feeds home</a></p>\n\n<h2 id=\"why-rssatom\">Why RSS/Atom?</h2>\n\n<p>RSS feeds provide access to the latest news and updates from websites. They are a great way to keep up to date with your favourite websites without having to visit them every day, and without having to sign up for a mailing list or social media account. You can subscribe to feeds using a <a href=\"https://aboutfeeds.com/\">feed reader</a>, which will automatically check for updates and display them for you.</p>\n\n<p>There are some other benefits of RSS feeds however:</p>\n\n<h3 id=\"privacy\">Privacy</h3>\n\n<p>Our feed subscriptions are completely private! We do not need a mailing list or any other personal information to send you updates. You can subscribe to our feed and receive updates without us knowing anything about you. You can subscribe or unsubscribe at any time.</p>\n\n<h3 id=\"standards\">Standards</h3>\n\n<p><a href=\"https://en.wikipedia.org/wiki/Atom_(web_standard)\">Atom feeds</a> (similar to the more well known RSS feeds) are a well-established standard (<a href=\"https://datatracker.ietf.org/doc/html/rfc4287\">IETF RFC 4287</a>) for ‘news’ type feeds. This means that we can easily integrate with other systems that understand Atom feeds! Any feed reader you choose will be able to understand our feed.</p>\n\n<p><a href=\"http://validator.w3.org/feed/check.cgi?url=http%3A//training.galaxyproject.org/training-material/feed.xml\">\n  <img src=\"/training-material/assets/images/valid-atom.png\" alt=\"[Valid Atom 1.0]\" title=\"Validate my Atom 1.0 feed\" />\n</a></p>\n\n<h3 id=\"environmental-friendliness\">Environmental Friendliness</h3>\n\n<p>Feeds are small, lightweight, and easily cached by servers. Our feeds are generated at least once a day and cached aggressively with support for features like ETags and Last-Modified headers. This means that you can subscribe to our feed and receive updates without causing any additional load on our servers. Additionally checking if our feed is updated does not require any computation on our part! We just serve a static file to you.</p>\n\n<h3 id=\"syndication\">Syndication</h3>\n\n<p>This is one of the <em>coolest</em> benefits of standard RSS feeds, we believe: how many other systems interoperate with them! For instance if you wanted to subscribe to GTN news in your Slack channel, you could use the existing <a href=\"https://slack.com/help/articles/218688467-Add-RSS-feeds-to-Slack\">RSS integration</a> to do so without any additional coding or customisation required. Just run</p>\n\n<div class=\"language-plaintext highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code>/feed subscribe http://training.galaxyproject.org/training-material/feed.xml\n</code></pre></div></div>\n\n<p>If you wanted to see the same news in your Matrix channel, you can use one of the <a href=\"https://gitlab.com/imbev/matrix-rss-bridge\">RSS bridges</a> to do so. You’ll get notified of every new post!</p>\n\n<p>We even use this feed to post our updates to the Galaxy Hub</p>\n\n<h2 id=\"whats-in-a-feed\">What’s in a feed?</h2>\n\n<p>If you’ve never looked at our feed before, we recommend you do, <a href=\"https://training.galaxyproject.org/training-material/feed.xml\">it’s a bit fancier than the average RSS feed</a>! Each news item provides a short preview to let you decide if you’re interested in reading more. If you are, you can click through to the full post on our website.</p>\n\n<h2 id=\"gtn-feeds\">GTN Feeds</h2>\n\n<p>We actually produce a large number of RSS feeds which can let you subscribe to topics you’re interested in:</p>\n\n<ul>\n  <li><a href=\"https://training.galaxyproject.org/training-material/feed.xml\">News</a></li>\n  <li><a href=\"https://training.galaxyproject.org/training-material/events/feed.xml\">Events</a></li>\n</ul>\n\n<p>We also produce per-topic feeds if you are just interested in a single topic and want to be informed about new tutorials or slides added to that topic:</p>\n\n<ul>\n  <li><a href=\"https://training.galaxyproject.org/training-material/topics/galaxy-interface/feed.xml\">Galaxy Interface Updates</a></li>\n  <li><a href=\"https://training.galaxyproject.org/training-material/topics/single-cell/feed.xml\">Single Cell Updates</a></li>\n  <li><a href=\"https://training.galaxyproject.org/training-material/topics/fair/feed.xml\">Fair Training Updates</a></li>\n</ul>\n\n<p>These feeds are updated every time we add new content to the GTN, so you can be sure you’re always up to date! You can find their links on every tutorial page.</p>\n\n<h2 id=\"more-feeds-in-the-future\">More Feeds in the Future</h2>\n\n<p>We’re exploring the possibility for ‘tag’ based feeds, where you can subscribe to anything added to our site with a given tag. Say you were interested in genome annotation, with a tag based feed you’d get to hear about any new tutorials, slides, events, FAQs, or news posts added to the GTN with that tag.</p>\n\n<p>On top of that we’re considering producing a ‘daily digest’ feed and potentially a ‘weekly digest’ like we currently create manually for posting to our chat channels in matrix. This would give us a lot more flexibility in how to share our news and updates with you. Perhaps we would also create those digests for specific topics, so you could subscribe to a weekly digest of all new single cell tutorials, for example.</p>\n\n<p>Would you use <a href=\"https://github.com/galaxyproject/training-material/discussions/4999\">these features</a>? Let us know in <a href=\"https://github.com/galaxyproject/training-material/discussions/5000\">the discussions</a>!</p>\n",
   "datePublished": "2024-06-04 00:00:00 +0000",
-  "dateModified": "2024-06-18 12:43:20 +0000",
+  "dateModified": "2024-12-19 14:39:45 +0000",
   "author": [
     {
       "@context": "https://schema.org",
@@ -563,9 +568,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	17 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e5ec; --color-darker: #00ccd2; --color-dimmed: #00d8df;">event</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -584,9 +595,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	6 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e7d5; --color-darker: #00cebe; --color-dimmed: #00dbc9;">single-cell</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;">single-cell</span>
 	
 	</p>
 	<p class="card-text">
@@ -605,11 +616,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	2 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d8c6ff; --color-darker: #c7a9ff; --color-dimmed: #cfb8ff;">automation</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;">automation</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -628,11 +643,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	29 November 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ee66; --color-darker: #00d45a; --color-dimmed: #00e160;">bioimaging</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00f168; --color-darker: #00d75c; --color-dimmed: #00e462;">bioimaging</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fac900; --color-darker: #dfb300; --color-dimmed: #edbe00;">mitoflash</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">mitoflash</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #5cec00; --color-darker: #51d200; --color-dimmed: #56df00;">mitochondria</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #5def00; --color-darker: #52d500; --color-dimmed: #57e200;">mitochondria</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe5; --color-darker: #ff9ad9; --color-dimmed: #ffaddf;">imaging</span>
 	
 	</p>
 	<p class="card-text">
@@ -651,11 +668,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<p>
 	22 July 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc0b5; --color-darker: #ff9f8a; --color-dimmed: #ffafa0;">deploying</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc4b9; --color-darker: #ffa28f; --color-dimmed: #ffb3a5;">deploying</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cec9ff; --color-darker: #b7afff; --color-dimmed: #c2bcff;">maintenance</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #d1ccff; --color-darker: #b9b2ff; --color-dimmed: #c5bfff;">maintenance</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c7cbff; --color-darker: #abb2ff; --color-dimmed: #b9bfff;">survey</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #caceff; --color-darker: #aeb5ff; --color-dimmed: #bcc2ff;">survey</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef99; --color-darker: #00d588; --color-dimmed: #00e290;">admin</span>
 	
 	</p>
 	<p class="card-text">
@@ -738,7 +757,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

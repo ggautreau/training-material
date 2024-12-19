@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="All GTN training data are now automatically mirrored via Onedata">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-06-03 14:12:29 +0000">
+<meta name="DC.date" content="2024-12-19 14:39:45 +0000">
 <meta name="DC.creator" content="Polina Polunina"><meta name="description" content="As part of the EuroScienceGateway and in cooperation with Onedata and EGI we are providing all GTN training data on a publicly accessible cloud storage. Those training datasets are curated, small but meaningful for educational purposes and contain 1530 files with a total size of 170Gb. An invaluable set of resources for everyone dealing with data science and training. Please thank the more than 350 contributors to GTN. ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="All GTN training data are now automatically mirrored via Onedata">
@@ -256,11 +256,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-<span class="label label-default tutorial_tag" id="esg-wp4" style="--color-primary: #fff2ce; --color-darker: #f9d600; --color-dimmed: #ffe483;">esg-wp4</span>
+<span class="label label-default tutorial_tag" id="esg-wp4" style="--color-primary: #fff3d2; --color-darker: #fad700; --color-dimmed: #ffe587;">esg-wp4</span>
 
 
 
-<span class="label label-default tutorial_tag" id="esg" style="--color-primary: #00ef41; --color-darker: #00d539; --color-dimmed: #00e23d;">esg</span>
+<span class="label label-default tutorial_tag" id="esg" style="--color-primary: #00f242; --color-darker: #00d83a; --color-dimmed: #00e53e;">esg</span>
+
+
+
+<span class="label label-default tutorial_tag" id="contributing" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
 
 
 
@@ -323,7 +327,7 @@ You can access all GTN training data using several methods:</p>
   <li>
     <p><strong>Onedata clients</strong> — access the data using the public read-only access token and
 <a href="https://www.onedata.org/#/home/documentation/21.02/user-guide/oneclient.html">Oneclient</a> (local POSIX mount)
-or <a href="https://onedata.org/#/home/documentation/21.02/user-guide/onedatafs.html">OnedataFS</a> 
+or <a href="https://onedata.org/#/home/documentation/21.02/user-guide/onedatafs.html">OnedataFS</a>
 (<a href="https://www.pyfilesystem.org/">PyFilesystem</a> interface), e.g.:</p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">mkdir</span> ~/oneclient
@@ -434,12 +438,13 @@ and creates a structured directory based on the tutorial names and file contents
   "headline": "<p>As part of the <a href=\"https://eurosciencegateway.eu/\">EuroScienceGateway</a> and in cooperation ",
   "keywords": [
     "esg-wp4",
-    "esg"
+    "esg",
+    "contributing"
   ],
   "description": "<p>As part of the <a href=\"https://eurosciencegateway.eu/\">EuroScienceGateway</a> and in cooperation ",
-  "articleBody": "<p>As part of the <a href=\"https://eurosciencegateway.eu/\">EuroScienceGateway</a> and in cooperation with <a href=\"https://onedata.org\">Onedata</a> and <a href=\"https://www.egi.eu/\">EGI</a> we are providing all <a href=\"https://training.galaxyproject.org/\">GTN</a> training data on a publicly accessible <a href=\"https://datahub.egi.eu/share/2697e33bd34f1870b0961414b8c77753chf583\">cloud storage</a>.\nThose training datasets are curated, small but meaningful for educational purposes and contain 1530 files with a total size of 170Gb.\nAn invaluable set of resources for everyone dealing with data science and training.\nPlease thank the more than <a href=\"/training-material/hall-of-fame.html\">350 contributors to GTN</a>.</p>\n\n<h2 id=\"what-does-this-mean-for-you\">What does this mean for you?</h2>\n\n<ul>\n  <li>Teachers: if you’re a teacher contributing to the GTN, you can now be sure that the datasets you use in your materials are even more accessible and easier to use.</li>\n  <li>GTN Users: When following training materials, it’ll now be easier to access those same datasets in new locations.</li>\n  <li>Galaxy Admins: If you’re running a Galaxy server, you can now more easily integrate the GTN data into your server without taking up unnecessary storage space, and still making it available to all your users.</li>\n</ul>\n\n<h2 id=\"accessing-gtn-data-in-the-cloud\">Accessing GTN Data in the Cloud</h2>\n\n<p>GTN training data is always accessible, annotated and linked for every tutorial. Usually, it’s stored in Zenodo, referenced via a DOI.\nYou can access all GTN training data using several methods:</p>\n\n<ol>\n  <li>\n    <p><strong>Onedata Share</strong> — access without authentication:</p>\n\n    <p>a. Visit the <a href=\"https://datahub.egi.eu/share/2697e33bd34f1870b0961414b8c77753chf583\">public share link</a>\n    to browse and download the data via the Onedata Web UI.</p>\n\n    <p>b. Use the public <a href=\"https://onedata.org/#/home/api/stable/onezone?anchor=operation/get_shared_data\">REST API</a>\n    to access the data; on the share page (see above) you will find ready-to-use <code class=\"language-plaintext highlighter-rouge\">curl</code> examples by right-clicking on a file/directory and choosing the <strong>Information</strong> context menu.</p>\n  </li>\n  <li>\n    <p><strong>Galaxy Server integration</strong>: access the data on the <a href=\"https://usegalaxy.eu/\">European Galaxy server</a>. Go to the “Upload data” button, select “Choose remote files,” and navigate to the GTN repository.</p>\n  </li>\n  <li>\n    <p><strong>Configure your own Galaxy server</strong>: to include the GTN data in your Galaxy server, use the following configuration:</p>\n\n    <div class=\"language-yaml highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code> <span class=\"pi\">-</span> <span class=\"na\">type</span><span class=\"pi\">:</span> <span class=\"s\">onedata</span>\n   <span class=\"na\">id</span><span class=\"pi\">:</span> <span class=\"s\">gtn_public_onedata</span>\n   <span class=\"na\">label</span><span class=\"pi\">:</span> <span class=\"s\">GTN training data</span>\n   <span class=\"na\">doc</span><span class=\"pi\">:</span> <span class=\"s\">Training data from the Galaxy Training Network (powered by Onedata)</span>\n   <span class=\"c1\"># The following token is a public, read-only token that can be shared.</span>\n   <span class=\"na\">accessToken</span><span class=\"pi\">:</span> <span class=\"s2\">\"</span><span class=\"s\">MDAxY2xvY2F00aW9uIGRhdGFodWIuZWdpLmV1CjAwNmJpZGVudGlmaWVyIDIvbm1kL3Vzci00yNmI4ZTZiMDlkNDdjNGFkN2E3NTU00YzgzOGE3MjgyY2NoNTNhNS9hY3QvMGJiZmY1NWU4NDRiMWJjZGEwNmFlODViM2JmYmRhNjRjaDU00YjYKMDAxNmNpZCBkYXRhLnJlYWRvbmx5CjAwNDljaWQgZGF00YS5wYXRoID00gTHpaa1pUTTROMkl4WmpjMllXVmpOMlU00WWpreU5XWmtNV00ZpT1RKbU1ETXlZMmhoWTJReAowMDJmc2lnbmF00dXJlIIQvnXp01Oey02LnaNwEkFJAyArzhHN8SlXSYFsBbSkqdqCg\"</span>\n   <span class=\"na\">onezoneDomain</span><span class=\"pi\">:</span> <span class=\"s2\">\"</span><span class=\"s\">datahub.egi.eu\"</span>\n</code></pre></div>    </div>\n  </li>\n  <li>\n    <p><strong>Onedata clients</strong> — access the data using the public read-only access token and\n<a href=\"https://www.onedata.org/#/home/documentation/21.02/user-guide/oneclient.html\">Oneclient</a> (local POSIX mount)\nor <a href=\"https://onedata.org/#/home/documentation/21.02/user-guide/onedatafs.html\">OnedataFS</a> \n(<a href=\"https://www.pyfilesystem.org/\">PyFilesystem</a> interface), e.g.:</p>\n\n    <div class=\"language-bash highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code> <span class=\"nb\">mkdir</span> ~/oneclient\n oneclient <span class=\"se\">\\</span>\n     <span class=\"nt\">-H</span> plg-cyfronet-01.datahub.egi.eu <span class=\"se\">\\</span>\n     <span class=\"nt\">-t</span> MDAxY2xvY2F00aW9uIGRhdGFodWIuZWdpLmV1CjAwNmJpZGVudGlmaWVyIDIvbm1kL3Vzci00yNmI4ZTZiMDlkNDdjNGFkN2E3NTU00YzgzOGE3MjgyY2NoNTNhNS9hY3QvMGJiZmY1NWU4NDRiMWJjZGEwNmFlODViM2JmYmRhNjRjaDU00YjYKMDAxNmNpZCBkYXRhLnJlYWRvbmx5CjAwNDljaWQgZGF00YS5wYXRoID00gTHpaa1pUTTROMkl4WmpjMllXVmpOMlU00WWpreU5XWmtNV00ZpT1RKbU1ETXlZMmhoWTJReAowMDJmc2lnbmF00dXJlIIQvnXp01Oey02LnaNwEkFJAyArzhHN8SlXSYFsBbSkqdqCg <span class=\"se\">\\</span>\n     ~/oneclient\n <span class=\"nb\">ls</span> ~/oneclient/GTN<span class=\"se\">\\ </span>data\n</code></pre></div>    </div>\n  </li>\n</ol>\n\n<h2 id=\"what-is-the-gtn-downloader\">What is the GTN Downloader?</h2>\n\n<p><a href=\"https://github.com/usegalaxy-eu/gtn-downloader\">GTN-Downloader</a> makes it easier for users to access and organize data from the <a href=\"https://training.galaxyproject.org/\">Galaxy Training Network (GTN)</a>.\nThe GTN Downloader is a Python script that automates the download of data from GTN tutorials. It goes through the tutorials in the GTN repository, finds <code class=\"language-plaintext highlighter-rouge\">data-library.yaml</code> files,\nand creates a structured directory based on the tutorial names and file contents.</p>\n\n<h3 id=\"key-features\">Key Features:</h3>\n<ul>\n  <li><strong>Automated Data Download</strong>: The script finds <code class=\"language-plaintext highlighter-rouge\">data-library.yaml</code> files in the GTN repository and downloads the associated data files.</li>\n  <li><strong>Structured Organization</strong>: It creates directories based on the tutorial names and the information in the <code class=\"language-plaintext highlighter-rouge\">data-library.yaml</code> files, so the files are organized.</li>\n  <li><strong>Download Summary</strong>: It generates a <code class=\"language-plaintext highlighter-rouge\">download-summary.tsv</code> file, which includes metadata about the downloaded files, a download report (error, success, already downloaded), and the overall size of the files.</li>\n</ul>\n\n<h2 id=\"seamless-integration-with-onedata\">Seamless Integration with Onedata</h2>\n\n<p>In addition to local downloads, the GTN Downloader can upload data to <a href=\"https://onedata.org\">Onedata</a>, a distributed data management platform. This integration ensures that the latest GTN data is always available to users.</p>\n\n<h3 id=\"automated-workflow-with-github-cicd\">Automated Workflow with GitHub CI/CD:</h3>\n<ul>\n  <li><strong>Automated Workflow</strong>: A GitHub Actions workflow runs once a week on weekends to download the latest data from the GTN tutorials and upload it to Onedata.</li>\n  <li><strong>Environment Setup</strong>: The workflow sets up necessary environment variables and installs dependencies, including Oneclient, the Onedata POSIX client.</li>\n  <li><strong>Data Upload</strong>: After downloading the data, the workflow uploads it to Onedata, making it publicly accessible.</li>\n</ul>\n",
+  "articleBody": "<p>As part of the <a href=\"https://eurosciencegateway.eu/\">EuroScienceGateway</a> and in cooperation with <a href=\"https://onedata.org\">Onedata</a> and <a href=\"https://www.egi.eu/\">EGI</a> we are providing all <a href=\"https://training.galaxyproject.org/\">GTN</a> training data on a publicly accessible <a href=\"https://datahub.egi.eu/share/2697e33bd34f1870b0961414b8c77753chf583\">cloud storage</a>.\nThose training datasets are curated, small but meaningful for educational purposes and contain 1530 files with a total size of 170Gb.\nAn invaluable set of resources for everyone dealing with data science and training.\nPlease thank the more than <a href=\"/training-material/hall-of-fame.html\">350 contributors to GTN</a>.</p>\n\n<h2 id=\"what-does-this-mean-for-you\">What does this mean for you?</h2>\n\n<ul>\n  <li>Teachers: if you’re a teacher contributing to the GTN, you can now be sure that the datasets you use in your materials are even more accessible and easier to use.</li>\n  <li>GTN Users: When following training materials, it’ll now be easier to access those same datasets in new locations.</li>\n  <li>Galaxy Admins: If you’re running a Galaxy server, you can now more easily integrate the GTN data into your server without taking up unnecessary storage space, and still making it available to all your users.</li>\n</ul>\n\n<h2 id=\"accessing-gtn-data-in-the-cloud\">Accessing GTN Data in the Cloud</h2>\n\n<p>GTN training data is always accessible, annotated and linked for every tutorial. Usually, it’s stored in Zenodo, referenced via a DOI.\nYou can access all GTN training data using several methods:</p>\n\n<ol>\n  <li>\n    <p><strong>Onedata Share</strong> — access without authentication:</p>\n\n    <p>a. Visit the <a href=\"https://datahub.egi.eu/share/2697e33bd34f1870b0961414b8c77753chf583\">public share link</a>\n    to browse and download the data via the Onedata Web UI.</p>\n\n    <p>b. Use the public <a href=\"https://onedata.org/#/home/api/stable/onezone?anchor=operation/get_shared_data\">REST API</a>\n    to access the data; on the share page (see above) you will find ready-to-use <code class=\"language-plaintext highlighter-rouge\">curl</code> examples by right-clicking on a file/directory and choosing the <strong>Information</strong> context menu.</p>\n  </li>\n  <li>\n    <p><strong>Galaxy Server integration</strong>: access the data on the <a href=\"https://usegalaxy.eu/\">European Galaxy server</a>. Go to the “Upload data” button, select “Choose remote files,” and navigate to the GTN repository.</p>\n  </li>\n  <li>\n    <p><strong>Configure your own Galaxy server</strong>: to include the GTN data in your Galaxy server, use the following configuration:</p>\n\n    <div class=\"language-yaml highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code> <span class=\"pi\">-</span> <span class=\"na\">type</span><span class=\"pi\">:</span> <span class=\"s\">onedata</span>\n   <span class=\"na\">id</span><span class=\"pi\">:</span> <span class=\"s\">gtn_public_onedata</span>\n   <span class=\"na\">label</span><span class=\"pi\">:</span> <span class=\"s\">GTN training data</span>\n   <span class=\"na\">doc</span><span class=\"pi\">:</span> <span class=\"s\">Training data from the Galaxy Training Network (powered by Onedata)</span>\n   <span class=\"c1\"># The following token is a public, read-only token that can be shared.</span>\n   <span class=\"na\">accessToken</span><span class=\"pi\">:</span> <span class=\"s2\">\"</span><span class=\"s\">MDAxY2xvY2F00aW9uIGRhdGFodWIuZWdpLmV1CjAwNmJpZGVudGlmaWVyIDIvbm1kL3Vzci00yNmI4ZTZiMDlkNDdjNGFkN2E3NTU00YzgzOGE3MjgyY2NoNTNhNS9hY3QvMGJiZmY1NWU4NDRiMWJjZGEwNmFlODViM2JmYmRhNjRjaDU00YjYKMDAxNmNpZCBkYXRhLnJlYWRvbmx5CjAwNDljaWQgZGF00YS5wYXRoID00gTHpaa1pUTTROMkl4WmpjMllXVmpOMlU00WWpreU5XWmtNV00ZpT1RKbU1ETXlZMmhoWTJReAowMDJmc2lnbmF00dXJlIIQvnXp01Oey02LnaNwEkFJAyArzhHN8SlXSYFsBbSkqdqCg\"</span>\n   <span class=\"na\">onezoneDomain</span><span class=\"pi\">:</span> <span class=\"s2\">\"</span><span class=\"s\">datahub.egi.eu\"</span>\n</code></pre></div>    </div>\n  </li>\n  <li>\n    <p><strong>Onedata clients</strong> — access the data using the public read-only access token and\n<a href=\"https://www.onedata.org/#/home/documentation/21.02/user-guide/oneclient.html\">Oneclient</a> (local POSIX mount)\nor <a href=\"https://onedata.org/#/home/documentation/21.02/user-guide/onedatafs.html\">OnedataFS</a>\n(<a href=\"https://www.pyfilesystem.org/\">PyFilesystem</a> interface), e.g.:</p>\n\n    <div class=\"language-bash highlighter-rouge\"><div class=\"highlight\"><pre class=\"highlight\"><code> <span class=\"nb\">mkdir</span> ~/oneclient\n oneclient <span class=\"se\">\\</span>\n     <span class=\"nt\">-H</span> plg-cyfronet-01.datahub.egi.eu <span class=\"se\">\\</span>\n     <span class=\"nt\">-t</span> MDAxY2xvY2F00aW9uIGRhdGFodWIuZWdpLmV1CjAwNmJpZGVudGlmaWVyIDIvbm1kL3Vzci00yNmI4ZTZiMDlkNDdjNGFkN2E3NTU00YzgzOGE3MjgyY2NoNTNhNS9hY3QvMGJiZmY1NWU4NDRiMWJjZGEwNmFlODViM2JmYmRhNjRjaDU00YjYKMDAxNmNpZCBkYXRhLnJlYWRvbmx5CjAwNDljaWQgZGF00YS5wYXRoID00gTHpaa1pUTTROMkl4WmpjMllXVmpOMlU00WWpreU5XWmtNV00ZpT1RKbU1ETXlZMmhoWTJReAowMDJmc2lnbmF00dXJlIIQvnXp01Oey02LnaNwEkFJAyArzhHN8SlXSYFsBbSkqdqCg <span class=\"se\">\\</span>\n     ~/oneclient\n <span class=\"nb\">ls</span> ~/oneclient/GTN<span class=\"se\">\\ </span>data\n</code></pre></div>    </div>\n  </li>\n</ol>\n\n<h2 id=\"what-is-the-gtn-downloader\">What is the GTN Downloader?</h2>\n\n<p><a href=\"https://github.com/usegalaxy-eu/gtn-downloader\">GTN-Downloader</a> makes it easier for users to access and organize data from the <a href=\"https://training.galaxyproject.org/\">Galaxy Training Network (GTN)</a>.\nThe GTN Downloader is a Python script that automates the download of data from GTN tutorials. It goes through the tutorials in the GTN repository, finds <code class=\"language-plaintext highlighter-rouge\">data-library.yaml</code> files,\nand creates a structured directory based on the tutorial names and file contents.</p>\n\n<h3 id=\"key-features\">Key Features:</h3>\n<ul>\n  <li><strong>Automated Data Download</strong>: The script finds <code class=\"language-plaintext highlighter-rouge\">data-library.yaml</code> files in the GTN repository and downloads the associated data files.</li>\n  <li><strong>Structured Organization</strong>: It creates directories based on the tutorial names and the information in the <code class=\"language-plaintext highlighter-rouge\">data-library.yaml</code> files, so the files are organized.</li>\n  <li><strong>Download Summary</strong>: It generates a <code class=\"language-plaintext highlighter-rouge\">download-summary.tsv</code> file, which includes metadata about the downloaded files, a download report (error, success, already downloaded), and the overall size of the files.</li>\n</ul>\n\n<h2 id=\"seamless-integration-with-onedata\">Seamless Integration with Onedata</h2>\n\n<p>In addition to local downloads, the GTN Downloader can upload data to <a href=\"https://onedata.org\">Onedata</a>, a distributed data management platform. This integration ensures that the latest GTN data is always available to users.</p>\n\n<h3 id=\"automated-workflow-with-github-cicd\">Automated Workflow with GitHub CI/CD:</h3>\n<ul>\n  <li><strong>Automated Workflow</strong>: A GitHub Actions workflow runs once a week on weekends to download the latest data from the GTN tutorials and upload it to Onedata.</li>\n  <li><strong>Environment Setup</strong>: The workflow sets up necessary environment variables and installs dependencies, including Oneclient, the Onedata POSIX client.</li>\n  <li><strong>Data Upload</strong>: After downloading the data, the workflow uploads it to Onedata, making it publicly accessible.</li>\n</ul>\n",
   "datePublished": "2024-06-03 00:00:00 +0000",
-  "dateModified": "2024-06-03 14:12:29 +0000",
+  "dateModified": "2024-12-19 14:39:45 +0000",
   "author": [
     {
       "@context": "https://schema.org",
@@ -569,9 +574,15 @@ and creates a structured directory based on the tutorial names and file contents
 	<p>
 	17 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e5ec; --color-darker: #00ccd2; --color-dimmed: #00d8df;">event</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -590,9 +601,9 @@ and creates a structured directory based on the tutorial names and file contents
 	<p>
 	6 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e7d5; --color-darker: #00cebe; --color-dimmed: #00dbc9;">single-cell</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;">single-cell</span>
 	
 	</p>
 	<p class="card-text">
@@ -611,11 +622,15 @@ and creates a structured directory based on the tutorial names and file contents
 	<p>
 	2 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d8c6ff; --color-darker: #c7a9ff; --color-dimmed: #cfb8ff;">automation</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;">automation</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -634,11 +649,13 @@ and creates a structured directory based on the tutorial names and file contents
 	<p>
 	29 November 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ee66; --color-darker: #00d45a; --color-dimmed: #00e160;">bioimaging</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00f168; --color-darker: #00d75c; --color-dimmed: #00e462;">bioimaging</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fac900; --color-darker: #dfb300; --color-dimmed: #edbe00;">mitoflash</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">mitoflash</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #5cec00; --color-darker: #51d200; --color-dimmed: #56df00;">mitochondria</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #5def00; --color-darker: #52d500; --color-dimmed: #57e200;">mitochondria</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe5; --color-darker: #ff9ad9; --color-dimmed: #ffaddf;">imaging</span>
 	
 	</p>
 	<p class="card-text">
@@ -657,11 +674,13 @@ and creates a structured directory based on the tutorial names and file contents
 	<p>
 	22 July 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc0b5; --color-darker: #ff9f8a; --color-dimmed: #ffafa0;">deploying</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc4b9; --color-darker: #ffa28f; --color-dimmed: #ffb3a5;">deploying</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cec9ff; --color-darker: #b7afff; --color-dimmed: #c2bcff;">maintenance</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #d1ccff; --color-darker: #b9b2ff; --color-dimmed: #c5bfff;">maintenance</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c7cbff; --color-darker: #abb2ff; --color-dimmed: #b9bfff;">survey</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #caceff; --color-darker: #aeb5ff; --color-dimmed: #bcc2ff;">survey</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef99; --color-darker: #00d588; --color-dimmed: #00e290;">admin</span>
 	
 	</p>
 	<p class="card-text">
@@ -744,7 +763,7 @@ and creates a structured directory based on the tutorial names and file contents
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

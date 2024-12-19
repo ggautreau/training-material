@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@c3ebd754dd76e93dc9548dce0a97443de8ae073e",
+		release: "galaxy-training-network@f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="GTN Video Library 2.0: 107 hours of learning across 154 videos">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-07-04 16:43:13 +0000">
+<meta name="DC.date" content="2024-12-19 14:39:45 +0000">
 <meta name="DC.creator" content="Saskia Hiltemann">
 <meta name="DC.creator" content="Helena Rasche"><meta name="description" content="Many GTN tutorials already have recordings. These recordings were made by members of the community for a variety of (online) training events. Up until now, this video library were part of the Gallantries Project. We have now integrated this video library directly into the GTN, and made it even easier to add video recordings to GTN tutorials or slide decks! Just use a Google Form to submit your video recordings! ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -272,7 +272,19 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-<span class="label label-default tutorial_tag" id="gtn" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+<span class="label label-default tutorial_tag" id="gtn" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
+
+
+
+<span class="label label-default tutorial_tag" id="contributing" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+
+
+
+<span class="label label-default tutorial_tag" id="teaching" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+
+
+
+<span class="label label-default tutorial_tag" id="community" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 
 
 
@@ -400,12 +412,15 @@ We have now integrated this video library directly into the GTN, and made it eve
   "name": "GTN Video Library 2.0: 107 hours of learning across 154 videos",
   "headline": "<p>Many GTN tutorials already have recordings. These recordings were made by members of the community",
   "keywords": [
-    "gtn"
+    "gtn",
+    "contributing",
+    "teaching",
+    "community"
   ],
   "description": "<p>Many GTN tutorials already have recordings. These recordings were made by members of the community",
   "articleBody": "<p>Many GTN tutorials already have recordings. These recordings were made by members of the community for a variety of (online) training events.\nUp until now, this video library were part of the <a href=\"https://gallantries.github.io/\">Gallantries Project</a>.\nWe have now integrated this video library directly into the GTN, and made it even <strong>easier to add video recordings</strong> to GTN tutorials or slide decks! Just use a Google Form to submit your video recordings!</p>\n\n<p>Want to record one of our tutorials? <strong>We welcome video recordings from everybody!</strong><sup id=\"fnref:1\" role=\"doc-noteref\"><a href=\"#fn:1\" class=\"footnote\" rel=\"footnote\">1</a></sup></p>\n\n<p>Please checkout out our FAQs with instructions for adding your own recordings:</p>\n\n<p><a href=\"/training-material/faqs/gtn/recordings_add.html\" class=\"btn btn-info\">Submitting Recordings to the GTN</a></p>\n\n<p><a href=\"/training-material/faqs/gtn/recordings_create.html\" class=\"btn btn-info\">Recording Tips &amp; Tricks</a></p>\n\n<h2 id=\"what-this-means-for\">What this means for…</h2>\n\n<table class=\"table table-striped\">\n  <thead>\n    <tr>\n      <th>Group</th>\n      <th>What’s new?</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Instructors</td>\n      <td>Just fill out an updated Google Form and we’ll take care of the rest. The google form is now more easily discoverable, as are the recording instructions which provide a best practice guide for doing screen recordings of tutorials. We have updated documentation on recording best practices that are easy to follow.</td>\n    </tr>\n    <tr>\n      <td>Event Organisers &amp; Teachers</td>\n      <td>Easily discover our large library of both human and automated video recordings to use in your training materials. All videos are licensed CC-BY so you can use them in your own training materials or even embed them in your course websites (Moodle, Blackboard, etc).</td>\n    </tr>\n    <tr>\n      <td>GTN Editors &amp; Maintainers</td>\n      <td>When a recording is submitted, a pull request will be opened with the appropriate metadata in the correct location and an easy checklist to follow to make sure everyone’s video is processed efficiently with every step taken care of.</td>\n    </tr>\n  </tbody>\n</table>\n\n<h2 id=\"video-library-10\">Video Library 1.0</h2>\n\n<p>This work is based on the work done during the <a href=\"/training-material/hall-of-fame/gallantries/\" class=\"contributor-badge-inline contributor-gallantries\">\n  <img src=\"https://gallantries.github.io/assets/images/gallantries-logo.png\" alt=\"Gallantries: Bridging Training Communities in Life Science, Environment and Health avatar\" width=\"36\" class=\"avatar\" />\n  Gallantries</a>\n project and the <a href=\"/training-material/news/2021/11/23/video-library.html\">Video Library 1.0</a>. As that project ended, the features developed during that time have now been rolled into the GTN to ensure their long term sustainability</p>\n\n<p>The number of videos and hours is slightly lower in the GTN version as we have not yet imported every recording, currently we are missing some recordings which are not directly associated with a GTN material (e.g. webinars).</p>\n\n<div class=\"footnotes\" role=\"doc-endnotes\">\n  <ol>\n    <li id=\"fn:1\" role=\"doc-endnote\">\n      <p>They must be a recording of a GTN tutorial being taught. We are not accepting recordings of other training events at this time. <a href=\"#fnref:1\" class=\"reversefootnote\" role=\"doc-backlink\">&#8617;</a></p>\n    </li>\n  </ol>\n</div>\n",
   "datePublished": "2024-06-14 00:00:00 +0000",
-  "dateModified": "2024-07-04 16:43:13 +0000",
+  "dateModified": "2024-12-19 14:39:45 +0000",
   "author": [
     {
       "@context": "https://schema.org",
@@ -662,9 +677,15 @@ We have now integrated this video library directly into the GTN, and made it eve
 	<p>
 	17 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e5ec; --color-darker: #00ccd2; --color-dimmed: #00d8df;">event</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e8ef; --color-darker: #00cfd5; --color-dimmed: #00dbe2;">event</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #b9e100; --color-darker: #a4c800; --color-dimmed: #afd400;">teaching</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -683,9 +704,9 @@ We have now integrated this video library directly into the GTN, and made it eve
 	<p>
 	6 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fff4b9; --color-darker: #efda00; --color-dimmed: #fee800;">gtn</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fff5be; --color-darker: #efdb00; --color-dimmed: #fee800;">gtn</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00e7d5; --color-darker: #00cebe; --color-dimmed: #00dbc9;">single-cell</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ead8; --color-darker: #00d1c0; --color-dimmed: #00decc;">single-cell</span>
 	
 	</p>
 	<p class="card-text">
@@ -704,11 +725,15 @@ We have now integrated this video library directly into the GTN, and made it eve
 	<p>
 	2 December 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ec90; --color-darker: #00d280; --color-dimmed: #00df88;">gtn infrastructure</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef92; --color-darker: #00d582; --color-dimmed: #00e28a;">gtn infrastructure</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c9caff; --color-darker: #afb1ff; --color-dimmed: #bcbeff;">new feature</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ccceff; --color-darker: #b2b4ff; --color-dimmed: #bfc1ff;">new feature</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #d8c6ff; --color-darker: #c7a9ff; --color-dimmed: #cfb8ff;">automation</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #dac9ff; --color-darker: #c9acff; --color-dimmed: #d1bbff;">automation</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00e9e5; --color-darker: #00d0cc; --color-dimmed: #00dcd8;">contributing</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc1d7; --color-darker: #ff9dc3; --color-dimmed: #ffafcd;">community</span>
 	
 	</p>
 	<p class="card-text">
@@ -727,11 +752,13 @@ We have now integrated this video library directly into the GTN, and made it eve
 	<p>
 	29 November 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #00ee66; --color-darker: #00d45a; --color-dimmed: #00e160;">bioimaging</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #00f168; --color-darker: #00d75c; --color-dimmed: #00e462;">bioimaging</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #fac900; --color-darker: #dfb300; --color-dimmed: #edbe00;">mitoflash</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #fecc00; --color-darker: #e2b500; --color-dimmed: #f0c000;">mitoflash</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #5cec00; --color-darker: #51d200; --color-dimmed: #56df00;">mitochondria</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #5def00; --color-darker: #52d500; --color-dimmed: #57e200;">mitochondria</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffbfe5; --color-darker: #ff9ad9; --color-dimmed: #ffaddf;">imaging</span>
 	
 	</p>
 	<p class="card-text">
@@ -750,11 +777,13 @@ We have now integrated this video library directly into the GTN, and made it eve
 	<p>
 	22 July 2024 &nbsp;
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #ffc0b5; --color-darker: #ff9f8a; --color-dimmed: #ffafa0;">deploying</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #ffc4b9; --color-darker: #ffa28f; --color-dimmed: #ffb3a5;">deploying</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #cec9ff; --color-darker: #b7afff; --color-dimmed: #c2bcff;">maintenance</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #d1ccff; --color-darker: #b9b2ff; --color-dimmed: #c5bfff;">maintenance</span>
 	
-	<span class="label label-default tutorial_tag" style="--color-primary: #c7cbff; --color-darker: #abb2ff; --color-dimmed: #b9bfff;">survey</span>
+	<span class="label label-default tutorial_tag" style="--color-primary: #caceff; --color-darker: #aeb5ff; --color-dimmed: #bcc2ff;">survey</span>
+	
+	<span class="label label-default tutorial_tag" style="--color-primary: #00ef99; --color-darker: #00d588; --color-dimmed: #00e290;">admin</span>
 	
 	</p>
 	<p class="card-text">
@@ -837,7 +866,7 @@ We have now integrated this video library directly into the GTN, and made it eve
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c3ebd754dd76e93dc9548dce0a97443de8ae073e">c3ebd75</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/f3b609483f9e2a73e164a8c3d7ef8ec5febeabc1">f3b6094</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
