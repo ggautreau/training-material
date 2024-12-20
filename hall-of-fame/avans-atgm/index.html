@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@5bcb3c0ab1a0047205d60f15b816013ffa4cfb75",
+		release: "galaxy-training-network@9c72eb6a5edccb43e3696a0fa2ddda6998b882e3",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -253,10 +253,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				<h2>Members</h2>
 				<p class="text-muted">These individuals have noted that they are affiliated in some way with this organisation. This list is non-exhaustive, and randomly ordered.</p>
 				<div class="contributors-line">
-					
-  <a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=36" alt="Bazante Sanders avatar" width="36" class="avatar" />
+					<a href="/training-material/hall-of-fame/bazante1/" class="contributor-badge contributor-bazante1"><img src="https://avatars.githubusercontent.com/bazante1?s=36" alt="Bazante Sanders avatar" width="36" class="avatar" />
     Bazante Sanders</a>
-  
 				</div>
 				
 
@@ -265,13 +263,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				<h2>Former Members</h2>
 				<p class="text-muted">These individuals have noted that they previously were affiliated in some way with this organisation. This list is non-exhaustive.</p>
 				<div class="contributors-line">
-					
-  <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
-    Helena Rasche</a>
-  
-  <a href="/training-material/hall-of-fame/dirowa/" class="contributor-badge contributor-dirowa"><img src="https://avatars.githubusercontent.com/dirowa?s=36" alt="Donny Vrins avatar" width="36" class="avatar" />
+					<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
+    Helena Rasche</a><a href="/training-material/hall-of-fame/dirowa/" class="contributor-badge contributor-dirowa"><img src="https://avatars.githubusercontent.com/dirowa?s=36" alt="Donny Vrins avatar" width="36" class="avatar" />
     Donny Vrins</a>
-  
 				</div>
 				
 
@@ -774,94 +768,60 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				<div class="newslist">
 				
 					
-					<article>
+					
 
 
 
 
-<div class="card newsitem">
- <div class="card-header">
-     <a href="/training-material/news/2022/01/28/rmarkdown.html"><h3 class="card-title">New Feature: Automatic RMarkdown</h3></a>
-  </div>
- <div class="row no-gutters">
-  <div class="col-sm-5">
-   <img class="card-img newscover" src="/training-material/topics/data-science/images/rstudio/r-preview-output.png" alt="Image showing content from a tutorial, rendered as an rmarkdown html via knitting. A table of contents appears on the left, and code and outputs on the right." loading="lazy">
-  </div>
-  <div class="col-sm-7">
-   <div class="card-body">
-        <!--<a href="/training-material/news/2022/01/28/rmarkdown.html"><h4 class="card-title">New Feature: Automatic RMarkdown</h4></a>-->
-        <div class="text-muted">
-        28 January 2022
+<div class="pathwayitem col-md-4">
+    <div class="card d-flex">
+       <a href="/training-material/news/2022/01/28/rmarkdown.html">
+      <div class="d-flex align-items-center" style="height:200px;">
+      <img class="card-img-top pathwaycover" src="/training-material/topics/data-science/images/rstudio/r-preview-output.png" alt="Image showing content from a tutorial, rendered as an rmarkdown html via knitting. A table of contents appears on the left, and code and outputs on the right." loading="lazy">
+      </div>
+      </a>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">New Feature: Automatic RMarkdown</h5>
+        <div class="card-text">
+          
+            <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-badge-small contributor-hexylena"><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" /></a>
+          
+          <div class="text-muted">
+            28 January 2022
+          </div>
+
+          <a href="/training-material/news/2022/01/28/rmarkdown.html">
+
+          
+            Further building on the work in the automatic Jupyter Notebook, we’ve now re-written the Jupyter export to be faster, and more importantly added support for R and RMarkdown! Check out an example material. Here we take the content of the tutorial, written like normal GTN markdown, and we automatically convert it to Jupyter Notebooks and now RMarkdown documents! Check out the documentation on how to setup your tutorials to support this.
+
+          
+          </a>
+
         </div>
-        <div markdown="0">
 
-	<div class="contributors-line">
-		
-<table class="contributions">
-	
-	<tr>
-		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
-		<td>
-			
-  <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
-    Helena Rasche</a>
-  
-		</td>
-	</tr>
-	
+      </div>
 
-	
+      <div class="card-footer">
+        
+        
+<span class="label label-default tutorial_tag" style="--color-primary: #00e68d; --color-darker: #00cd7c; --color-dimmed: #00d984;">gtn infrastructure</span>
+        
+        
+        
+<span class="label label-default tutorial_tag" style="--color-primary: #c3c4ff; --color-darker: #a9acff; --color-dimmed: #b6b8ff;">new feature</span>
+        
+        
+        
+<span class="label label-default tutorial_tag" style="--color-primary: #00e0dc; --color-darker: #00c7c4; --color-dimmed: #00d4d0;">contributing</span>
+        
+        
+      </div>
 
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-</table>
-
-
-	</div>
-
+    </div>
 </div>
 
 
-        
-        
-<span class="label label-default tutorial_tag" style="--color-primary: #00dd86; --color-darker: #00c577; --color-dimmed: #00d07f;">gtn infrastructure</span>
-        
-        
-        
-<span class="label label-default tutorial_tag" style="--color-primary: #b9bbff; --color-darker: #a0a3ff; --color-dimmed: #adafff;">new feature</span>
-        
-        
-        
-<span class="label label-default tutorial_tag" style="--color-primary: #00d7d3; --color-darker: #00bfbc; --color-dimmed: #00cbc7;">contributing</span>
-        
-        
-    <hr/>
-    <p class="card-text">
-      
-        Further building on the work in the automatic Jupyter Notebook, we’ve now re-written the Jupyter export to be faster, and more importantly added support for R and RMarkdown! Check out an example material. Here we take the content of the tutorial, written like normal GTN markdown, and we automatically convert it to Jupyter Notebooks and now RMarkdown documents! Check out the documentation on how to setup your tutorials to support this.
-
-      
-    </p>
-    <a href="/training-material/news/2022/01/28/rmarkdown.html" class="btn btn-primary">Full Story</a>
-   </div>
-  </div>
- </div>
-</div>
-</article>
 
 				
 				</div>
@@ -1199,7 +1159,7 @@ var chart2 = new Chart(ctx2, {
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5bcb3c0ab1a0047205d60f15b816013ffa4cfb75">5bcb3c0</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/9c72eb6a5edccb43e3696a0fa2ddda6998b882e3">9c72eb6</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

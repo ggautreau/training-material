@@ -4,6 +4,18 @@
   "title": "Galaxy Community Building",
   "summary": "This Topic contains resources for active Galaxy community members to organise and manage working in Galaxy.\n",
   "learning_path_cta": "dev_tools_training",
+  "subtopics": [
+    {
+      "id": "sig",
+      "title": "Special Interest Groups & Communities",
+      "description": "These tutorials will get you started with the basics of what a special interest group is and how to build one."
+    },
+    {
+      "id": "subdomain",
+      "title": "Subdomains & Galaxy Labs",
+      "description": "This tutorial will guide you on how to build subdomains / Galaxy Labs"
+    }
+  ],
   "editorial_board": [
     {
       "name": "Wendi Bacon",
@@ -34,6 +46,7 @@
         "/short/community/community-tool-table",
         "/short/T00475"
       ],
+      "subtopic": "sig",
       "questions": [
         "Is it possible to have an overview of all Galaxy tools for a specific scientific domain?",
         "How can I create a new overview for a specific Galaxy community or domain?"
@@ -79,9 +92,9 @@
       "id": "community/community-tool-table",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-12-05 12:48:07 +0000",
+      "mod_date": "2024-12-20 10:04:14 +0000",
       "pub_date": "2024-03-13 15:41:48 +0000",
-      "version": 1,
+      "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/community-tool-table/tutorial.json",
       "tools": [
 
@@ -296,6 +309,7 @@
     {
       "layout": "tutorial_hands_on",
       "title": "Make your tools available on your subdomain",
+      "subtopic": "subdomain",
       "questions": [
         "How can a tool be added in a section ?",
         "How can a section be added in a subdomain ?"
@@ -342,9 +356,9 @@
       "id": "community/tools_subdomains",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-12-03 12:15:24 +0000",
+      "mod_date": "2024-12-20 10:04:14 +0000",
       "pub_date": "2024-12-03 12:15:24 +0000",
-      "version": 1,
+      "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/tools_subdomains/tutorial.json",
       "tools": [
 
@@ -541,6 +555,7 @@
       "layout": "tutorial_hands_on",
       "priority": 1,
       "title": "What's a Special Interest Group?",
+      "subtopic": "sig",
       "questions": [
         "What is a Special Interest Group?",
         "What is the purpose of a Special Interest Group?",
@@ -603,9 +618,9 @@
       "id": "community/sig_define",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-09-27 10:48:07 +0000",
+      "mod_date": "2024-12-20 10:04:14 +0000",
       "pub_date": "2024-07-08 19:34:34 +0000",
-      "version": 2,
+      "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/sig_define/tutorial.json",
       "tools": [
 
@@ -815,7 +830,116 @@
     },
     {
       "layout": "tutorial_hands_on",
+      "priority": 1,
+      "subtopic": "sig",
+      "title": "Creating community content",
+      "questions": [
+        "What content does my Topic automatically get from the GTN?",
+        "How can I make sure this data is collected well?"
+      ],
+      "objectives": [
+        "Signpost community leads and users to useful resources",
+        "Explain why metadata is key for such community resources",
+        "Provide a reference, rather than a tutorial"
+      ],
+      "time_estimation": "30M",
+      "key_points": [
+        "The GTN has worked hard to provide automated metrics and resources to highlight and acknowledge the efforts of communities and community leads",
+        "This only works if we contribute with effective tagging."
+      ],
+      "contributions": {
+        "authorship": [
+          "nomadscientist"
+        ]
+      },
+      "requirements": [
+        {
+          "type": "internal",
+          "topic_name": "community",
+          "tutorials": [
+            "sig_define"
+          ]
+        }
+      ],
+      "js_requirements": {
+        "mathjax": null,
+        "mermaid": false
+      },
+      "short_id": null,
+      "symlink": null,
+      "url": "/topics/community/tutorials/community_content/tutorial.html",
+      "topic_name": "community",
+      "tutorial_name": "community_content",
+      "dir": "topics/community/tutorials/community_content",
+      "id": "community/community_content",
+      "hands_on": true,
+      "slides": false,
+      "mod_date": "2024-12-20 12:09:58 +0000",
+      "pub_date": "2024-12-20 10:04:14 +0000",
+      "version": 2,
+      "api": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/community_content/tutorial.json",
+      "tools": [
+
+      ],
+      "supported_servers": [
+
+      ],
+      "supported_servers_matrix": [
+
+      ],
+      "topic_name_human": "Galaxy Community Building",
+      "admin_install": {
+        "install_tool_dependencies": true,
+        "install_repository_dependencies": true,
+        "install_resolver_dependencies": true,
+        "tools": [
+
+        ]
+      },
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
+      "tours": false,
+      "video": false,
+      "slides_recordings": false,
+      "translations": {
+        "tutorial": [
+
+        ],
+        "slides": [
+
+        ],
+        "video": false
+      },
+      "license": "CC-BY-4.0",
+      "type": "tutorial",
+      "contributors": [
+        {
+          "name": "Wendi Bacon",
+          "email": "wendi.bacon@open.ac.uk",
+          "twitter": "WendiBacon1",
+          "matrix": "nomadscientist:matrix.org",
+          "joined": "2020-03",
+          "elixir_node": "uk",
+          "orcid": "0000-0002-8170-8806",
+          "bio": "Senior Lecturer at The Open University",
+          "fediverse": "https://mstdn.science/@wendibacon1",
+          "fediverse_flavor": "mastodon",
+          "affiliations": [
+            "elixir-europe"
+          ],
+          "id": "nomadscientist",
+          "url": "https://training.galaxyproject.org/training-material/api/contributors/nomadscientist.json",
+          "page": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/"
+        }
+      ],
+      "urls": {
+        "hands_on": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/community_content/tutorial.json",
+        "slides": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/community_content/tutorial.json"
+      }
+    },
+    {
+      "layout": "tutorial_hands_on",
       "priority": 2,
+      "subtopic": "sig",
       "title": "Creating a Special Interest Group",
       "questions": [
         "Do I need to make a Special Interest Group?",
@@ -878,9 +1002,9 @@
       "id": "community/sig_create",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-07-08 19:34:34 +0000",
+      "mod_date": "2024-12-20 10:04:14 +0000",
       "pub_date": "2024-07-08 19:34:34 +0000",
-      "version": 1,
+      "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/community/tutorials/sig_create/tutorial.json",
       "tools": [
 

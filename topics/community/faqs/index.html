@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@5bcb3c0ab1a0047205d60f15b816013ffa4cfb75",
+		release: "galaxy-training-network@9c72eb6a5edccb43e3696a0fa2ddda6998b882e3",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -261,6 +261,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
+<h4 class="faq-area"> How can I add my SIG meetings to the Galaxy Community Activities calendar? <a href="/training-material/topics/community/faqs/community_activites_calendar.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-can-i-add-my-sig-meetings-to-the-galaxy-community-activities-calendar"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-can-i-add-my-sig-meetings-to-the-galaxy-community-activities-calendar" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How can I add my SIG meetings to the Galaxy Community Activities calendar?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Add the following guest to all of your Google Calendar meeting events: 8a762890fbe724e9d29b67915aa0197a352642f94b22ec64a85430daaf1abb5e@group.calendar.google.com</p>   <p>Then it will show up in the <strong>Galaxy Community Activities</strong> calendar!</p>   <iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;ctz=Europe%2FLondon&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;src=OGE3NjI4OTBmYmU3MjRlOWQyOWI2NzkxNWFhMDE5N2EzNTI2NDJmOTRiMjJlYzY0YTg1NDMwZGFhZjFhYmI1ZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe> </blockquote> <!--END_SNIPPET-->
+
+
+
+
 <h4 class="faq-area"> How can I plan meetings across timezones? <a href="/training-material/topics/community/faqs/meeting_times.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
 <!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-can-i-plan-meetings-across-timezones"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-can-i-plan-meetings-across-timezones" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How can I plan meetings across timezones?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>Go to a <a href="https://24timezones.com/difference/us-ca/brisbane#2024-06-30T00:00">timezone website</a> to see equivalent times across the globe.</li>   <li>Select multiple times that capture at least 2/3 of the globe (we recommend three timezones)</li>   <li>Alternate meetings across those timezones to enable global participation.</li>   <li>Share your meeting time by going to <a href="https://arewemeetingyet.com/#form">this timezone website</a> and inputting your timezone and meeting time. This will give you a URL you can link to any communications that will automatically convert that time to the local time of anyone opening the URL. You can also include your meeting notes link there for ease.</li> </ol>   <p><em>Time-saving tip</em>: If you meet every 2 months, you can set up 3 recurring calendar events for each time chosen to recur every 6 months. It’s automatic, it’s inclusive, and it’s less effort!</p>   <p><img src="/training-material/topics/community/images/timezones.png" alt="Time zone map showing England, California, and eastern Australia timezones, with three circles around times that include 2 of the 3 timezones during working hours" style="height:400px;" /></p> </blockquote> <!--END_SNIPPET-->
@@ -271,6 +278,20 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h4 class="faq-area"> How do I add my community to the Galaxy CoDex? <a href="/training-material/topics/community/faqs/codex.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
 <!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-add-my-community-to-the-galaxy-codex"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-add-my-community-to-the-galaxy-codex" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I add my community to the Galaxy CoDex?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>You need to create a new folder in the <code class="language-plaintext highlighter-rouge">data/community</code> folder within <a href="https://github.com/galaxyproject/galaxy_codex">Galaxy Codex code source</a>.</p>   <blockquote class="notranslate hands_on">   <div class="box-title hands-on-title" id="hands-on-create-a-folder-for-your-community"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a folder for your community</div>   <ol>     <li>If not already done, fork the <a href="https://github.com/galaxyproject/galaxy_codex">Galaxy Codex repository</a></li>     <li>Go to the <code class="language-plaintext highlighter-rouge">communities</code> folder</li>     <li>Click on <strong>Add file</strong> in the drop-down menu at the top</li>     <li>Select <strong>Create a new file</strong></li>     <li>       <p>Fill in the <code class="language-plaintext highlighter-rouge">Name of your file</code> field with:  name of your community + <code class="language-plaintext highlighter-rouge">metadata/categories</code></p>       <p>This will create a new folder for your community and add a categories file to this folder.</p>     </li>   </ol> </blockquote> </blockquote> <!--END_SNIPPET-->
+
+
+
+
+<h4 class="faq-area"> How do I find the Community Home pages? <a href="/training-material/topics/community/faqs/community_home.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-find-the-community-home-pages"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-find-the-community-home-pages" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I find the Community Home pages?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>The <strong>Community Home</strong> shows statistics for the topic (e.g. number of tutorials, slides, events, contributors, etc), as well as annual “Year in review” sections listing all new additions to the topic/community for each year.</p>   <p>You can find your <strong>Community Home</strong> by</p>   <ol>   <li>Opening the GTN <strong>Topic</strong> page of your choice</li>   <li>Scrolling down to the <strong>Community Resources</strong> section (below the list of tutorials)</li>   <li>     <p>Clicking the <strong>Community Home</strong> button</p>     <p><img src="/training-material/topics/community/images/community_maintainer_home_buttons.png" alt="screenshot of the community and maintainer homepage buttons" /></p>   </li> </ol>   <p>For example, have a look at the <a href="/training-material/topics/single-cell/community.html">Single Cell Community Home</a></p>   <p><img src="/training-material/topics/community/images/community_home.png" alt="screenshot of the single cell community home page" /></p> </blockquote> <!--END_SNIPPET-->
+
+
+
+
+<h4 class="faq-area"> How do I find the Maintainer Home pages? <a href="/training-material/topics/community/faqs/maintainer_home.html"><i class="fas fa-external-link-alt"></i></a> </h4>
+
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-find-the-maintainer-home-pages"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-find-the-maintainer-home-pages" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I find the Maintainer Home pages?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>The <strong>Maintainer Home</strong> pages shows the state of the topic and its materials in terms of which available GTN features are being used, adherence to best practices, and when tutorials have last been updated, and which tutorials are the most used, etc. This can help inform where to focus your efforts.</p>   <p>You can find your <strong>Maintainer Home</strong> by</p>   <ol>   <li>Opening the GTN <strong>Topic</strong> page of your choice</li>   <li>Scrolling down to the <strong>Community Resources</strong> section (below the list of tutorials)</li>   <li>     <p>Clicking the <strong>Maintainer Home</strong> button</p>     <p><img src="/training-material/topics/community/images/community_maintainer_home_buttons.png" alt="screenshot of the community and maintainer homepage buttons" /></p>   </li> </ol>   <p>For example, have a look at the <a href="/training-material/topics/single-cell/maintainer.html">Single Cell Maintainer Home</a></p>   <p><img src="/training-material/topics/community/images/maintainer_home.png" alt="screenshot of the single cell maintainer home page" /></p> </blockquote> <!--END_SNIPPET-->
 
 
 
@@ -403,7 +424,7 @@ add a button, include configuration options:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5bcb3c0ab1a0047205d60f15b816013ffa4cfb75">5bcb3c0</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/9c72eb6a5edccb43e3696a0fa2ddda6998b882e3">9c72eb6</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
