@@ -21,7 +21,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@d9926f20cdc672eecbe9f48ddd1ca6c51d4ca969",
+		release: "galaxy-training-network@b2b69a1219e9074ba894f8bbb1eecd1278f2a2bb",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
