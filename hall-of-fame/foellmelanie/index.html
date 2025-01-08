@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@cd03625c64a3aa39428fb212ebc328b3ef45308b",
+		release: "galaxy-training-network@4da703396dd52884d65adc30613a1e12971f0c01",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -255,6 +255,30 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       "name": "University of Freiburg",
       "description": "An organization supporting the Galaxy Training Network",
       "url": "https://www.uni-freiburg.de/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "id": "https://training.galaxyproject.org/training-material/hall-of-fame/deNBI/",
+      "name": "de.NBI",
+      "description": "An organization supporting the Galaxy Training Network",
+      "url": "https://www.denbi.de/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "id": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-europe/",
+      "name": "ELIXIR Europe",
+      "description": "An organization supporting the Galaxy Training Network",
+      "url": "https://elixir-europe.org"
     }
   ],
   "identifier": "https://orcid.org/0000-0002-1887-7543",
@@ -290,7 +314,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				<h2>Affiliations</h2>
 				<div class="contributors-line">
 					<a href="/training-material/hall-of-fame/uni-freiburg/" class="contributor-badge contributor-uni-freiburg"><img src="https://raw.githubusercontent.com/bgruening/presentations/a2e38e4b007994af798320db3a0131c4bb891c0e/shared/resources/img/logo_freiburg.jpg" alt="University of Freiburg avatar" width="36" class="avatar" />
-    UFR</a>
+    UFR</a><a href="/training-material/hall-of-fame/deNBI/" class="contributor-badge contributor-deNBI"><img src="https://avatars.githubusercontent.com/deNBI?s=36" alt="de.NBI avatar" width="36" class="avatar" />
+    de.NBI</a><a href="/training-material/hall-of-fame/elixir-europe/" class="contributor-badge contributor-elixir-europe"><img src="/training-material/shared/images/elixir.png" alt="ELIXIR Europe avatar" width="36" class="avatar" />
+    ELIXIR Europe</a>
 				</div>
 				
 
@@ -1445,7 +1471,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #d5cbff; --color-darker: #c0afff; --color-dimmed: #cabdff;">proteomics</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #d0c4ff; --color-darker: #bca9ff; --color-dimmed: #c6b7ff;">proteomics</div>
 				
 				
 			</li>
@@ -1460,7 +1486,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #d5cbff; --color-darker: #c0afff; --color-dimmed: #cabdff;">proteomics</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #d0c4ff; --color-darker: #bca9ff; --color-dimmed: #c6b7ff;">proteomics</div>
 				
 				
 			</li>
@@ -1516,11 +1542,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #7eeb00; --color-darker: #70d100; --color-dimmed: #77de00;">template-and-tools</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #7be500; --color-darker: #6dcc00; --color-dimmed: #74d800;">template-and-tools</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #ffc0dd; --color-darker: #ff9ccc; --color-dimmed: #ffaed4;">metabolomics</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #ffb7d8; --color-darker: #ff93c9; --color-dimmed: #ffa6d1;">metabolomics</div>
 				
 				
 			</li>
@@ -1535,7 +1561,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #d5cbff; --color-darker: #c0afff; --color-dimmed: #cabdff;">proteomics</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #d0c4ff; --color-darker: #bca9ff; --color-dimmed: #c6b7ff;">proteomics</div>
 				
 				
 			</li>
@@ -1550,7 +1576,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #00f242; --color-darker: #00d83a; --color-dimmed: #00e53e;">review-needed</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #00ec40; --color-darker: #00d238; --color-dimmed: #00df3c;">review-needed</div>
 				
 				
 			</li>
@@ -1565,7 +1591,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #00f242; --color-darker: #00d83a; --color-dimmed: #00e53e;">review-needed</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #00ec40; --color-darker: #00d238; --color-dimmed: #00df3c;">review-needed</div>
 				
 				
 			</li>
@@ -1651,6 +1677,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				</div>
 				
 
+				
+				<div class="contact-items">
+					<img src="/training-material/assets/images/elixir/elixir-de.svg" alt="elixir logo for Germany">
+				</div>
 				
 
 				<p><b>Favourite Topics</b></p>
@@ -2062,7 +2092,7 @@ var chart2 = new Chart(ctx2, {
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/cd03625c64a3aa39428fb212ebc328b3ef45308b">cd03625</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/4da703396dd52884d65adc30613a1e12971f0c01">4da7033</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
