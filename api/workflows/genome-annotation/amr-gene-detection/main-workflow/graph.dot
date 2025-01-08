@@ -6,18 +6,18 @@ digraph main {
   2[color=lightblue,label="ℹ️ Input Dataset\nreverse_reads"]
   3[label="staramr"]
   0 -> 3 [label="output"]
-  k8c9348dc69d1478592e6e94af31b83b5[color=lightseagreen,label="Output\nstararm_detailed_summary"]
-  3 -> k8c9348dc69d1478592e6e94af31b83b5
+  kf9420b6143bf4f79ac3c37e248f7c96c[color=lightseagreen,label="Output\nstararm_detailed_summary"]
+  3 -> kf9420b6143bf4f79ac3c37e248f7c96c
   4[label="Bakta"]
   0 -> 4 [label="output"]
-  k482d606cd102440baa0ef24b2683beae[color=lightseagreen,label="Output\nbakta_annotation_summary"]
-  4 -> k482d606cd102440baa0ef24b2683beae
+  k5a853dc8d25f43c68398f83d88cab0ad[color=lightseagreen,label="Output\nbakta_annotation_summary"]
+  4 -> k5a853dc8d25f43c68398f83d88cab0ad
   5[label="Bowtie2"]
   1 -> 5 [label="output"]
   2 -> 5 [label="output"]
   0 -> 5 [label="output"]
-  k0d31c8f983fa4ecea0fed29a9d73d66d[color=lightseagreen,label="Output\nbowtie_mapping_stats"]
-  5 -> k0d31c8f983fa4ecea0fed29a9d73d66d
+  kcd586061aba54c218214b88a20be683c[color=lightseagreen,label="Output\nbowtie_mapping_stats"]
+  5 -> kcd586061aba54c218214b88a20be683c
   6[label="Select"]
   3 -> 6 [label="detailed_summary"]
   7[label="Table to GFF3"]
@@ -26,6 +26,6 @@ digraph main {
   4 -> 8 [label="annotation_gff3"]
   7 -> 8 [label="output"]
   5 -> 8 [label="output"]
-  k69b57b25aba544fea2485cfdbb849282[color=lightseagreen,label="Output\njbrowse_output"]
-  8 -> k69b57b25aba544fea2485cfdbb849282
+  k538c73fa3b254520b0f30c4e6394bd7b[color=lightseagreen,label="Output\njbrowse_output"]
+  8 -> k538c73fa3b254520b0f30c4e6394bd7b
 }
