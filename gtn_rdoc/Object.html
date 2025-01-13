@@ -864,13 +864,21 @@
  
                           <button class="toggle-source">toggle source</button>
                           <div class="method-source-code" id="fetch_workflowhub-source">
-                            <pre><span class="ruby-comment"># File bin/workflows-fetch.rb, line 39</span>
+                            <pre><span class="ruby-comment"># File bin/workflows-fetch.rb, line 40</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fetch_workflowhub</span>
-  <span class="ruby-identifier">projects</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;https://workflowhub.eu/projects&#39;</span>).<span class="ruby-identifier">body</span>)
+
+  <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">projects</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;https://workflowhub.eu/projects&#39;</span>).<span class="ruby-identifier">body</span>)
+
+      <span class="ruby-identifier">response</span> = <span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;https://workflowhub.eu/workflows?filter[workflow_type]=galaxy&#39;</span>)
+      <span class="ruby-identifier">data</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span>
+      <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;ERROR: cannot fetch from WorkflowHub&quot;</span>
+      <span class="ruby-keyword">return</span> []
+  <span class="ruby-keyword">end</span>
+
   <span class="ruby-identifier">project_mapping</span> = <span class="ruby-identifier">projects</span>[<span class="ruby-string">&#39;data&#39;</span>].<span class="ruby-identifier">to_h</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">p</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">p</span>[<span class="ruby-string">&#39;id&#39;</span>], <span class="ruby-identifier">p</span>[<span class="ruby-string">&#39;attributes&#39;</span>][<span class="ruby-string">&#39;title&#39;</span>]] }
 
-  <span class="ruby-identifier">response</span> = <span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;https://workflowhub.eu/workflows?filter[workflow_type]=galaxy&#39;</span>)
-  <span class="ruby-identifier">data</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">response</span>.<span class="ruby-identifier">body</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">data</span>[<span class="ruby-string">&#39;links&#39;</span>][<span class="ruby-string">&#39;next&#39;</span>].<span class="ruby-identifier">nil?</span>
     <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;ERROR: Cannot yet handle multiple pages&#39;</span>
     <span class="ruby-identifier">exit</span> <span class="ruby-value">42</span>
@@ -878,7 +886,12 @@
   <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;INFO: Fetching #{data[&#39;data&#39;].length} workflows from WorkflowHub&quot;</span>
   <span class="ruby-identifier">data</span>[<span class="ruby-string">&#39;data&#39;</span>].<span class="ruby-identifier">map</span>.<span class="ruby-identifier">with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">w</span>, <span class="ruby-identifier">_i</span><span class="ruby-operator">|</span>
     <span class="ruby-comment"># {&quot;id&quot;=&gt;&quot;14&quot;, &quot;type&quot;=&gt;&quot;workflows&quot;, &quot;attributes&quot;=&gt;{&quot;title&quot;=&gt;&quot;Cheminformatics - Docking&quot;}, &quot;links&quot;=&gt;{&quot;self&quot;=&gt;&quot;/workflows/14&quot;}}</span>
-    <span class="ruby-identifier">wf_info</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">request</span>(<span class="ruby-node">&quot;https://workflowhub.eu#{w[&#39;links&#39;][&#39;self&#39;]}&quot;</span>).<span class="ruby-identifier">body</span>)
+    <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">wf_info</span> = <span class="ruby-constant">JSON</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">request</span>(<span class="ruby-node">&quot;https://workflowhub.eu#{w[&#39;links&#39;][&#39;self&#39;]}&quot;</span>).<span class="ruby-identifier">body</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">StandardError</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;ERROR: cannont fetch from WorkflowHub&quot;</span>
+        <span class="ruby-keyword">return</span> []
+    <span class="ruby-keyword">end</span>
     <span class="ruby-identifier">creator_list</span> = []
 
     <span class="ruby-identifier">creator0</span> = <span class="ruby-identifier">wf_info</span>[<span class="ruby-string">&#39;data&#39;</span>][<span class="ruby-string">&#39;attributes&#39;</span>][<span class="ruby-string">&#39;creators&#39;</span>][<span class="ruby-value">0</span>]
@@ -935,7 +948,7 @@
  
                           <button class="toggle-source">toggle source</button>
                           <div class="method-source-code" id="fetch_workflows-source">
-                            <pre><span class="ruby-comment"># File bin/workflows-fetch.rb, line 21</span>
+                            <pre><span class="ruby-comment"># File bin/workflows-fetch.rb, line 22</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">fetch_workflows</span>(<span class="ruby-identifier">server</span>)
   <span class="ruby-keyword">begin</span>
     <span class="ruby-identifier">response</span> = <span class="ruby-identifier">request</span>(<span class="ruby-node">&quot;#{server}/api/workflows/&quot;</span>)
