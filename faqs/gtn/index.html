@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@0aef9d9e79da56f5efbfeb97a0f9a7d0879b116c",
+		release: "galaxy-training-network@7204bcd874a8703417fff41bb91d757d605bd5eb",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -381,13 +381,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
-
-<h4 class="faq-area"> Using answer key histories <a href="/training-material/faqs/gtn/using-answer-key-histories.html"><i class="fas fa-external-link-alt"></i></a> </h4>
-
-<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-using-answer-key-histories-1"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-using-answer-key-histories-1" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: Using answer key histories</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you are struggling with a tutorial and you can’t figure out why, you can use the answer history (if it’s available) which is linked at the top of the tutorial.</p>   <ol>   <li>     <p>Select the <em>Answer history</em> and choose the appropriate link from the resulting drop-down menu.</p>   </li>   <li>     <p>Import the history (If you aren’t sure how, <a href="/training-material/faqs/galaxy/histories_import.html">go to the Import History FAQ</a>) 3. Select <em>View Here</em> or otherwise navigate to the imported history. 4. Find the dataset that was not outputting for you. You might be able to sport errors from looking at this dataset - such as, you may see that a different tool version was used, or different parameters were run, or different inputs were used. You may find that the input dataset itself is different, and perhaps something has gone wrong earlier in the tutorial for you.</p>   </li> </ol>   <p>If you can’t find what has gone wrong, you can then: 5. [Ask for help] (/training-material/faqs/gtn/instructors_getting_help.html).</p>   <ol>   <li><a href="/training-material/faqs/galaxy/histories_copy_dataset.html">Copy the necessary datasets over from the answer history into your history</a> so that you can continue your analysis from wherever you got stuck!</li> </ol>   <!-- It would be awesome if this was automatically added to any tutorial that has answer key histories --> </blockquote> <!--END_SNIPPET-->
-
-
-
  <br> 
 
 <h3 id="instructors"> <a href="#instructors"> Instructors </a></h3>
@@ -503,7 +496,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <h4 class="faq-area"> How can I test an Interactive Tour? <a href="/training-material/faqs/gtn/contributors_tours.html"><i class="fas fa-external-link-alt"></i></a> </h4>
 
-<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-can-i-test-an-interactive-tour"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-can-i-test-an-interactive-tour" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How can I test an Interactive Tour?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Perhaps you’ve been asked to review an interactive tour, or maybe you just want to try one out. The easiest way to run an interactive tour is to use the <a href="https://tailordev.fr/blog/2017/07/19/the-galaxy-tour-builder-extension/">Tour builder</a> browser extension.</p>   <ol>   <li>Install the Tour Builder extension to your browser (<a href="https://chrome.google.com/webstore/detail/galaxy-tour-builder/mdfbapknmcpnbmggahhaegehbbbmhmgg">Chrome Web Store</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/galaxy-tour-builder/">Firefox add-on</a>).</li>   <li>Navigate to a Galaxy instance supporting the tutorial. To find which Galaxy instances support each tutorial, please see the dropdown menu next to the tutorial on the training website. Using one of the usegalaxy.* instances (<a href="https://usegalaxy.eu">UseGalaxy.eu</a>, <a href="https://usegalaxy.org.au">UseGalaxy.org.au</a>, <a href="https://usegalaxy.fr">UseGalaxy.fr</a>, <a href="https://usegalaxy.org">UseGalaxy.org</a>) ) is usually a good bet.</li>   <li>Start the Tour Builder plugin by clicking on the icon in your browser menu bar</li>   <li>Copy the contents of the <code class="language-plaintext highlighter-rouge">tour.yaml</code> file into the Tour builder editor window</li>   <li>Click <code class="language-plaintext highlighter-rouge">Save</code> and then <code class="language-plaintext highlighter-rouge">Run</code></li> </ol> </blockquote> <!--END_SNIPPET-->
+<!--SNIPPET--><blockquote class="tip">   <div class="box-title tip-title" id="tip-how-can-i-test-an-interactive-tour"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-can-i-test-an-interactive-tour" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How can I test an Interactive Tour?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Perhaps you’ve been asked to review an interactive tour, or maybe you just want to try one out. The easiest way to run an interactive tour is to use the <a href="https://tailordev.fr/blog/2017/07/19/the-galaxy-tour-builder-extension/">Tour builder</a> browser extension.</p>   <ol>   <li>Install the Tour Builder extension to your browser (<a href="https://chrome.google.com/webstore/detail/galaxy-tour-builder/mdfbapknmcpnbmggahhaegehbbbmhmgg">Chrome Web Store</a>, <a href="https://addons.mozilla.org/en-US/firefox/addon/galaxy-tour-builder/">Firefox add-on</a>).</li>   <li>Navigate to a Galaxy instance supporting the tutorial. To find which Galaxy instances support each tutorial, please see the dropdown menu next to the tutorial on the training website. Using one of the usegalaxy.* instances (<a href="https://usegalaxy.org.au">UseGalaxy.org.au</a>, <a href="https://usegalaxy.fr">UseGalaxy.fr</a>, <a href="https://usegalaxy.eu">UseGalaxy.eu</a>, <a href="https://usegalaxy.org">UseGalaxy.org</a>) ) is usually a good bet.</li>   <li>Start the Tour Builder plugin by clicking on the icon in your browser menu bar</li>   <li>Copy the contents of the <code class="language-plaintext highlighter-rouge">tour.yaml</code> file into the Tour builder editor window</li>   <li>Click <code class="language-plaintext highlighter-rouge">Save</code> and then <code class="language-plaintext highlighter-rouge">Run</code></li> </ol> </blockquote> <!--END_SNIPPET-->
 
 
 
@@ -724,7 +717,7 @@ add a button, include configuration options:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/0aef9d9e79da56f5efbfeb97a0f9a7d0879b116c">0aef9d9</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/7204bcd874a8703417fff41bb91d757d605bd5eb">7204bcd</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
