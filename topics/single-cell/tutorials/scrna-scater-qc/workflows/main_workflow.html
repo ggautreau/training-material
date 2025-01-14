@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>Scater / Single-cell quality control with scater / Single Cell</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><title>Single-cell QC with scater / Single-cell quality control with scater / Single Cell</title>
         
             <meta name="google-site-verification" content="9mOXn2JL833-i7-aioCCEuIdG4_tb6qjwUozB5GJnPQ" />
 
@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@675ea1acb6f599750327a8d597fc0992d48151fa",
+		release: "galaxy-training-network@ceb0dc6ad813cb6095df73e1553e579e58c3ed11",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -66,11 +66,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
         <meta name="DC.identifier" content="https://github.com/galaxyproject/training-material">
 <meta name="DC.type" content="text">
-<meta name="DC.title" content="Scater">
+<meta name="DC.title" content="Single-cell QC with scater">
 <meta name="DC.publisher" content="Galaxy Training Network">
 <meta name="DC.date" content="1970-01-01 00:00:00 +0000"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
-	<meta property="og:title" content="Single Cell / Single-cell quality control with scater / Scater">
+	<meta property="og:title" content="Single Cell / Single-cell quality control with scater / Single-cell QC with scater">
         <meta property="og:description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:image" content="https://galaxy-training.s3.amazonaws.com/social/topics/single-cell/tutorials/scrna-scater-qc/workflows/main_workflow.png">
 	</head>
@@ -221,7 +221,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 
 <section>
 	<hgroup>
-		<h1 data-toc-skip>Scater</h1>
+		<h1 data-toc-skip>Single-cell QC with scater</h1>
 		<p>single-cell-scrna-scater-qc/main-workflow</p>
 	</hgroup>
 	
@@ -231,20 +231,26 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<b>Author(s)</b>
 			<br/>
 			
+			Graham Etherington, 
+			
+			Nicola Soranzo, 
+			
+			Pavankumar Videm
+			
 			
 			<br/>
 
 			<i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span>
 			<b>Version</b>
 			<br/>
-			1
+			2
 
 			<br/>
 
 			<i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span>
 			<b>Last updated</b>
 			<br/>
-			Nov 18, 2022
+			Jan 14, 2025
 
 			<br/>
 
@@ -253,7 +259,6 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			None Specified, defaults to
 			<a href="https://spdx.org/licenses/CC-BY-4.0">CC-BY-4.0</a>
 			
 			<br/>
@@ -264,7 +269,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #cebe00; --color-darker: #b8a900; --color-dimmed: #c3b300;">transcriptomics</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #dac900; --color-darker: #c2b300; --color-dimmed: #cebe00;">transcriptomics</div>
+			
+			<div class="label label-default tutorial_tag" style="--color-primary: #00decd; --color-darker: #00c6b6; --color-dimmed: #00d2c1;">single-cell</div>
 			
 			</br>
 			
@@ -273,6 +280,8 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<b>Features</b>
 			<ul>
 			
+			
+				<li>Includes a <a href="https://training.galaxyproject.org/training-material/faqs/galaxy/workflows_report_view.html">Galaxy Workflow Report</a></li>
 			
 			
 			
@@ -294,7 +303,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<b>Workflow Testing</b>
 			<br/>
 
-			Tests: ❌ <br/>
+			Tests: ✅ <br/>
 			Results: Not yet automated
 
 			<hr/>
@@ -329,13 +338,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
+					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-scater-qc/versions/main-workflow">Galaxy Australia</a></li>
+					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-scater-qc/versions/main-workflow">Galaxy France</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-scater-qc/versions/main-workflow">Galaxy Main</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-scater-qc/versions/main-workflow">Galaxy Europe</a></li>
-					
-					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-scater-qc/versions/main-workflow">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-scater-qc/versions/main-workflow">Import to another server (≥23.0+ only!)</a>
@@ -357,14 +366,26 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 3;
   1 -->|output| 3;
   2 -->|output| 3;
-  4["Scater: plot library QC"];
+  4["Library QC"];
   3 -->|output_loom| 4;
-  5["Scater: filter SCE"];
+  57113c0a-f622-42df-8a5b-5bc4329d64d4["Output\nlib_qc_plot"];
+  4 --> 57113c0a-f622-42df-8a5b-5bc4329d64d4;
+  style 57113c0a-f622-42df-8a5b-5bc4329d64d4 stroke:#2c3143,stroke-width:4px;
+  5["Filter SCE"];
   3 -->|output_loom| 5;
-  6["Scater: plot library QC"];
+  6d503142-e29b-4c13-9773-c8176419dfb6["Output\noutput_loom"];
+  5 --> 6d503142-e29b-4c13-9773-c8176419dfb6;
+  style 6d503142-e29b-4c13-9773-c8176419dfb6 stroke:#2c3143,stroke-width:4px;
+  6["Filtered Library QC"];
   5 -->|output_loom| 6;
-  7["Scater: PCA plot"];
-  5 -->|output_loom| 7;</pre>
+  f7783f97-b108-4850-ac08-fc7d0769e8d8["Output\nfiltered_lib_qc_plot"];
+  6 --> f7783f97-b108-4850-ac08-fc7d0769e8d8;
+  style f7783f97-b108-4850-ac08-fc7d0769e8d8 stroke:#2c3143,stroke-width:4px;
+  7["PCA Plot"];
+  5 -->|output_loom| 7;
+  4ca6aec7-1024-4988-b975-428cfa7603ed["Output\npca_plot"];
+  7 --> 4ca6aec7-1024-4988-b975-428cfa7603ed;
+  style 4ca6aec7-1024-4988-b975-428cfa7603ed stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
@@ -403,6 +424,30 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					</tr>
 				</thead>
 				<tbody>
+				
+				<tr>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_dist_scatter/scater_plot_dist_scatter/1.12.2</td>
+					<td>Scater: plot library QC</td>
+					<td>Library QC</td>
+				</tr>
+				
+				<tr>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/scater_filter/scater_filter/1.12.2</td>
+					<td>Scater: filter SCE</td>
+					<td>Filter SCE</td>
+				</tr>
+				
+				<tr>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_dist_scatter/scater_plot_dist_scatter/1.12.2</td>
+					<td>Scater: plot library QC</td>
+					<td>Filtered Library QC</td>
+				</tr>
+				
+				<tr>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_pca/scater_plot_pca/1.12.2</td>
+					<td>Scater: PCA plot</td>
+					<td>PCA Plot</td>
+				</tr>
 				
 				</tbody>
 			</table>
@@ -489,6 +534,20 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					</tr>
 				</thead>
 				<tbody>
+					
+					<tr>
+						<td>3</td>
+						<td><a href="https://github.com/galaxyproject/training-material/commit/a8f264c338c26e1a7cd2b8166e1e6dd9562f5cd9">a8f264c33</a></td>
+						<td>2025-01-14 14:17:42</td>
+						<td>rename WF</td>
+					</tr>
+					
+					<tr>
+						<td>2</td>
+						<td><a href="https://github.com/galaxyproject/training-material/commit/0382ac8b807fe588dfa66c6422aae08770cc5ac7">0382ac8b8</a></td>
+						<td>2024-12-12 18:24:06</td>
+						<td>Add workflow tests for Scater QC workflow</td>
+					</tr>
 					
 					<tr>
 						<td>1</td>
@@ -578,7 +637,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/675ea1acb6f599750327a8d597fc0992d48151fa">675ea1a</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/ceb0dc6ad813cb6095df73e1553e579e58c3ed11">ceb0dc6</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
