@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@01a133a2f2b225f24162db0a0e84a6cb145bd265",
+		release: "galaxy-training-network@518b172115fe1d9e37b99c8dbacaab618df5661d",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Importing files from public atlases">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-09-13 15:56:15 +0000">
+<meta name="DC.date" content="2025-01-14 11:47:18 +0000">
 <meta name="DC.creator" content="Julia Jakiela">
 <meta name="DC.creator" content="Wendi Bacon"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -189,7 +189,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-09-13 15:56:15 +0000",
+  "dateModified": "2025-01-14 11:47:18 +0000",
   "datePublished": "2023-11-14 17:16:58 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -264,11 +264,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "description": "Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!).\n",
     "url": "https://training.galaxyproject.org/training-material/topics/single-cell/"
   },
-  "abstract": "# Introduction",
+  "abstract": "Public single cell datasets seem to accumulate by the second. Well annotated, quality datasets are slightly trickier to find, which is why projects like the [Single Cell Expression Atlas](https://www.ebi.ac.uk/gxa/sc/home) (SCXA) exist - to curate datasets for public use. Here, we will guide you through transforming data imported from the SCXA repository into the input file required for the [Filter, Plot, Explore tutorial](http://localhost:4000/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html) and we will also show how to use the public atlases for your own research.",
   "learningResourceType": "e-learning",
   "name": "Importing files from public atlases",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/EBI-retrieval/tutorial.html",
-  "version": 5,
+  "version": 6,
   "timeRequired": "PT15M",
   "teaches": "- You will retrieve raw data from the EBI Single Cell Expression Atlas and Human Cell Atlas.\n- You will manipulate the metadata and matrix files.\n- You will combine the metadata and matrix files into an AnnData or Seurat object for downstream analysis.",
   "keywords": [
@@ -276,7 +276,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "data import",
     "data management"
   ],
-  "description": "## Abstract\n\n# Introduction\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How do I use the EBI Single Cell Expression Atlas and Human Cell Atlas?\n - How can I reformat and manipulate the downloaded files to create the correct input for downstream analysis?\n\n\n## Learning Objectives\n\n- You will retrieve raw data from the EBI Single Cell Expression Atlas and Human Cell Atlas.\n- You will manipulate the metadata and matrix files.\n- You will combine the metadata and matrix files into an AnnData or Seurat object for downstream analysis.\n\n",
+  "description": "## Abstract\n\nPublic single cell datasets seem to accumulate by the second. Well annotated, quality datasets are slightly trickier to find, which is why projects like the [Single Cell Expression Atlas](https://www.ebi.ac.uk/gxa/sc/home) (SCXA) exist - to curate datasets for public use. Here, we will guide you through transforming data imported from the SCXA repository into the input file required for the [Filter, Plot, Explore tutorial](http://localhost:4000/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html) and we will also show how to use the public atlases for your own research.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How do I use the EBI Single Cell Expression Atlas and Human Cell Atlas?\n - How can I reformat and manipulate the downloaded files to create the correct input for downstream analysis?\n\n\n## Learning Objectives\n\n- You will retrieve raw data from the EBI Single Cell Expression Atlas and Human Cell Atlas.\n- You will manipulate the metadata and matrix files.\n- You will combine the metadata and matrix files into an AnnData or Seurat object for downstream analysis.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -1574,6 +1574,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
             </a>
         </li>
       
+        <li>
+            <a class="dropdown-item" href="https://singlecell.usegalaxy.eu/u/wendi.bacon.training/h/input-history-ebi-scxa---anndata-scanpy-or-seurat-object">
+              UseGalaxy.eu-ARCHIVED
+              
+              <br/><span class="text-muted">2024-12-10</span>
+              
+            </a>
+        </li>
+      
       <li class="dropdown-divider"></li>
       <li>
         <a class="dropdown-item" href="/training-material/faqs/gtn/gtn_example_histories.html"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> How to Use This</a>
@@ -1600,10 +1609,28 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </li>
       
         <li>
+            <a class="dropdown-item" href="https://singlecell.usegalaxy.eu/u/wendi.bacon.training/h/ebi-scxa---anndata-scanpy-or-seurat-object">
+              EBI SCXA retrieval tool (UseGalaxy.eu)-ARCHIVED
+              
+              <br/><span class="text-muted">2024-12-10</span>
+              
+            </a>
+        </li>
+      
+        <li>
             <a class="dropdown-item" href="https://singlecell.usegalaxy.eu/u/j.jakiela/h/hca-downloader---example-files-1">
               HCA Downloader (UseGalaxy.eu)
               
               <br/><span class="text-muted">2024-09-08</span>
+              
+            </a>
+        </li>
+      
+        <li>
+            <a class="dropdown-item" href="https://singlecell.usegalaxy.eu/u/wendi.bacon.training/h/hca-downloader---example-files">
+              HCA Downloader (UseGalaxy.eu)-ARCHIVED
+              
+              <br/><span class="text-muted">2024-12-10</span>
               
             </a>
         </li>
@@ -1710,7 +1737,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Nov 14, 2023 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Sep 13, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 14, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1730,7 +1757,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (1 recent ratings, 1 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 5 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 6 </div>
 
     </blockquote>
     </section>
@@ -1745,9 +1772,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                  
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
-                <h1 id="introduction">Introduction</h1>
-
-<p>Public single cell datasets seem to accumulate by the second. Well annotated, quality datasets are slightly trickier to find, which is why projects like the <a href="https://www.ebi.ac.uk/gxa/sc/home">Single Cell Expression Atlas</a> (SCXA) exist - to curate datasets for public use. Here, we will guide you through transforming data imported from the SCXA repository into the input file required for the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">Filter, Plot, Explore tutorial</a> and we will also show how to use the public atlases for your own research.</p>
+                <p>Public single cell datasets seem to accumulate by the second. Well annotated, quality datasets are slightly trickier to find, which is why projects like the <a href="https://www.ebi.ac.uk/gxa/sc/home">Single Cell Expression Atlas</a> (SCXA) exist - to curate datasets for public use. Here, we will guide you through transforming data imported from the SCXA repository into the input file required for the <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">Filter, Plot, Explore tutorial</a> and we will also show how to use the public atlases for your own research.</p>
 
 <blockquote class="agenda">
   <div class="box-title agenda-title" id="agenda">Agenda</div>
@@ -1755,7 +1780,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>In this tutorial, we will cover:</p>
 
 <ol id="markdown-toc">
-  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a></li>
   <li><a href="#getting-data-from-the-single-cell-expression-atlas" id="markdown-toc-getting-data-from-the-single-cell-expression-atlas">Getting data from the Single Cell Expression Atlas</a>    <ol>
       <li><a href="#examine-the-imported-files" id="markdown-toc-examine-the-imported-files">Examine the imported files</a></li>
       <li><a href="#metadata-manipulation" id="markdown-toc-metadata-manipulation">Metadata manipulation</a></li>
@@ -2137,7 +2161,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <!---
 HCA doesn't work well for other datasets for now...
-https://github.com/galaxyproject/training-material/issues/4567 
+https://github.com/galaxyproject/training-material/issues/4567
 -->
 
 <h1 id="human-cell-atlas-matrix-downloader">Human Cell Atlas Matrix Downloader</h1>
@@ -2684,7 +2708,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/01a133a2f2b225f24162db0a0e84a6cb145bd265">01a133a</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/518b172115fe1d9e37b99c8dbacaab618df5661d">518b172</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

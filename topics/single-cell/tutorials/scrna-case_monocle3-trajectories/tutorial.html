@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@01a133a2f2b225f24162db0a0e84a6cb145bd265",
+		release: "galaxy-training-network@518b172115fe1d9e37b99c8dbacaab618df5661d",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Inferring single cell trajectories with Monocle3">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-10-28 12:59:16 +0000">
+<meta name="DC.date" content="2025-01-14 11:47:18 +0000">
 <meta name="DC.creator" content="Julia Jakiela"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Single Cell / Inferring single cell trajectories with Monocle3 / Hands-on: Inferring single cell trajectories with Monocle3">
@@ -188,7 +188,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-10-28 12:59:16 +0000",
+  "dateModified": "2025-01-14 11:47:18 +0000",
   "datePublished": "2022-09-30 20:06:34 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -267,7 +267,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Inferring single cell trajectories with Monocle3",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_monocle3-trajectories/tutorial.html",
-  "version": 20,
+  "version": 21,
   "timeRequired": "PT2H",
   "teaches": "- Identify which operations to perform on an AnnData object to obtain the files needed for Monocle\n- Follow the Monocle3 workflow and choose the right parameter values\n- Compare the outputs from Scanpy and Monocle\n- Interpet trajectory analysis results",
   "keywords": [
@@ -319,114 +319,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     {
       "@context": "http://schema.org",
       "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_alevin/tutorial.html",
-      "name": "Generating a single cell matrix using Alevin",
-      "description": "Hands-on for 'Generating a single cell matrix using Alevin' tutorial",
-      "learningResourceType": "e-learning",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "http://purl.org/dc/terms/conformsTo": {
-          "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
-          "@type": "Organization"
-        },
-        "id": "https://training.galaxyproject.org",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "legalName": "Galaxy Training Network",
-        "alternateName": "GTN",
-        "url": "https://training.galaxyproject.org",
-        "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
-        "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
-        "keywords": [
-          "galaxy",
-          "bioinformatics",
-          "training",
-          "fair",
-          "accessible"
-        ],
-        "status": "active",
-        "foundingDate": "2015-06-29",
-        "socialMedia": "https://mstdn.science/@gtn",
-        "type": "project"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html",
-      "name": "Combining single cell datasets after pre-processing",
-      "description": "Hands-on for 'Combining single cell datasets after pre-processing' tutorial",
-      "learningResourceType": "e-learning",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "http://purl.org/dc/terms/conformsTo": {
-          "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
-          "@type": "Organization"
-        },
-        "id": "https://training.galaxyproject.org",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "legalName": "Galaxy Training Network",
-        "alternateName": "GTN",
-        "url": "https://training.galaxyproject.org",
-        "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
-        "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
-        "keywords": [
-          "galaxy",
-          "bioinformatics",
-          "training",
-          "fair",
-          "accessible"
-        ],
-        "status": "active",
-        "foundingDate": "2015-06-29",
-        "socialMedia": "https://mstdn.science/@gtn",
-        "type": "project"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
       "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html",
       "name": "Filter, plot and explore single-cell RNA-seq data with Scanpy",
       "description": "Hands-on for 'Filter, plot and explore single-cell RNA-seq data with Scanpy' tutorial",
-      "learningResourceType": "e-learning",
-      "interactivityType": "expositive",
-      "provider": {
-        "@type": "Organization",
-        "http://purl.org/dc/terms/conformsTo": {
-          "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
-          "@type": "Organization"
-        },
-        "id": "https://training.galaxyproject.org",
-        "email": "galaxytrainingnetwork@gmail.com",
-        "name": "Galaxy Training Network",
-        "legalName": "Galaxy Training Network",
-        "alternateName": "GTN",
-        "url": "https://training.galaxyproject.org",
-        "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
-        "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
-        "keywords": [
-          "galaxy",
-          "bioinformatics",
-          "training",
-          "fair",
-          "accessible"
-        ],
-        "status": "active",
-        "foundingDate": "2015-06-29",
-        "socialMedia": "https://mstdn.science/@gtn",
-        "type": "project"
-      }
-    },
-    {
-      "@context": "http://schema.org",
-      "@type": "LearningResource",
-      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html",
-      "name": "Inferring single cell trajectories with Scanpy (Python)",
-      "description": "Hands-on for 'Inferring single cell trajectories with Scanpy (Python)' tutorial",
       "learningResourceType": "e-learning",
       "interactivityType": "expositive",
       "provider": {
@@ -1340,168 +1235,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                     
                 
                     
-                        
-                        
-                            
-                                <li>
-                                  <a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> Hands-on: Generating a single cell matrix using Alevin</a>
-                                </li>
-                            
-                        
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        
-                            
-                                <li>
-                                  <a href="/training-material/topics/single-cell/tutorials/scrna-case_alevin-combine-datasets/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> Hands-on: Combining single cell datasets after pre-processing</a>
-                                </li>
-                            
-                        
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
                 
                     
                 
@@ -1556,87 +1289,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
                     
                 
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                        
-                        
-                            
-                                <li>
-                                  <a href="/training-material/topics/single-cell/tutorials/scrna-case_JUPYTER-trajectories/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> Hands-on: Inferring single cell trajectories with Scanpy (Python)</a>
-                                </li>
-                            
-                        
                     
                 
                     
@@ -1798,6 +1450,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
             </a>
         </li>
       
+        <li>
+            <a class="dropdown-item" href="https://usegalaxy.eu/u/wendi.bacon.training/h/cds-input-file-for-monocle3-tutorial">
+              CDS file (UseGalaxy.eu) - ARCHIVED
+              
+              <br/><span class="text-muted">2024-12-10</span>
+              
+            </a>
+        </li>
+      
       <li class="dropdown-divider"></li>
       <li>
         <a class="dropdown-item" href="/training-material/faqs/gtn/gtn_example_histories.html"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">help</span> How to Use This</a>
@@ -1819,6 +1480,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
               UseGalaxy.eu (includes AnnData to CDS conversion)
               
               <br/><span class="text-muted">2024-03-04</span>
+              
+            </a>
+        </li>
+      
+        <li>
+            <a class="dropdown-item" href="https://singlecell.usegalaxy.eu/u/wendi.bacon.training/h/monocle3-tutorial-workflow">
+              UseGalaxy.eu (includes AnnData to CDS conversion)-ARCHIVED
+              
+              <br/><span class="text-muted">2024-12-10</span>
               
             </a>
         </li>
@@ -1936,7 +1606,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Sep 30, 2022 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 28, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 14, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1956,7 +1626,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (1 recent ratings, 2 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 20 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 21 </div>
 
     </blockquote>
     </section>
@@ -2941,7 +2611,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/01a133a2f2b225f24162db0a0e84a6cb145bd265">01a133a</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/518b172115fe1d9e37b99c8dbacaab618df5661d">518b172</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
