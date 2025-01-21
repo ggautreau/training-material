@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e00529d226aee3f147968bcedbb9403937cf2c74",
+		release: "galaxy-training-network@552a817e690edb9984c2e10d9ea48eeb776500c3",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="RStudio in Galaxy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-10-15 12:19:56 +0000">
+<meta name="DC.date" content="2025-01-21 09:35:04 +0000">
 <meta name="DC.creator" content="Bérénice Batut">
 <meta name="DC.creator" content="Fotis E. Psomopoulos">
 <meta name="DC.creator" content="Toby Hodges"><meta name="description" content="A collection of microtutorials explaining various features of the Galaxy user interface and manipulating data within Galaxy.">
@@ -190,7 +190,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-10-15 12:19:56 +0000",
+  "dateModified": "2025-01-21 09:35:04 +0000",
   "datePublished": "2019-10-08 17:25:07 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -271,7 +271,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "RStudio in Galaxy",
   "url": "https://training.galaxyproject.org/training-material/topics/galaxy-interface/tutorials/rstudio/tutorial.html",
-  "version": 13,
+  "version": 14,
   "timeRequired": "PT3H",
   "teaches": "- Launch RStudio in Galaxy",
   "keywords": [
@@ -513,6 +513,73 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     }
   ],
   "contributor": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/dadrasarmin/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/dadrasarmin/",
+      "name": "Armin Dadras",
+      "image": "https://avatars.githubusercontent.com/dadrasarmin",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "@type": "Organization"
+          },
+          "id": "https://training.galaxyproject.org",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "legalName": "Galaxy Training Network",
+          "alternateName": "GTN",
+          "url": "https://training.galaxyproject.org",
+          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
+          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
+          "keywords": [
+            "galaxy",
+            "bioinformatics",
+            "training",
+            "fair",
+            "accessible"
+          ],
+          "status": "active",
+          "foundingDate": "2015-06-29",
+          "socialMedia": "https://mstdn.science/@gtn",
+          "type": "project"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/uni-freiburg/",
+          "name": "University of Freiburg",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://www.uni-freiburg.de/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/eurosciencegateway/",
+          "name": "EuroScienceGateway",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://galaxyproject.org/projects/esg/"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0001-7649-2388",
+      "orcid": "https://orcid.org/0000-0001-7649-2388"
+    },
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -1445,6 +1512,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 
 	
+	<tr>
+		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/dadrasarmin/" class="contributor-badge contributor-dadrasarmin"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/dadrasarmin?s=36" alt="Armin Dadras avatar" width="36" class="avatar" />
+    Armin Dadras</a></td>
+	</tr>
+	
 
 	
 
@@ -1644,7 +1718,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Oct 8, 2019 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Oct 15, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 21, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1664,7 +1738,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">4.0</a> (1 recent ratings, 12 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 13 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 14 </div>
 
     </blockquote>
     </section>
@@ -1705,8 +1779,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <li><a href="#stopping-rstudio" id="markdown-toc-stopping-rstudio">Stopping RStudio</a></li>
     </ol>
   </li>
-  <li><a href="#interaction-between-rstudio-and-galaxy" id="markdown-toc-interaction-between-rstudio-and-galaxy">Interaction between RStudio and Galaxy</a></li>
-  <li><a href="#conclusion" id="markdown-toc-conclusion">Conclusion</a></li>
+  <li><a href="#interaction-between-rstudio-and-galaxy" id="markdown-toc-interaction-between-rstudio-and-galaxy">Interaction between RStudio and Galaxy</a>    <ol>
+      <li><a href="#import-data-from-the-galaxy-history-to-rstudio" id="markdown-toc-import-data-from-the-galaxy-history-to-rstudio">Import Data from the Galaxy History to RStudio</a></li>
+      <li><a href="#export-data-from-the-rstudio" id="markdown-toc-export-data-from-the-rstudio">Export Data from the RStudio</a></li>
+    </ol>
+  </li>
 </ol>
 
 </blockquote>
@@ -2115,8 +2192,31 @@ Then you can safely shut down RStudio.</p>
 
 <p>Getting data in and out from Galaxy</p>
 
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="import-data-from-the-galaxy-history-to-rstudio">Import Data from the Galaxy History to RStudio</h2>
 
+<p>To import a dataset from the history into RStudio, you need to get the path to that file. To do so, you can use <code class="language-plaintext highlighter-rouge">gx_get()</code> function with the dataset <code class="language-plaintext highlighter-rouge">id</code> (number in the Galaxy history) . For example, if you want to import a dataset with history ID 7 to their RStudio, you can get the path to the file by:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gx_get(7)
+</code></pre></div></div>
+
+<p>It is important to know that the <code class="language-plaintext highlighter-rouge">gx_get()</code> function copies the data from the Galaxy history to the RStudio session and returns the path to the copied file. You are supposed to use a proper R function to read the file. For example, you can pass the path to a function that reads tables such as <code class="language-plaintext highlighter-rouge">read_table</code> or <code class="language-plaintext highlighter-rouge">read_tsv</code>. Let’s assume that dataset 7 in the history is a tab-separated table (TSV) and you want to read it into your RStudio. You can do it as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>table_name &lt;- read.table(gx_get(7))
+</code></pre></div></div>
+
+<h2 id="export-data-from-the-rstudio">Export Data from the RStudio</h2>
+
+<p>You can export the RHistory and all objects from RStudio to Galaxy as follows (<code class="language-plaintext highlighter-rouge">analysis_17.01.2025</code> is an arbitrary name):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gx_save(session_name = "analysis_17.01.2025")
+</code></pre></div></div>
+
+<p>This data object can be loaded to R.
+If you want to export just one file from your R environment to your Galaxy history, you should first write the object from the memory to a file and then use the path to that file to export it. For example, if you want to export a table called <code class="language-plaintext highlighter-rouge">results</code> from RStudio to Galaxy you can do as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>write.csv(results, "./result.csv", row.names = FALSE) # Do you want to save the row.names or not?
+gx_put("result.csv")
+</code></pre></div></div>
 
                 </section>
 
@@ -2625,7 +2725,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e00529d226aee3f147968bcedbb9403937cf2c74">e00529d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/552a817e690edb9984c2e10d9ea48eeb776500c3">552a817</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
