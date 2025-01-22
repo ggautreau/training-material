@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@d0b26c9d417e5871a7c50a604e251b2604526308",
+		release: "galaxy-training-network@66053e3b196c3a7aa91a4bec09ba4391f5c6c6c3",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -302,18 +302,62 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 					<li>
 						
 						
-						<a href="/training-material/topics/admin">
-							Galaxy Server administration
+						<a href="/training-material/topics/galaxy-interface">
+							Using Galaxy and Managing your Data
 						</a>
 						/
-						<a href="/training-material//topics/admin/tutorials/object-store/tutorial.html">
-						Distributed Object Storage
+						<a href="/training-material//topics/galaxy-interface/tutorials/workflow-reports/tutorial.html">
+						Workflow Reports
 						</a>
 						
 						
 						
 						
-	<abbr title="This person reviewed this material for accuracy and correctness">🧐</abbr>
+	<abbr title="This person managed and provided infrastructure to the GTN or for training purposes">🖥</abbr>
+
+
+						
+						
+					</li>
+				
+					
+					<li>
+						
+						
+						<a href="/training-material/topics/galaxy-interface">
+							Using Galaxy and Managing your Data
+						</a>
+						/
+						<a href="/training-material//topics/galaxy-interface/tutorials/upload-rules/tutorial.html">
+						Rule Based Uploader
+						</a>
+						
+						
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+						
+						
+					</li>
+				
+					
+					<li>
+						
+						
+						<a href="/training-material/topics/galaxy-interface">
+							Using Galaxy and Managing your Data
+						</a>
+						/
+						<a href="/training-material//topics/galaxy-interface/tutorials/upload-rules-advanced/tutorial.html">
+						Rule Based Uploader: Advanced
+						</a>
+						
+						
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
 
 
 						
@@ -338,6 +382,28 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	<abbr title="This person edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">📝</abbr>
 
 
+						
+						
+	<abbr title="This person reviewed this material for accuracy and correctness">🧐</abbr>
+
+
+						
+						
+					</li>
+				
+					
+					<li>
+						
+						
+						<a href="/training-material/topics/admin">
+							Galaxy Server administration
+						</a>
+						/
+						<a href="/training-material//topics/admin/tutorials/object-store/tutorial.html">
+						Distributed Object Storage
+						</a>
+						
+						
 						
 						
 	<abbr title="This person reviewed this material for accuracy and correctness">🧐</abbr>
@@ -377,8 +443,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/writing_tests/tutorial.html">
-						Writing Automated Tests for Galaxy
+						<a href="/training-material//topics/dev/tutorials/core-contributing/tutorial.html">
+						Contributing a New Feature to Galaxy Core
 						</a>
 						
 						
@@ -404,8 +470,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/core-contributing/tutorial.html">
-						Contributing a New Feature to Galaxy Core
+						<a href="/training-material//topics/dev/tutorials/writing_tests/tutorial.html">
+						Writing Automated Tests for Galaxy
 						</a>
 						
 						
@@ -417,72 +483,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 						
 						
 	<abbr title="This person reviewed this material for accuracy and correctness">🧐</abbr>
-
-
-						
-						
-					</li>
-				
-					
-					<li>
-						
-						
-						<a href="/training-material/topics/galaxy-interface">
-							Using Galaxy and Managing your Data
-						</a>
-						/
-						<a href="/training-material//topics/galaxy-interface/tutorials/upload-rules-advanced/tutorial.html">
-						Rule Based Uploader: Advanced
-						</a>
-						
-						
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-						
-						
-					</li>
-				
-					
-					<li>
-						
-						
-						<a href="/training-material/topics/galaxy-interface">
-							Using Galaxy and Managing your Data
-						</a>
-						/
-						<a href="/training-material//topics/galaxy-interface/tutorials/workflow-reports/tutorial.html">
-						Workflow Reports
-						</a>
-						
-						
-						
-						
-	<abbr title="This person managed and provided infrastructure to the GTN or for training purposes">🖥</abbr>
-
-
-						
-						
-					</li>
-				
-					
-					<li>
-						
-						
-						<a href="/training-material/topics/galaxy-interface">
-							Using Galaxy and Managing your Data
-						</a>
-						/
-						<a href="/training-material//topics/galaxy-interface/tutorials/upload-rules/tutorial.html">
-						Rule Based Uploader
-						</a>
-						
-						
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
 
 
 						
@@ -553,8 +553,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/tool-integration/slides.html">
-						Tool development and integration into Galaxy
+						<a href="/training-material//topics/dev/tutorials/conda/slides.html">
+						Tool Dependencies and Conda
 						</a>
 						
 						
@@ -580,8 +580,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 							Development in Galaxy
 						</a>
 						/
-						<a href="/training-material//topics/dev/tutorials/conda/slides.html">
-						Tool Dependencies and Conda
+						<a href="/training-material//topics/dev/tutorials/tool-integration/slides.html">
+						Tool development and integration into Galaxy
 						</a>
 						
 						
@@ -700,11 +700,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #a4c1ff; --color-darker: #7eacff; --color-dimmed: #92b6ff;">bug</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #cbdaff; --color-darker: #a5c2ff; --color-dimmed: #b9ceff;">bug</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 			</li>
@@ -719,11 +719,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #8ac6ff; --color-darker: #47b4ff; --color-dimmed: #6ebdff;">improvement</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #c0ddff; --color-darker: #8dc7ff; --color-dimmed: #a7d2ff;">improvement</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 			</li>
@@ -738,11 +738,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #8ac6ff; --color-darker: #47b4ff; --color-dimmed: #6ebdff;">improvement</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #c0ddff; --color-darker: #8dc7ff; --color-dimmed: #a7d2ff;">improvement</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 			</li>
@@ -776,11 +776,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #8ac6ff; --color-darker: #47b4ff; --color-dimmed: #6ebdff;">improvement</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #c0ddff; --color-darker: #8dc7ff; --color-dimmed: #a7d2ff;">improvement</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 			</li>
@@ -795,11 +795,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #ffb14f; --color-darker: #eb9b00; --color-dimmed: #faa400;">new tutorial</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #ffd1ab; --color-darker: #ffb254; --color-dimmed: #ffc287;">new tutorial</div>
 				
 				
 			</li>
@@ -814,19 +814,19 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #8ac6ff; --color-darker: #47b4ff; --color-dimmed: #6ebdff;">improvement</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #c0ddff; --color-darker: #8dc7ff; --color-dimmed: #a7d2ff;">improvement</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #ffb14f; --color-darker: #eb9b00; --color-dimmed: #faa400;">new tutorial</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #ffd1ab; --color-darker: #ffb254; --color-dimmed: #ffc287;">new tutorial</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #00d7d3; --color-darker: #00bfbc; --color-dimmed: #00cbc7;">GCC</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #00f3ee; --color-darker: #00d8d4; --color-dimmed: #00e5e1;">GCC</div>
 				
 				
 			</li>
@@ -852,11 +852,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #c1b9ff; --color-darker: #aca0ff; --color-dimmed: #b7acff;">dev</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #dad5ff; --color-darker: #c2baff; --color-dimmed: #cec8ff;">dev</div>
 				
 				
 				
-				<div class="label label-default tutorial_tag" style="--color-primary: #00d7d3; --color-darker: #00bfbc; --color-dimmed: #00cbc7;">GCC</div>
+				<div class="label label-default tutorial_tag" style="--color-primary: #00f3ee; --color-darker: #00d8d4; --color-dimmed: #00e5e1;">GCC</div>
 				
 				
 			</li>
@@ -960,6 +960,18 @@ var topics = [
 
 	
 	
+	"Using Galaxy and Managing your Data",
+
+	
+	
+	"Using Galaxy and Managing your Data",
+
+	
+	
+	"Using Galaxy and Managing your Data",
+
+	
+	
 	"Galaxy Server administration",
 
 	
@@ -977,18 +989,6 @@ var topics = [
 	
 	
 	"Development in Galaxy",
-
-	
-	
-	"Using Galaxy and Managing your Data",
-
-	
-	
-	"Using Galaxy and Managing your Data",
-
-	
-	
-	"Using Galaxy and Managing your Data",
 
 
 	
@@ -1124,7 +1124,7 @@ var chart2 = new Chart(ctx2, {
 
 
 <h3>Stats for materials contributed to by John Chilton</h3>
-<iframe plausible-embed src="https://plausible.galaxyproject.eu/training.galaxyproject.org?page=%7E/topics/admin/tutorials/object-store/tutorial.html|/topics/admin/tutorials/ansible-galaxy/tutorial.html|/topics/dev/tutorials/debugging/tutorial.html|/topics/dev/tutorials/writing_tests/tutorial.html|/topics/dev/tutorials/core-contributing/tutorial.html|/topics/galaxy-interface/tutorials/upload-rules-advanced/tutorial.html|/topics/galaxy-interface/tutorials/workflow-reports/tutorial.html|/topics/galaxy-interface/tutorials/upload-rules/tutorial.html|/topics/admin/tutorials/object-store/slides.html|/topics/dev/tutorials/containers/slides.html|/topics/dev/tutorials/tool-integration/slides.html|/topics/dev/tutorials/conda/slides.html|/topics/dev/tutorials/architecture/slides.html|/topics/dev/faqs/contributing.html|/faqs/galaxy/reports_tables.html&embed=true&theme=system&background=transparent&period=12mo" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1800px;"></iframe>
+<iframe plausible-embed src="https://plausible.galaxyproject.eu/training.galaxyproject.org?page=%7E/topics/galaxy-interface/tutorials/workflow-reports/tutorial.html|/topics/galaxy-interface/tutorials/upload-rules/tutorial.html|/topics/galaxy-interface/tutorials/upload-rules-advanced/tutorial.html|/topics/admin/tutorials/ansible-galaxy/tutorial.html|/topics/admin/tutorials/object-store/tutorial.html|/topics/dev/tutorials/debugging/tutorial.html|/topics/dev/tutorials/core-contributing/tutorial.html|/topics/dev/tutorials/writing_tests/tutorial.html|/topics/admin/tutorials/object-store/slides.html|/topics/dev/tutorials/containers/slides.html|/topics/dev/tutorials/conda/slides.html|/topics/dev/tutorials/tool-integration/slides.html|/topics/dev/tutorials/architecture/slides.html|/topics/dev/faqs/contributing.html|/faqs/galaxy/reports_tables.html&embed=true&theme=system&background=transparent&period=12mo" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1800px;"></iframe>
 
         </div>
         <footer>
@@ -1185,7 +1185,7 @@ var chart2 = new Chart(ctx2, {
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/d0b26c9d417e5871a7c50a604e251b2604526308">d0b26c9</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/66053e3b196c3a7aa91a4bec09ba4391f5c6c6c3">66053e3</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
