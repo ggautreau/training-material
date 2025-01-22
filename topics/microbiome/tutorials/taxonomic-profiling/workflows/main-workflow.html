@@ -265,7 +265,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffdbd2; --color-darker: #ffb9a5; --color-dimmed: #ffcabc;">microbiome</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffb19a; --color-darker: #ff9167; --color-dimmed: #ffa182;">microbiome</div>
 			
 			</br>
 			
@@ -330,9 +330,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy France</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy Main</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy France</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy Australia</a></li>
 					
@@ -356,20 +356,20 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 2;
   3["Kraken2"];
   0 -->|output| 3;
-  0d87781a-1667-4f92-a095-978b2afd1eaa["Output\nkraken_report"];
-  3 --> 0d87781a-1667-4f92-a095-978b2afd1eaa;
-  style 0d87781a-1667-4f92-a095-978b2afd1eaa stroke:#2c3143,stroke-width:4px;
+  1ed32d14-a5d4-446e-8f69-e73f7356387b["Output\nkraken_report"];
+  3 --> 1ed32d14-a5d4-446e-8f69-e73f7356387b;
+  style 1ed32d14-a5d4-446e-8f69-e73f7356387b stroke:#2c3143,stroke-width:4px;
   4["MetaPhlAn"];
   2 -->|forward| 4;
   2 -->|reverse| 4;
-  2c83570d-c418-456c-9dd5-fa8856e4d3e6["Output\nmetaphlan_output"];
-  4 --> 2c83570d-c418-456c-9dd5-fa8856e4d3e6;
-  style 2c83570d-c418-456c-9dd5-fa8856e4d3e6 stroke:#2c3143,stroke-width:4px;
+  50c632a1-e120-42f1-a6dd-caf9ac589be0["Output\nmetaphlan_output"];
+  4 --> 50c632a1-e120-42f1-a6dd-caf9ac589be0;
+  style 50c632a1-e120-42f1-a6dd-caf9ac589be0 stroke:#2c3143,stroke-width:4px;
   5["Krakentools: Convert kraken report file"];
   3 -->|report_output| 5;
-  22255419-9c68-4c13-b02d-5487cdb441cc["Output\nkrakentool_report"];
-  5 --> 22255419-9c68-4c13-b02d-5487cdb441cc;
-  style 22255419-9c68-4c13-b02d-5487cdb441cc stroke:#2c3143,stroke-width:4px;
+  e081a5d9-6fc9-4e17-95d4-0fa0b0b54c82["Output\nkrakentool_report"];
+  5 --> e081a5d9-6fc9-4e17-95d4-0fa0b0b54c82;
+  style e081a5d9-6fc9-4e17-95d4-0fa0b0b54c82 stroke:#2c3143,stroke-width:4px;
   6["Kraken-biom"];
   3 -->|report_output| 6;
   1 -->|output| 6;
