@@ -267,9 +267,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffbbe0; --color-darker: #ff96d2; --color-dimmed: #ffa9d9;">assembly</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffb7de; --color-darker: #ff92d1; --color-dimmed: #ffa5d7;">assembly</div>
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ddd400; --color-darker: #c4bc00; --color-dimmed: #d0c800;">microgalaxy</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #dad100; --color-darker: #c2ba00; --color-dimmed: #cec500;">microgalaxy</div>
 			
 			</br>
 			
@@ -334,13 +334,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Galaxy Main</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Galaxy France</a></li>
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Galaxy Australia</a></li>
+					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Galaxy Main</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Galaxy Europe</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/assembly-mrsa-illumina/versions/main-workflow">Import to another server (≥23.0+ only!)</a>
@@ -361,29 +361,29 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   3["fastp"];
   1 -->|output| 3;
   0 -->|output| 3;
-  b61000d9-4109-448a-b2b0-4ca85dde3315["Output\nfastp_json"];
-  3 --> b61000d9-4109-448a-b2b0-4ca85dde3315;
-  style b61000d9-4109-448a-b2b0-4ca85dde3315 stroke:#2c3143,stroke-width:4px;
+  93f380c2-72f0-4259-a514-4cdc58669a19["Output\nfastp_json"];
+  3 --> 93f380c2-72f0-4259-a514-4cdc58669a19;
+  style 93f380c2-72f0-4259-a514-4cdc58669a19 stroke:#2c3143,stroke-width:4px;
   4["FastQC"];
   1 -->|output| 4;
   5["Shovill"];
   3 -->|out1| 5;
   3 -->|out2| 5;
-  4b05d858-e464-46f4-be06-a17523860eac["Output\nshovill_log"];
-  5 --> 4b05d858-e464-46f4-be06-a17523860eac;
-  style 4b05d858-e464-46f4-be06-a17523860eac stroke:#2c3143,stroke-width:4px;
+  fc7bd326-2212-49d4-8bd6-b118b1403056["Output\nshovill_log"];
+  5 --> fc7bd326-2212-49d4-8bd6-b118b1403056;
+  style fc7bd326-2212-49d4-8bd6-b118b1403056 stroke:#2c3143,stroke-width:4px;
   6["Quast"];
   5 -->|contigs| 6;
-  491ec761-010b-4ae0-9144-4025901e1d1e["Output\nquast_output"];
-  6 --> 491ec761-010b-4ae0-9144-4025901e1d1e;
-  style 491ec761-010b-4ae0-9144-4025901e1d1e stroke:#2c3143,stroke-width:4px;
+  916e2844-ddae-4499-9f51-35576771625d["Output\nquast_output"];
+  6 --> 916e2844-ddae-4499-9f51-35576771625d;
+  style 916e2844-ddae-4499-9f51-35576771625d stroke:#2c3143,stroke-width:4px;
   7["Bandage Image"];
   5 -->|contigs_graph| 7;
   8["Bandage Info"];
   5 -->|contigs_graph| 8;
-  cf76c666-7f0d-42f5-92b5-2b3d78d45de8["Output\nbandage_info_output"];
-  8 --> cf76c666-7f0d-42f5-92b5-2b3d78d45de8;
-  style cf76c666-7f0d-42f5-92b5-2b3d78d45de8 stroke:#2c3143,stroke-width:4px;</pre>
+  37b70d9c-9e3c-494a-bbb4-c6c6eead24b8["Output\nbandage_info_output"];
+  8 --> 37b70d9c-9e3c-494a-bbb4-c6c6eead24b8;
+  style 37b70d9c-9e3c-494a-bbb4-c6c6eead24b8 stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
