@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@121f3130bb40d25534a3c7e5f07c506c95735a06",
+		release: "galaxy-training-network@2a09f17e548f46eb2861db4462465e303fd3fb94",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -330,9 +330,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/ecology-Ecoregionalization_tutorial/versions/ecoregionalization-workflow">Galaxy Australia</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/ecology-Ecoregionalization_tutorial/versions/ecoregionalization-workflow">Galaxy Main</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/ecology-Ecoregionalization_tutorial/versions/ecoregionalization-workflow">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/ecology-Ecoregionalization_tutorial/versions/ecoregionalization-workflow">Galaxy Europe</a></li>
 					
@@ -383,77 +383,77 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   16["Interactive JupyTool and notebook"];
   1 -->|output| 16;
   15 -->|output| 16;
-  ec45403d-6740-4b7c-b16a-b3c66e8ac406["Output\nocc_out"];
-  16 --> ec45403d-6740-4b7c-b16a-b3c66e8ac406;
-  style ec45403d-6740-4b7c-b16a-b3c66e8ac406 stroke:#2c3143,stroke-width:4px;
+  44e58967-181f-4cd5-8ec8-a9cd7b6c7848["Output\nocc_out"];
+  16 --> 44e58967-181f-4cd5-8ec8-a9cd7b6c7848;
+  style 44e58967-181f-4cd5-8ec8-a9cd7b6c7848 stroke:#2c3143,stroke-width:4px;
   17["GeoNearestNeighbor"];
   2 -->|output| 17;
   16 -->|output_dataset| 17;
-  fac95366-2216-4efb-bfbc-50d182c883ac["Output\nocc_env_out"];
-  17 --> fac95366-2216-4efb-bfbc-50d182c883ac;
-  style fac95366-2216-4efb-bfbc-50d182c883ac stroke:#2c3143,stroke-width:4px;
-  07b82ccc-a0c2-4860-a6ec-593375ea875f["Output\ninfo_out"];
-  17 --> 07b82ccc-a0c2-4860-a6ec-593375ea875f;
-  style 07b82ccc-a0c2-4860-a6ec-593375ea875f stroke:#2c3143,stroke-width:4px;
+  758c9579-d073-42f6-a969-d8b1f8192541["Output\nocc_env_out"];
+  17 --> 758c9579-d073-42f6-a969-d8b1f8192541;
+  style 758c9579-d073-42f6-a969-d8b1f8192541 stroke:#2c3143,stroke-width:4px;
+  59a7267a-6fb1-4895-a131-4815747eb7da["Output\ninfo_out"];
+  17 --> 59a7267a-6fb1-4895-a131-4815747eb7da;
+  style 59a7267a-6fb1-4895-a131-4815747eb7da stroke:#2c3143,stroke-width:4px;
   18["BRT tool prediction"];
   2 -->|output| 18;
   17 -->|occ_env_out| 18;
-  fa1d212f-1ec5-45c6-b3de-8969ab0bef2f["Output\ncoll_pred"];
-  18 --> fa1d212f-1ec5-45c6-b3de-8969ab0bef2f;
-  style fa1d212f-1ec5-45c6-b3de-8969ab0bef2f stroke:#2c3143,stroke-width:4px;
-  86fc94f9-4fce-4d81-98d4-5571a3c6b4d8["Output\ncoll_val"];
-  18 --> 86fc94f9-4fce-4d81-98d4-5571a3c6b4d8;
-  style 86fc94f9-4fce-4d81-98d4-5571a3c6b4d8 stroke:#2c3143,stroke-width:4px;
-  c697d159-8344-4e1b-b1d1-69ae0f938d87["Output\ncoll_distri"];
-  18 --> c697d159-8344-4e1b-b1d1-69ae0f938d87;
-  style c697d159-8344-4e1b-b1d1-69ae0f938d87 stroke:#2c3143,stroke-width:4px;
-  a28a702a-1b77-42e3-b7d5-cf6faddf090a["Output\ncoll_plots"];
-  18 --> a28a702a-1b77-42e3-b7d5-cf6faddf090a;
-  style a28a702a-1b77-42e3-b7d5-cf6faddf090a stroke:#2c3143,stroke-width:4px;
+  fc12cf5b-91fe-4f8b-93d4-2bff6dd6c182["Output\ncoll_pred"];
+  18 --> fc12cf5b-91fe-4f8b-93d4-2bff6dd6c182;
+  style fc12cf5b-91fe-4f8b-93d4-2bff6dd6c182 stroke:#2c3143,stroke-width:4px;
+  cc2de11f-eb2c-4592-9925-76357cacb83b["Output\ncoll_val"];
+  18 --> cc2de11f-eb2c-4592-9925-76357cacb83b;
+  style cc2de11f-eb2c-4592-9925-76357cacb83b stroke:#2c3143,stroke-width:4px;
+  0e60e763-6a3b-41b5-b860-bf8da460b3e2["Output\ncoll_distri"];
+  18 --> 0e60e763-6a3b-41b5-b860-bf8da460b3e2;
+  style 0e60e763-6a3b-41b5-b860-bf8da460b3e2 stroke:#2c3143,stroke-width:4px;
+  43e87a38-18ba-43df-b4e3-321cb2d72117["Output\ncoll_plots"];
+  18 --> 43e87a38-18ba-43df-b4e3-321cb2d72117;
+  style 43e87a38-18ba-43df-b4e3-321cb2d72117 stroke:#2c3143,stroke-width:4px;
   19["TaxaSeeker"];
   2 -->|output| 19;
   17 -->|occ_env_out| 19;
   18 -->|outputpred| 19;
-  84f1c1f8-9746-4a0b-bd8b-fb1855803aac["Output\nsummary"];
-  19 --> 84f1c1f8-9746-4a0b-bd8b-fb1855803aac;
-  style 84f1c1f8-9746-4a0b-bd8b-fb1855803aac stroke:#2c3143,stroke-width:4px;
-  969a99e0-8a79-47b4-99ad-2b93b2aaba4f["Output\ntaxa"];
-  19 --> 969a99e0-8a79-47b4-99ad-2b93b2aaba4f;
-  style 969a99e0-8a79-47b4-99ad-2b93b2aaba4f stroke:#2c3143,stroke-width:4px;
-  da172bd9-0001-4315-9359-d848ab10a1fc["Output\ntaxa_clean"];
-  19 --> da172bd9-0001-4315-9359-d848ab10a1fc;
-  style da172bd9-0001-4315-9359-d848ab10a1fc stroke:#2c3143,stroke-width:4px;
+  86e6aae8-70f2-43bd-b4a2-7227abcc70bb["Output\nsummary"];
+  19 --> 86e6aae8-70f2-43bd-b4a2-7227abcc70bb;
+  style 86e6aae8-70f2-43bd-b4a2-7227abcc70bb stroke:#2c3143,stroke-width:4px;
+  b15188b6-8442-4235-859d-4a3ca8cac9af["Output\ntaxa"];
+  19 --> b15188b6-8442-4235-859d-4a3ca8cac9af;
+  style b15188b6-8442-4235-859d-4a3ca8cac9af stroke:#2c3143,stroke-width:4px;
+  9ace3259-6b27-48a8-8791-c598dcb0e931["Output\ntaxa_clean"];
+  19 --> 9ace3259-6b27-48a8-8791-c598dcb0e931;
+  style 9ace3259-6b27-48a8-8791-c598dcb0e931 stroke:#2c3143,stroke-width:4px;
   20["ClusterEstimate"];
   2 -->|output| 20;
   18 -->|outputpred| 20;
   19 -->|output2| 20;
-  3e38ec98-84ea-4a45-887b-568488cdd0ec["Output\nSIH_index"];
-  20 --> 3e38ec98-84ea-4a45-887b-568488cdd0ec;
-  style 3e38ec98-84ea-4a45-887b-568488cdd0ec stroke:#2c3143,stroke-width:4px;
-  c9be065d-8ad6-4282-898e-b1f99d47be72["Output\ndata_to_clus"];
-  20 --> c9be065d-8ad6-4282-898e-b1f99d47be72;
-  style c9be065d-8ad6-4282-898e-b1f99d47be72 stroke:#2c3143,stroke-width:4px;
-  8dcf42f4-f3c5-46b6-abda-ed7be83d812f["Output\ndatabio_table"];
-  20 --> 8dcf42f4-f3c5-46b6-abda-ed7be83d812f;
-  style 8dcf42f4-f3c5-46b6-abda-ed7be83d812f stroke:#2c3143,stroke-width:4px;
+  8b329fa5-43cc-43fc-a0d2-b3c13abf89fd["Output\nSIH_index"];
+  20 --> 8b329fa5-43cc-43fc-a0d2-b3c13abf89fd;
+  style 8b329fa5-43cc-43fc-a0d2-b3c13abf89fd stroke:#2c3143,stroke-width:4px;
+  bc0a23be-efc4-4383-9ba3-60ea402a532c["Output\ndata_to_clus"];
+  20 --> bc0a23be-efc4-4383-9ba3-60ea402a532c;
+  style bc0a23be-efc4-4383-9ba3-60ea402a532c stroke:#2c3143,stroke-width:4px;
+  0219dbf6-a051-4467-b5b7-31bb09ecaee0["Output\ndatabio_table"];
+  20 --> 0219dbf6-a051-4467-b5b7-31bb09ecaee0;
+  style 0219dbf6-a051-4467-b5b7-31bb09ecaee0 stroke:#2c3143,stroke-width:4px;
   21["ClaraClust"];
   2 -->|output| 21;
   20 -->|output3| 21;
   20 -->|output2| 21;
-  7940d278-e5fe-43c7-809d-063640d97b2a["Output\nSIH_plot"];
-  21 --> 7940d278-e5fe-43c7-809d-063640d97b2a;
-  style 7940d278-e5fe-43c7-809d-063640d97b2a stroke:#2c3143,stroke-width:4px;
-  57e460da-6275-461e-a308-f624a4d3c890["Output\ncluster_points"];
-  21 --> 57e460da-6275-461e-a308-f624a4d3c890;
-  style 57e460da-6275-461e-a308-f624a4d3c890 stroke:#2c3143,stroke-width:4px;
-  deef74c9-b88b-4aa3-885e-1821a89ed73a["Output\ncluster_info"];
-  21 --> deef74c9-b88b-4aa3-885e-1821a89ed73a;
-  style deef74c9-b88b-4aa3-885e-1821a89ed73a stroke:#2c3143,stroke-width:4px;
+  bfc8e443-37a4-44e4-8675-53fbc48a3cda["Output\nSIH_plot"];
+  21 --> bfc8e443-37a4-44e4-8675-53fbc48a3cda;
+  style bfc8e443-37a4-44e4-8675-53fbc48a3cda stroke:#2c3143,stroke-width:4px;
+  23b82bba-33b0-4a74-a76a-010aadf8d6cd["Output\ncluster_points"];
+  21 --> 23b82bba-33b0-4a74-a76a-010aadf8d6cd;
+  style 23b82bba-33b0-4a74-a76a-010aadf8d6cd stroke:#2c3143,stroke-width:4px;
+  03a2f461-b4bd-4b8f-b403-5cb16d4968c5["Output\ncluster_info"];
+  21 --> 03a2f461-b4bd-4b8f-b403-5cb16d4968c5;
+  style 03a2f461-b4bd-4b8f-b403-5cb16d4968c5 stroke:#2c3143,stroke-width:4px;
   22["EcoMap"];
   21 -->|output2| 22;
-  4304503c-ca6f-42f9-a7d7-837bf9053f3d["Output\neco_map"];
-  22 --> 4304503c-ca6f-42f9-a7d7-837bf9053f3d;
-  style 4304503c-ca6f-42f9-a7d7-837bf9053f3d stroke:#2c3143,stroke-width:4px;</pre>
+  2f56f5b6-df56-493d-bc47-43d629822494["Output\neco_map"];
+  22 --> 2f56f5b6-df56-493d-bc47-43d629822494;
+  style 2f56f5b6-df56-493d-bc47-43d629822494 stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
@@ -788,7 +788,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/121f3130bb40d25534a3c7e5f07c506c95735a06">121f313</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/2a09f17e548f46eb2861db4462465e303fd3fb94">2a09f17</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
