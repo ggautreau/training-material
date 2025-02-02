@@ -265,7 +265,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffb5a0; --color-darker: #ff946d; --color-dimmed: #ffa588;">microbiome</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffa182; --color-darker: #ff8145; --color-dimmed: #ff9168;">microbiome</div>
 			
 			</br>
 			
@@ -332,11 +332,11 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy Australia</a></li>
 					
+					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy Europe</a></li>
+					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy France</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy Main</a></li>
-					
-					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Galaxy Europe</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/microbiome-taxonomic-profiling/versions/main-workflow">Import to another server (≥23.0+ only!)</a>
@@ -356,20 +356,20 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 2;
   3["Kraken2"];
   0 -->|output| 3;
-  48f55374-ce36-48ce-9af4-c045f4695ed0["Output\nkraken_report"];
-  3 --> 48f55374-ce36-48ce-9af4-c045f4695ed0;
-  style 48f55374-ce36-48ce-9af4-c045f4695ed0 stroke:#2c3143,stroke-width:4px;
+  b6421275-b925-4e28-b510-628a559d84a1["Output\nkraken_report"];
+  3 --> b6421275-b925-4e28-b510-628a559d84a1;
+  style b6421275-b925-4e28-b510-628a559d84a1 stroke:#2c3143,stroke-width:4px;
   4["MetaPhlAn"];
   2 -->|forward| 4;
   2 -->|reverse| 4;
-  73048eb3-8678-4f97-9d41-a32abda5e6f5["Output\nmetaphlan_output"];
-  4 --> 73048eb3-8678-4f97-9d41-a32abda5e6f5;
-  style 73048eb3-8678-4f97-9d41-a32abda5e6f5 stroke:#2c3143,stroke-width:4px;
+  abcfd356-52f4-4e1e-bfa3-9fdf849ad26a["Output\nmetaphlan_output"];
+  4 --> abcfd356-52f4-4e1e-bfa3-9fdf849ad26a;
+  style abcfd356-52f4-4e1e-bfa3-9fdf849ad26a stroke:#2c3143,stroke-width:4px;
   5["Krakentools: Convert kraken report file"];
   3 -->|report_output| 5;
-  576283be-5cf2-4362-b4ee-241f26f2ee34["Output\nkrakentool_report"];
-  5 --> 576283be-5cf2-4362-b4ee-241f26f2ee34;
-  style 576283be-5cf2-4362-b4ee-241f26f2ee34 stroke:#2c3143,stroke-width:4px;
+  10e7b651-81a6-4185-9cc8-d8eee88130c3["Output\nkrakentool_report"];
+  5 --> 10e7b651-81a6-4185-9cc8-d8eee88130c3;
+  style 10e7b651-81a6-4185-9cc8-d8eee88130c3 stroke:#2c3143,stroke-width:4px;
   6["Kraken-biom"];
   3 -->|report_output| 6;
   1 -->|output| 6;
