@@ -173,9 +173,9 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
-          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nPeaks\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nGenes\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Select last\"];\n  0 -->|output| 2;\n  3[\"Replace Text\"];\n  0 -->|output| 3;\n  4[\"Get flanks\"];\n  1 -->|output| 4;\n  5[\"Replace Text\"];\n  3 -->|outfile| 5;\n  6[\"Replace Text\"];\n  5 -->|outfile| 6;\n  7[\"Convert Genomic Intervals To BED\"];\n  6 -->|outfile| 7;\n  8[\"Intersect\"];\n  4 -->|out_file1| 8;\n  7 -->|output1| 8;\n  9[\"Group\"];\n  8 -->|output| 9;\n  b5f17729-6197-42bc-9dc3-b94034c665d1[\"Output\\nchr_count\"];\n  9 --> b5f17729-6197-42bc-9dc3-b94034c665d1;\n  style b5f17729-6197-42bc-9dc3-b94034c665d1 stroke:#2c3143,stroke-width:4px;",
-          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nPeaks\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nGenes\"]\n  2[label=\"Select last\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Replace Text\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"Get flanks\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"Replace Text\"]\n  3 -> 5 [label=\"outfile\"]\n  6[label=\"Replace Text\"]\n  5 -> 6 [label=\"outfile\"]\n  7[label=\"Convert Genomic Intervals To BED\"]\n  6 -> 7 [label=\"outfile\"]\n  8[label=\"Intersect\"]\n  4 -> 8 [label=\"out_file1\"]\n  7 -> 8 [label=\"output1\"]\n  9[label=\"Group\"]\n  8 -> 9 [label=\"output\"]\n  kb5f17729619742bc9dc3b94034c665d1[color=lightseagreen,label=\"Output\\nchr_count\"]\n  9 -> kb5f17729619742bc9dc3b94034c665d1\n}",
+          "modified": "2025-02-05 21:05:44 +0000",
+          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nPeaks\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nGenes\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Select last\"];\n  0 -->|output| 2;\n  3[\"Replace Text\"];\n  0 -->|output| 3;\n  4[\"Get flanks\"];\n  1 -->|output| 4;\n  5[\"Replace Text\"];\n  3 -->|outfile| 5;\n  6[\"Replace Text\"];\n  5 -->|outfile| 6;\n  7[\"Convert Genomic Intervals To BED\"];\n  6 -->|outfile| 7;\n  8[\"Intersect\"];\n  4 -->|out_file1| 8;\n  7 -->|output1| 8;\n  9[\"Group\"];\n  8 -->|output| 9;\n  562e69b7-e476-495c-9226-db4e2484211f[\"Output\\nchr_count\"];\n  9 --> 562e69b7-e476-495c-9226-db4e2484211f;\n  style 562e69b7-e476-495c-9226-db4e2484211f stroke:#2c3143,stroke-width:4px;",
+          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nPeaks\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nGenes\"]\n  2[label=\"Select last\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Replace Text\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"Get flanks\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"Replace Text\"]\n  3 -> 5 [label=\"outfile\"]\n  6[label=\"Replace Text\"]\n  5 -> 6 [label=\"outfile\"]\n  7[label=\"Convert Genomic Intervals To BED\"]\n  6 -> 7 [label=\"outfile\"]\n  8[label=\"Intersect\"]\n  4 -> 8 [label=\"out_file1\"]\n  7 -> 8 [label=\"output1\"]\n  9[label=\"Group\"]\n  8 -> 9 [label=\"output\"]\n  k562e69b7e476495c9226db4e2484211f[color=lightseagreen,label=\"Output\\nchr_count\"]\n  9 -> k562e69b7e476495c9226db4e2484211f\n}",
           "workflow_tools": [
             "CONVERTER_interval_to_bed_0",
             "Grouping1",
@@ -286,7 +286,7 @@
                 {
                   "output_name": "out_file1",
                   "label": "chr_count",
-                  "uuid": "b5f17729-6197-42bc-9dc3-b94034c665d1"
+                  "uuid": "562e69b7-e476-495c-9226-db4e2484211f"
                 }
               ]
             }
@@ -408,6 +408,11 @@
           {
             "url": "https://galaxytrakr.org/",
             "name": "GalaxyTrakr",
+            "usegalaxy": false
+          },
+          {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
             "usegalaxy": false
           },
           {
@@ -569,6 +574,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -704,6 +713,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -845,6 +858,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -982,6 +999,10 @@
                 "state": "exact",
                 "version": "1.1.3",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -1135,6 +1156,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -1282,6 +1307,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -1436,6 +1465,10 @@
                   "1.1.0"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -1596,6 +1629,13 @@
                 "server": "https://galaxytrakr.org/"
               },
               {
+                "state": "inexact",
+                "versions": [
+                  "1.1.0"
+                ],
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
                 "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
@@ -1647,9 +1687,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.3.0",
                   "1.2.0",
                   "1.5",
+                  "1.3.0",
                   "1.1.0"
                 ],
                 "server": "https://usegalaxy.be/"
@@ -1745,6 +1785,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -1893,6 +1937,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -2036,6 +2084,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -2920,7 +2972,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
+          "modified": "2025-02-05 21:05:44 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Gene BED To Exon/Intron/Codon BED\"];\n  0 -->|output| 1;\n  2[\"Filter\"];\n  1 -->|out_file1| 2;\n  3[\"Filter\"];\n  1 -->|out_file1| 3;\n  4[\"Intersect\"];\n  2 -->|out_file1| 4;\n  3 -->|out_file1| 4;\n  5[\"Intersect\"];\n  3 -->|out_file1| 5;\n  2 -->|out_file1| 5;\n  6[\"Concatenate datasets\"];\n  5 -->|output| 6;\n  4 -->|output| 6;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  1[label=\"Gene BED To Exon/Intron/Codon BED\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Filter\"]\n  1 -> 2 [label=\"out_file1\"]\n  3[label=\"Filter\"]\n  1 -> 3 [label=\"out_file1\"]\n  4[label=\"Intersect\"]\n  2 -> 4 [label=\"out_file1\"]\n  3 -> 4 [label=\"out_file1\"]\n  5[label=\"Intersect\"]\n  3 -> 5 [label=\"out_file1\"]\n  2 -> 5 [label=\"out_file1\"]\n  6[label=\"Concatenate datasets\"]\n  5 -> 6 [label=\"output\"]\n  4 -> 6 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -3027,7 +3079,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
+          "modified": "2025-02-05 21:05:44 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Filter\"];\n  0 -->|output| 1;\n  2[\"Filter\"];\n  0 -->|output| 2;\n  3[\"Filter\"];\n  0 -->|output| 3;\n  4[\"Intersect\"];\n  2 -->|out_file1| 4;\n  3 -->|out_file1| 4;\n  5[\"Intersect\"];\n  3 -->|out_file1| 5;\n  2 -->|out_file1| 5;\n  6[\"Concatenate datasets\"];\n  5 -->|output| 6;\n  4 -->|output| 6;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  1[label=\"Filter\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Filter\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Filter\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"Intersect\"]\n  2 -> 4 [label=\"out_file1\"]\n  3 -> 4 [label=\"out_file1\"]\n  5[label=\"Intersect\"]\n  3 -> 5 [label=\"out_file1\"]\n  2 -> 5 [label=\"out_file1\"]\n  6[label=\"Concatenate datasets\"]\n  5 -> 6 [label=\"output\"]\n  4 -> 6 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -3195,6 +3247,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -3353,6 +3410,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -3488,6 +3549,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -3628,6 +3693,10 @@
                 "server": "https://galaxytrakr.org/"
               },
               {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
                 "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
@@ -3766,6 +3835,10 @@
                 "state": "exact",
                 "version": "0.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -3914,6 +3987,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -4577,7 +4654,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
+          "modified": "2025-02-05 21:05:44 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nolympics.tsv\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\ncountry-information.tsv\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nolympics_2022.tsv\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Line/Word/Character count\"];\n  0 -->|output| 3;\n  4[\"tabular-to-csv\"];\n  0 -->|output| 4;\n  5[\"Sort\"];\n  0 -->|output| 5;\n  6[\"Sort\"];\n  0 -->|output| 6;\n  7[\"Sort\"];\n  0 -->|output| 7;\n  8[\"Sort\"];\n  0 -->|output| 8;\n  9[\"Sort\"];\n  0 -->|output| 9;\n  10[\"Sort\"];\n  0 -->|output| 10;\n  11[\"Filter\"];\n  0 -->|output| 11;\n  12[\"Filter\"];\n  0 -->|output| 12;\n  13[\"Count\"];\n  0 -->|output| 13;\n  14[\"Count\"];\n  0 -->|output| 14;\n  15[\"Count\"];\n  0 -->|output| 15;\n  16[\"Count\"];\n  0 -->|output| 16;\n  17[\"Datamash\"];\n  0 -->|output| 17;\n  18[\"Count\"];\n  0 -->|output| 18;\n  19[\"Datamash\"];\n  0 -->|output| 19;\n  20[\"Filter\"];\n  0 -->|output| 20;\n  21[\"Filter\"];\n  0 -->|output| 21;\n  22[\"Filter\"];\n  0 -->|output| 22;\n  23[\"Filter\"];\n  0 -->|output| 23;\n  24[\"Filter\"];\n  0 -->|output| 24;\n  25[\"Filter\"];\n  0 -->|output| 25;\n  26[\"Filter\"];\n  0 -->|output| 26;\n  27[\"Compute\"];\n  0 -->|output| 27;\n  28[\"Compute\"];\n  0 -->|output| 28;\n  29[\"Cut\"];\n  0 -->|output| 29;\n  30[\"Column Regex Find And Replace\"];\n  0 -->|output| 30;\n  31[\"Column Regex Find And Replace\"];\n  0 -->|output| 31;\n  32[\"Column Regex Find And Replace\"];\n  0 -->|output| 32;\n  33[\"Cut\"];\n  0 -->|output| 33;\n  34[\"Cut\"];\n  0 -->|output| 34;\n  35[\"Datamash\"];\n  0 -->|output| 35;\n  36[\"Datamash\"];\n  0 -->|output| 36;\n  37[\"Datamash\"];\n  0 -->|output| 37;\n  38[\"Datamash\"];\n  0 -->|output| 38;\n  39[\"Datamash\"];\n  0 -->|output| 39;\n  40[\"Count\"];\n  0 -->|output| 40;\n  41[\"Column Regex Find And Replace\"];\n  0 -->|output| 41;\n  42[\"Split file\"];\n  0 -->|output| 42;\n  43[\"Join two Datasets\"];\n  0 -->|output| 43;\n  1 -->|output| 43;\n  44[\"Remove beginning\"];\n  2 -->|output| 44;\n  45[\"Sort\"];\n  11 -->|out_file1| 45;\n  46[\"Filter\"];\n  12 -->|out_file1| 46;\n  47[\"Cut\"];\n  28 -->|out_file1| 47;\n  48[\"Unique\"];\n  29 -->|out_file1| 48;\n  49[\"Count\"];\n  41 -->|out_file1| 49;\n  50[\"Datamash\"];\n  41 -->|out_file1| 50;\n  51[\"Concatenate datasets\"];\n  0 -->|output| 51;\n  44 -->|out_file1| 51;\n  52[\"Filter\"];\n  45 -->|outfile| 52;\n  53[\"Sort\"];\n  46 -->|out_file1| 53;\n  54[\"Remove beginning\"];\n  47 -->|out_file1| 54;\n  55[\"Select first\"];\n  47 -->|out_file1| 55;\n  56[\"Sort\"];\n  48 -->|outfile| 56;\n  57[\"Unique\"];\n  54 -->|out_file1| 57;\n  58[\"Concatenate datasets\"];\n  55 -->|out_file1| 58;\n  57 -->|outfile| 58;\n  59[\"Join two Datasets\"];\n  0 -->|output| 59;\n  58 -->|out_file1| 59;\n  60[\"Cut\"];\n  59 -->|out_file1| 60;\n  61[\"Line/Word/Character count\"];\n  60 -->|out_file1| 61;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nolympics.tsv\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\ncountry-information.tsv\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nolympics_2022.tsv\"]\n  3[label=\"Line/Word/Character count\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"tabular-to-csv\"]\n  0 -> 4 [label=\"output\"]\n  5[label=\"Sort\"]\n  0 -> 5 [label=\"output\"]\n  6[label=\"Sort\"]\n  0 -> 6 [label=\"output\"]\n  7[label=\"Sort\"]\n  0 -> 7 [label=\"output\"]\n  8[label=\"Sort\"]\n  0 -> 8 [label=\"output\"]\n  9[label=\"Sort\"]\n  0 -> 9 [label=\"output\"]\n  10[label=\"Sort\"]\n  0 -> 10 [label=\"output\"]\n  11[label=\"Filter\"]\n  0 -> 11 [label=\"output\"]\n  12[label=\"Filter\"]\n  0 -> 12 [label=\"output\"]\n  13[label=\"Count\"]\n  0 -> 13 [label=\"output\"]\n  14[label=\"Count\"]\n  0 -> 14 [label=\"output\"]\n  15[label=\"Count\"]\n  0 -> 15 [label=\"output\"]\n  16[label=\"Count\"]\n  0 -> 16 [label=\"output\"]\n  17[label=\"Datamash\"]\n  0 -> 17 [label=\"output\"]\n  18[label=\"Count\"]\n  0 -> 18 [label=\"output\"]\n  19[label=\"Datamash\"]\n  0 -> 19 [label=\"output\"]\n  20[label=\"Filter\"]\n  0 -> 20 [label=\"output\"]\n  21[label=\"Filter\"]\n  0 -> 21 [label=\"output\"]\n  22[label=\"Filter\"]\n  0 -> 22 [label=\"output\"]\n  23[label=\"Filter\"]\n  0 -> 23 [label=\"output\"]\n  24[label=\"Filter\"]\n  0 -> 24 [label=\"output\"]\n  25[label=\"Filter\"]\n  0 -> 25 [label=\"output\"]\n  26[label=\"Filter\"]\n  0 -> 26 [label=\"output\"]\n  27[label=\"Compute\"]\n  0 -> 27 [label=\"output\"]\n  28[label=\"Compute\"]\n  0 -> 28 [label=\"output\"]\n  29[label=\"Cut\"]\n  0 -> 29 [label=\"output\"]\n  30[label=\"Column Regex Find And Replace\"]\n  0 -> 30 [label=\"output\"]\n  31[label=\"Column Regex Find And Replace\"]\n  0 -> 31 [label=\"output\"]\n  32[label=\"Column Regex Find And Replace\"]\n  0 -> 32 [label=\"output\"]\n  33[label=\"Cut\"]\n  0 -> 33 [label=\"output\"]\n  34[label=\"Cut\"]\n  0 -> 34 [label=\"output\"]\n  35[label=\"Datamash\"]\n  0 -> 35 [label=\"output\"]\n  36[label=\"Datamash\"]\n  0 -> 36 [label=\"output\"]\n  37[label=\"Datamash\"]\n  0 -> 37 [label=\"output\"]\n  38[label=\"Datamash\"]\n  0 -> 38 [label=\"output\"]\n  39[label=\"Datamash\"]\n  0 -> 39 [label=\"output\"]\n  40[label=\"Count\"]\n  0 -> 40 [label=\"output\"]\n  41[label=\"Column Regex Find And Replace\"]\n  0 -> 41 [label=\"output\"]\n  42[label=\"Split file\"]\n  0 -> 42 [label=\"output\"]\n  43[label=\"Join two Datasets\"]\n  0 -> 43 [label=\"output\"]\n  1 -> 43 [label=\"output\"]\n  44[label=\"Remove beginning\"]\n  2 -> 44 [label=\"output\"]\n  45[label=\"Sort\"]\n  11 -> 45 [label=\"out_file1\"]\n  46[label=\"Filter\"]\n  12 -> 46 [label=\"out_file1\"]\n  47[label=\"Cut\"]\n  28 -> 47 [label=\"out_file1\"]\n  48[label=\"Unique\"]\n  29 -> 48 [label=\"out_file1\"]\n  49[label=\"Count\"]\n  41 -> 49 [label=\"out_file1\"]\n  50[label=\"Datamash\"]\n  41 -> 50 [label=\"out_file1\"]\n  51[label=\"Concatenate datasets\"]\n  0 -> 51 [label=\"output\"]\n  44 -> 51 [label=\"out_file1\"]\n  52[label=\"Filter\"]\n  45 -> 52 [label=\"outfile\"]\n  53[label=\"Sort\"]\n  46 -> 53 [label=\"out_file1\"]\n  54[label=\"Remove beginning\"]\n  47 -> 54 [label=\"out_file1\"]\n  55[label=\"Select first\"]\n  47 -> 55 [label=\"out_file1\"]\n  56[label=\"Sort\"]\n  48 -> 56 [label=\"outfile\"]\n  57[label=\"Unique\"]\n  54 -> 57 [label=\"out_file1\"]\n  58[label=\"Concatenate datasets\"]\n  55 -> 58 [label=\"out_file1\"]\n  57 -> 58 [label=\"outfile\"]\n  59[label=\"Join two Datasets\"]\n  0 -> 59 [label=\"output\"]\n  58 -> 59 [label=\"out_file1\"]\n  60[label=\"Cut\"]\n  59 -> 60 [label=\"out_file1\"]\n  61[label=\"Line/Word/Character count\"]\n  60 -> 61 [label=\"out_file1\"]\n}",
           "workflow_tools": [
@@ -4815,6 +4892,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -4972,6 +5054,10 @@
                 "server": "https://galaxytrakr.org/"
               },
               {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
                 "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
@@ -5108,6 +5194,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -5249,6 +5339,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -5384,6 +5478,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -5525,6 +5623,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -5660,6 +5762,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -5801,6 +5907,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -5936,6 +6046,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -6077,6 +6191,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -6215,6 +6333,10 @@
                   "0.6"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -6363,6 +6485,10 @@
                 "state": "exact",
                 "version": "0.1.1",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -6518,6 +6644,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -6665,6 +6795,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -6817,6 +6951,13 @@
                 "server": "https://galaxytrakr.org/"
               },
               {
+                "state": "inexact",
+                "versions": [
+                  "1.1.0"
+                ],
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
                 "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
@@ -6870,9 +7011,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.3.0",
                   "1.2.0",
                   "1.5",
+                  "1.3.0",
                   "1.1.0"
                 ],
                 "server": "https://usegalaxy.be/"
@@ -6976,6 +7117,10 @@
                 "state": "exact",
                 "version": "1.0.1",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -7136,6 +7281,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -7288,6 +7437,10 @@
                 "state": "exact",
                 "version": "1.1.0+galaxy2",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -7447,6 +7600,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -7582,6 +7739,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -7723,6 +7884,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -7858,6 +8023,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -7999,6 +8168,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -8134,6 +8307,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -8275,6 +8452,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -8410,6 +8591,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -8551,6 +8736,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -8686,6 +8875,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -8827,6 +9020,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -8962,6 +9159,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -9103,6 +9304,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -9238,6 +9443,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -9379,6 +9588,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -9514,6 +9727,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -9655,6 +9872,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -9790,6 +10011,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -9931,6 +10156,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -10066,6 +10295,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -10537,7 +10770,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
+          "modified": "2025-02-05 21:05:44 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nAccessions\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nGenome\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Faster Download and Extract Reads in FASTQ\"];\n  0 -->|output| 2;\n  3[\"fastp\"];\n  2 -->|list_paired| 3;\n  4[\"Map with BWA-MEM\"];\n  3 -->|output_paired_coll| 4;\n  1 -->|output| 4;\n  5[\"Samtools view\"];\n  4 -->|bam_output| 5;\n  6[\"MarkDuplicates\"];\n  5 -->|outputsam| 6;\n  7[\"Samtools stats\"];\n  6 -->|outFile| 7;\n  8[\"Realign reads\"];\n  6 -->|outFile| 8;\n  1 -->|output| 8;\n  9[\"MultiQC\"];\n  3 -->|report_json| 9;\n  6 -->|metrics_file| 9;\n  7 -->|output| 9;\n  10[\"Insert indel qualities\"];\n  8 -->|realigned| 10;\n  1 -->|output| 10;\n  11[\"Call variants\"];\n  10 -->|output| 11;\n  1 -->|output| 11;\n  12[\"SnpEff eff:\"];\n  11 -->|variants| 12;\n  13[\"SnpSift Extract Fields\"];\n  12 -->|snpeff_output| 13;\n  14[\"Collapse Collection\"];\n  13 -->|output| 14;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nAccessions\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nGenome\"]\n  2[label=\"Faster Download and Extract Reads in FASTQ\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"fastp\"]\n  2 -> 3 [label=\"list_paired\"]\n  4[label=\"Map with BWA-MEM\"]\n  3 -> 4 [label=\"output_paired_coll\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"Samtools view\"]\n  4 -> 5 [label=\"bam_output\"]\n  6[label=\"MarkDuplicates\"]\n  5 -> 6 [label=\"outputsam\"]\n  7[label=\"Samtools stats\"]\n  6 -> 7 [label=\"outFile\"]\n  8[label=\"Realign reads\"]\n  6 -> 8 [label=\"outFile\"]\n  1 -> 8 [label=\"output\"]\n  9[label=\"MultiQC\"]\n  3 -> 9 [label=\"report_json\"]\n  6 -> 9 [label=\"metrics_file\"]\n  7 -> 9 [label=\"output\"]\n  10[label=\"Insert indel qualities\"]\n  8 -> 10 [label=\"realigned\"]\n  1 -> 10 [label=\"output\"]\n  11[label=\"Call variants\"]\n  10 -> 11 [label=\"output\"]\n  1 -> 11 [label=\"output\"]\n  12[label=\"SnpEff eff:\"]\n  11 -> 12 [label=\"variants\"]\n  13[label=\"SnpSift Extract Fields\"]\n  12 -> 13 [label=\"snpeff_output\"]\n  14[label=\"Collapse Collection\"]\n  13 -> 14 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -11563,6 +11796,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -11721,6 +11959,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -11861,6 +12103,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -11882,8 +12128,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "9.3+galaxy1",
-                  "9.3+galaxy2"
+                  "9.3+galaxy2",
+                  "9.3+galaxy1"
                 ],
                 "server": "https://mississippi.sorbonne-universite.fr"
               },
@@ -12012,6 +12258,10 @@
                 "state": "exact",
                 "version": "0.7.17.1",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -12169,6 +12419,10 @@
                 "state": "exact",
                 "version": "2.18.2.2",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -12331,6 +12585,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -12483,6 +12741,10 @@
                 "state": "exact",
                 "version": "0.20.1+galaxy0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -12640,6 +12902,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -12692,10 +12958,10 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.1.5+galaxy0",
-                  "2.1.3.1+galaxy0",
                   "2.1.3.1+galaxy2",
-                  "2.1.3.1+galaxy1"
+                  "2.1.5+galaxy0",
+                  "2.1.3.1+galaxy1",
+                  "2.1.3.1+galaxy0"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -12792,6 +13058,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -12945,6 +13215,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -13080,10 +13354,10 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.6",
-                  "1.11+galaxy0",
                   "1.11+galaxy1",
-                  "1.7"
+                  "1.7",
+                  "1.6",
+                  "1.11+galaxy0"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -13094,12 +13368,16 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.11+galaxy0",
                   "1.11+galaxy1",
                   "1.7",
+                  "1.11+galaxy0",
                   "1.9+galaxy1"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -13158,8 +13436,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.9",
-                  "1.8+galaxy0"
+                  "1.8+galaxy0",
+                  "1.9"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -13246,8 +13524,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.15.1+galaxy2",
-                  "1.9"
+                  "1.9",
+                  "1.15.1+galaxy2"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -13261,6 +13539,10 @@
                   "1.9+galaxy3"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -13418,6 +13700,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -13563,6 +13849,10 @@
                 "state": "exact",
                 "version": "4.3+t.galaxy0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -13715,6 +14005,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -13767,8 +14061,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.10.4",
                   "2.11.0+galaxy0",
+                  "2.10.4",
                   "2.10.4+galaxy1",
                   "2.10.7+galaxy1"
                 ],
@@ -13871,6 +14165,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -13923,8 +14221,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.10.4",
                   "2.11.0+galaxy0",
+                  "2.10.4",
                   "2.10.4+galaxy1",
                   "2.10.7+galaxy1"
                 ],
@@ -13944,20 +14242,20 @@
                 "state": "inexact",
                 "versions": [
                   "3.1.1+galaxy0",
-                  "2.10.4",
                   "2.11.0+galaxy0",
-                  "2.10.8+galaxy0",
+                  "2.10.4",
                   "3.0.5+galaxy3",
-                  "3.0.5+galaxy0",
-                  "3.0.3+galaxy0",
                   "2.10.7+galaxy2",
-                  "3.1.1+galaxy1",
-                  "2.11.0+galaxy1",
-                  "3.0.8+galaxy0",
-                  "3.0.8+galaxy1",
-                  "3.1.0+galaxy1",
-                  "3.1.0+galaxy0",
+                  "3.0.3+galaxy0",
+                  "3.0.5+galaxy0",
+                  "2.10.8+galaxy0",
                   "3.0.10+galaxy0",
+                  "3.0.8+galaxy0",
+                  "3.1.0+galaxy1",
+                  "3.1.1+galaxy1",
+                  "3.0.8+galaxy1",
+                  "3.1.0+galaxy0",
+                  "2.11.0+galaxy1",
                   "3.0.0+galaxy0"
                 ],
                 "server": "https://usegalaxy.fr/"
@@ -14032,9 +14330,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
+                  "4.2",
                   "5.1.0",
-                  "4.2"
+                  "4.1"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -14048,6 +14346,10 @@
                   "5.1.0"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -14121,17 +14423,17 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
-                  "5.1.0"
+                  "5.1.0",
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
+                  "4.2",
                   "5.1.0",
-                  "4.2"
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.no/"
               },
@@ -14208,6 +14510,10 @@
                 "state": "exact",
                 "version": "5.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -14757,9 +15063,9 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
-          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\niris\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Convert CSV to tabular\"];\n  0 -->|output| 1;\n  2[\"Datamash\"];\n  1 -->|tabular| 2;\n  95c65424-17c5-42f5-a67b-5a351f60e5cb[\"Output\\ndatamash_output\"];\n  2 --> 95c65424-17c5-42f5-a67b-5a351f60e5cb;\n  style 95c65424-17c5-42f5-a67b-5a351f60e5cb stroke:#2c3143,stroke-width:4px;\n  3[\"Remove beginning\"];\n  1 -->|tabular| 3;\n  4[\"Cut\"];\n  3 -->|out_file1| 4;\n  5[\"Group\"];\n  3 -->|out_file1| 5;\n  2195ba9c-b680-4a33-91ee-59c86b50b619[\"Output\\ngroup1\"];\n  5 --> 2195ba9c-b680-4a33-91ee-59c86b50b619;\n  style 2195ba9c-b680-4a33-91ee-59c86b50b619 stroke:#2c3143,stroke-width:4px;\n  6[\"Group\"];\n  3 -->|out_file1| 6;\n  89bc34b5-78e0-4646-9632-f2865bb2d487[\"Output\\ngroup2\"];\n  6 --> 89bc34b5-78e0-4646-9632-f2865bb2d487;\n  style 89bc34b5-78e0-4646-9632-f2865bb2d487 stroke:#2c3143,stroke-width:4px;\n  7[\"Scatterplot w ggplot2\"];\n  3 -->|out_file1| 7;\n  8[\"Scatterplot w ggplot2\"];\n  3 -->|out_file1| 8;\n  9[\"Unique\"];\n  4 -->|out_file1| 9;\n  ec39c0ad-eb26-47d6-b9a7-c2e5ffa043c6[\"Output\\nunique_output\"];\n  9 --> ec39c0ad-eb26-47d6-b9a7-c2e5ffa043c6;\n  style ec39c0ad-eb26-47d6-b9a7-c2e5ffa043c6 stroke:#2c3143,stroke-width:4px;",
-          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\niris\"]\n  1[label=\"Convert CSV to tabular\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Datamash\"]\n  1 -> 2 [label=\"tabular\"]\n  k95c6542417c542f5a67b5a351f60e5cb[color=lightseagreen,label=\"Output\\ndatamash_output\"]\n  2 -> k95c6542417c542f5a67b5a351f60e5cb\n  3[label=\"Remove beginning\"]\n  1 -> 3 [label=\"tabular\"]\n  4[label=\"Cut\"]\n  3 -> 4 [label=\"out_file1\"]\n  5[label=\"Group\"]\n  3 -> 5 [label=\"out_file1\"]\n  k2195ba9cb6804a3391ee59c86b50b619[color=lightseagreen,label=\"Output\\ngroup1\"]\n  5 -> k2195ba9cb6804a3391ee59c86b50b619\n  6[label=\"Group\"]\n  3 -> 6 [label=\"out_file1\"]\n  k89bc34b578e046469632f2865bb2d487[color=lightseagreen,label=\"Output\\ngroup2\"]\n  6 -> k89bc34b578e046469632f2865bb2d487\n  7[label=\"Scatterplot w ggplot2\"]\n  3 -> 7 [label=\"out_file1\"]\n  8[label=\"Scatterplot w ggplot2\"]\n  3 -> 8 [label=\"out_file1\"]\n  9[label=\"Unique\"]\n  4 -> 9 [label=\"out_file1\"]\n  kec39c0adeb2647d6b9a7c2e5ffa043c6[color=lightseagreen,label=\"Output\\nunique_output\"]\n  9 -> kec39c0adeb2647d6b9a7c2e5ffa043c6\n}",
+          "modified": "2025-02-05 21:05:44 +0000",
+          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\niris\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Convert CSV to tabular\"];\n  0 -->|output| 1;\n  2[\"Datamash\"];\n  1 -->|tabular| 2;\n  d969a0d8-2b1b-4468-81fd-a373450a6a5a[\"Output\\ndatamash_output\"];\n  2 --> d969a0d8-2b1b-4468-81fd-a373450a6a5a;\n  style d969a0d8-2b1b-4468-81fd-a373450a6a5a stroke:#2c3143,stroke-width:4px;\n  3[\"Remove beginning\"];\n  1 -->|tabular| 3;\n  4[\"Cut\"];\n  3 -->|out_file1| 4;\n  5[\"Group\"];\n  3 -->|out_file1| 5;\n  57f342ab-b977-4059-ae00-d3bcf8227856[\"Output\\ngroup1\"];\n  5 --> 57f342ab-b977-4059-ae00-d3bcf8227856;\n  style 57f342ab-b977-4059-ae00-d3bcf8227856 stroke:#2c3143,stroke-width:4px;\n  6[\"Group\"];\n  3 -->|out_file1| 6;\n  2036cb33-6e25-4e42-9738-ef3d68576bf6[\"Output\\ngroup2\"];\n  6 --> 2036cb33-6e25-4e42-9738-ef3d68576bf6;\n  style 2036cb33-6e25-4e42-9738-ef3d68576bf6 stroke:#2c3143,stroke-width:4px;\n  7[\"Scatterplot w ggplot2\"];\n  3 -->|out_file1| 7;\n  8[\"Scatterplot w ggplot2\"];\n  3 -->|out_file1| 8;\n  9[\"Unique\"];\n  4 -->|out_file1| 9;\n  ec39c0ad-eb26-47d6-b9a7-c2e5ffa043c6[\"Output\\nunique_output\"];\n  9 --> ec39c0ad-eb26-47d6-b9a7-c2e5ffa043c6;\n  style ec39c0ad-eb26-47d6-b9a7-c2e5ffa043c6 stroke:#2c3143,stroke-width:4px;",
+          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\niris\"]\n  1[label=\"Convert CSV to tabular\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Datamash\"]\n  1 -> 2 [label=\"tabular\"]\n  kd969a0d82b1b446881fda373450a6a5a[color=lightseagreen,label=\"Output\\ndatamash_output\"]\n  2 -> kd969a0d82b1b446881fda373450a6a5a\n  3[label=\"Remove beginning\"]\n  1 -> 3 [label=\"tabular\"]\n  4[label=\"Cut\"]\n  3 -> 4 [label=\"out_file1\"]\n  5[label=\"Group\"]\n  3 -> 5 [label=\"out_file1\"]\n  k57f342abb9774059ae00d3bcf8227856[color=lightseagreen,label=\"Output\\ngroup1\"]\n  5 -> k57f342abb9774059ae00d3bcf8227856\n  6[label=\"Group\"]\n  3 -> 6 [label=\"out_file1\"]\n  k2036cb336e254e429738ef3d68576bf6[color=lightseagreen,label=\"Output\\ngroup2\"]\n  6 -> k2036cb336e254e429738ef3d68576bf6\n  7[label=\"Scatterplot w ggplot2\"]\n  3 -> 7 [label=\"out_file1\"]\n  8[label=\"Scatterplot w ggplot2\"]\n  3 -> 8 [label=\"out_file1\"]\n  9[label=\"Unique\"]\n  4 -> 9 [label=\"out_file1\"]\n  kec39c0adeb2647d6b9a7c2e5ffa043c6[color=lightseagreen,label=\"Output\\nunique_output\"]\n  9 -> kec39c0adeb2647d6b9a7c2e5ffa043c6\n}",
           "workflow_tools": [
             "Cut1",
             "Grouping1",
@@ -14852,7 +15158,7 @@
                 {
                   "output_name": "out_file",
                   "label": "datamash_output",
-                  "uuid": "95c65424-17c5-42f5-a67b-5a351f60e5cb"
+                  "uuid": "d969a0d8-2b1b-4468-81fd-a373450a6a5a"
                 }
               ]
             },
@@ -14899,7 +15205,7 @@
                 {
                   "output_name": "out_file1",
                   "label": "group1",
-                  "uuid": "2195ba9c-b680-4a33-91ee-59c86b50b619"
+                  "uuid": "57f342ab-b977-4059-ae00-d3bcf8227856"
                 }
               ]
             },
@@ -14946,7 +15252,7 @@
                 {
                   "output_name": "out_file1",
                   "label": "group2",
-                  "uuid": "89bc34b5-78e0-4646-9632-f2865bb2d487"
+                  "uuid": "2036cb33-6e25-4e42-9738-ef3d68576bf6"
                 }
               ]
             },
@@ -15245,6 +15551,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -15403,6 +15714,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -15538,6 +15853,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -15679,6 +15998,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -15814,6 +16137,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -15954,6 +16281,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -16110,6 +16441,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -16259,6 +16594,10 @@
                   "2.2.1+galaxy2"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -16426,6 +16765,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -17660,9 +18003,9 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
-          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nmutant_R1\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"FastQC\"];\n  0 -->|output| 1;\n  2[\"Filter by quality\"];\n  0 -->|output| 2;\n  caea9dbb-a790-452c-83b4-e1feaf43dfe2[\"Output\\nfilter1\"];\n  2 --> caea9dbb-a790-452c-83b4-e1feaf43dfe2;\n  style caea9dbb-a790-452c-83b4-e1feaf43dfe2 stroke:#2c3143,stroke-width:4px;\n  3[\"Filter by quality\"];\n  0 -->|output| 3;\n  55a34806-a3be-4d3c-ad29-1e27c968325e[\"Output\\nfilter2\"];\n  3 --> 55a34806-a3be-4d3c-ad29-1e27c968325e;\n  style 55a34806-a3be-4d3c-ad29-1e27c968325e stroke:#2c3143,stroke-width:4px;",
-          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nmutant_R1\"]\n  1[label=\"FastQC\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Filter by quality\"]\n  0 -> 2 [label=\"output\"]\n  kcaea9dbba790452c83b4e1feaf43dfe2[color=lightseagreen,label=\"Output\\nfilter1\"]\n  2 -> kcaea9dbba790452c83b4e1feaf43dfe2\n  3[label=\"Filter by quality\"]\n  0 -> 3 [label=\"output\"]\n  k55a34806a3be4d3cad291e27c968325e[color=lightseagreen,label=\"Output\\nfilter2\"]\n  3 -> k55a34806a3be4d3cad291e27c968325e\n}",
+          "modified": "2025-02-05 21:05:44 +0000",
+          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nmutant_R1\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"FastQC\"];\n  0 -->|output| 1;\n  2[\"Filter by quality\"];\n  0 -->|output| 2;\n  57e58c76-96d8-4c42-8004-b1d9236158c9[\"Output\\nfilter1\"];\n  2 --> 57e58c76-96d8-4c42-8004-b1d9236158c9;\n  style 57e58c76-96d8-4c42-8004-b1d9236158c9 stroke:#2c3143,stroke-width:4px;\n  3[\"Filter by quality\"];\n  0 -->|output| 3;\n  004eb25d-d4e0-47d0-889f-91d04dd7f16f[\"Output\\nfilter2\"];\n  3 --> 004eb25d-d4e0-47d0-889f-91d04dd7f16f;\n  style 004eb25d-d4e0-47d0-889f-91d04dd7f16f stroke:#2c3143,stroke-width:4px;",
+          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nmutant_R1\"]\n  1[label=\"FastQC\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Filter by quality\"]\n  0 -> 2 [label=\"output\"]\n  k57e58c7696d84c428004b1d9236158c9[color=lightseagreen,label=\"Output\\nfilter1\"]\n  2 -> k57e58c7696d84c428004b1d9236158c9\n  3[label=\"Filter by quality\"]\n  0 -> 3 [label=\"output\"]\n  k004eb25dd4e047d0889f91d04dd7f16f[color=lightseagreen,label=\"Output\\nfilter2\"]\n  3 -> k004eb25dd4e047d0889f91d04dd7f16f\n}",
           "workflow_tools": [
             "toolshed.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.1",
             "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72"
@@ -17744,7 +18087,7 @@
                 {
                   "output_name": "output",
                   "label": "filter1",
-                  "uuid": "caea9dbb-a790-452c-83b4-e1feaf43dfe2"
+                  "uuid": "57e58c76-96d8-4c42-8004-b1d9236158c9"
                 }
               ]
             },
@@ -17791,7 +18134,7 @@
                 {
                   "output_name": "output",
                   "label": "filter2",
-                  "uuid": "55a34806-a3be-4d3c-ad29-1e27c968325e"
+                  "uuid": "004eb25d-d4e0-47d0-889f-91d04dd7f16f"
                 }
               ]
             }
@@ -17926,6 +18269,11 @@
           {
             "url": "https://galaxytrakr.org/",
             "name": "GalaxyTrakr",
+            "usegalaxy": false
+          },
+          {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
             "usegalaxy": false
           },
           {
@@ -18091,6 +18439,10 @@
                   "1.0.2+galaxy0"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -18261,6 +18613,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -18313,8 +18669,8 @@
                 "versions": [
                   "1.0.0",
                   "1.0.2+galaxy0",
-                  "1.0.1",
-                  "1.0.2"
+                  "1.0.2",
+                  "1.0.1"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -18415,11 +18771,15 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.72+galaxy1",
                   "0.73+galaxy0",
+                  "0.72+galaxy1",
                   "0.69"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -18491,11 +18851,11 @@
                   "0.69",
                   "0.65",
                   "0.52",
-                  "0.67",
                   "0.68",
+                  "0.67",
+                  "0.63",
                   "0.64",
-                  "0.62",
-                  "0.63"
+                  "0.62"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -18512,8 +18872,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.72+galaxy1",
-                  "0.73+galaxy0"
+                  "0.73+galaxy0",
+                  "0.72+galaxy1"
                 ],
                 "server": "https://usegalaxy.no/"
               },
@@ -18580,9 +18940,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.72+galaxy1",
                   "0.73+galaxy0",
-                  "0.72"
+                  "0.72",
+                  "0.72+galaxy1"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -18596,11 +18956,15 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.72+galaxy1",
                   "0.73+galaxy0",
+                  "0.72+galaxy1",
                   "0.69"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -18644,8 +19008,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.72+galaxy1",
                   "0.72",
+                  "0.72+galaxy1",
                   "0.65",
                   "0.71"
                 ],
@@ -18677,11 +19041,11 @@
                   "0.69",
                   "0.65",
                   "0.52",
-                  "0.67",
                   "0.68",
+                  "0.67",
+                  "0.63",
                   "0.64",
-                  "0.62",
-                  "0.63"
+                  "0.62"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -18698,8 +19062,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.72+galaxy1",
-                  "0.73+galaxy0"
+                  "0.73+galaxy0",
+                  "0.72+galaxy1"
                 ],
                 "server": "https://usegalaxy.no/"
               },
@@ -19322,9 +19686,9 @@
       "id": "introduction/galaxy-intro-101",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-12-11 11:18:54 +0000",
+      "mod_date": "2025-02-05 21:04:27 +0000",
       "pub_date": "2016-12-19 08:59:53 +0000",
-      "version": 66,
+      "version": 67,
       "workflows": [
         {
           "workflow": "galaxy-intro-101-workflow.ga",
@@ -20473,7 +20837,7 @@
               "version": "0.1"
             }
           },
-          "modified": "2025-02-05 10:42:07 +0000",
+          "modified": "2025-02-05 21:05:44 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nExons\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nFeatures\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"bedtools Intersect intervals\"];\n  0 -->|output| 2;\n  1 -->|output| 2;\n  3[\"Datamash\"];\n  2 -->|output| 3;\n  4[\"Sort\"];\n  3 -->|out_file| 4;\n  5[\"Select first\"];\n  4 -->|outfile| 5;\n  6[\"Compare two Datasets\"];\n  0 -->|output| 6;\n  5 -->|outfile| 6;\n  565e3d76-0230-4a5e-87c1-9c36ce0b7df8[\"Output\\ntop_5_exons\"];\n  6 --> 565e3d76-0230-4a5e-87c1-9c36ce0b7df8;\n  style 565e3d76-0230-4a5e-87c1-9c36ce0b7df8 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nExons\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nFeatures\"]\n  2[label=\"bedtools Intersect intervals\"]\n  0 -> 2 [label=\"output\"]\n  1 -> 2 [label=\"output\"]\n  3[label=\"Datamash\"]\n  2 -> 3 [label=\"output\"]\n  4[label=\"Sort\"]\n  3 -> 4 [label=\"out_file\"]\n  5[label=\"Select first\"]\n  4 -> 5 [label=\"outfile\"]\n  6[label=\"Compare two Datasets\"]\n  0 -> 6 [label=\"output\"]\n  5 -> 6 [label=\"outfile\"]\n  k565e3d7602304a5e87c19c36ce0b7df8[color=lightseagreen,label=\"Output\\ntop_5_exons\"]\n  6 -> k565e3d7602304a5e87c19c36ce0b7df8\n}",
           "workflow_tools": [
@@ -20735,6 +21099,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -20893,6 +21262,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -21030,6 +21403,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -21183,6 +21560,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -21320,8 +21701,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.27.0.2",
-                  "2.27.1"
+                  "2.27.1",
+                  "2.27.0.2"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -21336,6 +21717,10 @@
                   "2.29.2"
                 ],
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -21389,15 +21774,15 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.27.0.2",
                   "2.27.1",
+                  "2.27.0.2",
                   "2.30.0",
                   "2.29.2",
                   "2.31.1+galaxy0",
-                  "2.24.0",
-                  "2.29.0",
                   "2.19.0",
-                  "2.27.1+galaxy1"
+                  "2.27.1+galaxy1",
+                  "2.29.0",
+                  "2.24.0"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -21501,6 +21886,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -21660,6 +22049,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -21811,6 +22204,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -22776,7 +23173,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-05 10:42:07 +0000",
+          "modified": "2025-02-05 21:05:44 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\niris\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Convert CSV to tabular\"];\n  0 -->|output| 1;\n  2[\"Datamash\"];\n  1 -->|tabular| 2;\n  254f1b4b-d466-4f0e-8c46-0e97bbedae4d[\"Output\\ndatamash_output\"];\n  2 --> 254f1b4b-d466-4f0e-8c46-0e97bbedae4d;\n  style 254f1b4b-d466-4f0e-8c46-0e97bbedae4d stroke:#2c3143,stroke-width:4px;\n  3[\"Remove beginning\"];\n  1 -->|tabular| 3;\n  4[\"Cut\"];\n  3 -->|out_file1| 4;\n  5[\"Group\"];\n  3 -->|out_file1| 5;\n  a689bddf-14d0-4a72-b1f9-c34d8f50d2b3[\"Output\\ngroup1\"];\n  5 --> a689bddf-14d0-4a72-b1f9-c34d8f50d2b3;\n  style a689bddf-14d0-4a72-b1f9-c34d8f50d2b3 stroke:#2c3143,stroke-width:4px;\n  6[\"Group\"];\n  3 -->|out_file1| 6;\n  ac7c73b2-58dd-4c6e-85ce-ddf49323b206[\"Output\\ngroup2\"];\n  6 --> ac7c73b2-58dd-4c6e-85ce-ddf49323b206;\n  style ac7c73b2-58dd-4c6e-85ce-ddf49323b206 stroke:#2c3143,stroke-width:4px;\n  7[\"Scatterplot with ggplot2\"];\n  3 -->|out_file1| 7;\n  8[\"Scatterplot with ggplot2\"];\n  3 -->|out_file1| 8;\n  9[\"Unique\"];\n  4 -->|out_file1| 9;\n  8a2b5e30-d42a-4019-9674-4b4af00c820a[\"Output\\nunique_output\"];\n  9 --> 8a2b5e30-d42a-4019-9674-4b4af00c820a;\n  style 8a2b5e30-d42a-4019-9674-4b4af00c820a stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\niris\"]\n  1[label=\"Convert CSV to tabular\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Datamash\"]\n  1 -> 2 [label=\"tabular\"]\n  k254f1b4bd4664f0e8c460e97bbedae4d[color=lightseagreen,label=\"Output\\ndatamash_output\"]\n  2 -> k254f1b4bd4664f0e8c460e97bbedae4d\n  3[label=\"Remove beginning\"]\n  1 -> 3 [label=\"tabular\"]\n  4[label=\"Cut\"]\n  3 -> 4 [label=\"out_file1\"]\n  5[label=\"Group\"]\n  3 -> 5 [label=\"out_file1\"]\n  ka689bddf14d04a72b1f9c34d8f50d2b3[color=lightseagreen,label=\"Output\\ngroup1\"]\n  5 -> ka689bddf14d04a72b1f9c34d8f50d2b3\n  6[label=\"Group\"]\n  3 -> 6 [label=\"out_file1\"]\n  kac7c73b258dd4c6e85ceddf49323b206[color=lightseagreen,label=\"Output\\ngroup2\"]\n  6 -> kac7c73b258dd4c6e85ceddf49323b206\n  7[label=\"Scatterplot with ggplot2\"]\n  3 -> 7 [label=\"out_file1\"]\n  8[label=\"Scatterplot with ggplot2\"]\n  3 -> 8 [label=\"out_file1\"]\n  9[label=\"Unique\"]\n  4 -> 9 [label=\"out_file1\"]\n  k8a2b5e30d42a401996744b4af00c820a[color=lightseagreen,label=\"Output\\nunique_output\"]\n  9 -> k8a2b5e30d42a401996744b4af00c820a\n}",
           "workflow_tools": [
@@ -23282,6 +23679,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -23440,6 +23842,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -23575,6 +23981,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -23716,6 +24126,10 @@
               },
               {
                 "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "local",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -23851,6 +24265,10 @@
               {
                 "state": "missing",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -23991,6 +24409,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -24144,6 +24566,10 @@
                 "state": "exact",
                 "version": "1.1.0",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "missing",
@@ -24301,6 +24727,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -24355,8 +24785,8 @@
                 "versions": [
                   "2.2.1+galaxy1",
                   "2.2.1+galaxy2",
-                  "2.2.1+galaxy0",
-                  "2.2.1"
+                  "2.2.1",
+                  "2.2.1+galaxy0"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -24453,6 +24883,10 @@
               {
                 "state": "local",
                 "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "local",
+                "server": "http://hyperbrowser.uio.no/hb/"
               },
               {
                 "state": "local",
@@ -25210,6 +25644,11 @@
             "usegalaxy": false
           },
           {
+            "url": "http://hyperbrowser.uio.no/hb/",
+            "name": "Genomic Hyperbrowser",
+            "usegalaxy": false
+          },
+          {
             "url": "http://gigagalaxy.net/",
             "name": "GigaGalaxy",
             "usegalaxy": false
@@ -25371,6 +25810,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -25425,10 +25868,10 @@
                 "versions": [
                   "0.19.5+galaxy1",
                   "0.20.1+galaxy0",
-                  "0.19.3.2",
-                  "0.12.4.0",
                   "0.18.0.0",
                   "0.19.5",
+                  "0.19.3.2",
+                  "0.12.4.0",
                   "0.19.3.3"
                 ],
                 "server": "https://usegalaxy.be/"
@@ -25530,6 +25973,10 @@
               },
               {
                 "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
                 "server": "http://gigagalaxy.net/"
               },
               {
@@ -25581,8 +26028,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.9",
-                  "1.8+galaxy0"
+                  "1.8+galaxy0",
+                  "1.9"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -25604,14 +26051,14 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.11+galaxy0",
                   "1.7",
+                  "1.11+galaxy0",
                   "1.9+galaxy1",
-                  "1.9",
                   "1.8+galaxy0",
-                  "1.7.1",
+                  "1.9",
                   "1.8+galaxy1",
-                  "1.8+galaxy2"
+                  "1.8+galaxy2",
+                  "1.7.1"
                 ],
                 "server": "https://usegalaxy.no/"
               },
