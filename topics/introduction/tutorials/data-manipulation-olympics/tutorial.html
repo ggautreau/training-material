@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@6777a270b97cf7d9b773c2e23622660fe3f126cc",
+		release: "galaxy-training-network@1e8e2534c1752ed6f41c3b39085c25012ae76b5f",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -70,7 +70,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Data Manipulation Olympics">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-01-16 16:01:53 +0000">
+<meta name="DC.date" content="2025-02-07 13:25:24 +0000">
 <meta name="DC.creator" content="Saskia Hiltemann">
 <meta name="DC.creator" content="Yongbin Li"><meta name="description" content="Galaxy is a scientific workflow, data integration, and data and analysis persistence and publishing platform that aims to make computational biology accessible to research scientists that do not have computer programming experience. ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -191,7 +191,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-01-16 16:01:53 +0000",
+  "dateModified": "2025-02-07 13:25:24 +0000",
   "datePublished": "2022-07-20 16:55:39 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -272,7 +272,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Data Manipulation Olympics",
   "url": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/data-manipulation-olympics/tutorial.html",
-  "version": 11,
+  "version": 12,
   "timeRequired": "PT1H",
   "teaches": "- Familiarize yourself with data manipulation tools in Galaxy\n- Perform basic text manipulation tasks in Galaxy\n- Become comfortable converting text-based files in a variety of ways.\n- Reason about the expected outcome of tools",
   "keywords": [
@@ -1045,7 +1045,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Jul 20, 2022 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 16, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 7, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1065,7 +1065,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">4.8</a> (10 recent ratings, 20 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 11 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 12 </div>
 
     </blockquote>
     </section>
@@ -2117,7 +2117,7 @@ It is always useful to take a moment to think about the expected outcome, this m
 
         <ol>
           <li>How would you filter rows where the 2nd column contains <strong>three spaces</strong> (i.e., four-part names)?</li>
-          <li>How many medals were wone by athletes with five-part names <strong>or more</strong>?</li>
+          <li>How many medals were won by athletes with five-part names <strong>or more</strong>?</li>
           <li>How many parts does the longest name have? Give an example of such a name.</li>
           <li>Bonus: <strong>How many</strong> athletes have 6-part names?</li>
         </ol>
@@ -2709,7 +2709,7 @@ Bronze	Artistic Gymnastics	F	136
         <p>Any calculations you run which try to compute anything over the weight column (Column 8) will fail. Please see the <a href="#exercises-putting-it-all-together">final exercise section</a> for the solution
 to this question, in which we will first clean up the data in the weight column using the Find and Replace operation.</p>
 
-        <p>This type of situation occurs quite frequently, where you data does not fit with your expectations or assumptions, and you may have to perform additional data
+        <p>This type of situation occurs quite frequently, where your data does not fit with your expectations or assumptions, and you may have to perform additional data
 manipulation steps to clean up your data. It is very useful to know how to read the error messages of tools. Depending on the tool, the error messages may or may
 not be very informative, but in many cases it can give you a clue as to why it failed, which sometimes can be fixed by you. If you think it is a problem with the
 tool itself, please submit a bug report, and the tool authors will be able to have a look at it. More information about troubleshooting and reporting errors can
@@ -3066,7 +3066,7 @@ If we had used the line replace tool, it would have replaced all occurrences of 
         <div class="box-title question-title" id="question-27"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <ol>
-          <li>How do we match on the birthday format? How strict/exact shoule we be here?</li>
+          <li>How do we match on the birthday format? How strict/exact should we be here?</li>
           <li>How do we captures both the day and the month?</li>
           <li>How do we refer to the values we captured (for the replacement value)</li>
         </ol>
@@ -3219,7 +3219,7 @@ and tweak your expression until it works.</li>
           <li><i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">param-toggle</span> <em>“Keep named columns”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         </ul>
 
-        <p><strong>Note:</strong> the <em>“Keep named columns”</em> parameter determines wheter we keep or remove the columns we specified.
+        <p><strong>Note:</strong> the <em>“Keep named columns”</em> parameter determines whether we keep or remove the columns we specified.
 You could have obtained the same result by supplying all column names except the first one, and selecting
 <em>“Keep named columns”</em>: <code class="language-plaintext highlighter-rouge">No</code>, but that would have been a lot more work.</p>
       </li>
@@ -3400,7 +3400,7 @@ but on the other hand it is also a bit less error-prone (i.e. it is easier to mi
 
           <ol>
             <li>All the columns from the country information file are added to the end of each row of our olympics dataset</li>
-            <li>Our olympics datset had 17 columns, the country information file has 56 columns. Therefore we have 17+56=73 columns columns in our resulting file. This also means the NOC column
+            <li>Our Olympics dataset had 17 columns, the country information file has 56 columns. Therefore, we have 17+56=73 columns in our resulting file. This also means the NOC column
 we joined on appears twice in our output.</li>
             <li>There is a lot of data duplication in this file now. The exact same country information is added to every line of every athlete from a certain country.
 This means much larger file size, and more usage of your quota.
@@ -3460,7 +3460,7 @@ If you do not need all these columns, it could save you a lot of space to remove
 
 </blockquote>
 
-<p>Since this new dataset has the exact same structure (number and order of columns), we can simple add the lines from this file to the end of our existing <code class="language-plaintext highlighter-rouge">olympics.tsv</code> file.</p>
+<p>Since this new dataset has the exact same structure (number and order of columns), we can simply add the lines from this file to the end of our existing <code class="language-plaintext highlighter-rouge">olympics.tsv</code> file.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-adding-2022-olympics-to-our-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding 2022 Olympics to our dataset</div>
@@ -3743,7 +3743,7 @@ row a weight range is used), and then answering the question a couple of questio
 
   <ol>
     <li>Get a list of all the values that occur in the weight column, take note of all the values that are not a single number or <code class="language-plaintext highlighter-rouge">NA</code>; anything else should be cleaned up</li>
-    <li>Clean up the weight column (Colum 8) so that we only have single numbers; weight classes (e.g. <code class="language-plaintext highlighter-rouge">63-78</code>) should be replace by the lower bound (<code class="language-plaintext highlighter-rouge">63</code>) of that class</li>
+    <li>Clean up the weight column (Column 8) so that we only have single numbers; weight classes (e.g. <code class="language-plaintext highlighter-rouge">63-78</code>) should be replace by the lower bound (<code class="language-plaintext highlighter-rouge">63</code>) of that class</li>
     <li>How heavy was the lightest woman competing in the Biathlon? And the heaviest?</li>
   </ol>
 
@@ -4317,7 +4317,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/6777a270b97cf7d9b773c2e23622660fe3f126cc">6777a27</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/1e8e2534c1752ed6f41c3b39085c25012ae76b5f">1e8e253</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
