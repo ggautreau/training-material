@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@04a5c53df2c574472e5dbf330f2196493dac98a8",
+		release: "galaxy-training-network@57d4248bad1e64e66b7cb898f0906ced57e5bd00",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Formation of the Super-Structures on the Inactive X">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-11-09 08:55:09 +0000">
+<meta name="DC.date" content="2025-02-07 17:49:28 +0000">
 <meta name="DC.creator" content="Friederike Dündar">
 <meta name="DC.creator" content="Anika Erxleben">
 <meta name="DC.creator" content="Bérénice Batut">
@@ -194,7 +194,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2023-11-09 08:55:09 +0000",
+  "dateModified": "2025-02-07 17:49:28 +0000",
   "datePublished": "2018-09-17 07:13:05 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -256,7 +256,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Formation of the Super-Structures on the Inactive X",
   "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/formation_of_super-structures_on_xi/tutorial.html",
-  "version": 12,
+  "version": 13,
   "timeRequired": "PT3H",
   "teaches": "- Inspect the read quality\n- Trim low quality bases\n- Map reads on a reference genome\n- Assess the quality of a ChIP-seq experiment\n- Extract coverage files\n- Call enriched regions or peaks",
   "keywords": [
@@ -1681,6 +1681,16 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
+      "url": "https://bio.tools/tool/jbrowse_2",
+      "name": "JBrowse 2"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/UCSC_Genome_Browser_Utilities",
+      "name": "UCSC Genome Browser Utilities"
+    },
+    {
+      "@type": "Thing",
       "url": "https://bio.tools/tool/bedtools",
       "name": "BEDTools"
     },
@@ -2157,53 +2167,12 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	</li>
     
 	<li>
-		<a class="dropdown-item" href="https://usegalaxy.fr/" title="">
-			UseGalaxy.fr <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
-		</a>
-	</li>
-    
-	<li>
 		<a class="dropdown-item" href="https://usegalaxy.org" title="">
 			UseGalaxy.org (Main) <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
 		</a>
 	</li>
     
-	<li>
-		<a class="dropdown-item" href="https://usegalaxy.org.au" title="">
-			UseGalaxy.org.au <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
-		</a>
-	</li>
     
-    
-    
-    
-	<li class="dropdown-header">
-		<b>Possibly Working</b>
-	</li>
-    
-	<li>
-		<a class="dropdown-item" href="https://galaxy.mesocentre.uca.fr" title="">
-			Galaxy@AuBi
-		</a>
-	</li>
-    
-	<li>
-		<a class="dropdown-item" href="https://usegalaxy.be/" title="">
-			UseGalaxy.be
-		</a>
-	</li>
-    
-	<li>
-		<a class="dropdown-item" href="https://usegalaxy.cz/" title="">
-			UseGalaxy.cz
-		</a>
-	</li>
-    
-	<li>
-		<a class="dropdown-item" href="https://usegalaxy.no/" title="">
-			UseGalaxy.no
-		</a>
-	</li>
     
     
 
@@ -2215,7 +2184,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Sep 17, 2018 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Nov 9, 2023 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 7, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -2235,7 +2204,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">3.0</a> (1 recent ratings, 9 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 12 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 13 </div>
 
     </blockquote>
     </section>
@@ -2586,7 +2555,7 @@ https://zenodo.org/record/1324070/files/wt_H3K4me3_read2.fastq.gz
 
 <h1 id="step-2-mapping-of-the-reads">Step 2: Mapping of the reads</h1>
 
-<p>With ChiP sequencing, we obtain sequences corresponding to a portion of DNA linked to the histone mark of interest, H3K4me3 in this case. As H3K4me3 opens the chromatime, nearby genes are gioing to be more transcribed. It would be interesting to know if there is a difference in the quantity of DNA impacted by H3K4me3 and the impacted genes between active and inactive X chromosome.</p>
+<p>With ChiP sequencing, we obtain sequences corresponding to a portion of DNA linked to the histone mark of interest, H3K4me3 in this case. As H3K4me3 opens the chromatime, nearby genes are going to be more transcribed. It would be interesting to know if there is a difference in the quantity of DNA impacted by H3K4me3 and the impacted genes between active and inactive X chromosome.</p>
 
 <p>We first need to figure out where the sequenced DNA fragments originated from in the genome. The reads must be aligned to a reference genome to identify the binding sites.</p>
 
@@ -2836,6 +2805,38 @@ however, the number of false positives may also increase.</p>
   <p>A general description of the user interface of the IGV browser is available here: <a href="/training-material/topics/introduction/tutorials/igv-introduction/tutorial.html">IGV Browser description</a></p>
 </blockquote>
 
+<h3 id="visualization-using-jbrowse2">Visualization using JBrowse2</h3>
+
+<p>Besides running IGV locally on our computer, we can use Jbrowse2 to look at the genomes and visualize different tracks such as Chip-Seq data using the Galaxy. To do so:</p>
+
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-genome-visualization-via-jbrowse2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Genome Visualization via Jbrowse2</div>
+
+  <ol>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bbgbigwig/bbgtobigwig/0.1" title="BAM BED GFF coverage bigWigs tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>BAM BED GFF coverage bigWigs</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1)</span> with the following parameters:
+      <ul>
+        <li><em>“bam/bed/gff to convert”</em>: <code class="language-plaintext highlighter-rouge">Output of the bowtie2</code></li>
+        <li><em>“Source Genome Build”</em>: <code class="language-plaintext highlighter-rouge">Mouse (Mus Musculus): mm10 Full</code></li>
+      </ul>
+    </li>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/fubar/jbrowse2/jbrowse2/2.17.0+galaxy0" title="JBrowse2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.17.0+galaxy0)</span> with the following parameters:
+      <ul>
+        <li><em>“Select a built in reference genome or custom genome”</em>: <code class="language-plaintext highlighter-rouge">Mouse (Mus Musculus): mm10 Full</code></li>
+        <li><em>“Insert Track Group”</em>
+          <ul>
+            <li><em>“Insert Annotation Track”</em></li>
+            <li><em>“Track Type”</em>: <code class="language-plaintext highlighter-rouge">BigWig Track</code></li>
+            <li><em>“BigWig Track Data”</em>: <code class="language-plaintext highlighter-rouge">The output from step 1 (The BigWig File made from the BAM file)</code></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+</blockquote>
+
+<p>This takes some time to finish. Again, you can explore the genome. For example, you can look at the following coordinate in the genome: <code class="language-plaintext highlighter-rouge">chr2:91,053,413-91,055,345</code>. For a comprehensive tutorial on Jbrowse please look at this tutorial: https://training.galaxyproject.org/training-material/topics/visualisation/tutorials/jbrowse/tutorial.html.</p>
+
 <h1 id="step-3-chip-seq-quality-control">Step 3: ChIP-seq Quality Control</h1>
 
 <p>We already checked the quality of the raw sequencing reads in the first step.
@@ -3080,7 +3081,7 @@ https://zenodo.org/record/1324070/files/wt_input_rep2.bam
         </blockquote>
       </blockquote>
     </li>
-    <li>Use <strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to inspect both signal coverages (input and ChIP samples).</li>
+    <li>Use <strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to inspect both signal coverages (input and ChIP samples). Alternatively, you can use <strong>JBrowse2</strong> as mentioned above to load multiple tracks and look at genome intervals.</li>
   </ol>
 
 </blockquote>
@@ -3138,7 +3139,7 @@ https://zenodo.org/record/1324070/files/wt_input_rep2.bam
         <li><em>“Coverage file format”</em>: <code class="language-plaintext highlighter-rouge">bigWig</code></li>
       </ul>
     </li>
-    <li>Use <strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to inspect the log2 ratio.</li>
+    <li>Use <strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to inspect the log2 ratio. Or, as an alternative, you can use <strong>JBrowse2</strong> from the tools on Galaxy.</li>
   </ol>
 
 </blockquote>
@@ -3206,7 +3207,7 @@ If your sample has a low duplication rate (<em>e.g.</em> below 10%), you might k
         </blockquote>
       </blockquote>
     </li>
-    <li><strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to inspect with the signal coverage and log2 ratio tracks</li>
+    <li><strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (or <strong>JBrowse2</strong>) to inspect with the signal coverage and log2 ratio tracks</li>
   </ol>
 
 </blockquote>
@@ -3238,7 +3239,7 @@ If your sample has a low duplication rate (<em>e.g.</em> below 10%), you might k
 
 <h1 id="step-6-plot-the-signal-between-samples">Step 6: Plot the signal between samples</h1>
 
-<p>So far, we have normalized the data and identified peaks. Now, we would like to visualize scores associated with certain genomic regions, for example ChIP enrichment values around the TSS of genes. Moreover, we would like to compare the enrichment of several ChIP samples (e.g. CTCF and H3K4me3 )on the regions of interest.</p>
+<p>So far, we have normalized the data and identified peaks. Now, we would like to visualize scores associated with certain genomic regions, for example ChIP enrichment values around the TSS of genes. Moreover, we would like to compare the enrichment of several ChIP samples (e.g. CTCF and H3K4me3) on the regions of interest.</p>
 
 <p>Since we already generated the required files for the H3K4me3 sample, let’s make them only for the CTCF sample:</p>
 
@@ -3523,7 +3524,7 @@ If your sample has a low duplication rate (<em>e.g.</em> below 10%), you might k
       <li>
         <p>The H3K4me3 sample has clear and large regions in which the read coverage are enriched. H3K4me3 is one of the least abundant histone modifications. It is highly enriched at active promoters near transcription start sites (TSS) and positively correlated with transcription.</p>
 
-        <p>For H3K27me3, the coverage is more homogeneous. A gene is a broad domain of H3K27me3 enrichment across its body of genes corresponds to a gene with a transcription inhibited by H3K27me3. We can also identified some “bivalent” genes: gene with a peak around the TSS for H3K27me3(e.g. region_208 for gene Gpr173) but also H3K4me3. We also observe some H3K27me3-depleted regions sharply demarcated, with boundaries coinciding with gene borders (e.g. Kdm5c). This is a chromatin signature reminiscent of genes that escape XCI.</p>
+        <p>For H3K27me3, the coverage is more homogeneous. A gene is a broad domain of H3K27me3 enrichment across its body of genes corresponds to a gene with a transcription inhibited by H3K27me3. We can also identified some “bivalent” genes: gene with a peak around the TSS for H3K27me3 (e.g. region_208 for gene Gpr173) but also H3K4me3. We also observe some H3K27me3-depleted regions sharply demarcated, with boundaries coinciding with gene borders (e.g. Kdm5c). This is a chromatin signature reminiscent of genes that escape XCI.</p>
 
         <p>To reproduce, run <strong>bamCoverage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>, <strong>IGV</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> and <strong>MACS2 callpeak</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> outputs.</p>
       </li>
@@ -3753,6 +3754,16 @@ tools:
   owner: devteam
   revisions: 7def34e6cf4d
   tool_panel_section_label: SAM/BAM
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: jbrowse2
+  owner: fubar
+  revisions: 21bb464c1d53
+  tool_panel_section_label: Graph/Display Data
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: bbgbigwig
+  owner: iuc
+  revisions: b95435276746
+  tool_panel_section_label: Convert Formats
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: bedtools
   owner: iuc
@@ -3987,7 +3998,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/04a5c53df2c574472e5dbf330f2196493dac98a8">04a5c53</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/57d4248bad1e64e66b7cb898f0906ced57e5bd00">57d4248</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
