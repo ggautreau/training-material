@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@1e8e2534c1752ed6f41c3b39085c25012ae76b5f",
+		release: "galaxy-training-network@04a5c53df2c574472e5dbf330f2196493dac98a8",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -70,7 +70,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Data Manipulation Olympics">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-07 13:25:24 +0000">
+<meta name="DC.date" content="2025-02-07 13:27:47 +0000">
 <meta name="DC.creator" content="Saskia Hiltemann">
 <meta name="DC.creator" content="Yongbin Li"><meta name="description" content="Galaxy is a scientific workflow, data integration, and data and analysis persistence and publishing platform that aims to make computational biology accessible to research scientists that do not have computer programming experience. ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -191,7 +191,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-07 13:25:24 +0000",
+  "dateModified": "2025-02-07 13:27:47 +0000",
   "datePublished": "2022-07-20 16:55:39 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -272,7 +272,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Data Manipulation Olympics",
   "url": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/data-manipulation-olympics/tutorial.html",
-  "version": 12,
+  "version": 13,
   "timeRequired": "PT1H",
   "teaches": "- Familiarize yourself with data manipulation tools in Galaxy\n- Perform basic text manipulation tasks in Galaxy\n- Become comfortable converting text-based files in a variety of ways.\n- Reason about the expected outcome of tools",
   "keywords": [
@@ -1065,7 +1065,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">4.8</a> (10 recent ratings, 20 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 12 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 13 </div>
 
     </blockquote>
     </section>
@@ -1325,8 +1325,8 @@ Also make sure to include many exercises (with answers) for your section!
               <ul>
                 <li>Count the columns manually (only doable for small files)</li>
                 <li>In the expanded view, scroll sideways on the dataset preview, at the top the columns are numbered</li>
-                <li>Click on the <i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> i icon on the dataset, here you will find more detailed information about the file and the job that created it.
-At the bottom is also a preview (peek) of the dataset, and numbered columns</li>
+                <li>Click on the <i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> i icon on the dataset; here you will find more detailed information about the file and the job that created it.
+At the bottom is also a preview (peek) of the dataset and numbered columns</li>
               </ul>
             </li>
           </ol>
@@ -1373,7 +1373,7 @@ At the bottom is also a preview (peek) of the dataset, and numbered columns</li>
 
 <h1 id="file-format-conversion">File Format Conversion</h1>
 
-<p>The file we uploaded is a <code class="language-plaintext highlighter-rouge">.tsv</code> file. This stands for <em>tab-separated values</em>. This means that this is a file containing rows and columns, where a TAB character is used to signify a column ends and a new one begins. Galaxy is great at understanding tab-separated files files, and most of the data manipulation tools are designed to work with such files.</p>
+<p>The file we uploaded is a <code class="language-plaintext highlighter-rouge">.tsv</code> file. This stands for <em>tab-separated values</em>. This means that this is a file containing rows and columns, where a TAB character is used to signify a column ends and a new one begins. Galaxy is great at understanding tab-separated files, and most of the data manipulation tools are designed to work with such files.</p>
 
 <p>A similar format you may come across a lot in data science, is the <code class="language-plaintext highlighter-rouge">.csv</code> file, or <em>comma-separated values</em> file. This is the same as <code class="language-plaintext highlighter-rouge">.tsv</code>, but uses comma (<code class="language-plaintext highlighter-rouge">,</code>) characters to indicate new columns, instead of TAB (<code class="language-plaintext highlighter-rouge">\t</code>) characters.</p>
 
@@ -1407,7 +1407,7 @@ At the bottom is also a preview (peek) of the dataset, and numbered columns</li>
           <ol>
             <li>Galaxy does not display the table as nicely as before.
 This is because Galaxy is optimized to work with <code class="language-plaintext highlighter-rouge">tsv</code> files. For most rows you now see commas separating the different columns.</li>
-            <li>If the data in a column contains a comma (e.g. in this file we have events such as <code class="language-plaintext highlighter-rouge">swimming 5,000 meters</code>), we put the value in quotes to signifiy that that comma is part of the data, not a column delimiter.</li>
+            <li>If the data in a column contains a comma (e.g. in this file we have events such as <code class="language-plaintext highlighter-rouge">swimming 5,000 meters</code>), we put the value in quotes to signify that that comma is part of the data, not a column delimiter.</li>
           </ol>
 
         </blockquote>
@@ -1562,7 +1562,7 @@ data manipulation steps. Do future-you a favour and give datasets good names!</l
 
 <h2 id="sort-on-multiple-columns-at-once">Sort on multiple columns at once</h2>
 
-<p>So we want to sort twice, first by year, an then within each year, we sort again alphabetically by name. The sort tool can do this!</p>
+<p>So we want to sort twice, first by year, and then within each year, we sort again alphabetically by name. The sort tool can do this!</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-sort-table-based-on-a-column-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Sort table based on a column</div>
@@ -1844,7 +1844,7 @@ How would you write expressions for the following filtering conditions:
         <div class="box-title question-title" id="question-10"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
         <ol>
-          <li>How many lines do you expect in the this file?</li>
+          <li>How many lines do you expect in this file?</li>
           <li>How many lines are in this file? Were you right?</li>
         </ol>
 
@@ -1863,9 +1863,9 @@ How would you write expressions for the following filtering conditions:
 
           <ol>
             <li>The original file has 234,523 lines, and the Winter Olympics had 44,681 lines. So we would expect 234,523 - 44,681 = 189,842 rows of data. Since we have subtracted the header line in this equation as well, we expect the Summer Olympics file to have 1 more line that this, so 189,843 total lines.</li>
-            <li>189,843. If you were off by one or two lines, it may have been that you counted the header lines double
+            <li>189,843. If you were off by one or two lines, it may have been that you counted the header lines double.
 <br />
-It is always useful to take a moment to think about the expected outcome, this makes it easier to spot mistakes and will save you time in the long run.</li>
+It is always useful to take a moment to think about the expected outcome; this makes it easier to spot mistakes and will save you time in the long run.</li>
           </ol>
 
         </blockquote>
@@ -4317,7 +4317,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/1e8e2534c1752ed6f41c3b39085c25012ae76b5f">1e8e253</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/04a5c53df2c574472e5dbf330f2196493dac98a8">04a5c53</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
