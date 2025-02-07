@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@2fcbcb0bcbb693b6cc96e632ad191b24a4bc6e21",
+		release: "galaxy-training-network@6777a270b97cf7d9b773c2e23622660fe3f126cc",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -302,6 +302,23 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 					<li>
 						
 						
+						<a href="/training-material/topics/proteomics">
+							Proteomics
+						</a>
+						/
+						<a href="/training-material//topics/proteomics/tutorials/bioconductor-scp/tutorial.html">
+						Single Cell Proteomics data analysis with bioconductor-scp
+						</a>
+						
+						
+						
+						
+					</li>
+				
+					
+					<li>
+						
+						
 						<a href="/training-material/topics/metabolomics">
 							Metabolomics
 						</a>
@@ -479,6 +496,10 @@ var topics = [
 
 	
 	
+	"Proteomics",
+
+	
+	
 	"Metabolomics",
 
 	
@@ -493,6 +514,8 @@ var topics = [
 ];
 
 var slidesVsTutos = [
+
+	"Tutorials",
 
 	"Tutorials",
 
@@ -575,7 +598,7 @@ var chart2 = new Chart(ctx2, {
 
 
 <h3>Stats for materials contributed to by Helge Hecht</h3>
-<iframe plausible-embed src="https://plausible.galaxyproject.eu/training.galaxyproject.org?page=%7E/topics/metabolomics/tutorials/qcxms-predictions/tutorial.html|/topics/metabolomics/tutorials/gc_ms_with_xcms/tutorial.html|/topics/metabolomics/tutorials/qcxms-predictions/slides.html&embed=true&theme=system&background=transparent&period=12mo" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1800px;"></iframe>
+<iframe plausible-embed src="https://plausible.galaxyproject.eu/training.galaxyproject.org?page=%7E/topics/proteomics/tutorials/bioconductor-scp/tutorial.html|/topics/metabolomics/tutorials/qcxms-predictions/tutorial.html|/topics/metabolomics/tutorials/gc_ms_with_xcms/tutorial.html|/topics/metabolomics/tutorials/qcxms-predictions/slides.html&embed=true&theme=system&background=transparent&period=12mo" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1800px;"></iframe>
 
         </div>
         <footer>
@@ -636,7 +659,7 @@ var chart2 = new Chart(ctx2, {
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/2fcbcb0bcbb693b6cc96e632ad191b24a4bc6e21">2fcbcb0</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/6777a270b97cf7d9b773c2e23622660fe3f126cc">6777a27</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
