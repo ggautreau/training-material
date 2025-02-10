@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@24a3de229ce451411075cfc39c9f65a2cf7f4321",
+		release: "galaxy-training-network@397b7dda8ab49e32562eb85b64b840d4bbc32ad3",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -56,6 +56,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Bold-102a.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/training-material/assets/fonts/AtkinsonHyperlegible/Atkinson-Hyperlegible-Italic-102a.woff2" as="font" type="font/woff2" crossorigin>
         
+        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" as="script" crossorigin>
+        
         <link rel="preload" href="/training-material/assets/css/main.css?v=3" as="style">
         <link rel='preload' href='/training-material/assets/js/bundle.theme.f1f2de89.js' as='script'>
 <link rel='preload' href='/training-material/assets/js/bundle.main.40d4e218.js' as='script'>
@@ -68,11 +70,12 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Galaxy Interactive Tools">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-09-25 07:54:41 +0000">
+<meta name="DC.date" content="2025-02-10 20:32:16 +0000">
 <meta name="DC.creator" content="Nate Coraor">
 <meta name="DC.creator" content="Simon Gladman">
 <meta name="DC.creator" content="Helena Rasche">
-<meta name="DC.creator" content="Anthony Bretaudeau"><meta name="description" content="Here you can learn everything you need to become a Pro Galaxy Administrator! These resources cover everything from setup, to configuration, to monitoring, to customisation. ">
+<meta name="DC.creator" content="Anthony Bretaudeau">
+<meta name="DC.creator" content="José Manuel Domínguez"><meta name="description" content="Here you can learn everything you need to become a Pro Galaxy Administrator! These resources cover everything from setup, to configuration, to monitoring, to customisation. ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Galaxy Server administration / Galaxy Interactive Tools / Hands-on: Galaxy Interactive Tools">
         <meta property="og:description" content="Here you can learn everything you need to become a Pro Galaxy Administrator! These resources cover everything from setup, to configuration, to monitoring, to customisation. ">
@@ -191,7 +194,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-09-25 07:54:41 +0000",
+  "dateModified": "2025-02-10 20:32:16 +0000",
   "datePublished": "2020-02-27 15:21:14 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -253,7 +256,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Galaxy Interactive Tools",
   "url": "https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html",
-  "version": 25,
+  "version": 26,
   "timeRequired": "PT2H",
   "teaches": "- Understand what Galaxy Interactive Tools are and how they work\n- Be aware of the security implications of Interactive Tools\n- Have a basic understanding of the Interactive Tools (GxIT/GIE) Proxy, its purpose, and configuration\n- Be familiar with wildcard SSL certificates and how to get them from Let's Encrypt\n- Configure your Galaxy to serve Interactive Tools using an Ansible Playbook\n- Start, run, and use an Interactive Tool",
   "keywords": [
@@ -782,9 +785,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       ],
       "identifier": "https://orcid.org/0000-0003-0914-2470",
       "orcid": "https://orcid.org/0000-0003-0914-2470"
-    }
-  ],
-  "contributor": [
+    },
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -849,7 +850,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
           "url": "https://elixir-europe.org"
         }
       ]
-    },
+    }
+  ],
+  "contributor": [
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -1091,6 +1094,71 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       ],
       "identifier": "https://orcid.org/0000-0001-9760-8992",
       "orcid": "https://orcid.org/0000-0001-9760-8992"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/kysrpex/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/kysrpex/",
+      "name": "José Manuel Domínguez",
+      "image": "https://avatars.githubusercontent.com/kysrpex",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "@type": "Organization"
+          },
+          "id": "https://training.galaxyproject.org",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "legalName": "Galaxy Training Network",
+          "alternateName": "GTN",
+          "url": "https://training.galaxyproject.org",
+          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
+          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
+          "keywords": [
+            "galaxy",
+            "bioinformatics",
+            "training",
+            "fair",
+            "accessible"
+          ],
+          "status": "active",
+          "foundingDate": "2015-06-29",
+          "socialMedia": "https://mstdn.science/@gtn",
+          "type": "project"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/uni-freiburg/",
+          "name": "University of Freiburg",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://www.uni-freiburg.de/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-europe/",
+          "name": "ELIXIR Europe",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://elixir-europe.org"
+        }
+      ]
     },
     {
       "@context": "https://schema.org",
@@ -1767,7 +1835,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     Nate Coraor</a><a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge contributor-slugger70"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/slugger70?s=36" alt="Simon Gladman avatar" width="36" class="avatar" />
     Simon Gladman</a><a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-hexylena"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" />
     Helena Rasche</a><a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge contributor-abretaud"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/abretaud?s=36" alt="Anthony Bretaudeau avatar" width="36" class="avatar" />
-    Anthony Bretaudeau</a>
+    Anthony Bretaudeau</a><a href="/training-material/hall-of-fame/kysrpex/" class="contributor-badge contributor-kysrpex"><img src="https://avatars.githubusercontent.com/kysrpex?s=36" alt="José Manuel Domínguez avatar" width="36" class="avatar" />
+    José Manuel Domínguez</a>
 		</td>
 	</tr>
 	
@@ -1780,13 +1849,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 
-	
-	<tr>
-		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
-		<td>
-			<a href="/training-material/hall-of-fame/kysrpex/" class="contributor-badge contributor-kysrpex"><img src="https://avatars.githubusercontent.com/kysrpex?s=36" alt="José Manuel Domínguez avatar" width="36" class="avatar" />
-    José Manuel Domínguez</a></td>
-	</tr>
 	
 
 	
@@ -2449,7 +2511,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 27, 2020 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Sep 25, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 10, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -2469,7 +2531,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">3.0</a> (0 recent ratings, 1 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 25 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 26 </div>
 
     </blockquote>
     </section>
@@ -2535,6 +2597,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <li><a href="#enabling-interactive-tools-in-galaxy" id="markdown-toc-enabling-interactive-tools-in-galaxy">Enabling Interactive Tools in Galaxy</a></li>
   <li><a href="#run-an-interactive-tool" id="markdown-toc-run-an-interactive-tool">Run an Interactive Tool</a></li>
   <li><a href="#securing-interactive-tools" id="markdown-toc-securing-interactive-tools">Securing Interactive Tools</a></li>
+  <li><a href="#high-availability-setup-with-postgressql-optional" id="markdown-toc-high-availability-setup-with-postgressql-optional">High availability setup with PostgresSQL (Optional)</a></li>
 </ol>
 
 </blockquote>
@@ -2679,7 +2742,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <figure id="figure-1" style="max-width: 90%;"><img src="../../images/interactive-tools/gxit-proxy-diagram.png" alt="Galaxy Interactive Tools Proxy Diagram. " width="565" height="470" loading="lazy" /><a target="_blank" href="../../images/interactive-tools/gxit-proxy-diagram.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Galaxy Interactive Tools Proxy Diagram</figcaption></figure>
 
-<p>As you can see, the client only ever speaks to nginx on the Galaxy server running on the standard https port (443), never directly to the interactive tool (which may be running on a node that does not even have a public IP address). The mapping of GxIT invocation and its corresponding host/port is kept in a SQLite database known as the <em>Interactive Tools Session Map</em>, and the path to this database is important, since both Galaxy and the proxy need access to it.</p>
+<p>As you can see, the client only ever speaks to nginx on the Galaxy server running on the standard https port (443), never directly to the interactive tool (which may be running on a node that does not even have a public IP address). By default, the mapping of GxIT invocation and its corresponding host/port is kept in a SQLite database known as the <em>Interactive Tools Session Map</em>, and the path to this database is important, since both Galaxy and the proxy need access to it.</p>
 
 <p>The GIE Proxy is written in <a href="https://nodejs.org/">Node.js</a> and requires some configuration. Thankfully there is an Ansible role, <a href="https://galaxy.ansible.com/usegalaxy_eu/gie_proxy">usegalaxy_eu.gie_proxy</a>, that can install the proxy and its dependencies, and configure it for you. As usual, have a look through the <a href="https://github.com/usegalaxy-eu/ansible-gie-proxy/blob/master/README.md">README</a> and <a href="https://github.com/usegalaxy-eu/ansible-gie-proxy/blob/master/defaults/main.yml">defaults</a> to investigate which variables you might need to set before continuing.</p>
 
@@ -3473,6 +3536,144 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/galaxy/var/interactivetools
 
 </blockquote>
 
+<h1 id="high-availability-setup-with-postgressql-optional">High availability setup with PostgresSQL (Optional)</h1>
+
+<blockquote class="comment">
+  <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
+  <p>This section is <strong>only relevant if you are running a high-availability</strong> setup, meaning that you have multiple copies of Galaxy running behind a load balancer.</p>
+
+  <p>If you have installed Galaxy following the <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html">Galaxy Installation with Ansible</a> tutorial, or are completing this tutorial as part of a <a href="https://github.com/galaxyproject/dagobah-training">Galaxy Admin Training</a> course, please skip this section, as you are then <em>not</em> running a high-availability setup.</p>
+</blockquote>
+
+<p>In a <em>high availability</em> setup, multiple redundant copies of Galaxy run simultaneously behind a load balancer to minimize downtime and service interruptions.</p>
+
+<p>As explained in <a href="#installing-the-interactive-tools-proxy">one of the previous sections</a>, the Galaxy Interactive Tools Proxy redirects requests to each Interactive Tool’s host and port. By default, the mapping of GxIT invocations to their corresponding host/port is kept in a SQLite database known as the <em>Interactive Tools Session Map</em>.</p>
+
+<p>By design, <a href="https://www.sqlite.org/whentouse.html#situations_where_a_client_server_rdbms_may_work_better">SQLite is the wrong choice for high availability setups</a>, the showstopper being that the SQLite database file would have to be shared over a network filesystem, which are usually associated with too high latencies for RDBMS use. For this reason, Galaxy and the Interactive Tools Proxy can also store the <strong>Session Map in a PostgreSQL database</strong>.</p>
+
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-preparing-the-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Preparing the database</div>
+
+  <p>First, you need to create a database for the Interactive Tools Proxy.</p>
+
+  <blockquote class="warning">
+    <div class="box-title warning-title" id="warning"><i class="fas fa-exclamation-triangle" aria-hidden="true" ></i> Warning</div>
+    <p>Do <strong>not</strong> use the Galaxy database for this purpose. The main Galaxy database is reserved for Galaxy’s core functionality, and Interactive Tools have not yet reached this stage. Since Galaxy does not expect to find the Interactive Tools Session Map in this database, storing it there can lead to errors.</p>
+  </blockquote>
+
+  <p><br /></p>
+
+  <ol>
+    <li>
+      <p><strong>On your database server</strong>, access PostgresSQL and create a <code class="language-plaintext highlighter-rouge">gxitproxy</code> database to store the Interactive Tools Session Map. For simplicity, the same user that operates on the Galaxy main database, typically named <code class="language-plaintext highlighter-rouge">galaxy</code>, is also going to operate on this one and will own the new database.</p>
+
+      <blockquote class="code-in">
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># one-liner that connects to Postgres, creates the database and assigns ownership</span>
+<span class="nb">sudo</span> <span class="nt">-u</span> postgres createdb <span class="nt">-O</span> galaxy gxitproxy
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+    <li>
+      <p>Connect to the <code class="language-plaintext highlighter-rouge">gxitproxy</code> database as <code class="language-plaintext highlighter-rouge">galaxy</code>.</p>
+
+      <blockquote class="code-in">
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo</span> <span class="nt">-iu</span> galaxy psql <span class="nt">-d</span> gxitproxy
+</code></pre></div>        </div>
+      </blockquote>
+
+      <blockquote class="code-out">
+        <div class="box-title code-out-title" id="code-out-sql"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: SQL</div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>psql (10.12 (Ubuntu 10.12-0ubuntu0.18.04.1))
+Type "help" for help.
+
+gxitproxy=#
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+    <li>
+      <p>Create a <code class="language-plaintext highlighter-rouge">gxitproxy</code> table in the new database.</p>
+
+      <blockquote class="code-in">
+        <div class="box-title code-in-title" id="code-in-sql"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: SQL</div>
+        <div data-cmd="true" class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">IF</span> <span class="k">NOT</span> <span class="k">EXISTS</span> <span class="n">gxitproxy</span> <span class="p">(</span><span class="k">key</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="k">key_type</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="n">token</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="k">host</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="n">port</span> <span class="nb">INTEGER</span><span class="p">,</span> <span class="n">info</span> <span class="nb">TEXT</span><span class="p">,</span> <span class="k">PRIMARY</span> <span class="k">KEY</span> <span class="p">(</span><span class="k">key</span><span class="p">,</span> <span class="k">key_type</span><span class="p">));</span>
+</code></pre></div>        </div>
+      </blockquote>
+
+      <blockquote class="code-out">
+        <div class="box-title code-out-title" id="code-out-sql-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: SQL</div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE TABLE
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+    <li>
+      <p>This is enough to let Galaxy and the Interactive Tool Proxy store the Interactive Tools Session Map in PostgreSQL. But there is a catch: when the Interactive Tool Proxy uses SQLite, it knows the database has changed because it watches the file for changes. When using Postgres, this mechanism is not available. By default, the proxy simply polls the database at regular intervals. To let the user access interactive tools as fast as possible, the proxy can also be notified of updates via <a href="https://www.postgresql.org/docs/16/libpq-notify.html">PostgreSQL asynchronous notifications</a>. To enable them, you have to create a PostgreSQL trigger that sends a NOTIFY message to the channel <code class="language-plaintext highlighter-rouge">gxitproxy</code> every time the table <code class="language-plaintext highlighter-rouge">gxitproxy</code> changes.</p>
+
+      <p>Run the following commands to create to create a function that sends a NOTIFY message to the channel <code class="language-plaintext highlighter-rouge">gxitproxy</code> and a trigger that runs the function every time the table <code class="language-plaintext highlighter-rouge">gxitproxy</code> changes.</p>
+
+      <blockquote class="code-in">
+        <div class="box-title code-in-title" id="code-in-sql-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: SQL</div>
+        <div data-cmd="true" class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">OR</span> <span class="k">REPLACE</span> <span class="k">FUNCTION</span> <span class="n">notify_gxitproxy</span><span class="p">()</span>
+<span class="k">RETURNS</span> <span class="k">trigger</span> <span class="k">AS</span> <span class="err">$$</span>
+<span class="k">BEGIN</span>
+  <span class="n">PERFORM</span> <span class="n">pg_notify</span><span class="p">(</span><span class="s1">'gxitproxy'</span><span class="p">,</span> <span class="s1">'Table "gxitproxy" changed'</span><span class="p">);</span>
+  <span class="k">RETURN</span> <span class="k">NEW</span><span class="p">;</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="err">$$</span> <span class="k">LANGUAGE</span> <span class="n">plpgsql</span><span class="p">;</span>
+
+<span class="k">CREATE</span> <span class="k">TRIGGER</span> <span class="n">gxitproxy_notify</span>
+<span class="k">AFTER</span> <span class="k">INSERT</span> <span class="k">OR</span> <span class="k">UPDATE</span> <span class="k">OR</span> <span class="k">DELETE</span> <span class="k">ON</span> <span class="n">gxitproxy</span>
+<span class="k">FOR</span> <span class="k">EACH</span> <span class="k">ROW</span> <span class="k">EXECUTE</span> <span class="k">FUNCTION</span> <span class="n">notify_gxitproxy</span><span class="p">();</span>
+</code></pre></div>        </div>
+      </blockquote>
+
+      <blockquote class="code-out">
+        <div class="box-title code-out-title" id="code-out-sql-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: SQL</div>
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CREATE FUNCTION
+CREATE TRIGGER
+</code></pre></div>        </div>
+      </blockquote>
+    </li>
+  </ol>
+
+</blockquote>
+
+<p>The next step is configuring Galaxy and the Interactive Tool Proxy to use the new database.</p>
+
+<blockquote class="notranslate hands_on">
+  <div class="box-title hands-on-title" id="hands-on-configure-galaxy-and-the-interactive-tool-proxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configure Galaxy and the Interactive Tool Proxy</div>
+
+  <ol>
+    <li>
+      <p>Adjust your <code class="language-plaintext highlighter-rouge">group_vars/galaxyservers.yml</code> file as follows.</p>
+
+      <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># ... existing configuration options ... #</span>
+
+<span class="na">galaxy_config</span><span class="pi">:</span>
+  <span class="na">galaxy</span><span class="pi">:</span>
+    <span class="c1"># ... existing configuration options in the `galaxy` section ...</span>
+    <span class="c1"># interactivetools_map: "{{ gie_proxy_sessions_path }}"  # comment, remove or leave this line in place (it will be overridden by the option below)</span>
+    <span class="na">interactivetoolsproxy_map</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s">gie_proxy_sessions_path</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="c1"># ... other existing configuration options in the `galaxy` section ...</span>
+
+<span class="c1"># ... other existing configurations ... #</span>
+
+<span class="na">gie_proxy_sessions_path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">postgresql:///gxitproxy?host=/var/run/postgresql"</span>
+</code></pre></div>      </div>
+    </li>
+    <li>
+      <p>Run the playbook:</p>
+
+      <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
+</code></pre></div>      </div>
+    </li>
+  </ol>
+
+</blockquote>
+
+<p>That’s it, once the playbook run is complete, both Galaxy and the Interactive Tools Proxy will be storing the Interactive Tools Session Map in PostgreSQL.</p>
+
                 </section>
 
                 <section aria-label="Tutorial Footer, Feedback, Citation" id="tutorial-footer">
@@ -3546,7 +3747,7 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/galaxy/var/interactivetools
                 <p>
                     <ol>
                         <li id="citation-text">
-                            Nate Coraor, Simon Gladman, Helena Rasche, Anthony Bretaudeau,  <b>Galaxy Interactive Tools (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html">https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html</a> Online; accessed TODAY
+                            Nate Coraor, Simon Gladman, Helena Rasche, Anthony Bretaudeau, José Manuel Domínguez,  <b>Galaxy Interactive Tools (Galaxy Training Materials)</b>. <a href="https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html">https://training.galaxyproject.org/training-material/topics/admin/tutorials/interactive-tools/tutorial.html</a> Online; accessed TODAY
                         </li>
                         <li>
                         Hiltemann, Saskia, Rasche, Helena et al., 2023 <b>Galaxy Training: A Powerful Framework for Teaching!</b> PLOS Computational Biology <a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010752">10.1371/journal.pcbi.1010752</a>
@@ -3572,7 +3773,7 @@ Feb 14 17:38:49 gcc-4 node[3679]: Watching path /srv/galaxy/var/interactivetools
 
 
 <code id="citation-code">@misc{admin-interactive-tools,
-author = "Nate Coraor and Simon Gladman and Helena Rasche and Anthony Bretaudeau",
+author = "Nate Coraor and Simon Gladman and Helena Rasche and Anthony Bretaudeau and José Manuel Domínguez",
 	title = "Galaxy Interactive Tools (Galaxy Training Materials)",
 	year = "",
 	month = "",
@@ -3752,7 +3953,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/24a3de229ce451411075cfc39c9f65a2cf7f4321">24a3de2</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/397b7dda8ab49e32562eb85b64b840d4bbc32ad3">397b7dd</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
@@ -3778,6 +3979,8 @@ tools: []
 
         <script  async defer src='/training-material/assets/js/bundle.main.40d4e218.js'></script>
 
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 	
 	
 
