@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@83910a71f9ca0b75b36ffccf47f7952b8fb9af54",
+		release: "galaxy-training-network@1a798b13b88831065e650b294866feeab9587183",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Neoantigen 5: Variant Annotation">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-01-14 14:58:39 +0000">
+<meta name="DC.date" content="2025-02-10 18:50:31 +0000">
 <meta name="DC.creator" content="Subina Mehta">
 <meta name="DC.creator" content="Katherine Do">
 <meta name="DC.creator" content="James Johnson"><meta name="description" content="Training material for proteomics workflows in Galaxy">
@@ -190,7 +190,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-01-14 14:58:39 +0000",
+  "dateModified": "2025-02-10 18:50:31 +0000",
   "datePublished": "2025-01-14 14:58:39 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -252,7 +252,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Neoantigen 5: Variant Annotation",
   "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/neoantigen-5-variant-annotation/tutorial.html",
-  "version": 1,
+  "version": 2,
   "timeRequired": "PT3H",
   "teaches": "- Identify potential neoantigens from sequencing data.\n- Annotate somatic mutations and predict peptide sequences.\n- Predict MHC binding affinities for neoantigens.\n- Interpret data using bioinformatics tools for cancer immunotherapy applications.",
   "keywords": [
@@ -1007,7 +1007,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Jan 14, 2025 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 14, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 10, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1023,7 +1023,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 1 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
 
     </blockquote>
     </section>
@@ -1327,7 +1327,7 @@ This step extracts information about novel peptides from Frapipe, which primaril
           </ul>
         </li>
         <li><em>“SQL Query to generate tabular output”</em>:
-          <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="n">t1</span><span class="p">.</span><span class="n">c4</span> <span class="o">*</span> <span class="mi">3</span> <span class="k">AS</span> <span class="n">c2_multiplied</span><span class="p">,</span> <span class="n">t1</span><span class="p">.</span><span class="n">c5</span> <span class="o">*</span> <span class="mi">3</span> <span class="k">AS</span> <span class="n">c3_multiplied</span> <span class="k">FROM</span> <span class="n">t1</span>
+          <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">t1</span><span class="p">.</span><span class="o">*</span><span class="p">,</span> <span class="p">(</span><span class="n">t1</span><span class="p">.</span><span class="n">c4</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span> <span class="k">AS</span> <span class="n">c2_multiplied</span><span class="p">,</span> <span class="n">t1</span><span class="p">.</span><span class="n">c5</span> <span class="o">*</span> <span class="mi">3</span> <span class="k">AS</span> <span class="n">c3_multiplied</span> <span class="k">FROM</span> <span class="n">t1</span>
 </code></pre></div>          </div>
         </li>
         <li><em>“include query result column headers”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
@@ -2013,7 +2013,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/83910a71f9ca0b75b36ffccf47f7952b8fb9af54">83910a7</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/1a798b13b88831065e650b294866feeab9587183">1a798b1</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
