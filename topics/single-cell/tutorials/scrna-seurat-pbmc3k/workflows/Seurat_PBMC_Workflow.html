@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@397b7dda8ab49e32562eb85b64b840d4bbc32ad3",
+		release: "galaxy-training-network@ae9d750ff4d4c69ea19d387b01201377aa82bb0b",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -265,9 +265,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffd5e0; --color-darker: #ffb1c8; --color-dimmed: #ffc3d4;">name:singlecell</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffb9cd; --color-darker: #ff96b7; --color-dimmed: #ffa8c2;">name:singlecell</div>
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #00f9f1; --color-darker: #00ded7; --color-dimmed: #00ebe4;">name:seurat</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #00e3dc; --color-darker: #00cac4; --color-dimmed: #00d7d0;">name:seurat</div>
 			
 			</br>
 			
@@ -338,13 +338,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Australia</a></li>
-					
-					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy France</a></li>
+					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Europe</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Main</a></li>
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Europe</a></li>
+					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Australia</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy France</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Import to another server (≥23.0+ only!)</a>
@@ -368,9 +368,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   2 -->|output| 4;
   1 -->|output| 4;
   0 -->|output| 4;
-  3fa9426b-2e2e-4ade-aec6-802024b637a5["Output\nInput 3k PBMC"];
-  4 --> 3fa9426b-2e2e-4ade-aec6-802024b637a5;
-  style 3fa9426b-2e2e-4ade-aec6-802024b637a5 stroke:#2c3143,stroke-width:4px;
+  766ebd3b-94ef-43a2-a57e-e0df5cb53a02["Output\nInput 3k PBMC"];
+  4 --> 766ebd3b-94ef-43a2-a57e-e0df5cb53a02;
+  style 766ebd3b-94ef-43a2-a57e-e0df5cb53a02 stroke:#2c3143,stroke-width:4px;
   5["Seurat Data Management"];
   4 -->|rds_out| 5;
   6["Mitochondrial Annotations"];
@@ -395,9 +395,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   14 -->|rds_out| 15;
   16["Preprocessed Data"];
   15 -->|rds_out| 16;
-  3f45343a-1926-4da9-811f-41084b0ecbe8["Output\nPreprocessed Data"];
-  16 --> 3f45343a-1926-4da9-811f-41084b0ecbe8;
-  style 3f45343a-1926-4da9-811f-41084b0ecbe8 stroke:#2c3143,stroke-width:4px;
+  493d9a38-56a5-4609-be93-eb1159d8c2af["Output\nPreprocessed Data"];
+  16 --> 493d9a38-56a5-4609-be93-eb1159d8c2af;
+  style 493d9a38-56a5-4609-be93-eb1159d8c2af stroke:#2c3143,stroke-width:4px;
   17["Seurat Visualize"];
   16 -->|rds_out| 17;
   18["PCA Results"];
@@ -440,9 +440,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   28 -->|rds_out| 36;
   37["Annotated Clusters"];
   28 -->|rds_out| 37;
-  3477d6a9-804c-4304-80bf-2ebc29fbbbd8["Output\nAnnotated Clusters"];
-  37 --> 3477d6a9-804c-4304-80bf-2ebc29fbbbd8;
-  style 3477d6a9-804c-4304-80bf-2ebc29fbbbd8 stroke:#2c3143,stroke-width:4px;
+  ba354290-da4d-48b8-b7c2-59b4aeda295a["Output\nAnnotated Clusters"];
+  37 --> ba354290-da4d-48b8-b7c2-59b4aeda295a;
+  style ba354290-da4d-48b8-b7c2-59b4aeda295a stroke:#2c3143,stroke-width:4px;
   38["DE Markers Tabular"];
   32 -->|markers_tabular| 38;
   39["Seurat Visualize"];
@@ -452,9 +452,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   37 -->|rds_out| 40;
   41["Input DE Markers"];
   38 -->|tabular| 41;
-  45863e42-81d0-427f-a9bb-6608dca5361a["Output\nInput DE Markers"];
-  41 --> 45863e42-81d0-427f-a9bb-6608dca5361a;
-  style 45863e42-81d0-427f-a9bb-6608dca5361a stroke:#2c3143,stroke-width:4px;
+  ef9ce2b0-0653-449c-b8d2-5cfb61431534["Output\nInput DE Markers"];
+  41 --> ef9ce2b0-0653-449c-b8d2-5cfb61431534;
+  style ef9ce2b0-0653-449c-b8d2-5cfb61431534 stroke:#2c3143,stroke-width:4px;
   42["Seurat Visualize"];
   41 -->|out_file1| 42;
   37 -->|rds_out| 42;</pre>
@@ -773,7 +773,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/397b7dda8ab49e32562eb85b64b840d4bbc32ad3">397b7dd</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/ae9d750ff4d4c69ea19d387b01201377aa82bb0b">ae9d750</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
