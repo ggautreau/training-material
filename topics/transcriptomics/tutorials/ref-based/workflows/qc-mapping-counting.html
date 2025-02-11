@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@ae9d750ff4d4c69ea19d387b01201377aa82bb0b",
+		release: "galaxy-training-network@56a7d2e943bc611466a9d9eccf5718e289fe323d",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -257,14 +257,14 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span>
 			<b>Version</b>
 			<br/>
-			10
+			11
 
 			<br/>
 
 			<i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span>
 			<b>Last updated</b>
 			<br/>
-			Oct 27, 2024
+			Feb 11, 2025
 
 			<br/>
 
@@ -283,7 +283,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #e0cf00; --color-darker: #c8b800; --color-dimmed: #d4c300;">transcriptomics</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #cebe00; --color-darker: #b8a900; --color-dimmed: #c3b300;">transcriptomics</div>
 			
 			</br>
 			
@@ -352,9 +352,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting">Galaxy France</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting">Galaxy Europe</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting">Galaxy France</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting">Galaxy Main</a></li>
 					
@@ -374,12 +374,12 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   style 0 stroke:#2c3143,stroke-width:4px;
   1["ℹ️ Input Dataset\nDrosophila_melanogaster.BDGP6.32.109_UCSC.gtf.gz"];
   style 1 stroke:#2c3143,stroke-width:4px;
-  2["🛠️ Subworkflow\nFastQC"];
+  2["🛠️ Subworkflow\nFalco/MultiQC"];
   style 2 fill:#edd,stroke:#900,stroke-width:4px;
   0 -->|output| 2;
-  5f7652f1-e225-4ad1-8dbd-4d21544edb89["Output\nmultiqc_fastqc_html"];
-  2 --> 5f7652f1-e225-4ad1-8dbd-4d21544edb89;
-  style 5f7652f1-e225-4ad1-8dbd-4d21544edb89 stroke:#2c3143,stroke-width:4px;
+  cda73d3b-b2c9-4393-b9f6-2fe347761aa3["Output\nmultiqc_falco_html"];
+  2 --> cda73d3b-b2c9-4393-b9f6-2fe347761aa3;
+  style cda73d3b-b2c9-4393-b9f6-2fe347761aa3 stroke:#2c3143,stroke-width:4px;
   3["🛠️ Subworkflow\ncutadapt"];
   style 3 fill:#edd,stroke:#900,stroke-width:4px;
   0 -->|output| 3;
@@ -493,8 +493,8 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				
 				<tr>
 					<td></td>
-					<td>FastQC</td>
-					<td></td>
+					<td>QC-Falco-MultiQC</td>
+					<td>Falco/MultiQC</td>
 				</tr>
 				
 				<tr>
@@ -586,18 +586,6 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			</tr>
 			
 			<tr>
-				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0">toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0</a></td>
-				<td>
-					
-					
-					<a href="https://toolshed.g2.bx.psu.edu/view/devteam/fastqc/3d0c7bdf12f5">
-						View in ToolShed
-					</a>
-					
-				</td>
-			</tr>
-			
-			<tr>
 				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.4">toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.4</a></td>
 				<td>
 					
@@ -615,6 +603,18 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					
 					
 					<a href="https://toolshed.g2.bx.psu.edu/view/devteam/samtools_idxstats/7def34e6cf4d">
+						View in ToolShed
+					</a>
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0">toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0</a></td>
+				<td>
+					
+					
+					<a href="https://toolshed.g2.bx.psu.edu/view/iuc/falco/959a14c1f2dd">
 						View in ToolShed
 					</a>
 					
@@ -663,6 +663,18 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					
 					
 					<a href="https://toolshed.g2.bx.psu.edu/view/iuc/multiqc/abfd8a6544d7">
+						View in ToolShed
+					</a>
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0">toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</a></td>
+				<td>
+					
+					
+					<a href="https://toolshed.g2.bx.psu.edu/view/iuc/multiqc/f7e2f1eb3a16">
 						View in ToolShed
 					</a>
 					
@@ -764,6 +776,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					</tr>
 				</thead>
 				<tbody>
+					
+					<tr>
+						<td>21</td>
+						<td><a href="https://github.com/galaxyproject/training-material/commit/f81845b855f8e8933f3b0130904fd07603a71f68">f81845b85</a></td>
+						<td>2025-01-21 10:07:17</td>
+						<td>Use Falco instead of FastQC in ref-based tutorial</td>
+					</tr>
 					
 					<tr>
 						<td>20</td>
@@ -986,7 +1005,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/ae9d750ff4d4c69ea19d387b01201377aa82bb0b">ae9d750</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/56a7d2e943bc611466a9d9eccf5718e289fe323d">56a7d2e</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

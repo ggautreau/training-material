@@ -3,10 +3,10 @@ digraph main {
   edge [fontname="Atkinson Hyperlegible"];
   0[color=lightblue,label="ℹ️ Input Collection\nPaired list collection with PE fastqs"]
   1[color=lightblue,label="ℹ️ Input Dataset\nDrosophila_melanogaster.BDGP6.32.109_UCSC.gtf.gz"]
-  2[color=lightcoral,label="🛠️ Subworkflow\nFastQC"]
+  2[color=lightcoral,label="🛠️ Subworkflow\nFalco/MultiQC"]
   0 -> 2 [label="output"]
-  k5f7652f1e2254ad18dbd4d21544edb89[color=lightseagreen,label="Output\nmultiqc_fastqc_html"]
-  2 -> k5f7652f1e2254ad18dbd4d21544edb89
+  kcda73d3bb2c94393b9f62fe347761aa3[color=lightseagreen,label="Output\nmultiqc_falco_html"]
+  2 -> kcda73d3bb2c94393b9f62fe347761aa3
   3[color=lightcoral,label="🛠️ Subworkflow\ncutadapt"]
   0 -> 3 [label="output"]
   k41c7fbb5655b457c8ba70e2eeab3d7ee[color=lightseagreen,label="Output\nmultiqc_cutadapt_html"]

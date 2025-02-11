@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@ae9d750ff4d4c69ea19d387b01201377aa82bb0b",
+		release: "galaxy-training-network@56a7d2e943bc611466a9d9eccf5718e289fe323d",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -257,14 +257,14 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span>
 			<b>Version</b>
 			<br/>
-			5
+			6
 
 			<br/>
 
 			<i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span>
 			<b>Last updated</b>
 			<br/>
-			Oct 27, 2024
+			Feb 11, 2025
 
 			<br/>
 
@@ -283,7 +283,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #e0cf00; --color-darker: #c8b800; --color-dimmed: #d4c300;">transcriptomics</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #cebe00; --color-darker: #b8a900; --color-dimmed: #c3b300;">transcriptomics</div>
 			
 			</br>
 			
@@ -350,9 +350,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting-paired-and-single">Galaxy Main</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting-paired-and-single">Galaxy France</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting-paired-and-single">Galaxy Main</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-ref-based/versions/qc-mapping-counting-paired-and-single">Galaxy Australia</a></li>
 					
@@ -376,7 +376,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   style 2 stroke:#2c3143,stroke-width:4px;
   3["Cutadapt: remove bad quality bp"];
   0 -->|output| 3;
-  4["Flatten paired collection for FastQC"];
+  4["Flatten paired collection for Falco"];
   1 -->|output| 4;
   5["Cutadapt"];
   1 -->|output| 5;
@@ -390,7 +390,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   8["STAR: map single reads"];
   2 -->|output| 8;
   3 -->|out1| 8;
-  9["Merge fastqs for FastQC"];
+  9["Merge fastqs for Falco"];
   4 -->|output| 9;
   0 -->|output| 9;
   10["Merge Cutadapt reports"];
@@ -402,7 +402,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   12["count reads per gene for SR"];
   8 -->|mapped_reads| 12;
   2 -->|output| 12;
-  13["FastQC check read qualities"];
+  13["Falco"];
   9 -->|output| 13;
   14["Combine cutadapt results"];
   10 -->|output| 14;
@@ -435,9 +435,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   11 -->|signal_unique_str2| 20;
   21["Combine FastQC results"];
   13 -->|text_file| 21;
-  8d0ce9ee-e4e4-4c0c-8261-420ce756ecfd["Output\nmultiqc_fastqc_html"];
-  21 --> 8d0ce9ee-e4e4-4c0c-8261-420ce756ecfd;
-  style 8d0ce9ee-e4e4-4c0c-8261-420ce756ecfd stroke:#2c3143,stroke-width:4px;
+  791893e6-6e65-49fe-b71f-4a7b6482e0ce["Output\nmultiqc_falco_html"];
+  21 --> 791893e6-6e65-49fe-b71f-4a7b6482e0ce;
+  style 791893e6-6e65-49fe-b71f-4a7b6482e0ce stroke:#2c3143,stroke-width:4px;
   22["Combine STAR Results"];
   15 -->|output| 22;
   204e3f6c-6f54-46f0-b07c-1f31113265e7["Output\nmultiqc_star_html"];
@@ -579,7 +579,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine cutadapt results</td>
 				</tr>
@@ -597,19 +597,19 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine FastQC results</td>
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine STAR Results</td>
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Determine library strandness with STAR</td>
 				</tr>
@@ -657,25 +657,25 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine read asignments statistics</td>
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine read distribution on known features</td>
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine results on reads per chromosome</td>
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine results of duplicate reads</td>
 				</tr>
@@ -687,7 +687,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				</tr>
 				
 				<tr>
-					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</td>
+					<td>toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</td>
 					<td>MultiQC</td>
 					<td>Combine gene body coverage</td>
 				</tr>
@@ -752,18 +752,6 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			</tr>
 			
 			<tr>
-				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy0">toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy0</a></td>
-				<td>
-					
-					
-					<a href="https://toolshed.g2.bx.psu.edu/view/devteam/fastqc/5ec9f6bceaee">
-						View in ToolShed
-					</a>
-					
-				</td>
-			</tr>
-			
-			<tr>
 				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/3.1.1.0">toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/3.1.1.0</a></td>
 				<td>
 					
@@ -781,6 +769,18 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					
 					
 					<a href="https://toolshed.g2.bx.psu.edu/view/devteam/samtools_idxstats/fa5d3e61e429">
+						View in ToolShed
+					</a>
+					
+				</td>
+			</tr>
+			
+			<tr>
+				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0">toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0</a></td>
+				<td>
+					
+					
+					<a href="https://toolshed.g2.bx.psu.edu/view/iuc/falco/959a14c1f2dd">
 						View in ToolShed
 					</a>
 					
@@ -824,11 +824,11 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			</tr>
 			
 			<tr>
-				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1">toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1</a></td>
+				<td><a href="https://my.galaxy.training/?path=?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0">toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0</a></td>
 				<td>
 					
 					
-					<a href="https://toolshed.g2.bx.psu.edu/view/iuc/multiqc/abfd8a6544d7">
+					<a href="https://toolshed.g2.bx.psu.edu/view/iuc/multiqc/f7e2f1eb3a16">
 						View in ToolShed
 					</a>
 					
@@ -942,6 +942,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					</tr>
 				</thead>
 				<tbody>
+					
+					<tr>
+						<td>11</td>
+						<td><a href="https://github.com/galaxyproject/training-material/commit/f81845b855f8e8933f3b0130904fd07603a71f68">f81845b85</a></td>
+						<td>2025-01-21 10:07:17</td>
+						<td>Use Falco instead of FastQC in ref-based tutorial</td>
+					</tr>
 					
 					<tr>
 						<td>10</td>
@@ -1094,7 +1101,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/ae9d750ff4d4c69ea19d387b01201377aa82bb0b">ae9d750</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/56a7d2e943bc611466a9d9eccf5718e289fe323d">56a7d2e</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
