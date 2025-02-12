@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@85aa65ffd8fa2760e8610905d0d1223b73714daf",
+		release: "galaxy-training-network@b0a29bd2f1330381878ba1790833e056e5931d89",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -302,12 +302,12 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 					<li>
 						
 						
-						<a href="/training-material/topics/sequence-analysis">
-							Sequence analysis
+						<a href="/training-material/topics/assembly">
+							Assembly
 						</a>
 						/
-						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/tutorial.html">
-						Quality Control
+						<a href="/training-material//topics/assembly/tutorials/flye-assembly/tutorial.html">
+						Genome assembly using PacBio data
 						</a>
 						
 						
@@ -346,12 +346,34 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 					<li>
 						
 						
-						<a href="/training-material/topics/assembly">
-							Assembly
+						<a href="/training-material/topics/transcriptomics">
+							Transcriptomics
 						</a>
 						/
-						<a href="/training-material//topics/assembly/tutorials/flye-assembly/tutorial.html">
-						Genome assembly using PacBio data
+						<a href="/training-material//topics/transcriptomics/tutorials/full-de-novo/tutorial.html">
+						De novo transcriptome assembly, annotation, and differential expression analysis
+						</a>
+						
+						
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+						
+						
+					</li>
+				
+					
+					<li>
+						
+						
+						<a href="/training-material/topics/sequence-analysis">
+							Sequence analysis
+						</a>
+						/
+						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/tutorial.html">
+						Quality Control
 						</a>
 						
 						
@@ -408,56 +430,12 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 						
 					</li>
 				
-					
-					<li>
-						
-						
-						<a href="/training-material/topics/transcriptomics">
-							Transcriptomics
-						</a>
-						/
-						<a href="/training-material//topics/transcriptomics/tutorials/full-de-novo/tutorial.html">
-						De novo transcriptome assembly, annotation, and differential expression analysis
-						</a>
-						
-						
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-						
-						
-					</li>
-				
 				</ul>
 				
 
 				
 				<h3>Slides</h3>
 				<ul>
-				
-					
-					<li>
-						
-						
-						<a href="/training-material/topics/sequence-analysis">
-							Sequence analysis
-						</a>
-						/
-						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/slides.html">
-						Quality Control
-						</a>
-						
-						
-						
-						
-	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
-
-
-						
-						
-					</li>
 				
 					
 					<li>
@@ -491,6 +469,28 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 						/
 						<a href="/training-material//topics/assembly/tutorials/assembly-quality-control/slides.html">
 						Genome assembly quality control.
+						</a>
+						
+						
+						
+						
+	<abbr title="This person wrote the bulk of the training material, they may have done the analysis, built the workflow, and wrote the text themselves.">✍️</abbr>
+
+
+						
+						
+					</li>
+				
+					
+					<li>
+						
+						
+						<a href="/training-material/topics/sequence-analysis">
+							Sequence analysis
+						</a>
+						/
+						<a href="/training-material//topics/sequence-analysis/tutorials/quality-control/slides.html">
+						Quality Control
 						</a>
 						
 						
@@ -683,40 +683,40 @@ var topics = [
 
 	
 	
-	"Sequence analysis",
-
-	
-	
 	"Assembly",
 
 	
 	
 	"Assembly",
-
-	
-	
-	"Genome Annotation",
-
-	
-	
-	"Genome Annotation",
 
 	
 	
 	"Transcriptomics",
 
-
 	
 	
 	"Sequence analysis",
 
 	
 	
+	"Genome Annotation",
+
+	
+	
+	"Genome Annotation",
+
+
+	
+	
 	"Assembly",
 
 	
 	
 	"Assembly",
+
+	
+	
+	"Sequence analysis",
 
 ];
 
@@ -819,7 +819,7 @@ var chart2 = new Chart(ctx2, {
 
 
 <h3>Stats for materials contributed to by Erwan Corre</h3>
-<iframe plausible-embed src="https://plausible.galaxyproject.eu/training.galaxyproject.org?page=%7E/topics/sequence-analysis/tutorials/quality-control/tutorial.html|/topics/assembly/tutorials/assembly-quality-control/tutorial.html|/topics/assembly/tutorials/flye-assembly/tutorial.html|/topics/genome-annotation/tutorials/repeatmasker/tutorial.html|/topics/genome-annotation/tutorials/funannotate/tutorial.html|/topics/transcriptomics/tutorials/full-de-novo/tutorial.html|/topics/sequence-analysis/tutorials/quality-control/slides.html|/topics/assembly/tutorials/get-started-genome-assembly/slides.html|/topics/assembly/tutorials/assembly-quality-control/slides.html|/news/2021/12/01/assembly-annotation.html&embed=true&theme=system&background=transparent&period=12mo" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1800px;"></iframe>
+<iframe plausible-embed src="https://plausible.galaxyproject.eu/training.galaxyproject.org?page=%7E/topics/assembly/tutorials/flye-assembly/tutorial.html|/topics/assembly/tutorials/assembly-quality-control/tutorial.html|/topics/transcriptomics/tutorials/full-de-novo/tutorial.html|/topics/sequence-analysis/tutorials/quality-control/tutorial.html|/topics/genome-annotation/tutorials/repeatmasker/tutorial.html|/topics/genome-annotation/tutorials/funannotate/tutorial.html|/topics/assembly/tutorials/get-started-genome-assembly/slides.html|/topics/assembly/tutorials/assembly-quality-control/slides.html|/topics/sequence-analysis/tutorials/quality-control/slides.html|/news/2021/12/01/assembly-annotation.html&embed=true&theme=system&background=transparent&period=12mo" scrolling="no" frameborder="0" loading="lazy" style="width: 1px; min-width: 100%; height: 1800px;"></iframe>
 
         </div>
         <footer>
@@ -880,7 +880,7 @@ var chart2 = new Chart(ctx2, {
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/85aa65ffd8fa2760e8610905d0d1223b73714daf">85aa65f</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/b0a29bd2f1330381878ba1790833e056e5931d89">b0a29bd</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
