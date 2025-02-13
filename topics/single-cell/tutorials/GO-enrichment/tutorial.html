@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@362aab1aed572673e2f7d3499955c842dc1d4bf4",
+		release: "galaxy-training-network@6a1d5321ce9a42fac7ba3c72d6cf1ef2b020b741",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="GO Enrichment Analysis on Single-Cell RNA-Seq Data">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-13 09:44:22 +0000">
+<meta name="DC.date" content="2025-02-13 14:11:24 +0000">
 <meta name="DC.creator" content="Menna Gamal"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Single Cell / GO Enrichment Analysis on Single-Cell RNA-Seq Data / Hands-on: GO Enrichment Analysis on Single-Cell RNA-Seq Data">
@@ -188,7 +188,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-13 09:44:22 +0000",
+  "dateModified": "2025-02-13 14:11:24 +0000",
   "datePublished": "2024-09-17 07:09:29 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -250,15 +250,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "GO Enrichment Analysis on Single-Cell RNA-Seq Data",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/GO-enrichment/tutorial.html",
-  "version": 5,
+  "version": 6,
   "timeRequired": "PT3H",
-  "teaches": "- Understand the Role of GO Enrichment in Single-Cell Analysis.\n- Use marker genes from different cell clusters or conditions for GO enrichment analysis.\n- Compare enrichment across experimental conditions (e.g., wild type vs. knockout) to uncover functional changes associated with genetic or environmental perturbations.\n- Link GO enrichment results with previously annotated cell clusters, providing a clearer picture of the functional roles of different cell populations.",
+  "teaches": "- Understand the role of GO Enrichment in Single-Cell Analysis.\n- Use marker genes from different cell clusters or conditions for GO enrichment analysis.\n- Compare enrichment across experimental conditions (e.g., wild type vs. knockout) to uncover functional changes associated with genetic or environmental perturbations.\n- Link GO enrichment results with previously annotated cell clusters, providing a clearer picture of the functional roles of different cell populations.",
   "keywords": [
     "Single Cell",
     "single cell",
     "GO enrichment"
   ],
-  "description": "## Abstract\n\nIn the tutorial [Filter, plot and explore single-cell RNA-seq data with Scanpy](http://localhost:4000/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html), we took an important step in our single-cell RNA sequencing analysis by identifying marker genes for each of the clusters in our dataset. These marker genes are crucial, as they help us distinguish between different cell types and states, giving us a clearer picture of the cellular diversity within our samples.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - What is Gene Ontology (GO) enrichment analysis, and why should I perform it on my marker genes?\n - How can I use GO enrichment analysis to better understand the biological functions of the genes in my clusters?\n - Can GO enrichment analysis help me confirm that my clusters represent distinct cell types or states?\n - How can I visualize my GO enrichment results to make them easier to understand and interpret?\n\n\n## Learning Objectives\n\n- Understand the Role of GO Enrichment in Single-Cell Analysis.\n- Use marker genes from different cell clusters or conditions for GO enrichment analysis.\n- Compare enrichment across experimental conditions (e.g., wild type vs. knockout) to uncover functional changes associated with genetic or environmental perturbations.\n- Link GO enrichment results with previously annotated cell clusters, providing a clearer picture of the functional roles of different cell populations.\n\n",
+  "description": "## Abstract\n\nIn the tutorial [Filter, plot and explore single-cell RNA-seq data with Scanpy](http://localhost:4000/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html), we took an important step in our single-cell RNA sequencing analysis by identifying marker genes for each of the clusters in our dataset. These marker genes are crucial, as they help us distinguish between different cell types and states, giving us a clearer picture of the cellular diversity within our samples.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - What is Gene Ontology (GO) enrichment analysis, and why should I perform it on my marker genes?\n - How can I use GO enrichment analysis to better understand the biological functions of the genes in my clusters?\n - Can GO enrichment analysis help me confirm that my clusters represent distinct cell types or states?\n - How can I visualize my GO enrichment results to make them easier to understand and interpret?\n\n\n## Learning Objectives\n\n- Understand the role of GO Enrichment in Single-Cell Analysis.\n- Use marker genes from different cell clusters or conditions for GO enrichment analysis.\n- Compare enrichment across experimental conditions (e.g., wild type vs. knockout) to uncover functional changes associated with genetic or environmental perturbations.\n- Link GO enrichment results with previously annotated cell clusters, providing a clearer picture of the functional roles of different cell populations.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -612,6 +612,73 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
           "type": "project"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/nsoranzo/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/nsoranzo/",
+      "name": "Nicola Soranzo",
+      "image": "https://avatars.githubusercontent.com/nsoranzo",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "@type": "Organization"
+          },
+          "id": "https://training.galaxyproject.org",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "legalName": "Galaxy Training Network",
+          "alternateName": "GTN",
+          "url": "https://training.galaxyproject.org",
+          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
+          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
+          "keywords": [
+            "galaxy",
+            "bioinformatics",
+            "training",
+            "fair",
+            "accessible"
+          ],
+          "status": "active",
+          "foundingDate": "2015-06-29",
+          "socialMedia": "https://mstdn.science/@gtn",
+          "type": "project"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/earlham/",
+          "name": "Earlham Institute",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://www.earlham.ac.uk/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-europe/",
+          "name": "ELIXIR Europe",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://elixir-europe.org"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0003-3627-5340",
+      "orcid": "https://orcid.org/0000-0003-3627-5340"
     },
     {
       "@context": "https://schema.org",
@@ -1071,7 +1138,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
     Wendi Bacon</a><a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge contributor-bgruening"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/bgruening?s=36" alt="Björn Grüning avatar" width="36" class="avatar" />
     Björn Grüning</a><a href="/training-material/hall-of-fame/pcm32/" class="contributor-badge contributor-pcm32"><img src="https://avatars.githubusercontent.com/pcm32?s=36" alt="Pablo Moreno avatar" width="36" class="avatar" />
-    Pablo Moreno</a></td>
+    Pablo Moreno</a><a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge contributor-nsoranzo"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nsoranzo?s=36" alt="Nicola Soranzo avatar" width="36" class="avatar" />
+    Nicola Soranzo</a></td>
 	</tr>
 	
 
@@ -1122,7 +1190,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <strong><i class="fas fa-bullseye" aria-hidden="true"></i> Objectives: </strong>
         <ul>
         
-        <li><p>Understand the Role of GO Enrichment in Single-Cell Analysis.</p>
+        <li><p>Understand the role of GO Enrichment in Single-Cell Analysis.</p>
 </li>
         
         <li><p>Use marker genes from different cell clusters or conditions for GO enrichment analysis.</p>
@@ -1399,7 +1467,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (1 recent ratings, 1 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 5 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 6 </div>
 
     </blockquote>
     </section>
@@ -1416,7 +1484,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 <section aria-label="Tutorial Content" id="tutorial-content">
                 <p>In the tutorial <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">Filter, plot and explore single-cell RNA-seq data with Scanpy</a>, we took an important step in our single-cell RNA sequencing analysis by identifying marker genes for each of the clusters in our dataset. These marker genes are crucial, as they help us distinguish between different cell types and states, giving us a clearer picture of the cellular diversity within our samples.
 However, simply identifying marker genes is just the beginning. To truly understand what makes each cluster unique, we need to dive deeper into the biological functions these genes are involved in. This is where Gene Ontology (GO) enrichment analysis comes into play.
-We will perform GO enrichment analysis as a type of over-representation analysis (ORA), ORA is a statistical method that determines whether genes from pre-defined sets (e.g. genes belonging to a specific GO term) are expressed more than would be expected in a subset of your data. The most commonly used statistical tests are Fischer’s exact test and hypergeometric test, more details about them are explained in the tutorial slides.</p>
+We will perform GO enrichment analysis as a type of over-representation analysis (ORA). ORA is a statistical method that determines whether genes from pre-defined sets (e.g. genes belonging to a specific GO term) are expressed more than would be expected in a subset of your data. The most commonly used statistical tests are Fischer’s exact test and hypergeometric test, more details about them are explained in the <a href="/training-material/topics/single-cell/tutorials/GO-enrichment/slides.html">tutorial slides</a>.</p>
 
 <blockquote class="agenda">
   <div class="box-title agenda-title" id="agenda">Agenda</div>
@@ -1469,7 +1537,7 @@ We will perform GO enrichment analysis as a type of over-representation analysis
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-concept-behind-go-enrichment-analysis"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Concept behind GO Enrichment Analysis</div>
 
-  <p>The goal of GO enrichment analysis is to interpret the biological significance of long lists of <strong>marker genes</strong>. By summarizing these genes into a shorter list of enriched <strong>GO terms</strong>. The analysis works by comparing each GO term between your list of marker genes and a <strong>background gene set</strong>. Statistical tests are then used to calculate a p-value that indicates whether a particular GO term is significantly enriched in the marker gene list compared to the background.</p>
+  <p>The goal of GO enrichment analysis is to interpret the biological significance of long lists of <strong>marker genes</strong> by summarizing these genes into a shorter list of enriched <strong>GO terms</strong>. The analysis works by comparing each GO term between your list of marker genes and a <strong>background gene set</strong>. Statistical tests are then used to calculate a p-value that indicates whether a particular GO term is significantly enriched in the marker gene list compared to the background.</p>
 </blockquote>
 
 <h1 id="get-data">Get data</h1>
@@ -1493,7 +1561,13 @@ We will perform GO enrichment analysis as a type of over-representation analysis
   <div class="box-title hands-on-title" id="hands-on-data-upload-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Data Upload from Zenodo</div>
 
   <ol>
-    <li>Create a new history for this tutorial</li>
+    <li>
+      <p>Create a new history for this tutorial</p>
+
+      <!--SNIPPET-->
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-creating-a-new-history"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-creating-a-new-history" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: Creating a new history</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To create a new history simply click the <i class="fas fa-plus" aria-hidden="true"></i><span class="visually-hidden">new-history</span> icon at the top of the history panel:</p>   <p><img src="/training-material/shared/images/history_create_new.svg" alt="UI for creating new history" /></p>   <!-- the original drawing can be found here https://docs.google.com/drawings/d/1cCBrLAo4kDGic5QyB70rRiWJAKTenTU8STsKDaLcVU8/edit?usp=sharing --> </blockquote>
+      <p><!--END_SNIPPET--></p>
+    </li>
     <li>
       <p>Import the files from <a href="https://zenodo.org/records/13461890">Zenodo</a></p>
 
@@ -2084,7 +2158,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/362aab1aed572673e2f7d3499955c842dc1d4bf4">362aab1</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/6a1d5321ce9a42fac7ba3c72d6cf1ef2b020b741">6a1d532</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
