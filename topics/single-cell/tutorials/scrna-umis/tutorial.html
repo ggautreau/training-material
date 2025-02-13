@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@6a1d5321ce9a42fac7ba3c72d6cf1ef2b020b741",
+		release: "galaxy-training-network@305f83e43a97478b187b31654c5d8741338f4b16",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Understanding Barcodes">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-06-14 09:56:50 +0000">
+<meta name="DC.date" content="2025-02-13 15:21:28 +0000">
 <meta name="DC.creator" content="Mehmet Tekman"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Single Cell / Understanding Barcodes / Hands-on: Understanding Barcodes">
@@ -188,7 +188,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-06-14 09:56:50 +0000",
+  "dateModified": "2025-02-13 15:21:28 +0000",
   "datePublished": "2019-02-20 18:33:11 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -250,7 +250,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Understanding Barcodes",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-umis/tutorial.html",
-  "version": 7,
+  "version": 8,
   "timeRequired": "PT2H",
   "teaches": "- Demultiplex FASTQ data via UMI-tools\n- Understand and validate the extraction of barcodes",
   "keywords": [
@@ -353,6 +353,49 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     }
   ],
   "contributor": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/hexhowells/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/hexhowells/",
+      "name": "Morgan Howells",
+      "image": "https://avatars.githubusercontent.com/hexhowells",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "@type": "Organization"
+          },
+          "id": "https://training.galaxyproject.org",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "legalName": "Galaxy Training Network",
+          "alternateName": "GTN",
+          "url": "https://training.galaxyproject.org",
+          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
+          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
+          "keywords": [
+            "galaxy",
+            "bioinformatics",
+            "training",
+            "fair",
+            "accessible"
+          ],
+          "status": "active",
+          "foundingDate": "2015-06-29",
+          "socialMedia": "https://mstdn.science/@gtn",
+          "type": "project"
+        }
+      ],
+      "identifier": "https://orcid.org/0009-0008-9422-6380",
+      "orcid": "https://orcid.org/0009-0008-9422-6380"
+    },
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -996,6 +1039,21 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "mentions": [
     {
       "@type": "Thing",
+      "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-umis/workflows/",
+      "name": "Associated Workflows"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/fastqc",
+      "name": "FastQC"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/umi-tools",
+      "name": "UMI-tools"
+    },
+    {
+      "@type": "Thing",
       "url": "https://bio.tools/tool/biopython",
       "name": "Biopython"
     },
@@ -1202,6 +1260,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 
 	
+	<tr>
+		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/hexhowells/" class="contributor-badge contributor-hexhowells"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexhowells?s=36" alt="Morgan Howells avatar" width="36" class="avatar" />
+    Morgan Howells</a></td>
+	</tr>
+	
 
 	
 
@@ -1301,6 +1366,15 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
             
 
             
+                <li class="btn btn-default supporting_material">
+
+
+    <a class="btn btn-default topic-icon" href="/training-material/topics/single-cell/tutorials/scrna-umis/workflows/" title="Understanding Barcodes workflows">
+        <i class="fas fa-share-alt" aria-hidden="true"></i>&nbsp;Workflows
+    </a>
+
+</li>
+            
 
             
 
@@ -1395,8 +1469,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	</li>
     
 	<li>
-		<a class="dropdown-item" href="https://usegalaxy.org" title="">
-			UseGalaxy.org (Main) <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+		<a class="dropdown-item" href="https://usegalaxy.fr/" title="">
+			UseGalaxy.fr <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
 		</a>
 	</li>
     
@@ -1406,12 +1480,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 		</a>
 	</li>
     
-    
-	<li>
-		<a class="dropdown-item" href="https://usegalaxy.no/" title="">
-			UseGalaxy.no <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr>
-		</a>
-	</li>
     
     
     
@@ -1426,8 +1494,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	</li>
     
 	<li>
-		<a class="dropdown-item" href="https://usegalaxy.fr/" title="">
-			UseGalaxy.fr
+		<a class="dropdown-item" href="https://usegalaxy.no/" title="">
+			UseGalaxy.no
+		</a>
+	</li>
+    
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.org" title="">
+			UseGalaxy.org (Main)
 		</a>
 	</li>
     
@@ -1441,7 +1515,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 20, 2019 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jun 14, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 13, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1461,7 +1535,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (3 recent ratings, 24 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 7 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 8 </div>
 
     </blockquote>
     </section>
@@ -1488,8 +1562,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Barcodes come in a variety of formats, and in this tutorial we will be looking at the CEL-Seq2 protocol <span class="citation"><a href="#Hashimshony2016">Hashimshony <i>et al.</i> 2016</a></span> used in droplet-based single-cell RNA-seq.</p>
 
 <h2 id="the-cel-seq2-protocol">The CEL-Seq2 Protocol</h2>
-
-<p><small><a href="javascript:window.history.back()">Back to previous</a></small></p>
 
 <p>CEL-Seq2 is a paired-end protocol, meaning that two primers bind to opposite ends of a cDNA strand in order to sequence. Each primer has a specific role.</p>
 
@@ -1851,7 +1923,7 @@ J00182:75:HTKJNBBXX:2:1115:8501:46961
   <ol>
     <li>Extracting our 4 reads
       <ul>
-        <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/peterjc/seq_filter_by_id/seq_filter_by_id/0.2.7" title="Filter sequences by ID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter sequences by ID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.7)</span> with the following parameters:
+        <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/peterjc/seq_filter_by_id/seq_filter_by_id/0.2.9" title="Filter sequences by ID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter sequences by ID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.9)</span> with the following parameters:
           <ul>
             <li><strong>Sequence file to be filtered</strong>
               <ul>
@@ -1883,16 +1955,20 @@ J00182:75:HTKJNBBXX:2:1115:8501:46961
     </li>
     <li>Viewing our 4 reads side-by-side
       <ul>
-        <li>Activate the <strong>Scratchbook</strong> by clicking on the <strong>Enable/Disable Scratchbook</strong> icon on the main top toolbar</li>
+        <li>Activate the <strong>Window Manager</strong> by clicking on the <strong>Enable/Disable Window Manager</strong> icon on the main top toolbar</li>
         <li>Click on the newly generated FastQ pair ending in <em>“with matched ID”</em> to expand the individual reads
           <ul>
             <li>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> symbol of the forward read</li>
-            <li>Click somewhere outside the white box to close the <strong>Scratchbook</strong></li>
+            <li>Click somewhere outside the white box to close the <strong>Window Manager</strong></li>
             <li>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> symbol of the reverse read</li>
           </ul>
         </li>
         <li>Position/Resize the boxes as desired</li>
       </ul>
+
+      <!--SNIPPET-->
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-using-the-window-manager-to-view-multiple-datasets"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-using-the-window-manager-to-view-multiple-datasets" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: Using the Window Manager to view multiple datasets</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you would like to view two or more datasets at once, you can use the <strong>Window Manager</strong> feature in Galaxy:</p>   <ol>   <li><strong>Click</strong> on the <em>Window Manager</em> icon <i class="fas fa-th" aria-hidden="true"></i><span class="visually-hidden">galaxy-scratchbook</span> on the top menu bar.     <ul>       <li>You should see a little checkmark on the icon now</li>     </ul>   </li>   <li><strong>View</strong> <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> a dataset by clicking on the eye icon <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> to view the output     <ul>       <li>You should see the output in a window overlayed over Galaxy</li>       <li>You can resize this window by dragging the bottom-right corner</li>     </ul>   </li>   <li><strong>Click</strong> outside the file to exit the Window Manager</li>   <li><strong>View</strong> <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> a second dataset from your history     <ul>       <li>You should now see a second window with the new dataset</li>       <li>This makes it easier to compare the two outputs</li>     </ul>   </li>   <li>Repeat this for as many files as you would like to compare</li>   <li>You can turn off the <strong>Window Manager</strong> <i class="fas fa-th" aria-hidden="true"></i><span class="visually-hidden">galaxy-scratchbook</span> by clicking on the icon again</li> </ol> </blockquote>
+      <p><!--END_SNIPPET--></p>
     </li>
   </ol>
 </blockquote>
@@ -2009,7 +2085,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
   <div class="box-title hands-on-title" id="hands-on-confirming-the-barcoding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Confirming the Barcoding</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.72+galaxy1)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.74+galaxy1)</span> with the following parameters:
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Short read data from your current history”</em>: <code class="language-plaintext highlighter-rouge">Paired FastQ</code> (the original paired set) You will need to choose ‘Dataset collection’ to allow this as an input.</li>
       </ul>
@@ -2144,7 +2220,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
   <div class="box-title hands-on-title" id="hands-on-barcode-extraction-and-annotation-of-our-4-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Barcode Extraction and Annotation of our 4 reads</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/0.5.5.1" title="UMI-tools extract tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>UMI-tools extract</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.5.1)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/1.1.6+galaxy0" title="UMI-tools extract tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>UMI-tools extract</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.6+galaxy0)</span> with the following parameters:
       <ul>
         <li><em>“Library type”</em>: <code class="language-plaintext highlighter-rouge">Paired-end Dataset Collection</code>
           <ul>
@@ -2152,7 +2228,6 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
             <li><em>“Barcode on both reads?”</em>: <code class="language-plaintext highlighter-rouge">Barcode on first read only</code></li>
           </ul>
         </li>
-        <li><em>“Use Known Barcodes?”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
         <li><em>“Barcode pattern for first read”</em>: <code class="language-plaintext highlighter-rouge">NNNNNNCCCCCC</code></li>
         <li><em>“Enable quality filter?”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
       </ul>
@@ -2170,7 +2245,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
       </blockquote>
     </li>
     <li>Click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> symbol on the <em>Reads1: UMI-tools extract</em> file</li>
-    <li>Click somewhere outside the white box to close the <strong>Scratchbook</strong></li>
+    <li>Click somewhere outside the white box to close the <strong>Window Manager</strong></li>
     <li>Click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> symbol on the <em>Reads2: UMI-tools extract</em> file</li>
   </ol>
 
@@ -2442,17 +2517,17 @@ install_resolver_dependencies: true
 tools:
 - name: fastqc
   owner: devteam
-  revisions: e7b2202befea
+  revisions: 2c64fded1286
   tool_panel_section_label: FASTA/FASTQ
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: umi_tools_extract
   owner: iuc
-  revisions: 6a675c3aa610
+  revisions: 14ba4366aca4
   tool_panel_section_label: FASTA/FASTQ
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: seq_filter_by_id
   owner: peterjc
-  revisions: 141612f8c3e3
+  revisions: 85ef5f5a0562
   tool_panel_section_label: Filter and Sort
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 </code></pre></div>
@@ -2717,7 +2792,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/6a1d5321ce9a42fac7ba3c72d6cf1ef2b020b741">6a1d532</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/305f83e43a97478b187b31654c5d8741338f4b16">305f83e</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
