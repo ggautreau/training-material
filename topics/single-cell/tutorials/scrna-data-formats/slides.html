@@ -21,7 +21,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@77e9765ad1f6b7f0daceac3337a02de60b9394d2",
+		release: "galaxy-training-network@4471b9f2540efd180111896b029f92cafad80fd2",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,10 +68,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Single-cell Formats and Resources">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-10-04 10:11:57 +0000">
+<meta name="DC.date" content="2025-02-13 09:44:22 +0000">
 <meta name="DC.creator" content="Morgan Howells">
-<meta name="DC.creator" content="Wendi Bacon">
-<meta name="DC.creator" content="Katarzyna Kamieniecka">
 
         
         
@@ -200,7 +198,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-10-04 10:11:57 +0000",
+  "dateModified": "2025-02-13 09:44:22 +0000",
   "datePublished": "2024-07-26 17:22:16 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -262,7 +260,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "slides",
   "name": "Single-cell Formats and Resources",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-data-formats/slides.html",
-  "version": 3,
+  "version": 4,
   "teaches": "- Learn the basic structure of single-cell data\n- Be able to recognise different types of single-cell metadata\n- Learn the common data formats used for storing single-cell data\n- Become familiar with some popular sources for public single-cell data",
   "keywords": [
     "Single Cell"
@@ -386,7 +384,9 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       ],
       "identifier": "https://orcid.org/0009-0008-9422-6380",
       "orcid": "https://orcid.org/0009-0008-9422-6380"
-    },
+    }
+  ],
+  "contributor": [
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -496,9 +496,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       ],
       "identifier": "https://orcid.org/0009-0004-2454-5950",
       "orcid": "https://orcid.org/0009-0004-2454-5950"
-    }
-  ],
-  "contributor": [
+    },
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -996,13 +994,7 @@ class: center, middle, inverse
 			
 			<li>
 				<a href="/training-material/hall-of-fame/hexhowells/" class="contributor-badge contributor-hexhowells"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexhowells?s=36" alt="Morgan Howells avatar" width="36" class="avatar" />
-    Morgan Howells</a>
-			<li>
-				<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
-    Wendi Bacon</a>
-			<li>
-				<a href="/training-material/hall-of-fame/kkamieniecka/" class="contributor-badge contributor-kkamieniecka"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/kkamieniecka?s=36" alt="Katarzyna Kamieniecka avatar" width="36" class="avatar" />
-    Katarzyna Kamieniecka</a></li>
+    Morgan Howells</a></li>
 </ul>
 	
 
@@ -1733,6 +1725,25 @@ Finally, it is also common for multiple files/folders to both be compressed and 
 
 
 
+---
+### &lt;i class=&quot;fas fa-graduation-cap&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;curriculum&lt;/span&gt; Do you want to extend your knowledge?
+
+
+Follow one of our recommended follow-up trainings:
+
+
+
+    
+        
+        
+            
+        
+- [Single Cell](/training-material/topics/single-cell)
+    - Converting between common single cell data formats: [&lt;i class=&quot;fas fa-laptop&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;tutorial&lt;/span&gt; hands-on](/training-material/topics/single-cell/tutorials/scrna-data-ingest/tutorial.html)
+    
+
+
+
 
 
 ---
@@ -1751,9 +1762,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
 		<td>
 			<a href="/training-material/hall-of-fame/hexhowells/" class="contributor-badge contributor-hexhowells"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/hexhowells?s=36" alt="Morgan Howells avatar" width="36" class="avatar" />
-    Morgan Howells</a><a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
-    Wendi Bacon</a><a href="/training-material/hall-of-fame/kkamieniecka/" class="contributor-badge contributor-kkamieniecka"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/kkamieniecka?s=36" alt="Katarzyna Kamieniecka avatar" width="36" class="avatar" />
-    Katarzyna Kamieniecka</a>
+    Morgan Howells</a>
 		</td>
 	</tr>
 	
@@ -1766,6 +1775,14 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 
 	
 
+	
+	<tr>
+		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
+    Wendi Bacon</a><a href="/training-material/hall-of-fame/kkamieniecka/" class="contributor-badge contributor-kkamieniecka"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/kkamieniecka?s=36" alt="Katarzyna Kamieniecka avatar" width="36" class="avatar" />
+    Katarzyna Kamieniecka</a></td>
+	</tr>
 	
 
 	

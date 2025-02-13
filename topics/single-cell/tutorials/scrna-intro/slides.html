@@ -21,7 +21,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@77e9765ad1f6b7f0daceac3337a02de60b9394d2",
+		release: "galaxy-training-network@4471b9f2540efd180111896b029f92cafad80fd2",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="An introduction to scRNA-seq data analysis">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-12-06 14:12:05 +0000">
+<meta name="DC.date" content="2025-02-13 09:44:22 +0000">
 <meta name="DC.creator" content="Mehmet Tekman">
 
         
@@ -198,7 +198,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-12-06 14:12:05 +0000",
+  "dateModified": "2025-02-13 09:44:22 +0000",
   "datePublished": "2021-01-29 16:45:13 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -260,7 +260,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "slides",
   "name": "An introduction to scRNA-seq data analysis",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/scrna-intro/slides.html",
-  "version": 6,
+  "version": 7,
   "timeRequired": "PT30M",
   "teaches": "- To understand the pitfalls in scRNA-seq sequencing and amplification, and how they are overcome.\n- Know the types of variation in an analysis and how to control for them.\n- Grasp what dimension reduction is, and how it might be performed.\n- Be familiarised with the main types of clustering techniques and when to use them.",
   "keywords": [
@@ -363,6 +363,61 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     }
   ],
   "contributor": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/",
+      "name": "Wendi Bacon",
+      "image": "https://avatars.githubusercontent.com/nomadscientist",
+      "description": "Senior Lecturer at The Open University",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "@type": "Organization"
+          },
+          "id": "https://training.galaxyproject.org",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "legalName": "Galaxy Training Network",
+          "alternateName": "GTN",
+          "url": "https://training.galaxyproject.org",
+          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
+          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
+          "keywords": [
+            "galaxy",
+            "bioinformatics",
+            "training",
+            "fair",
+            "accessible"
+          ],
+          "status": "active",
+          "foundingDate": "2015-06-29",
+          "socialMedia": "https://mstdn.science/@gtn",
+          "type": "project"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
+            "@type": "CreativeWork"
+          },
+          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-europe/",
+          "name": "ELIXIR Europe",
+          "description": "An organization supporting the Galaxy Training Network",
+          "url": "https://elixir-europe.org"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0002-8170-8806",
+      "orcid": "https://orcid.org/0000-0002-8170-8806"
+    },
     {
       "@context": "https://schema.org",
       "@type": "Person",
@@ -779,61 +834,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       ],
       "identifier": "https://orcid.org/0000-0002-5752-2155",
       "orcid": "https://orcid.org/0000-0002-5752-2155"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "http://purl.org/dc/terms/conformsTo": {
-        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
-        "@type": "CreativeWork"
-      },
-      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/",
-      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/nomadscientist/",
-      "name": "Wendi Bacon",
-      "image": "https://avatars.githubusercontent.com/nomadscientist",
-      "description": "Senior Lecturer at The Open University",
-      "memberOf": [
-        {
-          "@type": "Organization",
-          "http://purl.org/dc/terms/conformsTo": {
-            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
-            "@type": "Organization"
-          },
-          "id": "https://training.galaxyproject.org",
-          "email": "galaxytrainingnetwork@gmail.com",
-          "name": "Galaxy Training Network",
-          "legalName": "Galaxy Training Network",
-          "alternateName": "GTN",
-          "url": "https://training.galaxyproject.org",
-          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
-          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
-          "keywords": [
-            "galaxy",
-            "bioinformatics",
-            "training",
-            "fair",
-            "accessible"
-          ],
-          "status": "active",
-          "foundingDate": "2015-06-29",
-          "socialMedia": "https://mstdn.science/@gtn",
-          "type": "project"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          "http://purl.org/dc/terms/conformsTo": {
-            "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
-            "@type": "CreativeWork"
-          },
-          "id": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-europe/",
-          "name": "ELIXIR Europe",
-          "description": "An organization supporting the Galaxy Training Network",
-          "url": "https://elixir-europe.org"
-        }
-      ],
-      "identifier": "https://orcid.org/0000-0002-8170-8806",
-      "orcid": "https://orcid.org/0000-0002-8170-8806"
     },
     {
       "@context": "https://schema.org",
@@ -2289,7 +2289,6 @@ If the new configuration has instead increased the number of external links, the
 
 
 
-
 ---
 ### &lt;i class=&quot;fas fa-key&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;keypoints&lt;/span&gt; Key points
 
@@ -2356,6 +2355,13 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 
 	
 
+	
+	<tr>
+		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
+    Wendi Bacon</a></td>
+	</tr>
 	
 
 	

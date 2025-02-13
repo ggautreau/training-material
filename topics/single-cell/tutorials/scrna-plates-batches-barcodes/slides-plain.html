@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@77e9765ad1f6b7f0daceac3337a02de60b9394d2",
+		release: "galaxy-training-network@4471b9f2540efd180111896b029f92cafad80fd2",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -70,8 +70,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Plates, Batches, and Barcodes">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2023-10-10 13:37:19 +0000">
-<meta name="DC.creator" content="Wendi Bacon">
+<meta name="DC.date" content="2025-02-13 09:44:22 +0000">
 <meta name="DC.creator" content="Mehmet Tekman">
 <meta name="DC.creator" content="Alex Ostrovsky"><meta name="description" content="### Sorting Plates   .image-100[![slide5](../../images/scrna-intro/wab96wellplate.svg)]  .left[Plates are *N x M* arrays of wells that cells are sorted, to then be individually amplified and sequenced.]  ??? - Sorting plates are 2 dimensional arrays of wells that individual cells are placed into. - Each cell in each well is tagged with a unique barcode and then primed to then be amplified and sequenced - The method in which this is performed can yield significant pros and cons as we will see.  ---  ### Sorting Plates  .image-80[![slide6](../../images/scrna-intro/wabexampleplates.png)]  ??? - Here we see 3 different sorting strategies with different advantages for same treatment sample. - In the top image: We see all wells are filled, to maximise the number of cells on a plate - In the middle image: We see only the inner wells are filled, to maintain a protective border during library preparation - In the bottom image: We see a striping pattern, which mitigates contamination of mater...">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -213,10 +212,47 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <div markdown="0">
 
 	<div class="contributors-line">
-		<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
-    Wendi Bacon</a><a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge contributor-mtekman"><img src="https://avatars.githubusercontent.com/mtekman?s=36" alt="Mehmet Tekman avatar" width="36" class="avatar" />
+		
+<table class="contributions">
+	
+	<tr>
+		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/mtekman/" class="contributor-badge contributor-mtekman"><img src="https://avatars.githubusercontent.com/mtekman?s=36" alt="Mehmet Tekman avatar" width="36" class="avatar" />
     Mehmet Tekman</a><a href="/training-material/hall-of-fame/astrovsky01/" class="contributor-badge contributor-astrovsky01"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/astrovsky01?s=36" alt="Alex Ostrovsky avatar" width="36" class="avatar" />
     Alex Ostrovsky</a>
+		</td>
+	</tr>
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+	<tr>
+		<td><abbr title="These people edited the text, either for spelling and grammar, flow, GTN-fit, or other similar editing categories">Editor(s)</abbr></td>
+		<td>
+			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
+    Wendi Bacon</a></td>
+	</tr>
+	
+
+	
+
+	
+
+	
+
+	
+
+</table>
+
+
 	</div>
 
 </div>
@@ -255,9 +291,112 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 		
 
 		
+		<h2>Requirements</h2>
+		<ul>
+		
+
+		
+    
+        
+        
+        
+            
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        
+                            
+                                <li>
+                                  <a href="/training-material/topics/single-cell/tutorials/scrna-umis/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> Hands-on: Understanding Barcodes</a>
+                                </li>
+                            
+                        
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            
+        
+    
+
+
+		</ul>
+		
 
 		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Published:</strong> Feb 16, 2019 </div>
-		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last Updated:</strong> Oct 10, 2023 </div>
+		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last Updated:</strong> Feb 13, 2025 </div>
 
 	<hr />
 
@@ -908,6 +1047,22 @@ and Edit Distance of <em>E</em>.]</p>
 
 
 
+<h2><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">curriculum</span> Do you want to extend your knowledge?</h2>
+Follow one of our recommended follow-up trainings:
+
+
+
+    
+        
+        
+            
+        
+- [Single Cell](/training-material/topics/single-cell)
+    - Pre-processing of 10X Single-Cell RNA Datasets: [<i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on](/training-material/topics/single-cell/tutorials/scrna-preprocessing-tenx/tutorial.html)
+    
+
+
+
 
 
 
@@ -924,6 +1079,8 @@ Tutorial Content is licensed under
   <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 </section>
+
+
 
 
 
@@ -989,7 +1146,7 @@ Tutorial Content is licensed under
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/77e9765ad1f6b7f0daceac3337a02de60b9394d2">77e9765</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/4471b9f2540efd180111896b029f92cafad80fd2">4471b9f</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
