@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@20430169f07a083bfacdad4352700ba3b2d10338",
+		release: "galaxy-training-network@362aab1aed572673e2f7d3499955c842dc1d4bf4",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="A short introduction to Galaxy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-12 15:28:08 +0000">
+<meta name="DC.date" content="2025-02-13 14:08:21 +0000">
 <meta name="DC.creator" content="Anna Syme">
 <meta name="DC.creator" content="Nicola Soranzo"><meta name="description" content="Galaxy is a scientific workflow, data integration, and data and analysis persistence and publishing platform that aims to make computational biology accessible to research scientists that do not have computer programming experience. ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -189,7 +189,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   ],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-12 15:28:08 +0000",
+  "dateModified": "2025-02-13 14:08:21 +0000",
   "datePublished": "2018-08-27 09:41:28 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -286,7 +286,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "A short introduction to Galaxy",
   "url": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html",
-  "version": 39,
+  "version": 40,
   "timeRequired": "PT40M",
   "teaches": "- Learn how to upload a file\n- Learn how to use a tool\n- Learn how to view results\n- Learn how to view histories\n- Learn how to extract and run a workflow\n- Learn how to share a history",
   "keywords": [
@@ -1780,7 +1780,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Aug 27, 2018 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 12, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 13, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1800,7 +1800,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">4.7</a> (106 recent ratings, 644 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 39 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 40 </div>
 
     </blockquote>
     </section>
@@ -1855,7 +1855,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In Galaxy, <em>server</em> and <em>instance</em> are often used interchangeably. These terms basically mean that different regions have different Galaxy servers/instances, with slightly different tool installations and appearances. If you don’t have a specific server/instance in mind, we recommend registering at one of the main public servers/instances, detailed below.</p>
 
 <!--SNIPPET-->
-<blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-create-an-account-on-a-public-galaxy-instance"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-create-an-account-on-a-public-galaxy-instance" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I create an account on a public Galaxy instance?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>     <p>To create an account at any public Galaxy instance, choose your server from the available <a href="https://galaxyproject.org/use/">list of Galaxy Platforms</a>.</p>     <p>There are several UseGalaxy servers:</p>     <ul>       <li>         <p><a href="https://usegalaxy.eu">UseGalaxy.eu</a> (<strong>EU</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.fr">UseGalaxy.fr</a> (<strong>FR</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org.au">UseGalaxy.org.au</a> (<strong>AU</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org">UseGalaxy.org</a> (<strong>US</strong>)</p>       </li>     </ul>   </li>   <li>     <p>Click on <strong>“Login or Register”</strong> in the masthead on the server.</p>     <p><img src="/training-material/faqs/galaxy/images/login_register.png" alt="Login or Register on the top panel" /></p>   </li>   <li>     <p>On the login page, find the <strong>Register here</strong> link and click on it.</p>   </li>   <li>     <p>Fill in the the registration form, then click on <strong>Create</strong>.</p>     <p>Your account should now get created, but will remain inactive until you verify the email address you provided in the registration form.</p>     <p><img src="/training-material/faqs/galaxy/images/unverified_account.png" alt="Banner warning about account with unverified email address" /></p>   </li>   <li>     <p>Check for a <strong>Confirmation Email</strong> in the email you used for account creation.</p>     <p>Missing? Check your <strong>Trash</strong> and <strong>Spam</strong> folders.</p>   </li>   <li>     <p>Click on the <strong>Email confirmation link</strong> to fully activate your account.</p>     <p><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> Delivery of the confimation email is blocked by your email provider or you mistyped the email address in the registration form?</p>     <p>Please do <strong>not</strong> register again, but follow the <a href="/training-material/faqs/galaxy/user_preferences_manage_information.html">instructions to change the email address</a> registered with your account! The confirmation email will be resent to your new address once you have changed it.</p>     <p>Trouble logging in later? Account email addresses and public names are caSe-sensiTive. Check your activation email for formats.</p>   </li> </ol> </blockquote>
+<blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-create-an-account-on-a-public-galaxy-instance"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-create-an-account-on-a-public-galaxy-instance" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I create an account on a public Galaxy instance?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>     <p>To create an account at any public Galaxy instance, choose your server from the available <a href="https://galaxyproject.org/use/">list of Galaxy Platforms</a>.</p>     <p>There are several UseGalaxy servers:</p>     <ul>       <li>         <p><a href="https://usegalaxy.fr">UseGalaxy.fr</a> (<strong>FR</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org">UseGalaxy.org</a> (<strong>US</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.eu">UseGalaxy.eu</a> (<strong>EU</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org.au">UseGalaxy.org.au</a> (<strong>AU</strong>)</p>       </li>     </ul>   </li>   <li>     <p>Click on <strong>“Login or Register”</strong> in the masthead on the server.</p>     <p><img src="/training-material/faqs/galaxy/images/login_register.png" alt="Login or Register on the top panel" /></p>   </li>   <li>     <p>On the login page, find the <strong>Register here</strong> link and click on it.</p>   </li>   <li>     <p>Fill in the the registration form, then click on <strong>Create</strong>.</p>     <p>Your account should now get created, but will remain inactive until you verify the email address you provided in the registration form.</p>     <p><img src="/training-material/faqs/galaxy/images/unverified_account.png" alt="Banner warning about account with unverified email address" /></p>   </li>   <li>     <p>Check for a <strong>Confirmation Email</strong> in the email you used for account creation.</p>     <p>Missing? Check your <strong>Trash</strong> and <strong>Spam</strong> folders.</p>   </li>   <li>     <p>Click on the <strong>Email confirmation link</strong> to fully activate your account.</p>     <p><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> Delivery of the confimation email is blocked by your email provider or you mistyped the email address in the registration form?</p>     <p>Please do <strong>not</strong> register again, but follow the <a href="/training-material/faqs/galaxy/user_preferences_manage_information.html">instructions to change the email address</a> registered with your account! The confirmation email will be resent to your new address once you have changed it.</p>     <p>Trouble logging in later? Account email addresses and public names are caSe-sensiTive. Check your activation email for formats.</p>   </li> </ol> </blockquote>
 <p><!--END_SNIPPET--></p>
 
 <h2 id="what-does-galaxy-look-like">What does Galaxy look like?</h2>
@@ -1863,7 +1863,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log in to Galaxy</div>
   <ol>
-    <li>Open your favorite browser (Chrome, Safari or Firefox as your browser, not Internet Explorer!)</li>
+    <li>Open your favorite browser (Chrome, Safari, Edge or Firefox as your browser, not Internet Explorer!)</li>
     <li>Browse to your Galaxy instance</li>
     <li>Log in or register</li>
   </ol>
@@ -1896,26 +1896,26 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <h2 id="name-your-current-history">Name your current history</h2>
 
-<p>Your “History” is in the panel at the right.</p>
+<p>Your “History” is in the panel at the right. It is a record of the actions you have taken.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-name-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Name history</div>
   <ol>
     <li>Go to the <strong>History</strong> panel (on the right)</li>
     <li>
-      <p>Click on <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> (<strong>Edit</strong>) next to the history name (which by default is “Unnamed history”)</p>
+      <p>Click <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> (<strong>Edit</strong>) next to the history name (which by default is “Unnamed history”)</p>
 
       <p><a href="/training-material/shared/images/rename_history.png" rel="noopener noreferrer"><img src="/training-material/shared/images/rename_history.png" alt="Screenshot of the galaxy interface with the history name being edited, it currently reads &quot;Unnamed history&quot;, the default value. An input box is below it." width="308" height="340" loading="lazy" /></a></p>
 
       <blockquote class="comment">
         <div class="box-title comment-title" id="comment"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
 
-        <p>In some previous versions of Galaxy, you will need to click on the history name to rename it as shown here:
+        <p>In some previous versions of Galaxy, you will need to click the history name to rename it as shown here:
 <a href="../../../../shared/images/rename_history_old.png" rel="noopener noreferrer"><img src="../../../../shared/images/rename_history_old.png" alt="Screenshot of the galaxy interface with the history name being edited, it currently reads &quot;Unnamed history&quot;, the default value." width="256" height="165" loading="lazy" /></a></p>
       </blockquote>
     </li>
     <li>Type in a new name, for example, “My Analysis”</li>
-    <li>Click on <strong>Save</strong></li>
+    <li>Click <strong>Save</strong></li>
   </ol>
 
   <blockquote class="comment">
@@ -1933,13 +1933,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <div class="box-title hands-on-title" id="hands-on-upload-a-file-from-url"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload a file from URL</div>
   <ol>
     <li>
-      <p>At the top of the <strong>Activity Bar</strong>, click on the <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload</strong> activity</p>
+      <p>At the top of the <strong>Activity Bar</strong>, click the <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload</strong> activity</p>
 
       <p><a href="../../images/upload-data.png" rel="noopener noreferrer"><img src="../../images/upload-data.png" alt="upload data button shown in the galaxy interface. " width="230" height="546" loading="lazy" /></a></p>
 
       <p>This brings up a box:</p>
 
-      <p><a href="../../images/upload-box.png" rel="noopener noreferrer"><img src="../../images/upload-box.png" alt="the complicated galaxy upload dialog, the 'regular' tab is active with a large textarea to paste subsequent URL. " width="1116" height="674" loading="lazy" /></a></p>
+      <p><a href="../../images/upload-box.png" rel="noopener noreferrer"><img src="../../images/upload-box.png" alt="the complicated galaxy upload dialog, the 'regular' tab is active with a large textarea to paste subsequent URL. " width="1768" height="970" loading="lazy" /></a></p>
     </li>
     <li>Click <strong>Paste/Fetch data</strong></li>
     <li>
@@ -1989,18 +1989,18 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <div class="box-title hands-on-title" id="hands-on-view-the-dataset-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View the dataset content</div>
   <ol>
     <li>
-      <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the dataset name, to look at the file content</p>
+      <p>Click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the dataset name, to look at the file content</p>
 
       <p><a href="../../images/eye-icon.png" rel="noopener noreferrer"><img src="../../images/eye-icon.png" alt="galaxy history view showing a single dataset mutant_r1.fastq. Display link is being hovered." width="717" height="575" loading="lazy" /></a></p>
     </li>
   </ol>
 </blockquote>
 
-<p>The contents of the file will be displayed in the central Galaxy panel.</p>
+<p>The contents of the file will be displayed in the central Galaxy panel. If the dataset is large, you will see a warning message which explains that only the first megabyte is shown.</p>
 
 <p>This file contains DNA sequencing reads from a bacteria, in FASTQ format:</p>
 
-<figure id="figure-1" style="max-width: 90%;"><img src="../../images/fastq.png" alt="preview of a fastq file showing the 4 line structure described in fig caption. 3 reads are shown." width="1088" height="428" loading="lazy" /><a target="_blank" href="../../images/fastq.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> A FastQ file of course has four lines per record: the record identifier (`@mutant-no_snps.gff-24960/`), the sequence (`AATG…`), the plus character (`+`), and then the quality scores for the sequence (`5??A…`).</figcaption></figure>
+<figure id="figure-1" style="max-width: 90%;"><img src="../../images/fastq.png" alt="preview of a fastq file showing the 4 line structure described in fig caption. 3 reads are shown." width="1088" height="428" loading="lazy" /><a target="_blank" href="../../images/fastq.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> A FastQ file has four lines per record: the record identifier (`@mutant-no_snps.gff-24960/`), the sequence (`AATG…`), the plus character (`+`), and then the quality scores for the sequence (`5??A…`).</figcaption></figure>
 
 <h2 id="use-a-tool">Use a tool</h2>
 
@@ -2011,17 +2011,17 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <ol>
     <li>Type <strong>FastQC</strong> in the tools panel search box (top)</li>
     <li>
-      <p>Click on the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.74+galaxy1)</span> tool</p>
+      <p>Click the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.74+galaxy1)</span> tool (it appears as <strong>FastQC Read Quality reports</strong> without the version number)</p>
 
       <p>The tool will be displayed in the central Galaxy panel.</p>
     </li>
     <li>Select the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Raw read data from your current history”</em>: the FASTQ dataset that we uploaded</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Raw read data from your current history”</em>: the FASTQ dataset that we uploaded (should be already selected)</li>
         <li>No change in the other parameters</li>
       </ul>
     </li>
-    <li>Click <strong>Execute</strong></li>
+    <li>Click <strong>Run Tool</strong></li>
   </ol>
 
 </blockquote>
@@ -2049,7 +2049,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <div class="box-title hands-on-title" id="hands-on-view-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View results</div>
   <ul>
     <li>
-      <p>Once it’s green, click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the “Webpage” output dataset.</p>
+      <p>Once it’s green, click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the “Webpage” output dataset.</p>
 
       <p>The information is displayed in the central panel</p>
 
@@ -2064,7 +2064,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
   <ol>
-    <li>What was the length of the reads in the input FASTQ file?</li>
+    <li>What was the sequence length of reads in the input FASTQ file?</li>
     <li>Do these reads have higher quality scores in the centre or at the ends?</li>
   </ol>
 
@@ -2085,7 +2085,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <div class="box-title hands-on-title" id="hands-on-run-another-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run another tool</div>
   <ol>
     <li>Type <strong>Filter by quality</strong> in the tools panel search box (top)</li>
-    <li>Click on the tool <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.2+galaxy2" title="Filter by quality tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter by quality</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.2+galaxy2)</span></li>
+    <li>Click the tool <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.2+galaxy2" title="Filter by quality tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter by quality</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.2+galaxy2)</span></li>
     <li>Set the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input FASTQ file”</em>: our initial FASTQ dataset</li>
@@ -2093,7 +2093,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
         <li><em>“Percent of bases in sequence that must have quality equal to / higher than cut-off value”</em>: 80</li>
       </ul>
     </li>
-    <li>Click <strong>Execute</strong></li>
+    <li>Click <strong>Run Tool</strong></li>
   </ol>
 </blockquote>
 
@@ -2112,11 +2112,11 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <div class="box-title hands-on-title" id="hands-on-get-metadata-about-a-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get metadata about a file</div>
   <ol>
     <li>
-      <p>Click on the dataset (around where its name is) in the History panel.</p>
+      <p>Click the dataset (around where its name is) in the History panel.</p>
 
       <p>This expands the information about the file. <em>(By default all datasets are collapsed)</em></p>
 
-      <p><a href="../../images/filter-fastq1.png" rel="noopener noreferrer"><img src="../../images/filter-fastq1.png" alt="Diagram of how to locate the information. As above, clicking on the name expands the dataset, and an info section is shown with the filter settings. 1786 (14%) discarded." width="577" height="810" loading="lazy" /></a></p>
+      <p><a href="../../images/filter-fastq1.png" rel="noopener noreferrer"><img src="../../images/filter-fastq1.png" alt="Diagram of how to locate the information. As above, clicking the name expands the dataset, and an info section is shown with the filter settings. 1786 (14%) discarded." width="577" height="810" loading="lazy" /></a></p>
     </li>
   </ol>
 
@@ -2141,7 +2141,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <div class="box-title hands-on-title" id="hands-on-re-run-the-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Re-run the tool</div>
   <ol>
     <li>
-      <p>Click on the <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> icon (<strong>Run Job Again</strong>) for the output dataset of <strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
+      <p>Click the <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> icon (<strong>Run Job Again</strong>) for the output dataset of <strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
       <p><a href="../../images/rerun.png" rel="noopener noreferrer"><img src="../../images/rerun.png" alt="A dataset is expanded showing the Run Job Again button highlighted. " width="302" height="473" loading="lazy" /></a></p>
 
@@ -2152,13 +2152,13 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
       <p>For example, you might decide you want 80 percent of bases to have a quality of 36 or higher, instead of 35.</p>
     </li>
-    <li>Click <strong>Execute</strong></li>
+    <li>Click <strong>Run Tool</strong></li>
     <li>
-      <p>View the results: Click on the output dataset name to expand the information</p>
+      <p>View the results: Click the output dataset name to expand the information</p>
 
       <blockquote class="comment">
         <div class="box-title comment-title" id="comment-3"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
-        <p>Not the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon.</p>
+        <p>Take care not to click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon as this will display the contents of the file in the central Galaxy panel instead.</p>
       </blockquote>
     </li>
   </ol>
@@ -2180,7 +2180,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
 <h2 id="share-your-history">Share your history</h2>
 
-<p>Finally, let’s imagine that you had a problem in your analysis and you want to ask for help. The easiest way to ask for help is to share your history. Try and create a link for your history and share it with…yourself!</p>
+<p>Let’s imagine that you had a problem in your analysis and you want to ask for help. The easiest way to ask for help is to share your history. Try and create a link for your history and share it with…yourself!</p>
 
 <!--SNIPPET-->
 <blockquote class="tip">   <div class="box-title tip-title" id="tip-sharing-your-history"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-sharing-your-history" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: Sharing your History</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Sharing your history allows others to import and access the datasets, parameters, and steps of your history.</p>   <p>Access the history sharing menu via the History Options dropdown (<i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span>), and clicking “<i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">history-share</span> Share or Publish”</p>   <ol>   <li><strong>Share via link</strong>     <ul>       <li>Open the <strong>History Options</strong> <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> menu at the top of your history panel and select “<i class="fas fa-share-alt" aria-hidden="true"></i><span class="visually-hidden">history-share</span> Share or Publish”         <ul>           <li><i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">galaxy-toggle</span> <strong>Make History accessible</strong></li>           <li>A <strong>Share Link</strong> will appear that you give to others</li>         </ul>       </li>       <li>Anybody who has this link can view and copy your history</li>     </ul>   </li>   <li><strong>Publish your history</strong>     <ul>       <li><i class="fas fa-toggle-on" aria-hidden="true"></i><span class="visually-hidden">galaxy-toggle</span> <strong>Make History publicly available in Published Histories</strong></li>       <li>Anybody on this Galaxy server will see your history listed under the <em>Published Histories</em> tab opened via the <i class="fas fa-hdd" aria-hidden="true"></i><span class="visually-hidden">galaxy-histories-activity</span> <strong>Histories</strong> activity</li>     </ul>   </li>   <li><strong>Share only with another user</strong>.     <ul>       <li>Enter an email address for the user you want to share with in the <em>Please specify user email</em> input below <strong>Share History with Individual Users</strong></li>       <li>Your history will be shared only with this user.</li>     </ul>   </li>   <li><strong>Finding histories others have shared with me</strong>     <ul>       <li>Click on the <i class="fas fa-hdd" aria-hidden="true"></i><span class="visually-hidden">galaxy-histories-activity</span> <strong>Histories</strong> activity in the activity bar on the left</li>       <li>Click the <strong>Shared with me</strong> tab</li>       <li>Here you will see all the histories others have shared with you directly</li>     </ul>   </li> </ol>   <p><strong>Note:</strong> If you want to make changes to your history without affecting the shared version, make a copy by going to <strong>History Options</strong> <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> icon in your history and clicking <em>Copy this History</em></p> </blockquote>
@@ -2197,12 +2197,12 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
   <ol>
     <li>
-      <p><strong>Clean up</strong> your history: remove any failed (red) jobs from your history by clicking on the <i class="fas fa-trash" aria-hidden="true"></i><span class="visually-hidden">galaxy-delete</span> button.</p>
+      <p><strong>Clean up</strong> your history: remove any failed (red) jobs from your history by clicking the <i class="fas fa-trash" aria-hidden="true"></i><span class="visually-hidden">galaxy-delete</span> button.</p>
 
       <p>This will make the creation of the workflow easier.</p>
     </li>
     <li>
-      <p>Click on <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> (<strong>History options</strong>) at the top of your history panel and select <strong>Extract workflow</strong>.</p>
+      <p>Click <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> (<strong>History options</strong>) at the top of your history panel and select <strong>Extract workflow</strong>.</p>
 
       <p><a href="../../images/history_menu_extract_workflow.png" rel="noopener noreferrer"><img src="../../images/history_menu_extract_workflow.png" alt="'Extract Workflow' entry in the history options menu. " width="359" height="481" loading="lazy" /></a></p>
 
@@ -2220,7 +2220,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
       <p>If there are any steps that shouldn’t be included in the workflow, you can <strong>uncheck</strong> them in the first column of boxes. In this case, uncheck the second <strong>Filter by quality</strong> tool at the bottom, where we used a too high quality cut-off.</p>
     </li>
     <li>
-      <p>Click on the <strong>Create Workflow</strong> button near the top.</p>
+      <p>Click the <strong>Create Workflow</strong> button near the top.</p>
 
       <p>You will get a message that the workflow was created.</p>
     </li>
@@ -2267,8 +2267,8 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <ol>
     <li>There are multiple ways to get to the multview:
       <ul>
-        <li>Click on the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden">galaxy-multihistory</span> <strong>History Multiview</strong> activity in the activity bar</li>
-        <li>Or, click on <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> (<strong>History options</strong>) and then click on the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden">galaxy-columns</span> <strong>Show Histories side-by-side</strong> option
+        <li>Click the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden">galaxy-multihistory</span> <strong>History Multiview</strong> activity in the activity bar</li>
+        <li>Or, click <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> (<strong>History options</strong>) and then click the <i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden">galaxy-columns</span> <strong>Show Histories side-by-side</strong> option
 <a href="../../images/galaxy_interface_history_switch.png" rel="noopener noreferrer"><img src="../../images/galaxy_interface_history_switch.png" alt="History options menu dropdown showing you have 163 histories, and a show histories side-by-side button." width="273" height="112" loading="lazy" /></a></li>
       </ul>
 
@@ -2276,7 +2276,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     </li>
     <li>Copy a dataset into your new history
       <ol>
-        <li>Click on the FASTQ dataset in “My Analysis” history</li>
+        <li>Click the FASTQ dataset in “My Analysis” history</li>
         <li>Drag it into the “Next Analysis” history</li>
       </ol>
 
@@ -2284,7 +2284,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
       <p>This makes a copy of the dataset in the new history (without actually using additional disk space).</p>
     </li>
-    <li>Click on the Home icon <i class="fas fa-home" aria-hidden="true"></i><span class="visually-hidden">galaxy-home</span> (or <strong>Analyze Data</strong> on older versions of Galaxy) in the top panel to go back to your analysis window</li>
+    <li>Click the Galaxy logo (Home) at the top-left (or <strong>Analyze Data</strong> on older versions of Galaxy) in the top panel to go back to your analysis window</li>
   </ol>
 
 </blockquote>
@@ -2298,7 +2298,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <ol>
     <li>An exhaustive list (table) of all your histories is available in the <strong>My Histories</strong> tab in the <em>Histories List</em> accessible via clicking the <i class="fas fa-hdd" aria-hidden="true"></i><span class="visually-hidden">galaxy-histories-activity</span> <strong>Histories</strong> activity</li>
     <li>
-      <p>You can quickly switch to another history by clicking on the <i class="fas fa-exchange-alt" aria-hidden="true"></i><span class="visually-hidden">switch-histories</span> <strong>Switch to history</strong> button next to <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> <strong>History options</strong>:</p>
+      <p>You can quickly switch to another history by clicking the <i class="fas fa-exchange-alt" aria-hidden="true"></i><span class="visually-hidden">switch-histories</span> <strong>Switch to history</strong> button next to <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> <strong>History options</strong>:</p>
 
       <!--SNIPPET-->
       <blockquote class="tip">   <div class="box-title tip-title" id="tip-switching-to-an-existing-history"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-switching-to-an-existing-history" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: Switching to an existing history</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>To switch to an existing history simply click the <i class="fas fa-exchange-alt" aria-hidden="true"></i><span class="visually-hidden">switch-histories</span> icon at the top of the history panel. This opens a list of histories existing in a given Galaxy account in the middle part of the interface.</p>   <p><img src="/training-material/shared/images/list_of_histories.png" alt="UI for switching histories" /></p> </blockquote>
@@ -2318,7 +2318,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
   <ol>
     <li>
-      <p>Click on the <i class="fas fa-sitemap" aria-hidden="true"></i><span class="visually-hidden">galaxy-workflows-activity</span> <strong>Workflows</strong> activity in the activity bar.</p>
+      <p>Click the <i class="fas fa-sitemap" aria-hidden="true"></i><span class="visually-hidden">galaxy-workflows-activity</span> <strong>Workflows</strong> activity in the activity bar.</p>
 
       <p>Here you have a list of all your workflows <em>(the <strong>My Workflows</strong> tab is active by default)</em>.</p>
 
@@ -2326,10 +2326,10 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
       <p><a href="../../images/intro_short_workflow_list.png" rel="noopener noreferrer"><img src="../../images/intro_short_workflow_list.png" alt="Workflow list page showing a single workflow named QC and filtering." width="1264" height="407" loading="lazy" /></a></p>
 
-      <p>You can see all available actions for the workflow on the workflow card, e.g. edit, copy, rename, share etc. Any other options (e.g.: delete, export etc.) are available by clicking on the <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-dropdown</span> <strong>Workflow actions</strong> button on the top right of the card.</p>
+      <p>You can see all available actions for the workflow on the workflow card, e.g. edit, copy, rename, share etc. Any other options (e.g.: delete, export etc.) are available by clicking the <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-dropdown</span> <strong>Workflow actions</strong> button on the top right of the card.</p>
     </li>
     <li>
-      <p>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden">workflow-run</span> (<em>Run workflow</em>) button on the bottom right of the workflow card.</p>
+      <p>Click the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden">workflow-run</span> (<em>Run workflow</em>) button on the bottom right of the workflow card.</p>
 
       <p>The central panel will change to allow you to configure and launch the workflow.</p>
 
@@ -2398,7 +2398,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
                         <li><p>Run the tool. The output files will be saved at the top of your history.</p>
 </li>
                         
-                        <li><p>View the output files by clicking on the eye icon.</p>
+                        <li><p>View the output files by clicking the eye icon.</p>
 </li>
                         
                         <li><p>View all your histories and move files between them. Switch to a different history.</p>
@@ -3443,7 +3443,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/20430169f07a083bfacdad4352700ba3b2d10338">2043016</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/362aab1aed572673e2f7d3499955c842dc1d4bf4">362aab1</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
