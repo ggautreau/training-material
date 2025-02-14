@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@9634989faef4d5a27fd57ab17e1cb9e9ea7f3645",
+		release: "galaxy-training-network@dd442b5a7d9ccb0d1db6422ed2ccbec137780b13",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -265,9 +265,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffb9cd; --color-darker: #ff96b7; --color-dimmed: #ffa8c2;">name:singlecell</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffcddb; --color-darker: #ffa9c3; --color-dimmed: #ffbbcf;">name:singlecell</div>
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #00e3dc; --color-darker: #00cac4; --color-dimmed: #00d7d0;">name:seurat</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #00f3eb; --color-darker: #00d8d1; --color-dimmed: #00e5de;">name:seurat</div>
 			
 			</br>
 			
@@ -368,9 +368,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   2 -->|output| 4;
   1 -->|output| 4;
   0 -->|output| 4;
-  60440d39-e6b9-45d1-b177-36501a2d74ef["Output\nInput 3k PBMC"];
-  4 --> 60440d39-e6b9-45d1-b177-36501a2d74ef;
-  style 60440d39-e6b9-45d1-b177-36501a2d74ef stroke:#2c3143,stroke-width:4px;
+  03541a13-9458-42c6-b3d0-64bd36f9ca86["Output\nInput 3k PBMC"];
+  4 --> 03541a13-9458-42c6-b3d0-64bd36f9ca86;
+  style 03541a13-9458-42c6-b3d0-64bd36f9ca86 stroke:#2c3143,stroke-width:4px;
   5["Seurat Data Management"];
   4 -->|rds_out| 5;
   6["Mitochondrial Annotations"];
@@ -395,9 +395,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   14 -->|rds_out| 15;
   16["Preprocessed Data"];
   15 -->|rds_out| 16;
-  7fd7133d-62b4-41a8-8b11-d74ba6142695["Output\nPreprocessed Data"];
-  16 --> 7fd7133d-62b4-41a8-8b11-d74ba6142695;
-  style 7fd7133d-62b4-41a8-8b11-d74ba6142695 stroke:#2c3143,stroke-width:4px;
+  835e7cdc-7158-4499-a700-ce69e7ad4a06["Output\nPreprocessed Data"];
+  16 --> 835e7cdc-7158-4499-a700-ce69e7ad4a06;
+  style 835e7cdc-7158-4499-a700-ce69e7ad4a06 stroke:#2c3143,stroke-width:4px;
   17["Seurat Visualize"];
   16 -->|rds_out| 17;
   18["PCA Results"];
@@ -440,9 +440,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   28 -->|rds_out| 36;
   37["Annotated Clusters"];
   28 -->|rds_out| 37;
-  58b860d0-a6e3-458e-b498-3479a4a96a54["Output\nAnnotated Clusters"];
-  37 --> 58b860d0-a6e3-458e-b498-3479a4a96a54;
-  style 58b860d0-a6e3-458e-b498-3479a4a96a54 stroke:#2c3143,stroke-width:4px;
+  9f320bc1-ec1b-4cb2-b490-98426c352383["Output\nAnnotated Clusters"];
+  37 --> 9f320bc1-ec1b-4cb2-b490-98426c352383;
+  style 9f320bc1-ec1b-4cb2-b490-98426c352383 stroke:#2c3143,stroke-width:4px;
   38["DE Markers Tabular"];
   32 -->|markers_tabular| 38;
   39["Seurat Visualize"];
@@ -452,9 +452,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   37 -->|rds_out| 40;
   41["Input DE Markers"];
   38 -->|tabular| 41;
-  c7923fd6-be8f-4f19-bd86-17ca8a5bffbd["Output\nInput DE Markers"];
-  41 --> c7923fd6-be8f-4f19-bd86-17ca8a5bffbd;
-  style c7923fd6-be8f-4f19-bd86-17ca8a5bffbd stroke:#2c3143,stroke-width:4px;
+  8e05c9ad-4135-4415-b12c-076fd2a73cb5["Output\nInput DE Markers"];
+  41 --> 8e05c9ad-4135-4415-b12c-076fd2a73cb5;
+  style 8e05c9ad-4135-4415-b12c-076fd2a73cb5 stroke:#2c3143,stroke-width:4px;
   42["Seurat Visualize"];
   41 -->|out_file1| 42;
   37 -->|rds_out| 42;</pre>
@@ -773,7 +773,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/9634989faef4d5a27fd57ab17e1cb9e9ea7f3645">9634989</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/dd442b5a7d9ccb0d1db6422ed2ccbec137780b13">dd442b5</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

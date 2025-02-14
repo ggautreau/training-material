@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -20,9 +19,7 @@
       ],
       "label": "AnnData to extract genes & cells annotations",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 246.58749999999998
@@ -33,17 +30,14 @@
       "type": "data_input",
       "uuid": "238ce18a-d909-4cb9-83e9-39c0eb9ad8b6",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -52,9 +46,7 @@
       ],
       "label": "AnnData before processing to extract clean expression matrix",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 530.25,
         "top": 1.625
@@ -65,9 +57,7 @@
       "type": "data_input",
       "uuid": "5088bde0-ba67-426e-a075-be10f3d515c6",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -80,9 +70,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Extract cell annotations",
       "name": "Inspect AnnData",
       "outputs": [
@@ -135,9 +123,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Extract gene annotations",
       "name": "Inspect AnnData",
       "outputs": [
@@ -190,9 +176,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Extract clean expression matrix",
       "name": "Inspect AnnData",
       "outputs": [
@@ -252,9 +236,7 @@
           "output_name": "obs"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter out macrophages",
       "name": "Filter",
       "outputs": [
@@ -301,9 +283,7 @@
           "output_name": "var"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "gene_short_name annotation",
       "name": "Column Regex Find And Replace",
       "outputs": [
@@ -363,9 +343,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Cut cells IDs",
       "name": "Cut",
       "outputs": [
@@ -412,9 +390,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Cut genes IDs",
       "name": "Cut",
       "outputs": [
@@ -465,9 +441,7 @@
           "output_name": "X"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter matrix (by cells)",
       "name": "Join two Datasets",
       "outputs": [
@@ -514,9 +488,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Remove duplicate column (cells IDs)",
       "name": "Advanced Cut",
       "outputs": [
@@ -569,9 +541,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Transpose matrix",
       "name": "Transpose",
       "outputs": [
@@ -628,9 +598,7 @@
           "output_name": "out_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter matrix (by genes)",
       "name": "Join two Datasets",
       "outputs": [
@@ -677,9 +645,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Remove duplicate column (genes IDs)",
       "name": "Advanced Cut",
       "outputs": [
@@ -740,9 +706,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 create",
       "outputs": [
@@ -755,8 +719,7 @@
         "left": 772.4625,
         "top": 423.225
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_create/monocle3_create/0.1.4+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "ada68a9d0aec",
@@ -788,9 +751,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 preprocess",
       "outputs": [
@@ -803,8 +764,7 @@
         "left": 1010.3375,
         "top": 748.45
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_preprocess/monocle3_preprocess/0.1.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "c150370b514c",
@@ -836,9 +796,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 reduceDim",
       "outputs": [
@@ -851,8 +809,7 @@
         "left": 1244.525,
         "top": 751.175
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_reducedim/monocle3_reduceDim/0.1.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "8900e2a18603",
@@ -884,9 +841,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 partition",
       "outputs": [
@@ -899,8 +854,7 @@
         "left": 1512.1374999999998,
         "top": 460.82500000000005
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_partition/monocle3_partition/0.1.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "d98b4705eb4c",
@@ -932,9 +886,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot cell type",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -987,9 +939,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot genotype",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1042,9 +992,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot batch",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1097,9 +1045,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot sex",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1226,9 +1172,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot genes",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1281,9 +1225,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot partition",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1336,9 +1278,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot cluster",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1391,9 +1331,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 learnGraph",
       "outputs": [
@@ -1406,8 +1344,7 @@
         "left": 1775.6375000000003,
         "top": 953.375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_learngraph/monocle3_learnGraph/0.1.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "5f877012f7af",
@@ -1439,9 +1376,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot learned trajectory",
       "name": "Monocle3 plotCells",
       "outputs": [
@@ -1494,9 +1429,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 orderCells",
       "outputs": [
@@ -1509,8 +1442,7 @@
         "left": 2029.7000000000003,
         "top": 953.675
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/monocle3_ordercells/monocle3_orderCells/0.1.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3e77dc421569",
@@ -1542,9 +1474,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Monocle3 diffExp",
       "outputs": [
@@ -1597,9 +1527,7 @@
           "output_name": "output_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Plot pseudotime",
       "name": "Monocle3 plotCells",
       "outputs": [

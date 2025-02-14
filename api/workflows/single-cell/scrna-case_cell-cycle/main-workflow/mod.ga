@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "CC-BY-4.0",
   "name": "Cell Cycle Regression Workflow",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -26,9 +23,7 @@
       ],
       "label": "AnnData (After QC, normalisation, scaling)",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 646.9375,
         "top": 474.125
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "abf51bba-7bf3-442f-8d25-bb8008efdab1",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -58,9 +50,7 @@
       ],
       "label": "S Phase Genes",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 1029.3646240234375
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "20c44e44-d3da-47b3-a761-5b9714629e8e",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -90,9 +77,7 @@
       ],
       "label": "G2M Phase Genes",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 17.21875,
         "top": 1184.7708740234375
@@ -103,17 +88,14 @@
       "type": "data_input",
       "uuid": "5ed158d1-a7eb-4750-892c-f123c80bfe89",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -122,9 +104,7 @@
       ],
       "label": "Pasted Entry",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1955.0625,
         "top": 0
@@ -135,9 +115,7 @@
       "type": "data_input",
       "uuid": "bd171b20-fde0-4346-8d3e-274a3592485d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -150,9 +128,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect AnnData",
       "outputs": [
@@ -165,8 +141,7 @@
         "left": 459.125,
         "top": 133.625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "ee98d611afc6",
@@ -202,9 +177,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "All Cell Cycle Genes (Concatenate S and G2M Genes)",
       "name": "Concatenate datasets",
       "outputs": [
@@ -217,8 +190,7 @@
         "left": 445.59375,
         "top": 1010.6666870117188
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "cat1",
       "tool_state": "{\"input1\": {\"__class__\": \"ConnectedValue\"}, \"queries\": [{\"__index__\": 0, \"input2\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.0.0",
@@ -252,9 +224,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect and manipulate",
       "outputs": [
@@ -267,8 +237,7 @@
         "left": 1839.84375,
         "top": 567.9375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.7.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "c5d3684f7c4c",
@@ -318,8 +287,7 @@
         "left": 781.4375,
         "top": 125.09375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/table_compute/table_compute/1.2.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3bf5661c0280",
@@ -351,9 +319,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Add column",
       "outputs": [
@@ -366,8 +332,7 @@
         "left": 730.125,
         "top": 940.9375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/add_value/addValue/1.0.0",
       "tool_shed_repository": {
         "changeset_revision": "745871c0b055",
@@ -399,9 +364,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy RegressOut",
       "outputs": [
@@ -414,8 +377,7 @@
         "left": 2373.3958740234375,
         "top": 934.0416870117188
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_regress_variable/scanpy_regress_variable/1.8.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "36daab33aecf",
@@ -447,9 +409,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Add column",
       "outputs": [
@@ -462,8 +422,7 @@
         "left": 1190.8125,
         "top": 142.65625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/add_value/addValue/1.0.0",
       "tool_shed_repository": {
         "changeset_revision": "745871c0b055",
@@ -499,9 +458,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Join",
       "outputs": [
@@ -514,8 +471,7 @@
         "left": 1471.15625,
         "top": 154.25
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_easyjoin_tool/1.1.2",
       "tool_shed_repository": {
         "changeset_revision": "ddf54b12c295",
@@ -547,9 +503,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Sort",
       "outputs": [
@@ -562,8 +516,7 @@
         "left": 1733.7083740234375,
         "top": 146.0625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "sort1",
       "tool_state": "{\"__input_ext\": \"tabular\", \"__workflow_invocation_uuid__\": \"4cdf4fce5b9d11edba32001e67d2ec02\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"column\": \"2\", \"column_set\": [], \"header_lines\": \"0\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"order\": \"ASC\", \"style\": \"num\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.2.0",
@@ -607,8 +560,7 @@
         "left": 1953.6875,
         "top": 146.0625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/table_compute/table_compute/1.2.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3bf5661c0280",
@@ -644,9 +596,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Concatenate datasets",
       "outputs": [
@@ -659,8 +609,7 @@
         "left": 2173.65625,
         "top": 146.0625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "cat1",
       "tool_state": "{\"__input_ext\": \"tabular\", \"__workflow_invocation_uuid__\": \"4cdf4fce5b9d11edba32001e67d2ec02\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"input1\": {\"__class__\": \"ConnectedValue\"}, \"queries\": [{\"__index__\": 0, \"input2\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.0.0",
@@ -710,8 +659,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionanndata": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "anndata"
         }
@@ -728,9 +676,7 @@
       "type": "tool",
       "uuid": "f5e03b1d-346e-467e-822f-8f262c9e05db",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "16": {
       "annotation": "",
@@ -765,8 +711,7 @@
         "left": 2813.729248046875,
         "top": 194.28125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "3d748954434b",
@@ -798,9 +743,7 @@
           "output_name": "anndata"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Manipulate AnnData",
       "outputs": [
@@ -813,8 +756,7 @@
         "left": 2794.041748046875,
         "top": 1071.2396240234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "3d748954434b",
@@ -846,9 +788,7 @@
           "output_name": "anndata"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Manipulate AnnData",
       "outputs": [
@@ -861,8 +801,7 @@
         "left": 2826,
         "top": 690.625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "3d748954434b",
@@ -894,9 +833,7 @@
           "output_name": "anndata"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cluster, infer trajectories and embed",
       "outputs": [
@@ -909,8 +846,7 @@
         "left": 3119.666748046875,
         "top": 1062.2396240234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/1.7.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "aaa5da8e73a9",
@@ -942,9 +878,7 @@
           "output_name": "anndata"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cluster, infer trajectories and embed",
       "outputs": [
@@ -957,8 +891,7 @@
         "left": 3115.635498046875,
         "top": 699
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/1.7.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "aaa5da8e73a9",
@@ -990,9 +923,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Plot",
       "outputs": [
@@ -1005,8 +936,7 @@
         "left": 3397.70849609375,
         "top": 1056.2708740234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "aa0c474463c2",
@@ -1038,9 +968,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Plot",
       "outputs": [
@@ -1053,8 +981,7 @@
         "left": 3411.70849609375,
         "top": 726.2291870117188
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.7.1+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "aa0c474463c2",

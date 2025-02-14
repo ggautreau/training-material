@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "This workflow uses the decoupler tool in Galaxy to generate pseudobulk counts from an annotated AnnData file obtained from scRNA-seq analysis. Following the pseudobulk step, differential expression genes (DEG) are calculated using the edgeR tool. The workflow also includes data sanitation steps to ensure smooth operation of edgeR and minimizing potential issues. Additionally, a Volcano plot tool is used to visualize the results after the DEG analysis.",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "CC-BY-4.0",
   "release": "0.1.1",
@@ -17,8 +15,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Ensure your AnnData object contains all necessary layers before using the decoupler tool. The raw counts should be included in AnnData. If they are missing, create a new layer (e.g., 'raw_counts') and copy the raw counts into it.",
@@ -27,9 +24,7 @@
       ],
       "label": "Source AnnData file",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 114.82675544995811
@@ -40,17 +35,14 @@
       "type": "data_input",
       "uuid": "96604e3b-861d-4d7c-8408-9d68489c1e41",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Merge Obs fields before pseudo-bulk analysis to create new categories for grouping, such as 'sample,phase' or 'sample,louvain'. Ensure the fields exist in the Obs of the AnnData object. Multiple groups can be merged with a colon (':'), e.g., 'sample,phase\n,phase' creates 'sample_phase' and 'louvain_phase'.",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Merge Obs fields before pseudo-bulk analysis to create new categories for grouping, such as 'sample,phase' or 'sample,louvain'. Ensure the fields exist in the Obs of the AnnData object. Multiple groups can be merged with a colon (':'), e.g., 'sample,phase\n,phase' creates 'sample_phase' and 'louvain_phase'.",
@@ -59,9 +51,7 @@
       ],
       "label": "Pseudo-bulk: Fields to merge",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 60.495251676792236,
         "top": 230.35374378726198
@@ -85,8 +75,7 @@
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Typically, the column in obs that you want to use for comparisons later (the main contrast field) should be specified here. This column will also be used for plotting the pseudo-bulk samples, showing the number of counts and cells.",
@@ -95,9 +84,7 @@
       ],
       "label": "Group by column",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 123.70374778716867,
         "top": 341.8746744746166
@@ -121,8 +108,7 @@
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "The field used to create the pseudo-bulk replicates is typically a combination of multiple Obs fields merged together.",
@@ -131,9 +117,7 @@
       ],
       "label": "Sample key column",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 151.20372670956235,
         "top": 465.91578876790373
@@ -157,8 +141,7 @@
       "content_id": null,
       "errors": null,
       "id": 4,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Name of the layer containing your raw (non-normalized) counts.",
@@ -167,9 +150,7 @@
       ],
       "label": "Name Your Raw Counts Layer",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 198.40796524172788,
         "top": 596.2242453471495
@@ -193,8 +174,7 @@
       "content_id": null,
       "errors": null,
       "id": 5,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "The fields from Obs to be provided to EdgeR as factors. The first field should represent the main contrast for comparisons, while the subsequent fields will be used as covariates.",
@@ -203,9 +183,7 @@
       ],
       "label": "Factor fields",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 223.45860152251703,
         "top": 713.2366686237074
@@ -229,8 +207,7 @@
       "content_id": null,
       "errors": null,
       "id": 6,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Example 1: ~ 0 + Factor_1\n(Use this formula when you only want to account for one factor, Factor_1).\n\nExample 2 (With covariate adjustment): ~ 0 + Factor_1 + Factor_2\n(Use this formula if you need to adjust for additional factors, such as Factor_2, which serves as a covariate).\n\nNote: Ensure that all factors (e.g., Factor_1, Factor_2) included in the formula are defined in your factor file.",
@@ -239,9 +216,7 @@
       ],
       "label": "Formula",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1084.8910833860734,
         "top": 839.4664158173962
@@ -265,8 +240,7 @@
       "content_id": null,
       "errors": null,
       "id": 7,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Specify the name of the column containing your gene symbols. For example: gene_symbol, gene_name, x, etc.",
@@ -275,9 +249,7 @@
       ],
       "label": "Gene symbol column",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1357.37679290235,
         "top": 445.59148543814814
@@ -327,9 +299,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Decoupler pseudo-bulk",
       "outputs": [
@@ -364,20 +334,17 @@
       },
       "post_job_actions": {
         "DeleteIntermediatesActioncount_matrix": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "DeleteIntermediatesAction",
           "output_name": "count_matrix"
         },
         "HideDatasetActiongenes_metadata": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "genes_metadata"
         },
         "HideDatasetActionsamples_metadata": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "samples_metadata"
         }
@@ -423,9 +390,7 @@
           "output_name": "count_matrix"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Sanitize matrix",
       "name": "Replace Text",
       "outputs": [
@@ -440,14 +405,12 @@
       },
       "post_job_actions": {
         "DeleteIntermediatesActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "DeleteIntermediatesAction",
           "output_name": "outfile"
         },
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         },
@@ -471,9 +434,7 @@
       "type": "tool",
       "uuid": "15d8b67b-a232-4ea9-9639-4308a23823f1",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -486,9 +447,7 @@
           "output_name": "samples_metadata"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Sanitize factors",
       "name": "Replace Text",
       "outputs": [
@@ -503,14 +462,12 @@
       },
       "post_job_actions": {
         "DeleteIntermediatesActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "DeleteIntermediatesAction",
           "output_name": "outfile"
         },
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         },
@@ -534,9 +491,7 @@
       "type": "tool",
       "uuid": "a001701e-e3ae-491a-b5cb-8ccf5a1fe80d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "A column that may affect EdgeR and DESeq2.",
@@ -549,9 +504,7 @@
           "output_name": "genes_metadata"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Remove start, end, width",
       "name": "Remove columns",
       "outputs": [
@@ -566,8 +519,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_tabular": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_tabular"
         },
@@ -591,9 +543,7 @@
       "type": "tool",
       "uuid": "b48e0354-6a07-4ae0-a5fe-1dbb84010a26",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -606,9 +556,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Sanitize first factor for leading digits",
       "name": "Replace Text",
       "outputs": [
@@ -623,8 +571,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -641,9 +588,7 @@
       "type": "tool",
       "uuid": "2505066d-49d0-4ed0-888d-455867e6f07d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -656,9 +601,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Text reformatting",
       "outputs": [
@@ -671,8 +614,7 @@
         "left": 1364.7928022139954,
         "top": 910.5816068561169
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.3+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "86755160afbf",
@@ -685,9 +627,7 @@
       "type": "tool",
       "uuid": "5701bab4-15b7-401a-9689-c127d17e5bdf",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -746,8 +686,7 @@
         "left": 1623.5448063037918,
         "top": 655.3696689453593
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/edger/edger/3.36.0+galaxy5",
       "tool_shed_repository": {
         "changeset_revision": "ae2aad0a6d50",
@@ -784,9 +723,7 @@
           "output_name": "outTables"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Get contrast labels",
       "name": "Extract element identifiers",
       "outputs": [
@@ -801,8 +738,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -819,9 +755,7 @@
       "type": "tool",
       "uuid": "6f390fc9-b4ac-485e-867c-f338c902eacb",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "16": {
       "annotation": "",
@@ -838,9 +772,7 @@
           "output_name": "outTables"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Select gene symbols, logFC, PValue and FDR",
       "name": "Remove columns",
       "outputs": [
@@ -853,8 +785,7 @@
         "left": 1940.8759531861979,
         "top": 513.5126602860244
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/column_remove_by_header/column_remove_by_header/1.0",
       "tool_shed_repository": {
         "changeset_revision": "2040e4c2750a",
@@ -886,9 +817,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Replace Text",
       "outputs": [
@@ -903,8 +832,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -921,9 +849,7 @@
       "type": "tool",
       "uuid": "6595e60f-c1a5-4667-946a-69f5bf201d0f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "18": {
       "annotation": "",
@@ -956,8 +882,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionlist_output_txt": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "list_output_txt"
         }
@@ -974,9 +899,7 @@
       "type": "tool",
       "uuid": "0eb6f773-5ef2-4b50-b4fa-21fdbd7671ff",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "19": {
       "annotation": "",
@@ -989,9 +912,7 @@
           "output_name": "list_output_txt"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Contrast as parameters",
       "name": "Parse parameter value",
       "outputs": [
@@ -1006,8 +927,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_param": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_param"
         }
@@ -1018,9 +938,7 @@
       "type": "tool",
       "uuid": "81b2bd80-00c7-4ce5-8d26-f48b0f9f7f08",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "20": {
       "annotation": "",
@@ -1055,8 +973,7 @@
         "left": 2858.6197555934036,
         "top": 367.5558994050945
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/volcanoplot/volcanoplot/0.0.6",
       "tool_shed_repository": {
         "changeset_revision": "2f557f6abbfb",

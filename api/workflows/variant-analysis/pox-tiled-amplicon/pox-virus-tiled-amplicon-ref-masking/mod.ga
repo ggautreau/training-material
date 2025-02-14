@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "The workflow expects a primer scheme split into two separate sequencing pools. These pools must be denoted as pool1/pool2 in the BED score column. The pool ids may, optionally, be followed by indicators of the subpool for tiled PCR amplification (e.g., pool1a/pool1b/pool2a/pool2b)",
@@ -20,9 +19,7 @@
       ],
       "label": "Primer Scheme",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 667.3406219482422
@@ -33,17 +30,14 @@
       "type": "data_input",
       "uuid": "1829d4e0-ee74-4a94-8dc5-98a11d96b961",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "The viral reference sequence to map sequenced reads against",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "The viral reference sequence to map sequenced reads against",
@@ -52,9 +46,7 @@
       ],
       "label": "Reference FASTA",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 251.7752034262281,
         "top": 650.9021921247038
@@ -65,9 +57,7 @@
       "type": "data_input",
       "uuid": "f17c7022-fc94-42b5-ae90-7b3ec3d70ffb",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -80,9 +70,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Select pool1 primers",
       "name": "Select",
       "outputs": [
@@ -110,9 +98,7 @@
       "type": "tool",
       "uuid": "c46843eb-0908-493a-958b-fbc236247626",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -125,9 +111,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Select pool2 primers",
       "name": "Select",
       "outputs": [
@@ -155,9 +139,7 @@
       "type": "tool",
       "uuid": "edcdbb82-3a77-433d-92c7-4e954af22c0c",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -170,9 +152,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Compute sequence length",
       "outputs": [
@@ -187,8 +167,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -205,9 +184,7 @@
       "type": "tool",
       "uuid": "f562eb06-797e-4efb-a464-6d368f573dbe",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -220,9 +197,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Datamash",
       "outputs": [
@@ -244,8 +219,7 @@
           "output_name": "out_file"
         },
         "HideDatasetActionout_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file"
         }
@@ -262,9 +236,7 @@
       "type": "tool",
       "uuid": "6999e1c0-819e-4f9c-8ec0-75e985802a54",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -277,9 +249,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Datamash",
       "outputs": [
@@ -301,8 +271,7 @@
           "output_name": "out_file"
         },
         "HideDatasetActionout_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file"
         }
@@ -319,9 +288,7 @@
       "type": "tool",
       "uuid": "2130b998-eb44-42dc-81ee-ad098bb5d721",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -334,9 +301,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -351,8 +316,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -363,9 +327,7 @@
       "type": "tool",
       "uuid": "889acb03-b55a-40fa-a1d9-804e1eb1d958",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -398,8 +360,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -416,9 +377,7 @@
       "type": "tool",
       "uuid": "64d8f5b7-f5c1-48fd-b82c-145dd5f81528",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -431,9 +390,7 @@
           "output_name": "out_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Get start position of Pool2",
       "name": "Parse parameter value",
       "outputs": [
@@ -448,8 +405,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_param": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_param"
         }
@@ -460,9 +416,7 @@
       "type": "tool",
       "uuid": "33b91954-218c-46bf-9cf8-8a0d9535c1be",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -475,9 +429,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Get end position of sequence",
       "name": "Parse parameter value",
       "outputs": [
@@ -492,8 +444,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_param": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_param"
         }
@@ -504,9 +455,7 @@
       "type": "tool",
       "uuid": "ec25cd53-697b-4de1-91fd-4cf6d08af23d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -519,9 +468,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Get end position of Pool1",
       "name": "Parse parameter value",
       "outputs": [
@@ -536,8 +483,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_param": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_param"
         }
@@ -548,9 +494,7 @@
       "type": "tool",
       "uuid": "27c913a7-f1cc-47ec-8e19-a942cd5ce8a3",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -563,9 +507,7 @@
           "output_name": "text_param"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Compose text parameter value",
       "outputs": [
@@ -580,8 +522,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out1"
         }
@@ -598,9 +539,7 @@
       "type": "tool",
       "uuid": "576bae3e-38d9-48cb-8afc-80d10e1cd43f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -617,9 +556,7 @@
           "output_name": "text_param"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Compose text parameter value",
       "outputs": [
@@ -634,8 +571,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out1"
         }
@@ -652,9 +588,7 @@
       "type": "tool",
       "uuid": "cfe61da6-24c0-4f7c-9ef0-428edd13b964",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -671,9 +605,7 @@
           "output_name": "out1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Mask Reference for Pool2",
       "name": "maskseq",
       "outputs": [
@@ -730,9 +662,7 @@
           "output_name": "out1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Mask Reference for Pool1",
       "name": "maskseq",
       "outputs": [

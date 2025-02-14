@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "PacBio reads in fastq format",
@@ -20,9 +19,7 @@
       ],
       "label": "PacBio reads",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 242.1999969482422,
         "height": 82.19999694824219,
@@ -38,17 +35,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "022ec16e-3c15-45db-99c0-167a7d3121fe",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Reference genome from JGI",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Reference genome from JGI",
@@ -57,9 +51,7 @@
       ],
       "label": "Reference genome",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 418.1999969482422,
         "height": 82.19999694824219,
@@ -75,9 +67,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "abf0462d-3f02-4be7-8079-a97f496b4683",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -90,9 +80,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Flye",
       "outputs": [
@@ -123,8 +111,7 @@
         "x": 547.5,
         "y": 155.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/flye/flye/2.9+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "276f5d8712d5",
@@ -170,9 +157,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Fasta Statistics",
       "outputs": [
@@ -193,8 +178,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionstats_output": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "stats_output"
         }
@@ -210,9 +194,7 @@
       "tool_version": "2.0",
       "type": "tool",
       "uuid": "9a9a702c-f355-44c8-b8fa-3b9e5600fa10",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -225,9 +207,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Busco",
       "outputs": [
@@ -252,14 +232,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionbusco_sum": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_sum"
         },
         "HideDatasetActionbusco_table": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_table"
         }
@@ -275,9 +253,7 @@
       "tool_version": "5.2.2+galaxy2",
       "type": "tool",
       "uuid": "297abfe6-38d3-4494-98f5-5fdbeb17d6ae",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -290,9 +266,7 @@
           "output_name": "consensus"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Fasta Statistics",
       "outputs": [
@@ -311,8 +285,7 @@
         "x": 905,
         "y": 124
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/2.0",
       "tool_shed_repository": {
         "changeset_revision": "0dbb995c7d35",
@@ -371,8 +344,7 @@
         "x": 902.5,
         "y": 327
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.0.2+galaxy3",
       "tool_shed_repository": {
         "changeset_revision": "7594365c546b",
@@ -403,9 +375,7 @@
           "output_name": "consensus"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Busco",
       "outputs": [
@@ -430,8 +400,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionbusco_table": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_table"
         }

@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Single-cell quality control with scater",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "CC-BY-4.0",
   "name": "Single-cell QC with scater",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -26,9 +23,7 @@
       ],
       "label": "annotation.txt",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 39
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "3575b170-465d-4e4a-bae1-ff4c1efa142a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -58,9 +50,7 @@
       ],
       "label": "counts.txt",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 159
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "03bc455e-52cc-4a2e-9a00-049f0fab721f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -90,9 +77,7 @@
       ],
       "label": "mt_controls.txt",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 279
@@ -103,9 +88,7 @@
       "type": "data_input",
       "uuid": "f59c9ecb-0d03-4e93-8f46-5d3ed1b75aea",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -126,9 +109,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scater: Calculate QC metrics",
       "outputs": [
@@ -141,8 +122,7 @@
         "left": 220,
         "top": 39
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scater_create_qcmetric_ready_sce/scater_create_qcmetric_ready_sce/1.12.2",
       "tool_shed_repository": {
         "changeset_revision": "fd808de478b1",
@@ -155,9 +135,7 @@
       "type": "tool",
       "uuid": "cae20f66-087b-4c66-a317-6511b000a797",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -170,9 +148,7 @@
           "output_name": "output_loom"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Library QC",
       "name": "Scater: plot library QC",
       "outputs": [
@@ -185,8 +161,7 @@
         "left": 550,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_dist_scatter/scater_plot_dist_scatter/1.12.2",
       "tool_shed_repository": {
         "changeset_revision": "2e41b35b5bdd",
@@ -218,9 +193,7 @@
           "output_name": "output_loom"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter SCE",
       "name": "Scater: filter SCE",
       "outputs": [
@@ -233,8 +206,7 @@
         "left": 665,
         "top": 185
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scater_filter/scater_filter/1.12.2",
       "tool_shed_repository": {
         "changeset_revision": "b7ea9f09c02f",
@@ -266,9 +238,7 @@
           "output_name": "output_loom"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filtered Library QC",
       "name": "Scater: plot library QC",
       "outputs": [
@@ -281,8 +251,7 @@
         "left": 945,
         "top": 21
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_dist_scatter/scater_plot_dist_scatter/1.12.2",
       "tool_shed_repository": {
         "changeset_revision": "2e41b35b5bdd",
@@ -314,9 +283,7 @@
           "output_name": "output_loom"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "PCA Plot",
       "name": "Scater: PCA plot",
       "outputs": [
@@ -329,8 +296,7 @@
         "left": 939,
         "top": 372
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_pca/scater_plot_pca/1.12.2",
       "tool_shed_repository": {
         "changeset_revision": "46fc6751d746",

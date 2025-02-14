@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Downloads data from NCBI assuming the correct data input format. (I.e. it should be two columns, with a header, Run and Group, where Run is an SRR identifier.)",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "AGPL-3.0-or-later",
   "name": "BY-COVID: Data Download",
@@ -13,8 +11,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "This should be a two column sample table that looks like:\n\n```\nRun\tGroup\nSRR16681566\thealthy\nSRR16681565\thealthy\nSRR16681564\thealthy\n```",
@@ -23,9 +20,7 @@
       ],
       "label": "Sample Table",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 6
@@ -36,9 +31,7 @@
       "type": "data_input",
       "uuid": "0db27234-a5f7-4177-8de5-f461765a00b8",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
@@ -51,9 +44,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -68,8 +59,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -80,9 +70,7 @@
       "type": "tool",
       "uuid": "078accd8-6164-4e40-9c54-650034f5e91f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -95,9 +83,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Select",
       "outputs": [
@@ -112,8 +98,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -124,9 +109,7 @@
       "type": "tool",
       "uuid": "7e6b8476-bf1d-4fbf-ab55-b6ee872d528b",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -171,20 +154,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionlist_paired": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "list_paired"
         },
         "HideDatasetActionlog": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "log"
         },
         "HideDatasetActionoutput_collection_other": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_collection_other"
         }

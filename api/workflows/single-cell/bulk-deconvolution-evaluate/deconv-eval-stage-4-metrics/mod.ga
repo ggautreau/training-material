@@ -83,8 +83,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Tabular dataset with row and column headers\nRows = cell types\nColumns = ACTUAL followed by INFERRED\nNumbers = cell proportions",
@@ -93,9 +92,7 @@
       ],
       "label": "Cell Proportions",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 40.227098634546735
@@ -106,9 +103,7 @@
       "type": "data_input",
       "uuid": "15eab763-91bf-46bb-9d8c-39f0838db5df",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
@@ -141,8 +136,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontable": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "table"
         }
@@ -159,9 +153,7 @@
       "type": "tool",
       "uuid": "608c84a5-409a-4576-95e2-0fd87a97527f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "This computes (actual-expected)^2",
@@ -174,9 +166,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Compute squared error",
       "name": "Compute",
       "outputs": [
@@ -191,8 +181,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -209,9 +198,7 @@
       "type": "tool",
       "uuid": "f71f504b-b04b-4338-8b77-0de7c71b9a78",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -224,9 +211,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Remove duplicate",
       "name": "Remove beginning",
       "outputs": [
@@ -241,8 +226,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -253,9 +237,7 @@
       "type": "tool",
       "uuid": "ddf17f1c-bb5c-430e-87b9-3dfcc6544a83",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "Takes the (actual-inferred)^2 column alone",
@@ -268,9 +250,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Cut RMSE column",
       "name": "Cut",
       "outputs": [
@@ -285,8 +265,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         },
@@ -327,9 +306,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Paste",
       "outputs": [
@@ -344,8 +321,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -356,9 +332,7 @@
       "type": "tool",
       "uuid": "49fb862c-456f-4d45-8c8d-409bb2687850",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -391,8 +365,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontable": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "table"
         }
@@ -409,9 +382,7 @@
       "type": "tool",
       "uuid": "2f5595ea-62c3-48e3-8242-14b680ea2360",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -424,9 +395,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Add mean column",
       "name": "Text reformatting",
       "outputs": [
@@ -441,8 +410,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -459,9 +427,7 @@
       "type": "tool",
       "uuid": "4f71a522-3a23-4b49-b0b7-60394939e734",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "Finally we take the square root of the number to get the RSME",
@@ -474,9 +440,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Square root error",
       "name": "Compute",
       "outputs": [
@@ -510,9 +474,7 @@
       "type": "tool",
       "uuid": "4d5ba3b1-d576-4df5-aadc-38dce824f384",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -525,9 +487,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Compute differences",
       "name": "Compute",
       "outputs": [
@@ -542,8 +502,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -560,9 +519,7 @@
       "type": "tool",
       "uuid": "d7cb4739-f3f7-4fe6-a398-1385bf95fc89",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -575,9 +532,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -592,8 +547,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -604,9 +558,7 @@
       "type": "tool",
       "uuid": "bf0d9e4b-3c15-45bd-93ae-631e5e381d86",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -639,8 +591,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontable": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "table"
         }
@@ -657,9 +608,7 @@
       "type": "tool",
       "uuid": "ca6b9888-bc08-46cf-9b4b-200d503d8edc",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -672,9 +621,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Transpose",
       "outputs": [
@@ -689,8 +636,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file"
         }
@@ -707,9 +653,7 @@
       "type": "tool",
       "uuid": "888ca713-bb5a-4094-9ab7-e9c0c9c7dc08",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -722,9 +666,7 @@
           "output_name": "out_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Final Pearson correlation",
       "name": "Compute",
       "outputs": [
@@ -739,8 +681,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -757,9 +698,7 @@
       "type": "tool",
       "uuid": "63ae97d0-8f41-4a08-97e2-a1504852c7be",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -772,9 +711,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Cut Pearson column",
       "name": "Cut",
       "outputs": [

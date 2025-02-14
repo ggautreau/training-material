@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Prediction of HLA binding for verified candidates",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "GPL-3.0-or-later",
   "name": "GigaScience-RNAseq-Optitype-seq2HLA-to-IEDB-alleles",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Paired RNAseq forward reads.",
@@ -26,9 +23,7 @@
       ],
       "label": "R1.fastq",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 172.50329230957024
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "0db8cd2f-9c00-4c93-96fd-1b756cc83c66",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Paired RNAseq reverse reads.",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Paired RNAseq reverse reads.",
@@ -58,9 +50,7 @@
       ],
       "label": "R2.fastq",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 3.6874771118164062,
         "top": 283.5241243713378
@@ -71,9 +61,7 @@
       "type": "data_input",
       "uuid": "6c668770-34f7-4091-a830-a68030244843",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "HLA genotyping output",
@@ -234,32 +222,27 @@
       },
       "post_job_actions": {
         "HideDatasetActionc1_expression": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "c1_expression"
         },
         "HideDatasetActionc1_genotype2digits": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "c1_genotype2digits"
         },
         "HideDatasetActionc2_expression": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "c2_expression"
         },
         "HideDatasetActionc2_genotype4digits": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "c2_genotype4digits"
         },
         "HideDatasetActionseq2hla_log": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "seq2hla_log"
         },
@@ -337,9 +320,7 @@
           "output_name": "result"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Reformated-Optitype-Data",
       "name": "Text reformatting",
       "outputs": [
@@ -354,8 +335,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         },

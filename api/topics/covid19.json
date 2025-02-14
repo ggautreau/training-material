@@ -103,9 +103,7 @@
           "parent_id": "computational-chemistry/covid19-docking",
           "topic_id": "computational-chemistry",
           "tutorial_id": "covid19-docking",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "Virtual screening of the SARS-CoV-2 main protease with rDock and pose scoring",
           "title": "Virtual screening of the SARS-CoV-2 main protease with rDock and pose scoring",
           "version": 3,
@@ -151,7 +149,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nCandidates\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nMpro-x0195_0_apo-desolv.pdb\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nhits.sdf\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Enumerate changes\"];\n  0 -->|output| 3;\n  4[\"Compound conversion\"];\n  1 -->|output| 4;\n  5[\"Create Frankenstein ligand\"];\n  2 -->|output| 5;\n  6[\"Compound conversion\"];\n  3 -->|output| 6;\n  7[\"rDock cavity definition\"];\n  4 -->|outfile| 7;\n  5 -->|outfile| 7;\n  8[\"Split file\"];\n  6 -->|outfile| 8;\n  9[\"rDock docking\"];\n  4 -->|outfile| 9;\n  8 -->|list_output_sdf| 9;\n  7 -->|activesite| 9;\n  10[\"Collapse Collection\"];\n  9 -->|output| 10;\n  11[\"XChem TransFS pose scoring\"];\n  1 -->|output| 11;\n  10 -->|output| 11;\n  12[\"Max SuCOS score\"];\n  11 -->|output| 12;\n  2 -->|output| 12;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nCandidates\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nMpro-x0195_0_apo-desolv.pdb\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nhits.sdf\"]\n  3[label=\"Enumerate changes\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"Compound conversion\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"Create Frankenstein ligand\"]\n  2 -> 5 [label=\"output\"]\n  6[label=\"Compound conversion\"]\n  3 -> 6 [label=\"output\"]\n  7[label=\"rDock cavity definition\"]\n  4 -> 7 [label=\"outfile\"]\n  5 -> 7 [label=\"outfile\"]\n  8[label=\"Split file\"]\n  6 -> 8 [label=\"outfile\"]\n  9[label=\"rDock docking\"]\n  4 -> 9 [label=\"outfile\"]\n  8 -> 9 [label=\"list_output_sdf\"]\n  7 -> 9 [label=\"activesite\"]\n  10[label=\"Collapse Collection\"]\n  9 -> 10 [label=\"output\"]\n  11[label=\"XChem TransFS pose scoring\"]\n  1 -> 11 [label=\"output\"]\n  10 -> 11 [label=\"output\"]\n  12[label=\"Max SuCOS score\"]\n  11 -> 12 [label=\"output\"]\n  2 -> 12 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -169,9 +167,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -179,8 +175,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Candidates\"}",
               "id": 0,
               "uuid": "47bf8c53-ae1e-4af6-bece-6adfd74b627c",
@@ -204,9 +199,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -214,8 +207,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Mpro-x0195_0_apo-desolv.pdb\"}",
               "id": 1,
               "uuid": "156f4aeb-d160-456a-974e-7884b79cb83a",
@@ -239,9 +231,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -249,8 +239,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"hits.sdf\"}",
               "id": 2,
               "uuid": "dd2d3bc0-8138-4e66-b2d9-e5e90e27b659",
@@ -276,9 +265,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -286,8 +273,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Candidates\"}",
               "id": 0,
               "uuid": "47bf8c53-ae1e-4af6-bece-6adfd74b627c",
@@ -311,9 +297,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -321,8 +305,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Mpro-x0195_0_apo-desolv.pdb\"}",
               "id": 1,
               "uuid": "156f4aeb-d160-456a-974e-7884b79cb83a",
@@ -346,9 +329,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -356,8 +337,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"hits.sdf\"}",
               "id": 2,
               "uuid": "dd2d3bc0-8138-4e66-b2d9-e5e90e27b659",
@@ -411,8 +391,7 @@
               "uuid": "081abe35-347a-4244-99ae-ec35329e3de0",
               "errors": null,
               "name": "Create Frankenstein ligand",
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "label": null,
               "inputs": [
                 {
@@ -452,12 +431,8 @@
         "xchem_pose_scoring"
       ],
       "supported_servers": {
-        "exact": [
-
-        ],
-        "inexact": [
-
-        ]
+        "exact": [],
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -2312,8 +2287,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.4.0",
-                  "0.5.1"
+                  "0.5.1",
+                  "0.4.0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -2984,8 +2959,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
-                  "5.1.0"
+                  "5.1.0",
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -3276,12 +3251,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -3379,9 +3350,7 @@
           "parent_id": "sequence-analysis/human-reads-removal",
           "topic_id": "sequence-analysis",
           "tutorial_id": "human-reads-removal",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "GTN - Sequence Analyses - Removal of human reads from SARS-CoV-2 sequencing data",
           "title": "GTN - Sequence Analyses - Removal of human reads from SARS-CoV-2 sequencing data",
           "version": 1,
@@ -3413,7 +3382,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:41 +0000",
+          "modified": "2025-02-14 10:44:29 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nInput Dataset Collection\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Trimmomatic\"];\n  0 -->|output| 1;\n  2[\"Unzip Collection\"];\n  0 -->|output| 2;\n  3[\"Map with BWA-MEM\"];\n  1 -->|fastq_out_paired| 3;\n  4[\"Samtools fastx\"];\n  3 -->|bam_output| 4;\n  5[\"Select\"];\n  4 -->|forward| 5;\n  6[\"Replace Text\"];\n  5 -->|out_file1| 6;\n  7[\"seqtk_subseq\"];\n  2 -->|forward| 7;\n  6 -->|outfile| 7;\n  8[\"seqtk_subseq\"];\n  2 -->|reverse| 8;\n  6 -->|outfile| 8;\n  9[\"Paired-end collection of cleaned reads\"];\n  7 -->|default| 9;\n  8 -->|default| 9;\n  f24bbf28-dc51-440f-a758-ac05033f0645[\"Output\\nCleaned Data\"];\n  9 --> f24bbf28-dc51-440f-a758-ac05033f0645;\n  style f24bbf28-dc51-440f-a758-ac05033f0645 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nInput Dataset Collection\"]\n  1[label=\"Trimmomatic\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Unzip Collection\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Map with BWA-MEM\"]\n  1 -> 3 [label=\"fastq_out_paired\"]\n  4[label=\"Samtools fastx\"]\n  3 -> 4 [label=\"bam_output\"]\n  5[label=\"Select\"]\n  4 -> 5 [label=\"forward\"]\n  6[label=\"Replace Text\"]\n  5 -> 6 [label=\"out_file1\"]\n  7[label=\"seqtk_subseq\"]\n  2 -> 7 [label=\"forward\"]\n  6 -> 7 [label=\"outfile\"]\n  8[label=\"seqtk_subseq\"]\n  2 -> 8 [label=\"reverse\"]\n  6 -> 8 [label=\"outfile\"]\n  9[label=\"Paired-end collection of cleaned reads\"]\n  7 -> 9 [label=\"default\"]\n  8 -> 9 [label=\"default\"]\n  kf24bbf28dc51440fa758ac05033f0645[color=lightseagreen,label=\"Output\\nCleaned Data\"]\n  9 -> kf24bbf28dc51440fa758ac05033f0645\n}",
           "workflow_tools": [
@@ -3432,8 +3401,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3442,9 +3410,7 @@
               ],
               "label": "Input Dataset Collection",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 564,
                 "height": 81,
@@ -3475,8 +3441,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3485,9 +3450,7 @@
               ],
               "label": "Input Dataset Collection",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 564,
                 "height": 81,
@@ -3522,9 +3485,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Trimmomatic",
               "outputs": [
@@ -3547,8 +3508,7 @@
                 "x": 532,
                 "y": 313
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.38.1",
               "tool_shed_repository": {
                 "changeset_revision": "d94aff5ee623",
@@ -3584,9 +3544,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Unzip Collection",
               "outputs": [
@@ -3609,8 +3567,7 @@
                 "x": 735,
                 "y": 564
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "__UNZIP_COLLECTION__",
               "tool_state": "{\"input\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
               "tool_version": "1.0.0",
@@ -3664,8 +3621,7 @@
                 "x": 753,
                 "y": 295
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
               "tool_shed_repository": {
                 "changeset_revision": "64f11cf59c6e",
@@ -3696,9 +3652,7 @@
                   "output_name": "bam_output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Samtools fastx",
               "outputs": [
@@ -3717,8 +3671,7 @@
                 "x": 973,
                 "y": 295
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_fastx/samtools_fastx/1.9+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "a8d69aee190e",
@@ -3749,9 +3702,7 @@
                   "output_name": "forward"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Select",
               "outputs": [
@@ -3770,8 +3721,7 @@
                 "x": 1193,
                 "y": 295
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "Grep1",
               "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"input|__identifier__\": \"1085990\", \"invert\": \"\", \"keep_header\": \"false\", \"pattern\": \"^>.+\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
               "tool_version": "1.0.3",
@@ -3796,9 +3746,7 @@
                   "output_name": "out_file1"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Replace Text",
               "outputs": [
@@ -3817,8 +3765,7 @@
                 "x": 1413,
                 "y": 295
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/1.1.2",
               "tool_shed_repository": {
                 "changeset_revision": "ddf54b12c295",
@@ -3853,9 +3800,7 @@
                   "output_name": "outfile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "seqtk_subseq",
               "outputs": [
@@ -3874,8 +3819,7 @@
                 "x": 1653,
                 "y": 274
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_subseq/1.3.1",
               "tool_shed_repository": {
                 "changeset_revision": "58c8ece95b53",
@@ -3910,9 +3854,7 @@
                   "output_name": "outfile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "seqtk_subseq",
               "outputs": [
@@ -3931,8 +3873,7 @@
                 "x": 1658,
                 "y": 430
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_subseq/1.3.1",
               "tool_shed_repository": {
                 "changeset_revision": "58c8ece95b53",
@@ -3995,8 +3936,7 @@
                 "x": 1939,
                 "y": 348.5
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "__ZIP_COLLECTION__",
               "tool_state": "{\"input_forward\": {\"__class__\": \"RuntimeValue\"}, \"input_reverse\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
               "tool_version": "1.0.0",
@@ -5331,8 +5271,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.38.1",
                   "0.39+galaxy0",
+                  "0.38.1",
                   "0.36.4"
                 ],
                 "server": "https://galaxytrakr.org/"
@@ -5412,12 +5352,12 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.38.1",
                   "0.39+galaxy0",
+                  "0.38.1",
                   "0.36.4",
                   "0.39+galaxy2",
-                  "0.32.3",
                   "0.36.5",
+                  "0.32.3",
                   "0.32.2",
                   "0.36.0",
                   "0.32.1"
@@ -5573,11 +5513,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.38.0",
                   "0.36.6",
+                  "0.38.0",
                   "0.39+galaxy2",
-                  "0.32.3",
-                  "0.36.5"
+                  "0.36.5",
+                  "0.32.3"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -5678,12 +5618,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -5805,9 +5741,7 @@
           "parent_id": "galaxy-interface/upload-data-to-ena",
           "topic_id": "galaxy-interface",
           "tutorial_id": "upload-data-to-ena",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "GTN_ENA_upload_workflow",
           "title": "GTN_ENA_upload_workflow",
           "version": 1,
@@ -5832,26 +5766,21 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:40 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ENA Upload tool\"];\n  1[\"ENA Upload tool\"];",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[label=\"ENA Upload tool\"]\n  1[label=\"ENA Upload tool\"]\n}",
           "workflow_tools": [
             "toolshed.g2.bx.psu.edu/repos/iuc/ena_upload/ena_upload/0.3.2"
           ],
-          "inputs": [
-
-          ],
+          "inputs": [],
           "outputs": [
             {
               "annotation": "",
               "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/ena_upload/ena_upload/0.3.2",
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": null,
               "name": "ENA Upload tool",
               "outputs": [
@@ -5886,8 +5815,7 @@
                 "x": 701.25,
                 "y": 337.5
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/ena_upload/ena_upload/0.3.2",
               "tool_shed_repository": {
                 "changeset_revision": "9e2df763086c",
@@ -5937,9 +5865,7 @@
         "toolshed.g2.bx.psu.edu/repos/iuc/ena_upload/ena_upload/0.7.1"
       ],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "url": "https://usegalaxy.be/",
@@ -6365,11 +6291,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.3.1",
-                  "0.7.5+galaxy1",
                   "0.3",
+                  "0.7.1+galaxy1",
                   "0.5.3",
-                  "0.7.1+galaxy1"
+                  "0.7.5+galaxy1",
+                  "0.3.1"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -6389,16 +6315,16 @@
                 "state": "inexact",
                 "versions": [
                   "0.7.3+galaxy1",
-                  "0.3.1",
-                  "0.7.5+galaxy1",
-                  "0.5.3",
                   "0.7.1+galaxy1",
+                  "0.5.3",
+                  "0.7.5+galaxy1",
+                  "0.3.1",
                   "0.6.1",
                   "0.4.3",
                   "0.6.3+galaxy0",
-                  "0.6.0",
                   "0.3.3",
                   "0.4.1",
+                  "0.6.0",
                   "0.7.1+galaxy0"
                 ],
                 "server": "https://usegalaxy.fr/"
@@ -6415,14 +6341,14 @@
                 "state": "inexact",
                 "versions": [
                   "0.7.3+galaxy1",
-                  "0.7.5+galaxy1",
-                  "0.5.3",
                   "0.7.1+galaxy1",
+                  "0.5.3",
+                  "0.7.5+galaxy1",
                   "0.6.1",
                   "0.4.3",
                   "0.6.3+galaxy0",
-                  "0.6.0",
-                  "0.3.3"
+                  "0.3.3",
+                  "0.6.0"
                 ],
                 "server": "https://usegalaxy.org.au"
               },
@@ -6542,11 +6468,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.3.1",
-                  "0.7.5+galaxy1",
                   "0.3",
+                  "0.7.1+galaxy1",
                   "0.5.3",
-                  "0.7.1+galaxy1"
+                  "0.7.5+galaxy1",
+                  "0.3.1"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -6561,18 +6487,18 @@
                 "state": "inexact",
                 "versions": [
                   "0.7.3+galaxy1",
-                  "0.3.1",
-                  "0.7.5+galaxy1",
                   "0.3",
-                  "0.5.3",
                   "0.7.1+galaxy1",
+                  "0.5.3",
+                  "0.7.5+galaxy1",
+                  "0.3.1",
                   "0.6.1",
                   "0.4.3",
-                  "0.3.2",
                   "0.6.3+galaxy0",
-                  "0.6.0",
                   "0.3.3",
-                  "0.4.1"
+                  "0.3.2",
+                  "0.4.1",
+                  "0.6.0"
                 ],
                 "server": "https://usegalaxy.eu"
               },
@@ -6580,16 +6506,16 @@
                 "state": "inexact",
                 "versions": [
                   "0.7.3+galaxy1",
-                  "0.3.1",
-                  "0.7.5+galaxy1",
-                  "0.5.3",
                   "0.7.1+galaxy1",
+                  "0.5.3",
+                  "0.7.5+galaxy1",
+                  "0.3.1",
                   "0.6.1",
                   "0.4.3",
                   "0.6.3+galaxy0",
-                  "0.6.0",
                   "0.3.3",
                   "0.4.1",
+                  "0.6.0",
                   "0.7.1+galaxy0"
                 ],
                 "server": "https://usegalaxy.fr/"
@@ -6606,14 +6532,14 @@
                 "state": "inexact",
                 "versions": [
                   "0.7.3+galaxy1",
-                  "0.7.5+galaxy1",
-                  "0.5.3",
                   "0.7.1+galaxy1",
+                  "0.5.3",
+                  "0.7.5+galaxy1",
                   "0.6.1",
                   "0.4.3",
                   "0.6.3+galaxy0",
-                  "0.6.0",
-                  "0.3.3"
+                  "0.3.3",
+                  "0.6.0"
                 ],
                 "server": "https://usegalaxy.org.au"
               },
@@ -6653,12 +6579,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -6809,7 +6731,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:40 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nVariant calls\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Parameter\\nmin-AF for consensus variant\"];\n  style 1 fill:#ded,stroke:#393,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nReference genome\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Compose text parameter value\"];\n  1 -->|output| 3;\n  4[\"SnpSift Filter\"];\n  3 -->|out1| 4;\n  0 -->|output| 4;\n  ee67c5ed-ff7c-404b-ad20-19259edbc671[\"Output\\nconsensus_variants\"];\n  4 --> ee67c5ed-ff7c-404b-ad20-19259edbc671;\n  style ee67c5ed-ff7c-404b-ad20-19259edbc671 stroke:#2c3143,stroke-width:4px;\n  5[\"bcftools consensus\"];\n  4 -->|output| 5;\n  2 -->|output| 5;\n  9028f80e-4112-40d8-9a49-f671677d304f[\"Output\\nconsensus\"];\n  5 --> 9028f80e-4112-40d8-9a49-f671677d304f;\n  style 9028f80e-4112-40d8-9a49-f671677d304f stroke:#2c3143,stroke-width:4px;\n  6[\"Collapse Collection\"];\n  5 -->|output_file| 6;\n  1dd7978e-b907-42d6-8fc4-f6fadeefcad1[\"Output\\nmultisample_consensus_fasta\"];\n  6 --> 1dd7978e-b907-42d6-8fc4-f6fadeefcad1;\n  style 1dd7978e-b907-42d6-8fc4-f6fadeefcad1 stroke:#2c3143,stroke-width:4px;\n  7[\"Pangolin\"];\n  6 -->|output| 7;\n  e02d2cfb-9842-4069-957c-6cf4ec197056[\"Output\\npangolin_results\"];\n  7 --> e02d2cfb-9842-4069-957c-6cf4ec197056;\n  style e02d2cfb-9842-4069-957c-6cf4ec197056 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nVariant calls\"]\n  1[color=lightgreen,label=\"ℹ️ Input Parameter\\nmin-AF for consensus variant\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nReference genome\"]\n  3[label=\"Compose text parameter value\"]\n  1 -> 3 [label=\"output\"]\n  4[label=\"SnpSift Filter\"]\n  3 -> 4 [label=\"out1\"]\n  0 -> 4 [label=\"output\"]\n  kee67c5edff7c404bad2019259edbc671[color=lightseagreen,label=\"Output\\nconsensus_variants\"]\n  4 -> kee67c5edff7c404bad2019259edbc671\n  5[label=\"bcftools consensus\"]\n  4 -> 5 [label=\"output\"]\n  2 -> 5 [label=\"output\"]\n  k9028f80e411240d89a49f671677d304f[color=lightseagreen,label=\"Output\\nconsensus\"]\n  5 -> k9028f80e411240d89a49f671677d304f\n  6[label=\"Collapse Collection\"]\n  5 -> 6 [label=\"output_file\"]\n  k1dd7978eb90742d68fc4f6fadeefcad1[color=lightseagreen,label=\"Output\\nmultisample_consensus_fasta\"]\n  6 -> k1dd7978eb90742d68fc4f6fadeefcad1\n  7[label=\"Pangolin\"]\n  6 -> 7 [label=\"output\"]\n  ke02d2cfb98424069957c6cf4ec197056[color=lightseagreen,label=\"Output\\npangolin_results\"]\n  7 -> ke02d2cfb98424069957c6cf4ec197056\n}",
           "workflow_tools": [
@@ -6825,8 +6747,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6835,9 +6756,7 @@
               ],
               "label": "Variant calls",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 425.43333435058594,
                 "height": 61.80000305175781,
@@ -6853,17 +6772,14 @@
               "tool_version": null,
               "type": "data_collection_input",
               "uuid": "fca4e710-87a7-4cb6-9ff1-f9a8dc84ca37",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6872,9 +6788,7 @@
               ],
               "label": "min-AF for consensus variant",
               "name": "Input parameter",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 619.1000061035156,
                 "height": 102.60000610351562,
@@ -6903,8 +6817,7 @@
               "content_id": null,
               "errors": null,
               "id": 2,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6913,9 +6826,7 @@
               ],
               "label": "Reference genome",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 734.8500366210938,
                 "height": 82.20001220703125,
@@ -6931,9 +6842,7 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "4a2c6df2-fb1e-42d8-96d5-6765ca85c214",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -6942,8 +6851,7 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6952,9 +6860,7 @@
               ],
               "label": "min-AF for consensus variant",
               "name": "Input parameter",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 619.1000061035156,
                 "height": 102.60000610351562,
@@ -6993,9 +6899,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "SnpSift Filter",
               "outputs": [
@@ -7128,9 +7032,7 @@
                   "output_name": "output_file"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Collapse Collection",
               "outputs": [
@@ -7811,11 +7713,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1.1+galaxy0",
                   "4.1.2+galaxy0",
-                  "3.0.3+galaxy0",
                   "3.1.16+galaxy0",
-                  "4.0.5+galaxy0"
+                  "4.0.5+galaxy0",
+                  "4.1.1+galaxy0",
+                  "3.0.3+galaxy0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -7878,8 +7780,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.2+galaxy0",
-                  "4.3+galaxy1"
+                  "4.3+galaxy1",
+                  "4.2+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -7891,20 +7793,20 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1.1+galaxy0",
                   "4.1.2+galaxy0",
                   "3.1.16+galaxy0",
                   "4.0.5+galaxy0",
+                  "4.1.1+galaxy0",
                   "4.3+galaxy2",
-                  "4.2+galaxy0",
                   "4.3+galaxy1",
-                  "3.1.20+galaxy0",
-                  "3.1.17+galaxy1",
+                  "4.2+galaxy0",
                   "3.1.14+galaxy0",
-                  "3.1.11+galaxy0",
-                  "3.1.19+galaxy0",
                   "4.0.5+galaxy2",
-                  "3.1.4+galaxy1"
+                  "3.1.4+galaxy1",
+                  "3.1.17+galaxy1",
+                  "3.1.11+galaxy0",
+                  "3.1.20+galaxy0",
+                  "3.1.19+galaxy0"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -8210,8 +8112,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
-                  "5.1.0"
+                  "5.1.0",
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -8287,12 +8189,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8412,9 +8310,7 @@
           "parent_id": "assembly/assembly-with-preprocessing",
           "topic_id": "assembly",
           "tutorial_id": "assembly-with-preprocessing",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "assembly_with_preprocessing",
           "title": "assembly_with_preprocessing",
           "version": 1,
@@ -8447,7 +8343,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:25 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nCollection of paired short-reads data\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Collection\\nCollection of long-reads data\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  10[\"Samtools fastx\"];\n  7 -->|outputsam| 10;\n  11[\"Samtools fastx\"];\n  9 -->|outputsam| 11;\n  12[\"Collapse Collection\"];\n  10 -->|nonspecific| 12;\n  13[\"Zip Collection\"];\n  11 -->|forward| 13;\n  11 -->|reverse| 13;\n  14[\"Collapse Collection\"];\n  11 -->|forward| 14;\n  15[\"Collapse Collection\"];\n  11 -->|reverse| 15;\n  16[\"seqtk_sample\"];\n  14 -->|output| 16;\n  17[\"seqtk_sample\"];\n  15 -->|output| 17;\n  18[\"Create assemblies with Unicycler\"];\n  12 -->|output| 18;\n  16 -->|default| 18;\n  17 -->|default| 18;\n  19[\"Bandage Info\"];\n  18 -->|assembly_graph| 19;\n  2[\"fastp: Trimmed Illumina Reads\"];\n  0 -->|output| 2;\n  20[\"Filter sequences by length\"];\n  18 -->|assembly| 20;\n  21[\"Bandage Image\"];\n  18 -->|assembly_graph| 21;\n  3[\"NanoPlot\"];\n  1 -->|output| 3;\n  4[\"Map with minimap2\"];\n  1 -->|output| 4;\n  5[\"MultiQC\"];\n  2 -->|report_json| 5;\n  6[\"Bowtie2\"];\n  2 -->|output_paired_coll| 6;\n  7[\"Samtools view\"];\n  4 -->|alignment_output| 7;\n  8[\"Samtools stats\"];\n  4 -->|alignment_output| 8;\n  9[\"Samtools view\"];\n  6 -->|output| 9;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nCollection of paired short-reads data\"]\n  1[color=lightblue,label=\"ℹ️ Input Collection\\nCollection of long-reads data\"]\n  10[label=\"Samtools fastx\"]\n  7 -> 10 [label=\"outputsam\"]\n  11[label=\"Samtools fastx\"]\n  9 -> 11 [label=\"outputsam\"]\n  12[label=\"Collapse Collection\"]\n  10 -> 12 [label=\"nonspecific\"]\n  13[label=\"Zip Collection\"]\n  11 -> 13 [label=\"forward\"]\n  11 -> 13 [label=\"reverse\"]\n  14[label=\"Collapse Collection\"]\n  11 -> 14 [label=\"forward\"]\n  15[label=\"Collapse Collection\"]\n  11 -> 15 [label=\"reverse\"]\n  16[label=\"seqtk_sample\"]\n  14 -> 16 [label=\"output\"]\n  17[label=\"seqtk_sample\"]\n  15 -> 17 [label=\"output\"]\n  18[label=\"Create assemblies with Unicycler\"]\n  12 -> 18 [label=\"output\"]\n  16 -> 18 [label=\"default\"]\n  17 -> 18 [label=\"default\"]\n  19[label=\"Bandage Info\"]\n  18 -> 19 [label=\"assembly_graph\"]\n  2[label=\"fastp: Trimmed Illumina Reads\"]\n  0 -> 2 [label=\"output\"]\n  20[label=\"Filter sequences by length\"]\n  18 -> 20 [label=\"assembly\"]\n  21[label=\"Bandage Image\"]\n  18 -> 21 [label=\"assembly_graph\"]\n  3[label=\"NanoPlot\"]\n  1 -> 3 [label=\"output\"]\n  4[label=\"Map with minimap2\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"MultiQC\"]\n  2 -> 5 [label=\"report_json\"]\n  6[label=\"Bowtie2\"]\n  2 -> 6 [label=\"output_paired_coll\"]\n  7[label=\"Samtools view\"]\n  4 -> 7 [label=\"alignment_output\"]\n  8[label=\"Samtools stats\"]\n  4 -> 8 [label=\"alignment_output\"]\n  9[label=\"Samtools view\"]\n  6 -> 9 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -8473,16 +8369,11 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "Collection of paired short-reads data",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 268.13330078125,
                 "top": 341.41668701171875
@@ -8505,16 +8396,11 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "Collection of long-reads data",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 267.13330078125,
                 "top": 756.4166717529297
@@ -8539,16 +8425,11 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "Collection of paired short-reads data",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 268.13330078125,
                 "top": 341.41668701171875
@@ -8571,16 +8452,11 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "Collection of long-reads data",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 267.13330078125,
                 "top": 756.4166717529297
@@ -8609,9 +8485,7 @@
                   "output_name": "outputsam"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Samtools fastx",
               "outputs": [
@@ -8624,8 +8498,7 @@
                 "left": 1333.63330078125,
                 "top": 852.4166717529297
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_fastx/samtools_fastx/1.9+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "a8d69aee190e",
@@ -8660,9 +8533,7 @@
                   "output_name": "reverse"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Zip Collection",
               "outputs": [
@@ -8675,8 +8546,7 @@
                 "left": 1754.63330078125,
                 "top": 477.41668701171875
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "__ZIP_COLLECTION__",
               "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_reverse\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"input_forward\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}",
               "tool_version": "1.0.0",
@@ -8719,8 +8589,7 @@
                 "left": 2129.4166717529297,
                 "top": 711.4166717529297
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_sample/1.3.2",
               "tool_shed_repository": {
                 "changeset_revision": "58c8ece95b53",
@@ -8769,8 +8638,7 @@
                 "left": 2116.4166717529297,
                 "top": 859.4166717529297
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_sample/1.3.2",
               "tool_shed_repository": {
                 "changeset_revision": "58c8ece95b53",
@@ -8847,8 +8715,7 @@
                 "left": 2365.633331298828,
                 "top": 706.4166717529297
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0",
               "tool_shed_repository": {
                 "changeset_revision": "88c240872a65",
@@ -8884,9 +8751,7 @@
                   "output_name": "assembly_graph"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Bandage Info",
               "outputs": [
@@ -8899,8 +8764,7 @@
                 "left": 2665.633331298828,
                 "top": 811.4166717529297
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_info/0.8.1+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "b2860df42e16",
@@ -8931,9 +8795,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "fastp: Trimmed Illumina Reads",
               "name": "fastp",
               "outputs": [
@@ -8956,14 +8818,12 @@
               },
               "post_job_actions": {
                 "HideDatasetActionreport_html": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "report_html"
                 },
                 "HideDatasetActionreport_json": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "report_json"
                 }
@@ -9016,8 +8876,7 @@
                 "left": 2574.4166870117188,
                 "top": 1254.4166870117188
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.2",
               "tool_shed_repository": {
                 "changeset_revision": "8cacfcf96a52",
@@ -9066,8 +8925,7 @@
                 "left": 2667.4166870117188,
                 "top": 1052.4166870117188
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "b2860df42e16",
@@ -9098,9 +8956,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "NanoPlot",
               "outputs": [
@@ -9131,26 +8987,22 @@
               },
               "post_job_actions": {
                 "HideDatasetActionlog_read_length": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "log_read_length"
                 },
                 "HideDatasetActionnanostats": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "nanostats"
                 },
                 "HideDatasetActionnanostats_post_filtering": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "nanostats_post_filtering"
                 },
                 "HideDatasetActionread_length": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "read_length"
                 }
@@ -9185,9 +9037,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Map with minimap2",
               "outputs": [
@@ -9200,8 +9050,7 @@
                 "left": 709.199951171875,
                 "top": 1131.9666748046875
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "53c0b7a1a0c3",
@@ -9232,9 +9081,7 @@
                   "output_name": "report_json"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "MultiQC",
               "outputs": [
@@ -9253,8 +9100,7 @@
               },
               "post_job_actions": {
                 "HideDatasetActionstats": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "stats"
                 }
@@ -9289,9 +9135,7 @@
                   "output_name": "output_paired_coll"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Bowtie2",
               "outputs": [
@@ -9308,8 +9152,7 @@
                 "left": 913.9166259765625,
                 "top": 564.6333312988281
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.4.3+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "749c918495f7",
@@ -9345,9 +9188,7 @@
                   "output_name": "alignment_output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Samtools stats",
               "outputs": [
@@ -9360,8 +9201,7 @@
                 "left": 1022.4166259765625,
                 "top": 1254.4166870117188
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "145f6d74ff5e",
@@ -9396,9 +9236,7 @@
           "parent_id": "assembly/assembly-with-preprocessing",
           "topic_id": "assembly",
           "tutorial_id": "assembly-with-preprocessing",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "assembly_with_preprocessing_and_sra_download",
           "title": "assembly_with_preprocessing_and_sra_download",
           "version": 1,
@@ -9431,7 +9269,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:25 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nList of Illumina accessions\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nList of ONT accessions\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  10[\"Samtools stats\"];\n  6 -->|alignment_output| 10;\n  11[\"Samtools view\"];\n  8 -->|output| 11;\n  12[\"Samtools fastx\"];\n  9 -->|outputsam| 12;\n  13[\"Samtools fastx\"];\n  11 -->|outputsam| 13;\n  14[\"Collapse Collection\"];\n  12 -->|nonspecific| 14;\n  15[\"Zip Collection\"];\n  13 -->|forward| 15;\n  13 -->|reverse| 15;\n  16[\"Collapse Collection\"];\n  13 -->|forward| 16;\n  17[\"Collapse Collection\"];\n  13 -->|reverse| 17;\n  18[\"seqtk_sample\"];\n  16 -->|output| 18;\n  19[\"seqtk_sample\"];\n  17 -->|output| 19;\n  2[\"Illumina data\"];\n  0 -->|output| 2;\n  20[\"Create assemblies with Unicycler\"];\n  14 -->|output| 20;\n  18 -->|default| 20;\n  19 -->|default| 20;\n  21[\"Bandage Info\"];\n  20 -->|assembly_graph| 21;\n  22[\"Bandage Image\"];\n  20 -->|assembly_graph| 22;\n  23[\"Filter sequences by length\"];\n  20 -->|assembly| 23;\n  3[\"ONT data\"];\n  1 -->|output| 3;\n  4[\"fastp: Trimmed Illumina Reads\"];\n  2 -->|list_paired| 4;\n  5[\"NanoPlot\"];\n  3 -->|output_collection| 5;\n  6[\"Map with minimap2\"];\n  3 -->|output_collection| 6;\n  7[\"MultiQC\"];\n  4 -->|report_json| 7;\n  8[\"Bowtie2\"];\n  4 -->|output_paired_coll| 8;\n  9[\"Samtools view\"];\n  6 -->|alignment_output| 9;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nList of Illumina accessions\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nList of ONT accessions\"]\n  10[label=\"Samtools stats\"]\n  6 -> 10 [label=\"alignment_output\"]\n  11[label=\"Samtools view\"]\n  8 -> 11 [label=\"output\"]\n  12[label=\"Samtools fastx\"]\n  9 -> 12 [label=\"outputsam\"]\n  13[label=\"Samtools fastx\"]\n  11 -> 13 [label=\"outputsam\"]\n  14[label=\"Collapse Collection\"]\n  12 -> 14 [label=\"nonspecific\"]\n  15[label=\"Zip Collection\"]\n  13 -> 15 [label=\"forward\"]\n  13 -> 15 [label=\"reverse\"]\n  16[label=\"Collapse Collection\"]\n  13 -> 16 [label=\"forward\"]\n  17[label=\"Collapse Collection\"]\n  13 -> 17 [label=\"reverse\"]\n  18[label=\"seqtk_sample\"]\n  16 -> 18 [label=\"output\"]\n  19[label=\"seqtk_sample\"]\n  17 -> 19 [label=\"output\"]\n  2[label=\"Illumina data\"]\n  0 -> 2 [label=\"output\"]\n  20[label=\"Create assemblies with Unicycler\"]\n  14 -> 20 [label=\"output\"]\n  18 -> 20 [label=\"default\"]\n  19 -> 20 [label=\"default\"]\n  21[label=\"Bandage Info\"]\n  20 -> 21 [label=\"assembly_graph\"]\n  22[label=\"Bandage Image\"]\n  20 -> 22 [label=\"assembly_graph\"]\n  23[label=\"Filter sequences by length\"]\n  20 -> 23 [label=\"assembly\"]\n  3[label=\"ONT data\"]\n  1 -> 3 [label=\"output\"]\n  4[label=\"fastp: Trimmed Illumina Reads\"]\n  2 -> 4 [label=\"list_paired\"]\n  5[label=\"NanoPlot\"]\n  3 -> 5 [label=\"output_collection\"]\n  6[label=\"Map with minimap2\"]\n  3 -> 6 [label=\"output_collection\"]\n  7[label=\"MultiQC\"]\n  4 -> 7 [label=\"report_json\"]\n  8[label=\"Bowtie2\"]\n  4 -> 8 [label=\"output_paired_coll\"]\n  9[label=\"Samtools view\"]\n  6 -> 9 [label=\"alignment_output\"]\n}",
           "workflow_tools": [
@@ -9458,16 +9296,11 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "List of Illumina accessions",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 257.683349609375,
                 "top": 215.9166259765625
@@ -9490,16 +9323,11 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "List of ONT accessions",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 264.9833984375,
                 "top": 522.7166442871094
@@ -9524,16 +9352,11 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "List of Illumina accessions",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 257.683349609375,
                 "top": 215.9166259765625
@@ -9556,16 +9379,11 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
-              "inputs": [
-
-              ],
+              "input_connections": {},
+              "inputs": [],
               "label": "List of ONT accessions",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 264.9833984375,
                 "top": 522.7166442871094
@@ -9594,9 +9412,7 @@
                   "output_name": "alignment_output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Samtools stats",
               "outputs": [
@@ -9609,8 +9425,7 @@
                 "left": 1328.4166259765625,
                 "top": 1239.4166259765625
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "145f6d74ff5e",
@@ -9641,9 +9456,7 @@
                   "output_name": "outputsam"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Samtools fastx",
               "outputs": [
@@ -9656,8 +9469,7 @@
                 "left": 1628.4166259765625,
                 "top": 852.4166412353516
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_fastx/samtools_fastx/1.9+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "a8d69aee190e",
@@ -9692,9 +9504,7 @@
                   "output_name": "reverse"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Zip Collection",
               "outputs": [
@@ -9707,8 +9517,7 @@
                 "left": 2049.4166870117188,
                 "top": 477.4166259765625
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "__ZIP_COLLECTION__",
               "tool_state": "{\"__page__\": null, \"__rerun_remap_job_id__\": null, \"input_reverse\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\", \"input_forward\": \"{\\\"__class__\\\": \\\"ConnectedValue\\\"}\"}",
               "tool_version": "1.0.0",
@@ -9751,8 +9560,7 @@
                 "left": 2438.0833282470703,
                 "top": 688.6833190917969
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_sample/1.3.2",
               "tool_shed_repository": {
                 "changeset_revision": "58c8ece95b53",
@@ -9801,8 +9609,7 @@
                 "left": 2413.0833129882812,
                 "top": 864.6833190917969
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/seqtk/seqtk_sample/1.3.2",
               "tool_shed_repository": {
                 "changeset_revision": "58c8ece95b53",
@@ -9833,9 +9640,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Illumina data",
               "name": "Faster Download and Extract Reads in FASTQ",
               "outputs": [
@@ -9862,20 +9667,17 @@
               },
               "post_job_actions": {
                 "HideDatasetActionlog": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "log"
                 },
                 "HideDatasetActionoutput_collection": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "output_collection"
                 },
                 "HideDatasetActionoutput_collection_other": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "output_collection_other"
                 }
@@ -9956,8 +9758,7 @@
                 "left": 2673.4166717529297,
                 "top": 699.4166412353516
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0",
               "tool_shed_repository": {
                 "changeset_revision": "88c240872a65",
@@ -9993,9 +9794,7 @@
                   "output_name": "assembly_graph"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Bandage Info",
               "outputs": [
@@ -10008,8 +9807,7 @@
                 "left": 2977.4166870117188,
                 "top": 803.4166412353516
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_info/0.8.1+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "b2860df42e16",
@@ -10058,8 +9856,7 @@
                 "left": 2975.4166870117188,
                 "top": 1017.4166412353516
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "b2860df42e16",
@@ -10108,8 +9905,7 @@
                 "left": 2978.4166870117188,
                 "top": 1220.4166259765625
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.2",
               "tool_shed_repository": {
                 "changeset_revision": "8cacfcf96a52",
@@ -10140,9 +9936,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "ONT data",
               "name": "Faster Download and Extract Reads in FASTQ",
               "outputs": [
@@ -10169,20 +9963,17 @@
               },
               "post_job_actions": {
                 "HideDatasetActionlist_paired": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "list_paired"
                 },
                 "HideDatasetActionlog": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "log"
                 },
                 "HideDatasetActionoutput_collection_other": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "output_collection_other"
                 }
@@ -10241,8 +10032,7 @@
               },
               "post_job_actions": {
                 "HideDatasetActionreport_json": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "report_json"
                 }
@@ -10277,9 +10067,7 @@
                   "output_name": "output_collection"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "NanoPlot",
               "outputs": [
@@ -10310,26 +10098,22 @@
               },
               "post_job_actions": {
                 "HideDatasetActionlog_read_length": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "log_read_length"
                 },
                 "HideDatasetActionnanostats": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "nanostats"
                 },
                 "HideDatasetActionnanostats_post_filtering": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "nanostats_post_filtering"
                 },
                 "HideDatasetActionread_length": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "read_length"
                 }
@@ -10364,9 +10148,7 @@
                   "output_name": "output_collection"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Map with minimap2",
               "outputs": [
@@ -10379,8 +10161,7 @@
                 "left": 1003.9833984375,
                 "top": 1131.9666442871094
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "53c0b7a1a0c3",
@@ -10411,9 +10192,7 @@
                   "output_name": "report_json"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "MultiQC",
               "outputs": [
@@ -10432,8 +10211,7 @@
               },
               "post_job_actions": {
                 "HideDatasetActionstats": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "stats"
                 }
@@ -10468,9 +10246,7 @@
                   "output_name": "output_paired_coll"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Bowtie2",
               "outputs": [
@@ -10487,8 +10263,7 @@
                 "left": 1208.699951171875,
                 "top": 564.6333160400391
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.3.4.3+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "749c918495f7",
@@ -10939,9 +10714,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.4.5+galaxy1",
                   "2.3.4.2",
-                  "2.4.2+galaxy0"
+                  "2.4.2+galaxy0",
+                  "2.4.5+galaxy1"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -11014,13 +10789,13 @@
                 "state": "inexact",
                 "versions": [
                   "2.2.6",
-                  "0.2",
-                  "2.2.6.2",
                   "2.3.2.2",
+                  "2.2.6.2",
+                  "0.2",
                   "0.3",
-                  "2.5.0+galaxy0",
                   "0.6",
-                  "0.4"
+                  "0.4",
+                  "2.5.0+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -11407,9 +11182,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.8.1+galaxy0+galaxy0",
                   "0.8.1+galaxy4",
-                  "2022.09+galaxy4"
+                  "2022.09+galaxy4",
+                  "0.8.1+galaxy0+galaxy0"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -11571,9 +11346,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2022.09+galaxy2",
+                  "0.8.1+galaxy2",
                   "0.8.1+galaxy0+galaxy0",
-                  "0.8.1+galaxy2"
+                  "2022.09+galaxy2"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -11610,8 +11385,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2022.09+galaxy2",
-                  "0.8.1+galaxy2"
+                  "0.8.1+galaxy2",
+                  "2022.09+galaxy2"
                 ],
                 "server": "https://mississippi.sorbonne-universite.fr"
               },
@@ -11741,8 +11516,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.23.2+galaxy0",
-                  "0.20.1+galaxy0"
+                  "0.20.1+galaxy0",
+                  "0.23.2+galaxy0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -11890,8 +11665,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.24+galaxy0",
-                  "2.28+galaxy0"
+                  "2.28+galaxy0",
+                  "2.24+galaxy0"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -11903,8 +11678,8 @@
                 "state": "inexact",
                 "versions": [
                   "2.28+galaxy0",
-                  "2.17+galaxy4",
-                  "2.17+galaxy0"
+                  "2.17+galaxy0",
+                  "2.17+galaxy4"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -11979,15 +11754,15 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.24+galaxy0",
                   "2.28+galaxy0",
+                  "2.24+galaxy0",
                   "2.27+galaxy0",
                   "2.12",
                   "2.26+galaxy0",
                   "2.23+galaxy0",
-                  "2.22+galaxy0",
+                  "2.17+galaxy2",
                   "2.28+galaxy1",
-                  "2.17+galaxy2"
+                  "2.22+galaxy0"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -12002,18 +11777,18 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.24+galaxy0",
                   "2.28+galaxy0",
-                  "2.17+galaxy4",
+                  "2.24+galaxy0",
                   "2.17+galaxy0",
+                  "2.17+galaxy4",
                   "2.27+galaxy0",
                   "2.17",
                   "2.26+galaxy0",
+                  "2.20+galaxy1",
                   "2.23+galaxy0",
-                  "2.20+galaxy2",
-                  "2.17+galaxy3",
                   "2.17+galaxy2",
-                  "2.20+galaxy1"
+                  "2.17+galaxy3",
+                  "2.20+galaxy2"
                 ],
                 "server": "https://usegalaxy.org"
               },
@@ -12143,8 +11918,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.9",
-                  "1.8+galaxy0"
+                  "1.8+galaxy0",
+                  "1.9"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -12324,8 +12099,8 @@
                   "1.43.0+galaxy0",
                   "1.28.2+galaxy1",
                   "1.41.0+galaxy0",
-                  "1.36.2+galaxy1",
                   "1.42.0+galaxy1",
+                  "1.36.2+galaxy1",
                   "1.44.1+galaxy0"
                 ],
                 "server": "https://usegalaxy.fr/"
@@ -12944,17 +12719,17 @@
                   "3.1.1+galaxy0",
                   "2.10.4",
                   "2.11.0+galaxy0",
-                  "3.0.5+galaxy0",
                   "2.10.8+galaxy0",
-                  "3.0.5+galaxy3",
-                  "2.10.7+galaxy2",
                   "3.0.3+galaxy0",
-                  "3.1.0+galaxy0",
-                  "2.11.0+galaxy1",
-                  "3.0.10+galaxy0",
-                  "3.0.8+galaxy0",
-                  "3.1.1+galaxy1",
+                  "3.0.5+galaxy3",
+                  "3.0.5+galaxy0",
+                  "2.10.7+galaxy2",
                   "3.0.8+galaxy1",
+                  "3.0.10+galaxy0",
+                  "3.1.1+galaxy1",
+                  "3.0.8+galaxy0",
+                  "2.11.0+galaxy1",
+                  "3.1.0+galaxy0",
                   "3.1.0+galaxy1",
                   "3.0.0+galaxy0"
                 ],
@@ -13266,8 +13041,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
-                  "5.1.0"
+                  "5.1.0",
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -13413,12 +13188,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -14245,11 +14016,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1.1+galaxy0",
                   "4.1.2+galaxy0",
-                  "3.0.3+galaxy0",
                   "3.1.16+galaxy0",
-                  "4.0.5+galaxy0"
+                  "4.0.5+galaxy0",
+                  "4.1.1+galaxy0",
+                  "3.0.3+galaxy0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -14312,8 +14083,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.2+galaxy0",
-                  "4.3+galaxy1"
+                  "4.3+galaxy1",
+                  "4.2+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -14670,12 +14441,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -15030,9 +14797,7 @@
           "parent_id": "variant-analysis/sars-cov-2",
           "topic_id": "variant-analysis",
           "tutorial_id": "sars-cov-2",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "Simple COVID-19 - PE Variation",
           "title": "Simple COVID-19 - PE Variation",
           "version": 1,
@@ -15099,7 +14864,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:43 +0000",
+          "modified": "2025-02-14 10:44:31 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nNC_045512.2 fasta file\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nSRA Manifest\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Faster Download and Extract Reads in FASTQ\"];\n  1 -->|output| 2;\n  3[\"fastp\"];\n  2 -->|list_paired| 3;\n  4[\"Map with BWA-MEM\"];\n  3 -->|output_paired_coll| 4;\n  0 -->|output| 4;\n  5[\"MarkDuplicates\"];\n  4 -->|bam_output| 5;\n  6[\"Realign reads\"];\n  5 -->|outFile| 6;\n  0 -->|output| 6;\n  7[\"Samtools stats\"];\n  5 -->|outFile| 7;\n  8[\"Insert indel qualities\"];\n  6 -->|realigned| 8;\n  0 -->|output| 8;\n  2ca7c89b-999f-41dc-8037-e54e25959a7e[\"Output\\nRealigned Alignments with Indel Qualities\"];\n  8 --> 2ca7c89b-999f-41dc-8037-e54e25959a7e;\n  style 2ca7c89b-999f-41dc-8037-e54e25959a7e stroke:#2c3143,stroke-width:4px;\n  9[\"Call variants\"];\n  8 -->|output| 9;\n  0 -->|output| 9;\n  10[\"SnpEff eff:\"];\n  9 -->|variants| 10;\n  11[\"SnpSift Extract Fields\"];\n  10 -->|snpeff_output| 11;\n  06259137-eaa5-404a-923c-70ee5f1d89d4[\"Output\\nSnpSift tabular output\"];\n  11 --> 06259137-eaa5-404a-923c-70ee5f1d89d4;\n  style 06259137-eaa5-404a-923c-70ee5f1d89d4 stroke:#2c3143,stroke-width:4px;\n  12[\"MultiQC\"];\n  3 -->|report_json| 12;\n  7 -->|output| 12;\n  5 -->|metrics_file| 12;\n  10 -->|csvFile| 12;\n  758ffde5-7ddd-482a-88b2-1504f8335488[\"Output\\nMultiQC Report PE\"];\n  12 --> 758ffde5-7ddd-482a-88b2-1504f8335488;\n  style 758ffde5-7ddd-482a-88b2-1504f8335488 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nNC_045512.2 fasta file\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nSRA Manifest\"]\n  2[label=\"Faster Download and Extract Reads in FASTQ\"]\n  1 -> 2 [label=\"output\"]\n  3[label=\"fastp\"]\n  2 -> 3 [label=\"list_paired\"]\n  4[label=\"Map with BWA-MEM\"]\n  3 -> 4 [label=\"output_paired_coll\"]\n  0 -> 4 [label=\"output\"]\n  5[label=\"MarkDuplicates\"]\n  4 -> 5 [label=\"bam_output\"]\n  6[label=\"Realign reads\"]\n  5 -> 6 [label=\"outFile\"]\n  0 -> 6 [label=\"output\"]\n  7[label=\"Samtools stats\"]\n  5 -> 7 [label=\"outFile\"]\n  8[label=\"Insert indel qualities\"]\n  6 -> 8 [label=\"realigned\"]\n  0 -> 8 [label=\"output\"]\n  k2ca7c89b999f41dc8037e54e25959a7e[color=lightseagreen,label=\"Output\\nRealigned Alignments with Indel Qualities\"]\n  8 -> k2ca7c89b999f41dc8037e54e25959a7e\n  9[label=\"Call variants\"]\n  8 -> 9 [label=\"output\"]\n  0 -> 9 [label=\"output\"]\n  10[label=\"SnpEff eff:\"]\n  9 -> 10 [label=\"variants\"]\n  11[label=\"SnpSift Extract Fields\"]\n  10 -> 11 [label=\"snpeff_output\"]\n  k06259137eaa5404a923c70ee5f1d89d4[color=lightseagreen,label=\"Output\\nSnpSift tabular output\"]\n  11 -> k06259137eaa5404a923c70ee5f1d89d4\n  12[label=\"MultiQC\"]\n  3 -> 12 [label=\"report_json\"]\n  7 -> 12 [label=\"output\"]\n  5 -> 12 [label=\"metrics_file\"]\n  10 -> 12 [label=\"csvFile\"]\n  k758ffde57ddd482a88b21504f8335488[color=lightseagreen,label=\"Output\\nMultiQC Report PE\"]\n  12 -> k758ffde57ddd482a88b21504f8335488\n}",
           "workflow_tools": [
@@ -15121,8 +14886,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "Contains SARS-CoV-2 reference sequence",
@@ -15131,9 +14895,7 @@
               ],
               "label": "NC_045512.2 fasta file",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 199.95736694335938,
                 "top": 317.85511016845703
@@ -15156,8 +14918,7 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -15166,9 +14927,7 @@
               ],
               "label": "SRA Manifest",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 199.95736694335938,
                 "top": 372.3295364379883
@@ -15193,8 +14952,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "Contains SARS-CoV-2 reference sequence",
@@ -15203,9 +14961,7 @@
               ],
               "label": "NC_045512.2 fasta file",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 199.95736694335938,
                 "top": 317.85511016845703
@@ -15228,8 +14984,7 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -15238,9 +14993,7 @@
               ],
               "label": "SRA Manifest",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 199.95736694335938,
                 "top": 372.3295364379883
@@ -15301,20 +15054,17 @@
               },
               "post_job_actions": {
                 "HideDatasetActionlog": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "log"
                 },
                 "HideDatasetActionoutput_collection": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "output_collection"
                 },
                 "HideDatasetActionoutput_collection_other": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "output_collection_other"
                 }
@@ -15353,9 +15103,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Insert indel qualities",
               "outputs": [
@@ -15439,14 +15187,12 @@
               },
               "post_job_actions": {
                 "HideDatasetActioncsvFile": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "csvFile"
                 },
                 "HideDatasetActionstatsFile": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "statsFile"
                 }
@@ -15481,9 +15227,7 @@
                   "output_name": "snpeff_output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "SnpSift Extract Fields",
               "outputs": [
@@ -15547,9 +15291,7 @@
                   "output_name": "csvFile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "MultiQC",
               "outputs": [
@@ -15572,14 +15314,12 @@
               },
               "post_job_actions": {
                 "HideDatasetActionplots": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "plots"
                 },
                 "HideDatasetActionstats": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "stats"
                 },
@@ -16202,8 +15942,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "9.3+galaxy1",
-                  "9.3+galaxy2"
+                  "9.3+galaxy2",
+                  "9.3+galaxy1"
                 ],
                 "server": "https://mississippi.sorbonne-universite.fr"
               },
@@ -17397,10 +17137,10 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.6",
-                  "1.11+galaxy1",
                   "1.11+galaxy0",
-                  "1.7"
+                  "1.11+galaxy1",
+                  "1.7",
+                  "1.6"
                 ],
                 "server": "https://galaxy.mesocentre.uca.fr"
               },
@@ -17411,8 +17151,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.11+galaxy1",
                   "1.11+galaxy0",
+                  "1.11+galaxy1",
                   "1.7",
                   "1.9+galaxy1"
                 ],
@@ -17939,17 +17679,17 @@
                   "3.1.1+galaxy0",
                   "2.10.4",
                   "2.11.0+galaxy0",
-                  "3.0.5+galaxy0",
                   "2.10.8+galaxy0",
-                  "3.0.5+galaxy3",
-                  "2.10.7+galaxy2",
                   "3.0.3+galaxy0",
-                  "3.1.0+galaxy0",
-                  "2.11.0+galaxy1",
-                  "3.0.10+galaxy0",
-                  "3.0.8+galaxy0",
-                  "3.1.1+galaxy1",
+                  "3.0.5+galaxy3",
+                  "3.0.5+galaxy0",
+                  "2.10.7+galaxy2",
                   "3.0.8+galaxy1",
+                  "3.0.10+galaxy0",
+                  "3.1.1+galaxy1",
+                  "3.0.8+galaxy0",
+                  "2.11.0+galaxy1",
+                  "3.1.0+galaxy0",
                   "3.1.0+galaxy1",
                   "3.0.0+galaxy0"
                 ],
@@ -17975,18 +17715,18 @@
                   "2.10.4",
                   "2.11.0+galaxy0",
                   "2.10.4+galaxy1",
-                  "3.0.5+galaxy0",
-                  "2.10.7+galaxy0",
                   "2.10.8+galaxy0",
-                  "3.0.5+galaxy3",
-                  "2.10.4+galaxy2",
                   "3.0.3+galaxy0",
-                  "3.1.0+galaxy0",
-                  "2.11.0+galaxy1",
-                  "3.0.10+galaxy0",
-                  "3.0.8+galaxy0",
-                  "3.1.1+galaxy1",
+                  "3.0.5+galaxy3",
+                  "2.10.7+galaxy0",
+                  "2.10.4+galaxy2",
+                  "3.0.5+galaxy0",
                   "3.0.8+galaxy1",
+                  "3.0.10+galaxy0",
+                  "3.1.1+galaxy1",
+                  "3.0.8+galaxy0",
+                  "2.11.0+galaxy1",
+                  "3.1.0+galaxy0",
                   "3.1.0+galaxy1",
                   "3.0.0+galaxy0",
                   "3.0.5+galaxy1"
@@ -18112,10 +17852,10 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.10.7+galaxy1",
                   "2.10.4",
                   "2.11.0+galaxy0",
-                  "2.10.4+galaxy1"
+                  "2.10.4+galaxy1",
+                  "2.10.7+galaxy1"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -18264,12 +18004,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -19322,9 +19058,9 @@
                   "3.3.1",
                   "3.3.0",
                   "3.3.2",
-                  "3.1.1",
+                  "3.0.1",
                   "3.2.0",
-                  "3.0.1"
+                  "3.1.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -19615,16 +19351,16 @@
                 "state": "inexact",
                 "versions": [
                   "2.10.9+galaxy0",
-                  "2.10.7+galaxy1",
                   "2.10.4",
                   "2.10.4+galaxy1",
-                  "3.0.5+galaxy0",
-                  "2.10.7+galaxy0",
+                  "2.10.7+galaxy1",
                   "2.10.8+galaxy0",
+                  "3.0.3+galaxy0",
                   "3.0.5+galaxy3",
-                  "2.10.7+galaxy2",
+                  "2.10.7+galaxy0",
                   "2.10.4+galaxy2",
-                  "3.0.3+galaxy0"
+                  "3.0.5+galaxy0",
+                  "2.10.7+galaxy2"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -19784,16 +19520,16 @@
                 "versions": [
                   "2.9.1.3",
                   "2.10.9+galaxy0",
-                  "2.10.4",
+                  "2.8.0",
                   "2.10.7+galaxy1",
                   "2.10.4+galaxy1",
-                  "2.8.0",
-                  "2.10.7+galaxy2",
-                  "1.2.5",
-                  "2.10.8+galaxy0",
+                  "2.10.4",
                   "3.0.5+galaxy3",
+                  "1.2.5",
                   "2.10.7+galaxy0",
+                  "2.10.7+galaxy2",
                   "3.0.3+galaxy0",
+                  "2.10.8+galaxy0",
                   "3.0.5+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
@@ -19805,12 +19541,12 @@
                   "3.0.5+galaxy3",
                   "3.0.3+galaxy0",
                   "3.0.5+galaxy0",
-                  "3.1.0+galaxy1",
                   "3.1.0+galaxy0",
-                  "3.1.1+galaxy1",
                   "3.0.8+galaxy1",
-                  "3.0.10+galaxy0",
-                  "3.0.8+galaxy0"
+                  "3.0.8+galaxy0",
+                  "3.1.1+galaxy1",
+                  "3.1.0+galaxy1",
+                  "3.0.10+galaxy0"
                 ],
                 "server": "https://usegalaxy.eu"
               },
@@ -19918,12 +19654,8 @@
         }
       ],
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -20530,12 +20262,12 @@
                   "0.74+galaxy0",
                   "0.69",
                   "0.65",
-                  "0.52",
                   "0.68",
                   "0.67",
-                  "0.63",
+                  "0.52",
                   "0.62",
-                  "0.64"
+                  "0.64",
+                  "0.63"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -20765,12 +20497,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",

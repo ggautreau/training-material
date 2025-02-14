@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "This workflow query metagenomic raw data against a metaplasmidome database to identify plasmids and annotate them with genes, KO, PFAM",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "MIT",
   "name": "Query a metaplasmidome database to identify and annotate plasmids in metagenomes",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "FASTA sequences of the metaplasmidome database",
@@ -26,9 +23,7 @@
       ],
       "label": "Metaplasmidome sequences",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 296.94122404660857
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "36672496-e380-4208-9c5b-24de5376b583",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "FASTA files of the raw metagenomics data",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "FASTA files of the raw metagenomics data",
@@ -58,9 +50,7 @@
       ],
       "label": "Raw metagenomics data",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 419.94122404660857
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "d5c8b2ed-bba0-40b9-8951-89f4407a4aa6",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "GFF file with predicted CDS",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "GFF file with predicted CDS",
@@ -90,9 +77,7 @@
       ],
       "label": "Metaplasmidome predicted CDS",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 2520.084604995301,
         "top": 503.94122404660857
@@ -103,17 +88,14 @@
       "type": "data_input",
       "uuid": "8af11be5-af1a-455c-a40a-cb881cdcbccd",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "Tabular file with non-redundant KEGG Orthologs and CDS IDs",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Tabular file with non-redundant KEGG Orthologs and CDS IDs",
@@ -122,9 +104,7 @@
       ],
       "label": "KEGG Ortogolog",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 4760.159856005782,
         "top": 219.94122404660857
@@ -135,17 +115,14 @@
       "type": "data_input",
       "uuid": "7b7694c5-3182-4387-8ad5-b799e414659b",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "Tabular file with non-redundant PFAM and CDS IDs",
       "content_id": null,
       "errors": null,
       "id": 4,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Tabular file with non-redundant PFAM and CDS IDs",
@@ -154,9 +131,7 @@
       ],
       "label": "PFAM",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 5320.178657115849,
         "top": 374.94122404660857
@@ -167,9 +142,7 @@
       "type": "data_input",
       "uuid": "795a188d-6bce-4d08-873e-7224a06fca74",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -210,8 +183,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionalignment_output": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "alignment_output"
         }
@@ -228,9 +200,7 @@
       "type": "tool",
       "uuid": "f5bfdf13-1595-4329-871e-e33296d5eaf8",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -243,9 +213,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Convert FASTA to Tabular",
       "outputs": [
@@ -260,8 +228,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -272,9 +239,7 @@
       "type": "tool",
       "uuid": "57338f7f-1f62-45e1-a325-fc6f5970c12a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -287,9 +252,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Count GFF Features",
       "outputs": [
@@ -304,8 +267,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -322,9 +284,7 @@
       "type": "tool",
       "uuid": "e31fb584-bb1d-4be8-a62f-7e0e1dd4f99f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -337,9 +297,7 @@
           "output_name": "alignment_output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -354,8 +312,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -366,9 +323,7 @@
       "type": "tool",
       "uuid": "f4c47e71-a7f5-48de-8621-be8e3e3a05b2",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -381,9 +336,7 @@
           "output_name": "alignment_output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -398,8 +351,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -410,9 +362,7 @@
       "type": "tool",
       "uuid": "1470405e-27e7-4328-a74a-7275d068d214",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -425,9 +375,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Compute",
       "outputs": [
@@ -442,8 +390,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -460,9 +407,7 @@
       "type": "tool",
       "uuid": "fb64d4fd-2bf9-4966-b131-77d30265b2f7",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -475,9 +420,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Histogram with ggplot2",
       "outputs": [
@@ -492,8 +435,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output1"
         }
@@ -510,9 +452,7 @@
       "type": "tool",
       "uuid": "038166d9-27c3-4d1c-aac6-9d3996f6cf8f",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -525,9 +465,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -542,8 +480,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -554,9 +491,7 @@
       "type": "tool",
       "uuid": "6b82f850-f67a-4bae-b12d-f455d342c295",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -569,9 +504,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Histogram",
       "outputs": [
@@ -584,8 +517,7 @@
         "left": 1120.0376022201337,
         "top": 208.94122404660857
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/histogram/histogram_rpy/1.0.4",
       "tool_shed_repository": {
         "changeset_revision": "6f134426c2b0",
@@ -598,9 +530,7 @@
       "type": "tool",
       "uuid": "a6e67071-29e0-4fd0-927d-8f1a96c77cc0",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -613,9 +543,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter",
       "outputs": [
@@ -630,8 +558,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -642,9 +569,7 @@
       "type": "tool",
       "uuid": "6007ea0f-97bb-4c1a-bf75-f1e295b52451",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "15": {
       "annotation": "",
@@ -657,9 +582,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Histogram with ggplot2",
       "outputs": [
@@ -672,8 +595,7 @@
         "left": 1413.6394515545703,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_histogram/ggplot2_histogram/3.4.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "b0d96516e6a5",
@@ -686,9 +608,7 @@
       "type": "tool",
       "uuid": "5a96b6fc-c459-42bf-82c9-2ac5e5ce6fe9",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "16": {
       "annotation": "",
@@ -701,9 +621,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter",
       "outputs": [
@@ -718,8 +636,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -730,9 +647,7 @@
       "type": "tool",
       "uuid": "f20fcc2a-9666-45c4-bf3d-959c1835eeb5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "17": {
       "annotation": "",
@@ -745,9 +660,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -762,8 +675,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -774,9 +686,7 @@
       "type": "tool",
       "uuid": "9762e6a6-d2e6-4f86-96f0-ffff9a92c7b9",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "18": {
       "annotation": "",
@@ -789,9 +699,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -806,8 +714,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -818,9 +725,7 @@
       "type": "tool",
       "uuid": "02b58e05-4e1a-40a1-99b6-f839d0155227",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "19": {
       "annotation": "",
@@ -833,9 +738,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Histogram with ggplot2",
       "outputs": [
@@ -850,8 +753,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output1"
         }
@@ -868,9 +770,7 @@
       "type": "tool",
       "uuid": "68ecb6fc-7850-41d7-9b03-9636e8a8cb44",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "20": {
       "annotation": "",
@@ -887,9 +787,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Join two Datasets",
       "outputs": [
@@ -904,8 +802,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -916,9 +813,7 @@
       "type": "tool",
       "uuid": "33032111-1cbb-494b-8c47-b78c6fc97a26",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "21": {
       "annotation": "",
@@ -931,9 +826,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -948,8 +841,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -960,9 +852,7 @@
       "type": "tool",
       "uuid": "f8db4d39-1930-409e-9fca-695aa85ebe81",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "22": {
       "annotation": "",
@@ -975,9 +865,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -992,8 +880,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1004,9 +891,7 @@
       "type": "tool",
       "uuid": "0537bdb2-9e59-445f-819b-736158f3d944",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "23": {
       "annotation": "",
@@ -1019,9 +904,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Add Header",
       "outputs": [
@@ -1074,9 +957,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Sort",
       "outputs": [
@@ -1091,8 +972,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1103,9 +983,7 @@
       "type": "tool",
       "uuid": "315b7ab3-1226-488e-8a29-b46fab625995",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "25": {
       "annotation": "",
@@ -1122,9 +1000,7 @@
           "output_name": "Data Table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Join two Datasets",
       "outputs": [
@@ -1139,8 +1015,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1151,9 +1026,7 @@
       "type": "tool",
       "uuid": "3e313ef2-5928-4188-9738-53772566d835",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "26": {
       "annotation": "",
@@ -1166,9 +1039,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Unique",
       "outputs": [
@@ -1183,8 +1054,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -1201,9 +1071,7 @@
       "type": "tool",
       "uuid": "22ab4118-7d73-42e7-8b1e-ca93191a6d25",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "27": {
       "annotation": "",
@@ -1216,9 +1084,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -1233,8 +1099,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1245,9 +1110,7 @@
       "type": "tool",
       "uuid": "3b79d13f-cd93-47a0-aba6-5d7954a19cdc",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "28": {
       "annotation": "",
@@ -1260,9 +1123,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Tabular-to-FASTA",
       "outputs": [
@@ -1315,9 +1176,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Group",
       "outputs": [
@@ -1332,8 +1191,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1344,9 +1202,7 @@
       "type": "tool",
       "uuid": "bbb86e7d-dae2-4e9a-bba4-014321316098",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "30": {
       "annotation": "",
@@ -1359,9 +1215,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter",
       "outputs": [
@@ -1376,8 +1230,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1388,9 +1241,7 @@
       "type": "tool",
       "uuid": "77a50316-87e9-4e37-bec1-43001637161a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "31": {
       "annotation": "",
@@ -1403,9 +1254,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -1420,8 +1269,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1432,9 +1280,7 @@
       "type": "tool",
       "uuid": "5c061df8-6f0b-4d5d-bb0c-951bfac6b225",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "32": {
       "annotation": "",
@@ -1447,9 +1293,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter by keywords and/or numerical value",
       "outputs": [
@@ -1482,14 +1326,12 @@
           "output_name": "kept_lines"
         },
         "HideDatasetActiondiscarded_lines": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "discarded_lines"
         },
         "HideDatasetActionkept_lines": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "kept_lines"
         }
@@ -1506,9 +1348,7 @@
       "type": "tool",
       "uuid": "05a159bb-75ef-41a1-9f80-346b76c56968",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "33": {
       "annotation": "",
@@ -1521,9 +1361,7 @@
           "output_name": "kept_lines"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Replace Text",
       "outputs": [
@@ -1538,8 +1376,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -1556,9 +1393,7 @@
       "type": "tool",
       "uuid": "db145538-9dc2-4811-970e-0a414c8979e7",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "34": {
       "annotation": "",
@@ -1571,9 +1406,7 @@
           "output_name": "discarded_lines"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Replace Text",
       "outputs": [
@@ -1588,8 +1421,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -1606,9 +1438,7 @@
       "type": "tool",
       "uuid": "1f9ecccb-6f55-4835-b08e-9c644bc9f3d5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "35": {
       "annotation": "",
@@ -1621,9 +1451,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Add Header",
       "outputs": [
@@ -1638,8 +1466,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionData Table": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "Data Table"
         }
@@ -1656,9 +1483,7 @@
       "type": "tool",
       "uuid": "5ed1ab17-1209-42a2-9488-04eb9c2060eb",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "36": {
       "annotation": "",
@@ -1675,9 +1500,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Concatenate datasets",
       "outputs": [
@@ -1728,9 +1551,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Join two Datasets",
       "outputs": [
@@ -1745,8 +1566,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1757,9 +1577,7 @@
       "type": "tool",
       "uuid": "adb8b38c-3d54-40c7-9877-0f650bb22643",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "38": {
       "annotation": "",
@@ -1772,9 +1590,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -1789,8 +1605,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1801,9 +1616,7 @@
       "type": "tool",
       "uuid": "d300b735-1699-4f4c-be74-7dd143d91fad",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "39": {
       "annotation": "",
@@ -1820,9 +1633,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Join two Datasets",
       "outputs": [
@@ -1837,8 +1648,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1849,9 +1659,7 @@
       "type": "tool",
       "uuid": "65d5da91-f2de-4737-b176-6192b9ec03b1",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "40": {
       "annotation": "",
@@ -1864,9 +1672,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cut",
       "outputs": [
@@ -1881,8 +1687,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -1893,9 +1698,7 @@
       "type": "tool",
       "uuid": "7623f3cc-ded7-4323-94f6-1a7ffbd56deb",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "41": {
       "annotation": "",
@@ -1908,9 +1711,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Select last",
       "outputs": [
@@ -1925,8 +1726,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -1943,9 +1743,7 @@
       "type": "tool",
       "uuid": "ca65183a-6acc-4619-81c2-a398c2ca8fa9",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "42": {
       "annotation": "",
@@ -1958,9 +1756,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Add Header",
       "outputs": [
@@ -2013,9 +1809,7 @@
           "output_name": "Data Table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter",
       "outputs": [
@@ -2030,8 +1824,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -2042,9 +1835,7 @@
       "type": "tool",
       "uuid": "d2119c3e-478e-4164-93c7-72daf3966b58",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "44": {
       "annotation": "",
@@ -2057,9 +1848,7 @@
           "output_name": "Data Table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter",
       "outputs": [
@@ -2074,8 +1863,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -2086,9 +1874,7 @@
       "type": "tool",
       "uuid": "69cbd130-4f13-45dc-bfa6-4d4d59ea1420",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "45": {
       "annotation": "",
@@ -2101,9 +1887,7 @@
           "output_name": "Data Table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Group",
       "outputs": [
@@ -2118,8 +1902,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -2130,9 +1913,7 @@
       "type": "tool",
       "uuid": "947912ee-f064-4963-a5f0-b0d8a2eceaca",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "46": {
       "annotation": "",
@@ -2145,9 +1926,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Group",
       "outputs": [
@@ -2162,8 +1941,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -2174,9 +1952,7 @@
       "type": "tool",
       "uuid": "e9e0be8b-b45c-4d4d-94c8-0349576fe8db",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "47": {
       "annotation": "",
@@ -2189,9 +1965,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Group",
       "outputs": [
@@ -2206,8 +1980,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -2218,9 +1991,7 @@
       "type": "tool",
       "uuid": "15ac58ba-0a36-4bc2-a428-2d414eb8b5b5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "48": {
       "annotation": "",
@@ -2233,9 +2004,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Select last",
       "outputs": [
@@ -2250,8 +2019,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -2268,9 +2036,7 @@
       "type": "tool",
       "uuid": "eccd8c32-1a57-451a-88b0-6aeccaddcb2a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "49": {
       "annotation": "",
@@ -2283,9 +2049,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Sort",
       "outputs": [
@@ -2298,17 +2062,14 @@
         "left": 7280.244461001084,
         "top": 152.94122404660857
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "sort1",
       "tool_state": "{\"__input_ext\": \"tabular\", \"chromInfo\": \"/shared/ifbstor1/galaxy/mutable-config/tool-data/shared/ucsc/chrom/?.len\", \"column\": \"2\", \"column_set\": [], \"header_lines\": \"0\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"order\": \"DESC\", \"style\": \"num\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.2.0",
       "type": "tool",
       "uuid": "93cd4df6-8637-4584-a1d4-b81b594b7fa9",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "50": {
       "annotation": "",
@@ -2321,9 +2082,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Sort",
       "outputs": [
@@ -2336,17 +2095,14 @@
         "left": 7280.244461001084,
         "top": 286.94122404660857
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "sort1",
       "tool_state": "{\"__input_ext\": \"tabular\", \"chromInfo\": \"/shared/ifbstor1/galaxy/mutable-config/tool-data/shared/ucsc/chrom/?.len\", \"column\": \"2\", \"column_set\": [], \"header_lines\": \"0\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"order\": \"DESC\", \"style\": \"num\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.2.0",
       "type": "tool",
       "uuid": "a2cf6302-6786-4301-be91-13ceaec27ac5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "51": {
       "annotation": "",
@@ -2359,9 +2115,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Add Header",
       "outputs": [

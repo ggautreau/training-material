@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "It contains the sequences used by Maker to construct gene models.",
@@ -20,9 +19,7 @@
       ],
       "label": "EST and/or cDNA",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 287.875,
         "height": 81,
@@ -38,17 +35,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "397d1af7-4d12-43d6-955c-e3122978fc92",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "A set of protein sequences, usually from closely related species or from a curated sequence database like UniProt/SwissProt.",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "A set of protein sequences, usually from closely related species or from a curated sequence database like UniProt/SwissProt.",
@@ -57,9 +51,7 @@
       ],
       "label": "Protein sequences",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 459,
         "height": 81,
@@ -75,17 +67,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "418c68b0-b726-4f5e-b53c-480f1e7d43b5",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "This file corresponds to the sequence to be annotated.",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "This file corresponds to the sequence to be annotated.",
@@ -94,9 +83,7 @@
       ],
       "label": "Genome sequence",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 1797.03125,
         "height": 81,
@@ -112,9 +99,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "e03b5775-bd22-4528-9f21-20cd396dc6cc",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -201,20 +186,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_evidences": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_evidences"
         },
         "HideDatasetActionoutput_full": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_full"
         },
         "HideDatasetActionoutput_gff": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_gff"
         }
@@ -230,9 +212,7 @@
       "tool_version": "2.31.11",
       "type": "tool",
       "uuid": "c8909854-dd67-46a7-aa79-cc991757cce4",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -245,9 +225,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Fasta Statistics",
       "outputs": [
@@ -266,8 +244,7 @@
         "x": 722.921875,
         "y": 1374.4375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/1.0.1",
       "tool_shed_repository": {
         "changeset_revision": "9c620a950d3a",
@@ -298,9 +275,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Busco",
       "outputs": [
@@ -327,8 +302,7 @@
         "x": 939.484375,
         "y": 1777.015625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4",
       "tool_shed_repository": {
         "changeset_revision": "602fb8e63aa7",
@@ -373,9 +347,7 @@
           "output_name": "output_gff"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Train Augustus",
       "outputs": [
@@ -396,8 +368,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_tar": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_tar"
         }
@@ -413,9 +384,7 @@
       "tool_version": "3.3.3",
       "type": "tool",
       "uuid": "6dfb4b6a-0397-41a7-9b24-f490190ebf6e",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -432,9 +401,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Genome annotation statistics",
       "outputs": [
@@ -457,8 +424,7 @@
         "x": 1247.5,
         "y": 975.015625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4",
       "tool_shed_repository": {
         "changeset_revision": "8cffbd184762",
@@ -524,8 +490,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_exons": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_exons"
         }
@@ -541,9 +506,7 @@
       "tool_version": "2.2.1.2",
       "type": "tool",
       "uuid": "2ae2cb01-24a2-4c15-824f-e4438e59c0c1",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -560,9 +523,7 @@
           "output_name": "output_gff"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Train SNAP",
       "outputs": [
@@ -583,8 +544,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -600,9 +560,7 @@
       "tool_version": "2013_11_29+galaxy1",
       "type": "tool",
       "uuid": "80a63f9b-4e34-4853-bc59-eb346c5402b7",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -615,9 +573,7 @@
           "output_name": "output_exons"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Busco",
       "outputs": [
@@ -646,14 +602,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionbusco_missing": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_missing"
         },
         "HideDatasetActionbusco_table": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_table"
         }
@@ -770,20 +724,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_evidences": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_evidences"
         },
         "HideDatasetActionoutput_full": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_full"
         },
         "HideDatasetActionoutput_gff": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_gff"
         }
@@ -799,9 +750,7 @@
       "tool_version": "2.31.11",
       "type": "tool",
       "uuid": "c5d13610-bb36-42e8-a97b-6543da253dcc",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -844,8 +793,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_exons": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_exons"
         }
@@ -861,9 +809,7 @@
       "tool_version": "2.2.1.2",
       "type": "tool",
       "uuid": "d6bdcde0-74d9-4158-bd63-35340be813d1",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -880,9 +826,7 @@
           "output_name": "output_gff"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Train Augustus",
       "outputs": [
@@ -901,8 +845,7 @@
         "x": 1863.5,
         "y": 1077.03125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/augustus_training/augustus_training/3.3.3",
       "tool_shed_repository": {
         "changeset_revision": "6519ebe25019",
@@ -937,9 +880,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Genome annotation statistics",
       "outputs": [
@@ -962,8 +903,7 @@
         "x": 1863.5,
         "y": 1297.03125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4",
       "tool_shed_repository": {
         "changeset_revision": "8cffbd184762",
@@ -1003,9 +943,7 @@
           "output_name": "output_gff"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Train SNAP",
       "outputs": [
@@ -1024,8 +962,7 @@
         "x": 1863.5,
         "y": 1608.03125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snap_training/snap_training/2013_11_29+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "2a598c0aa042",
@@ -1056,9 +993,7 @@
           "output_name": "output_exons"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Busco",
       "outputs": [
@@ -1087,14 +1022,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionbusco_missing": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_missing"
         },
         "HideDatasetActionbusco_table": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_table"
         }
@@ -1211,20 +1144,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_evidences": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_evidences"
         },
         "HideDatasetActionoutput_full": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_full"
         },
         "HideDatasetActionoutput_gff": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_gff"
         }
@@ -1240,9 +1170,7 @@
       "tool_version": "2.31.11",
       "type": "tool",
       "uuid": "88644068-8716-4fc8-9fa7-bbc4acd366bf",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "18": {
       "annotation": "",
@@ -1255,9 +1183,7 @@
           "output_name": "output_gff"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Map annotation ids",
       "outputs": [
@@ -1289,8 +1215,7 @@
           "output_name": "renamed"
         },
         "HideDatasetActionid_map": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "id_map"
         }
@@ -1353,9 +1278,7 @@
           }
         ]
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "JBrowse",
       "outputs": [
@@ -1374,8 +1297,7 @@
         "x": 2747.5,
         "y": 483.015625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.10+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "6cd09d7b5f37",
@@ -1442,8 +1364,7 @@
         "x": 2747.5,
         "y": 813.015625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.2",
       "tool_shed_repository": {
         "changeset_revision": "69e0806b63a4",
@@ -1488,9 +1409,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Genome annotation statistics",
       "outputs": [
@@ -1513,8 +1432,7 @@
         "x": 2747.5,
         "y": 1682.03125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4",
       "tool_shed_repository": {
         "changeset_revision": "8cffbd184762",
@@ -1550,9 +1468,7 @@
           "output_name": "output_exons"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Busco",
       "outputs": [
@@ -1581,14 +1497,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionbusco_missing": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_missing"
         },
         "HideDatasetActionbusco_table": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "busco_table"
         }

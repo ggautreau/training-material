@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -20,9 +19,7 @@
       ],
       "label": "Forward reads FASTQ (R1)",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 0
@@ -33,17 +30,14 @@
       "type": "data_input",
       "uuid": "ec67a5c0-4854-4344-af16-7772c1c0742b",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -52,9 +46,7 @@
       ],
       "label": "Barcodes FASTQ (R2)",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 120
@@ -65,17 +57,14 @@
       "type": "data_input",
       "uuid": "50c6de05-b355-4733-bc1d-96dc1ca058e1",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -84,9 +73,7 @@
       ],
       "label": "Reverse reads FASTQ (R3)",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 240
@@ -97,9 +84,7 @@
       "type": "data_input",
       "uuid": "8a73ff78-6e0a-41ab-9ac3-523cbd486021",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -120,9 +105,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Sinto barcode",
       "outputs": [
@@ -139,8 +122,7 @@
         "left": 220,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/sinto_barcode/sinto_barcode/0.9.0+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "d1b34ac42b8f",
@@ -153,9 +135,7 @@
       "type": "tool",
       "uuid": "1919dbe2-b934-4e82-bd42-271bc131de54",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -168,9 +148,7 @@
           "output_name": "read1_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "FastQC",
       "outputs": [
@@ -187,8 +165,7 @@
         "left": 440,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3d0c7bdf12f5",
@@ -201,9 +178,7 @@
       "type": "tool",
       "uuid": "7d95bf77-e821-4305-975e-9bab276d8f6d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -216,9 +191,7 @@
           "output_name": "read2_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "FastQC",
       "outputs": [
@@ -235,8 +208,7 @@
         "left": 440,
         "top": 120
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3d0c7bdf12f5",
@@ -249,9 +221,7 @@
       "type": "tool",
       "uuid": "a89b6dab-b267-4c3f-a9d5-cfb1b205769d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -268,9 +238,7 @@
           "output_name": "read2_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Map with BWA-MEM",
       "outputs": [
@@ -283,8 +251,7 @@
         "left": 440,
         "top": 240
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
       "tool_shed_repository": {
         "changeset_revision": "64f11cf59c6e",
@@ -297,9 +264,7 @@
       "type": "tool",
       "uuid": "bf4644d8-82d5-4e35-a97b-3fea5335838d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -312,9 +277,7 @@
           "output_name": "bam_output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Sinto fragments",
       "outputs": [
@@ -327,8 +290,7 @@
         "left": 660,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/sinto_fragments/sinto_fragments/0.9.0+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "29e6bfb2cf49",
@@ -341,9 +303,7 @@
       "type": "tool",
       "uuid": "d319ab7a-b4d0-49e3-8236-1ebef17e144b",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -356,9 +316,7 @@
           "output_name": "fragments"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "bedtools SortBED",
       "outputs": [
@@ -371,8 +329,7 @@
         "left": 880,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_sortbed/2.30.0+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "589e7e57fd6d",
@@ -385,9 +342,7 @@
       "type": "tool",
       "uuid": "d0bb0f84-7e9f-4147-a752-a0d8c8681c59",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -400,9 +355,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MACS2 callpeak",
       "outputs": [
@@ -431,8 +384,7 @@
         "left": 1100,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.7.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "640d3af5d833",
@@ -445,9 +397,7 @@
       "type": "tool",
       "uuid": "45eec6d3-a838-42c0-b1d1-d4d28269c794",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -460,9 +410,7 @@
           "output_name": "output_narrowpeaks"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Unique",
       "outputs": [
@@ -475,8 +423,7 @@
         "left": 1320,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sorted_uniq/1.1.0",
       "tool_shed_repository": {
         "changeset_revision": "f46f0e4f75c4",
@@ -489,9 +436,7 @@
       "type": "tool",
       "uuid": "7b931d3f-9ede-40a9-85fb-7c278a2df346",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -508,9 +453,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Build count matrix",
       "outputs": [
@@ -523,8 +466,7 @@
         "left": 1540,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/episcanpy_build_matrix/episcanpy_build_matrix/0.3.2+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "31a21ba2c5ea",
@@ -537,9 +479,7 @@
       "type": "tool",
       "uuid": "264ec769-e1aa-4099-a317-b1ba10d851a0",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -552,9 +492,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect AnnData",
       "outputs": [
@@ -567,8 +505,7 @@
         "left": 1760,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "ee98d611afc6",
@@ -581,9 +518,7 @@
       "type": "tool",
       "uuid": "014bff00-4f5c-4eb7-abde-8608b7d6c5af",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -596,9 +531,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect AnnData",
       "outputs": [
@@ -611,8 +544,7 @@
         "left": 1760,
         "top": 120
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "ee98d611afc6",
@@ -625,9 +557,7 @@
       "type": "tool",
       "uuid": "0f53a7e6-a0bf-4863-bbbf-2c1121154e7a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -640,9 +570,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect AnnData",
       "outputs": [
@@ -655,8 +583,7 @@
         "left": 1760,
         "top": 240
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "ee98d611afc6",
@@ -669,9 +596,7 @@
       "type": "tool",
       "uuid": "2377b1af-a929-44e7-8268-f8213d9dc5bf",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "15": {
       "annotation": "",
@@ -684,9 +609,7 @@
           "output_name": "anndata_out"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect AnnData",
       "outputs": [
@@ -699,8 +622,7 @@
         "left": 1760,
         "top": 360
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "ee98d611afc6",
@@ -713,9 +635,7 @@
       "type": "tool",
       "uuid": "46a020f8-fc7b-4c28-9e04-d659241af9b7",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     }
   },
   "tags": [

@@ -9,8 +9,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -19,9 +18,7 @@
       ],
       "label": "Single-End FASTQs",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 579.2166595458984,
         "height": 89.09999084472656,
@@ -37,17 +34,14 @@
       "tool_version": null,
       "type": "data_collection_input",
       "uuid": "30a3c256-5d21-4219-b23e-58c8f3842387",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -56,9 +50,7 @@
       ],
       "label": "Paired-End FASTQs",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 688.2166900634766,
         "height": 89.09999084472656,
@@ -74,17 +66,14 @@
       "tool_version": null,
       "type": "data_collection_input",
       "uuid": "c04ddfda-2349-4857-8cae-b3d84dcbf9e7",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -93,9 +82,7 @@
       ],
       "label": "Mycobacterium_tuberculosis_ancestral_reference.gbk",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 732.6500244140625,
         "height": 111.5333251953125,
@@ -111,9 +98,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "67484edc-af0a-4a41-8170-c78853b51319",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -126,9 +111,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Trimmomatic",
       "outputs": [
@@ -147,8 +130,7 @@
         "x": 983.4000244140625,
         "y": 492.1166687011719
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.38.1",
       "tool_shed_repository": {
         "changeset_revision": "d94aff5ee623",
@@ -179,9 +161,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Trimmomatic",
       "outputs": [
@@ -204,8 +184,7 @@
         "x": 986.4000244140625,
         "y": 616.11669921875
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.38.1",
       "tool_shed_repository": {
         "changeset_revision": "d94aff5ee623",
@@ -245,9 +224,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Mapping and variant calling of SINGLE END FASTQs with snippy",
       "name": "snippy",
       "outputs": [
@@ -274,8 +251,7 @@
         "x": 1665.4000244140625,
         "y": 399.1166687011719
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2",
       "tool_shed_repository": {
         "changeset_revision": "c9a8ef2aa380",
@@ -320,9 +296,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Mapping and variant calling of PAIRED END FASTQs with snippy",
       "name": "snippy",
       "outputs": [
@@ -349,8 +323,7 @@
         "x": 1667.4000244140625,
         "y": 759.11669921875
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/4.6.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "d220115f882b",
@@ -395,9 +368,7 @@
           "output_name": "snpvcf"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Merge PE/SE VCFs in a single collection with all samples",
       "name": "Merge collections",
       "outputs": [
@@ -416,8 +387,7 @@
         "x": 2111.39990234375,
         "y": 441.1166687011719
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "__MERGE_COLLECTION__",
       "tool_state": "{\"advanced\": {\"conflict\": {\"duplicate_options\": \"keep_first\", \"__current_case__\": 3}}, \"inputs\": [{\"__index__\": 0, \"input\": {\"__class__\": \"ConnectedValue\"}}, {\"__index__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.0.0",
@@ -446,9 +416,7 @@
           "output_name": "snpsbam"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Merge PE/SE BAMs in a single collection with all samples (Part the workflow \"Identifying DR with TB-profiler)",
       "name": "Merge collections",
       "outputs": [
@@ -469,8 +437,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -480,9 +447,7 @@
       "tool_version": "1.0.0",
       "type": "tool",
       "uuid": "3f9afab8-4b25-4866-bee7-0dd46d20f102",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -519,8 +484,7 @@
         "x": 2418.39990234375,
         "y": 452.1166687011719
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/tb_variant_filter/tb_variant_filter/0.3.5+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "e7aff4a85df5",

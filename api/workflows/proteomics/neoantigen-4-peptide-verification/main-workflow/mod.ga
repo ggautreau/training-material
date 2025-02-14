@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Validate the NeoAntigen Candidates from FragPipe discovery through the PepQuery Novel search",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "GPL-3.0-or-later",
   "name": "GigaScience_PepQuery2_demonstration_STS26T_neoantigen_candidates_workflow",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Candidate Neoantigens from Fragpipe Workflow",
@@ -26,9 +23,7 @@
       ],
       "label": "Candidate_Neoantigens",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 0
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "60cb8414-561d-4004-a2e2-8b90f51bb7e4",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Known human and contaminant protein fasta database",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Known human and contaminant protein fasta database",
@@ -58,9 +50,7 @@
       ],
       "label": "HUMAN_Uniprot_and_CRAP.fasta",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1.47265625,
         "top": 113.1015625
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "dcb42406-0659-4ed1-be73-0d3437f586ad",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "RAW File",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "RAW File",
@@ -90,9 +77,7 @@
       ],
       "label": "Input Raw-files",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 12.6328125,
         "top": 330.1953125
@@ -103,17 +88,14 @@
       "type": "data_input",
       "uuid": "290d38c4-dfbe-4009-89d8-701aaed023d2",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "this is for blastP taxid restrictions- homo sapiens-9606",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "this is for blastP taxid restrictions- homo sapiens-9606",
@@ -122,9 +104,7 @@
       ],
       "label": "Human-TAX-ID",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 663.48828125,
         "top": 210.65625
@@ -135,9 +115,7 @@
       "type": "data_input",
       "uuid": "e579dcc6-3daf-41ba-81e4-9b40f32e70ee",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "Converting Raw to MGF",
@@ -150,9 +128,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_RAW_to_MGF",
       "name": "msconvert",
       "outputs": [
@@ -165,8 +141,7 @@
         "left": 47.16005404527099,
         "top": 546.0879848438761
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/galaxyp/msconvert/msconvert/3.0.20287.2",
       "tool_shed_repository": {
         "changeset_revision": "6153e8ada1ee",
@@ -179,9 +154,7 @@
       "type": "tool",
       "uuid": "d654a201-dad0-47ce-b007-9f109e691ff2",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "PepQuery against HUMAN and contaminants to know filter peptides that doesn't match to anything in the known Uniprot database",
@@ -202,9 +175,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "PepQuery2",
       "name": "PepQuery2",
       "outputs": [
@@ -330,9 +301,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Getting-blast-ready",
       "name": "Tabular-to-FASTA",
       "outputs": [
@@ -389,9 +358,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "BLAST-Protein",
       "name": "NCBI BLAST+ blastp",
       "outputs": [

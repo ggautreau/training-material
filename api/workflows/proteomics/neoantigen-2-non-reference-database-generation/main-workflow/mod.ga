@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Generating non-reference protein database for FragPipe discovery",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "CC-BY-4.0",
   "name": "Gigascience_Indels_SAV_non-reference_demonstration_STS26T-Gent_Workflow",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Human reference genome\n#!genome-build GRCh38.p13\n#!genome-version GRCh38\n#!genome-date 2013-12\n#!genome-build-accession GCA_000001405.28\n#!genebuild-last-updated 2021-11",
@@ -26,9 +23,7 @@
       ],
       "label": "Homo_sapiens.GRCh38_canon.106.gtf",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 295.5937262204385,
         "top": 141.17708455680213
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "2dcbfce2-682b-4a07-b370-d09857e426a1",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Second data set of RNA-seq data",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Second data set of RNA-seq data",
@@ -58,9 +50,7 @@
       ],
       "label": "RNA-Seq_Reads_2.fastq",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0.0,
         "top": 643.0000389659879
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "a72ae09b-84ff-4989-a71a-ebc00efed697",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "First data set of RNA-seq data",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "First data set of RNA-seq data",
@@ -90,9 +77,7 @@
       ],
       "label": "RNA-Seq_Reads_1.fastq",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0.0,
         "top": 817.0000135778079
@@ -103,17 +88,14 @@
       "type": "data_input",
       "uuid": "6818c468-bbb0-4002-b347-c35e374e25c6",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "HUMAN Uniprot+isoforms and cRAP FASTA database",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "HUMAN Uniprot+isoforms and cRAP FASTA database",
@@ -122,9 +104,7 @@
       ],
       "label": "HUMAN-Uniprot-and-isoforms_and_cRAP-FASTA-Database",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1162.8398291365352,
         "top": 1324.83984375
@@ -135,9 +115,7 @@
       "type": "data_input",
       "uuid": "99296fa6-b9a9-43b2-9c0f-f51821d5ce4c",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "Uncompressed_RNA_Seq_Reads_2",
@@ -150,9 +128,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Uncompressed_RNA_Seq_Reads_2",
       "name": "Convert compressed file to uncompressed.",
       "outputs": [
@@ -206,9 +182,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Uncompressed_RNA_Seq_Reads_1",
       "name": "Convert compressed file to uncompressed.",
       "outputs": [
@@ -262,9 +236,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Convert_HUMAN_Uniprot_and_CRAP_FASTA_to_tabular",
       "name": "FASTA-to-Tabular",
       "outputs": [
@@ -383,9 +355,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filtering_HUMAN_Uniprot_and_cRAP_Accessions_tabular",
       "name": "Filter Tabular",
       "outputs": [
@@ -500,9 +470,7 @@
           "output_name": "output_alignments"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "FreeBayes_variants_VCF",
       "name": "FreeBayes",
       "outputs": [
@@ -559,9 +527,7 @@
           "output_name": "output_gtf"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "GffCompare_Annotated_Transcripts_GTF",
       "name": "GffCompare",
       "outputs": [
@@ -799,9 +765,7 @@
           "output_name": "transcripts_annotated"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "GffCompare_Annotated_GTF_to_BED",
       "name": "Convert gffCompare annotated GTF to BED",
       "outputs": [
@@ -854,9 +818,7 @@
           "output_name": "output_indel"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Convert_INDEL_FASTA_to_tabular",
       "name": "FASTA-to-Tabular",
       "outputs": [
@@ -909,9 +871,7 @@
           "output_name": "output_snv"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Convert-SNV_FASTA_to_tabular",
       "name": "FASTA-to-Tabular",
       "outputs": [
@@ -964,9 +924,7 @@
           "output_name": "output_rpkm"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Convert-RPKM_FASTA_to_tabular",
       "name": "FASTA-to-Tabular",
       "outputs": [
@@ -1019,9 +977,7 @@
           "output_name": "output_genomic_mapping_sqlite"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_Genomic_SQLite_to_database_mode",
       "name": "SQLite to tabular",
       "outputs": [
@@ -1074,9 +1030,7 @@
           "output_name": "output_rpkm"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_CustomProDB_FASTA_to_tabular",
       "name": "FASTA-to-Tabular",
       "outputs": [
@@ -1129,9 +1083,7 @@
           "output_name": "output_variant_annotation_sqlite"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_Variant_SQLite_to_database_mode",
       "name": "SQLite to tabular",
       "outputs": [
@@ -1184,9 +1136,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Translate_BED_Transcripts",
       "name": "Translate BED transcripts",
       "outputs": [
@@ -1255,9 +1205,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Annotating-INDEL",
       "name": "Column Regex Find And Replace",
       "outputs": [
@@ -1310,9 +1258,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Annotating-SNV",
       "name": "Column Regex Find And Replace",
       "outputs": [
@@ -1365,9 +1311,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Annotating-RPKM",
       "name": "Column Regex Find And Replace",
       "outputs": [
@@ -1420,9 +1364,7 @@
           "output_name": "query_results"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Annotating_Genomic_SQLite",
       "name": "Column Regex Find And Replace",
       "outputs": [
@@ -1475,9 +1417,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filtering_RPKM_accessions",
       "name": "Filter Tabular",
       "outputs": [
@@ -1530,9 +1470,7 @@
           "output_name": "query_results"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Annotating_Variant_SQLite",
       "name": "Column Regex Find And Replace",
       "outputs": [
@@ -1585,9 +1523,7 @@
           "output_name": "translation_bed"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Convert_Translation_BED_to_tabular_for_protein_map",
       "name": "bed to protein map",
       "outputs": [
@@ -1640,9 +1576,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_Annotated_Indel_to_FASTA",
       "name": "Tabular-to-FASTA",
       "outputs": [
@@ -1695,9 +1629,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_Annotated_SNV_to_FASTA",
       "name": "Tabular-to-FASTA",
       "outputs": [
@@ -1750,9 +1682,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Converting_Annotated_RPKM_to_FASTA",
       "name": "Tabular-to-FASTA",
       "outputs": [
@@ -1811,9 +1741,7 @@
           }
         ]
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Concatenate_HUMAN_Crap_protein-accessions",
       "name": "Concatenate datasets",
       "outputs": [
@@ -1866,9 +1794,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Variant_input_for_MVP",
       "name": "Query Tabular",
       "outputs": [
@@ -1927,9 +1853,7 @@
           }
         ]
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Concatenate_databases_from_Genomic_SQlite_and_translation_BED_file",
       "name": "Concatenate datasets",
       "outputs": [
@@ -1990,9 +1914,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Merge_Indel_SNV_RPKM_to_make_Non_normal_CustomProDB_FASTA",
       "name": "FASTA Merge Files and Filter Unique Sequences",
       "outputs": [
@@ -2111,9 +2033,7 @@
           "output_name": "translation_fasta"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Human_cRAP_Non_normal_transcripts_dB generation",
       "name": "FASTA Merge Files and Filter Unique Sequences",
       "outputs": [

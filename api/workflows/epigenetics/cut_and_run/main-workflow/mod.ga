@@ -9,8 +9,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -19,9 +18,7 @@
       ],
       "label": "bed file with genes",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 246.6999969482422,
         "height": 82.19999694824219,
@@ -37,17 +34,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "b860d81d-5828-497d-94be-26e1b08065bd",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -56,9 +50,7 @@
       ],
       "label": "ctcf peaks",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 448.3000030517578,
         "height": 61.80000305175781,
@@ -74,17 +66,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "b356e32f-d1ea-4e32-b607-6d178f184990",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -93,9 +82,7 @@
       ],
       "label": "ATAC R2 read in fastq(.gz) format",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": -607.3000030517578,
         "height": 82.19999694824219,
@@ -111,17 +98,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "5c751222-c315-4334-806d-450ab3aabf76",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -130,9 +114,7 @@
       ],
       "label": "ATAC R1 read in fastq(.gz) format",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": -1069.3000030517578,
         "height": 82.19999694824219,
@@ -148,9 +130,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "28c9e734-a2c3-4fd8-bb0e-0f7cb07b28c0",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -163,9 +143,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Filter",
       "outputs": [
@@ -184,8 +162,7 @@
         "x": 225,
         "y": 570.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "Filter1",
       "tool_state": "{\"cond\": \"c1=='chr22'\", \"header_lines\": \"0\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.1.1",
@@ -248,8 +225,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         },
@@ -295,9 +271,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "ATAC remove nextera adapters with cutadapt",
       "name": "Cutadapt",
       "outputs": [
@@ -418,8 +392,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         },
@@ -465,9 +438,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "bedtools Intersect intervals",
       "outputs": [
@@ -486,8 +457,7 @@
         "x": 554,
         "y": 513.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.30.0",
       "tool_shed_repository": {
         "changeset_revision": "ce3c7f062223",
@@ -556,8 +526,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         },
@@ -603,9 +572,7 @@
           "output_name": "out2"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Bowtie2",
       "outputs": [
@@ -717,8 +684,7 @@
       },
       "post_job_actions": {
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         },
@@ -760,9 +726,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter BAM ATAC",
       "name": "Filter",
       "outputs": [
@@ -829,9 +793,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MarkDuplicates",
       "outputs": [
@@ -898,9 +860,7 @@
           "output_name": "outFile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "bedtools BAM to BED",
       "outputs": [
@@ -919,8 +879,7 @@
         "x": -331,
         "y": -363.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_bamtobed/2.30.0",
       "tool_shed_repository": {
         "changeset_revision": "ce3c7f062223",
@@ -951,9 +910,7 @@
           "output_name": "outFile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Paired-end histogram",
       "outputs": [
@@ -978,8 +935,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput2": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output2"
         }
@@ -1014,9 +970,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MACS2 callpeak",
       "outputs": [
@@ -1053,14 +1007,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_control_lambda": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_control_lambda"
         },
         "HideDatasetActionoutput_tabular": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_tabular"
         },
@@ -1133,9 +1085,7 @@
           "output_name": "output_treat_pileup"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Wig/BedGraph-to-bigWig",
       "outputs": [
@@ -1219,8 +1169,7 @@
         "x": 523,
         "y": 203.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_compute_matrix/deeptools_compute_matrix/3.3.2.0.0",
       "tool_shed_repository": {
         "changeset_revision": "514fa53b5efb",
@@ -1263,9 +1212,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "pyGenomeTracks",
       "outputs": [
@@ -1284,8 +1231,7 @@
         "x": 523,
         "y": -294.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/pygenometracks/pygenomeTracks/3.6",
       "tool_shed_repository": {
         "changeset_revision": "2824d77cd8f8",
@@ -1348,8 +1294,7 @@
         "x": 801,
         "y": 452.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_compute_matrix/deeptools_compute_matrix/3.3.2.0.0",
       "tool_shed_repository": {
         "changeset_revision": "514fa53b5efb",
@@ -1404,8 +1349,7 @@
         "x": 801,
         "y": 280.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_plot_heatmap/deeptools_plot_heatmap/3.3.2.0.1",
       "tool_shed_repository": {
         "changeset_revision": "a4dfb122e52b",
@@ -1460,8 +1404,7 @@
         "x": 1079,
         "y": 542.5
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_plot_heatmap/deeptools_plot_heatmap/3.3.2.0.1",
       "tool_shed_repository": {
         "changeset_revision": "a4dfb122e52b",

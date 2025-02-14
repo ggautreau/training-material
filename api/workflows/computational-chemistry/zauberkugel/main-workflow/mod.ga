@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -20,9 +19,7 @@
       ],
       "label": "Query ligand",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 747.5521469116211,
         "height": 62.083335876464844,
@@ -38,17 +35,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "63eee683-907c-40a4-b801-d977e0b2cb3e",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -57,9 +51,7 @@
       ],
       "label": "Pharmacophore library",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 1033.8889236450195,
         "height": 82.46527862548828,
@@ -75,9 +67,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "004f025f-dafc-4d26-8aec-88a64d013852",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -90,9 +80,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Ligand ionization state generation",
       "name": "Add hydrogen atoms",
       "outputs": [
@@ -111,8 +99,7 @@
         "x": 776.99658203125,
         "y": 632.46533203125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_addh/openbabel_addh/3.1.1+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "6e4b7e0c61a6",
@@ -143,9 +130,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Splitting ePharmaLib into individual pharmacophores",
       "name": "Split file",
       "outputs": [
@@ -164,8 +149,7 @@
         "x": 1009.982666015625,
         "y": 881.4757080078125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.5.0",
       "tool_shed_repository": {
         "changeset_revision": "6cbe2f30c2d7",
@@ -196,9 +180,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": " Low-energy ligand conformer search",
       "name": "RDConf: Low-energy ligand conformer search",
       "outputs": [
@@ -217,8 +199,7 @@
         "x": 1001.0070190429688,
         "y": 629.4618530273438
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rdconf/rdconf/2020.03.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "5c501eb8d56c",
@@ -253,9 +234,7 @@
           "output_name": "list_output_generic"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Pharmacophore alignment",
       "outputs": [
@@ -282,8 +261,7 @@
         "x": 1244.010498046875,
         "y": 628.420166015625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/align_it/ctb_alignit/1.0.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "06d9381593a4",
@@ -324,9 +302,7 @@
           "output_name": "score_result_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Concatenating the pharmacophore alignment scores",
       "name": "Concatenate datasets",
       "outputs": [
@@ -345,8 +321,7 @@
         "x": 1475.9896240234375,
         "y": 628.420166015625
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
       "tool_shed_repository": {
         "changeset_revision": "f46f0e4f75c4",
@@ -377,9 +352,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Ranking the predicted protein targets according to the Tversky index (10th column)",
       "name": "Sort",
       "outputs": [
@@ -400,8 +373,7 @@
       },
       "post_job_actions": {
         "EmailActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "EmailAction",
           "output_name": "out_file1"
         }

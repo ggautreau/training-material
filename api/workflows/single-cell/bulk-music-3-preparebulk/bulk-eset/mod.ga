@@ -9,8 +9,7 @@
       "content_id": "toolshed.g2.bx.psu.edu/repos/iuc/column_remove_by_header/column_remove_by_header/1.0",
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "runtime parameter for tool Remove columns",
@@ -62,8 +61,7 @@
       "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0",
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "runtime parameter for tool Advanced Cut",
@@ -139,8 +137,7 @@
         "left": 290.0,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/annotatemyids/annotatemyids/3.14.0+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "fe3ca740a485",
@@ -232,14 +229,10 @@
           "output_name": "output_tabular"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Copy of Convert from Ensembl to GeneSymbol, summing duplicate genes",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 525.5,
         "top": 36.5
@@ -262,8 +255,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "",
@@ -272,9 +264,7 @@
             ],
             "label": "Annotated IDs",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0.5,
               "top": 127.52500915527344
@@ -297,8 +287,7 @@
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "",
@@ -307,9 +296,7 @@
             ],
             "label": "Expression Matrix (Gene Rows)",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0.0,
               "top": 237.01251220703125
@@ -319,9 +306,7 @@
             "tool_version": null,
             "type": "data_input",
             "uuid": "9aa181ba-56bd-4360-9d50-907bee463505",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -354,8 +339,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -371,9 +355,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "e5b51c32-bd3a-440f-a05a-8c1c36384e3c",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "",
@@ -390,9 +372,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Merge Gene Symbol and matrix together",
             "name": "Join",
             "outputs": [
@@ -407,8 +387,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutput": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "output"
               }
@@ -424,9 +403,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "0ac51cc9-c0b0-4b3d-961c-503860cf423f",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "4": {
             "annotation": "",
@@ -439,9 +416,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Relocate the Gene Symbol column to 1st column",
             "name": "Text reformatting",
             "outputs": [
@@ -456,8 +431,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -473,9 +447,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "44880f2a-430c-4b00-a0b3-e4673fe395ce",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "5": {
             "annotation": "",
@@ -488,9 +460,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Remove second column with Ensembl ID's",
             "name": "Advanced Cut",
             "outputs": [
@@ -505,8 +475,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutput": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "output"
               }
@@ -522,9 +491,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "104cb55a-f297-4464-b3b6-7021ffd0ae9c",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "6": {
             "annotation": "",
@@ -537,9 +504,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Count Unique occurences of Gene Symbol",
             "name": "Text reformatting",
             "outputs": [
@@ -554,8 +519,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -571,9 +535,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "1f84d0c1-b187-4299-a2bd-172964ef3732",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "7": {
             "annotation": "",
@@ -586,9 +548,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Group rows by Gene Symbol and append their values (Long Format)",
             "name": "Text reformatting",
             "outputs": [
@@ -603,8 +563,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -620,9 +579,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "8ac449d7-da88-44b0-bfe2-092d8cd47af9",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "8": {
             "annotation": "",
@@ -635,9 +592,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Unique Gene Symbol Occurences, sorted in descending frequency.",
             "name": "Sort",
             "outputs": [
@@ -650,8 +605,7 @@
               "left": 1067.9625244140625,
               "top": 2.0625
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "sort1",
             "tool_state": "{\"column\": \"2\", \"column_set\": [], \"header_lines\": \"0\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"order\": \"DESC\", \"style\": \"num\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": null,
@@ -676,9 +630,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Pivot Long Format to Wide Format (Matrix)",
             "name": "Table Compute",
             "outputs": [
@@ -693,8 +645,7 @@
             },
             "post_job_actions": {
               "HideDatasetActiontable": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "table"
               }
@@ -710,9 +661,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "6c98c17e-43ca-4620-a2f7-a919c24bee20",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "10": {
             "annotation": "",
@@ -725,9 +674,7 @@
                 "output_name": "table"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Final Count Matrix with Gene Symbol ID's",
             "name": "Text transformation",
             "outputs": [
@@ -740,8 +687,7 @@
               "left": 1284.0125732421875,
               "top": 386.07501220703125
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1",
             "tool_shed_repository": {
               "changeset_revision": "f46f0e4f75c4",

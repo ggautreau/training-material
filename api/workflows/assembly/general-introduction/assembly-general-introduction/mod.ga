@@ -9,8 +9,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -19,9 +18,7 @@
       ],
       "label": "mutant_R1.fastq",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 241,
         "top": 367.6875
@@ -44,8 +41,7 @@
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -54,9 +50,7 @@
       ],
       "label": "mutant_R2.fastq",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 197,
         "top": 523.203125
@@ -79,8 +73,7 @@
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -89,9 +82,7 @@
       ],
       "label": "wildtype.fna",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 984,
         "top": 651.75
@@ -150,8 +141,7 @@
         "left": 618.890625,
         "top": 200
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "e7b2202befea",
@@ -219,14 +209,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionhtml_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "html_file"
         },
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         }
@@ -242,9 +230,7 @@
       "tool_version": null,
       "type": "tool",
       "uuid": "7ac25d0a-b294-4c4b-8b24-b5ed56f2f758",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -261,9 +247,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "FASTQ interlacer",
       "outputs": [
@@ -280,8 +264,7 @@
         "left": 450,
         "top": 825
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastq_paired_end_interlacer/fastq_paired_end_interlacer/1.2.0.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "2ccb8dcabddc",
@@ -321,9 +304,7 @@
           "output_name": "text_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MultiQC",
       "outputs": [
@@ -340,8 +321,7 @@
         "left": 963.890625,
         "top": 340.6875
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.7",
       "tool_shed_repository": {
         "changeset_revision": "b2f1f75d49c4",
@@ -377,9 +357,7 @@
           "output_name": "outfile_pairs"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "velveth",
       "outputs": [
@@ -392,8 +370,7 @@
         "left": 763,
         "top": 877
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/velvet/velveth/1.2.10.1",
       "tool_shed_repository": {
         "changeset_revision": "5da9a0e2fb2d",
@@ -424,9 +401,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "velvetg",
       "outputs": [
@@ -443,8 +418,7 @@
         "left": 1018,
         "top": 882
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/velvet/velvetg/1.2.10.1",
       "tool_shed_repository": {
         "changeset_revision": "5da9a0e2fb2d",
@@ -484,9 +458,7 @@
           "output_name": "contigs"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Quast",
       "outputs": [
@@ -521,26 +493,22 @@
       },
       "post_job_actions": {
         "HideDatasetActionlog": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "log"
         },
         "HideDatasetActionmis_ass": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "mis_ass"
         },
         "HideDatasetActionquast_tabular": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "quast_tabular"
         },
         "HideDatasetActionunalign": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "unalign"
         }

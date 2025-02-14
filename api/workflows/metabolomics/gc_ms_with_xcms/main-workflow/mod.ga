@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "List of retention indexed reference compounds. Either a table with columns `rt` and `ri` or an MSP with retention time and index metadata.",
@@ -20,9 +19,7 @@
       ],
       "label": "Reference compound list (alkanes)",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 511.8500061035156,
         "height": 82.20001220703125,
@@ -38,17 +35,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "6f1c04f5-126f-4ad2-bc25-b1c4b6efce5d",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Spectral library to use for annotation in MSP or MGF format.",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Spectral library to use for annotation in MSP or MGF format.",
@@ -57,9 +51,7 @@
       ],
       "label": "Reference spectra",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 616.8332977294922,
         "height": 82.19999694824219,
@@ -75,17 +67,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "64a5eec1-54ef-4fc2-93c5-f6ab70ce1614",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "Sample metadata sheet, containing sample name, type (QC, blank, sample, etc.), batch number and injection order.",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Sample metadata sheet, containing sample name, type (QC, blank, sample, etc.), batch number and injection order.",
@@ -94,9 +83,7 @@
       ],
       "label": "sample_metadata.tsv",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 489.8500061035156,
         "height": 82.20001220703125,
@@ -112,17 +99,14 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "494c83fe-4407-4123-b56e-0a211f97fea2",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "Mass spectrometry data to be processed in the workflow. Please ensure the format is supported by msconvert and only use the peak picking option if the input data was acquired in profile mode.",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Mass spectrometry data to be processed in the workflow. Please ensure the format is supported by msconvert and only use the peak picking option if the input data was acquired in profile mode.",
@@ -131,9 +115,7 @@
       ],
       "label": "Input Dataset Collection",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 105.85000610351562,
         "height": 82.20001220703125,
@@ -149,9 +131,7 @@
       "tool_version": null,
       "type": "data_collection_input",
       "uuid": "2e362408-24c5-46e1-861c-74b825a5feaf",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -164,9 +144,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "msconvert",
       "outputs": [
@@ -187,8 +165,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -204,9 +181,7 @@
       "tool_version": "3.0.20287.2",
       "type": "tool",
       "uuid": "22ad3fd2-183b-4b5e-970b-710e1909e4c4",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -219,9 +194,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MSnbase readMSData",
       "outputs": [
@@ -246,14 +219,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionsampleMetadata": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "sampleMetadata"
         },
         "HideDatasetActionxsetRData": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "xsetRData"
         }
@@ -269,9 +240,7 @@
       "tool_version": "2.16.1+galaxy0",
       "type": "tool",
       "uuid": "65804cad-6e15-42be-baad-c33e00e5d880",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -284,9 +253,7 @@
           "output_name": "xsetRData"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "xcms findChromPeaks (xcmsSet)",
       "outputs": [
@@ -311,14 +278,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionlog": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "log"
         },
         "HideDatasetActionxsetRData": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "xsetRData"
         }
@@ -334,9 +299,7 @@
       "tool_version": "3.12.0+galaxy0",
       "type": "tool",
       "uuid": "f36545dd-0755-4fde-8ec8-43ee2c6d3626",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -353,9 +316,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "xcms findChromPeaks Merger",
       "outputs": [
@@ -376,8 +337,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionxsetRData": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "xsetRData"
         }
@@ -393,9 +353,7 @@
       "tool_version": "3.12.0+galaxy0",
       "type": "tool",
       "uuid": "150d7388-a919-4992-96e7-9d1b9fc2815e",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -408,9 +366,7 @@
           "output_name": "xsetRData"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "xcms groupChromPeaks (group)",
       "outputs": [
@@ -435,14 +391,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionplotChromPeakDensity": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "plotChromPeakDensity"
         },
         "HideDatasetActionxsetRData": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "xsetRData"
         }
@@ -458,9 +412,7 @@
       "tool_version": "3.12.0+galaxy0",
       "type": "tool",
       "uuid": "72cbf19d-51c9-41d6-8f54-3699eec0ccf4",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -473,9 +425,7 @@
           "output_name": "xsetRData"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "xcms adjustRtime (retcor)",
       "outputs": [
@@ -500,14 +450,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionrawVSadjustedPdf": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "rawVSadjustedPdf"
         },
         "HideDatasetActionxsetRData": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "xsetRData"
         }
@@ -523,9 +471,7 @@
       "tool_version": "3.12.0+galaxy0",
       "type": "tool",
       "uuid": "6f5b23a4-da9b-4b08-9804-4e3bdac88bb4",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -538,9 +484,7 @@
           "output_name": "xsetRData"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "xcms groupChromPeaks (group)",
       "outputs": [
@@ -573,26 +517,22 @@
       },
       "post_job_actions": {
         "HideDatasetActiondataMatrix": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "dataMatrix"
         },
         "HideDatasetActionplotChromPeakDensity": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "plotChromPeakDensity"
         },
         "HideDatasetActionvariableMetadata": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "variableMetadata"
         },
         "HideDatasetActionxsetRData": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "xsetRData"
         }
@@ -608,9 +548,7 @@
       "tool_version": "3.12.0+galaxy0",
       "type": "tool",
       "uuid": "7d26bd46-273c-4ef1-b179-aef0be71ff87",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -623,9 +561,7 @@
           "output_name": "xsetRData"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "xcms fillChromPeaks (fillPeaks)",
       "outputs": [
@@ -652,8 +588,7 @@
         "x": -122.89999389648438,
         "y": 121.64999389648438
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_fillpeaks/abims_xcms_fillPeaks/3.12.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "26d77e9ceb49",
@@ -722,8 +657,7 @@
         "x": 152.10000610351562,
         "y": 118.64999389648438
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.2.4+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "2ec9253a647e",
@@ -763,9 +697,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "RIAssigner",
       "outputs": [
@@ -784,8 +716,7 @@
         "x": 450.08331298828125,
         "y": 322.6499938964844
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.4+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "c702620c22b1",
@@ -848,8 +779,7 @@
         "x": 805,
         "y": 370
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_similarity/matchms_similarity/0.20.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "e5010b19d64d",
@@ -904,8 +834,7 @@
         "x": 1175,
         "y": 352
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/recetox/matchms_formatter/matchms_formatter/0.20.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "1b09315a3f87",

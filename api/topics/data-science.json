@@ -229,8 +229,8 @@
       "id": "data-science/data-manipulation-olympics",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2025-02-14 00:06:40 +0000",
-      "pub_date": "2025-02-14 00:06:40 +0000",
+      "mod_date": "2025-02-14 10:44:28 +0000",
+      "pub_date": "2025-02-14 10:44:28 +0000",
       "version": 0,
       "workflows": [
         {
@@ -246,9 +246,7 @@
           "parent_id": "data-science/data-manipulation-olympics",
           "topic_id": "data-science",
           "tutorial_id": "data-manipulation-olympics",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "GTN Tutorial: Data manipulation Olympics - all steps and exercises",
           "title": "GTN Tutorial: Data manipulation Olympics - all steps and exercises",
           "version": 0,
@@ -263,11 +261,9 @@
             "parameters": false
           },
           "workflowhub_id": "1206",
-          "history": [
-
-          ],
+          "history": [],
           "test_results": null,
-          "modified": "2025-02-14 00:06:40 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nolympics.tsv\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\ncountry-information.tsv\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nolympics_2022.tsv\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Line/Word/Character count\"];\n  0 -->|output| 3;\n  4[\"tabular-to-csv\"];\n  0 -->|output| 4;\n  5[\"Sort\"];\n  0 -->|output| 5;\n  6[\"Sort\"];\n  0 -->|output| 6;\n  7[\"Sort\"];\n  0 -->|output| 7;\n  8[\"Sort\"];\n  0 -->|output| 8;\n  9[\"Sort\"];\n  0 -->|output| 9;\n  10[\"Sort\"];\n  0 -->|output| 10;\n  11[\"Filter\"];\n  0 -->|output| 11;\n  12[\"Filter\"];\n  0 -->|output| 12;\n  13[\"Count\"];\n  0 -->|output| 13;\n  14[\"Count\"];\n  0 -->|output| 14;\n  15[\"Count\"];\n  0 -->|output| 15;\n  16[\"Count\"];\n  0 -->|output| 16;\n  17[\"Datamash\"];\n  0 -->|output| 17;\n  18[\"Count\"];\n  0 -->|output| 18;\n  19[\"Datamash\"];\n  0 -->|output| 19;\n  20[\"Filter\"];\n  0 -->|output| 20;\n  21[\"Filter\"];\n  0 -->|output| 21;\n  22[\"Filter\"];\n  0 -->|output| 22;\n  23[\"Filter\"];\n  0 -->|output| 23;\n  24[\"Filter\"];\n  0 -->|output| 24;\n  25[\"Filter\"];\n  0 -->|output| 25;\n  26[\"Filter\"];\n  0 -->|output| 26;\n  27[\"Compute\"];\n  0 -->|output| 27;\n  28[\"Compute\"];\n  0 -->|output| 28;\n  29[\"Cut\"];\n  0 -->|output| 29;\n  30[\"Column Regex Find And Replace\"];\n  0 -->|output| 30;\n  31[\"Column Regex Find And Replace\"];\n  0 -->|output| 31;\n  32[\"Column Regex Find And Replace\"];\n  0 -->|output| 32;\n  33[\"Cut\"];\n  0 -->|output| 33;\n  34[\"Cut\"];\n  0 -->|output| 34;\n  35[\"Datamash\"];\n  0 -->|output| 35;\n  36[\"Datamash\"];\n  0 -->|output| 36;\n  37[\"Datamash\"];\n  0 -->|output| 37;\n  38[\"Datamash\"];\n  0 -->|output| 38;\n  39[\"Datamash\"];\n  0 -->|output| 39;\n  40[\"Count\"];\n  0 -->|output| 40;\n  41[\"Column Regex Find And Replace\"];\n  0 -->|output| 41;\n  42[\"Split file\"];\n  0 -->|output| 42;\n  43[\"Join two Datasets\"];\n  0 -->|output| 43;\n  1 -->|output| 43;\n  44[\"Remove beginning\"];\n  2 -->|output| 44;\n  45[\"Sort\"];\n  11 -->|out_file1| 45;\n  46[\"Filter\"];\n  12 -->|out_file1| 46;\n  47[\"Cut\"];\n  28 -->|out_file1| 47;\n  48[\"Unique\"];\n  29 -->|out_file1| 48;\n  49[\"Count\"];\n  41 -->|out_file1| 49;\n  50[\"Datamash\"];\n  41 -->|out_file1| 50;\n  51[\"Concatenate datasets\"];\n  0 -->|output| 51;\n  44 -->|out_file1| 51;\n  52[\"Filter\"];\n  45 -->|outfile| 52;\n  53[\"Sort\"];\n  46 -->|out_file1| 53;\n  54[\"Remove beginning\"];\n  47 -->|out_file1| 54;\n  55[\"Select first\"];\n  47 -->|out_file1| 55;\n  56[\"Sort\"];\n  48 -->|outfile| 56;\n  57[\"Unique\"];\n  54 -->|out_file1| 57;\n  58[\"Concatenate datasets\"];\n  55 -->|out_file1| 58;\n  57 -->|outfile| 58;\n  59[\"Join two Datasets\"];\n  0 -->|output| 59;\n  58 -->|out_file1| 59;\n  60[\"Cut\"];\n  59 -->|out_file1| 60;\n  61[\"Line/Word/Character count\"];\n  60 -->|out_file1| 61;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nolympics.tsv\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\ncountry-information.tsv\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nolympics_2022.tsv\"]\n  3[label=\"Line/Word/Character count\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"tabular-to-csv\"]\n  0 -> 4 [label=\"output\"]\n  5[label=\"Sort\"]\n  0 -> 5 [label=\"output\"]\n  6[label=\"Sort\"]\n  0 -> 6 [label=\"output\"]\n  7[label=\"Sort\"]\n  0 -> 7 [label=\"output\"]\n  8[label=\"Sort\"]\n  0 -> 8 [label=\"output\"]\n  9[label=\"Sort\"]\n  0 -> 9 [label=\"output\"]\n  10[label=\"Sort\"]\n  0 -> 10 [label=\"output\"]\n  11[label=\"Filter\"]\n  0 -> 11 [label=\"output\"]\n  12[label=\"Filter\"]\n  0 -> 12 [label=\"output\"]\n  13[label=\"Count\"]\n  0 -> 13 [label=\"output\"]\n  14[label=\"Count\"]\n  0 -> 14 [label=\"output\"]\n  15[label=\"Count\"]\n  0 -> 15 [label=\"output\"]\n  16[label=\"Count\"]\n  0 -> 16 [label=\"output\"]\n  17[label=\"Datamash\"]\n  0 -> 17 [label=\"output\"]\n  18[label=\"Count\"]\n  0 -> 18 [label=\"output\"]\n  19[label=\"Datamash\"]\n  0 -> 19 [label=\"output\"]\n  20[label=\"Filter\"]\n  0 -> 20 [label=\"output\"]\n  21[label=\"Filter\"]\n  0 -> 21 [label=\"output\"]\n  22[label=\"Filter\"]\n  0 -> 22 [label=\"output\"]\n  23[label=\"Filter\"]\n  0 -> 23 [label=\"output\"]\n  24[label=\"Filter\"]\n  0 -> 24 [label=\"output\"]\n  25[label=\"Filter\"]\n  0 -> 25 [label=\"output\"]\n  26[label=\"Filter\"]\n  0 -> 26 [label=\"output\"]\n  27[label=\"Compute\"]\n  0 -> 27 [label=\"output\"]\n  28[label=\"Compute\"]\n  0 -> 28 [label=\"output\"]\n  29[label=\"Cut\"]\n  0 -> 29 [label=\"output\"]\n  30[label=\"Column Regex Find And Replace\"]\n  0 -> 30 [label=\"output\"]\n  31[label=\"Column Regex Find And Replace\"]\n  0 -> 31 [label=\"output\"]\n  32[label=\"Column Regex Find And Replace\"]\n  0 -> 32 [label=\"output\"]\n  33[label=\"Cut\"]\n  0 -> 33 [label=\"output\"]\n  34[label=\"Cut\"]\n  0 -> 34 [label=\"output\"]\n  35[label=\"Datamash\"]\n  0 -> 35 [label=\"output\"]\n  36[label=\"Datamash\"]\n  0 -> 36 [label=\"output\"]\n  37[label=\"Datamash\"]\n  0 -> 37 [label=\"output\"]\n  38[label=\"Datamash\"]\n  0 -> 38 [label=\"output\"]\n  39[label=\"Datamash\"]\n  0 -> 39 [label=\"output\"]\n  40[label=\"Count\"]\n  0 -> 40 [label=\"output\"]\n  41[label=\"Column Regex Find And Replace\"]\n  0 -> 41 [label=\"output\"]\n  42[label=\"Split file\"]\n  0 -> 42 [label=\"output\"]\n  43[label=\"Join two Datasets\"]\n  0 -> 43 [label=\"output\"]\n  1 -> 43 [label=\"output\"]\n  44[label=\"Remove beginning\"]\n  2 -> 44 [label=\"output\"]\n  45[label=\"Sort\"]\n  11 -> 45 [label=\"out_file1\"]\n  46[label=\"Filter\"]\n  12 -> 46 [label=\"out_file1\"]\n  47[label=\"Cut\"]\n  28 -> 47 [label=\"out_file1\"]\n  48[label=\"Unique\"]\n  29 -> 48 [label=\"out_file1\"]\n  49[label=\"Count\"]\n  41 -> 49 [label=\"out_file1\"]\n  50[label=\"Datamash\"]\n  41 -> 50 [label=\"out_file1\"]\n  51[label=\"Concatenate datasets\"]\n  0 -> 51 [label=\"output\"]\n  44 -> 51 [label=\"out_file1\"]\n  52[label=\"Filter\"]\n  45 -> 52 [label=\"outfile\"]\n  53[label=\"Sort\"]\n  46 -> 53 [label=\"out_file1\"]\n  54[label=\"Remove beginning\"]\n  47 -> 54 [label=\"out_file1\"]\n  55[label=\"Select first\"]\n  47 -> 55 [label=\"out_file1\"]\n  56[label=\"Sort\"]\n  48 -> 56 [label=\"outfile\"]\n  57[label=\"Unique\"]\n  54 -> 57 [label=\"out_file1\"]\n  58[label=\"Concatenate datasets\"]\n  55 -> 58 [label=\"out_file1\"]\n  57 -> 58 [label=\"outfile\"]\n  59[label=\"Join two Datasets\"]\n  0 -> 59 [label=\"output\"]\n  58 -> 59 [label=\"out_file1\"]\n  60[label=\"Cut\"]\n  59 -> 60 [label=\"out_file1\"]\n  61[label=\"Line/Word/Character count\"]\n  60 -> 61 [label=\"out_file1\"]\n}",
           "workflow_tools": [
@@ -295,8 +291,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -305,9 +300,7 @@
               ],
               "label": "olympics.tsv",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 10
@@ -317,17 +310,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "749981b6-9589-48a3-b1fe-3830a019aac3",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -336,9 +326,7 @@
               ],
               "label": "country-information.tsv",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 130
@@ -348,17 +336,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "4dd01f90-d214-419c-b685-187c4c7e0236",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 2,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -367,9 +352,7 @@
               ],
               "label": "olympics_2022.tsv",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 250
@@ -379,14 +362,10 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "8caf40e8-4c72-48c5-92cb-50fef0a9da1c",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
-          "outputs": [
-
-          ]
+          "outputs": []
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/data-manipulation-olympics/tutorial.json",
@@ -430,12 +409,8 @@
         "{{version_wc}}"
       ],
       "supported_servers": {
-        "exact": [
-
-        ],
-        "inexact": [
-
-        ]
+        "exact": [],
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -2563,8 +2538,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.5",
                   "1.2.0",
+                  "1.5",
                   "1.3.0",
                   "1.1.0"
                 ],
@@ -2573,8 +2548,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.0",
                   "1.4",
+                  "2.0",
                   "1.1.0"
                 ],
                 "server": "https://usegalaxy.cz/"
@@ -5914,12 +5889,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -6072,13 +6043,9 @@
       "pub_date": "2024-01-09 09:30:55 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture1/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -6111,33 +6078,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -6620,8 +6577,8 @@
                 "state": "inexact",
                 "versions": [
                   "2.14.1+galaxy2",
-                  "2.10.1+galaxy1",
-                  "0.3.3"
+                  "0.3.3",
+                  "2.10.1+galaxy1"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -6688,9 +6645,9 @@
                   "0.3.1",
                   "2.14.1+galaxy2",
                   "0.3.3",
+                  "0.0.11",
                   "0.3.0",
-                  "0.1.07",
-                  "0.0.11"
+                  "0.1.07"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -6755,12 +6712,8 @@
       "video": true,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": true
       },
       "license": "CC-BY-4.0",
@@ -7166,13 +7119,9 @@
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-advanced/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -7205,33 +7154,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -7256,9 +7195,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "Who did the crime?"
       ],
@@ -7314,13 +7251,9 @@
       "pub_date": "2021-10-11 14:22:29 +0000",
       "version": 6,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-game/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -7353,33 +7286,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "type": "tutorial",
@@ -7603,9 +7526,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I move around on my computer?",
         "How can I see what files and directories I have?",
@@ -7660,13 +7581,9 @@
       "pub_date": "2021-09-30 08:53:07 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/cli-bashcrawl/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -7699,33 +7616,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -7935,13 +7842,9 @@
       "pub_date": "2022-07-07 13:46:01 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/bash-variant-calling/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -7974,33 +7877,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8368,9 +8261,7 @@
             "usegalaxy": true
           }
         ],
-        "inexact": [
-
-        ]
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -8686,21 +8577,15 @@
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8991,13 +8876,9 @@
       "pub_date": "2023-09-07 09:58:19 +0000",
       "version": 5,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/online-resources-protein/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -9030,33 +8911,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -9198,12 +9069,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Math",
       "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How do I do math in Python?"
       ],
@@ -9293,13 +9160,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-math/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -9332,33 +9195,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -9372,9 +9225,7 @@
       "layout": "tutorial_hands_on",
       "title": "Introduction to Python",
       "level": "Introductory",
-      "requirements": [
-
-      ],
+      "requirements": [],
       "follow_up_training": [
         {
           "type": "internal",
@@ -9435,13 +9286,9 @@
       "pub_date": "2021-11-08 15:53:26 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-basics/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -9474,33 +9321,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -9731,13 +9568,9 @@
       "pub_date": "2022-06-16 01:07:03 +0000",
       "version": 6,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/git-cli/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -9770,33 +9603,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -9932,9 +9755,7 @@
       "title": "CLI basics",
       "level": "Introductory",
       "zenodo_link": "",
-      "requirements": [
-
-      ],
+      "requirements": [],
       "follow_up_training": [
         {
           "type": "internal",
@@ -10037,13 +9858,9 @@
       "pub_date": "2021-09-30 08:53:07 +0000",
       "version": 10,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/cli-basics/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -10076,33 +9893,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -10318,9 +10125,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I access databases from programs written in Python?"
       ],
@@ -10419,13 +10224,9 @@
       "pub_date": "2021-10-11 14:22:29 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-python/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -10458,33 +10259,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -10618,9 +10409,7 @@
             "usegalaxy": true
           }
         ],
-        "inexact": [
-
-        ]
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -10936,21 +10725,15 @@
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -11235,9 +11018,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "What is Make & Snakemake",
         "What is a Makefile/Snakefile",
@@ -11349,13 +11130,9 @@
       "pub_date": "2021-11-18 12:06:25 +0000",
       "version": 6,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/snakemake/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -11388,33 +11165,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -11429,9 +11196,7 @@
       "title": "Introduction to SQL",
       "level": "Introductory",
       "zenodo_link": null,
-      "requirements": [
-
-      ],
+      "requirements": [],
       "follow_up_training": [
         {
           "type": "internal",
@@ -11680,13 +11445,9 @@
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-basic/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -11719,33 +11480,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -11868,13 +11619,9 @@
       "pub_date": "2021-09-30 08:53:07 +0000",
       "version": 11,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/cli-advanced/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -11907,33 +11654,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -12157,9 +11894,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I access databases from programs written in R?"
       ],
@@ -12260,13 +11995,9 @@
       "pub_date": "2021-10-11 14:22:29 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/sql-r/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -12299,33 +12030,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -12349,9 +12070,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I analyze data using Python with Numpy and Pandas?"
       ],
@@ -12403,13 +12122,9 @@
       "pub_date": "2021-11-08 15:53:26 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-advanced-np-pd/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -12442,33 +12157,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -12691,13 +12396,9 @@
       "pub_date": "2024-01-23 11:29:11 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture2/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -12730,33 +12431,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -12911,13 +12602,9 @@
       "pub_date": "2023-06-16 10:00:11 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/data-manipulation-olympics-viz-r/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -12950,33 +12637,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -13131,9 +12808,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How do I write functions in Python?",
         "What is a function?",
@@ -13237,13 +12912,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-functions/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -13276,33 +12947,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -13441,9 +13102,7 @@
             "usegalaxy": true
           }
         ],
-        "inexact": [
-
-        ]
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -13759,21 +13418,15 @@
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -13994,12 +13647,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Basic Types & Type Conversion",
       "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "What kinds of data do programs store?",
         "How can I convert one type to another?"
@@ -14104,13 +13753,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-types/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -14143,33 +13788,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -14229,13 +13864,9 @@
       "pub_date": "2024-01-23 22:01:44 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture3/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -14268,33 +13899,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -14396,9 +14017,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I load tabular data into R?",
         "How can I slice and dice the data to ask questions?"
@@ -14455,13 +14074,9 @@
       "pub_date": "2021-10-20 15:49:04 +0000",
       "version": 6,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/r-dplyr/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -14494,33 +14109,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "type": "tutorial",
@@ -14755,13 +14360,9 @@
       "pub_date": "2023-06-16 10:00:11 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/data-manipulation-olympics-sql/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -14794,33 +14395,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -14968,9 +14559,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I create plots using Python in Galaxy?"
       ],
@@ -15023,13 +14612,9 @@
       "pub_date": "2021-11-08 15:53:26 +0000",
       "version": 7,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-plotting/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -15062,33 +14647,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -15327,13 +14902,9 @@
       "pub_date": "2024-02-06 10:22:19 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture4/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -15366,33 +14937,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -15450,12 +15011,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Lists & Strings & Dictionaries",
       "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How can I store multiple values?"
       ],
@@ -15560,13 +15117,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 6,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-iterables/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -15599,33 +15152,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -15694,13 +15237,9 @@
       "pub_date": "2023-06-16 10:00:11 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/data-manipulation-olympics-jq/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -15733,33 +15272,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -15897,12 +15426,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Flow Control",
       "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How can my programs do different things based on data values?"
       ],
@@ -16005,13 +15530,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-flow/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -16044,33 +15565,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -16129,13 +15640,9 @@
       "pub_date": "2024-02-13 14:53:48 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture5/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -16168,33 +15675,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -16295,9 +15792,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "How can I make a program do many things?"
       ],
@@ -16401,13 +15896,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-loops/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -16440,33 +15931,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -16523,13 +16004,9 @@
       "pub_date": "2024-02-20 06:18:29 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture6/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -16562,33 +16039,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -16686,13 +16153,9 @@
       "pub_date": "2024-03-12 15:01:52 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/gnmx-lecture7/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -16725,33 +16188,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -16809,12 +16262,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Files & CSV",
       "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How can I read from a file?",
         "How can I parse a CSV file?",
@@ -16909,13 +16358,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-files/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -16948,33 +16393,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -16988,12 +16423,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Try & Except",
       "level": "Introductory",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How do I try to execute code, knowing it might fail?",
         "What are some situations where this is important?",
@@ -17086,13 +16517,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-exceptions/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -17125,33 +16552,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -17181,9 +16598,7 @@
           ]
         }
       ],
-      "follow_up_training": [
-
-      ],
+      "follow_up_training": [],
       "questions": [
         "What all did I learn up until now?"
       ],
@@ -17192,9 +16607,7 @@
         "Use exercises to ensure that all previous knowledge is sufficiently covered."
       ],
       "time_estimation": "1H30M",
-      "key_points": [
-
-      ],
+      "key_points": [],
       "subtopic": "python-modular",
       "contributors": [
         {
@@ -17274,13 +16687,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-basics-recap/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -17313,33 +16722,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -17353,12 +16752,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Argparse",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How do I make a proper command line script",
         "How do I use argparse?",
@@ -17419,13 +16814,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 5,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-argparse/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -17458,33 +16849,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -17681,12 +17062,8 @@
       "layout": "tutorial_hands_on",
       "title": "Conda Environments For Software Development",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "time_estimation": "30M",
       "questions": [
         "What are Conda environments in software development and why you should use them?",
@@ -17748,13 +17125,9 @@
       "pub_date": "2022-10-19 13:04:07 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-conda/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -17787,33 +17160,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -17982,12 +17345,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Testing",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "time_estimation": "45M",
       "questions": [
         "Does the code we develop work the way it should do?",
@@ -18051,13 +17410,9 @@
       "pub_date": "2022-10-19 13:04:07 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-testing/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -18090,33 +17445,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -18313,12 +17658,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Type annotations",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "What is typing?",
         "How does it improve code?",
@@ -18377,13 +17718,9 @@
       "pub_date": "2022-10-19 13:04:07 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-typing/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -18416,33 +17753,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -18640,12 +17967,8 @@
       "layout": "tutorial_hands_on",
       "title": "Virtual Environments For Software Development",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "time_estimation": "30M",
       "questions": [
         "What are virtual environments in software development and why you should use them?",
@@ -18702,13 +18025,9 @@
       "pub_date": "2022-10-19 13:04:07 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-venv/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -18741,33 +18060,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -18924,12 +18233,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Globbing",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How can I collect a list of files."
       ],
@@ -19017,13 +18322,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-glob/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -19056,33 +18357,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -19096,12 +18387,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Subprocess",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How can I run another program?"
       ],
@@ -19194,13 +18481,9 @@
       "pub_date": "2022-04-25 11:43:04 +0000",
       "version": 3,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-subprocess/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -19233,33 +18516,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -19273,12 +18546,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Coding Style",
       "level": "Intermediate",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "Why should you follow software code style conventions?",
         "Who is setting code style conventions?",
@@ -19339,13 +18608,9 @@
       "pub_date": "2022-11-03 15:18:56 +0000",
       "version": 2,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-linting/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -19378,33 +18643,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -19527,12 +18782,8 @@
       "layout": "tutorial_hands_on",
       "title": "Python - Multiprocessing",
       "level": "Advanced",
-      "requirements": [
-
-      ],
-      "follow_up_training": [
-
-      ],
+      "requirements": [],
+      "follow_up_training": [],
       "questions": [
         "How can I parallelize code to make it run faster",
         "What code is, or is not, a prime target for parallelisation"
@@ -19590,13 +18841,9 @@
       "pub_date": "2022-10-19 13:04:07 +0000",
       "version": 4,
       "api": "https://training.galaxyproject.org/training-material/api/topics/data-science/tutorials/python-multiprocessing/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -19629,33 +18876,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Foundations of Data Science",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",

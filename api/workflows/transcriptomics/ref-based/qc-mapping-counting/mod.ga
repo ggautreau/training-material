@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "input fastqs",
@@ -20,9 +19,7 @@
       ],
       "label": "Paired list collection with PE fastqs",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 275.24227660278575
@@ -33,17 +30,14 @@
       "type": "data_collection_input",
       "uuid": "118b0bd5-bcb9-4927-a9d0-e42fe49b3ca9",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "gtf with genes",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "gtf with genes",
@@ -52,9 +46,7 @@
       ],
       "label": "Drosophila_melanogaster.BDGP6.32.109_UCSC.gtf.gz",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 52.838781336834245,
         "top": 398.2057197467123
@@ -65,9 +57,7 @@
       "type": "data_input",
       "uuid": "55ab56cf-bd8a-4ba9-a8d9-9e5c3e6914e7",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -87,9 +77,7 @@
       ],
       "label": "Falco/MultiQC",
       "name": "QC-Falco-MultiQC",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 302.921245411475,
         "top": 75.1395719376911
@@ -97,9 +85,7 @@
       "subworkflow": {
         "a_galaxy_workflow": "true",
         "annotation": "",
-        "comments": [
-
-        ],
+        "comments": [],
         "creator": [
           {
             "class": "Person",
@@ -161,8 +147,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "input fastqs",
@@ -171,9 +156,7 @@
             ],
             "label": "Paired list collection with PE fastqs",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 0
@@ -184,9 +167,7 @@
             "type": "data_collection_input",
             "uuid": "118b0bd5-bcb9-4927-a9d0-e42fe49b3ca9",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "",
@@ -199,9 +180,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Flatten collection for Falco",
             "name": "Flatten collection",
             "outputs": [
@@ -214,17 +193,14 @@
               "left": 298.13330078125,
               "top": 4.350006103515625
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "__FLATTEN__",
             "tool_state": "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"join_identifier\": \"_\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": "1.0.0",
             "type": "tool",
             "uuid": "cb22432a-62c1-4469-8d55-f544a355de2a",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -267,8 +243,7 @@
               "left": 549.800048828125,
               "top": 7.5333251953125
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/falco/falco/1.2.4+galaxy0",
             "tool_shed_repository": {
               "changeset_revision": "959a14c1f2dd",
@@ -281,9 +256,7 @@
             "type": "tool",
             "uuid": "e8280920-10c3-4f28-bc44-52ee7bf3aede",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "",
@@ -296,9 +269,7 @@
                 "output_name": "text_file"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine Falco results",
             "name": "MultiQC",
             "outputs": [
@@ -315,8 +286,7 @@
               "left": 839.11669921875,
               "top": 178.73880790038464
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0",
             "tool_shed_repository": {
               "changeset_revision": "f7e2f1eb3a16",
@@ -338,9 +308,7 @@
             ]
           }
         },
-        "tags": [
-
-        ],
+        "tags": [],
         "uuid": "210450ba-2e36-4911-907f-7825a1014e04"
       },
       "tool_id": null,
@@ -365,14 +333,10 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "cutadapt",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 323.98743138529795,
         "top": 258.2717063852339
@@ -441,8 +405,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "input fastqs",
@@ -451,9 +414,7 @@
             ],
             "label": "Paired list collection with PE fastqs",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 4
@@ -464,9 +425,7 @@
             "type": "data_collection_input",
             "uuid": "118b0bd5-bcb9-4927-a9d0-e42fe49b3ca9",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "",
@@ -501,8 +460,7 @@
               "left": 280,
               "top": 0
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/4.9+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "5eb7e84243f2",
@@ -534,9 +492,7 @@
                 "output_name": "report"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine cutadapt results",
             "name": "MultiQC",
             "outputs": [
@@ -553,8 +509,7 @@
               "left": 560,
               "top": 31
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -606,14 +561,10 @@
           "output_name": "out_pairs"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "STAR + multiQC",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 634.238586763555,
         "top": 271.54636895011305
@@ -682,8 +633,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "input fastqs",
@@ -692,9 +642,7 @@
             ],
             "label": "Paired list collection with PE fastqs",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 7
@@ -705,17 +653,14 @@
             "type": "data_collection_input",
             "uuid": "118b0bd5-bcb9-4927-a9d0-e42fe49b3ca9",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "gtf with genes",
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "gtf with genes",
@@ -724,9 +669,7 @@
             ],
             "label": "GTF",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 130
@@ -737,9 +680,7 @@
             "type": "data_input",
             "uuid": "55ab56cf-bd8a-4ba9-a8d9-9e5c3e6914e7",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -802,8 +743,7 @@
               "left": 280,
               "top": 0
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/2.7.10b+galaxy3",
             "tool_shed_repository": {
               "changeset_revision": "3ea5a2a63fa2",
@@ -850,9 +790,7 @@
                 "output_name": "output_log"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine STAR Results",
             "name": "MultiQC",
             "outputs": [
@@ -869,8 +807,7 @@
               "left": 560,
               "top": 239
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -927,14 +864,10 @@
           "output_name": "STAR_BAM"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "more QC",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 851.7259301168125,
         "top": 0
@@ -1003,8 +936,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "gtf with genes",
@@ -1013,9 +945,7 @@
             ],
             "label": "GTF",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 0
@@ -1026,17 +956,14 @@
             "type": "data_input",
             "uuid": "55ab56cf-bd8a-4ba9-a8d9-9e5c3e6914e7",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "input BAM",
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "input BAM",
@@ -1045,9 +972,7 @@
             ],
             "label": "List of BAM",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 36.34535932617132,
               "top": 158.2841183821086
@@ -1058,9 +983,7 @@
             "type": "data_collection_input",
             "uuid": "118b0bd5-bcb9-4927-a9d0-e42fe49b3ca9",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -1073,9 +996,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "convert gtf to bed12",
             "name": "Convert GTF to BED12",
             "outputs": [
@@ -1088,8 +1009,7 @@
               "left": 299.29998779296875,
               "top": 65.86669921875
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/gtftobed12/gtftobed12/357",
             "tool_shed_repository": {
               "changeset_revision": "b026dae67fba",
@@ -1102,9 +1022,7 @@
             "type": "tool",
             "uuid": "ce4a827c-2862-4d19-bf69-fe41e996e4e3",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "",
@@ -1117,9 +1035,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Get reads number per chromosome",
             "name": "Samtools idxstats",
             "outputs": [
@@ -1132,8 +1048,7 @@
               "left": 755.7583156118103,
               "top": 196.05603247367742
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_idxstats/samtools_idxstats/2.0.4",
             "tool_shed_repository": {
               "changeset_revision": "7def34e6cf4d",
@@ -1146,9 +1061,7 @@
             "type": "tool",
             "uuid": "a6c99075-2559-486d-9295-a500517cdcdd",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "4": {
             "annotation": "",
@@ -1161,9 +1074,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Remove duplicates",
             "name": "MarkDuplicates",
             "outputs": [
@@ -1180,8 +1091,7 @@
               "left": 766.9932905519248,
               "top": 420.38104734970705
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.4",
             "tool_shed_repository": {
               "changeset_revision": "f9242e01365a",
@@ -1194,9 +1104,7 @@
             "type": "tool",
             "uuid": "71f83b88-974b-4852-94c1-30d6101844f3",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "5": {
             "annotation": "",
@@ -1213,9 +1121,7 @@
                 "output_name": "bed_file"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Compute read distribution statistics",
             "name": "Read Distribution",
             "outputs": [
@@ -1228,8 +1134,7 @@
               "left": 789.4676437358169,
               "top": 657.3256294399106
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_distribution/5.0.1+galaxy2",
             "tool_shed_repository": {
               "changeset_revision": "473382134e56",
@@ -1242,9 +1147,7 @@
             "type": "tool",
             "uuid": "e2f3d348-0e3f-4b15-9a69-d8a8f98f1dfc",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "6": {
             "annotation": "",
@@ -1283,8 +1186,7 @@
               "left": 789.4676437358169,
               "top": 841.3256294399106
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/5.0.1+galaxy2",
             "tool_shed_repository": {
               "changeset_revision": "473382134e56",
@@ -1297,9 +1199,7 @@
             "type": "tool",
             "uuid": "b7d1dd3e-b78b-43b3-b3cb-83e478cbc8ce",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "7": {
             "annotation": "",
@@ -1312,9 +1212,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine results on reads per chromosome",
             "name": "MultiQC",
             "outputs": [
@@ -1331,8 +1229,7 @@
               "left": 1043.2488257854413,
               "top": 132.4744142944337
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -1364,9 +1261,7 @@
                 "output_name": "metrics_file"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine results of duplicate reads",
             "name": "MultiQC",
             "outputs": [
@@ -1383,8 +1278,7 @@
               "left": 1051.9871396277526,
               "top": 383.83666337736145
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -1416,9 +1310,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine read distribution on known features",
             "name": "MultiQC",
             "outputs": [
@@ -1435,8 +1327,7 @@
               "left": 1069.4676437358169,
               "top": 591.3256294399106
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -1468,9 +1359,7 @@
                 "output_name": "outputtxt"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine gene body coverage",
             "name": "MultiQC",
             "outputs": [
@@ -1487,8 +1376,7 @@
               "left": 1069.4676437358169,
               "top": 877.3256294399106
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -1570,14 +1458,10 @@
           "output_name": "reads_per_gene"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Determine strandness",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1116.464211730276,
         "top": 159.0207106397579
@@ -1646,8 +1530,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "Counts from STAR",
@@ -1656,9 +1539,7 @@
             ],
             "label": "star_counts",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 18,
               "top": 10
@@ -1669,17 +1550,14 @@
             "type": "data_collection_input",
             "uuid": "b1a4736f-8918-451f-b6ef-d220f3d04f0c",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "Coverage strand 1 from STAR",
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "Coverage strand 1 from STAR",
@@ -1688,9 +1566,7 @@
             ],
             "label": "coverage strand1",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 18,
               "top": 283.59999084472656
@@ -1701,17 +1577,14 @@
             "type": "data_collection_input",
             "uuid": "39b6d0f4-0dde-4312-9a95-670a4694b8ff",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "Coverage strand 2 from STAR",
             "content_id": null,
             "errors": null,
             "id": 2,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "Coverage strand 2 from STAR",
@@ -1720,9 +1593,7 @@
             ],
             "label": "coverage strand2",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 18,
               "top": 406.59999084472656
@@ -1733,17 +1604,14 @@
             "type": "data_collection_input",
             "uuid": "2691f247-4355-43b7-a7f1-3b717c8c9cb1",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "gtf with genes",
             "content_id": null,
             "errors": null,
             "id": 3,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "gtf with genes",
@@ -1752,9 +1620,7 @@
             ],
             "label": "Drosophila_melanogaster.BDGP6.32.109_UCSC.gtf.gz",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 18,
               "top": 529.5999908447266
@@ -1765,17 +1631,14 @@
             "type": "data_input",
             "uuid": "55ab56cf-bd8a-4ba9-a8d9-9e5c3e6914e7",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "4": {
             "annotation": "inputs BAM",
             "content_id": null,
             "errors": null,
             "id": 4,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "inputs BAM",
@@ -1784,9 +1647,7 @@
             ],
             "label": "BAM",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 695.5999755859375
@@ -1797,9 +1658,7 @@
             "type": "data_collection_input",
             "uuid": "be1135ba-c2c1-4b47-bb35-200771e2ae23",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "5": {
             "annotation": "",
@@ -1812,9 +1671,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Determine library strandness with STAR counts",
             "name": "MultiQC",
             "outputs": [
@@ -1831,8 +1688,7 @@
               "left": 298,
               "top": 0
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",
@@ -1872,9 +1728,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Determine library strandness with STAR coverage",
             "name": "pyGenomeTracks",
             "outputs": [
@@ -1887,8 +1741,7 @@
               "left": 298,
               "top": 265.59999084472656
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/pygenometracks/pygenomeTracks/3.8+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "360df4999907",
@@ -1920,9 +1773,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "convert gtf to bed12",
             "name": "Convert GTF to BED12",
             "outputs": [
@@ -1935,8 +1786,7 @@
               "left": 304,
               "top": 833.6000061035156
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/gtftobed12/gtftobed12/357",
             "tool_shed_repository": {
               "changeset_revision": "b026dae67fba",
@@ -1949,9 +1799,7 @@
             "type": "tool",
             "uuid": "ce4a827c-2862-4d19-bf69-fe41e996e4e3",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "8": {
             "annotation": "",
@@ -1968,9 +1816,7 @@
                 "output_name": "bed_file"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Determine library strandness with Infer Experiment",
             "name": "Infer Experiment",
             "outputs": [
@@ -1983,8 +1829,7 @@
               "left": 578,
               "top": 786.5999908447266
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_infer_experiment/5.0.1+galaxy2",
             "tool_shed_repository": {
               "changeset_revision": "473382134e56",
@@ -2046,14 +1891,10 @@
           "output_name": "reads_per_gene"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "count STAR",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1436.1638864153126,
         "top": 230.059777843985
@@ -2122,8 +1963,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "Counts from STAR",
@@ -2132,9 +1972,7 @@
             ],
             "label": "star_counts",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 0
@@ -2145,17 +1983,14 @@
             "type": "data_collection_input",
             "uuid": "2ffe312c-c755-47f4-99c6-90709f432875",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "GTF",
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "GTF",
@@ -2164,9 +1999,7 @@
             ],
             "label": "gtf",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 59,
               "top": 379.5
@@ -2177,9 +2010,7 @@
             "type": "data_input",
             "uuid": "67ed3962-0ee1-4d6b-b729-17b428102a13",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -2192,9 +2023,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Remove statistics from STAR counts",
             "name": "Select last",
             "outputs": [
@@ -2207,8 +2036,7 @@
               "left": 244.8240650723336,
               "top": 12.376039797406065
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_tail_tool/1.1.0",
             "tool_shed_repository": {
               "changeset_revision": "ddf54b12c295",
@@ -2221,9 +2049,7 @@
             "type": "tool",
             "uuid": "6ccde820-2aae-46eb-82e9-f128c135745d",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "",
@@ -2254,8 +2080,7 @@
               "left": 287,
               "top": 421.5
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/length_and_gc_content/length_and_gc_content/0.1.2",
             "tool_shed_repository": {
               "changeset_revision": "e3ba567abdf5",
@@ -2287,9 +2112,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Select unstranded counts",
             "name": "Cut",
             "outputs": [
@@ -2336,9 +2159,7 @@
                 "output_name": "out_file1"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Sort counts to get gene with highest count on STAR",
             "name": "Sort",
             "outputs": [
@@ -2351,8 +2172,7 @@
               "left": 784.2644979114859,
               "top": 22.18775610020657
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1",
             "tool_shed_repository": {
               "changeset_revision": "ddf54b12c295",
@@ -2414,14 +2234,10 @@
           "output_name": "STAR_BAM"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "count featureCount",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1463.5364206840688,
         "top": 459.7298010015788
@@ -2490,8 +2306,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "gtf with genes",
@@ -2500,9 +2315,7 @@
             ],
             "label": "Drosophila_melanogaster.BDGP6.32.109_UCSC.gtf.gz",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 16
@@ -2513,17 +2326,14 @@
             "type": "data_input",
             "uuid": "55ab56cf-bd8a-4ba9-a8d9-9e5c3e6914e7",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "BAM",
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "BAM",
@@ -2532,9 +2342,7 @@
             ],
             "label": "input_bam",
             "name": "Input dataset collection",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0,
               "top": 159
@@ -2545,9 +2353,7 @@
             "type": "data_collection_input",
             "uuid": "93102a3f-7509-4f36-bdea-599b13328536",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -2590,8 +2396,7 @@
               "left": 280,
               "top": 0
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/2.0.3+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "6f66ae7c5f7a",
@@ -2628,9 +2433,7 @@
                 "output_name": "output_short"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Sort counts to get gene with highest count on feature Counts",
             "name": "Sort",
             "outputs": [
@@ -2643,8 +2446,7 @@
               "left": 560,
               "top": 37
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1",
             "tool_shed_repository": {
               "changeset_revision": "ddf54b12c295",
@@ -2676,9 +2478,7 @@
                 "output_name": "output_summary"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Combine read asignments statistics",
             "name": "MultiQC",
             "outputs": [
@@ -2695,8 +2495,7 @@
               "left": 560,
               "top": 252
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "abfd8a6544d7",

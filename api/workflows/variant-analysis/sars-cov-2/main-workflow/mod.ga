@@ -9,8 +9,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Contains SARS-CoV-2 reference sequence",
@@ -19,9 +18,7 @@
       ],
       "label": "NC_045512.2 fasta file",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 199.95736694335938,
         "top": 317.85511016845703
@@ -44,8 +41,7 @@
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -54,9 +50,7 @@
       ],
       "label": "SRA Manifest",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 199.95736694335938,
         "top": 372.3295364379883
@@ -117,20 +111,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionlog": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "log"
         },
         "HideDatasetActionoutput_collection": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_collection"
         },
         "HideDatasetActionoutput_collection_other": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_collection_other"
         }
@@ -165,9 +156,7 @@
           "output_name": "list_paired"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "fastp",
       "outputs": [
@@ -190,20 +179,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_paired_coll": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_paired_coll"
         },
         "HideDatasetActionreport_html": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "report_html"
         },
         "HideDatasetActionreport_json": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "report_json"
         }
@@ -219,9 +205,7 @@
       "tool_version": "0.20.1+galaxy0",
       "type": "tool",
       "uuid": "6a0f0de4-40a4-4365-b628-61d50780d8ad",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -238,9 +222,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Map with BWA-MEM",
       "outputs": [
@@ -255,8 +237,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionbam_output": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "bam_output"
         }
@@ -272,9 +253,7 @@
       "tool_version": "0.7.17.1",
       "type": "tool",
       "uuid": "8ae576bb-f085-4a40-b8ba-f074c98bcea9",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -287,9 +266,7 @@
           "output_name": "bam_output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MarkDuplicates",
       "outputs": [
@@ -308,14 +285,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionmetrics_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "metrics_file"
         },
         "HideDatasetActionoutFile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outFile"
         }
@@ -331,9 +306,7 @@
       "tool_version": "2.18.2.2",
       "type": "tool",
       "uuid": "6a7be994-6d4a-4c80-a2bc-0467b45ec363",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -350,9 +323,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Realign reads",
       "outputs": [
@@ -367,8 +338,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionrealigned": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "realigned"
         },
@@ -391,9 +361,7 @@
       "tool_version": "2.1.5+galaxy0",
       "type": "tool",
       "uuid": "39241961-c09d-489b-b8a1-5a41ba2cf00a",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -406,9 +374,7 @@
           "output_name": "outFile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Samtools stats",
       "outputs": [
@@ -423,8 +389,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -440,9 +405,7 @@
       "tool_version": "2.0.2+galaxy2",
       "type": "tool",
       "uuid": "1b3492c0-4805-4920-8a3e-a51594c339db",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -459,9 +422,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Insert indel qualities",
       "outputs": [
@@ -517,9 +478,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Call variants",
       "outputs": [
@@ -534,8 +493,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionvariants": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "variants"
         }
@@ -551,9 +509,7 @@
       "tool_version": "2.1.5+galaxy0",
       "type": "tool",
       "uuid": "ffb62cca-f78b-4f88-b6ee-a9fd7df1c8bd",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -598,14 +554,12 @@
       },
       "post_job_actions": {
         "HideDatasetActioncsvFile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "csvFile"
         },
         "HideDatasetActionstatsFile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "statsFile"
         }
@@ -640,9 +594,7 @@
           "output_name": "snpeff_output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "SnpSift Extract Fields",
       "outputs": [
@@ -706,9 +658,7 @@
           "output_name": "csvFile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MultiQC",
       "outputs": [
@@ -731,14 +681,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionplots": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "plots"
         },
         "HideDatasetActionstats": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "stats"
         },

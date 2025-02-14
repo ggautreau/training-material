@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "GPL-3.0-or-later",
   "name": "Racon polish with Illumina reads (R1 only), x2 - upgraded",
@@ -13,8 +11,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -23,9 +20,7 @@
       ],
       "label": "Assembly to be polished",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 72.5176329833982
@@ -36,17 +31,14 @@
       "type": "data_input",
       "uuid": "28669894-74e2-4ba1-9d49-6e3209b5a1de",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -55,9 +47,7 @@
       ],
       "label": "Illumina reads, R1, in fastq.gz format",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 8.5,
         "top": 341.2832579833982
@@ -68,9 +58,7 @@
       "type": "data_input",
       "uuid": "bc936fdc-22a9-4507-aa47-4a70a3f93923",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -111,8 +99,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionalignment_output": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "alignment_output"
         }
@@ -129,9 +116,7 @@
       "type": "tool",
       "uuid": "b01b8c3d-c33b-47b2-9a83-297c19d63ab7",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -152,9 +137,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Racon round 1: polish assembly",
       "name": "Racon",
       "outputs": [
@@ -169,8 +152,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionconsensus": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "consensus"
         }
@@ -187,9 +169,7 @@
       "type": "tool",
       "uuid": "fe32d046-4ff2-485e-84e8-191b04803afc",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -230,8 +210,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionalignment_output": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "alignment_output"
         }
@@ -248,9 +227,7 @@
       "type": "tool",
       "uuid": "ee834cad-027a-4a84-963b-141b22eaa70a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -271,9 +248,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Racon round 2: polish assembly",
       "name": "Racon",
       "outputs": [

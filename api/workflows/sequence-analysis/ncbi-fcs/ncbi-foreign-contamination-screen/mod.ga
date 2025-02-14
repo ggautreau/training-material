@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "This workflow performs contamination cleaning steps on assembled genomes. Users specify an input genome (fasta/fasta.gz) and taxonomic information corresponding to the source organism. There are two screening steps for foreign organism sequences (FCS-GX) and adaptors (FCS-adaptor), each followed by a cleaning step to remove identified contaminants. The final output is a cleaned genome. ",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "http://www.usa.gov/publicdomain/label/1.0/",
   "name": "NCBI Foreign Contamination Screen",
@@ -13,8 +11,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "input must be an assembled genome in fasta/fasta.gz format. FCS is not intended to identify contaminants in sequencing reads inputs.",
@@ -23,9 +20,7 @@
       ],
       "label": "Input genome",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 3.9375
@@ -36,9 +31,7 @@
       "type": "data_input",
       "uuid": "a2066ff6-a9c6-4152-9537-a7d05d2bea00",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
@@ -73,8 +66,7 @@
         "left": 355.5156127405953,
         "top": 3.28126838910714
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/0.5.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3cdb96f2855d",
@@ -141,8 +133,7 @@
         "left": 351.484375,
         "top": 301.109375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/0.5.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3cdb96f2855d",
@@ -179,9 +170,7 @@
           "output_name": "clean_fasta"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "FCS-adaptor screen",
       "name": "NCBI FCS Adaptor",
       "outputs": [
@@ -198,8 +187,7 @@
         "left": 701.53125,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/richard-burhans/ncbi_fcs_adaptor/ncbi_fcs_adaptor/0.5.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "d55ad8533d58",
@@ -266,8 +254,7 @@
         "left": 699,
         "top": 302.78125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/0.5.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "3cdb96f2855d",

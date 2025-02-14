@@ -164,8 +164,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Choose whether you want to have only interactive tools (for more experimented user) or if you want a workflow hat combines interactive and non-interactive tools (easier)",
@@ -174,9 +173,7 @@
       ],
       "label": "Worflow fully interactive",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 29.80677214543107,
         "top": 359.1046708180256
@@ -187,17 +184,14 @@
       "type": "parameter_input",
       "uuid": "250d862b-4c3d-462d-9bcd-9a5053c52b5e",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "The data here are Mediterranean Sea - Eutrophication and Acidity aggregated datasets EMODnet Chemistry.",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "The data here are Mediterranean Sea - Eutrophication and Acidity aggregated datasets EMODnet Chemistry.",
@@ -206,9 +200,7 @@
       ],
       "label": "Eutrophication_Med_profiles_2022_unrestricted_SNAPSHOT_2023-10-24T16-39-44.zip",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 314.4,
         "top": 507.4
@@ -219,17 +211,14 @@
       "type": "data_input",
       "uuid": "b513664a-1176-4fd9-bb79-439010069177",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "Choose whether you want to have only interactive tools (for more experimented user) or if you want a workflow hat combines interactive and non-interactive tools (easier)",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Choose whether you want to have only interactive tools (for more experimented user) or if you want a workflow hat combines interactive and non-interactive tools (easier)",
@@ -238,9 +227,7 @@
       ],
       "label": "Workflow semi automatic",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 34.559982917236994,
         "top": 738.7586893348329
@@ -251,17 +238,14 @@
       "type": "parameter_input",
       "uuid": "6e2ed5ec-3760-44fe-a722-4e44356f9058",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "A bathymetry file in netcdf.",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "A bathymetry file in netcdf.",
@@ -270,9 +254,7 @@
       ],
       "label": "gebco_30sec_8.nc",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 614.0977004616734,
         "top": 903.4688531054738
@@ -283,9 +265,7 @@
       "type": "data_input",
       "uuid": "006a3936-6151-4724-9fab-6b41f869e1ee",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "Interactively subset you data.",
@@ -320,17 +300,14 @@
         "left": 616.8996239866219,
         "top": 526.3665830983866
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "interactive_tool_odv",
       "tool_state": "{\"__input_ext\": \"zip\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"method\": {\"type\": \"zip\", \"__current_case__\": 1, \"folder\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "5.6.5.1",
       "type": "tool",
       "uuid": "773aa0ed-a5e8-44ae-9688-cf62a4f7b91d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "Create a climatology interactively with notebooks",
@@ -347,9 +324,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Interactive DIVAnd jupyterlab",
       "name": "Interactive DIVAnd Notebooks",
       "outputs": [
@@ -370,17 +345,14 @@
         "left": 956.526945566784,
         "top": 357.7537761235078
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "interactive_tool_divand",
       "tool_state": "{\"input\": {\"__class__\": \"ConnectedValue\"}, \"mode\": {\"mode_select\": \"scratch\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "0.0.6",
       "type": "tool",
       "uuid": "30e5c69b-7ceb-4e60-8471-685da9c8e7d3",
       "when": "$(inputs.when)",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "Create a climatology (not interactively)",
@@ -401,9 +373,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "DIVAnd (create a climatology)",
       "name": "DIVAnd",
       "outputs": [
@@ -478,8 +448,7 @@
         "left": 1315.0326051372172,
         "top": 398.52546972475403
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "interactive_tool_odv",
       "tool_state": "{\"__input_ext\": \"netcdf\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"method\": {\"type\": \"own_data\", \"__current_case__\": 0, \"infiles\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "5.6.5.1",
@@ -527,8 +496,7 @@
         "left": 1313.0264554819623,
         "top": 737.9220054373203
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "interactive_tool_odv",
       "tool_state": "{\"__input_ext\": \"netcdf\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"method\": {\"type\": \"own_data\", \"__current_case__\": 0, \"infiles\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "5.6.5.1",

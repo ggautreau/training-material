@@ -158,7 +158,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:39 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput FASTA Sequence File\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"MAFFT\"];\n  0 -->|output| 1;\n  e5d56101-daff-420b-82e9-dc6cc923f7ab[\"Output\\noutputAlignment\"];\n  1 --> e5d56101-daff-420b-82e9-dc6cc923f7ab;\n  style e5d56101-daff-420b-82e9-dc6cc923f7ab stroke:#2c3143,stroke-width:4px;\n  2[\"FASTTREE\"];\n  1 -->|outputAlignment| 2;\n  632ce28d-3086-490e-bd97-949eb2cb385a[\"Output\\noutput\"];\n  2 --> 632ce28d-3086-490e-bd97-949eb2cb385a;\n  style 632ce28d-3086-490e-bd97-949eb2cb385a stroke:#2c3143,stroke-width:4px;\n  3[\"IQ-TREE\"];\n  1 -->|outputAlignment| 3;\n  b8434b2b-2001-4b1a-bd06-faeab18519a4[\"Output\\ntreefile\"];\n  3 --> b8434b2b-2001-4b1a-bd06-faeab18519a4;\n  style b8434b2b-2001-4b1a-bd06-faeab18519a4 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput FASTA Sequence File\"]\n  1[label=\"MAFFT\"]\n  0 -> 1 [label=\"output\"]\n  ke5d56101daff420b82e9dc6cc923f7ab[color=lightseagreen,label=\"Output\\noutputAlignment\"]\n  1 -> ke5d56101daff420b82e9dc6cc923f7ab\n  2[label=\"FASTTREE\"]\n  1 -> 2 [label=\"outputAlignment\"]\n  k632ce28d3086490ebd97949eb2cb385a[color=lightseagreen,label=\"Output\\noutput\"]\n  2 -> k632ce28d3086490ebd97949eb2cb385a\n  3[label=\"IQ-TREE\"]\n  1 -> 3 [label=\"outputAlignment\"]\n  kb8434b2b20014b1abd06faeab18519a4[color=lightseagreen,label=\"Output\\ntreefile\"]\n  3 -> kb8434b2b20014b1abd06faeab18519a4\n}",
           "workflow_tools": [
@@ -172,8 +172,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "This should be a fasta formatted file with multiple sequences.",
@@ -182,9 +181,7 @@
               ],
               "label": "Input FASTA Sequence File",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 0,
                 "top": 0
@@ -195,9 +192,7 @@
               "type": "data_input",
               "uuid": "a837ada1-411e-4d6d-ab02-a42b98e29aa1",
               "when": null,
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -212,9 +207,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "MAFFT",
               "outputs": [
@@ -227,8 +220,7 @@
                 "left": 289.0030927438886,
                 "top": 16.00251063011501
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/rnateam/mafft/rbc_mafft/7.508+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "6f28e90db932",
@@ -278,8 +270,7 @@
                 "left": 509.0030927438886,
                 "top": 16.00251063011501
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fasttree/fasttree/2.1.10+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "e005e659ae21",
@@ -353,8 +344,7 @@
                 "left": 509.0030927438886,
                 "top": 136.002510630115
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/iqtree/iqtree/2.1.2+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "24d024316465",
@@ -1174,8 +1164,8 @@
                 "versions": [
                   "7.508+galaxy0",
                   "7.487+galaxy0",
-                  "7.505+galaxy0",
-                  "7.489+galaxy0"
+                  "7.489+galaxy0",
+                  "7.505+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -1250,12 +1240,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -1398,9 +1384,7 @@
           "parent_id": "evolution/mtb_phylogeny",
           "topic_id": "evolution",
           "tutorial_id": "mtb_phylogeny",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "Mtb phylogeny",
           "title": "Mtb phylogeny",
           "version": 1,
@@ -1439,7 +1423,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:39 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput alignment\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"RStudio\"];\n  2[\"Estimate phylogeny with RAxML\"];\n  0 -->|output| 2;\n  9f8ae577-c583-4a2d-b64d-14c25fb859d9[\"Output\\nBest-scoring ML Tree\"];\n  2 --> 9f8ae577-c583-4a2d-b64d-14c25fb859d9;\n  style 9f8ae577-c583-4a2d-b64d-14c25fb859d9 stroke:#2c3143,stroke-width:4px;\n  bdb8cf2f-b553-4a96-8b55-38b4b499ab88[\"Output\\nInfo\"];\n  2 --> bdb8cf2f-b553-4a96-8b55-38b4b499ab88;\n  style bdb8cf2f-b553-4a96-8b55-38b4b499ab88 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput alignment\"]\n  1[label=\"RStudio\"]\n  2[label=\"Estimate phylogeny with RAxML\"]\n  0 -> 2 [label=\"output\"]\n  k9f8ae577c5834a2db64d14c25fb859d9[color=lightseagreen,label=\"Output\\nBest-scoring ML Tree\"]\n  2 -> k9f8ae577c5834a2db64d14c25fb859d9\n  kbdb8cf2fb5534a968b5538b4b499ab88[color=lightseagreen,label=\"Output\\nInfo\"]\n  2 -> kbdb8cf2fb5534a968b5538b4b499ab88\n}",
           "workflow_tools": [
@@ -1452,8 +1436,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "Alignment in fasta format, containing variable positions from  variant calling",
@@ -1462,9 +1445,7 @@
               ],
               "label": "Input alignment",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 433.31666564941406,
                 "height": 82.19999694824219,
@@ -1480,9 +1461,7 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "94b1ea1c-8a3a-4fb7-9cfe-40a1c1c1833d",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -1539,26 +1518,22 @@
               },
               "post_job_actions": {
                 "DeleteIntermediatesActioninfo": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "DeleteIntermediatesAction",
                   "output_name": "info"
                 },
                 "HideDatasetActionlogReq": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "logReq"
                 },
                 "HideDatasetActionparsimonyTreeReq": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "parsimonyTreeReq"
                 },
                 "HideDatasetActionresultReq": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "HideDatasetAction",
                   "output_name": "resultReq"
                 }
@@ -2390,12 +2365,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -2693,9 +2664,7 @@
           "parent_id": "evolution/mtb_transmission",
           "topic_id": "evolution",
           "tutorial_id": "mtb_transmission",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "From BAMs to drug resistance prediction with TB-profiler",
           "title": "From BAMs to drug resistance prediction with TB-profiler",
           "version": 1,
@@ -2727,7 +2696,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:39 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nMTB single-end BAMs\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Collection\\nMTB paired-end BAMs\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Merge collections\"];\n  0 -->|output| 2;\n  1 -->|output| 2;\n  3[\"Samtools view BAM > SAM\"];\n  2 -->|output| 3;\n  aa220027-9d10-4328-b2c2-e4d139d5d5bd[\"Output\\nSamtools view on input dataset(s): filtered alignments\"];\n  3 --> aa220027-9d10-4328-b2c2-e4d139d5d5bd;\n  style aa220027-9d10-4328-b2c2-e4d139d5d5bd stroke:#2c3143,stroke-width:4px;\n  4[\"Sed MTB_anc to Chromosome\"];\n  3 -->|outputsam| 4;\n  5[\"Samtools view SAM > BAM\"];\n  4 -->|output| 5;\n  6[\"TB-profiler\"];\n  5 -->|outputsam| 6;\n  7[\"Get drug resistance profile\"];\n  6 -->|output_txt| 7;\n  8[\"Add Sample Name\"];\n  7 -->|output| 8;\n  9[\"Concatenate DR profiles in a single table\"];\n  8 -->|output| 9;\n  10[\"Cleanup the table\"];\n  9 -->|out_file1| 10;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nMTB single-end BAMs\"]\n  1[color=lightblue,label=\"ℹ️ Input Collection\\nMTB paired-end BAMs\"]\n  2[label=\"Merge collections\"]\n  0 -> 2 [label=\"output\"]\n  1 -> 2 [label=\"output\"]\n  3[label=\"Samtools view BAM > SAM\"]\n  2 -> 3 [label=\"output\"]\n  kaa2200279d104328b2c2e4d139d5d5bd[color=lightseagreen,label=\"Output\\nSamtools view on input dataset(s): filtered alignments\"]\n  3 -> kaa2200279d104328b2c2e4d139d5d5bd\n  4[label=\"Sed MTB_anc to Chromosome\"]\n  3 -> 4 [label=\"outputsam\"]\n  5[label=\"Samtools view SAM > BAM\"]\n  4 -> 5 [label=\"output\"]\n  6[label=\"TB-profiler\"]\n  5 -> 6 [label=\"outputsam\"]\n  7[label=\"Get drug resistance profile\"]\n  6 -> 7 [label=\"output_txt\"]\n  8[label=\"Add Sample Name\"]\n  7 -> 8 [label=\"output\"]\n  9[label=\"Concatenate DR profiles in a single table\"]\n  8 -> 9 [label=\"output\"]\n  10[label=\"Cleanup the table\"]\n  9 -> 10 [label=\"out_file1\"]\n}",
           "workflow_tools": [
@@ -2746,8 +2715,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "BAMs obtained from single-end mappings with snippy",
@@ -2756,9 +2724,7 @@
               ],
               "label": "MTB single-end BAMs",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 586.3333282470703,
                 "height": 89.09999084472656,
@@ -2774,17 +2740,14 @@
               "tool_version": null,
               "type": "data_collection_input",
               "uuid": "5befe3e8-ccba-4b78-b7f1-dab039ef1011",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "BAMs obtained from paired-end mappings with snippy",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "BAMs obtained from paired-end mappings with snippy",
@@ -2793,9 +2756,7 @@
               ],
               "label": "MTB paired-end BAMs",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 695.3333282470703,
                 "height": 89.09999084472656,
@@ -2811,9 +2772,7 @@
               "tool_version": null,
               "type": "data_collection_input",
               "uuid": "d6f269d8-66e8-4baf-9b5c-de9e7313c4a0",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -2832,9 +2791,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Merge collections",
               "name": "Merge collections",
               "outputs": [
@@ -2853,8 +2810,7 @@
                 "x": 34.80000305175781,
                 "y": 498.23333740234375
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "__MERGE_COLLECTION__",
               "tool_state": "{\"advanced\": {\"conflict\": {\"duplicate_options\": \"keep_first\", \"__current_case__\": 3}}, \"inputs\": [{\"__index__\": 0, \"input\": {\"__class__\": \"ConnectedValue\"}}, {\"__index__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
               "tool_version": "1.0.0",
@@ -2879,9 +2835,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Samtools view BAM > SAM",
               "name": "Samtools view",
               "outputs": [
@@ -2900,8 +2854,7 @@
                 "x": 277.6000061035156,
                 "y": 761.6666870117188
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "0dbf49c414ae",
@@ -2932,9 +2885,7 @@
                   "output_name": "outputsam"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Sed (MTB_anc to Chromosome)",
               "name": "Text transformation",
               "outputs": [
@@ -2953,8 +2904,7 @@
                 "x": 537.5999755859375,
                 "y": 820.6666870117188
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1",
               "tool_shed_repository": {
                 "changeset_revision": "ddf54b12c295",
@@ -2985,9 +2935,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Samtools view SAM > BAM",
               "name": "Samtools view",
               "outputs": [
@@ -3006,8 +2954,7 @@
                 "x": 810.5999755859375,
                 "y": 755.6666870117188
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "0dbf49c414ae",
@@ -3038,9 +2985,7 @@
                   "output_name": "outputsam"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "TB-profiler",
               "name": "TB-Profiler Profile",
               "outputs": [
@@ -3067,8 +3012,7 @@
                 "x": 1069.800048828125,
                 "y": 470.23333740234375
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/tbprofiler/tb_profiler_profile/3.0.8+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "809dfc93d593",
@@ -3109,9 +3053,7 @@
                   "output_name": "output_txt"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Get drug resistance profile",
               "name": "Search in textfiles",
               "outputs": [
@@ -3130,8 +3072,7 @@
                 "x": 1343.800048828125,
                 "y": 472.23333740234375
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1",
               "tool_shed_repository": {
                 "changeset_revision": "ddf54b12c295",
@@ -3162,9 +3103,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Add Sample Name",
               "name": "Add input name as column",
               "outputs": [
@@ -3183,8 +3122,7 @@
                 "x": 1605.800048828125,
                 "y": 474.23333740234375
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/add_input_name_as_column/addName/0.2.0",
               "tool_shed_repository": {
                 "changeset_revision": "3284b72eef56",
@@ -3239,8 +3177,7 @@
                 "x": 1871.800048828125,
                 "y": 474.23333740234375
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
               "tool_shed_repository": {
                 "changeset_revision": "f46f0e4f75c4",
@@ -3295,8 +3232,7 @@
                 "x": 2136.300048828125,
                 "y": 477.33331298828125
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/1.1.2",
               "tool_shed_repository": {
                 "changeset_revision": "ddf54b12c295",
@@ -3331,9 +3267,7 @@
           "parent_id": "evolution/mtb_transmission",
           "topic_id": "evolution",
           "tutorial_id": "mtb_transmission",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "From Fastqs to VCFs and BAMs",
           "title": "From Fastqs to VCFs and BAMs",
           "version": 1,
@@ -3365,7 +3299,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:39 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nSingle-End FASTQs\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Collection\\nPaired-End FASTQs\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nMycobacterium_tuberculosis_ancestral_reference.gbk\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Trimmomatic\"];\n  0 -->|output| 3;\n  4[\"Trimmomatic\"];\n  1 -->|output| 4;\n  5[\"Mapping and variant calling of SINGLE END FASTQs with snippy\"];\n  3 -->|fastq_out| 5;\n  2 -->|output| 5;\n  6[\"Mapping and variant calling of PAIRED END FASTQs with snippy\"];\n  4 -->|fastq_out_paired| 6;\n  2 -->|output| 6;\n  7[\"Merge PE/SE VCFs in a single collection with all samples\"];\n  5 -->|snpvcf| 7;\n  6 -->|snpvcf| 7;\n  8[\"Merge PE/SE BAMs in a single collection with all samples Part the workflow ”Identifying DR with TB-profiler\"];\n  5 -->|snpsbam| 8;\n  6 -->|snpsbam| 8;\n  9[\"TB Variant Filter\"];\n  7 -->|output| 9;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nSingle-End FASTQs\"]\n  1[color=lightblue,label=\"ℹ️ Input Collection\\nPaired-End FASTQs\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nMycobacterium_tuberculosis_ancestral_reference.gbk\"]\n  3[label=\"Trimmomatic\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"Trimmomatic\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"Mapping and variant calling of SINGLE END FASTQs with snippy\"]\n  3 -> 5 [label=\"fastq_out\"]\n  2 -> 5 [label=\"output\"]\n  6[label=\"Mapping and variant calling of PAIRED END FASTQs with snippy\"]\n  4 -> 6 [label=\"fastq_out_paired\"]\n  2 -> 6 [label=\"output\"]\n  7[label=\"Merge PE/SE VCFs in a single collection with all samples\"]\n  5 -> 7 [label=\"snpvcf\"]\n  6 -> 7 [label=\"snpvcf\"]\n  8[label=\"Merge PE/SE BAMs in a single collection with all samples Part the workflow ”Identifying DR with TB-profiler\"]\n  5 -> 8 [label=\"snpsbam\"]\n  6 -> 8 [label=\"snpsbam\"]\n  9[label=\"TB Variant Filter\"]\n  7 -> 9 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -3381,8 +3315,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3391,9 +3324,7 @@
               ],
               "label": "Single-End FASTQs",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 579.2166595458984,
                 "height": 89.09999084472656,
@@ -3409,17 +3340,14 @@
               "tool_version": null,
               "type": "data_collection_input",
               "uuid": "30a3c256-5d21-4219-b23e-58c8f3842387",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3428,9 +3356,7 @@
               ],
               "label": "Paired-End FASTQs",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 688.2166900634766,
                 "height": 89.09999084472656,
@@ -3446,17 +3372,14 @@
               "tool_version": null,
               "type": "data_collection_input",
               "uuid": "c04ddfda-2349-4857-8cae-b3d84dcbf9e7",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 2,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3465,9 +3388,7 @@
               ],
               "label": "Mycobacterium_tuberculosis_ancestral_reference.gbk",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 732.6500244140625,
                 "height": 111.5333251953125,
@@ -3483,9 +3404,7 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "67484edc-af0a-4a41-8170-c78853b51319",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -3500,9 +3419,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Trimmomatic",
               "outputs": [
@@ -3521,8 +3438,7 @@
                 "x": 983.4000244140625,
                 "y": 492.1166687011719
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.38.1",
               "tool_shed_repository": {
                 "changeset_revision": "d94aff5ee623",
@@ -3553,9 +3469,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Trimmomatic",
               "outputs": [
@@ -3578,8 +3492,7 @@
                 "x": 986.4000244140625,
                 "y": 616.11669921875
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.38.1",
               "tool_shed_repository": {
                 "changeset_revision": "d94aff5ee623",
@@ -3619,9 +3532,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Mapping and variant calling of SINGLE END FASTQs with snippy",
               "name": "snippy",
               "outputs": [
@@ -3648,8 +3559,7 @@
                 "x": 1665.4000244140625,
                 "y": 399.1166687011719
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/3.2",
               "tool_shed_repository": {
                 "changeset_revision": "c9a8ef2aa380",
@@ -3694,9 +3604,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Mapping and variant calling of PAIRED END FASTQs with snippy",
               "name": "snippy",
               "outputs": [
@@ -3723,8 +3631,7 @@
                 "x": 1667.4000244140625,
                 "y": 759.11669921875
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snippy/snippy/4.6.0+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "d220115f882b",
@@ -3769,9 +3676,7 @@
                   "output_name": "snpvcf"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Merge PE/SE VCFs in a single collection with all samples",
               "name": "Merge collections",
               "outputs": [
@@ -3790,8 +3695,7 @@
                 "x": 2111.39990234375,
                 "y": 441.1166687011719
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "__MERGE_COLLECTION__",
               "tool_state": "{\"advanced\": {\"conflict\": {\"duplicate_options\": \"keep_first\", \"__current_case__\": 3}}, \"inputs\": [{\"__index__\": 0, \"input\": {\"__class__\": \"ConnectedValue\"}}, {\"__index__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
               "tool_version": "1.0.0",
@@ -3840,8 +3744,7 @@
                 "x": 2418.39990234375,
                 "y": 452.1166687011719
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/tb_variant_filter/tb_variant_filter/0.3.5+galaxy2",
               "tool_shed_repository": {
                 "changeset_revision": "e7aff4a85df5",
@@ -3876,9 +3779,7 @@
           "parent_id": "evolution/mtb_transmission",
           "topic_id": "evolution",
           "tutorial_id": "mtb_transmission",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "From VCFs to SNP distance matrix",
           "title": "From VCFs to SNP distance matrix",
           "version": 1,
@@ -3910,7 +3811,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:39 +0000",
+          "modified": "2025-02-14 10:44:28 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nCollection of VCFs to analyze\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nReference genome of the MTBC ancestor\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Filter TB variants\"];\n  0 -->|output| 2;\n  3[\"Generate the complete genome of each of the samples\"];\n  2 -->|output1| 3;\n  1 -->|output| 3;\n  ce5dd7a2-c33d-46b4-9f02-68c2bdfcf31a[\"Output\\n#{input_file}\"];\n  3 --> ce5dd7a2-c33d-46b4-9f02-68c2bdfcf31a;\n  style ce5dd7a2-c33d-46b4-9f02-68c2bdfcf31a stroke:#2c3143,stroke-width:4px;\n  4[\"Concatenate genomes to build a MSA\"];\n  3 -->|output_file| 4;\n  5[\"Keep only variable positions\"];\n  4 -->|out_file1| 5;\n  6[\"Calculate SNP distances\"];\n  5 -->|output_fasta| 6;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nCollection of VCFs to analyze\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nReference genome of the MTBC ancestor\"]\n  2[label=\"Filter TB variants\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Generate the complete genome of each of the samples\"]\n  2 -> 3 [label=\"output1\"]\n  1 -> 3 [label=\"output\"]\n  kce5dd7a2c33d46b49f0268c2bdfcf31a[color=lightseagreen,label=\"Output\\n#{input_file}\"]\n  3 -> kce5dd7a2c33d46b49f0268c2bdfcf31a\n  4[label=\"Concatenate genomes to build a MSA\"]\n  3 -> 4 [label=\"output_file\"]\n  5[label=\"Keep only variable positions\"]\n  4 -> 5 [label=\"out_file1\"]\n  6[label=\"Calculate SNP distances\"]\n  5 -> 6 [label=\"output_fasta\"]\n}",
           "workflow_tools": [
@@ -3926,8 +3827,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3936,9 +3836,7 @@
               ],
               "label": "Collection of VCFs to analyze",
               "name": "Input dataset collection",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 602.3000183105469,
                 "height": 89.10000610351562,
@@ -3954,17 +3852,14 @@
               "tool_version": null,
               "type": "data_collection_input",
               "uuid": "a3701b5d-9f74-46b4-ae97-51c432933230",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -3973,9 +3868,7 @@
               ],
               "label": "Reference genome of the MTBC ancestor",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 789.7333526611328,
                 "height": 111.53334045410156,
@@ -3991,9 +3884,7 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "899dca08-73f5-4ac1-9d19-313414c90a1e",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -4008,9 +3899,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Filter TB variants",
               "name": "TB Variant Filter",
               "outputs": [
@@ -4167,8 +4056,7 @@
                 "x": 1519.0999755859375,
                 "y": 525.2000122070312
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
               "tool_shed_repository": {
                 "changeset_revision": "f46f0e4f75c4",
@@ -4223,8 +4111,7 @@
                 "x": 1843.0999755859375,
                 "y": 502.20001220703125
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snp_sites/snp_sites/2.5.1+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "5804f786060d",
@@ -4279,8 +4166,7 @@
                 "x": 2173.10009765625,
                 "y": 495.20001220703125
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snp_dists/snp_dists/0.6.3+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "1959cc43b414",
@@ -5663,11 +5549,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "1.9",
                   "1.9+galaxy1",
-                  "1.9+galaxy2",
                   "1.4.0",
-                  "1.10"
+                  "1.10",
+                  "1.9",
+                  "1.9+galaxy2"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -5849,9 +5735,9 @@
                   "1.10+galaxy1",
                   "1.9+galaxy1",
                   "1.10",
-                  "1.15.1+galaxy4",
                   "1.15.1+galaxy0",
                   "1.15.1+galaxy2",
+                  "1.15.1+galaxy4",
                   "1.15.1+galaxy1"
                 ],
                 "server": "https://usegalaxy.fr/"
@@ -5875,12 +5761,12 @@
                 "versions": [
                   "1.15.1+galaxy3",
                   "1.10+galaxy1",
-                  "1.9",
                   "1.4.0",
                   "1.10",
-                  "1.15.1+galaxy4",
+                  "1.9",
                   "1.15.1+galaxy0",
-                  "1.15.1+galaxy2"
+                  "1.15.1+galaxy2",
+                  "1.15.1+galaxy4"
                 ],
                 "server": "https://usegalaxy.org.au"
               },
@@ -6105,9 +5991,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.6.0+galaxy0",
                   "4.5.0",
-                  "4.5.0+galaxy1"
+                  "4.5.0+galaxy1",
+                  "4.6.0+galaxy0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -6196,9 +6082,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.6.0+galaxy0",
                   "4.5.0",
-                  "4.5.0+galaxy1"
+                  "4.5.0+galaxy1",
+                  "4.6.0+galaxy0"
                 ],
                 "server": "https://usegalaxy.org.au"
               },
@@ -6317,13 +6203,13 @@
                 "state": "inexact",
                 "versions": [
                   "4.5.0",
-                  "4.4.5+galaxy0",
-                  "4.3.6+galaxy2",
-                  "4.4.3+galaxy0",
                   "4.4.5+galaxy2",
-                  "4.4.5+galaxy1",
-                  "3.2",
                   "4.3.6+galaxy1",
+                  "4.4.5+galaxy0",
+                  "3.2",
+                  "4.3.6+galaxy2",
+                  "4.4.5+galaxy1",
+                  "4.4.3+galaxy0",
                   "3.2+galaxy1"
                 ],
                 "server": "https://usegalaxy.be/"
@@ -6920,8 +6806,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.3.6+galaxy0",
-                  "0.4.0+galaxy0"
+                  "0.4.0+galaxy0",
+                  "0.3.6+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -7069,8 +6955,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.3.6+galaxy0",
-                  "0.4.0+galaxy0"
+                  "0.4.0+galaxy0",
+                  "0.3.6+galaxy0"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -7233,8 +7119,8 @@
                 "state": "inexact",
                 "versions": [
                   "0.1.3+galaxy0",
-                  "0.3.5+galaxy2",
-                  "0.3.5+galaxy1"
+                  "0.3.5+galaxy1",
+                  "0.3.5+galaxy2"
                 ],
                 "server": "https://usegalaxy.no/"
               },
@@ -7361,13 +7247,13 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2.1.0",
-                  "2.8.3+galaxy0",
-                  "2.8.4+galaxy1",
-                  "2.4",
-                  "2.6.1+galaxy0",
                   "2.8.14+galaxy1",
-                  "2.6+galaxy0"
+                  "2.6.1+galaxy0",
+                  "2.8.4+galaxy1",
+                  "2.1.0",
+                  "2.4",
+                  "2.6+galaxy0",
+                  "2.8.3+galaxy0"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -7820,11 +7706,11 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.38.0",
                   "0.36.6",
+                  "0.38.0",
                   "0.39+galaxy2",
-                  "0.32.3",
-                  "0.36.5"
+                  "0.36.5",
+                  "0.32.3"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -8161,12 +8047,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8406,13 +8288,9 @@
       "pub_date": "2024-05-10 11:23:12 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/abc_intro_phylo-intro/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -8445,33 +8323,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Evolution",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8518,13 +8386,9 @@
       "pub_date": "2024-05-10 11:23:12 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/abc_intro_phylo-terminology/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -8557,33 +8421,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Evolution",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8630,13 +8484,9 @@
       "pub_date": "2024-05-10 11:23:12 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/abc_intro_phylo-msa/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -8669,33 +8519,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Evolution",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8742,13 +8582,9 @@
       "pub_date": "2024-05-10 11:23:12 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/abc_intro_phylo-trees/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -8781,33 +8617,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Evolution",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8854,13 +8680,9 @@
       "pub_date": "2024-05-10 11:23:12 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/abc_intro_phylo-mle-trees/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -8893,33 +8715,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Evolution",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -8966,13 +8778,9 @@
       "pub_date": "2024-05-10 11:23:12 +0000",
       "version": 1,
       "api": "https://training.galaxyproject.org/training-material/api/topics/evolution/tutorials/abc_intro_phylo-networks/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -9005,33 +8813,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Evolution",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",

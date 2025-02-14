@@ -9,8 +9,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "BAMs obtained from single-end mappings with snippy",
@@ -19,9 +18,7 @@
       ],
       "label": "MTB single-end BAMs",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 586.3333282470703,
         "height": 89.09999084472656,
@@ -37,17 +34,14 @@
       "tool_version": null,
       "type": "data_collection_input",
       "uuid": "5befe3e8-ccba-4b78-b7f1-dab039ef1011",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "BAMs obtained from paired-end mappings with snippy",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "BAMs obtained from paired-end mappings with snippy",
@@ -56,9 +50,7 @@
       ],
       "label": "MTB paired-end BAMs",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "bottom": 695.3333282470703,
         "height": 89.09999084472656,
@@ -74,9 +66,7 @@
       "tool_version": null,
       "type": "data_collection_input",
       "uuid": "d6f269d8-66e8-4baf-9b5c-de9e7313c4a0",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "Merge single-end and paired-end BAMs in a single collection to be analyzed alltogether",
@@ -93,9 +83,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Merge collections",
       "name": "Merge collections",
       "outputs": [
@@ -114,8 +102,7 @@
         "x": 34.80000305175781,
         "y": 498.23333740234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "__MERGE_COLLECTION__",
       "tool_state": "{\"advanced\": {\"conflict\": {\"duplicate_options\": \"keep_first\", \"__current_case__\": 3}}, \"inputs\": [{\"__index__\": 0, \"input\": {\"__class__\": \"ConnectedValue\"}}, {\"__index__\": 1, \"input\": {\"__class__\": \"ConnectedValue\"}}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
       "tool_version": "1.0.0",
@@ -140,9 +127,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Samtools view BAM > SAM",
       "name": "Samtools view",
       "outputs": [
@@ -161,8 +146,7 @@
         "x": 277.6000061035156,
         "y": 761.6666870117188
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "0dbf49c414ae",
@@ -193,9 +177,7 @@
           "output_name": "outputsam"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Sed (MTB_anc to Chromosome)",
       "name": "Text transformation",
       "outputs": [
@@ -214,8 +196,7 @@
         "x": 537.5999755859375,
         "y": 820.6666870117188
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1",
       "tool_shed_repository": {
         "changeset_revision": "ddf54b12c295",
@@ -246,9 +227,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Samtools view SAM > BAM",
       "name": "Samtools view",
       "outputs": [
@@ -267,8 +246,7 @@
         "x": 810.5999755859375,
         "y": 755.6666870117188
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "0dbf49c414ae",
@@ -299,9 +277,7 @@
           "output_name": "outputsam"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "TB-profiler",
       "name": "TB-Profiler Profile",
       "outputs": [
@@ -328,8 +304,7 @@
         "x": 1069.800048828125,
         "y": 470.23333740234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/tbprofiler/tb_profiler_profile/3.0.8+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "809dfc93d593",
@@ -370,9 +345,7 @@
           "output_name": "output_txt"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Get drug resistance profile",
       "name": "Search in textfiles",
       "outputs": [
@@ -391,8 +364,7 @@
         "x": 1343.800048828125,
         "y": 472.23333740234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1",
       "tool_shed_repository": {
         "changeset_revision": "ddf54b12c295",
@@ -423,9 +395,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Add Sample Name",
       "name": "Add input name as column",
       "outputs": [
@@ -444,8 +414,7 @@
         "x": 1605.800048828125,
         "y": 474.23333740234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/mvdbeek/add_input_name_as_column/addName/0.2.0",
       "tool_shed_repository": {
         "changeset_revision": "3284b72eef56",
@@ -500,8 +469,7 @@
         "x": 1871.800048828125,
         "y": 474.23333740234375
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
       "tool_shed_repository": {
         "changeset_revision": "f46f0e4f75c4",
@@ -556,8 +524,7 @@
         "x": 2136.300048828125,
         "y": 477.33331298828125
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/1.1.2",
       "tool_shed_repository": {
         "changeset_revision": "ddf54b12c295",

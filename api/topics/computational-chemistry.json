@@ -190,9 +190,7 @@
           "parent_id": "computational-chemistry/covid19-docking",
           "topic_id": "computational-chemistry",
           "tutorial_id": "covid19-docking",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "Virtual screening of the SARS-CoV-2 main protease with rDock and pose scoring",
           "title": "Virtual screening of the SARS-CoV-2 main protease with rDock and pose scoring",
           "version": 3,
@@ -238,7 +236,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nCandidates\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nMpro-x0195_0_apo-desolv.pdb\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nhits.sdf\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Enumerate changes\"];\n  0 -->|output| 3;\n  4[\"Compound conversion\"];\n  1 -->|output| 4;\n  5[\"Create Frankenstein ligand\"];\n  2 -->|output| 5;\n  6[\"Compound conversion\"];\n  3 -->|output| 6;\n  7[\"rDock cavity definition\"];\n  4 -->|outfile| 7;\n  5 -->|outfile| 7;\n  8[\"Split file\"];\n  6 -->|outfile| 8;\n  9[\"rDock docking\"];\n  4 -->|outfile| 9;\n  8 -->|list_output_sdf| 9;\n  7 -->|activesite| 9;\n  10[\"Collapse Collection\"];\n  9 -->|output| 10;\n  11[\"XChem TransFS pose scoring\"];\n  1 -->|output| 11;\n  10 -->|output| 11;\n  12[\"Max SuCOS score\"];\n  11 -->|output| 12;\n  2 -->|output| 12;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nCandidates\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nMpro-x0195_0_apo-desolv.pdb\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nhits.sdf\"]\n  3[label=\"Enumerate changes\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"Compound conversion\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"Create Frankenstein ligand\"]\n  2 -> 5 [label=\"output\"]\n  6[label=\"Compound conversion\"]\n  3 -> 6 [label=\"output\"]\n  7[label=\"rDock cavity definition\"]\n  4 -> 7 [label=\"outfile\"]\n  5 -> 7 [label=\"outfile\"]\n  8[label=\"Split file\"]\n  6 -> 8 [label=\"outfile\"]\n  9[label=\"rDock docking\"]\n  4 -> 9 [label=\"outfile\"]\n  8 -> 9 [label=\"list_output_sdf\"]\n  7 -> 9 [label=\"activesite\"]\n  10[label=\"Collapse Collection\"]\n  9 -> 10 [label=\"output\"]\n  11[label=\"XChem TransFS pose scoring\"]\n  1 -> 11 [label=\"output\"]\n  10 -> 11 [label=\"output\"]\n  12[label=\"Max SuCOS score\"]\n  11 -> 12 [label=\"output\"]\n  2 -> 12 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -256,9 +254,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -266,8 +262,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Candidates\"}",
               "id": 0,
               "uuid": "47bf8c53-ae1e-4af6-bece-6adfd74b627c",
@@ -291,9 +286,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -301,8 +294,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Mpro-x0195_0_apo-desolv.pdb\"}",
               "id": 1,
               "uuid": "156f4aeb-d160-456a-974e-7884b79cb83a",
@@ -326,9 +318,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -336,8 +326,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"hits.sdf\"}",
               "id": 2,
               "uuid": "dd2d3bc0-8138-4e66-b2d9-e5e90e27b659",
@@ -363,9 +352,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -373,8 +360,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Candidates\"}",
               "id": 0,
               "uuid": "47bf8c53-ae1e-4af6-bece-6adfd74b627c",
@@ -398,9 +384,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -408,8 +392,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"Mpro-x0195_0_apo-desolv.pdb\"}",
               "id": 1,
               "uuid": "156f4aeb-d160-456a-974e-7884b79cb83a",
@@ -433,9 +416,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -443,8 +424,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"name\": \"hits.sdf\"}",
               "id": 2,
               "uuid": "dd2d3bc0-8138-4e66-b2d9-e5e90e27b659",
@@ -498,8 +478,7 @@
               "uuid": "081abe35-347a-4244-99ae-ec35329e3de0",
               "errors": null,
               "name": "Create Frankenstein ligand",
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "label": null,
               "inputs": [
                 {
@@ -539,12 +518,8 @@
         "xchem_pose_scoring"
       ],
       "supported_servers": {
-        "exact": [
-
-        ],
-        "inexact": [
-
-        ]
+        "exact": [],
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -2399,8 +2374,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.4.0",
-                  "0.5.1"
+                  "0.5.1",
+                  "0.4.0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -3071,8 +3046,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
-                  "5.1.0"
+                  "5.1.0",
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -3363,12 +3338,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -3451,9 +3422,7 @@
           "parent_id": "computational-chemistry/md-simulation-gromacs",
           "topic_id": "computational-chemistry",
           "tutorial_id": "md-simulation-gromacs",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "GROMACS Training Workflow",
           "title": "GROMACS Training Workflow",
           "version": 7,
@@ -3520,7 +3489,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"Get PDB file\"];\n  1[\"Search in textfiles\"];\n  0 -->|output| 1;\n  2[\"GROMACS initial setup\"];\n  1 -->|output| 2;\n  3[\"GROMACS structure configuration\"];\n  2 -->|output2| 3;\n  4[\"GROMACS solvation and adding ions\"];\n  2 -->|output1| 4;\n  3 -->|output| 4;\n  5[\"GROMACS energy minimization\"];\n  4 -->|output2| 5;\n  4 -->|output1| 5;\n  6[\"NVT equilibration\"];\n  2 -->|output3| 6;\n  4 -->|output2| 6;\n  5 -->|output1| 6;\n  7[\"NPT equilibration\"];\n  2 -->|output3| 7;\n  4 -->|output2| 7;\n  6 -->|output1| 7;\n  6 -->|output5| 7;\n  8[\"MD simulation\"];\n  4 -->|output2| 8;\n  7 -->|output1| 8;\n  7 -->|output5| 8;\n  027305f5-213b-40af-8e2b-c376d5d2e294[\"Output\\nxtc_output\"];\n  8 --> 027305f5-213b-40af-8e2b-c376d5d2e294;\n  style 027305f5-213b-40af-8e2b-c376d5d2e294 stroke:#2c3143,stroke-width:4px;\n  e745fd4c-f607-4215-84e4-c62587c8c07a[\"Output\\ngro_output\"];\n  8 --> e745fd4c-f607-4215-84e4-c62587c8c07a;\n  style e745fd4c-f607-4215-84e4-c62587c8c07a stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[label=\"Get PDB file\"]\n  1[label=\"Search in textfiles\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"GROMACS initial setup\"]\n  1 -> 2 [label=\"output\"]\n  3[label=\"GROMACS structure configuration\"]\n  2 -> 3 [label=\"output2\"]\n  4[label=\"GROMACS solvation and adding ions\"]\n  2 -> 4 [label=\"output1\"]\n  3 -> 4 [label=\"output\"]\n  5[label=\"GROMACS energy minimization\"]\n  4 -> 5 [label=\"output2\"]\n  4 -> 5 [label=\"output1\"]\n  6[label=\"NVT equilibration\"]\n  2 -> 6 [label=\"output3\"]\n  4 -> 6 [label=\"output2\"]\n  5 -> 6 [label=\"output1\"]\n  7[label=\"NPT equilibration\"]\n  2 -> 7 [label=\"output3\"]\n  4 -> 7 [label=\"output2\"]\n  6 -> 7 [label=\"output1\"]\n  6 -> 7 [label=\"output5\"]\n  8[label=\"MD simulation\"]\n  4 -> 8 [label=\"output2\"]\n  7 -> 8 [label=\"output1\"]\n  7 -> 8 [label=\"output5\"]\n  k027305f5213b40af8e2bc376d5d2e294[color=lightseagreen,label=\"Output\\nxtc_output\"]\n  8 -> k027305f5213b40af8e2bc376d5d2e294\n  ke745fd4cf607421584e4c62587c8c07a[color=lightseagreen,label=\"Output\\ngro_output\"]\n  8 -> ke745fd4cf607421584e4c62587c8c07a\n}",
           "workflow_tools": [
@@ -3532,9 +3501,7 @@
             "toolshed.g2.bx.psu.edu/repos/chemteam/gmx_sim/gmx_sim/2020.2+galaxy0",
             "toolshed.g2.bx.psu.edu/repos/chemteam/gmx_solvate/gmx_solvate/2020.2+galaxy0"
           ],
-          "inputs": [
-
-          ],
+          "inputs": [],
           "outputs": [
             {
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/get_pdb/get_pdb/0.1.0",
@@ -3552,8 +3519,7 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"pdb_id\": \"\\\"1aki\\\"\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
               "id": 0,
               "tool_shed_repository": {
@@ -3565,12 +3531,9 @@
               "uuid": "cc9d4f3f-27b3-4a1d-90b4-e48852402f84",
               "errors": null,
               "name": "Get PDB file",
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "label": null,
-              "inputs": [
-
-              ],
+              "inputs": [],
               "position": {
                 "top": 200,
                 "left": 200
@@ -3612,8 +3575,7 @@
               "uuid": "10503b43-6802-4dd2-bc7c-a378d67ad0ea",
               "errors": null,
               "name": "Search in textfiles",
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "label": null,
               "inputs": [
                 {
@@ -3662,8 +3624,7 @@
               "uuid": "1950b3f5-3998-4c11-b38b-f70ca0edc4be",
               "errors": null,
               "name": "GROMACS structure configuration",
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "label": null,
               "inputs": [
                 {
@@ -3737,20 +3698,17 @@
                 "HideDatasetActionoutput1": {
                   "output_name": "output1",
                   "action_type": "HideDatasetAction",
-                  "action_arguments": {
-                  }
+                  "action_arguments": {}
                 },
                 "HideDatasetActionreport": {
                   "output_name": "report",
                   "action_type": "HideDatasetAction",
-                  "action_arguments": {
-                  }
+                  "action_arguments": {}
                 },
                 "HideDatasetActionoutput4": {
                   "output_name": "output4",
                   "action_type": "HideDatasetAction",
-                  "action_arguments": {
-                  }
+                  "action_arguments": {}
                 }
               },
               "label": "MD simulation",
@@ -5171,8 +5129,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2019.1.4",
-                  "2020.2+galaxy0"
+                  "2020.2+galaxy0",
+                  "2019.1.4"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -5921,12 +5879,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -6031,9 +5985,7 @@
           "parent_id": "computational-chemistry/md-simulation-namd",
           "topic_id": "computational-chemistry",
           "tutorial_id": "md-simulation-namd",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "MD NAMD",
           "title": "MD NAMD",
           "version": 4,
@@ -6079,7 +6031,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"System Setup\"];\n  1 -->|output| 2;\n  0 -->|output| 2;\n  3[\"Energy Minimizer\"];\n  2 -->|setup_crd| 3;\n  2 -->|setup_psf| 3;\n  2 -->|structure_prm| 3;\n  4[\"NAMD MD Simulator NVT\"];\n  3 -->|pdbout| 4;\n  3 -->|pmespec| 4;\n  3 -->|xplorpsfout| 4;\n  3 -->|bbrmsd| 4;\n  3 -->|scrmsd| 4;\n  3 -->|subsrmsd| 4;\n  2 -->|structure_prm| 4;\n  5[\"NAMD MD Simulator NPT\"];\n  3 -->|pdbout| 5;\n  3 -->|pmespec| 5;\n  3 -->|xplorpsfout| 5;\n  4 -->|coorout| 5;\n  4 -->|velout| 5;\n  4 -->|xscout| 5;\n  2 -->|structure_prm| 5;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  2[label=\"System Setup\"]\n  1 -> 2 [label=\"output\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Energy Minimizer\"]\n  2 -> 3 [label=\"setup_crd\"]\n  2 -> 3 [label=\"setup_psf\"]\n  2 -> 3 [label=\"structure_prm\"]\n  4[label=\"NAMD MD Simulator NVT\"]\n  3 -> 4 [label=\"pdbout\"]\n  3 -> 4 [label=\"pmespec\"]\n  3 -> 4 [label=\"xplorpsfout\"]\n  3 -> 4 [label=\"bbrmsd\"]\n  3 -> 4 [label=\"scrmsd\"]\n  3 -> 4 [label=\"subsrmsd\"]\n  2 -> 4 [label=\"structure_prm\"]\n  5[label=\"NAMD MD Simulator NPT\"]\n  3 -> 5 [label=\"pdbout\"]\n  3 -> 5 [label=\"pmespec\"]\n  3 -> 5 [label=\"xplorpsfout\"]\n  4 -> 5 [label=\"coorout\"]\n  4 -> 5 [label=\"velout\"]\n  4 -> 5 [label=\"xscout\"]\n  2 -> 5 [label=\"structure_prm\"]\n}",
           "workflow_tools": [
@@ -6094,8 +6046,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6104,9 +6055,7 @@
               ],
               "label": null,
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 10
@@ -6116,17 +6065,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "ae09b2b3-e735-46e7-be28-eaf11cab2d24",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6135,9 +6081,7 @@
               ],
               "label": null,
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 130
@@ -6147,14 +6091,10 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "83bc3872-4bbf-4afd-aaf8-81a03780636a",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
-          "outputs": [
-
-          ]
+          "outputs": []
         },
         {
           "workflow": "main_workflow_charmmgui.ga",
@@ -6169,9 +6109,7 @@
           "parent_id": "computational-chemistry/md-simulation-namd",
           "topic_id": "computational-chemistry",
           "tutorial_id": "md-simulation-namd",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "NAMD MD From CHARMM GUI",
           "title": "NAMD MD From CHARMM GUI",
           "version": 4,
@@ -6217,7 +6155,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 3 stroke:#2c3143,stroke-width:4px;\n  4[\"NAMD MD Simulator NVT\"];\n  0 -->|output| 4;\n  2 -->|output| 4;\n  1 -->|output| 4;\n  3 -->|output| 4;\n  5[\"NAMD MD Simulator NPT\"];\n  0 -->|output| 5;\n  2 -->|output| 5;\n  1 -->|output| 5;\n  4 -->|coorout| 5;\n  4 -->|velout| 5;\n  4 -->|xscout| 5;\n  3 -->|output| 5;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  3[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  4[label=\"NAMD MD Simulator NVT\"]\n  0 -> 4 [label=\"output\"]\n  2 -> 4 [label=\"output\"]\n  1 -> 4 [label=\"output\"]\n  3 -> 4 [label=\"output\"]\n  5[label=\"NAMD MD Simulator NPT\"]\n  0 -> 5 [label=\"output\"]\n  2 -> 5 [label=\"output\"]\n  1 -> 5 [label=\"output\"]\n  4 -> 5 [label=\"coorout\"]\n  4 -> 5 [label=\"velout\"]\n  4 -> 5 [label=\"xscout\"]\n  3 -> 5 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -6230,8 +6168,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6240,9 +6177,7 @@
               ],
               "label": null,
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 10
@@ -6252,17 +6187,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "180b4e05-b912-4c3e-8d7b-39027a6c9d65",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6271,9 +6203,7 @@
               ],
               "label": null,
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 130
@@ -6283,17 +6213,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "8829a91f-e5b5-44bd-977d-c4c308453ac6",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 2,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6302,9 +6229,7 @@
               ],
               "label": null,
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 250
@@ -6314,17 +6239,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "badde4ba-b790-406a-93e5-d622f4be8062",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 3,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -6333,9 +6255,7 @@
               ],
               "label": null,
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 10,
                 "top": 370
@@ -6345,14 +6265,10 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "de715d6e-ffac-4e42-9166-6dfeea0c244f",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
-          "outputs": [
-
-          ]
+          "outputs": []
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/computational-chemistry/tutorials/md-simulation-namd/tutorial.json",
@@ -6363,12 +6279,8 @@
         "setup"
       ],
       "supported_servers": {
-        "exact": [
-
-        ],
-        "inexact": [
-
-        ]
+        "exact": [],
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -7098,21 +7010,15 @@
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -7259,7 +7165,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nDCD input\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nPDB input\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"RDF Analysis\"];\n  0 -->|output| 2;\n  1 -->|output| 2;\n  ab90456f-d7ae-4fb1-ba2f-978a59791acc[\"Output\\nRDF Analysis plot\"];\n  2 --> ab90456f-d7ae-4fb1-ba2f-978a59791acc;\n  style ab90456f-d7ae-4fb1-ba2f-978a59791acc stroke:#2c3143,stroke-width:4px;\n  1ee2fe4a-0e50-4a4f-828e-3b60d75120e7[\"Output\\nRDF Analysis raw data\"];\n  2 --> 1ee2fe4a-0e50-4a4f-828e-3b60d75120e7;\n  style 1ee2fe4a-0e50-4a4f-828e-3b60d75120e7 stroke:#2c3143,stroke-width:4px;\n  3[\"Cosine Content\"];\n  0 -->|output| 3;\n  1 -->|output| 3;\n  5ca6c423-961b-4a55-a821-794a0d311e41[\"Output\\nCosine Content raw data\"];\n  3 --> 5ca6c423-961b-4a55-a821-794a0d311e41;\n  style 5ca6c423-961b-4a55-a821-794a0d311e41 stroke:#2c3143,stroke-width:4px;\n  7854cbf9-187f-4117-b494-73a5a404d06f[\"Output\\nCosine Content plot\"];\n  3 --> 7854cbf9-187f-4117-b494-73a5a404d06f;\n  style 7854cbf9-187f-4117-b494-73a5a404d06f stroke:#2c3143,stroke-width:4px;\n  4[\"Ramachandran Plots\"];\n  0 -->|output| 4;\n  1 -->|output| 4;\n  aa7afa97-8be6-4e6b-ad2c-5715f3c10362[\"Output\\nRamachandran Plot\"];\n  4 --> aa7afa97-8be6-4e6b-ad2c-5715f3c10362;\n  style aa7afa97-8be6-4e6b-ad2c-5715f3c10362 stroke:#2c3143,stroke-width:4px;\n  178f112a-eb0b-4299-aff5-69efd9ffb52b[\"Output\\nRamachandran Plot raw data\"];\n  4 --> 178f112a-eb0b-4299-aff5-69efd9ffb52b;\n  style 178f112a-eb0b-4299-aff5-69efd9ffb52b stroke:#2c3143,stroke-width:4px;\n  5[\"Distance Analysis\"];\n  0 -->|output| 5;\n  1 -->|output| 5;\n  eac670fb-f01e-49cd-a103-828a15149f48[\"Output\\nDistance Analysis raw data\"];\n  5 --> eac670fb-f01e-49cd-a103-828a15149f48;\n  style eac670fb-f01e-49cd-a103-828a15149f48 stroke:#2c3143,stroke-width:4px;\n  6605884d-7bfa-4f43-bbc6-2352256d2bc7[\"Output\\nDistance Analysis plot\"];\n  5 --> 6605884d-7bfa-4f43-bbc6-2352256d2bc7;\n  style 6605884d-7bfa-4f43-bbc6-2352256d2bc7 stroke:#2c3143,stroke-width:4px;\n  6[\"Dihedral Analysis\"];\n  0 -->|output| 6;\n  1 -->|output| 6;\n  755dbb99-3e3e-425b-a4b2-e375df6e39b4[\"Output\\nDihedral Analysis plot\"];\n  6 --> 755dbb99-3e3e-425b-a4b2-e375df6e39b4;\n  style 755dbb99-3e3e-425b-a4b2-e375df6e39b4 stroke:#2c3143,stroke-width:4px;\n  e0234472-cc44-483e-997b-8b0e0719c8d7[\"Output\\nDihedral Analysis raw data\"];\n  6 --> e0234472-cc44-483e-997b-8b0e0719c8d7;\n  style e0234472-cc44-483e-997b-8b0e0719c8d7 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nDCD input\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nPDB input\"]\n  2[label=\"RDF Analysis\"]\n  0 -> 2 [label=\"output\"]\n  1 -> 2 [label=\"output\"]\n  kab90456fd7ae4fb1ba2f978a59791acc[color=lightseagreen,label=\"Output\\nRDF Analysis plot\"]\n  2 -> kab90456fd7ae4fb1ba2f978a59791acc\n  k1ee2fe4a0e504a4f828e3b60d75120e7[color=lightseagreen,label=\"Output\\nRDF Analysis raw data\"]\n  2 -> k1ee2fe4a0e504a4f828e3b60d75120e7\n  3[label=\"Cosine Content\"]\n  0 -> 3 [label=\"output\"]\n  1 -> 3 [label=\"output\"]\n  k5ca6c423961b4a55a821794a0d311e41[color=lightseagreen,label=\"Output\\nCosine Content raw data\"]\n  3 -> k5ca6c423961b4a55a821794a0d311e41\n  k7854cbf9187f4117b49473a5a404d06f[color=lightseagreen,label=\"Output\\nCosine Content plot\"]\n  3 -> k7854cbf9187f4117b49473a5a404d06f\n  4[label=\"Ramachandran Plots\"]\n  0 -> 4 [label=\"output\"]\n  1 -> 4 [label=\"output\"]\n  kaa7afa978be64e6bad2c5715f3c10362[color=lightseagreen,label=\"Output\\nRamachandran Plot\"]\n  4 -> kaa7afa978be64e6bad2c5715f3c10362\n  k178f112aeb0b4299aff569efd9ffb52b[color=lightseagreen,label=\"Output\\nRamachandran Plot raw data\"]\n  4 -> k178f112aeb0b4299aff569efd9ffb52b\n  5[label=\"Distance Analysis\"]\n  0 -> 5 [label=\"output\"]\n  1 -> 5 [label=\"output\"]\n  keac670fbf01e49cda103828a15149f48[color=lightseagreen,label=\"Output\\nDistance Analysis raw data\"]\n  5 -> keac670fbf01e49cda103828a15149f48\n  k6605884d7bfa4f43bbc62352256d2bc7[color=lightseagreen,label=\"Output\\nDistance Analysis plot\"]\n  5 -> k6605884d7bfa4f43bbc62352256d2bc7\n  6[label=\"Dihedral Analysis\"]\n  0 -> 6 [label=\"output\"]\n  1 -> 6 [label=\"output\"]\n  k755dbb993e3e425ba4b2e375df6e39b4[color=lightseagreen,label=\"Output\\nDihedral Analysis plot\"]\n  6 -> k755dbb993e3e425ba4b2e375df6e39b4\n  ke0234472cc44483e997b8b0e0719c8d7[color=lightseagreen,label=\"Output\\nDihedral Analysis raw data\"]\n  6 -> ke0234472cc44483e997b8b0e0719c8d7\n}",
           "workflow_tools": [
@@ -7275,8 +7181,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "DCD input",
@@ -7285,9 +7190,7 @@
               ],
               "label": "DCD input",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 403.7499745686849,
                 "height": 46.34999084472656,
@@ -7316,8 +7219,7 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "PDB input",
@@ -7326,9 +7228,7 @@
               ],
               "label": "PDB input",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 503.7499745686849,
                 "height": 46.34999084472656,
@@ -7359,8 +7259,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "DCD input",
@@ -7369,9 +7268,7 @@
               ],
               "label": "DCD input",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 403.7499745686849,
                 "height": 46.34999084472656,
@@ -7400,8 +7297,7 @@
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "PDB input",
@@ -7410,9 +7306,7 @@
               ],
               "label": "PDB input",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 503.7499745686849,
                 "height": 46.34999084472656,
@@ -7483,8 +7377,7 @@
                 "x": 1109.3333333333333,
                 "y": -53.599995930989586
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/mdanalysis_rdf/mdanalysis_rdf/0.19",
               "tool_shed_repository": {
                 "changeset_revision": "49dac57d004a",
@@ -7556,8 +7449,7 @@
                 "x": 1109.3333333333333,
                 "y": 179.4000040690104
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/mdanalysis_cosine_analysis/mdanalysis_cosine_analysis/0.19",
               "tool_shed_repository": {
                 "changeset_revision": "ebeb72aa39a8",
@@ -7629,8 +7521,7 @@
                 "x": 1109.3333333333333,
                 "y": 412.3999837239583
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/mdanalysis_ramachandran_plot/mdanalysis_ramachandran_plot/0.1.3",
               "tool_shed_repository": {
                 "changeset_revision": "d710c7f00ae6",
@@ -7702,8 +7593,7 @@
                 "x": 1109.3333333333333,
                 "y": 645.3999837239584
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/mdanalysis_distance/mdanalysis_distance/0.19",
               "tool_shed_repository": {
                 "changeset_revision": "489b25966bb9",
@@ -7775,8 +7665,7 @@
                 "x": 1109.3333333333333,
                 "y": 898.3999837239584
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/mdanalysis_dihedral/mdanalysis_dihedral/0.19",
               "tool_shed_repository": {
                 "changeset_revision": "554f60da9c8f",
@@ -7816,9 +7705,7 @@
           "parent_id": "computational-chemistry/analysis-md-simulations",
           "topic_id": "computational-chemistry",
           "tutorial_id": "analysis-md-simulations",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "Simple Analysis",
           "title": "Simple Analysis",
           "version": 5,
@@ -7871,7 +7758,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nprotein_mdsimulation_dcd\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nprotein_pdb\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"RMSD Analysis\"];\n  0 -->|output| 2;\n  1 -->|output| 2;\n  6de2beaf-f80e-4788-8598-229a1c582757[\"Output\\nrmsd_tabular_output\"];\n  2 --> 6de2beaf-f80e-4788-8598-229a1c582757;\n  style 6de2beaf-f80e-4788-8598-229a1c582757 stroke:#2c3143,stroke-width:4px;\n  3[\"RMSF Analysis\"];\n  0 -->|output| 3;\n  1 -->|output| 3;\n  1f2d715d-230a-4ec5-a509-e8ae501e7634[\"Output\\nrmsf_tabular_output\"];\n  3 --> 1f2d715d-230a-4ec5-a509-e8ae501e7634;\n  style 1f2d715d-230a-4ec5-a509-e8ae501e7634 stroke:#2c3143,stroke-width:4px;\n  4[\"PCA\"];\n  0 -->|output| 4;\n  1 -->|output| 4;\n  92b7a40f-9ffc-4f56-8cf3-deec52e7b8b5[\"Output\\npca_tabular_output\"];\n  4 --> 92b7a40f-9ffc-4f56-8cf3-deec52e7b8b5;\n  style 92b7a40f-9ffc-4f56-8cf3-deec52e7b8b5 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nprotein_mdsimulation_dcd\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nprotein_pdb\"]\n  2[label=\"RMSD Analysis\"]\n  0 -> 2 [label=\"output\"]\n  1 -> 2 [label=\"output\"]\n  k6de2beaff80e47888598229a1c582757[color=lightseagreen,label=\"Output\\nrmsd_tabular_output\"]\n  2 -> k6de2beaff80e47888598229a1c582757\n  3[label=\"RMSF Analysis\"]\n  0 -> 3 [label=\"output\"]\n  1 -> 3 [label=\"output\"]\n  k1f2d715d230a4ec5a509e8ae501e7634[color=lightseagreen,label=\"Output\\nrmsf_tabular_output\"]\n  3 -> k1f2d715d230a4ec5a509e8ae501e7634\n  4[label=\"PCA\"]\n  0 -> 4 [label=\"output\"]\n  1 -> 4 [label=\"output\"]\n  k92b7a40f9ffc4f568cf3deec52e7b8b5[color=lightseagreen,label=\"Output\\npca_tabular_output\"]\n  4 -> k92b7a40f9ffc4f568cf3deec52e7b8b5\n}",
           "workflow_tools": [
@@ -7885,8 +7772,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -7895,9 +7781,7 @@
               ],
               "label": "protein_mdsimulation_dcd",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 200,
                 "top": 310
@@ -7907,17 +7791,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "e26cd82e-19c8-4cf5-93c7-5a0a0e5201cc",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -7926,9 +7807,7 @@
               ],
               "label": "protein_pdb",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 200,
                 "top": 430
@@ -7938,9 +7817,7 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "cbe0e7c8-c572-4231-a55f-d04c72760cd4",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -7989,8 +7866,7 @@
                 "left": 439,
                 "top": 200
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsd/bio3d_rmsd/2.3",
               "tool_shed_repository": {
                 "changeset_revision": "75fd897bd85d",
@@ -8051,8 +7927,7 @@
                 "left": 535,
                 "top": 397
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_rmsf/bio3d_rmsf/2.3",
               "tool_shed_repository": {
                 "changeset_revision": "e838317708a6",
@@ -8121,8 +7996,7 @@
                 "left": 423,
                 "top": 592
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/chemteam/bio3d_pca/bio3d_pca/2.3",
               "tool_shed_repository": {
                 "changeset_revision": "f56fb2762abb",
@@ -10114,12 +9988,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -10253,7 +10123,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nQuery ligand\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nPharmacophore library\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Ligand ionization state generation\"];\n  0 -->|output| 2;\n  3[\"Splitting ePharmaLib into individual pharmacophores\"];\n  1 -->|output| 3;\n  4[\" Low-energy ligand conformer search\"];\n  2 -->|outfile| 4;\n  5[\"Pharmacophore alignment\"];\n  4 -->|outfile| 5;\n  3 -->|list_output_generic| 5;\n  6[\"Concatenating the pharmacophore alignment scores\"];\n  5 -->|score_result_file| 6;\n  7[\"Ranking the predicted protein targets according to the Tversky index 10th column\"];\n  6 -->|out_file1| 7;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nQuery ligand\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nPharmacophore library\"]\n  2[label=\"Ligand ionization state generation\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Splitting ePharmaLib into individual pharmacophores\"]\n  1 -> 3 [label=\"output\"]\n  4[label=\" Low-energy ligand conformer search\"]\n  2 -> 4 [label=\"outfile\"]\n  5[label=\"Pharmacophore alignment\"]\n  4 -> 5 [label=\"outfile\"]\n  3 -> 5 [label=\"list_output_generic\"]\n  6[label=\"Concatenating the pharmacophore alignment scores\"]\n  5 -> 6 [label=\"score_result_file\"]\n  7[label=\"Ranking the predicted protein targets according to the Tversky index 10th column\"]\n  6 -> 7 [label=\"out_file1\"]\n}",
           "workflow_tools": [
@@ -10270,8 +10140,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -10280,9 +10149,7 @@
               ],
               "label": "Query ligand",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 747.5521469116211,
                 "height": 62.083335876464844,
@@ -10298,17 +10165,14 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "63eee683-907c-40a4-b801-d977e0b2cb3e",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "",
@@ -10317,9 +10181,7 @@
               ],
               "label": "Pharmacophore library",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "bottom": 1033.8889236450195,
                 "height": 82.46527862548828,
@@ -10335,9 +10197,7 @@
               "tool_version": null,
               "type": "data_input",
               "uuid": "004f025f-dafc-4d26-8aec-88a64d013852",
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -10352,9 +10212,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Ligand ionization state generation",
               "name": "Add hydrogen atoms",
               "outputs": [
@@ -10373,8 +10231,7 @@
                 "x": 776.99658203125,
                 "y": 632.46533203125
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_addh/openbabel_addh/3.1.1+galaxy1",
               "tool_shed_repository": {
                 "changeset_revision": "6e4b7e0c61a6",
@@ -10405,9 +10262,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Splitting ePharmaLib into individual pharmacophores",
               "name": "Split file",
               "outputs": [
@@ -10426,8 +10281,7 @@
                 "x": 1009.982666015625,
                 "y": 881.4757080078125
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.5.0",
               "tool_shed_repository": {
                 "changeset_revision": "6cbe2f30c2d7",
@@ -10458,9 +10312,7 @@
                   "output_name": "outfile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": " Low-energy ligand conformer search",
               "name": "RDConf: Low-energy ligand conformer search",
               "outputs": [
@@ -10479,8 +10331,7 @@
                 "x": 1001.0070190429688,
                 "y": 629.4618530273438
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/rdconf/rdconf/2020.03.4+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "5c501eb8d56c",
@@ -10515,9 +10366,7 @@
                   "output_name": "list_output_generic"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Pharmacophore alignment",
               "outputs": [
@@ -10544,8 +10393,7 @@
                 "x": 1244.010498046875,
                 "y": 628.420166015625
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/align_it/ctb_alignit/1.0.4+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "06d9381593a4",
@@ -10586,9 +10434,7 @@
                   "output_name": "score_result_file"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Concatenating the pharmacophore alignment scores",
               "name": "Concatenate datasets",
               "outputs": [
@@ -10607,8 +10453,7 @@
                 "x": 1475.9896240234375,
                 "y": 628.420166015625
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1",
               "tool_shed_repository": {
                 "changeset_revision": "f46f0e4f75c4",
@@ -10639,9 +10484,7 @@
                   "output_name": "out_file1"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": "Ranking the predicted protein targets according to the Tversky index (10th column)",
               "name": "Sort",
               "outputs": [
@@ -10662,8 +10505,7 @@
               },
               "post_job_actions": {
                 "EmailActionout_file1": {
-                  "action_arguments": {
-                  },
+                  "action_arguments": {},
                   "action_type": "EmailAction",
                   "output_name": "out_file1"
                 }
@@ -10711,9 +10553,7 @@
             "usegalaxy": true
           }
         ],
-        "inexact": [
-
-        ]
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -11503,8 +11343,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.4.0",
-                  "0.5.1"
+                  "0.5.1",
+                  "0.4.0"
                 ],
                 "server": "https://galaxytrakr.org/"
               },
@@ -11807,12 +11647,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -11947,9 +11783,7 @@
           "parent_id": "computational-chemistry/htmd-analysis",
           "topic_id": "computational-chemistry",
           "tutorial_id": "htmd-analysis",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "Workflow constructed from history 'Hsp90-MDAnalysis'",
           "title": "Workflow constructed from history 'Hsp90-MDAnalysis'",
           "version": 2,
@@ -11981,7 +11815,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"GROMACS structure configuration\"];\n  0 -->|output| 2;\n  3[\"MDTraj file converter\"];\n  1 -->|output| 3;\n  4[\"RMSD Analysis\"];\n  2 -->|output| 4;\n  3 -->|output| 4;\n  5[\"RMSF Analysis\"];\n  2 -->|output| 5;\n  3 -->|output| 5;\n  6[\"PCA\"];\n  2 -->|output| 6;\n  3 -->|output| 6;\n  7[\"Cosine Content\"];\n  3 -->|output| 7;\n  2 -->|output| 7;\n  8[\"PCA visualization\"];\n  2 -->|output| 8;\n  3 -->|output| 8;\n  9[\"Hydrogen Bond Analysis using VMD\"];\n  3 -->|output| 9;\n  2 -->|output| 9;\n  10[\"RMSD Analysis\"];\n  2 -->|output| 10;\n  3 -->|output| 10;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  2[label=\"GROMACS structure configuration\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"MDTraj file converter\"]\n  1 -> 3 [label=\"output\"]\n  4[label=\"RMSD Analysis\"]\n  2 -> 4 [label=\"output\"]\n  3 -> 4 [label=\"output\"]\n  5[label=\"RMSF Analysis\"]\n  2 -> 5 [label=\"output\"]\n  3 -> 5 [label=\"output\"]\n  6[label=\"PCA\"]\n  2 -> 6 [label=\"output\"]\n  3 -> 6 [label=\"output\"]\n  7[label=\"Cosine Content\"]\n  3 -> 7 [label=\"output\"]\n  2 -> 7 [label=\"output\"]\n  8[label=\"PCA visualization\"]\n  2 -> 8 [label=\"output\"]\n  3 -> 8 [label=\"output\"]\n  9[label=\"Hydrogen Bond Analysis using VMD\"]\n  3 -> 9 [label=\"output\"]\n  2 -> 9 [label=\"output\"]\n  10[label=\"RMSD Analysis\"]\n  2 -> 10 [label=\"output\"]\n  3 -> 10 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -11998,14 +11832,9 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
-              "workflow_outputs": [
-
-              ],
-              "input_connections": {
-              },
+              "outputs": [],
+              "workflow_outputs": [],
+              "input_connections": {},
               "tool_state": "{\"name\": \"Galaxy30-[GROMACS_simulation_on_data_28,_data_15,_and_data_26].gro\"}",
               "id": 0,
               "uuid": "82ae4961-8bb0-440d-bed6-9206d8b9d860",
@@ -12029,14 +11858,9 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
-              "workflow_outputs": [
-
-              ],
-              "input_connections": {
-              },
+              "outputs": [],
+              "workflow_outputs": [],
+              "input_connections": {},
               "tool_state": "{\"name\": \"Galaxy31-[GROMACS_simulation_on_data_28,_data_15,_and_data_26].xtc\"}",
               "id": 1,
               "uuid": "f67e98b9-2b4f-4d7d-9da7-ec3c23ffbd38",
@@ -12058,9 +11882,7 @@
               "type": "data_input"
             }
           ],
-          "outputs": [
-
-          ]
+          "outputs": []
         },
         {
           "workflow": "main_workflow.ga",
@@ -12075,9 +11897,7 @@
           "parent_id": "computational-chemistry/htmd-analysis",
           "topic_id": "computational-chemistry",
           "tutorial_id": "htmd-analysis",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "MD protein-ligand workflow (from PDB structure)",
           "title": "MD protein-ligand workflow (from PDB structure)",
           "version": 2,
@@ -12111,7 +11931,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Parameter\\nPDB code e.g. 6hhr\"];\n  style 0 fill:#ded,stroke:#393,stroke-width:4px;\n  1[\"ℹ️ Input Parameter\\nLigand name e.g. AG5E\"];\n  style 1 fill:#ded,stroke:#393,stroke-width:4px;\n  2[\"Get PDB file\"];\n  0 -->|output| 2;\n  3[\"Search in textfiles\"];\n  2 -->|output| 3;\n  4[\"Search in textfiles\"];\n  2 -->|output| 4;\n  1 -->|output| 4;\n  5[\"GROMACS initial setup\"];\n  3 -->|output| 5;\n  6[\"Compound conversion\"];\n  4 -->|output| 6;\n  7[\"Generate MD topologies for small molecules\"];\n  6 -->|outfile| 7;\n  8[\"Merge GROMACS topologies\"];\n  7 -->|gro_output| 8;\n  5 -->|output1| 8;\n  5 -->|output2| 8;\n  7 -->|output| 8;\n  9[\"GROMACS structure configuration\"];\n  8 -->|complex_gro| 9;\n  10[\"GROMACS solvation and adding ions\"];\n  8 -->|complex_top| 10;\n  9 -->|output| 10;\n  11[\"GROMACS energy minimization\"];\n  10 -->|output2| 11;\n  10 -->|output1| 11;\n  12[\"GROMACS simulation\"];\n  5 -->|output3| 12;\n  10 -->|output2| 12;\n  11 -->|output1| 12;\n  13[\"GROMACS simulation\"];\n  5 -->|output3| 13;\n  10 -->|output2| 13;\n  12 -->|output1| 13;\n  12 -->|output5| 13;\n  14[\"GROMACS simulation\"];\n  10 -->|output2| 14;\n  13 -->|output1| 14;\n  13 -->|output5| 14;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightgreen,label=\"ℹ️ Input Parameter\\nPDB code e.g. 6hhr\"]\n  1[color=lightgreen,label=\"ℹ️ Input Parameter\\nLigand name e.g. AG5E\"]\n  2[label=\"Get PDB file\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Search in textfiles\"]\n  2 -> 3 [label=\"output\"]\n  4[label=\"Search in textfiles\"]\n  2 -> 4 [label=\"output\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"GROMACS initial setup\"]\n  3 -> 5 [label=\"output\"]\n  6[label=\"Compound conversion\"]\n  4 -> 6 [label=\"output\"]\n  7[label=\"Generate MD topologies for small molecules\"]\n  6 -> 7 [label=\"outfile\"]\n  8[label=\"Merge GROMACS topologies\"]\n  7 -> 8 [label=\"gro_output\"]\n  5 -> 8 [label=\"output1\"]\n  5 -> 8 [label=\"output2\"]\n  7 -> 8 [label=\"output\"]\n  9[label=\"GROMACS structure configuration\"]\n  8 -> 9 [label=\"complex_gro\"]\n  10[label=\"GROMACS solvation and adding ions\"]\n  8 -> 10 [label=\"complex_top\"]\n  9 -> 10 [label=\"output\"]\n  11[label=\"GROMACS energy minimization\"]\n  10 -> 11 [label=\"output2\"]\n  10 -> 11 [label=\"output1\"]\n  12[label=\"GROMACS simulation\"]\n  5 -> 12 [label=\"output3\"]\n  10 -> 12 [label=\"output2\"]\n  11 -> 12 [label=\"output1\"]\n  13[label=\"GROMACS simulation\"]\n  5 -> 13 [label=\"output3\"]\n  10 -> 13 [label=\"output2\"]\n  12 -> 13 [label=\"output1\"]\n  12 -> 13 [label=\"output5\"]\n  14[label=\"GROMACS simulation\"]\n  10 -> 14 [label=\"output2\"]\n  13 -> 14 [label=\"output1\"]\n  13 -> 14 [label=\"output5\"]\n}",
           "workflow_tools": [
@@ -12130,9 +11950,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -12140,17 +11958,14 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"optional\": false, \"parameter_type\": \"text\"}",
               "id": 0,
               "uuid": "73aff13d-acd3-41a0-8894-3104a93f9ad0",
               "errors": null,
               "name": "Input parameter",
               "label": "PDB code (e.g. 6hhr)",
-              "inputs": [
-
-              ],
+              "inputs": [],
               "position": {
                 "top": 191.5,
                 "left": 229.5
@@ -12162,9 +11977,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -12172,17 +11985,14 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"optional\": false, \"parameter_type\": \"text\"}",
               "id": 1,
               "uuid": "4c514954-d86b-409d-aa30-70545b8522ea",
               "errors": null,
               "name": "Input parameter",
               "label": "Ligand name (e.g. AG5E)",
-              "inputs": [
-
-              ],
+              "inputs": [],
               "position": {
                 "top": 340.5,
                 "left": 230.5
@@ -12196,9 +12006,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -12206,17 +12014,14 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"optional\": false, \"parameter_type\": \"text\"}",
               "id": 0,
               "uuid": "73aff13d-acd3-41a0-8894-3104a93f9ad0",
               "errors": null,
               "name": "Input parameter",
               "label": "PDB code (e.g. 6hhr)",
-              "inputs": [
-
-              ],
+              "inputs": [],
               "position": {
                 "top": 191.5,
                 "left": 229.5
@@ -12228,9 +12033,7 @@
             {
               "tool_id": null,
               "tool_version": null,
-              "outputs": [
-
-              ],
+              "outputs": [],
               "workflow_outputs": [
                 {
                   "output_name": "output",
@@ -12238,17 +12041,14 @@
                   "label": null
                 }
               ],
-              "input_connections": {
-              },
+              "input_connections": {},
               "tool_state": "{\"optional\": false, \"parameter_type\": \"text\"}",
               "id": 1,
               "uuid": "4c514954-d86b-409d-aa30-70545b8522ea",
               "errors": null,
               "name": "Input parameter",
               "label": "Ligand name (e.g. AG5E)",
-              "inputs": [
-
-              ],
+              "inputs": [],
               "position": {
                 "top": 340.5,
                 "left": 230.5
@@ -15300,8 +15100,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "2019.1.4",
-                  "2020.2+galaxy0"
+                  "2020.2+galaxy0",
+                  "2019.1.4"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -15469,10 +15269,10 @@
                   "2021.3+galaxy3",
                   "2020.2+galaxy0",
                   "2022+galaxy0",
-                  "2020.4+galaxy0",
                   "2021.3+galaxy2",
-                  "2020.4+galaxy1",
-                  "2021.3+galaxy1"
+                  "2021.3+galaxy1",
+                  "2020.4+galaxy0",
+                  "2020.4+galaxy1"
                 ],
                 "server": "https://usegalaxy.eu"
               },
@@ -15782,10 +15582,10 @@
                   "2021.3+galaxy1",
                   "2020.2+galaxy0",
                   "2022+galaxy0",
-                  "2020.4+galaxy0",
-                  "2020.2+galaxy1",
                   "2020.4+galaxy1",
-                  "2021.3+galaxy0"
+                  "2020.4+galaxy0",
+                  "2021.3+galaxy0",
+                  "2020.2+galaxy1"
                 ],
                 "server": "https://usegalaxy.eu"
               },
@@ -16918,12 +16718,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -17043,9 +16839,7 @@
           "title": "Data management in Medicinal Chemistry workflow",
           "version": 1,
           "description": "Workflow includes data import, format conversion and some basic medicinal chemistry analyses.",
-          "tags": [
-
-          ],
+          "tags": [],
           "features": {
             "report": null,
             "subworkflows": false,
@@ -17063,7 +16857,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nBenzenesulfonyl chloride\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nEthylamine\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Compound conversion\"];\n  0 -->|output| 2;\n  aff8fa4f-c254-4f05-9560-52bad6c7e04a[\"Output\\nBenzenesulfonyl chloride SDF\"];\n  2 --> aff8fa4f-c254-4f05-9560-52bad6c7e04a;\n  style aff8fa4f-c254-4f05-9560-52bad6c7e04a stroke:#2c3143,stroke-width:4px;\n  3[\"Search ChEMBL database\"];\n  0 -->|output| 3;\n  044d2c08-92ed-45c9-9868-ee802998d92c[\"Output\\nSubstructures from ChEMBL database\"];\n  3 --> 044d2c08-92ed-45c9-9868-ee802998d92c;\n  style 044d2c08-92ed-45c9-9868-ee802998d92c stroke:#2c3143,stroke-width:4px;\n  4[\"Search ChEMBL database\"];\n  0 -->|output| 4;\n  99274b60-732d-4276-969f-ccc3673a872a[\"Output\\nLipinski substructures from ChEMBL database\"];\n  4 --> 99274b60-732d-4276-969f-ccc3673a872a;\n  style 99274b60-732d-4276-969f-ccc3673a872a stroke:#2c3143,stroke-width:4px;\n  5[\"Compound conversion\"];\n  1 -->|output| 5;\n  77ad7b99-5761-46a3-b9a6-1dd3d8e2baac[\"Output\\nEthylamine SDF\"];\n  5 --> 77ad7b99-5761-46a3-b9a6-1dd3d8e2baac;\n  style 77ad7b99-5761-46a3-b9a6-1dd3d8e2baac stroke:#2c3143,stroke-width:4px;\n  6[\"Reaction maker\"];\n  2 -->|outfile| 6;\n  5 -->|outfile| 6;\n  f9d1d7fd-e854-469b-a464-6811998e058e[\"Output\\nReaction product\"];\n  6 --> f9d1d7fd-e854-469b-a464-6811998e058e;\n  style f9d1d7fd-e854-469b-a464-6811998e058e stroke:#2c3143,stroke-width:4px;\n  b0bd7ed2-a80b-44ce-994b-999e1d472281[\"Output\\nReaction maker logfile\"];\n  6 --> b0bd7ed2-a80b-44ce-994b-999e1d472281;\n  style b0bd7ed2-a80b-44ce-994b-999e1d472281 stroke:#2c3143,stroke-width:4px;\n  7[\"Visualisation\"];\n  6 -->|outfile| 7;\n  fc618f3f-6aa5-4970-841d-56f4eabf47b7[\"Output\\nVisualisation of reaction product\"];\n  7 --> fc618f3f-6aa5-4970-841d-56f4eabf47b7;\n  style fc618f3f-6aa5-4970-841d-56f4eabf47b7 stroke:#2c3143,stroke-width:4px;\n  8[\"Drug-likeness\"];\n  6 -->|outfile| 8;\n  7ad8c184-e10d-4fce-a402-3e79da6e09ac[\"Output\\nDrug-likeness of product molecule\"];\n  8 --> 7ad8c184-e10d-4fce-a402-3e79da6e09ac;\n  style 7ad8c184-e10d-4fce-a402-3e79da6e09ac stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nBenzenesulfonyl chloride\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nEthylamine\"]\n  2[label=\"Compound conversion\"]\n  0 -> 2 [label=\"output\"]\n  kaff8fa4fc2544f05956052bad6c7e04a[color=lightseagreen,label=\"Output\\nBenzenesulfonyl chloride SDF\"]\n  2 -> kaff8fa4fc2544f05956052bad6c7e04a\n  3[label=\"Search ChEMBL database\"]\n  0 -> 3 [label=\"output\"]\n  k044d2c0892ed45c99868ee802998d92c[color=lightseagreen,label=\"Output\\nSubstructures from ChEMBL database\"]\n  3 -> k044d2c0892ed45c99868ee802998d92c\n  4[label=\"Search ChEMBL database\"]\n  0 -> 4 [label=\"output\"]\n  k99274b60732d4276969fccc3673a872a[color=lightseagreen,label=\"Output\\nLipinski substructures from ChEMBL database\"]\n  4 -> k99274b60732d4276969fccc3673a872a\n  5[label=\"Compound conversion\"]\n  1 -> 5 [label=\"output\"]\n  k77ad7b99576146a3b9a61dd3d8e2baac[color=lightseagreen,label=\"Output\\nEthylamine SDF\"]\n  5 -> k77ad7b99576146a3b9a61dd3d8e2baac\n  6[label=\"Reaction maker\"]\n  2 -> 6 [label=\"outfile\"]\n  5 -> 6 [label=\"outfile\"]\n  kf9d1d7fde854469ba4646811998e058e[color=lightseagreen,label=\"Output\\nReaction product\"]\n  6 -> kf9d1d7fde854469ba4646811998e058e\n  kb0bd7ed2a80b44ce994b999e1d472281[color=lightseagreen,label=\"Output\\nReaction maker logfile\"]\n  6 -> kb0bd7ed2a80b44ce994b999e1d472281\n  7[label=\"Visualisation\"]\n  6 -> 7 [label=\"outfile\"]\n  kfc618f3f6aa54970841d56f4eabf47b7[color=lightseagreen,label=\"Output\\nVisualisation of reaction product\"]\n  7 -> kfc618f3f6aa54970841d56f4eabf47b7\n  8[label=\"Drug-likeness\"]\n  6 -> 8 [label=\"outfile\"]\n  k7ad8c184e10d4fcea4023e79da6e09ac[color=lightseagreen,label=\"Output\\nDrug-likeness of product molecule\"]\n  8 -> k7ad8c184e10d4fcea4023e79da6e09ac\n}",
           "workflow_tools": [
@@ -17079,8 +16873,7 @@
               "content_id": null,
               "errors": null,
               "id": 0,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "First input molecule ",
@@ -17089,9 +16882,7 @@
               ],
               "label": "Benzenesulfonyl chloride",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 0.21065309449974406,
                 "top": 8.775010413544436
@@ -17102,17 +16893,14 @@
               "type": "data_input",
               "uuid": "3f0f498c-32b9-4977-bdac-84ebe37c20d1",
               "when": null,
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             },
             {
               "annotation": "Second input molecule ",
               "content_id": null,
               "errors": null,
               "id": 1,
-              "input_connections": {
-              },
+              "input_connections": {},
               "inputs": [
                 {
                   "description": "Second input molecule ",
@@ -17121,9 +16909,7 @@
               ],
               "label": "Ethylamine",
               "name": "Input dataset",
-              "outputs": [
-
-              ],
+              "outputs": [],
               "position": {
                 "left": 0.0,
                 "top": 111.57694234472979
@@ -17134,9 +16920,7 @@
               "type": "data_input",
               "uuid": "0dac45d0-117b-4d59-b2e6-6f591b3804f8",
               "when": null,
-              "workflow_outputs": [
-
-              ]
+              "workflow_outputs": []
             }
           ],
           "outputs": [
@@ -17151,9 +16935,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Compound conversion",
               "outputs": [
@@ -17206,9 +16988,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Search ChEMBL database",
               "outputs": [
@@ -17261,9 +17041,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Search ChEMBL database",
               "outputs": [
@@ -17316,9 +17094,7 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Compound conversion",
               "outputs": [
@@ -17375,9 +17151,7 @@
                   "output_name": "outfile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Reaction maker",
               "outputs": [
@@ -17394,8 +17168,7 @@
                 "left": 544.9155330206689,
                 "top": 114.98750994420489
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/ctb_im_rxn_maker/ctb_im_rxn_maker/1.1.4+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "8ef5428fb809",
@@ -17432,9 +17205,7 @@
                   "output_name": "outfile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Visualisation",
               "outputs": [
@@ -17447,8 +17218,7 @@
                 "left": 799.9156856085593,
                 "top": 70.98751375890217
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_svg_depiction/openbabel_svg_depiction/3.1.1+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "7672039a0bb0",
@@ -17480,9 +17250,7 @@
                   "output_name": "outfile"
                 }
               },
-              "inputs": [
-
-              ],
+              "inputs": [],
               "label": null,
               "name": "Drug-likeness",
               "outputs": [
@@ -17495,8 +17263,7 @@
                 "left": 807.9157161261375,
                 "top": 234.98750994420482
               },
-              "post_job_actions": {
-              },
+              "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/qed/ctb_silicos_qed/2021.03.4+galaxy0",
               "tool_shed_repository": {
                 "changeset_revision": "52a8d34dd08f",
@@ -18806,12 +18573,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -18989,9 +18752,7 @@
           "parent_id": "computational-chemistry/cheminformatics",
           "topic_id": "computational-chemistry",
           "tutorial_id": "cheminformatics",
-          "creators": [
-
-          ],
+          "creators": [],
           "name": "CTB Workflow",
           "title": "CTB Workflow",
           "version": 4,
@@ -19051,7 +18812,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-02-14 00:06:37 +0000",
+          "modified": "2025-02-14 10:44:26 +0000",
           "mermaid": "flowchart TD\n  11[\"Compound Search\"];\n  5 -->|outfile| 11;\n  13[\"Remove duplicated molecules\"];\n  5 -->|outfile| 13;\n  19[\"Remove counterions and fragments\"];\n  13 -->|outfile| 19;\n  2[\"Online data\"];\n  29[\"Filter\"];\n  19 -->|outfile| 29;\n  30[\"Compound Convert\"];\n  19 -->|outfile| 30;\n  31[\"Molecules to Fingerprints\"];\n  19 -->|outfile| 31;\n  39[\"Natural Product\"];\n  29 -->|outfile| 39;\n  40[\"Molecules to Fingerprints\"];\n  29 -->|outfile| 40;\n  44[\"NxN Clustering\"];\n  40 -->|outfile| 44;\n  5[\"Change Title\"];\n  2 -->|output| 5;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  11[label=\"Compound Search\"]\n  5 -> 11 [label=\"outfile\"]\n  13[label=\"Remove duplicated molecules\"]\n  5 -> 13 [label=\"outfile\"]\n  19[label=\"Remove counterions and fragments\"]\n  13 -> 19 [label=\"outfile\"]\n  2[label=\"Online data\"]\n  29[label=\"Filter\"]\n  19 -> 29 [label=\"outfile\"]\n  30[label=\"Compound Convert\"]\n  19 -> 30 [label=\"outfile\"]\n  31[label=\"Molecules to Fingerprints\"]\n  19 -> 31 [label=\"outfile\"]\n  39[label=\"Natural Product\"]\n  29 -> 39 [label=\"outfile\"]\n  40[label=\"Molecules to Fingerprints\"]\n  29 -> 40 [label=\"outfile\"]\n  44[label=\"NxN Clustering\"]\n  40 -> 44 [label=\"outfile\"]\n  5[label=\"Change Title\"]\n  2 -> 5 [label=\"output\"]\n}",
           "workflow_tools": [
@@ -19066,12 +18827,8 @@
             "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel/ctb_remDuplicates/1.0",
             "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel/ctb_remIons/1.0"
           ],
-          "inputs": [
-
-          ],
-          "outputs": [
-
-          ]
+          "inputs": [],
+          "outputs": []
         }
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/computational-chemistry/tutorials/cheminformatics/tutorial.json",
@@ -19104,9 +18861,7 @@
         "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.2"
       ],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "url": "https://usegalaxy.org",
@@ -20455,8 +20210,8 @@
                 "state": "inexact",
                 "versions": [
                   "1.5.1",
-                  "1.6.1+0",
-                  "1.6"
+                  "1.6",
+                  "1.6.1+0"
                 ],
                 "server": "https://usegalaxy.no/"
               },
@@ -23063,8 +22818,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "4.1",
-                  "5.1.0"
+                  "5.1.0",
+                  "4.1"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -23245,12 +23000,8 @@
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",
@@ -23344,13 +23095,9 @@
       "pub_date": "2019-06-03 07:41:49 +0000",
       "version": 14,
       "api": "https://training.galaxyproject.org/training-material/api/topics/computational-chemistry/tutorials/setting-up-molecular-systems/tutorial.json",
-      "tools": [
-
-      ],
+      "tools": [],
       "supported_servers": {
-        "exact": [
-
-        ],
+        "exact": [],
         "inexact": [
           {
             "name": "UseGalaxy.eu",
@@ -23383,33 +23130,23 @@
         ]
       },
       "supported_servers_matrix": {
-        "servers": [
-
-        ],
-        "tools": [
-
-        ]
+        "servers": [],
+        "tools": []
       },
       "topic_name_human": "Computational chemistry",
       "admin_install": {
         "install_tool_dependencies": true,
         "install_repository_dependencies": true,
         "install_resolver_dependencies": true,
-        "tools": [
-
-        ]
+        "tools": []
       },
       "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools: []\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
       "translations": {
-        "tutorial": [
-
-        ],
-        "slides": [
-
-        ],
+        "tutorial": [],
+        "slides": [],
         "video": false
       },
       "license": "CC-BY-4.0",

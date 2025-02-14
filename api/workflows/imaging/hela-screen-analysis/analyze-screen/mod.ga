@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -20,9 +19,7 @@
       ],
       "label": "input images",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 0
@@ -33,17 +30,14 @@
       "type": "data_collection_input",
       "uuid": "f58fad4c-b657-4f02-99ee-839f6d89b19a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -52,9 +46,7 @@
       ],
       "label": "rules",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 120
@@ -65,9 +57,7 @@
       "type": "data_input",
       "uuid": "88e6cadf-78bf-4e30-bb2d-c601532dbd7a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -84,14 +74,10 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "feature_extraction",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 260,
         "top": 0
@@ -99,9 +85,7 @@
       "subworkflow": {
         "a_galaxy_workflow": "true",
         "annotation": "",
-        "comments": [
-
-        ],
+        "comments": [],
         "format-version": "0.1",
         "name": "feature_extraction",
         "report": {
@@ -113,8 +97,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "",
@@ -123,9 +106,7 @@
             ],
             "label": "input image",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 480,
               "top": 320
@@ -136,17 +117,14 @@
             "type": "data_input",
             "uuid": "061fd715-3ad3-4374-bb4b-6135629e6cc0",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "1": {
             "annotation": "",
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "",
@@ -155,9 +133,7 @@
             ],
             "label": "filter rules",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 800,
               "top": 320
@@ -168,9 +144,7 @@
             "type": "data_input",
             "uuid": "bcfb3a7b-bd44-422d-af27-5ad03cee07eb",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -183,9 +157,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": null,
             "name": "Filter 2-D image",
             "outputs": [
@@ -198,8 +170,7 @@
               "left": 0,
               "top": 0
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/2d_simple_filter/ip_filter_standard/1.12.0+galaxy1",
             "tool_shed_repository": {
               "changeset_revision": "d51310ab328a",
@@ -212,9 +183,7 @@
             "type": "tool",
             "uuid": "9d2fc22b-b588-471c-a132-6b8bbda5ee97",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "",
@@ -227,9 +196,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": null,
             "name": "Threshold image",
             "outputs": [
@@ -242,8 +209,7 @@
               "left": 250,
               "top": 30
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/2d_auto_threshold/ip_threshold/0.18.1+galaxy3",
             "tool_shed_repository": {
               "changeset_revision": "699a5e9146b3",
@@ -256,9 +222,7 @@
             "type": "tool",
             "uuid": "dd096f5b-e497-4697-84e0-1a9585235736",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "4": {
             "annotation": "",
@@ -271,9 +235,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": null,
             "name": "Convert binary image to label map",
             "outputs": [
@@ -286,8 +248,7 @@
               "left": 500,
               "top": 60
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/binary2labelimage/ip_binary_to_labelimage/0.5+galaxy0",
             "tool_shed_repository": {
               "changeset_revision": "984358e43242",
@@ -300,9 +261,7 @@
             "type": "tool",
             "uuid": "46924577-7b9b-416d-9bb4-3ed0b36c1ffd",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "5": {
             "annotation": "",
@@ -315,9 +274,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": null,
             "name": "Extract image features",
             "outputs": [
@@ -330,8 +287,7 @@
               "left": 770,
               "top": 170
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/2d_feature_extraction/ip_2d_feature_extraction/0.18.1+galaxy0",
             "tool_shed_repository": {
               "changeset_revision": "5bc8cdc17fd0",
@@ -344,9 +300,7 @@
             "type": "tool",
             "uuid": "8b2be7cc-bda0-4a3d-80b8-ae58eab23212",
             "when": null,
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "6": {
             "annotation": "",
@@ -367,9 +321,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": null,
             "name": "Filter label map by rules",
             "outputs": [
@@ -382,8 +334,7 @@
               "left": 1080,
               "top": 0
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/2d_filter_segmentation_by_features/ip_2d_filter_segmentation_by_features/0.0.1-4",
             "tool_shed_repository": {
               "changeset_revision": "9d47aabda459",
@@ -437,8 +388,7 @@
               "left": 1120,
               "top": 390
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/2d_feature_extraction/ip_2d_feature_extraction/0.18.1+galaxy0",
             "tool_shed_repository": {
               "changeset_revision": "5bc8cdc17fd0",
@@ -460,18 +410,14 @@
             ]
           }
         },
-        "tags": [
-
-        ],
+        "tags": [],
         "uuid": "0ccca10e-45d7-40cb-8d5a-d72efab3b626"
       },
       "tool_id": null,
       "type": "subworkflow",
       "uuid": "76d5f415-4457-439d-9246-8ed502c4d27b",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -502,8 +448,7 @@
         "left": 530,
         "top": 40
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
       "tool_shed_repository": {
         "changeset_revision": "90981f86000f",

@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Predict binding using IEDB and check novelty peptides with PepQuery",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "GPL-3.0-or-later",
   "name": "GigaScience-IEDB-PepQuery-Neoantigen",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "A single column tabular file with an HLA per line IEDB format: e.g.  HLA-A*01:01\n",
@@ -26,9 +23,7 @@
       ],
       "label": "IEDB-optityle-seq2hla-alleles",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 319.4960920164948
@@ -39,17 +34,14 @@
       "type": "data_input",
       "uuid": "151ad927-d27e-4565-9fde-e8fe24297b43",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "A fasta file of peptides to test for HLA binding, can be from Arriba\n",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "A fasta file of peptides to test for HLA binding, can be from Arriba\n",
@@ -58,9 +50,7 @@
       ],
       "label": "FASTA-for-IEDB",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1.22265625,
         "top": 439.3763720787159
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "e9431cfe-4617-4d93-b149-c695c92e2761",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "MSMS spectrum",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "MSMS spectrum",
@@ -90,9 +77,7 @@
       ],
       "label": "MSMS-Spectrum",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1139.828125,
         "top": 331.01332092285156
@@ -103,9 +88,7 @@
       "type": "data_input",
       "uuid": "52751f4b-710f-4057-85b0-9264a7da61b5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "IEDB binding prediction",
@@ -140,8 +123,7 @@
         "left": 268.0664367675781,
         "top": 347.67715332871603
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/iedb_api/iedb_api/2.15.2",
       "tool_shed_repository": {
         "changeset_revision": "7ed6dda64a81",
@@ -173,9 +155,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter-weak-binder",
       "name": "Filter",
       "outputs": [
@@ -229,9 +209,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filter-strong-binders",
       "name": "Filter",
       "outputs": [
@@ -401,9 +379,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Removing_first_line-weak",
       "name": "Remove beginning",
       "outputs": [
@@ -450,9 +426,7 @@
           "output_name": "table"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Removing_first_line-strong",
       "name": "Remove beginning",
       "outputs": [
@@ -499,9 +473,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Peptide-Column-extraction-weak",
       "name": "Cut",
       "outputs": [
@@ -548,9 +520,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Peptide-Column-extraction-strong",
       "name": "Cut",
       "outputs": [
@@ -601,9 +571,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "PepQuery-IEDB-Peptides-weak",
       "name": "PepQuery2",
       "outputs": [
@@ -676,9 +644,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "PepQuery-IEDB-Peptides-strong",
       "name": "PepQuery2",
       "outputs": [
@@ -747,9 +713,7 @@
           "output_name": "psm_rank_txt"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filtering-Confident-peptides-weak",
       "name": "Filter",
       "outputs": [
@@ -796,9 +760,7 @@
           "output_name": "psm_rank_txt"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Filtering-Confident-peptides-strong",
       "name": "Filter",
       "outputs": [

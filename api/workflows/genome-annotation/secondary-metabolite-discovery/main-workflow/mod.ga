@@ -9,8 +9,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -19,9 +18,7 @@
       ],
       "label": "Query Genomes",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0.0,
         "top": 138.68778864733008
@@ -32,17 +29,14 @@
       "type": "parameter_input",
       "uuid": "34c92bcf-3ff2-4364-8dd8-0320ea449c09",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -51,9 +45,7 @@
       ],
       "label": "Jupyter Notebook Genbank2Features",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1000.13886850544,
         "top": 967.9040340744108
@@ -64,17 +56,14 @@
       "type": "data_input",
       "uuid": "5abb2d68-5c14-43af-9878-bf2b51bda3c5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -83,9 +72,7 @@
       ],
       "label": "Target Molecules (Natural Compound Library)",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 999.7029249019243,
         "top": 1102.574230607614
@@ -96,9 +83,7 @@
       "type": "data_input",
       "uuid": "41f458be-660b-40f7-abef-c57489b3099c",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -111,9 +96,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "NCBI Accession Download",
       "outputs": [
@@ -130,8 +113,7 @@
         "left": 295.1263437181945,
         "top": 125.66098683332416
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_acc_download/ncbi_acc_download/0.2.8+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "e063168e0a81",
@@ -168,9 +150,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Molecule to fingerprint",
       "outputs": [
@@ -183,8 +163,7 @@
         "left": 2010.1354229667056,
         "top": 1452.002684577643
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/chemfp/ctb_chemfp_mol2fps/1.5",
       "tool_shed_repository": {
         "changeset_revision": "73de2fe4bf92",
@@ -197,9 +176,7 @@
       "type": "tool",
       "uuid": "aa87e143-73b8-4bdb-a7a0-ca58fa5b56ea",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -254,8 +231,7 @@
         "left": 639.6596780017987,
         "top": 0
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/antismash/antismash/6.1.1+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "bc88856eddab",
@@ -312,9 +288,7 @@
           "output_name": "genbank"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Collapse clusters in one Genbank entry",
       "name": "Collapse Collection",
       "outputs": [
@@ -327,8 +301,7 @@
         "left": 963.0516444199695,
         "top": 145.633549188099
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
       "tool_shed_repository": {
         "changeset_revision": "90981f86000f",
@@ -364,9 +337,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Extract SMILES qualifiers",
       "name": "Interactive JupyTool and notebook",
       "outputs": [
@@ -402,9 +373,7 @@
       "type": "tool",
       "uuid": "638039a7-9d6b-41eb-a036-4cac8db5f00c",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -417,9 +386,7 @@
           "output_name": "output_collection"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Convert table to smi format",
       "name": "Text reformatting",
       "outputs": [
@@ -432,8 +399,7 @@
         "left": 1582.7830312879657,
         "top": 358.9621674412657
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2",
       "tool_shed_repository": {
         "changeset_revision": "ddf54b12c295",
@@ -446,9 +412,7 @@
       "type": "tool",
       "uuid": "ac87e9eb-6067-4e36-a217-ffb54fe1542c",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -461,9 +425,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Remove beginning",
       "outputs": [
@@ -491,9 +453,7 @@
       "type": "tool",
       "uuid": "265021b0-aaf6-4ebf-b119-8b44d182b6e7",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -506,9 +466,7 @@
           "output_name": "out_file1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Remove duplicated molecules",
       "outputs": [
@@ -521,8 +479,7 @@
         "left": 1903.0543248162603,
         "top": 676.4962032909826
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remduplicates/openbabel_remDuplicates/3.1.1+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "b2569e22b40c",
@@ -535,9 +492,7 @@
       "type": "tool",
       "uuid": "8e8c6701-a2fe-4094-b2a4-456cdad179e1",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -550,9 +505,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Molecule to fingerprint",
       "outputs": [
@@ -565,8 +518,7 @@
         "left": 2058.3987866711313,
         "top": 1167.3289047315027
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/chemfp/ctb_chemfp_mol2fps/1.5",
       "tool_shed_repository": {
         "changeset_revision": "73de2fe4bf92",
@@ -579,9 +531,7 @@
       "type": "tool",
       "uuid": "25d34524-58e6-48de-9338-f2ba2202bb4c",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -594,9 +544,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Natural Product",
       "outputs": [
@@ -609,8 +557,7 @@
         "left": 2460.992015023759,
         "top": 718.0359582829228
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/natural_product_likeness/ctb_np-likeness-calculator/2.1",
       "tool_shed_repository": {
         "changeset_revision": "41e31a198b34",
@@ -623,9 +570,7 @@
       "type": "tool",
       "uuid": "cd93f611-e3c2-4dea-8f2d-de3f117b53d5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "13": {
       "annotation": "",
@@ -638,9 +583,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Drug-likeness",
       "outputs": [
@@ -653,8 +596,7 @@
         "left": 2461.2872282707617,
         "top": 871.2779571002086
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/qed/ctb_silicos_qed/2021.03.4+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "52a8d34dd08f",
@@ -667,9 +609,7 @@
       "type": "tool",
       "uuid": "541686cd-8c32-4d7d-b82f-c04c8f51c5cf",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -686,9 +626,7 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Similarity Search",
       "outputs": [
@@ -701,8 +639,7 @@
         "left": 2285.6027727875194,
         "top": 1412.4517945638027
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/simsearch/ctb_simsearch/0.2",
       "tool_shed_repository": {
         "changeset_revision": "0892f7ced10c",
@@ -715,9 +652,7 @@
       "type": "tool",
       "uuid": "151168d8-6427-45b1-9dd7-ca9345f298cb",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     }
   },
   "tags": [

@@ -9,11 +9,8 @@
       "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/retrieve_scxa/retrieve_scxa/v0.0.2+galaxy2",
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
-      "inputs": [
-
-      ],
+      "input_connections": {},
+      "inputs": [],
       "label": null,
       "name": "EBI SCXA Data Retrieval",
       "outputs": [
@@ -107,8 +104,7 @@
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "This should be output from the MuSiC Deconvolution | Data generation | sc | metadata workflow",
@@ -117,9 +113,7 @@
       ],
       "label": "Single cell metadata",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1160.0208740234375,
         "top": 364
@@ -129,9 +123,7 @@
       "tool_version": null,
       "type": "data_input",
       "uuid": "f43195bc-96ef-4c07-8537-2e91c50b554c",
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -213,9 +205,7 @@
           "output_name": "output_h5"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Inspect AnnData",
       "outputs": [
@@ -228,8 +218,7 @@
         "left": 565.0208740234375,
         "top": 322.46875
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.7.5+galaxy1",
       "tool_shed_repository": {
         "changeset_revision": "ee98d611afc6",
@@ -260,9 +249,7 @@
           "output_name": "X"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Transpose",
       "outputs": [
@@ -275,8 +262,7 @@
         "left": 831.010498046875,
         "top": 329.46875
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.1.0+galaxy2",
       "tool_shed_repository": {
         "changeset_revision": "ac092723240d",
@@ -307,9 +293,7 @@
           "output_name": "out_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "annotateMyIDs",
       "outputs": [
@@ -365,14 +349,10 @@
           "output_name": "out_file"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "1st step removed - Convert from Ensembl to GeneSymbol, summing duplicate genes",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1184.510498046875,
         "top": 0
@@ -395,8 +375,7 @@
             "content_id": null,
             "errors": null,
             "id": 0,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "",
@@ -405,9 +384,7 @@
             ],
             "label": "Annotated IDs",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0.5,
               "top": 127.52500915527344
@@ -430,8 +407,7 @@
             "content_id": null,
             "errors": null,
             "id": 1,
-            "input_connections": {
-            },
+            "input_connections": {},
             "inputs": [
               {
                 "description": "",
@@ -440,9 +416,7 @@
             ],
             "label": "Expression Matrix (Gene Rows)",
             "name": "Input dataset",
-            "outputs": [
-
-            ],
+            "outputs": [],
             "position": {
               "left": 0.0,
               "top": 237.01251220703125
@@ -452,9 +426,7 @@
             "tool_version": null,
             "type": "data_input",
             "uuid": "cb8ea816-9239-421d-ae4c-8bba1b07d2f9",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "2": {
             "annotation": "",
@@ -487,8 +459,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -504,9 +475,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "51d68e09-2af1-4c81-9ca8-b76afe06e9f7",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "3": {
             "annotation": "",
@@ -523,9 +492,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Merge Gene Symbol and matrix together",
             "name": "Join",
             "outputs": [
@@ -540,8 +507,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutput": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "output"
               }
@@ -557,9 +523,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "76d38310-a221-4b70-bcb9-296b4870bb52",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "4": {
             "annotation": "",
@@ -572,9 +536,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Relocate the Gene Symbol column to 1st column",
             "name": "Text reformatting",
             "outputs": [
@@ -589,8 +551,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -606,9 +567,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "f1d4e7aa-4ac7-4258-a1eb-a335cad2c861",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "5": {
             "annotation": "",
@@ -621,9 +580,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Remove second column with Ensembl ID's",
             "name": "Advanced Cut",
             "outputs": [
@@ -638,8 +595,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutput": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "output"
               }
@@ -655,9 +611,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "334f4810-84e0-4b5c-962f-0e2e6fbcc5f8",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "6": {
             "annotation": "",
@@ -670,9 +624,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Count Unique occurences of Gene Symbol",
             "name": "Text reformatting",
             "outputs": [
@@ -687,8 +639,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -704,9 +655,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "111ebd66-534f-4b17-9d60-aeff287fe500",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "7": {
             "annotation": "",
@@ -719,9 +668,7 @@
                 "output_name": "output"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Group rows by Gene Symbol and append their values (Long Format)",
             "name": "Text reformatting",
             "outputs": [
@@ -736,8 +683,7 @@
             },
             "post_job_actions": {
               "HideDatasetActionoutfile": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "outfile"
               }
@@ -753,9 +699,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "e2ce8f93-c8e2-490a-a3b6-3e580c0a6604",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "8": {
             "annotation": "",
@@ -768,9 +712,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Unique Gene Symbol Occurences, sorted in descending frequency.",
             "name": "Sort",
             "outputs": [
@@ -783,8 +725,7 @@
               "left": 1067.9625244140625,
               "top": 2.0625
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "sort1",
             "tool_state": "{\"column\": \"2\", \"column_set\": [], \"header_lines\": \"0\", \"input\": {\"__class__\": \"ConnectedValue\"}, \"order\": \"DESC\", \"style\": \"num\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
             "tool_version": null,
@@ -809,9 +750,7 @@
                 "output_name": "outfile"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Pivot Long Format to Wide Format (Matrix)",
             "name": "Table Compute",
             "outputs": [
@@ -826,8 +765,7 @@
             },
             "post_job_actions": {
               "HideDatasetActiontable": {
-                "action_arguments": {
-                },
+                "action_arguments": {},
                 "action_type": "HideDatasetAction",
                 "output_name": "table"
               }
@@ -843,9 +781,7 @@
             "tool_version": null,
             "type": "tool",
             "uuid": "571a650f-5b76-4103-98f1-7a8400f1abbd",
-            "workflow_outputs": [
-
-            ]
+            "workflow_outputs": []
           },
           "10": {
             "annotation": "",
@@ -858,9 +794,7 @@
                 "output_name": "table"
               }
             },
-            "inputs": [
-
-            ],
+            "inputs": [],
             "label": "Final Count Matrix with Gene Symbol ID's",
             "name": "Text transformation",
             "outputs": [
@@ -873,8 +807,7 @@
               "left": 1284.0125732421875,
               "top": 386.07501220703125
             },
-            "post_job_actions": {
-            },
+            "post_job_actions": {},
             "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/1.1.1",
             "tool_shed_repository": {
               "changeset_revision": "f46f0e4f75c4",
@@ -929,9 +862,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Construct Expression Set Object",
       "outputs": [
@@ -999,9 +930,7 @@
           "output_name": "out_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Manipulate Expression Set Object",
       "outputs": [
@@ -1060,9 +989,7 @@
           "output_name": "out_rds"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Manipulate Expression Set Object",
       "outputs": [

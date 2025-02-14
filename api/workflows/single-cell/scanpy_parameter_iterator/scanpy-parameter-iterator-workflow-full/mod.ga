@@ -13,8 +13,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -23,9 +22,7 @@
       ],
       "label": "Scanpy RunPCA: AnnData object",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 25.151777265812267,
         "top": 0
@@ -36,20 +33,15 @@
       "type": "data_input",
       "uuid": "ce25265d-8c04-490f-bd84-dd417a635456",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "",
       "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_parameter_iterator/scanpy_parameter_iterator/0.0.1+galaxy9",
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
-      "inputs": [
-
-      ],
+      "input_connections": {},
+      "inputs": [],
       "label": "ParameterIterator n-neighbors",
       "name": "Scanpy ParameterIterator",
       "outputs": [
@@ -83,17 +75,14 @@
       "type": "tool",
       "uuid": "359bcd81-06b2-4832-b58b-bd6c4f66c0e2",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -102,9 +91,7 @@
       ],
       "label": "Scanpy ComputeGraph on data X and data Y: Graph object AnnData",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 31.588610949585586,
         "top": 368.3566064231565
@@ -115,20 +102,15 @@
       "type": "data_input",
       "uuid": "fae9d652-9474-4b6c-9bd2-9e0eb6cb5ab4",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
       "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_parameter_iterator/scanpy_parameter_iterator/0.0.1+galaxy9",
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
-      "inputs": [
-
-      ],
+      "input_connections": {},
+      "inputs": [],
       "label": "ParameterIterator perplexity",
       "name": "Scanpy ParameterIterator",
       "outputs": [
@@ -162,17 +144,14 @@
       "type": "tool",
       "uuid": "f2de78f6-9b41-4c78-bbbd-03100589e50d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
       "content_id": null,
       "errors": null,
       "id": 4,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "",
@@ -181,9 +160,7 @@
       ],
       "label": "Scanpy RunUMAP on data X: UMAP object AnnData",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 12.794588175128467,
         "top": 688.9871973265816
@@ -194,20 +171,15 @@
       "type": "data_input",
       "uuid": "6f462fe5-e34b-4d8f-93bc-61b0d0e99488",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
       "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_parameter_iterator/scanpy_parameter_iterator/0.0.1+galaxy9",
       "errors": null,
       "id": 5,
-      "input_connections": {
-      },
-      "inputs": [
-
-      ],
+      "input_connections": {},
+      "inputs": [],
       "label": "ParameterIterator resolution",
       "name": "Scanpy ParameterIterator",
       "outputs": [
@@ -241,9 +213,7 @@
       "type": "tool",
       "uuid": "86d2b6c9-b247-4bd2-9f34-4958c10eb425",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -260,9 +230,7 @@
           "output_name": "parameter_iteration"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy ComputeGraph",
       "outputs": [
@@ -319,9 +287,7 @@
           "output_name": "parameter_iteration"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy RunTSNE",
       "outputs": [
@@ -382,9 +348,7 @@
           "output_name": "parameter_iteration"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy FindCluster",
       "outputs": [
@@ -441,9 +405,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy RunTSNE",
       "outputs": [
@@ -500,9 +462,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy RunUMAP",
       "outputs": [
@@ -559,9 +519,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy PlotEmbed",
       "outputs": [
@@ -574,8 +532,7 @@
         "left": 610.8375710947927,
         "top": 629.3556101888285
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9",
       "tool_shed_repository": {
         "changeset_revision": "35f6611fb8c3",
@@ -607,9 +564,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy PlotEmbed",
       "outputs": [
@@ -622,8 +577,7 @@
         "left": 601.9354642911717,
         "top": 807.4162217137739
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9",
       "tool_shed_repository": {
         "changeset_revision": "35f6611fb8c3",
@@ -655,9 +609,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy PlotEmbed",
       "outputs": [
@@ -670,8 +622,7 @@
         "left": 593.5750000507026,
         "top": 977.1437760474608
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9",
       "tool_shed_repository": {
         "changeset_revision": "35f6611fb8c3",
@@ -703,9 +654,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy RunUMAP",
       "outputs": [
@@ -762,9 +711,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy FindCluster",
       "outputs": [
@@ -821,9 +768,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy FindCluster",
       "outputs": [
@@ -880,9 +825,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy PlotEmbed",
       "outputs": [
@@ -895,8 +838,7 @@
         "left": 1122.427370848608,
         "top": 356.74062604698014
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9",
       "tool_shed_repository": {
         "changeset_revision": "35f6611fb8c3",
@@ -928,9 +870,7 @@
           "output_name": "output_h5ad"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Scanpy PlotEmbed",
       "outputs": [
@@ -943,8 +883,7 @@
         "left": 1378.4911495849283,
         "top": 64.43740029026476
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9",
       "tool_shed_repository": {
         "changeset_revision": "35f6611fb8c3",

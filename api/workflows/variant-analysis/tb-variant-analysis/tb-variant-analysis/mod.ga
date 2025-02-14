@@ -1,9 +1,7 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Predict variants and drug resistance from M. tuberculosis sequence samples (Illumina)",
-  "comments": [
-
-  ],
+  "comments": [],
   "format-version": "0.1",
   "license": "AGPL-3.0-or-later",
   "name": "TB Variant Analysis v1.0",
@@ -16,8 +14,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "List of paired Illumina reads (set format to fastqsanger or fastqsanger.gz as appropriate)",
@@ -26,9 +23,7 @@
       ],
       "label": "Reads",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 197.65334499942068
@@ -39,17 +34,14 @@
       "type": "data_collection_input",
       "uuid": "2bfdfb62-da85-4d2d-8609-8f5e6975b4b3",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "M. tuberculosis reference genome (must be in H37Rv coordinates. The M. tuberculosis inferred ancestral genome is recommended)",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "M. tuberculosis reference genome (must be in H37Rv coordinates. The M. tuberculosis inferred ancestral genome is recommended)",
@@ -58,9 +50,7 @@
       ],
       "label": "Reference Genome",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1.2375059369900399,
         "top": 468.60335731890825
@@ -71,17 +61,14 @@
       "type": "data_input",
       "uuid": "023233a0-8cb1-4558-8861-cd246ab58bac",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "Minimum depth of coverage for a position on the genome",
       "content_id": null,
       "errors": null,
       "id": 2,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Minimum depth of coverage for a position on the genome",
@@ -90,9 +77,7 @@
       ],
       "label": "Minimum depth of coverage",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1.8793911063654463,
         "top": 625.941216238093
@@ -103,17 +88,14 @@
       "type": "parameter_input",
       "uuid": "e31bf396-08b6-43ce-872a-545a5e4580c6",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "Minimum proportion of reads that must support a variant for it to be called",
       "content_id": null,
       "errors": null,
       "id": 3,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Minimum proportion of reads that must support a variant for it to be called",
@@ -122,9 +104,7 @@
       ],
       "label": "Minimum variant allele frequency",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 1.358958473709409,
         "top": 769.7667492120408
@@ -135,17 +115,14 @@
       "type": "parameter_input",
       "uuid": "d1814962-a30d-463a-a081-857a5141385b",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "Increasing the minimum seed length (-k) parameter can help eliminate matches from contaminants. If used this should be set to 2/3rds of the read length, i.e. the string \"-k 100\" should be used for 150 base pair reads",
       "content_id": null,
       "errors": null,
       "id": 4,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Increasing the minimum seed length (-k) parameter can help eliminate matches from contaminants. If used this should be set to 2/3rds of the read length, i.e. the string \"-k 100\" should be used for 150 base pair reads",
@@ -154,9 +131,7 @@
       ],
       "label": "Additional BWA-MEM options",
       "name": "Input parameter",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 7.8094297093662135,
         "top": 931.4341211532
@@ -167,9 +142,7 @@
       "type": "parameter_input",
       "uuid": "40d47253-c7c5-471b-871c-9a19fbe60bfe",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -210,20 +183,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_paired_coll": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_paired_coll"
         },
         "HideDatasetActionreport_html": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "report_html"
         },
         "HideDatasetActionreport_json": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "report_json"
         }
@@ -240,9 +210,7 @@
       "type": "tool",
       "uuid": "c900de82-0f5c-464a-aa86-10ec55055884",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -255,9 +223,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "seqret",
       "outputs": [
@@ -272,8 +238,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionout_file1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out_file1"
         }
@@ -290,9 +255,7 @@
       "type": "tool",
       "uuid": "229be91a-69fc-42a8-a2b9-5e75ebbc7da5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "7": {
       "annotation": "",
@@ -369,20 +332,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionsnpconsensus": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "snpconsensus"
         },
         "HideDatasetActionsnptab": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "snptab"
         },
         "HideDatasetActionsnpvcf": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "snpvcf"
         }
@@ -399,9 +359,7 @@
       "type": "tool",
       "uuid": "92c47f52-3c46-4d17-a819-6ccd775a7913",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -438,8 +396,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         },
@@ -487,9 +444,7 @@
           "output_name": "snpsbam"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "QualiMap BamQC",
       "outputs": [
@@ -508,14 +463,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_html": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_html"
         },
         "HideDatasetActionraw_data": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "raw_data"
         }
@@ -532,9 +485,7 @@
       "type": "tool",
       "uuid": "dafae411-2524-4d52-80ca-771f307df5b5",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "10": {
       "annotation": "",
@@ -551,9 +502,7 @@
           "output_name": "snpsbam"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "mosdepth",
       "outputs": [
@@ -576,20 +525,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_global_dist": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_global_dist"
         },
         "HideDatasetActionoutput_quantized_bed": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_quantized_bed"
         },
         "HideDatasetActionoutput_summary": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_summary"
         }
@@ -606,9 +552,7 @@
       "type": "tool",
       "uuid": "caada1a3-9a73-4c62-9904-8d2e2b8e419d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "11": {
       "annotation": "",
@@ -621,9 +565,7 @@
           "output_name": "snpvcf"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "TB Variant Filter",
       "outputs": [
@@ -638,8 +580,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output1"
         }
@@ -656,9 +597,7 @@
       "type": "tool",
       "uuid": "3ea80805-0fac-4462-833e-668abf9d049d",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "12": {
       "annotation": "",
@@ -699,14 +638,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_vcf": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_vcf"
         },
         "HideDatasetActionresults_json": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "results_json"
         },
@@ -749,9 +686,7 @@
           "output_name": "snpvcf"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "TB Variant Filter",
       "outputs": [
@@ -764,8 +699,7 @@
         "left": 1136.2816706306537,
         "top": 835.6661847310314
       },
-      "post_job_actions": {
-      },
+      "post_job_actions": {},
       "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/tb_variant_filter/tb_variant_filter/0.4.0+galaxy0",
       "tool_shed_repository": {
         "changeset_revision": "32f14a2723ec",
@@ -778,9 +712,7 @@
       "type": "tool",
       "uuid": "e2d53b94-ea3d-423f-9948-bf227f2d158a",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "14": {
       "annotation": "",
@@ -793,9 +725,7 @@
           "output_name": "raw_data"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Flatten collection",
       "outputs": [
@@ -810,8 +740,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -822,9 +751,7 @@
       "type": "tool",
       "uuid": "3dbd9d1c-5f18-4ec4-be12-dc25cfc1a714",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "15": {
       "annotation": "bcftools consensus requires a region file of low coverage regions in 1 based coordinates, mosdepth produces one in BED format with LOW and PASS for low coverage and non-low coverage regions. This converts from the one format to the other.",
@@ -857,8 +784,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutfile": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outfile"
         }
@@ -875,9 +801,7 @@
       "type": "tool",
       "uuid": "4778f600-d435-4ca0-a4f2-45fbd3aeceeb",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "16": {
       "annotation": "",
@@ -890,9 +814,7 @@
           "output_name": "output1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Text transformation",
       "outputs": [
@@ -949,9 +871,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "MultiQC",
       "outputs": [
@@ -970,8 +890,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionstats": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "stats"
         },
@@ -1088,9 +1007,7 @@
           "output_name": "results_json"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "TB Variant Report",
       "outputs": [
@@ -1117,14 +1034,12 @@
       },
       "post_job_actions": {
         "HideDatasetActiondrug_resistance_report_txt": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "drug_resistance_report_txt"
         },
         "HideDatasetActionvariants_report_txt": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "variants_report_txt"
         },

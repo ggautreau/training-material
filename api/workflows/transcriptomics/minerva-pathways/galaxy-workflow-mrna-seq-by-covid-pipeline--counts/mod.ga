@@ -10,8 +10,7 @@
       "content_id": null,
       "errors": null,
       "id": 0,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Input list of fastqsanger format sequencing data",
@@ -20,9 +19,7 @@
       ],
       "label": "mRNA-Seq Reads",
       "name": "Input dataset collection",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 0,
         "top": 0
@@ -33,17 +30,14 @@
       "type": "data_collection_input",
       "uuid": "dd496c2b-e61f-4a54-8cd4-501cc302b758",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "1": {
       "annotation": "Export of UCSC Genome, just the genes.",
       "content_id": null,
       "errors": null,
       "id": 1,
-      "input_connections": {
-      },
+      "input_connections": {},
       "inputs": [
         {
           "description": "Export of UCSC Genome, just the genes.",
@@ -52,9 +46,7 @@
       ],
       "label": "UCSC Genome",
       "name": "Input dataset",
-      "outputs": [
-
-      ],
+      "outputs": [],
       "position": {
         "left": 560,
         "top": 734
@@ -65,9 +57,7 @@
       "type": "data_input",
       "uuid": "71a430b7-df7c-46a5-8826-f881a122b376",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "2": {
       "annotation": "",
@@ -80,9 +70,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "FastQC",
       "outputs": [
@@ -101,14 +89,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionhtml_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "html_file"
         },
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         }
@@ -125,9 +111,7 @@
       "type": "tool",
       "uuid": "fcd4b97f-f2cd-4779-ba55-619f89d281ab",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "3": {
       "annotation": "",
@@ -140,9 +124,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Cutadapt",
       "outputs": [
@@ -161,14 +143,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionout1": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "out1"
         },
         "HideDatasetActionreport": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "report"
         }
@@ -185,9 +165,7 @@
       "type": "tool",
       "uuid": "613277db-66d2-456e-ab58-b31110aa7710",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "4": {
       "annotation": "",
@@ -200,9 +178,7 @@
           "output_name": "out1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "FastQC",
       "outputs": [
@@ -221,14 +197,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionhtml_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "html_file"
         },
         "HideDatasetActiontext_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "text_file"
         }
@@ -245,9 +219,7 @@
       "type": "tool",
       "uuid": "d98ef5cd-bcac-4144-8c3a-08f37719bcb8",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "5": {
       "annotation": "",
@@ -260,9 +232,7 @@
           "output_name": "out1"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "HISAT2",
       "outputs": [
@@ -281,14 +251,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_alignments": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_alignments"
         },
         "HideDatasetActionsummary_file": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "summary_file"
         }
@@ -305,9 +273,7 @@
       "type": "tool",
       "uuid": "ba1890a3-5f99-4f42-a963-f9b749477dba",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "6": {
       "annotation": "",
@@ -320,9 +286,7 @@
           "output_name": "output_alignments"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "featureCounts",
       "outputs": [
@@ -345,20 +309,17 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput_feature_lengths": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_feature_lengths"
         },
         "HideDatasetActionoutput_short": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_short"
         },
         "HideDatasetActionoutput_summary": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output_summary"
         }
@@ -403,9 +364,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Read Distribution",
       "outputs": [
@@ -420,8 +379,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutput": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "output"
         }
@@ -438,9 +396,7 @@
       "type": "tool",
       "uuid": "dc003494-4baf-4b17-90d1-3e835cfcdba9",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "8": {
       "annotation": "",
@@ -457,9 +413,7 @@
           "output_name": "output"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": null,
       "name": "Gene Body Coverage (BAM)",
       "outputs": [
@@ -478,14 +432,12 @@
       },
       "post_job_actions": {
         "HideDatasetActionoutputcurvespdf": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outputcurvespdf"
         },
         "HideDatasetActionoutputtxt": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "outputtxt"
         }
@@ -502,9 +454,7 @@
       "type": "tool",
       "uuid": "b38af1f6-6d3a-4a7d-ba53-0a2c18c297f0",
       "when": null,
-      "workflow_outputs": [
-
-      ]
+      "workflow_outputs": []
     },
     "9": {
       "annotation": "",
@@ -541,9 +491,7 @@
           "output_name": "output_summary"
         }
       },
-      "inputs": [
-
-      ],
+      "inputs": [],
       "label": "Multi QC raw reads",
       "name": "MultiQC",
       "outputs": [
@@ -562,8 +510,7 @@
       },
       "post_job_actions": {
         "HideDatasetActionstats": {
-          "action_arguments": {
-          },
+          "action_arguments": {},
           "action_type": "HideDatasetAction",
           "output_name": "stats"
         }
