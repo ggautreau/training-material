@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@9c836eef133b9c19c7ad6785741082536dac3a7b",
+		release: "galaxy-training-network@b1fc89500e0e879ad1fd1693a09d769eab0fc587",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Importing files from public atlases">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-01-14 11:47:18 +0000">
+<meta name="DC.date" content="2025-02-14 18:58:23 +0000">
 <meta name="DC.creator" content="Julia Jakiela">
 <meta name="DC.creator" content="Wendi Bacon"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -187,7 +187,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-01-14 11:47:18 +0000",
+  "dateModified": "2025-02-14 18:58:23 +0000",
   "datePublished": "2023-11-14 17:16:58 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -264,7 +264,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Importing files from public atlases",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/EBI-retrieval/tutorial.html",
-  "version": 6,
+  "version": 7,
   "timeRequired": "PT15M",
   "teaches": "- You will retrieve raw data from the EBI Single Cell Expression Atlas and Human Cell Atlas.\n- You will manipulate the metadata and matrix files.\n- You will combine the metadata and matrix files into an AnnData or Seurat object for downstream analysis.",
   "keywords": [
@@ -1087,6 +1087,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
+      "url": "https://bio.tools/tool/scanpy",
+      "name": "SCANPY"
+    },
+    {
+      "@type": "Thing",
       "url": "https://bio.tools/tool/galaxy",
       "name": "Galaxy"
     }
@@ -1745,7 +1750,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Nov 14, 2023 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Jan 14, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 14, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1765,7 +1770,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (1 recent ratings, 1 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 6 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 7 </div>
 
     </blockquote>
     </section>
@@ -1961,7 +1966,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <div class="box-title hands-on-title" id="hands-on-change-cell-metadata-titles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Change cell metadata titles</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace parts of text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace parts of text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.4)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.3+galaxy1" title="Replace parts of text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace parts of text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select lines from”</em>: output from <strong>Column Regex and Replace</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
         <li>In <em>“Find and Replace”</em>:
@@ -2002,7 +2007,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <div class="box-title hands-on-title" id="hands-on-check-the-format-of-mitochondrial-genes-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Check the format of mitochondrial genes names</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1" title="Search in textfiles tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Search in textfiles</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.1)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.3+galaxy1" title="Search in textfiles tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Search in textfiles</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span>  <em>“Select lines from”</em>: <code class="language-plaintext highlighter-rouge">EBI SCXA Data Retrieval on E-MTAB-6945 genes.tsv (Raw filtered counts)</code></li>
         <li><em>“that”</em>: <code class="language-plaintext highlighter-rouge">Match</code></li>
@@ -2067,7 +2072,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     <div class="box-title hands-on-title" id="hands-on-create-the-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Create the AnnData Object</div>
 
     <ol>
-      <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.8.1+galaxy9" title="Scanpy Read10x tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Read10x</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span></li>
+      <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.9.3+galaxy0" title="Scanpy Read10x tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Read10x</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.3+galaxy0)</span></li>
       <li>Make sure you are using version <strong>1.8.1+galaxy9</strong> of the tool (change by clicking on <i class="fas fa-cubes" aria-hidden="true"></i><span class="visually-hidden">tool-versions</span> Versions button):</li>
     </ol>
     <figure id="figure-6" style="max-width: 90%;"><img src="../../images/scrna-casestudy/version.png" alt="List of available tool versions shown when clicking on the 'Versions' button on the top of the page." width="444" height="562" loading="lazy" /><a target="_blank" href="../../images/scrna-casestudy/version.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> How to change the version of the tool</figcaption></figure>
@@ -2096,7 +2101,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     <div class="box-title hands-on-title" id="hands-on-modify-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Modify AnnData object</div>
 
     <ol>
-      <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.8.1+galaxy92" title="AnnData Operations tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>AnnData Operations</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy92)</span></li>
+      <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0" title="AnnData Operations tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>AnnData Operations</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.3+galaxy0)</span></li>
       <li>Make sure you are using version <strong>1.8.1+galaxy92</strong> of the tool (change by clicking on <i class="fas fa-cubes" aria-hidden="true"></i><span class="visually-hidden">tool-versions</span> Versions button)</li>
       <li>Set the following parameters:
         <ul>
@@ -2555,17 +2560,22 @@ install_resolver_dependencies: true
 tools:
 - name: text_processing
   owner: bgruening
-  revisions: d698c222f354
+  revisions: 86755160afbf
   tool_panel_section_label: Text Manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: text_processing
   owner: bgruening
-  revisions: d698c222f354
+  revisions: 86755160afbf
   tool_panel_section_label: Text Manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: anndata_ops
   owner: ebi-gxa
   revisions: a0274bc43b7e
+  tool_panel_section_label: Single-cell
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: anndata_ops
+  owner: ebi-gxa
+  revisions: a4774b7b2e85
   tool_panel_section_label: Single-cell
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: hca_matrix_downloader
@@ -2583,10 +2593,10 @@ tools:
   revisions: 9afcfcd1d215
   tool_panel_section_label: Single-cell
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: seurat_read10x
+- name: scanpy_read_10x
   owner: ebi-gxa
-  revisions: 301cf1b4b43d
-  tool_panel_section_label: Seurat
+  revisions: '078aa23c9374'
+  tool_panel_section_label: Single-cell
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: seurat_read10x
   owner: ebi-gxa
@@ -2722,7 +2732,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/9c836eef133b9c19c7ad6785741082536dac3a7b">9c836ee</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/b1fc89500e0e879ad1fd1693a09d769eab0fc587">b1fc895</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

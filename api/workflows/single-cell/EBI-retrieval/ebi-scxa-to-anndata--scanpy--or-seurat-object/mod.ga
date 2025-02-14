@@ -1,9 +1,13 @@
 {
   "a_galaxy_workflow": "true",
   "annotation": "Creates input file for Filter, Plot, Explore tutorial",
+  "comments": [],
   "format-version": "0.1",
   "license": "CC-BY-4.0",
   "name": "EBI SCXA to AnnData (Scanpy) or Seurat Object",
+  "report": {
+    "markdown": "\n# Workflow Execution Report\n\n## Workflow Inputs\n```galaxy\ninvocation_inputs()\n```\n\n## Workflow Outputs\n```galaxy\ninvocation_outputs()\n```\n\n## Workflow\n```galaxy\nworkflow_display()\n```\n"
+  },
   "steps": {
     "0": {
       "annotation": "EBI Single Cell Atlas accession for the experiment that you want to retrieve.",
@@ -25,7 +29,7 @@
         "top": 0
       },
       "tool_id": null,
-      "tool_state": "{\"default\": \"E-MTAB-6945\", \"parameter_type\": \"text\", \"optional\": true}",
+      "tool_state": "{\"default\": \"E-MTAB-6945\", \"validators\": [], \"parameter_type\": \"text\", \"optional\": true}",
       "tool_version": null,
       "type": "parameter_input",
       "uuid": "ca016294-33ee-47fc-9a42-36a0288d353d",
@@ -34,7 +38,7 @@
         {
           "label": null,
           "output_name": "output",
-          "uuid": "dcf5b67e-9773-4ca5-8e33-b0f875e91d77"
+          "uuid": "4ae4a46e-baea-48bd-8419-2c35627f60df"
         }
       ]
     },
@@ -159,7 +163,7 @@
     },
     "3": {
       "annotation": "Shows how mitochondrial genes are annotated.",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.3+galaxy1",
       "errors": null,
       "id": 3,
       "input_connections": {
@@ -190,15 +194,15 @@
           "output_name": "output"
         }
       },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.3+galaxy1",
       "tool_shed_repository": {
-        "changeset_revision": "ddf54b12c295",
+        "changeset_revision": "86755160afbf",
         "name": "text_processing",
         "owner": "bgruening",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
       "tool_state": "{\"__input_ext\": \"tsv\", \"case_sensitive\": \"-i\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"color\": \"COLOR\", \"infile\": {\"__class__\": \"ConnectedValue\"}, \"invert\": \"\", \"lines_after\": \"0\", \"lines_before\": \"0\", \"regex_type\": \"-P\", \"url_paste\": \"mt\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-      "tool_version": "1.1.1",
+      "tool_version": "9.3+galaxy1",
       "type": "tool",
       "uuid": "51b0361d-00dd-45cf-98db-90b2242b6cb3",
       "when": null,
@@ -212,7 +216,7 @@
     },
     "4": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.3+galaxy1",
       "errors": null,
       "id": 4,
       "input_connections": {
@@ -243,15 +247,15 @@
           "output_name": "outfile"
         }
       },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.3+galaxy1",
       "tool_shed_repository": {
-        "changeset_revision": "d698c222f354",
+        "changeset_revision": "86755160afbf",
         "name": "text_processing",
         "owner": "bgruening",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
       "tool_state": "{\"__input_ext\": \"tabular\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"find_and_replace\": [{\"__index__\": 0, \"find_pattern\": \"\\\"Sample Characteristic[genotype]\\\"\", \"replace_pattern\": \"genotype\", \"is_regex\": false, \"global\": false, \"caseinsensitive\": false, \"wholewords\": false, \"skip_first_line\": false, \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}, {\"__index__\": 1, \"find_pattern\": \"\\\"Sample Characteristic[individual]\\\"\", \"replace_pattern\": \"batch\", \"is_regex\": false, \"global\": false, \"caseinsensitive\": false, \"wholewords\": false, \"skip_first_line\": false, \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}, {\"__index__\": 2, \"find_pattern\": \"\\\"Sample Characteristic[sex]\\\"\", \"replace_pattern\": \"sex\", \"is_regex\": false, \"global\": false, \"caseinsensitive\": false, \"wholewords\": false, \"skip_first_line\": false, \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}, {\"__index__\": 3, \"find_pattern\": \"\\\"Sample Characteristic[cell type]\\\"\", \"replace_pattern\": \"cell_type\", \"is_regex\": false, \"global\": false, \"caseinsensitive\": false, \"wholewords\": false, \"skip_first_line\": false, \"searchwhere\": {\"searchwhere_select\": \"line\", \"__current_case__\": 0}}], \"infile\": {\"__class__\": \"ConnectedValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-      "tool_version": "1.1.4",
+      "tool_version": "9.3+galaxy1",
       "type": "tool",
       "uuid": "27ee778b-6d96-49a3-8c3f-e0d06130de3c",
       "when": null,
@@ -259,7 +263,7 @@
     },
     "5": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.8.1+galaxy9",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.9.3+galaxy0",
       "errors": null,
       "id": 5,
       "input_connections": {
@@ -307,15 +311,15 @@
           "output_name": "output_h5ad"
         }
       },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.8.1+galaxy9",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.9.3+galaxy0",
       "tool_shed_repository": {
-        "changeset_revision": "9afcfcd1d215",
+        "changeset_revision": "078aa23c9374",
         "name": "scanpy_read_10x",
         "owner": "ebi-gxa",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
       "tool_state": "{\"barcodes\": {\"__class__\": \"ConnectedValue\"}, \"cell_meta\": {\"__class__\": \"ConnectedValue\"}, \"gene_meta\": {\"__class__\": \"RuntimeValue\"}, \"genes\": {\"__class__\": \"ConnectedValue\"}, \"matrix\": {\"__class__\": \"ConnectedValue\"}, \"output_format\": \"anndata_h5ad\", \"var_names\": \"gene_ids\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-      "tool_version": "1.8.1+galaxy9",
+      "tool_version": "1.9.3+galaxy0",
       "type": "tool",
       "uuid": "e02346a9-9da0-40fc-85ef-3492cbb73b44",
       "when": null,
@@ -329,7 +333,7 @@
     },
     "6": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_read10x/seurat_read10x/3.2.3+galaxy0",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_read10x/seurat_read10x/4.0.4+galaxy0",
       "errors": null,
       "id": 6,
       "input_connections": {
@@ -350,7 +354,20 @@
           "output_name": "outfile"
         }
       },
-      "inputs": [],
+      "inputs": [
+        {
+          "description": "runtime parameter for tool Seurat Read10x",
+          "name": "input"
+        },
+        {
+          "description": "runtime parameter for tool Seurat Read10x",
+          "name": "input"
+        },
+        {
+          "description": "runtime parameter for tool Seurat Read10x",
+          "name": "input"
+        }
+      ],
       "label": null,
       "name": "Seurat Read10x",
       "outputs": [
@@ -372,15 +389,15 @@
           "output_name": "rds_seurat_file"
         }
       },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_read10x/seurat_read10x/3.2.3+galaxy0",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_read10x/seurat_read10x/4.0.4+galaxy0",
       "tool_shed_repository": {
-        "changeset_revision": "301cf1b4b43d",
+        "changeset_revision": "f5db0e853f57",
         "name": "seurat_read10x",
         "owner": "ebi-gxa",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
       "tool_state": "{\"__input_ext\": \"input\", \"chromInfo\": \"/opt/galaxy/tool-data/shared/ucsc/chrom/?.len\", \"format\": \"rds_seurat\", \"input\": {\"format\": \"mtx\", \"__current_case__\": 1, \"matrix\": {\"__class__\": \"ConnectedValue\"}, \"genes\": {\"__class__\": \"ConnectedValue\"}, \"barcodes\": {\"__class__\": \"ConnectedValue\"}}, \"metadata\": {\"__class__\": \"ConnectedValue\"}, \"min_cells\": null, \"min_features\": null, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-      "tool_version": "3.2.3+galaxy0",
+      "tool_version": "4.0.4+galaxy0",
       "type": "tool",
       "uuid": "1aa185bd-1392-438d-adea-21ed201bc9db",
       "when": null,
@@ -394,7 +411,7 @@
     },
     "7": {
       "annotation": "",
-      "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.8.1+galaxy92",
+      "content_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0",
       "errors": null,
       "id": 7,
       "input_connections": {
@@ -425,15 +442,15 @@
           "output_name": "output_h5ad"
         }
       },
-      "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.8.1+galaxy92",
+      "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0",
       "tool_shed_repository": {
-        "changeset_revision": "a0274bc43b7e",
+        "changeset_revision": "a4774b7b2e85",
         "name": "anndata_ops",
         "owner": "ebi-gxa",
         "tool_shed": "toolshed.g2.bx.psu.edu"
       },
       "tool_state": "{\"add_cell_metadata\": {\"default\": false, \"__current_case__\": 1}, \"copy_adata_to_raw\": false, \"copy_e\": {\"default\": false, \"__current_case__\": 1}, \"copy_l\": {\"default\": false, \"__current_case__\": 1}, \"copy_o\": {\"default\": false, \"__current_case__\": 1}, \"copy_r\": {\"default\": false, \"__current_case__\": 1}, \"copy_u\": {\"default\": false, \"__current_case__\": 1}, \"copy_x\": {\"default\": false, \"__current_case__\": 1}, \"field_unique\": null, \"gene_flags\": [{\"__index__\": 0, \"startswith\": \"mt-\", \"flag\": \"mito\"}], \"gene_symbols_field\": \"Symbol\", \"input_obj_file\": {\"__class__\": \"ConnectedValue\"}, \"modifications\": [], \"output_format\": \"anndata_h5ad\", \"sanitize_varm\": false, \"split_on_obs\": {\"default\": false, \"__current_case__\": 1}, \"swap_layer_to_x\": {\"default\": false, \"__current_case__\": 1}, \"top_genes\": \"50\", \"var_modifications\": [{\"__index__\": 0, \"from_var\": \"gene_symbols\", \"to_var\": \"Symbol\", \"keep_original\": false, \"make_unique\": false}], \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-      "tool_version": "1.8.1+galaxy92",
+      "tool_version": "1.9.3+galaxy0",
       "type": "tool",
       "uuid": "b4616c2c-96f1-4474-97f3-cdbecd37e65b",
       "when": null,
@@ -447,9 +464,10 @@
     }
   },
   "tags": [
+    "Name:single-cell",
     "GTN",
     "Galaxy"
   ],
-  "uuid": "2ea0d0da-aa42-4d9a-8a6c-c5a85f3ac84f",
-  "version": 6
+  "uuid": "12751a59-3d74-4318-8c24-cdf9783c6fb0",
+  "version": 2
 }
