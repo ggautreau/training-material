@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@884ecf8e70a38c3b9e53876ff15ed18510feb35d",
+		release: "galaxy-training-network@8ae05d5641121a2466d1e675bafe06e078164b48",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="CUT&RUN data analysis">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-12-11 11:18:54 +0000">
+<meta name="DC.date" content="2025-02-17 14:24:34 +0000">
 <meta name="DC.creator" content="Florian Heyl"><meta name="description" content="DNA methylation is an epigenetic mechanism used by higher eukaryotes and involved in e.g. gene expression, X-Chromosome inactivating, imprinting, and gene silencing of germline specific gene and repetitive elements.">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Epigenetics / CUT&RUN data analysis / Hands-on: CUT&RUN data analysis">
@@ -185,8 +185,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "type": "project"
   },
   "workTranslation": [],
-  "creativeWorkStatus": "Draft",
-  "dateModified": "2024-12-11 11:18:54 +0000",
+  "creativeWorkStatus": "Active",
+  "dateModified": "2025-02-17 14:24:34 +0000",
   "datePublished": "2024-03-06 07:59:37 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -244,7 +244,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "CUT&RUN data analysis",
   "url": "https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/cut_and_run/tutorial.html",
-  "version": 2,
+  "version": 3,
   "timeRequired": "PT3H",
   "teaches": "- Apply appropriate analysis and quality control steps for CUT&RUN\n- Apply an enrichment analysis and a robust peak detection\n- Find protein binding motifs",
   "keywords": [
@@ -921,18 +921,23 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
-      "url": "https://bio.tools/tool/deeptools",
-      "name": "DeepTools"
+      "url": "https://bio.tools/tool/trim_galore",
+      "name": "Trim Galore"
     },
     {
       "@type": "Thing",
-      "url": "https://bio.tools/tool/deeptools",
-      "name": "DeepTools"
+      "url": "https://bio.tools/tool/bamtools",
+      "name": "BamTools"
     },
     {
       "@type": "Thing",
       "url": "https://bio.tools/tool/bowtie2",
       "name": "Bowtie 2"
+    },
+    {
+      "@type": "Thing",
+      "url": "https://bio.tools/tool/fastqc",
+      "name": "FastQC"
     },
     {
       "@type": "Thing",
@@ -971,6 +976,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
+      "url": "https://bio.tools/tool/multiqc",
+      "name": "MultiQC"
+    },
+    {
+      "@type": "Thing",
       "url": "https://bio.tools/tool/seqcode",
       "name": "SeqCode"
     },
@@ -981,7 +991,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
-      "url": "https://zenodo.org/record/3862793",
+      "url": "https://zenodo.org/record/6823059",
       "name": "Associated Training Datasets"
     }
   ]
@@ -1150,12 +1160,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <article class="tutorial topic-epigenetics">
     <h1 data-toc-skip>CUT&RUN data analysis</h1>
-    
-    <div class="alert alert-warning" role="alert">
-        <h4 class="alert-heading">Under Development!</h4>
-        <p>This tutorial is not in its final state. The content may change a lot in the next months.
-        Because of this status, it is also not listed in the topic pages.</p>
-    </div>
     
 
     <section aria-labelledby="overview-box" id="tutorial-metadata">
@@ -1355,7 +1359,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 <li class="btn btn-default supporting_material">
 
 
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3862793">
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/6823059">
     <i class="far fa-copy" aria-hidden="true"></i>&nbsp;Datasets
 </a>
 
@@ -1408,13 +1412,60 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 
 
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Where to run the tutorial">
+        <i class="fas fa-globe" aria-hidden="true"></i><span class="visually-hidden">instances</span>&nbsp;Available on these Galaxies 
+    </a>
+    <ul class="dropdown-menu">
+        
+	<li class="dropdown-header">
+		<b>Known Working</b>
+	</li>
+	
+	
+
+    
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.eu" title="">
+			UseGalaxy.eu <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+		</a>
+	</li>
+    
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.org" title="">
+			UseGalaxy.org (Main) <abbr title="This instance supports the precise tool versions used in this tutorial">✅</abbr> <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+		</a>
+	</li>
+    
+    
+    
+    
+	<li class="dropdown-header">
+		<b>Possibly Working</b>
+	</li>
+    
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.be/" title="">
+			UseGalaxy.be
+		</a>
+	</li>
+    
+	<li>
+		<a class="dropdown-item" href="https://usegalaxy.cz/" title="">
+			UseGalaxy.cz
+		</a>
+	</li>
+    
+    
+
+    </ul>
+
 </li>
                 
             
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Mar 6, 2024 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Dec 11, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 17, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1434,7 +1485,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">4.0</a> (3 recent ratings, 3 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 3 </div>
 
     </blockquote>
     </section>
@@ -1606,66 +1657,96 @@ https://zenodo.org/record/6823059/files/Rep2_R2.fastq
     </li>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> with the following parameters:
       <ul>
-        <li><em>“Short read data from your current history”</em>: Choose the output of <strong>Flatten collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>selected as <strong>Dataset collection</strong>.</li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Raw read data from your current history”</em>: Choose the output of <strong>Flatten collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> selected as <strong>Dataset collection</strong>.</li>
       </ul>
     </li>
-    <li>Inspect the web page output of <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> for the <code class="language-plaintext highlighter-rouge">Rep1_forward</code> sample. Check what adapters are found at the end of the reads.</li>
-  </ol>
+    <li>
+      <p>Inspect the web page output of <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> for the <code class="language-plaintext highlighter-rouge">Rep1_forward</code> sample. Check what adapters are found at the end of the reads.</p>
 
-  <blockquote class="question">
-    <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
+      <blockquote class="question">
+        <div class="box-title question-title" id="question"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
-    <ol>
-      <li>How many reads are in the FASTQ?</li>
-      <li>Which sections have a warning or an error?</li>
-    </ol>
+        <ol>
+          <li>How many reads are in the FASTQ?</li>
+          <li>Which sections have a warning or an error?</li>
+        </ol>
 
-    <blockquote class="solution">
-      <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
-
-      <ol>
-        <li>There are 300,000 reads.</li>
-        <li>
-          <p>The 4 steps below have warnings:</p>
+        <blockquote class="solution">
+          <div class="box-title solution-title" id="solution"><button class="gtn-boxify-button solution" type="button" aria-controls="solution" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
           <ol>
+            <li>There are 300,000 reads.</li>
             <li>
-              <p><strong>Per base sequence content</strong></p>
+              <p>The 4 steps below have warnings:</p>
 
-              <p>CUT&amp;RUN has sometimes base biases like ChIP-Seq.</p>
-            </li>
-            <li>
-              <p><strong>Sequence Duplication Levels</strong></p>
+              <ol>
+                <li>
+                  <p><strong>Per base sequence content</strong></p>
 
-              <p>The read library quite often has PCR duplicates that are introduced
+                  <p>CUT&amp;RUN has sometimes base biases like ChIP-Seq.</p>
+                </li>
+                <li>
+                  <p><strong>Sequence Duplication Levels</strong></p>
+
+                  <p>The read library quite often has PCR duplicates that are introduced
 simply by the PCR itself. We will remove these duplicates later on.</p>
-            </li>
-            <li>
-              <p><strong>Overrepresented sequences</strong></p>
+                </li>
+                <li>
+                  <p><strong>Overrepresented sequences</strong></p>
 
-              <p>Our data contains TruSeq adapter, Illumina PCR Primer, and a read from the mitochondrial chromosome.</p>
-            </li>
-            <li>
-              <p><strong>Adapter Content</strong></p>
+                  <p>Our data contains TruSeq adapter, Illumina PCR Primer, and a read from the mitochondrial chromosome.</p>
+                </li>
+                <li>
+                  <p><strong>Adapter Content</strong></p>
 
-              <p>Our data contains an adapter that we still have to remove.</p>
+                  <p>Our data contains an adapter (Illumina Universal Adapter) that we still have to remove.</p>
+                </li>
+              </ol>
             </li>
           </ol>
+
+        </blockquote>
+
+      </blockquote>
+
+      <p>As it is tedious to inspect all these reports individually we will combine them with <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.24.1+galaxy0)</span>.</p>
+    </li>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.24.1+galaxy0)</span> to aggregate the FastQC reports with the following parameters:
+      <ul>
+        <li>In <em>“Results”</em>:
+          <ul>
+            <li><em>“Results”</em>
+              <ul>
+                <li><em>“Which tool was used generate logs?”</em>: <code class="language-plaintext highlighter-rouge">FastQC</code>
+                  <ul>
+                    <li>In <em>“FastQC output”</em>:
+                      <ul>
+                        <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert FastQC output”</em>
+                          <ul>
+                            <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“FastQC output”</em>: <code class="language-plaintext highlighter-rouge">FastQC on collection N: Raw data</code> (output of <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </li>
-      </ol>
+      </ul>
+    </li>
+  </ol>
 
-    </blockquote>
-
-  </blockquote>
 </blockquote>
 
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-fastqc-results"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: FastQC Results</div>
-  <p>This is what you should expect from the <strong>Adapter Content</strong> section:</p>
-  <figure id="figure-2" style="max-width: 90%;"><img src="../../images/cut_and_run/adapter_content_pre.png" alt="FastQC screenshot of the Adapter Content section. " width="821" height="585" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/adapter_content_pre.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> FastQC screenshot on the Adapter Content section</figcaption></figure>
+  <p>This is what you should expect from the <strong>Adapter Content</strong> section of multiQC:</p>
+  <figure id="figure-2" style="max-width: 90%;"><img src="../../images/cut_and_run/fastqc_adapter_content_plot_pre.png" alt="MultiQC screenshot of the Adapter Content section. " width="554" height="443" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/fastqc_adapter_content_plot_pre.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> MultiQC screenshot on the Adapter Content section</figcaption></figure>
 </blockquote>
 
-<p>The FastQC report pointed out that we have in our data some standard Illumina adapter sequences, which we will remove with Trim Galore!.</p>
+<p>The MultiQC report (of FastQC) pointed out that we have in our data some standard Illumina adapter sequences, which we will remove with Trim Galore!.</p>
 
 <h2 id="trimming-reads">Trimming Reads</h2>
 
@@ -1675,7 +1756,7 @@ simply by the PCR itself. We will remove these duplicates later on.</p>
   <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
 
   <ol>
-    <li><span><strong>Trim Galore!</strong> <i class="fas fa-wrench" aria-hidden="true"></i></span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore/0.6.7+galaxy0" title="Trim Galore! tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Trim Galore!</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.6.7+galaxy0)</span> with the following parameters:
       <ul>
         <li><em>“Is this library paired- or single-end?”</em>: <code class="language-plaintext highlighter-rouge">Paired Collection</code>
           <ul>
@@ -1689,7 +1770,7 @@ simply by the PCR itself. We will remove these duplicates later on.</p>
         <li>In <em>“Generate a report file”</em>:   <code class="language-plaintext highlighter-rouge">Yes</code></li>
       </ul>
     </li>
-    <li>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon of the report for <code class="language-plaintext highlighter-rouge">Rep1</code> and read the first lines.</li>
+    <li>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon of the report for <code class="language-plaintext highlighter-rouge">Rep1</code> and look for the info.</li>
   </ol>
 </blockquote>
 
@@ -1705,8 +1786,8 @@ simply by the PCR itself. We will remove these duplicates later on.</p>
     <div class="box-title solution-title" id="solution-1"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-1" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>~55% and ~57%</li>
-      <li>100%</li>
+      <li>~55% for Read 1 and ~57% for Read 2</li>
+      <li>The last line indicates that 3.5% of pairs have been removed.</li>
     </ol>
 
   </blockquote>
@@ -1724,27 +1805,11 @@ The hg38 version of the human genome contains <a href="https://www.ncbi.nlm.nih.
 are present both in the canonical chromosome and on its alternate loci. The reads that map to these regions would map twice. To be able to filter reads falling into
 repetitive regions but keep reads falling into regions present in alternate loci, we will map on the Canonical version of hg38 (only the chromosome with numbers, chrX, chrY, and chrM).</p>
 
-<blockquote class="comment">
-  <div class="box-title comment-title" id="comment-dovetailing"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Dovetailing</div>
-  <p>We will allow dovetailing of read pairs with Bowtie2. This is because adapters are removed by Cutadapt only when at least 3 bases match the adapter sequence, so it is possible that after trimming a read can contain 1-2 bases of adapter and go beyond it’s mate start site. This occurs especially for CUT&amp;RUN because the read length is quite short. Bowtie thus discards reads such as:</p>
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------Mate 1---------------------------------&gt;
-&lt;---------------------Mate 2----------------------
-</code></pre></div>  </div>
-
-  <p>or</p>
-
-  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---------------------Mate 1---------------------------------&gt;
-&lt;---------------------Mate 2---------------------------------
-</code></pre></div>  </div>
-
-  <p>This is what we call dovetailing and we want to consider this pair as a valid concordant alignment.</p>
-</blockquote>
-
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-mapping-reads-to-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapping reads to reference genome</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.5+galaxy1" title="Bowtie2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Bowtie2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.4.5+galaxy1)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.5.3+galaxy1" title="Bowtie2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Bowtie2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.5.3+galaxy1)</span> with the following parameters:
       <ul>
         <li><em>“Is this single or paired library”</em>: <code class="language-plaintext highlighter-rouge">Paired-end Dataset Collection</code>
           <ul>
@@ -1752,7 +1817,6 @@ repetitive regions but keep reads falling into regions present in alternate loci
             <li><em>“Do you want to set paired-end options?”</em>: <code class="language-plaintext highlighter-rouge">Yes</code>
               <ul>
                 <li><em>“Set the maximum fragment length for valid paired-end alignments”</em>: <code class="language-plaintext highlighter-rouge">1000</code></li>
-                <li><em>“Allow mate dovetailing”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
               </ul>
             </li>
           </ul>
@@ -1779,7 +1843,7 @@ repetitive regions but keep reads falling into regions present in alternate loci
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-bowtie2-results"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Bowtie2 Results</div>
   <p>You should get similar results to this from Bowtie2:</p>
-  <figure id="figure-3" style="max-width: 90%;"><img src="../../images/cut_and_run/mapping_stats.png" alt="Mapping statistics of bowtie2. " width="511" height="269" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/mapping_stats.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Mapping statistics of bowtie2</figcaption></figure>
+  <figure id="figure-3" style="max-width: 90%;"><img src="../../images/cut_and_run/mapping_stats.png" alt="Mapping statistics of bowtie2. " width="470" height="239" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/mapping_stats.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Mapping statistics of bowtie2</figcaption></figure>
 </blockquote>
 
 <blockquote class="question">
@@ -1790,7 +1854,7 @@ repetitive regions but keep reads falling into regions present in alternate loci
   <blockquote class="solution">
     <div class="box-title solution-title" id="solution-2"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-2" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
-    <p>41.46+57.51=98.97%</p>
+    <p>36.47+62.39=98.86%</p>
 
   </blockquote>
 
@@ -1808,18 +1872,18 @@ so we remove these reads. We also remove reads with low mapping quality and read
   <div class="box-title hands-on-title" id="hands-on-filtering-of-uninformative-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering of uninformative reads</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.5.1+galaxy0" title="Filter BAM datasets on a variety of attributes tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter BAM datasets on a variety of attributes</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.5.1+galaxy0)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.5.2+galaxy2" title="Filter BAM datasets on a variety of attributes tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter BAM datasets on a variety of attributes</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.5.2+galaxy2)</span> with the following parameters:
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“BAM dataset(s) to filter”</em>: Select the output of  <strong>Bowtie2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <em>“alignments”</em></li>
         <li>In <em>“Condition”</em>:
           <ul>
-            <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Condition”</em>
+            <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Condition”</em>
               <ul>
                 <li>In <em>“Filter”</em>:
                   <ul>
-                    <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Filter”</em>
+                    <li><em>“Filter”</em>
                       <ul>
-                        <li><em>“Select BAM property to filter on”</em>: <code class="language-plaintext highlighter-rouge">mapQuality</code>
+                        <li><em>“Select BAM property to filter on”</em>: <code class="language-plaintext highlighter-rouge">Mapping quality</code>
                           <ul>
                             <li><em>“Filter on read mapping quality (phred scale)”</em>: <code class="language-plaintext highlighter-rouge">&gt;=30</code></li>
                           </ul>
@@ -1850,7 +1914,7 @@ so we remove these reads. We also remove reads with low mapping quality and read
             </li>
           </ul>
         </li>
-        <li><em>“Would you like to set rules?”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
+        <li><em>“Would you like to set rules?”</em>: <code class="language-plaintext highlighter-rouge">False</code></li>
       </ul>
     </li>
     <li>Click on the input and the output BAM files of the filtering step. Check the size of the files.</li>
@@ -1871,7 +1935,7 @@ so we remove these reads. We also remove reads with low mapping quality and read
 
     <ol>
       <li>
-        <p>The original BAM files are 14-15 MB, the filtered ones are 5.6 and 6.8 MB. Approximately half of the alignments were removed.</p>
+        <p>The original BAM files are 14-15 MB, the filtered ones are 5.8 and 7.1 MB. Approximately half of the alignments were removed.</p>
       </li>
       <li>
         <p>You should modify the mapQuality criteria and decrease the threshold.</p>
@@ -1890,7 +1954,7 @@ so we remove these reads. We also remove reads with low mapping quality and read
   <div class="box-title hands-on-title" id="hands-on-remove-duplicates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove duplicates</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.3" title="MarkDuplicates tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MarkDuplicates</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.18.2.3)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/3.1.1.0" title="MarkDuplicates tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MarkDuplicates</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.1.0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Select SAM/BAM dataset or dataset collection”</em>: Select the output of  <strong>Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <em>“BAM”</em></li>
         <li><em>“If true do not write duplicates to the output file instead of writing them with appropriate flags set”</em>: <code class="language-plaintext highlighter-rouge">Yes</code></li>
@@ -1909,7 +1973,7 @@ so we remove these reads. We also remove reads with low mapping quality and read
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-markduplicates-results"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: MarkDuplicates Results</div>
   <p>You should get a similar output to this from MarkDuplicates:</p>
-  <figure id="figure-4" style="max-width: 90%;"><img src="../../images/cut_and_run/mark_duplicates_screen.png" alt="Metrics of MarkDuplicates. " width="947" height="497" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/mark_duplicates_screen.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Metrics of MarkDuplicates</figcaption></figure>
+  <figure id="figure-4" style="max-width: 90%;"><img src="../../images/cut_and_run/mark_duplicates_screen.png" alt="Metrics of MarkDuplicates. " width="632" height="533" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/mark_duplicates_screen.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Metrics of MarkDuplicates</figcaption></figure>
 </blockquote>
 
 <blockquote class="tip">
@@ -1937,7 +2001,7 @@ so we remove these reads. We also remove reads with low mapping quality and read
     </li>
   </ol>
 
-  <figure id="figure-5" style="max-width: 90%;"><img src="../../images/cut_and_run/mark_duplicates_transpose.png" alt="Metrics of MarkDuplicates. " width="435" height="260" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/mark_duplicates_transpose.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Metrics of MarkDuplicates</figcaption></figure>
+  <figure id="figure-5" style="max-width: 90%;"><img src="../../images/cut_and_run/mark_duplicates_transpose.png" alt="Metrics of MarkDuplicates. " width="362" height="316" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/mark_duplicates_transpose.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Metrics of MarkDuplicates</figcaption></figure>
 
 </blockquote>
 
@@ -1953,8 +2017,8 @@ so we remove these reads. We also remove reads with low mapping quality and read
     <div class="box-title solution-title" id="solution-4"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-4" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
     <ol>
-      <li>81466</li>
-      <li>983</li>
+      <li>81460</li>
+      <li>982</li>
     </ol>
 
   </blockquote>
@@ -1972,20 +2036,45 @@ too much compared to the diversity of the library you generated. Consequently, l
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> with the following parameters:
       <ul>
-        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Short read data from your current history”</em>: select the output of <strong>MarkDuplicates</strong> .</li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Raw read data from your current history”</em>: select the output of <strong>MarkDuplicates</strong> BAM.</li>
       </ul>
     </li>
-    <li>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon of the report and read the first lines.</li>
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.24.1+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.24.1+galaxy0)</span> to aggregate the FastQC reports with the following parameters:
+      <ul>
+        <li>In <em>“Results”</em>:
+          <ul>
+            <li><em>“Results”</em>
+              <ul>
+                <li><em>“Which tool was used generate logs?”</em>: <code class="language-plaintext highlighter-rouge">FastQC</code>
+                  <ul>
+                    <li>In <em>“FastQC output”</em>:
+                      <ul>
+                        <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert FastQC output”</em>
+                          <ul>
+                            <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“FastQC output”</em>: <code class="language-plaintext highlighter-rouge">FastQC on collection N: Raw data</code> (output of <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
   </ol>
+
 </blockquote>
 
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-fastqc-results-1"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: FastQC Results</div>
   <p>Now, you should see under <strong>Overrepresented sequences</strong> that there is no more overrepresented sequences and under <strong>Adapter Content</strong> that the Illumina adapters are no longer present.</p>
-  <figure id="figure-6" style="max-width: 90%;"><img src="../../images/cut_and_run/adapter_content_post.png" alt="FastQC screenshot on the adapter content section after Trim Galore!" width="824" height="584" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/adapter_content_post.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> FastQC screenshot on the adapter content section after Trim Galore!</figcaption></figure>
+  <figure id="figure-6" style="max-width: 90%;"><img src="../../images/cut_and_run/fastqc_adapter_content_plot_post.png" alt="MultiQC screenshot on the adapter content section after Trim Galore!" width="554" height="443" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/fastqc_adapter_content_plot_post.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> MultiQC screenshot on the adapter content section after Trim Galore!</figcaption></figure>
   <p>However, you may have noticed that you have a new section with warning: <strong>Sequence Length Distribution</strong>. This is expected as you trimmed part of the reads.
 Furthermore, you will notice under <strong>Sequence Duplication Levels</strong> that we removed nearly all PCR duplicates.</p>
-  <figure id="figure-7" style="max-width: 90%;"><img src="../../images/cut_and_run/duplication_level.png" alt="FastQC screenshot on the duplication level after MarkDuplicates. " width="824" height="592" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/duplication_level.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> FastQC screenshot on the duplication level after MarkDuplicates</figcaption></figure>
+  <figure id="figure-7" style="max-width: 90%;"><img src="../../images/cut_and_run/fastqc_sequence_duplication_levels_plot.png" alt="MultiQC screenshot on the duplication level after MarkDuplicates. " width="1200" height="800" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/fastqc_sequence_duplication_levels_plot.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> MultiQC screenshot on the duplication level after MarkDuplicates</figcaption></figure>
 </blockquote>
 
 <h2 id="check-insert-sizes">Check Insert Sizes</h2>
@@ -2010,7 +2099,7 @@ Furthermore, you will notice under <strong>Sequence Duplication Levels</strong> 
 <blockquote class="comment">
   <div class="box-title comment-title" id="comment-paired-end-histogram-results"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: Paired-end histogram Results</div>
   <p>This is what you get from Paired-end histogram:</p>
-  <figure id="figure-8" style="max-width: 90%;"><img src="../../images/cut_and_run/insert_size.png" alt="Fragment size distribution. " width="794" height="543" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/insert_size.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 8</strong>:</span> Fragment size distribution</figcaption></figure>
+  <figure id="figure-8" style="max-width: 90%;"><img src="../../images/cut_and_run/insert_size.png" alt="Fragment size distribution. " width="800" height="600" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/insert_size.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 8</strong>:</span> Fragment size distribution</figcaption></figure>
 </blockquote>
 
 <blockquote class="question">
@@ -2052,7 +2141,7 @@ and it would be impossible to call peaks. Thus, we will extend the start sites o
   <div class="box-title hands-on-title" id="hands-on-convert-the-bam-to-bed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert the BAM to BED</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_bamtobed/2.30.0+galaxy2" title="bedtools BAM to BED converter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bedtools BAM to BED converter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.30.0+galaxy2)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_bamtobed/2.31.1+galaxy0" title="bedtools BAM to BED converter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bedtools BAM to BED converter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.1+galaxy0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Convert the following BAM file to BED”</em>: Select the output of <strong>MarkDuplicates</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> BAM output</li>
       </ul>
@@ -2068,7 +2157,7 @@ and it would be impossible to call peaks. Thus, we will extend the start sites o
   <div class="box-title hands-on-title" id="hands-on-call-peaks-with-macs2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Call peaks with MACS2</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.7.1+galaxy0" title="MACS2 callpeak tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MACS2 callpeak</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.7.1+galaxy0)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/macs2/macs2_callpeak/2.2.9.1+galaxy0" title="MACS2 callpeak tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MACS2 callpeak</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.9.1+galaxy0)</span> with the following parameters:
       <ul>
         <li><em>“Are you pooling Treatment Files?”</em>: <code class="language-plaintext highlighter-rouge">No</code>
           <ul>
@@ -2131,12 +2220,9 @@ and it would be impossible to call peaks. Thus, we will extend the start sites o
         <li><em>“How should a dataset be selected?”</em>: <code class="language-plaintext highlighter-rouge">Select by index</code></li>
         <li><em>“Element index:”</em>: <code class="language-plaintext highlighter-rouge">0</code></li>
       </ul>
+
+      <p>You can use the arrow to rerun the same tool just changing the last parameter:</p>
     </li>
-  </ol>
-
-  <p>You can use the arrow to rerun the same tool just changing the last parameter:</p>
-
-  <ol>
     <li><span class="tool" data-tool="__EXTRACT_DATASET__" title="Extract Dataset tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Extract Dataset</strong></span> with:
       <ul>
         <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Input List”</em>: <code class="language-plaintext highlighter-rouge">MACS2 callpeak on collection N (narrow Peaks)</code></li>
@@ -2157,7 +2243,7 @@ We can remove such peaks if we simply overlap the two peak files and consequentl
   <div class="box-title hands-on-title" id="hands-on-select-robust-gata1-peaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Select robust GATA1 peaks:</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.30.0+galaxy1" title="bedtools Intersect intervals find overlapping intervals in various ways tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bedtools Intersect intervals find overlapping intervals in various ways</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.30.0+galaxy1)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.31.1+galaxy0" title="bedtools Intersect intervals find overlapping intervals in various ways tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bedtools Intersect intervals find overlapping intervals in various ways</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.1+galaxy0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File A to intersect with B”</em>: Select <code class="language-plaintext highlighter-rouge">Rep1</code></li>
         <li><em>“Combined or separate output files”</em>: <code class="language-plaintext highlighter-rouge">One output file per 'input B' file</code>
@@ -2190,8 +2276,8 @@ Why have we set <strong>“Require that the fraction of overlap be reciprocal fo
       <div class="box-title solution-title" id="solution-6"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-6" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <ol>
-        <li>2,863 peaks</li>
-        <li>We started with 6,314 and 7,683 peaks. Thus, we could remove 3,410 and 4765 peaks.</li>
+        <li>2,865 peaks</li>
+        <li>We started with 6,314 and 7,678 peaks. Thus, we could remove 3,449 and 4,813 peaks.</li>
         <li>Finding robust peaks is a tricky process and not as simple as you think. Our approach defines a robust peak as an entity that is covered by two similar peaks in either one of the peak files of our two replicates. Our measurement for similarity is simply the amount of bases the peaks overlap. Yet, ask yourself, how much overlap do you need to state that they are similar? Is 1 base enough or maybe 10? The answer is not true or false and like so often needs more investigation. We define the overlap by a 50% fraction of each of the peak files. That means, if our peak in A is 100 bases then A has to overlap with 50 bases with the peak in file B.</li>
         <li><strong>“Require that the fraction of overlap be reciprocal for A and B”</strong> means that 50% of the peak in file A overlaps with the peak in file B and also 50% of the peak in file B overlaps with the peak in file A. We set this to make our filtering very conservative and filter for peaks that we can be sure are true positives. For example, A has a 10 bp peak that overlaps a peak in B with 100 bp. <strong>Viewpoint of file A:</strong> An overlap-fraction of 0.5 for A means that we accept peak A if it overlaps with 5 bp with the peak in B. This is very likely because the peak in B is 100 bp long. <strong>Viewpoint of file B</strong>: An overlap-fraction of 0.5 for B means that we reject A no matter what, even if A completely overlaps B because 10 bp are not enough to cover 50% of B. That is to say the option <strong>“Require that the fraction of overlap be reciprocal for A and B”</strong> takes care that we trust peaks that have in file A <strong>and</strong> in file B a fair overlap.</li>
       </ol>
@@ -2224,6 +2310,7 @@ The tool <strong>IDR</strong> has not been tested so far for CUT and RUN.</p>
         <li><em>“Required overlap”</em>: <code class="language-plaintext highlighter-rouge">Specify minimum overlap(s)</code>
           <ul>
             <li><em>“Minimum overlap required as a fraction of A”</em>: <code class="language-plaintext highlighter-rouge">0.5</code></li>
+            <li><em>“Require that the fraction of overlap be reciprocal for A and B”</em>: <code class="language-plaintext highlighter-rouge">No</code></li>
           </ul>
         </li>
         <li>*“Write the original A entry <em>once</em> if <em>any</em> overlaps found in B.”: <code class="language-plaintext highlighter-rouge">Yes</code></li>
@@ -2235,7 +2322,7 @@ The tool <strong>IDR</strong> has not been tested so far for CUT and RUN.</p>
   <blockquote class="question">
     <div class="box-title question-title" id="question-7"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
-    <p>How many potential true positives do we gain?
+    <p>How many potential true positives have we found (common between CUT&amp;RUN and ChIP-seq) ?
 How many potential false positives have we removed?
 What is the precision of our analysis at this point? (Precision = True Positive / True Positive + False Positive)</p>
 
@@ -2243,9 +2330,9 @@ What is the precision of our analysis at this point? (Precision = True Positive 
       <div class="box-title solution-title" id="solution-7"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-7" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <ol>
-        <li>2,409 peaks</li>
-        <li>454 peaks</li>
-        <li>Our precision is ~ 84%. A high precision is an indicator that we can predict true binding regions with high confidence.</li>
+        <li>2,809 peaks</li>
+        <li>56 peaks</li>
+        <li>Our precision is ~ 98%. A high precision is an indicator that we can predict true binding regions with high confidence.</li>
       </ol>
     </blockquote>
 
@@ -2282,7 +2369,7 @@ What is the precision of our analysis at this point? (Precision = True Positive 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/meme_chip/meme_chip/4.11.2+galaxy1" title="MEME-ChIP tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MEME-ChIP</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.11.2+galaxy1)</span> with the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Primary sequences”</em>: Select the output of <strong>Extract Genomic DNA</strong> using coordinates from assembled/unassembled genomes <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Primary sequences”</em>: Select the output of <strong>Extract Genomic DNA</strong> using coordinates from assembled/unassembled genomes <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
         <li><em>“Sequence alphabet”</em>: <code class="language-plaintext highlighter-rouge">DNA</code></li>
         <li><em>“Options Configuration”</em>: <code class="language-plaintext highlighter-rouge">Advanced</code></li>
       </ul>
@@ -2308,22 +2395,22 @@ What is the precision of our analysis at this point? (Precision = True Positive 
   <blockquote class="question">
     <div class="box-title question-title" id="question-8"><i class="far fa-question-circle" aria-hidden="true" ></i> Question</div>
 
-    <p>How many peaks support the main motif GATA?
-What is the E-value of the main motif?</p>
+    <p>What is the E-value of the main motif?
+How many peaks support the main motif GATA?</p>
 
     <blockquote class="solution">
       <div class="box-title solution-title" id="solution-8"><button class="gtn-boxify-button solution" type="button" aria-controls="solution-8" aria-expanded="true"><i class="far fa-eye" aria-hidden="true" ></i> <span>Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
       <ol>
-        <li>!!!!  Where is this info? !!!</li>
-        <li>E-value = 5.0e-383</li>
+        <li>1.1e-411</li>
+        <li>You need to click on the DREME link for the GATA motif. Then when you are in the DREME html, click on the arrow pointing down for the first motif (HGATAA) in the More column. Here, it gives you some numbers including how many peaks were positive for the motif. Here 1939.</li>
       </ol>
     </blockquote>
 
   </blockquote>
 </blockquote>
 
-<figure id="figure-11" style="max-width: 90%;"><img src="../../images/cut_and_run/GATA_motif.png" alt="MEME-ChiP motifs for GATA1. " width="920" height="761" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/GATA_motif.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 11</strong>:</span> Plot of the first five sequence motifs of MEME-ChIP.</figcaption></figure>
+<figure id="figure-11" style="max-width: 90%;"><img src="../../images/cut_and_run/GATA_motif.png" alt="MEME-ChiP motifs for GATA1. " width="829" height="672" loading="lazy" /><a target="_blank" href="../../images/cut_and_run/GATA_motif.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 11</strong>:</span> Plot of the first five sequence motifs of MEME-ChIP.</figcaption></figure>
 
 <p>Let us first investigate the result of MEME-ChIP. <strong>First column:</strong> The x-axis of the sequence plots represents the nucleotide position of the motif.
 The y-axis stands for the total information (uncertainty) and thus stands for the probability that the nucleotide at a certain position is the specific letter (for DNA: T,C,G,A).
@@ -2535,59 +2622,39 @@ install_tool_dependencies: true
 install_repository_dependencies: true
 install_resolver_dependencies: true
 tools:
-- name: deeptools_compute_matrix
+- name: trim_galore
   owner: bgruening
-  revisions: 514fa53b5efb
-  tool_panel_section_label: deepTools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: deeptools_plot_heatmap
-  owner: bgruening
-  revisions: a4dfb122e52b
-  tool_panel_section_label: deepTools
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: bamtools_filter
-  owner: devteam
-  revisions: cb20f99fd45b
-  tool_panel_section_label: SAM/BAM
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: bamtools_filter
-  owner: devteam
-  revisions: 1dfd95ee241e
-  tool_panel_section_label: SAM/BAM
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: bowtie2
-  owner: devteam
-  revisions: a6d65b0c67af
-  tool_panel_section_label: Mapping
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: bowtie2
-  owner: devteam
-  revisions: f6877ad76b00
-  tool_panel_section_label: Mapping
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: fastqc
-  owner: devteam
-  revisions: e7b2202befea
+  revisions: cd7e644cae1d
   tool_panel_section_label: FASTA/FASTQ
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: bamtools_filter
+  owner: devteam
+  revisions: 993b19f20c76
+  tool_panel_section_label: SAM/BAM
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: bowtie2
+  owner: devteam
+  revisions: d5ceb9f3c25b
+  tool_panel_section_label: Mapping
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: fastqc
   owner: devteam
   revisions: 3d0c7bdf12f5
   tool_panel_section_label: FASTA/FASTQ
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: picard
+- name: fastqc
   owner: devteam
-  revisions: a1f0b3f4b781
-  tool_panel_section_label: Picard
+  revisions: 5ec9f6bceaee
+  tool_panel_section_label: FASTA/FASTQ
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: picard
   owner: devteam
-  revisions: b502c227b5e6
+  revisions: 3f254c5ced1d
   tool_panel_section_label: Picard
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: bedtools
   owner: iuc
-  revisions: ce3c7f062223
+  revisions: 64e2edfe7a2c
   tool_panel_section_label: BED
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: bedtools
@@ -2597,12 +2664,7 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: bedtools
   owner: iuc
-  revisions: a68aa6c1204a
-  tool_panel_section_label: BED
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: bedtools
-  owner: iuc
-  revisions: a1a923cd89e8
+  revisions: 64e2edfe7a2c
   tool_panel_section_label: BED
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: extract_genomic_dna
@@ -2617,12 +2679,7 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: macs2
   owner: iuc
-  revisions: 424aefbd7777
-  tool_panel_section_label: Peak Calling
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: macs2
-  owner: iuc
-  revisions: 640d3af5d833
+  revisions: 86e2413cf3f8
   tool_panel_section_label: Peak Calling
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: meme_chip
@@ -2630,20 +2687,15 @@ tools:
   revisions: cc100e0f61f4
   tool_panel_section_label: Motif Tools
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: multiqc
+  owner: iuc
+  revisions: f7e2f1eb3a16
+  tool_panel_section_label: Quality Control
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: pe_histogram
   owner: iuc
   revisions: bd1416eea1f0
   tool_panel_section_label: Graph/Display Data
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: pygenometracks
-  owner: iuc
-  revisions: 2824d77cd8f8
-  tool_panel_section_label: Graph/Display Data
-  tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: cutadapt
-  owner: lparsons
-  revisions: 49370cb85f0f
-  tool_panel_section_label: FASTA/FASTQ
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 </code></pre></div>
                 </blockquote>
@@ -2796,7 +2848,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/884ecf8e70a38c3b9e53876ff15ed18510feb35d">884ecf8</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8ae05d5641121a2466d1e675bafe06e078164b48">8ae05d5</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

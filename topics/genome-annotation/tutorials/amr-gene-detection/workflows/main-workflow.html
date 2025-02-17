@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@884ecf8e70a38c3b9e53876ff15ed18510feb35d",
+		release: "galaxy-training-network@8ae05d5641121a2466d1e675bafe06e078164b48",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -267,9 +267,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #aadd00; --color-darker: #97c500; --color-dimmed: #a0d100;">genome-annotation</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #b6ec00; --color-darker: #a1d200; --color-dimmed: #acdf00;">genome-annotation</div>
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #dad100; --color-darker: #c2ba00; --color-dimmed: #cec500;">microgalaxy</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #e8df00; --color-darker: #cfc600; --color-dimmed: #dcd300;">microgalaxy</div>
 			
 			</br>
 			
@@ -334,13 +334,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Galaxy Main</a></li>
+					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Galaxy Europe</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Galaxy Australia</a></li>
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Galaxy Europe</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Galaxy France</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Galaxy Main</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/genome-annotation-amr-gene-detection/versions/main-workflow">Import to another server (≥23.0+ only!)</a>
@@ -360,21 +360,21 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   style 2 stroke:#2c3143,stroke-width:4px;
   3["staramr"];
   0 -->|output| 3;
-  2ad7797d-2a7b-4d96-aa44-fc3e9f987f00["Output\nstararm_detailed_summary"];
-  3 --> 2ad7797d-2a7b-4d96-aa44-fc3e9f987f00;
-  style 2ad7797d-2a7b-4d96-aa44-fc3e9f987f00 stroke:#2c3143,stroke-width:4px;
+  66d8d009-46f2-481d-9770-ef4c3aa39a68["Output\nstararm_detailed_summary"];
+  3 --> 66d8d009-46f2-481d-9770-ef4c3aa39a68;
+  style 66d8d009-46f2-481d-9770-ef4c3aa39a68 stroke:#2c3143,stroke-width:4px;
   4["Bakta"];
   0 -->|output| 4;
-  b57d4517-4342-4fad-bc16-49c3c98f80d4["Output\nbakta_annotation_summary"];
-  4 --> b57d4517-4342-4fad-bc16-49c3c98f80d4;
-  style b57d4517-4342-4fad-bc16-49c3c98f80d4 stroke:#2c3143,stroke-width:4px;
+  f7ff8965-5710-49c6-b868-67bcd9492eb3["Output\nbakta_annotation_summary"];
+  4 --> f7ff8965-5710-49c6-b868-67bcd9492eb3;
+  style f7ff8965-5710-49c6-b868-67bcd9492eb3 stroke:#2c3143,stroke-width:4px;
   5["Bowtie2"];
   1 -->|output| 5;
   2 -->|output| 5;
   0 -->|output| 5;
-  f569b482-9368-4c9f-8903-a54f201f2f62["Output\nbowtie_mapping_stats"];
-  5 --> f569b482-9368-4c9f-8903-a54f201f2f62;
-  style f569b482-9368-4c9f-8903-a54f201f2f62 stroke:#2c3143,stroke-width:4px;
+  f38eca8b-88df-4997-ad4c-afe0d9de1d3a["Output\nbowtie_mapping_stats"];
+  5 --> f38eca8b-88df-4997-ad4c-afe0d9de1d3a;
+  style f38eca8b-88df-4997-ad4c-afe0d9de1d3a stroke:#2c3143,stroke-width:4px;
   6["Select"];
   3 -->|detailed_summary| 6;
   7["Table to GFF3"];
@@ -383,9 +383,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   4 -->|annotation_gff3| 8;
   7 -->|output| 8;
   5 -->|output| 8;
-  99bd1aad-94b5-4152-8a37-471f9544bf4d["Output\njbrowse_output"];
-  8 --> 99bd1aad-94b5-4152-8a37-471f9544bf4d;
-  style 99bd1aad-94b5-4152-8a37-471f9544bf4d stroke:#2c3143,stroke-width:4px;</pre>
+  020a0bed-036a-4900-a2fd-23668a40cdbc["Output\njbrowse_output"];
+  8 --> 020a0bed-036a-4900-a2fd-23668a40cdbc;
+  style 020a0bed-036a-4900-a2fd-23668a40cdbc stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
@@ -663,7 +663,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/884ecf8e70a38c3b9e53876ff15ed18510feb35d">884ecf8</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8ae05d5641121a2466d1e675bafe06e078164b48">8ae05d5</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

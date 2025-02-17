@@ -16,11 +16,11 @@
     {
       "@id": "https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/cut_and_run/workflows/main_workflow.html",
       "@type": "Dataset",
-      "name": "ATAC-seq GTM",
-      "description": "atac-seq\n\n\n## Associated Tutorial\n\nThis workflows is part of the tutorial [CUT&RUN data analysis](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/cut_and_run/tutorial.html), available in the [GTN](https://training.galaxyproject.org)\n\n\n\n\n\n## Thanks to...\n\n**Tutorial Author(s)**: [Florian Heyl](https://training.galaxyproject.org/training-material/hall-of-fame/heylf/)\n\n**Tutorial Contributor(s)**: [Helena Rasche](https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/), [Lucille Delisle](https://training.galaxyproject.org/training-material/hall-of-fame/lldelisle/), [Florian Heyl](https://training.galaxyproject.org/training-material/hall-of-fame/heylf/), [Saskia Hiltemann](https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/), [Björn Grüning](https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/)\n\n[![gtn star logo followed by the word workflows](https://training.galaxyproject.org/training-material/assets/branding/gtn-workflows.png)](https://training.galaxyproject.org/training-material/)",
-      "version": "1.0",
-      "license": "https://spdx.org/licenses/CC-BY-4.0",
-      "datePublished": "2025-02-17T13:29:37.584+00:00",
+      "name": "CUT&amp;RUN GTN",
+      "description": "CUT&amp;RUN data analysis workflow. It uses fastQC, trim adapters with Trim Galore!, map with Bowtie2, filter the BAM and mark duplicates. Peaks are called with MACS2 and peaks from both replicates are intersected and then intersected to the ChIP peaks. Finally MEME ChIP is run to get the motifs.\n\n## Associated Tutorial\n\nThis workflows is part of the tutorial [CUT&RUN data analysis](https://training.galaxyproject.org/training-material/topics/epigenetics/tutorials/cut_and_run/tutorial.html), available in the [GTN](https://training.galaxyproject.org)\n\n## Features\n\n* Includes [Galaxy Workflow Tests](https://training.galaxyproject.org/training-material/faqs/gtn/workflow_run_test.html)\n* Includes a [Galaxy Workflow Report](https://training.galaxyproject.org/training-material/faqs/galaxy/workflows_report_view.html)\n\n## Thanks to...\n\n**Workflow Author(s)**: Florian Heyl\n\n**Tutorial Author(s)**: [Florian Heyl](https://training.galaxyproject.org/training-material/hall-of-fame/heylf/)\n\n**Tutorial Contributor(s)**: [Helena Rasche](https://training.galaxyproject.org/training-material/hall-of-fame/hexylena/), [Lucille Delisle](https://training.galaxyproject.org/training-material/hall-of-fame/lldelisle/), [Florian Heyl](https://training.galaxyproject.org/training-material/hall-of-fame/heylf/), [Saskia Hiltemann](https://training.galaxyproject.org/training-material/hall-of-fame/shiltemann/), [Björn Grüning](https://training.galaxyproject.org/training-material/hall-of-fame/bgruening/)\n\n[![gtn star logo followed by the word workflows](https://training.galaxyproject.org/training-material/assets/branding/gtn-workflows.png)](https://training.galaxyproject.org/training-material/)",
+      "version": "2.0",
+      "license": "https://spdx.org/licenses/MIT",
+      "datePublished": "2025-02-17T14:26:05.160+00:00",
       "mainEntity": {
         "@id": "main-workflow.ga"
       },
@@ -40,8 +40,12 @@
         "SoftwareSourceCode",
         "ComputationalWorkflow"
       ],
-      "author": [],
-      "name": "ATAC-seq GTM",
+      "author": [
+        {
+          "@id": "https://orcid.org/0000-0002-3651-5685"
+        }
+      ],
+      "name": "CUT&amp;RUN GTN",
       "programmingLanguage": {
         "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy"
       },
@@ -56,7 +60,7 @@
         "ImageObject",
         "WorkflowSketch"
       ],
-      "contentSize": 172262
+      "contentSize": 118968
     },
     {
       "@id": "https://w3id.org/workflowhub/workflow-ro-crate#galaxy",
@@ -69,6 +73,11 @@
         "@id": "https://galaxyproject.org/"
       },
       "version": "23.1"
+    },
+    {
+      "@id": "https://orcid.org/0000-0002-3651-5685",
+      "@type": "Person",
+      "name": "Florian Heyl"
     }
   ]
 }
