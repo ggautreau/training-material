@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1948,7 +1948,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>You can obtain the data from <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4414912/">Schmitt <em>et al.</em> 2015</a> from <a href="https://doi.org/10.5281/zenodo.3554549">Zenodo</a>, or just import the data from the Galaxy Data library under the “GTN Materials” folder.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-importing-the-raw-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Importing the raw data</div>
+  <div class="box-title hands-on-title" id="hands-on-importing-the-raw-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Importing the raw data</div>
 
   <ol>
     <li>
@@ -1985,7 +1985,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>We then evaluated the quality of the data by running FastQC on both datasets (forward and reverse):</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-evaluating-input-read-quality"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Evaluating input read quality</div>
+  <div class="box-title hands-on-title" id="hands-on-evaluating-input-read-quality"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Evaluating input read quality</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.74+galaxy1)</span> with the following parameters:
@@ -2025,7 +2025,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>The <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Du Novo: Make families</strong> tool will separate the 12bp tags from each read pair and concatenate them into a 24bp barcode. Then, it will use the barcodes to sort the reads into families that all descend from the same original fragment.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sorting-reads-into-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Sorting reads into families</div>
+  <div class="box-title hands-on-title" id="hands-on-sorting-reads-into-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Sorting reads into families</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nick/dunovo/make_families/3.0.2" title="Du Novo: Make families tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Du Novo: Make families</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.0.2)</span> with the following parameters:
@@ -2045,7 +2045,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>Du Novo includes a tool which can correct most of these errors and recover the affected reads. This can increase the final yield of duplex consensus reads by up to 11% (Stoler <em>et al.</em> 2018, in preparation).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-correcting-barcodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Correcting barcodes</div>
+  <div class="box-title hands-on-title" id="hands-on-correcting-barcodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Correcting barcodes</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nick/dunovo/correct_barcodes/3.0.2" title="Du Novo: Correct barcodes tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Du Novo: Correct barcodes</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.0.2)</span> with the following parameters:
@@ -2072,7 +2072,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-aligning-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Aligning families</div>
+  <div class="box-title hands-on-title" id="hands-on-aligning-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Aligning families</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nick/dunovo/align_families/3.0.2" title="Du Novo: Align families tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Du Novo: Align families</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.0.2)</span> with the following parameters:
@@ -2091,7 +2091,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>Normally, the tool only produces the final double-stranded consensus sequences. But we will make use of the single-stranded consensus sequences <a href="#calling-variants-with-single-strand-consensus-sequences">later</a>, so we’ll tell it to keep those as well.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-making-consensus-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Making consensus sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-making-consensus-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Making consensus sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nick/dunovo/dunovo/3.0.2" title="Du Novo: Make consensus reads tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Du Novo: Make consensus reads</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.0.2)</span> with the following parameters:
@@ -2148,7 +2148,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>This information could be useful for some analyses, but not for our variant calling. The tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Sequence Content Trimmer</strong> will help with filtering these out. With the settings below, it will move along the read, tracking the frequency of ambiguous (non-ACGT) bases in a 10bp window. If it sees more than 2 ambiguous bases in a window, it will remove the rest of the read, starting with the first offending base in the window. We’ll also tell it to remove entirely any read pair containing a read that got trimmed to less than 50bp.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-the-consensus-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering the consensus sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-the-consensus-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering the consensus sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nick/sequence_content_trimmer/sequence_content_trimmer/0.2.3" title="Sequence Content Trimmer tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Sequence Content Trimmer</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3)</span> with the following parameters:
@@ -2180,7 +2180,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>Here, we’ll use <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Map with BWA-MEM</strong> to map the DCS reads to the human reference genome.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-align-with-bwa-mem"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Align with BWA-MEM</div>
+  <div class="box-title hands-on-title" id="hands-on-align-with-bwa-mem"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Align with BWA-MEM</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.18" title="Map with BWA-MEM tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with BWA-MEM</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.18)</span> with the following parameters:
@@ -2198,7 +2198,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>To normalize the positional distribution of indels we use the <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>BamLeftAlign</strong> utility from the <a href="https://github.com/ekg/freebayes#indels">FreeBayes</a> package. You can find it in the <strong>NGS: Variant Analysis</strong> section. This is necessary to avoid erroneous polymorphisms flanking regions with indels (e.g., in low complexity loci):</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-left-align-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Left-align indels</div>
+  <div class="box-title hands-on-title" id="hands-on-left-align-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Left-align indels</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/freebayes/bamleftalign/1.3.8" title="BamLeftAlign tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>BamLeftAlign</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.8)</span> with the following parameters:
@@ -2227,7 +2227,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>To identify sites containing variants we use the <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Naive Variant Caller (NVC)</strong> tool from the <strong>NGS: Variant Analysis</strong> section. This reads the alignment and counts the number of bases of each type at each site.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-count-the-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Count the variants</div>
+  <div class="box-title hands-on-title" id="hands-on-count-the-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Count the variants</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/blankenberg/naive_variant_caller/naive_variant_caller/0.0.4" title="Naive Variant Caller (NVC) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Naive Variant Caller (NVC)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.4)</span> with the following parameters:
@@ -2267,7 +2267,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>Now we’ll want to parse the VCF produced by the NVC, determine what the major and minor allele is at each site, and calculate their frequencies. The <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Variant Annotator</strong> from the <strong>NGS: Variant Analysis</strong> section can do this.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-read-the-variants-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read the variants file</div>
+  <div class="box-title hands-on-title" id="hands-on-read-the-variants-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read the variants file</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nick/allele_counts/allele_counts_1/1.3.2" title="Variant Annotator tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Variant Annotator</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.2)</span> with the following parameters:
@@ -2292,7 +2292,7 @@ https://zenodo.org/record/3554549/files/SRR1799908_reverse.fastq
 <p>The <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Variant Annotator</strong> produces a simple tab-delimited file, with one site per line. We can use the <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>Filter</strong> tool from the <strong>Filter and Sort</strong> section to process this kind of file. We’ll use the filter <code class="language-plaintext highlighter-rouge">c16 &gt;= 0.01</code> to remove lines where the value in column 16 is less than 0.01. Column 16 contains the minor allele frequency, so this will remove all sites with a MAF less than 1%.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-the-raw-variants-list"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter the raw variants list</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-the-raw-variants-list"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter the raw variants list</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter - data on any column using simple expressions tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter - data on any column using simple expressions</strong></span> with the following parameters:
@@ -2440,9 +2440,18 @@ This is because we want to make sure you only share data knowingly.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/variant-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2662,7 +2671,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2744,7 +2753,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

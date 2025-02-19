@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1705,7 +1705,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h1 id="get-the-data">Get the data</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-getting-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Getting the data</div>
+  <div class="box-title hands-on-title" id="hands-on-getting-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Getting the data</div>
 
   <ol>
     <li>
@@ -1807,7 +1807,7 @@ https://zenodo.org/record/582600/files/wildtype.fna
 <p>We will evaluate the input reads using the FastQC tool. This tool runs a standard series of tests on your read set and returns a relatively easy-to-interpret report. We will use it to evaluate the quality of our FASTQ files and combine the results with MultiQC.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fastqc-on-a-fastq-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: FastQC on a fastq file</div>
+  <div class="box-title hands-on-title" id="hands-on-fastqc-on-a-fastq-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: FastQC on a fastq file</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> with the following parameters:
@@ -1923,7 +1923,7 @@ https://zenodo.org/record/582600/files/wildtype.fna
 <p>The first step of the assembler is to build a de Bruijn graph. For that, it will break our reads into k-mers, <em>i.e.</em> fragments of length <em>k</em>. Velvet requires the user to input a value of <em>k</em> (k-mer size) for the assembly process. Small k-mers will give greater connectivity, but large k-mers will give better specificity.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-assemble-the-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assemble the reads</div>
+  <div class="box-title hands-on-title" id="hands-on-assemble-the-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assemble the reads</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastq_paired_end_interlacer/fastq_paired_end_interlacer/1.2.0.1+galaxy0" title="FASTQ interlacer tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FASTQ interlacer</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.0.1+galaxy0)</span> with the following parameters:
@@ -2011,7 +2011,7 @@ https://zenodo.org/record/582600/files/wildtype.fna
 <p>This table is limitted, but we will now collect more basic statistics on our assembly.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-collect-fasta-statistics-on-our-contigs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Collect fasta statistics on our contigs</div>
+  <div class="box-title hands-on-title" id="hands-on-collect-fasta-statistics-on-our-contigs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Collect fasta statistics on our contigs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.2.0+galaxy1" title="Quast tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Quast</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.0+galaxy1)</span> with the following parameters:
@@ -2092,7 +2092,7 @@ https://zenodo.org/record/582600/files/wildtype.fna
 <h1 id="discussion">Discussion</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-optional-rerun-for-values-i-k-i-ranging-from-31-to-101"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: (Optional) Rerun for values <i>k</i> ranging from 31 to 101</div>
+  <div class="box-title hands-on-title" id="hands-on-optional-rerun-for-values-i-k-i-ranging-from-31-to-101"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: (Optional) Rerun for values <i>k</i> ranging from 31 to 101</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/velvet/velveth/1.2.10.3" title="velveth tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>velveth</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.10.3)</span> with the same parameters as before except
@@ -2171,9 +2171,18 @@ https://zenodo.org/record/582600/files/wildtype.fna
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/assembly/faqs/">FAQ page for the Assembly topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/assembly/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2356,27 +2365,27 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">24</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.20833333333333334">5</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.08333333333333333">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.08333333333333333">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.041666666666666664">1</td>
 			</tr>
 		   
@@ -2671,7 +2680,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

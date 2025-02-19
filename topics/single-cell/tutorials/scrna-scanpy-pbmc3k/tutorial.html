@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2474,7 +2474,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="data-upload">Data upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -2537,7 +2537,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>This format is used by <a href="https://scanpy.readthedocs.io/en/stable/index.html">Scanpy</a> (<span class="citation"><a href="#wolf2018scanpy">Wolf <i>et al.</i> 2018</a></span>), the tool suite for analyzing single-cell gene expression data that we will use in this tutorial. So we need first to import the matrix and annotations of genes and cells into an <code class="language-plaintext highlighter-rouge">AnnData</code> object.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-transform-matrix-and-all-into-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Transform matrix and all into AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-transform-matrix-and-all-into-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Transform matrix and all into AnnData object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_import/anndata_import/0.10.9+galaxy0" title="Import Anndata tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Import Anndata</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.9+galaxy0)</span> with the following parameters:
@@ -2567,7 +2567,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>Because the <code class="language-plaintext highlighter-rouge">AnnData</code> format is an extension of the HDF5 format, i.e. a binary format, an <code class="language-plaintext highlighter-rouge">AnnData</code> object can not be inspected directly in Galaxy by clicking on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (<strong>View data</strong>) icon. Instead we need to use a dedicated tool from the <strong>AnnData</strong> suite.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect an AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect an AnnData object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.9+galaxy0" title="Inspect AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Inspect AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.9+galaxy0)</span> with the following parameters:
@@ -2755,7 +2755,7 @@ RP11-34P13.8	ENSG00000239945
 <p>Genes that appear in less than a few cells can be considered noise and thus removed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-genes-found-in-less-than-3-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove genes found in less than 3 cells</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-genes-found-in-less-than-3-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove genes found in less than 3 cells</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/1.10.2+galaxy0" title="Scanpy filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -2850,7 +2850,7 @@ RP11-34P13.8	ENSG00000239945
 <p>The first 2 QC metrics (cell size and number of expressed genes) can be easily estimated from the count table. For the third metric (proportion of reads mapped to genes in the mitochondrial genome), we need the information about which genes are mitochondrial or not.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-gene-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract gene annotation</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-gene-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract gene annotation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.9+galaxy0" title="Inspect AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Inspect AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.9+galaxy0)</span> with the following parameters:
@@ -2868,7 +2868,7 @@ RP11-34P13.8	ENSG00000239945
 <p>A new annotation for <code class="language-plaintext highlighter-rouge">var</code> should be new column named <code class="language-plaintext highlighter-rouge">mito</code> on the 1st line and then <code class="language-plaintext highlighter-rouge">True</code> for mitochondrial gene or <code class="language-plaintext highlighter-rouge">False</code> for non-mitochondrial genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-mitochondrial-gene-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add mitochondrial gene annotation</div>
+  <div class="box-title hands-on-title" id="hands-on-add-mitochondrial-gene-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add mitochondrial gene annotation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.9+galaxy0" title="Manipulate Anndata tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate Anndata</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.9+galaxy0)</span> with the following parameters:
@@ -2942,7 +2942,7 @@ RP11-34P13.8	ENSG00000239945
 <p>We can now compute QC metrics on the <code class="language-plaintext highlighter-rouge">AnnData</code> object.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute QC metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute QC metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.10.2+galaxy1" title="Scanpy Inspect and manipulate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Inspect and manipulate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy1)</span> with the following parameters:
@@ -3034,7 +3034,7 @@ RP11-34P13.8	ENSG00000239945
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize QC metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize QC metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3172,7 +3172,7 @@ RP11-34P13.8	ENSG00000239945
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-low-quality-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove low-quality cells</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-low-quality-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove low-quality cells</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/1.10.2+galaxy0" title="Scanpy filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3305,7 +3305,7 @@ RP11-34P13.8	ENSG00000239945
 <p>Here we would to normalize our count table such that each cell have 10,000 reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-normalize-for-cell-size"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Normalize for cell size</div>
+  <div class="box-title hands-on-title" id="hands-on-normalize-for-cell-size"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Normalize for cell size</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_normalize/scanpy_normalize/1.10.2+galaxy0" title="Scanpy normalize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy normalize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3329,7 +3329,7 @@ RP11-34P13.8	ENSG00000239945
 <p>With log-transformation, the differences in the log-values represent log-fold changes in expression. Log-transformation focuses on promoting contributions from genes with strong relative differences (e.g. a gene that is expressed at an average count of 50 in cell type A and 10 in cell type B rather than a gene that is expressed at an average count of 1100 in A and 1000 in B).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-log-transform-the-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log-transform the counts</div>
+  <div class="box-title hands-on-title" id="hands-on-log-transform-the-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Log-transform the counts</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.10.2+galaxy1" title="Scanpy Inspect and manipulate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Inspect and manipulate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy1)</span> with the following parameters:
@@ -3344,7 +3344,7 @@ RP11-34P13.8	ENSG00000239945
 <p>We will freeze the current state of the AnnData object, i.e. the logarithmized raw gene expression, in the a <code class="language-plaintext highlighter-rouge">raw</code> attribute. This information will be used later in differential testing and visualizations of gene expression.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-freeze-the-state-of-the-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Freeze the state of the AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-freeze-the-state-of-the-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Freeze the state of the AnnData object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.9+galaxy0" title="Manipulate Anndata tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate Anndata</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.9+galaxy0)</span> with the following parameters:
@@ -3370,7 +3370,7 @@ RP11-34P13.8	ENSG00000239945
 <p>Once the per-gene variation has been quantified, we need to select the subset of highly variable genes that we will use in downstream analyses. A large subset reduces the risk of discarding any interesting biological signal, but increases the noise from irrelevant genes on the signal. The optimal trade-off is difficult to determine but there are several common strategies routinely used. You can read the <a href="https://osca.bioconductor.org/feature-selection.html#hvg-selection">Chapter 8 from “Orchestrating Single-Cell Analysis with Bioconductor”</a> for a nice presentation of the different strategies. Here, we will define the set of highly variable genes as those which, after normalization, have a normalized dispersion amount higher than 0.5.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-identify-the-highly-variable-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Identify the highly variable genes</div>
+  <div class="box-title hands-on-title" id="hands-on-identify-the-highly-variable-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Identify the highly variable genes</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/1.10.2+galaxy0" title="Scanpy filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3405,7 +3405,7 @@ RP11-34P13.8	ENSG00000239945
 <p>Both highly variable genes and other genes are still in the <code class="language-plaintext highlighter-rouge">AnnData</code> object. We can now actually keep only the highly variable genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-keep-the-highly-variable-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Keep the highly variable genes</div>
+  <div class="box-title hands-on-title" id="hands-on-keep-the-highly-variable-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Keep the highly variable genes</div>
 
   <ol>
     <li>
@@ -3522,7 +3522,7 @@ RP11-34P13.8	ENSG00000239945
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-scale-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Scale the data</div>
+  <div class="box-title hands-on-title" id="hands-on-scale-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Scale the data</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_remove_confounders/scanpy_remove_confounders/1.10.2+galaxy0" title="Scanpy remove confounders tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy remove confounders</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3580,7 +3580,7 @@ RP11-34P13.8	ENSG00000239945
 <p>Here we perform the PCA on the log-normalized expression values and compute the first 50 PCs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-the-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform the PCA</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-the-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform the PCA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/1.10.2+galaxy0" title="Scanpy cluster, embed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy cluster, embed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span>
@@ -3610,7 +3610,7 @@ with the following parameters:
   <p>PCA information are stored in the <code class="language-plaintext highlighter-rouge">AnnData</code> object in a quite complex way.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-inspect-the-pca-inside-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect the PCA inside an `AnnData` object</div>
+    <div class="box-title hands-on-title" id="hands-on-inspect-the-pca-inside-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect the PCA inside an `AnnData` object</div>
 
     <ol>
       <li>
@@ -3753,7 +3753,7 @@ with the following parameters:
 <p>Scanpy provides several useful ways of visualizing both cells and genes that define the PCA. The simplest approach for visualization is to plot the top 3 PCs on 2D plots (PC1 vs PC2 and PC2 vs PC3)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-top-2-pcs-the-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot the top 2 PCs the PCA</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-top-2-pcs-the-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot the top 2 PCs the PCA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3796,7 +3796,7 @@ with the following parameters:
 <p>On these plots we see the different cells projected onto the first 3 PCs. We can already see subpopulations of cells, but only 3 PCs are represented there and plot like these are not so informative. It may be more interesting to project also the values for the genes, since perhaps these are the genes most involved in the 3 PCs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-the-top-genes-associated-with-pcs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize the top genes associated with PCs</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-the-top-genes-associated-with-pcs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize the top genes associated with PCs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3888,7 +3888,7 @@ with the following parameters:
 <p>A simple heuristic for choosing the number of PCs generates an “Elbow plot”: a ranking of the PCs based on the percentage of variance they explain.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-an-elbow-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate an Elbow plot</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-an-elbow-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate an Elbow plot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -3957,7 +3957,7 @@ with the following parameters:
 <p>Here, to reproduce original results, we choose 10 neighbors for a KNN graph, the Euclidian distance metrics and the UMAP method (<span class="citation"><a href="#mcinnes2018umap">McInnes <i>et al.</i> 2018</a></span>) to compute the connectivities. The values will change depending on the data and can not easily predefined: testing different values is the only solution.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute the neighborhood graph</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute the neighborhood graph</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.10.2+galaxy1" title="Scanpy Inspect and manipulate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Inspect and manipulate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy1)</span> with the following parameters:
@@ -4020,7 +4020,7 @@ with the following parameters:
 <p>Here, we will reduce the neighborhood to 2 UMAP components and then we will check to see how the cells are projected on them given the top genes</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-embed-and-plot-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Embed and plot the neighborhood graph</div>
+  <div class="box-title hands-on-title" id="hands-on-embed-and-plot-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Embed and plot the neighborhood graph</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/1.10.2+galaxy0" title="Scanpy cluster, embed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy cluster, embed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4102,7 +4102,7 @@ with the following parameters:
 <p>Currently, the Louvain graph-clustering method (community detection based on optimizing modularity) is the one recommended. We need to define a value for the resolution parameter, i.e. the ‘granularity’ of the downstream clustering. High values lead to a greater number of clusters. For single-cell datasets of around 3K cells, we recommend to use a value between 0.4 and 1.2. For larger datasets, the optimal resolution will be higher.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cluster-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Cluster the neighborhood graph</div>
+  <div class="box-title hands-on-title" id="hands-on-cluster-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Cluster the neighborhood graph</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_cluster_reduce_dimension/scanpy_cluster_reduce_dimension/1.10.2+galaxy0" title="Scanpy cluster, embed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy cluster, embed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4157,7 +4157,7 @@ with the following parameters:
 <p>The cells in the same clusters should be co-localized in the UMAP coordinate plots.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-neighborhood-graph-and-the-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot the neighborhood graph and the clusters</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-neighborhood-graph-and-the-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot the neighborhood graph and the clusters</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4218,7 +4218,7 @@ with the following parameters:
 <p>The simplest and fastest method is the Welch <em>t</em>-test. It has good statistical properties for large numbers of cells (<span class="citation"><a href="#soneson2018bias">Soneson and Robinson 2018</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-rank-the-highly-differential-genes-using-t-test"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Rank the highly differential genes using t-test</div>
+  <div class="box-title hands-on-title" id="hands-on-rank-the-highly-differential-genes-using-t-test"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Rank the highly differential genes using t-test</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.10.2+galaxy1" title="Scanpy Inspect and manipulate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Inspect and manipulate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy1)</span> with the following parameters:
@@ -4402,7 +4402,7 @@ with the following parameters:
 <p>Another widely used method for pairwise comparisons between groups of observations is the Wilcoxon rank sum test (also known as the Wilcoxon-Mann-Whitney test). This test directly assesses separation between the expression distributions of different clusters. It is the recommended approach to use in publication (<span class="citation"><a href="#soneson2018bias">Soneson and Robinson 2018</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-rank-the-highly-differential-genes-using-wilcoxon-rank-sum"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Rank the highly differential genes using Wilcoxon rank sum</div>
+  <div class="box-title hands-on-title" id="hands-on-rank-the-highly-differential-genes-using-wilcoxon-rank-sum"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Rank the highly differential genes using Wilcoxon rank sum</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.10.2+galaxy1" title="Scanpy Inspect and manipulate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Inspect and manipulate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy1)</span> with the following parameters:
@@ -4575,7 +4575,7 @@ with the following parameters:
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compare-differential-expression-for-cst3-nkg7-and-ppbp-in-the-different-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compare differential expression for CST3, NKG7 and PPBP in the different clusters</div>
+  <div class="box-title hands-on-title" id="hands-on-compare-differential-expression-for-cst3-nkg7-and-ppbp-in-the-different-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compare differential expression for CST3, NKG7 and PPBP in the different clusters</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4625,7 +4625,7 @@ with the following parameters:
 <p>The assumption should be even more true for the top marker genes. The first way to visualize the expression of the top marker genes is to look at the distribution of the expression of each marker gene in cells for each cluster.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-expression-probability-distributions-across-clusters-of-top-marker-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot expression probability distributions across clusters of top marker genes</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-expression-probability-distributions-across-clusters-of-top-marker-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot expression probability distributions across clusters of top marker genes</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4684,7 +4684,7 @@ with the following parameters:
 <p>Another approach consists of displaying the mean expression of the marker genes for the cells on the neighborhood graph.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-top-marker-gene-expression-on-an-umap-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot top marker gene expression on an UMAP plot</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-top-marker-gene-expression-on-an-umap-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot top marker gene expression on an UMAP plot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4726,7 +4726,7 @@ with the following parameters:
 <p>We would like now to have a look at the expression of the top 20 marker genes in the different cells for each cluster</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-heatmap-of-the-gene-expression-in-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot heatmap of the gene expression in cells</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-heatmap-of-the-gene-expression-in-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot heatmap of the gene expression in cells</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -4775,7 +4775,7 @@ with the following parameters:
 <p>In some cases, it may also be interesting to find marker genes distinguishing one given cluster from one or several clusters. For example, the marker genes distinguishing cluster 0 from cluster 1.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-identify-the-marker-genes-distinguishing-cluster-0-from-cluster-1-using-wilcoxon-rank-sum"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Identify the marker genes distinguishing cluster 0 from cluster 1 using Wilcoxon rank sum</div>
+  <div class="box-title hands-on-title" id="hands-on-identify-the-marker-genes-distinguishing-cluster-0-from-cluster-1-using-wilcoxon-rank-sum"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Identify the marker genes distinguishing cluster 0 from cluster 1 using Wilcoxon rank sum</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_inspect/scanpy_inspect/1.10.2+galaxy1" title="Scanpy Inspect and manipulate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Inspect and manipulate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy1)</span> with the following parameters:
@@ -4837,7 +4837,7 @@ with the following parameters:
 <p>The marker genes distinguishing cluster 0 from cluster 1 are extracted based on their differences in expression, which can be easily visualized.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-expression-difference-for-the-marker-genes-distinguishing-cluster-0-from-cluster-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot expression difference for the marker genes distinguishing cluster 0 from cluster 1</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-expression-difference-for-the-marker-genes-distinguishing-cluster-0-from-cluster-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot expression difference for the marker genes distinguishing cluster 0 from cluster 1</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
       <ul>
@@ -5117,7 +5117,7 @@ with the following parameters:
 </table>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-the-cell-type-as-cluster-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add the cell type as cluster names</div>
+  <div class="box-title hands-on-title" id="hands-on-add-the-cell-type-as-cluster-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add the cell type as cluster names</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.9+galaxy0" title="Manipulate Anndata tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate Anndata</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.9+galaxy0)</span> with the following parameters:
@@ -5195,7 +5195,7 @@ with the following parameters:
 <p>With the annotated cell types, we can also visualize the expression of their canonical marker genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-expression-of-canonical-marker-genes-for-the-annotated-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot expression of canonical marker genes for the annotated cell types</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-expression-of-canonical-marker-genes-for-the-annotated-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot expression of canonical marker genes for the annotated cell types</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.10.2+galaxy0" title="Scanpy plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10.2+galaxy0)</span> with the following parameters:
@@ -5374,9 +5374,18 @@ with the following parameters:
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -5489,8 +5498,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -5678,27 +5687,27 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">8</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.25">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.125">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.125">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">4</td>
 			</tr>
 		   
@@ -5895,7 +5904,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1640,7 +1640,7 @@ into KO counts. We will use these count data as the starting point to perform th
 <p>After knowing what our input data are like, let’s get them into Galaxy history:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtaining-our-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtaining our data</div>
+  <div class="box-title hands-on-title" id="hands-on-obtaining-our-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Obtaining our data</div>
 
   <ol>
     <li>
@@ -1749,7 +1749,7 @@ have done that in the file upload menu using the <code class="language-plaintext
 <em>dataset collections</em> manually.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-manually-organizing-our-data-into-a-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Manually organizing our data into a collection</div>
+    <div class="box-title hands-on-title" id="hands-on-manually-organizing-our-data-into-a-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Manually organizing our data into a collection</div>
 
     <p>If you have all the datasets in the history, but they are not organized into a collection yet,
 you can follow these steps to create a collection:</p>
@@ -1805,7 +1805,7 @@ may look up the pros and cons of each tool. Here we use DESeq2.</p>
 <p>After learning about differential expression analysis, let’s get some hands-on experience.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-dea-via-deseq2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: DEA via DESeq2</div>
+  <div class="box-title hands-on-title" id="hands-on-dea-via-deseq2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: DEA via DESeq2</div>
 
   <ul>
     <li><strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -1865,7 +1865,7 @@ which computers can understand easily.</p>
 <strong>Fit a BUM model</strong>, that’s a file that only contains p-values.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-p-values-from-deseq2-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: extract p-values from DESeq2 output</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-p-values-from-deseq2-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: extract p-values from DESeq2 output</div>
 
   <ul>
     <li><strong>cut</strong> columns from a table <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1882,7 +1882,7 @@ which computers can understand easily.</p>
 <p>Now we can <strong>Fit a BUM model</strong>:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fit-the-bum-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: fit the BUM model</div>
+  <div class="box-title hands-on-title" id="hands-on-fit-the-bum-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: fit the BUM model</div>
 
   <ul>
     <li><strong>Fit a BUM model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -1917,7 +1917,7 @@ NPTX1	CIAO1
 <p>Upload this edge file (hereafter we call it edge file) into the Galaxy instance.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-edge-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload edge file</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-edge-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload edge file</div>
 
   <ol>
     <li><strong>Upload the edge file from Zenodo</strong>
@@ -1968,7 +1968,7 @@ It should contain two columns delimited by tab, one is KO ID; the other, p-value
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-geneid-and-p-values-from-deseq2-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: extract geneID and p-values from DESeq2 output</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-geneid-and-p-values-from-deseq2-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: extract geneID and p-values from DESeq2 output</div>
 
   <ul>
     <li><strong>cut</strong> columns from a table <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -1983,7 +1983,7 @@ It should contain two columns delimited by tab, one is KO ID; the other, p-value
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-heinz-scores"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: calculate Heinz scores</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-heinz-scores"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: calculate Heinz scores</div>
 
   <ul>
     <li><strong>Calculate a Heinz score</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2010,7 +2010,7 @@ and any KO whose p-value is below this threshold is regarded as significant, whi
 <p>After getting Heinz scores, let’s run Heinz program to find the optimal subnetwork from the background network which we mentioned earlier.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-pinpoint-the-optimal-subnetwork"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: pinpoint the optimal subnetwork</div>
+  <div class="box-title hands-on-title" id="hands-on-pinpoint-the-optimal-subnetwork"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: pinpoint the optimal subnetwork</div>
 
   <ul>
     <li><strong>Identify optimal scoring subnetwork</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2041,7 +2041,7 @@ but, to use that, you can install Heinz directly via <a href="https://anaconda.o
 <p>The result we got from the last step is not very human-readable, is it? It is a little painful to understand the Heinz result directly. Therefore we need to visualize the output by making it into graphs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-the-optimal-subnetwork"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: visualize the optimal subnetwork</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-the-optimal-subnetwork"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: visualize the optimal subnetwork</div>
 
   <ul>
     <li><strong>Visualize</strong> the optimal scoring subnetwork <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2081,7 +2081,7 @@ but, to use that, you can install Heinz directly via <a href="https://anaconda.o
 <p>Let’s assume that these are the operations we always need for different datasets, to make life easier, we can save all of these operations into a workflow in Galaxy, which you can reuse for different datasets next time.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-the-heinz-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract the Heinz workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-the-heinz-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract the Heinz workflow</div>
 
   <ol>
     <li>
@@ -2154,9 +2154,18 @@ but, to use that, you can install Heinz directly via <a href="https://anaconda.o
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2312,17 +2321,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">1</td>
 			</tr>
 		   
@@ -2442,7 +2451,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

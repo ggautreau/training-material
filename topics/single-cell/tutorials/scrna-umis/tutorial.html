@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2054,7 +2054,7 @@ How do we correct for this bias?</p>
 <p>We now know the role of UMIs and cell barcodes, but how do we handle them in the analysis? Let us look at 4 example sequences in our paired-end FASTQ data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-preparing-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Preparing the Data</div>
+  <div class="box-title hands-on-title" id="hands-on-preparing-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Preparing the Data</div>
 
   <ol>
     <li>Create a new history and rename it (<em>e.g.</em> ‘Inspecting FastQ Files in scRNA batch data’)</li>
@@ -2095,7 +2095,7 @@ J00182:75:HTKJNBBXX:2:1115:8501:46961
 <p>At this point we now have a history with two items: our paired FASTQ test data, and a tabular file of read names. We will now apply the tabular file to the FASTQ file and extract only those reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extracting-the-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extracting the Reads</div>
+  <div class="box-title hands-on-title" id="hands-on-extracting-the-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extracting the Reads</div>
 
   <ol>
     <li>Extracting our 4 reads
@@ -2259,7 +2259,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>The encoding of the barcodes on the first read can actually be seen by examining the distribution of bases in a FastQC plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-confirming-the-barcoding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Confirming the Barcoding</div>
+  <div class="box-title hands-on-title" id="hands-on-confirming-the-barcoding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Confirming the Barcoding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.74+galaxy1)</span> with the following parameters:
@@ -2394,7 +2394,7 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
 <p>For this we need to take the barcode information from the Forward reads, and stick it into the <em>header</em> of the Reverse reads. That way we can align our sequence to the reference and still keep the barcode information associated with the reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-barcode-extraction-and-annotation-of-our-4-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Barcode Extraction and Annotation of our 4 reads</div>
+  <div class="box-title hands-on-title" id="hands-on-barcode-extraction-and-annotation-of-our-4-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Barcode Extraction and Annotation of our 4 reads</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/1.1.6+galaxy0" title="UMI-tools extract tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>UMI-tools extract</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.6+galaxy0)</span> with the following parameters:
@@ -2571,9 +2571,18 @@ A-77AA-7FF&lt;7FFJFFFJJJJJJJJJJJJJ-AFJJJJJJJFJJJJJJJJJJJJJJJJJJJJJJJJJJJJ
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2674,8 +2683,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2826,27 +2835,27 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">15</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.26666666666666666">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.06666666666666667">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.06666666666666667">1</td>
 			</tr>
 		   
@@ -3071,7 +3080,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

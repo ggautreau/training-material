@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1351,7 +1351,7 @@ Knowing that your infrastructure is exactly what you expect it to be can simplif
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-up-terraform"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting up Terraform</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-up-terraform"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Setting up Terraform</div>
 
   <ol>
     <li>
@@ -1431,7 +1431,7 @@ commands will detect it and remind you to do so if necessary.
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-keypairs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Keypairs</div>
+  <div class="box-title hands-on-title" id="hands-on-keypairs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Keypairs</div>
 
   <ol>
     <li>
@@ -1540,7 +1540,7 @@ can't guarantee that exactly these actions will be performed if
 <p>Lastly it informs us that we did not save our plan. Terraform can maintain a concept of what the remote resource’s state looks like between your <code class="language-plaintext highlighter-rouge">terraform plan</code> and <code class="language-plaintext highlighter-rouge">terraform apply</code> steps. This is a more advanced feature and will not be covered today.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-applying-our-plan"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Applying our plan</div>
+  <div class="box-title hands-on-title" id="hands-on-applying-our-plan"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Applying our plan</div>
 
   <p>Now that you’ve reviewed the plan and everything looks good, we’re ready to apply our changes.</p>
 
@@ -1632,7 +1632,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 <p>You are now ready to launch an instance!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launching-an-instance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Launching an Instance</div>
+  <div class="box-title hands-on-title" id="hands-on-launching-an-instance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Launching an Instance</div>
 
   <ol>
     <li>
@@ -1787,7 +1787,7 @@ Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 <p>You now have a running instance! We do not know the IP address so we cannot login yet. You can obtain that from the OpenStack dashboard, or via the <code class="language-plaintext highlighter-rouge">terraform show</code> command</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-terraform-show-and-logging-in"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: `terraform show` and logging in</div>
+  <div class="box-title hands-on-title" id="hands-on-terraform-show-and-logging-in"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: `terraform show` and logging in</div>
 
   <ol>
     <li>
@@ -1892,7 +1892,7 @@ Uptime............: up 5 minutes
 <p>We will start by setting up the new nodes and launching them as a test:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-configuration-for-other-nodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding configuration for other nodes</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-configuration-for-other-nodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding configuration for other nodes</div>
 
   <ol>
     <li>
@@ -2034,7 +2034,7 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 <p>This will create a file with the value from <code class="language-plaintext highlighter-rouge">content</code>, owned by root/group root, in <code class="language-plaintext highlighter-rouge">/etc/condor/condor_config.local</code>. So let’s re-structure our <code class="language-plaintext highlighter-rouge">main.tf</code> file to have some configuration:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cloud-init"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: cloud-init</div>
+  <div class="box-title hands-on-title" id="hands-on-cloud-init"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: cloud-init</div>
 
   <ol>
     <li>
@@ -2325,7 +2325,7 @@ Do you want to perform these actions?
 <p>We now have a running cluster! Let’s log in</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cluster-usage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Cluster Usage</div>
+  <div class="box-title hands-on-title" id="hands-on-cluster-usage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Cluster Usage</div>
 
   <ol>
     <li>
@@ -2405,7 +2405,7 @@ sleep 1
 <p>Terraform has the ability to produce a graph showing the relationship of resources in your infrastructure. We will produce a graphic for our current terraform plan:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-infrastructure-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Infrastructure Graph</div>
+  <div class="box-title hands-on-title" id="hands-on-infrastructure-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Infrastructure Graph</div>
 
   <ol>
     <li>
@@ -2449,7 +2449,7 @@ sleep 1
 <h1 id="tearing-everything-down">Tearing Everything Down</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cleanup"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Cleanup</div>
+  <div class="box-title hands-on-title" id="hands-on-cleanup"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Cleanup</div>
 
   <ol>
     <li>
@@ -2576,9 +2576,18 @@ condor_drain <span class="si">$(</span><span class="nb">hostname</span><span cla
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/admin/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2706,17 +2715,17 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">7</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.14285714285714285">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.14285714285714285">1</td>
 			</tr>
 		   
@@ -2851,7 +2860,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

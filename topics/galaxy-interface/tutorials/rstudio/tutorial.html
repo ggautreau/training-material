@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1789,7 +1789,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Opening up <span class="tool" data-tool="interactive_tool_rstudio" title="RStudio tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>RStudio</strong></span> in Galaxy is easy:</p>
 
 <!--SNIPPET-->
-<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch RStudio</div>   <p>Depending on which server you are using, you may be able to run RStudio directly in Galaxy. If that is not available, RStudio Cloud can be an alternative.</p>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently RStudio in Galaxy is only available on <a href="https://usegalaxy.eu">UseGalaxy.eu</a> and <a href="https://usegalaxy.org">UseGalaxy.org</a></p>   <ol>     <li>Open the Rstudio tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_rstudio">here to launch RStudio</a></li>     <li>Click Run Tool</li>     <li>The tool will start running and will stay running permanently</li>     <li>Click on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started.</li>   </ol> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-cloud-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-cloud-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio Cloud if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If RStudio is not available on the Galaxy instance:</p>   <ol>     <li>Register for <a href="https://client.login.rstudio.cloud/oauth/login?show_auth=0&amp;show_login=1&amp;show_setup=1">RStudio Cloud</a>, or login if you already have an account</li>     <li>Create a new project</li>   </ol> </blockquote> </blockquote>
+<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Launch RStudio</div>   <p>Depending on which server you are using, you may be able to run RStudio directly in Galaxy. If that is not available, RStudio Cloud can be an alternative.</p>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently RStudio in Galaxy is only available on <a href="https://usegalaxy.eu">UseGalaxy.eu</a> and <a href="https://usegalaxy.org">UseGalaxy.org</a></p>   <ol>     <li>Open the Rstudio tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_rstudio">here to launch RStudio</a></li>     <li>Click Run Tool</li>     <li>The tool will start running and will stay running permanently</li>     <li>Click on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started.</li>   </ol> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-cloud-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-cloud-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio Cloud if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If RStudio is not available on the Galaxy instance:</p>   <ol>     <li>Register for <a href="https://client.login.rstudio.cloud/oauth/login?show_auth=0&amp;show_login=1&amp;show_setup=1">RStudio Cloud</a>, or login if you already have an account</li>     <li>Create a new project</li>   </ol> </blockquote> </blockquote>
 <p><!--END_SNIPPET--></p>
 
 <p>You should now be looking at a page with the RStudio interface:</p>
@@ -1801,7 +1801,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Now that we are ready to start exploring R, we will want to keep a record of the commands we are using. To do this we can create an R script.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-r-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a R script</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-r-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a R script</div>
 
   <ol>
     <li>Click the <strong>File</strong> menu</li>
@@ -1813,7 +1813,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>A new panel appears on the top left. Before we go any further, you should save your script.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-save-a-r-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Save a R script</div>
+  <div class="box-title hands-on-title" id="hands-on-save-a-r-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Save a R script</div>
 
   <ol>
     <li>
@@ -1883,7 +1883,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>A function in R (or any computing language) is a short program that takes some input and returns some output.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calling-a-function-in-r"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calling a function in R</div>
+  <div class="box-title hands-on-title" id="hands-on-calling-a-function-in-r"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Calling a function in R</div>
 
   <ol>
     <li>Type <code class="language-plaintext highlighter-rouge">date()</code> in the <strong>Console</strong> panel</li>
@@ -1910,7 +1910,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The other way to execute these functions is to use the script we just created and then keep track of the functions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-a-function-via-a-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running a function via a script</div>
+  <div class="box-title hands-on-title" id="hands-on-running-a-function-via-a-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running a function via a script</div>
 
   <ol>
     <li>Type <code class="language-plaintext highlighter-rouge">date()</code> in the <strong>Script</strong> panel</li>
@@ -1923,7 +1923,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We would like now to keep information about this function</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-comment-in-a-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Comment in a script</div>
+  <div class="box-title hands-on-title" id="hands-on-comment-in-a-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Comment in a script</div>
 
   <ol>
     <li>
@@ -1979,7 +1979,7 @@ assumed purpose.</p>
     <p>An argument may be a specific input for your function and/or may modify the function’s behavior. For example the function <code class="language-plaintext highlighter-rouge">round()</code> will round a number with a decimal:</p>
 
     <blockquote class="code_in">
-      <div class="box-title code-in-title" id="code-in"><i class="far fa-keyboard" aria-hidden="true" ></i> Input</div>
+      <div class="box-title code-in-title" id="code-in"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In</div>
       <div class="language-R highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># This will round a number to the nearest integer</span><span class="w">
 </span><span class="o">&gt;</span><span class="w"> </span><span class="nf">round</span><span class="p">(</span><span class="m">3.14</span><span class="p">)</span><span class="w">
 </span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="m">3</span><span class="w">
@@ -1995,7 +1995,7 @@ assumed purpose.</p>
 <p>To see the help you need enter a <code class="language-plaintext highlighter-rouge">?</code> in front of the function name. The <strong>Help</strong> tab (in the bottom-right panel) will show you information.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-help"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get help</div>
+  <div class="box-title hands-on-title" id="hands-on-get-help"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get help</div>
 
   <ol>
     <li>
@@ -2021,7 +2021,7 @@ assumed purpose.</p>
 <p>We can also see the arguments of a function without opening its help.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-the-function-arguments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get the function arguments</div>
+  <div class="box-title hands-on-title" id="hands-on-get-the-function-arguments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get the function arguments</div>
 
   <ol>
     <li>
@@ -2052,7 +2052,7 @@ assumed purpose.</p>
 <p>We can explicitly set the digits parameter when we call the function.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-call-a-function-with-several-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Call a function with several parameters</div>
+  <div class="box-title hands-on-title" id="hands-on-call-a-function-with-several-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Call a function with several parameters</div>
 
   <ol>
     <li>Call <code class="language-plaintext highlighter-rouge">round</code> with 2 arguments
@@ -2083,7 +2083,7 @@ assumed purpose.</p>
 <p>Finally, what if you are using <code class="language-plaintext highlighter-rouge">?</code> to get help for a function in a package not installed on your system, such as when you are running a script which has dependencies?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-help-for-a-missing-function"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get help for a missing function</div>
+  <div class="box-title hands-on-title" id="hands-on-get-help-for-a-missing-function"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get help for a missing function</div>
 
   <ol>
     <li>Ask help for <code class="language-plaintext highlighter-rouge">geom_point()</code></li>
@@ -2105,7 +2105,7 @@ assumed purpose.</p>
 <p>Finally, if you think there should be a function, for example a statistical test, but you aren’t sure what it is called in R, or what functions may be available.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-search-for-a-function"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Search for a function</div>
+  <div class="box-title hands-on-title" id="hands-on-search-for-a-function"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Search for a function</div>
 
   <ol>
     <li>Type <code class="language-plaintext highlighter-rouge">help.search('chi-Squared test')</code></li>
@@ -2150,7 +2150,7 @@ find:</p>
 <p>Here is one last bonus we will mention about RStudio. It’s difficult to remember all of the arguments and definitions associated with a given function.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-search-for-a-function-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Search for a function</div>
+  <div class="box-title hands-on-title" id="hands-on-search-for-a-function-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Search for a function</div>
 
   <ol>
     <li>Type <code class="language-plaintext highlighter-rouge">lm</code> in the <strong>Script</strong> panel</li>
@@ -2181,7 +2181,7 @@ you should save the work you did within RStudio by exporting any files you creat
 Then you can safely shut down RStudio.</p>
 
 <!--SNIPPET-->
-<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-stop-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Stop RStudio</div>   <p>When you have finished your R analysis, it’s time to stop RStudio.</p>   <ol>   <li>First, save your work into Galaxy, to ensure reproducibility:     <ol>       <li>You can use <code class="language-plaintext highlighter-rouge">gx_put(filename)</code> to save individual files by supplying the filename</li>       <li>You can use <code class="language-plaintext highlighter-rouge">gx_save()</code> to save the entire analysis transcript and any data objects loaded into your environment.</li>     </ol>   </li>   <li>Once you have saved your data, you can proceed in 2 different ways:     <ul>       <li>Deleting the corresponding history dataset named <code class="language-plaintext highlighter-rouge">RStudio</code> and showing a “in progress state”, so yellow, OR</li>       <li>Clicking on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started, selecting the corresponding box, and finally clicking on the “Stop” button at the bottom.</li>     </ul>   </li> </ol> </blockquote>
+<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-stop-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Stop RStudio</div>   <p>When you have finished your R analysis, it’s time to stop RStudio.</p>   <ol>   <li>First, save your work into Galaxy, to ensure reproducibility:     <ol>       <li>You can use <code class="language-plaintext highlighter-rouge">gx_put(filename)</code> to save individual files by supplying the filename</li>       <li>You can use <code class="language-plaintext highlighter-rouge">gx_save()</code> to save the entire analysis transcript and any data objects loaded into your environment.</li>     </ol>   </li>   <li>Once you have saved your data, you can proceed in 2 different ways:     <ul>       <li>Deleting the corresponding history dataset named <code class="language-plaintext highlighter-rouge">RStudio</code> and showing a “in progress state”, so yellow, OR</li>       <li>Clicking on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started, selecting the corresponding box, and finally clicking on the “Stop” button at the bottom.</li>     </ul>   </li> </ol> </blockquote>
 <p><!--END_SNIPPET--></p>
 
 <h1 id="interaction-between-rstudio-and-galaxy">Interaction between RStudio and Galaxy</h1>
@@ -2252,9 +2252,18 @@ gx_put("result.csv")
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/galaxy-interface/faqs/">FAQ page for the Using Galaxy and Managing your Data topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/galaxy-interface/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2377,8 +2386,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2538,22 +2547,22 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">5</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.4">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.8">4</td>
 			</tr>
 		   
@@ -2721,7 +2730,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

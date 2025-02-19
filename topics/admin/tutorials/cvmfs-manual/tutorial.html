@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1427,7 +1427,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We are going to setup a CVMFS mount to the Galaxy reference data repository on our machines. To do this we have to install and configure the CVMFS client and then mount the appropriate CVMFS repository using the publicly available keys.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-installing-the-cvmfs-client"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Installing the CVMFS Client</div>
+  <div class="box-title hands-on-title" id="hands-on-installing-the-cvmfs-client"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Installing the CVMFS Client</div>
 
   <ol>
     <li>
@@ -1457,7 +1457,7 @@ wget https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest_all.deb
 <p>The configuration is not complex for CVMFS:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuring-cvmfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuring CVMFS</div>
+  <div class="box-title hands-on-title" id="hands-on-configuring-cvmfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Configuring CVMFS</div>
 
   <ol>
     <li>
@@ -1516,7 +1516,7 @@ owIDAQAB
 <p>Probe the connection.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-testing-it-out"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Testing it out</div>
+  <div class="box-title hands-on-title" id="hands-on-testing-it-out"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Testing it out</div>
 
   <ol>
     <li>
@@ -1559,7 +1559,7 @@ owIDAQAB
       <p>Change directory into <code class="language-plaintext highlighter-rouge">/cvmfs/data.galaxyproject.org/</code>.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd /cvmfs/data.galaxyproject.org/
 ls
 ls byhand
@@ -1624,9 +1624,18 @@ AutoFS only mounts the files when they’re accessed, so it appears like there i
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/admin/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1758,7 +1767,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1840,7 +1849,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

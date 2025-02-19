@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1911,7 +1911,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -2000,7 +2000,7 @@ For mapping <a href="/training-material/topics/sequence-analysis/tutorials/mappi
 
 <h2 id="quality-control">Quality Control</h2>
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control-of-the-input-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality control of the input datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control-of-the-input-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality control of the input datasets</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.72+galaxy1)</span> on the fastq datasets
       <ul>
@@ -2079,7 +2079,7 @@ for example, see Fig. 4C in
 However, the aim is to detect clear reads for hCNVs and will use a trimming step to see if the analysis can be improved.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-read-trimming-and-filtering-of-the-normal-tissue-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read trimming and filtering of the normal tissue reads</div>
+  <div class="box-title hands-on-title" id="hands-on-read-trimming-and-filtering-of-the-normal-tissue-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read trimming and filtering of the normal tissue reads</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.36.5" title="Trimmomatic tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Trimmomatic</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.36.5)</span> to trim and filter the normal tissue reads
       <ul>
@@ -2145,14 +2145,14 @@ that expect reads to be in a specific order and having unmapped reads can result
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-read-trimming-and-filtering-of-the-tumor-tissue-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read trimming and filtering of the tumor tissue reads</div>
+  <div class="box-title hands-on-title" id="hands-on-read-trimming-and-filtering-of-the-tumor-tissue-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read trimming and filtering of the tumor tissue reads</div>
   <ol>
     <li>repeat the previous step for <strong>tumor tissue</strong> reads following the same steps as above.</li>
   </ol>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-exercise-quality-control-of-the-polished-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Exercise: Quality control of the polished datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-exercise-quality-control-of-the-polished-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Exercise: Quality control of the polished datasets</div>
   <p>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.72+galaxy1)</span> and <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8+galaxy0)</span> like before,
 but using the four trimmed datasets produced by Trimmomatic as input.</p>
 
@@ -2176,7 +2176,7 @@ we can point out that some of the adapters were removed.</p>
 <h2 id="read-mapping">Read Mapping</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-read-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read Mapping</div>
+  <div class="box-title hands-on-title" id="hands-on-read-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read Mapping</div>
   <ol class="comment">
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1" title="Map with BWA-MEM tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with BWA-MEM</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.17.1)</span> to map the reads from the <strong>normal tissue</strong> sample to the reference genome
       <ul class="comment">
@@ -2297,7 +2297,7 @@ reads (r2) dataset of the <strong>tumor tissue</strong> sample; output of
 <p>The remaining data preprocessing until the Control-FreeC step is the same for Normal and Tumor reads.  Create a data collection to include those two files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtrate-the-mapped-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtrate the mapped reads</div>
+  <div class="box-title hands-on-title" id="hands-on-filtrate-the-mapped-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtrate the mapped reads</div>
   <ol>
     <li>Use <span class="tool" data-tool="__BUILD_LIST__" title="Build list tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Build list</strong></span> to creat a list from the maped reads of the <strong>normal tissue</strong> and <strong>tumor tissue</strong>
       <ul>
@@ -2349,7 +2349,7 @@ and the duplicated reads. This step is needed to reduce the running time
 and in results interpretation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-filtration-and-remove-duplicates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data filtration and Remove duplicates</div>
+  <div class="box-title hands-on-title" id="hands-on-data-filtration-and-remove-duplicates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data filtration and Remove duplicates</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3" title="Samtools view tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools view</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9+galaxy3)</span>  with the following parameters
       <ul>
@@ -2384,7 +2384,7 @@ and in results interpretation.</p>
 <p>To detect hCNVs expression accurately. The reads must go through the lift alignment process. Lift Alignment works by shifting reads that contain indels to the left of a reference genome until they can not be shifted anymore. As a result, it will only extract reads with indels, with no false reads (reads that mismatch with the reference genome other than the indels).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-homogenize-the-positional-distributed-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Homogenize the positional distributed indels</div>
+  <div class="box-title hands-on-title" id="hands-on-homogenize-the-positional-distributed-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Homogenize the positional distributed indels</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/freebayes/bamleftalign/1.3.1" title="BamLeftAlign tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>BamLeftAlign</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.1)</span>  with the following parameters
       <ul>
@@ -2413,7 +2413,7 @@ and in results interpretation.</p>
 <h2 id="filtrate-indels">Filtrate indels</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtrate-the-indels-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtrate the indels reads</div>
+  <div class="box-title hands-on-title" id="hands-on-filtrate-the-indels-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtrate the indels reads</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.9+galaxy3" title="Samtools view tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools view</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9+galaxy3)</span>  with the following parameters
       <ul>
@@ -2475,7 +2475,7 @@ and in results interpretation.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-files-form-list"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract files form list</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-files-form-list"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract files form list</div>
   <p>extract the files from the list to handel them separitly</p>
   <ol>
     <li>Run <span class="tool" data-tool="__EXTRACT_DATASET__" title="Extract Dataset tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Extract Dataset</strong></span>  with the following parameters:
@@ -2529,7 +2529,7 @@ The presence of normal cells within tumour cells can have an impact on the const
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-detection-of-copy-number-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Detection of copy-number changes</div>
+  <div class="box-title hands-on-title" id="hands-on-detection-of-copy-number-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Detection of copy-number changes</div>
   <ol>
     <li>
       <p>Import the BED file for the captured reagions from <a href="https://doi.org/10.5281/zenodo.5697358">Zenodo</a>:</p>
@@ -2605,7 +2605,7 @@ and elements in creating the plot. Circos visualise the genomic alterations in g
 the relationships between the genomic intervals <a href="https://genome.cshlp.org/content/19/9/1639.short">Krzywinski, Schein et al. 2009</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-hcnv-findings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise the hCNV findings</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-hcnv-findings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise the hCNV findings</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7" title="Circos tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Circos</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.69.8+galaxy7)</span>  with the following parameters
       <ul>
@@ -2768,9 +2768,18 @@ shows the copy number changes in those regions.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/variant-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3014,7 +3023,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -3023,7 +3032,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -3105,7 +3114,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

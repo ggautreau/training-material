@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1785,7 +1785,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In this tutorial, protein and the total RNA sample was obtained from the early development of B-cells from mice. It was obtained at two developmental stages of B-cells: <em>Ebf1</em> -/- pre-pro-B and <em>Rag2</em> -/- pro-B. Please refer to the original study  <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4276347/">Heydarian, M. et al.</a>for details.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: data upload and organization</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: data upload and organization</div>
 
   <ol>
     <li>
@@ -1836,7 +1836,7 @@ has Title Column labeled as “1” and Sequence Column as “2”.</li>
 <p>UCSC prefaces chromosome names with chr while Ensembl does not. To perform this action, we use the Replace Text in a specific column - a <a href="https://docs.python.org/3/library/re.html">regular expression</a> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-replace-text-in-a-specific-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Replace Text in a specific column</div>
+  <div class="box-title hands-on-title" id="hands-on-replace-text-in-a-specific-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Replace Text in a specific column</div>
   <ol>
     <li><strong>Replace Text in a specific column</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:</li>
     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to process”</em>: <code class="language-plaintext highlighter-rouge">Mus_musculus.GRCm38.86.gtf</code></li>
@@ -1875,7 +1875,7 @@ has Title Column labeled as “1” and Sequence Column as “2”.</li>
 <p>The first tool in the workflow is the <a href="http://ccb.jhu.edu/software/hisat"><strong>HISAT2</strong></a> alignment tool. It maps next-generation sequence (NGS) reads to the reference genome. This tool requires an RNA-seq file (.FASTQ) and a reference genome file in Gene transfer format (GTF). This .gtf file is obtained from the Ensembl database. When successful, this tool outputs a .bam file (binary version of a SAM: <strong>S</strong>equence <strong>A</strong>lignment/<strong>M</strong>ap).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-alignment-with-hisat2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Alignment with HISAT2</div>
+  <div class="box-title hands-on-title" id="hands-on-alignment-with-hisat2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Alignment with HISAT2</div>
 
   <ol>
     <li><strong>HISAT2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1922,7 +1922,7 @@ where fr - first strand corresponds to R and RF; fr - second strand corresponds 
 <p>FreeBayes can act as a frequency-based pooled caller and can describe variants and haplotypes in terms of observation frequency rather than called genotypes. To do so, use <code class="language-plaintext highlighter-rouge">--pooled-continuous</code> and set input filters to a suitable level. Allele observation counts will be described by AO and RO fields in the VCF output.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-variant-calling-with-freebayes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Variant Calling with FreeBayes</div>
+  <div class="box-title hands-on-title" id="hands-on-variant-calling-with-freebayes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Variant Calling with FreeBayes</div>
 
   <ol>
     <li><strong>FreeBayes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1986,7 +1986,7 @@ data manager to create these annotations to make them available for users.</p>
 <p><a href="../../images/CustomProDB.png" rel="noopener noreferrer"><img src="../../images/CustomProDB.png" alt="customproDB. " width="1895" height="697" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-protein-fastas-from-exosome-or-transcriptome-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate protein FASTAs from exosome or transcriptome data</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-protein-fastas-from-exosome-or-transcriptome-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate protein FASTAs from exosome or transcriptome data</div>
 
   <ol>
     <li><strong>CustomProDB</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2033,7 +2033,7 @@ variant annotation file will be used to visualize the variants in the Multi-omic
 <p>Its input can include not only the alignments of raw reads used by other transcript assemblers, but also alignments of longer sequences that have been assembled from those reads. To identify differentially expressed genes between experiments, StringTie’s output can be processed by specialized software like Ballgown, Cuffdiff or other programs (DESeq2, edgeR, etc.).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-transcript-assembly-with-stringtie"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Transcript assembly with StringTie</div>
+  <div class="box-title hands-on-title" id="hands-on-transcript-assembly-with-stringtie"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Transcript assembly with StringTie</div>
 
   <ol>
     <li><strong>StringTie</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2106,7 +2106,7 @@ annotated, such as human, mouse, or other model organisms.</p>
 <p>The original form of this program is also distributed as part of the Cufflinks suite, under the name <a href="http://cole-trapnell-lab.github.io/cufflinks/cuffcompare/">CuffCompare</a>. Most of the options and parameters of CuffCompare are supported by GffCompare, while new features will likely be added to GffCompare in the future.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compare-assembled-transcripts-against-a-reference-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: compare assembled transcripts against a reference annotation</div>
+  <div class="box-title hands-on-title" id="hands-on-compare-assembled-transcripts-against-a-reference-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: compare assembled transcripts against a reference annotation</div>
 
   <ol>
     <li><strong>GffCompare</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2155,7 +2155,7 @@ no longer needed and is simply ignored when given).</p>
 <h2 id="translate-transcripts">Translate transcripts</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-translate-transcripts-to-protein-sequence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Translate transcripts to protein sequence</div>
+  <div class="box-title hands-on-title" id="hands-on-translate-transcripts-to-protein-sequence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Translate transcripts to protein sequence</div>
 
   <p>First, we must convert the GffCompare annotated GTF file to BED format.</p>
 
@@ -2219,7 +2219,7 @@ along with the UniProt and cRAP databases.</li>
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
 
   <ol>
     <li><strong>FASTA Merge Files and Filter Unique Sequences</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
@@ -2259,7 +2259,7 @@ We will also need to similarily modify the accessions in the genomic mapping and
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fasta-to-tabular"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: FASTA to Tabular</div>
+  <div class="box-title hands-on-title" id="hands-on-fasta-to-tabular"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: FASTA to Tabular</div>
   <ol>
     <li><strong>FASTA-to-Tabular</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: with the default parameters
       <ul>
@@ -2318,7 +2318,7 @@ Also, while running the workflow, the Title column for <strong>Tabular-to-FASTA<
 <h2 id="genomic-mapping-database">Genomic mapping database</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-database-for-genomic-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create Database for genomic mapping</div>
+  <div class="box-title hands-on-title" id="hands-on-create-database-for-genomic-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create Database for genomic mapping</div>
 
   <ol>
     <li><strong>SQLite to tabular for SQL query</strong> <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> with the following parameters:
@@ -2420,7 +2420,7 @@ We need to modify the CustomProDB protein accessions the same as was done for th
 <p>We will repeat the process for the variant annotations (this file will be used as a input to the new updates that will be made on the Multiomics Visualization platform).  We need to modify the CustomProDB protein accessions the same as was done for the FASTA database.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-database-for-variant-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create database for variant annotations</div>
+  <div class="box-title hands-on-title" id="hands-on-create-database-for-variant-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create database for variant annotations</div>
 
   <ol>
     <li><strong>SQLite to tabular</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2500,7 +2500,7 @@ by MVP to visualize the genomic loci of any variant peptides.</p>
 <p>To do so:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
 
   <ol>
     <li><strong>FASTA Merge Files and Filter Unique Sequences</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2531,7 +2531,7 @@ by MVP to visualize the genomic loci of any variant peptides.</p>
 <p>Generate a list of Reference Proteins. Identify peptides that are contained in the reference proteins will be filtered out in the next tutorial.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fasta-to-tabular-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: FASTA to Tabular</div>
+  <div class="box-title hands-on-title" id="hands-on-fasta-to-tabular-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: FASTA to Tabular</div>
   <ol>
     <li><strong>FASTA-to-Tabular</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: with the default parameters
       <ul>
@@ -2638,9 +2638,18 @@ by MVP to visualize the genomic loci of any variant peptides.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/proteomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2740,8 +2749,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3059,17 +3068,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.25">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">2</td>
 			</tr>
 		   
@@ -3210,7 +3219,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -959,7 +959,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h1 id="launching-codespaces">Launching CodeSpaces</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-up-gitpod"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting up GitPod</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-up-gitpod"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Setting up GitPod</div>
 
   <ol>
     <li>
@@ -1024,7 +1024,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Before we start making any changes, let’s build the website and get a live preview.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-up-gitpod-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting up GitPod</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-up-gitpod-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Setting up GitPod</div>
 
   <ol>
     <li>
@@ -1089,7 +1089,7 @@ Some browsers block popups by default, you may need to allow CodeSpaces to show 
 <p><strong>Scenario:</strong> You have spotted a typo in one of the tutorials, and would like to fix this and see the resulting GTN webpage.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-and-view-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Make and view changes</div>
+  <div class="box-title hands-on-title" id="hands-on-make-and-view-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Make and view changes</div>
 
   <ol>
     <li>In the preview of the GTN website, open the following tutorial:
@@ -1161,7 +1161,7 @@ Some browsers block popups by default, you may need to allow CodeSpaces to show 
 <p>When you have finished your changes, it all looks good in the preview, you want to save your changes back to GitHub so that you can either continue later, or make a Pull Request to the GTN to contribute your changes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-comitting-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Comitting changes</div>
+  <div class="box-title hands-on-title" id="hands-on-comitting-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Comitting changes</div>
   <p>Before you can commit your changes you have to create a branch. You have two options to preform this task:</p>
   <ol>
     <li><strong>Option 1: via the terminal</strong>
@@ -1212,7 +1212,7 @@ Some browsers block popups by default, you may need to allow CodeSpaces to show 
 <p>Next, we will see these changes to on your branch/fork. We will do this from outside of our codespace.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-pushing-changes-to-github"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Pushing changes to GitHub</div>
+  <div class="box-title hands-on-title" id="hands-on-pushing-changes-to-github"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Pushing changes to GitHub</div>
 
   <ol>
     <li>In your browser (outside of codespaces), navigate to the <a href="https://github.com/galaxyproject/training-material">GTN GitHub page</a></li>
@@ -1231,7 +1231,7 @@ Some browsers block popups by default, you may need to allow CodeSpaces to show 
 but it is always a good idea to close your CodeSpace when you are finished with it, to conserve your quotum.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-shutting-down-your-codespace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Shutting down your CodeSpace</div>
+  <div class="box-title hands-on-title" id="hands-on-shutting-down-your-codespace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Shutting down your CodeSpace</div>
 
   <ol>
     <li>
@@ -1306,9 +1306,18 @@ but it is always a good idea to close your CodeSpace when you are finished with 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/contributing/faqs/">FAQ page for the Contributing to the Galaxy Training Material topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/contributing/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1595,7 +1604,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1677,7 +1686,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1922,7 +1922,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p><a href="https://www.ncbi.nlm.nih.gov/">NCBI</a> is the resource that would store <a href="https://www.ncbi.nlm.nih.gov/genome/genomes/167">all complete <em>E. coli</em> genomes</a>. This list contains over 500 genomes and so uploading them by hand will likely result in carpal tunnel syndrome, which we want to prevent. Galaxy has several features that are specifically designed for uploading and managing large sets of similar types of data. The following two <strong>Hands-on</strong> sections show how they can be used to import all completed <em>E. coli</em> genomes into Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-preparing-a-list-of-all-complete-i-e-coli-i-genomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Preparing a list of all complete <i>E. coli</i> genomes</div>
+  <div class="box-title hands-on-title" id="hands-on-preparing-a-list-of-all-complete-i-e-coli-i-genomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Preparing a list of all complete <i>E. coli</i> genomes</div>
 
   <ol>
     <li>
@@ -1983,7 +1983,7 @@ to be altered (e.g. column numbers) when using data directly from NCBI.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-preparing-a-list-of-all-complete-i-e-coli-i-genomes-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Preparing a list of all complete <i>E. coli</i> genomes</div>
+  <div class="box-title hands-on-title" id="hands-on-preparing-a-list-of-all-complete-i-e-coli-i-genomes-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Preparing a list of all complete <i>E. coli</i> genomes</div>
 
   <ol>
     <li>
@@ -2039,7 +2039,7 @@ GCA_003018575.1 | ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/018/575/GCA_003
 <p>This can be done as a two step process where we first copy the end part of the existing URL (<code class="language-plaintext highlighter-rouge">/GCA_000008865.1_ASM886v1</code>) and then add a fixed string <code class="language-plaintext highlighter-rouge">_genomic.fna.gz</code> to the end of it. Doing this by hand is crazy and trying to do it in a spreadsheet is complicated. Fortunately, Galaxy’s new rule-based uploader can help, as shown in the next <strong>Hands-on</strong> section:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -2114,7 +2114,7 @@ GCA_003018575.1 | ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/018/575/GCA_003
 <p>Before starting any analyses we need to upload the assembly produced in <a href="/training-material/topics/assembly/tutorials/unicycler-assembly/tutorial.html">Unicycler tutorial</a> from Zenodo:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-uploading-i-e-coli-i-assembly-into-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Uploading <i>E. coli</i> assembly into Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-uploading-i-e-coli-i-assembly-into-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Uploading <i>E. coli</i> assembly into Galaxy</div>
 
   <ol>
     <li><span class="tool" data-tool="upload1" title="Upload tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Upload</strong></span>  :
@@ -2146,7 +2146,7 @@ GCA_003018575.1 | ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/003/018/575/GCA_003
 <p>Because phiX173 is around 5,000bp, we can remove those sequences by setting a minimum length of 10,000:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fixing-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fixing assembly</div>
+  <div class="box-title hands-on-title" id="hands-on-fixing-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fixing assembly</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.2" title="Filter sequences by length tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter sequences by length</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2)</span> with the following parameters:
@@ -2215,7 +2215,7 @@ Detailed description of regular expressions is outside of the scope of this tuto
 <p>Now everything is loaded and ready to go. We will now align our assembly against each of the <em>E. coli</em> genomes we have uploaded into the collection. To do this we will use <a href="https://lastz.github.io/lastz/">LASTZ</a>—an aligner designed for long sequences.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-lastz"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running LASTZ</div>
+  <div class="box-title hands-on-title" id="hands-on-running-lastz"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running LASTZ</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/lastz/lastz_wrapper_2/1.3.2" title="LASTZ tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>LASTZ</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.2)</span> with the following parameters:
       <ul>
@@ -2286,7 +2286,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>Collections are a wonderful way to organize large sets of data and parallelize data processing like we did here with LASTZ. However, at this point we need to combine all data into one dataset. Follow the steps below to accomplish this:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-combining-collection-into-a-single-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Combining collection into a single dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-combining-collection-into-a-single-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Combining collection into a single dataset</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.2" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.2)</span> with the following parameters:
       <ul>
@@ -2303,7 +2303,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>To make further analyses we need to get an idea about alignment data generated with LASTZ. To do this let’s select a random subsample of the large dataset we’ve generated above. This is necessary because processing the entire dataset will take time and will not give us a better insight anyway. So first we will select 10,000 lines from the alignment data:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-selecting-random-subset-of-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Selecting random subset of data</div>
+  <div class="box-title hands-on-title" id="hands-on-selecting-random-subset-of-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Selecting random subset of data</div>
   <ol>
     <li><span class="tool" data-tool="random_lines1" title="Select random lines from a file tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select random lines from a file</strong></span>   with the following parameters:
       <ul>
@@ -2317,7 +2317,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>Now we can visualize this dataset to discover generalities:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-graphing-alignment-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Graphing alignment data</div>
+  <div class="box-title hands-on-title" id="hands-on-graphing-alignment-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Graphing alignment data</div>
   <ol>
     <li>Expand random subset of alignment data generated on the previous step by clicking on it.</li>
     <li>You will see “chart” button <i class="fas fa-chart-column" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span>. Click on it.</li>
@@ -2336,7 +2336,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>You can see that most alignments are short and have relatively low identity. Thus we can filter the original dataset by identity and length. Judging from this graph we can select alignment longer than 10,000 bp with identity above 90%.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering data</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering data</div>
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong></span> data on any column using simple expressions:
       <ul>
@@ -2361,7 +2361,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>However, to extract this information from our data we need to aggregate it. In other words, for each <em>E. coli</em> genome we need to calculate the total number of alignment blocks, their combined length, and average identity. The following section explains how to do this:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-aggregating-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Aggregating the data</div>
+  <div class="box-title hands-on-title" id="hands-on-aggregating-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Aggregating the data</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0" title="Datamash (operations on tabular data) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Datamash (operations on tabular data)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0)</span>   with the following parameters:
       <ul>
@@ -2404,7 +2404,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>The dataset generated above lists each <em>E. coli</em> genome accession only once and will have aggregate information for the number of alignment blocks, mean identity, and total length. Let’s graph these data:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-graphing-aggregated-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Graphing aggregated data</div>
+  <div class="box-title hands-on-title" id="hands-on-graphing-aggregated-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Graphing aggregated data</div>
   <ol>
     <li>Expand the aggregated data generated on the previous step by clicking on it.</li>
     <li>You will see “chart” button <i class="fas fa-chart-column" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span>. Click on it.</li>
@@ -2431,7 +2431,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <p>Let’s find table entries corresponding to these:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extracting-into-about-best-hits"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extracting into about best hits</div>
+  <div class="box-title hands-on-title" id="hands-on-extracting-into-about-best-hits"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extracting into about best hits</div>
   <ol>
     <li><span class="tool" data-tool="Grep1" title="Select lines that match an expression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select lines that match an expression</strong></span> with the following parameters:
       <ul>
@@ -2476,7 +2476,7 @@ Ecoli_C BA000007.2 63.06 157 33 3 1874604 1874735 5991 6147 5.8e-26 115.3
 <h2 id="getting-sequences-and-annotations">Getting sequences and annotations</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-uploading-sequences-and-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Uploading sequences and annotations</div>
+  <div class="box-title hands-on-title" id="hands-on-uploading-sequences-and-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Uploading sequences and annotations</div>
   <p>Using the three accession listed above we will fetch necessary data from NCBI. We will use the spreadsheet we uploaded at the start to accomplish this.</p>
 
   <ol>
@@ -2656,7 +2656,7 @@ GCA_900186905.1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/186/905/GCA_90018
 <p>Now we will perform alignments between our assembly and the three most closely related genomes to get a detailed look at any possible genome architecture changes. We will again use LASTZ:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-aligning-again"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Aligning again</div>
+  <div class="box-title hands-on-title" id="hands-on-aligning-again"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Aligning again</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/lastz/lastz_wrapper_2/1.3.2" title="LASTZ tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>LASTZ</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.2)</span> with the following parameters:
@@ -2739,7 +2739,7 @@ GCA_900186905.1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/186/905/GCA_90018
 <p>The first step will be collapsing the collection containing the three genomes into a single file:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-a-single-fasta-dataset-with-all-genomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a single FASTA dataset with all genomes</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-a-single-fasta-dataset-with-all-genomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating a single FASTA dataset with all genomes</div>
 
   <ol>
     <li>
@@ -2877,7 +2877,7 @@ GCA_900186905.1	ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/900/186/905/GCA_90018
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-convert-lastz-output-to-bed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert LASTZ output to BED</div>
+  <div class="box-title hands-on-title" id="hands-on-convert-lastz-output-to-bed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Convert LASTZ output to BED</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0" title="Replace Text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0)</span> in a specific column:
@@ -3247,7 +3247,7 @@ we will produce a collection with three datasets just like the original <code cl
 Finally we can cut necessary columns from these datasets. These columns are 8 (start), 9 (end), 15 (gene symbol), 21 (dummy column we just created), and c10 (strand), and then we can add the genome name.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-cdss-from-annotation-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract CDSs from annotation datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-cdss-from-annotation-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract CDSs from annotation datasets</div>
   <ol>
     <li><span class="tool" data-tool="Grep1" title="Select lines that match an expression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select lines that match an expression</strong></span> with the following parameters:
       <ul>
@@ -3476,7 +3476,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <figure id="figure-8" style="max-width: 90%;"><img src="../../images/complement.png" alt="Complementing genomic ranges. " width="750" height="245" loading="lazy" /><a target="_blank" href="../../images/complement.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 8</strong>:</span> Any set of genomic intervals can <i>complemented</i> or converted into a set of intervals that do not overlap the original set (image from BEDTools documentation).</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-a-genome-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a genome file</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-a-genome-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating a genome file</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fasta_compute_length/fasta_compute_length/1.0.1" title="Compute sequence length tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compute sequence length</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span>:
@@ -3617,7 +3617,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <p>You will notice that all three genomes have a region starting past 3,200,000 and only <code class="language-plaintext highlighter-rouge">CP020543.1</code> has another region starting at 1,668,702. However, this region reflects some unique feature of <code class="language-plaintext highlighter-rouge">CP020543.1</code> rather than that of our assembly. This is why we will concentrate on the <em>common</em> region which is deleted in our genome, but is present in the three closely related <em>E. coli</em> strains:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-restricting-list-of-deleted-regions-to-the-i-common-i-deletion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Restricting list of deleted regions to the <i>common</i> deletion</div>
+  <div class="box-title hands-on-title" id="hands-on-restricting-list-of-deleted-regions-to-the-i-common-i-deletion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Restricting list of deleted regions to the <i>common</i> deletion</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter data on any column using simple expressions tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter data on any column using simple expressions</strong></span> with the following parameters:
@@ -3690,7 +3690,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <p>JBrowse is an interactive genome browser, which has been integrated into Galaxy as a workflow-compatible tool that you can use to summarise all of the datasets we’ve created thusfar:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-view-genomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View genomes</div>
+  <div class="box-title hands-on-title" id="hands-on-view-genomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: View genomes</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.8+galaxy1" title="JBrowse tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.8+galaxy1)</span> genome browser:
       <ul>
@@ -3760,7 +3760,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <p>Alternatively to JBrowse, we can use Circos to create a nice image of the alignments:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-circos"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Circos</div>
+  <div class="box-title hands-on-title" id="hands-on-circos"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Circos</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/lastz/lastz_wrapper_2/1.3.2" title="LASTZ tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>LASTZ</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.2)</span> with the following parameters:
@@ -3897,7 +3897,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <figure id="figure-10" style="max-width: 90%;"><img src="../../images/intersect.png" alt="Intersect between two BED datasets. " width="751" height="347" loading="lazy" /><a target="_blank" href="../../images/intersect.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 10</strong>:</span> Computing intersect means finding overlapping regions in two BED datasets (image from BEDTools documentation).</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-finding-genes-deleted-in-our-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Finding genes deleted in our assembly</div>
+  <div class="box-title hands-on-title" id="hands-on-finding-genes-deleted-in-our-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Finding genes deleted in our assembly</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_intersectbed/2.27.0.2" title="Intersect intervals find overlapping intervals in various ways tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Intersect intervals find overlapping intervals in various ways</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.27.0.2)</span> with the following parameters:
@@ -4008,7 +4008,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <p>Goodall et al. have recently published a list of essential genes for <em>E. coli</em> K-12 (<span class="citation"><a href="#Goodall2018">Goodall <i>et al.</i> 2018</a></span>). We can use their data to answer this question. This paper contains a supplementary file in Excel format listing genes and whether they are essential or not. We have converted this to a <kbd>tab</kbd> delimited file for you, but you could do this in any spreadsheet application:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import data</div>
+  <div class="box-title hands-on-title" id="hands-on-import-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import data</div>
 
   <ol>
     <li>
@@ -4069,7 +4069,7 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
 <p>The two truly important columns here are 1 (gene name) and 4 (is gene essential?). Let’s join the results of the intersection with this list:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-are-there-essential-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Are there essential genes?</div>
+  <div class="box-title hands-on-title" id="hands-on-are-there-essential-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Are there essential genes?</div>
 
   <ol>
     <li><span class="tool" data-tool="join1" title="Join two Datasets tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Join two Datasets</strong></span> side by side on a specified field:
@@ -4659,9 +4659,18 @@ Finally we can cut necessary columns from these datasets. These columns are 8 (s
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/assembly/faqs/">FAQ page for the Assembly topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/assembly/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -4897,7 +4906,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -4999,7 +5008,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

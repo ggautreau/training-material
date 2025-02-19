@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1329,7 +1329,7 @@ need to submit data stored on a remote server, you are in the right place. This 
 <p>1-3 will be displayed on the Project entry page. Make it as detailed as possible so as to make your study searchable. To see an example see the submission for <a href="https://www.ebi.ac.uk/ena/browser/view/PRJEB55803">PRJEB55803</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-register-study"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Register study</div>
+  <div class="box-title hands-on-title" id="hands-on-register-study"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Register study</div>
   <p>Once you have the above information at hand register your study.</p>
   <ol>
     <li>From the Webin dashboard click on ‘Register Study’ to bring up the study submission form.</li>
@@ -1380,7 +1380,7 @@ Study Fields are editable after submission should you need to update any informa
 <p>Find the complete list of <a href="https://www.ebi.ac.uk/ena/browser/checklists">checklists</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-download-sample-checklist"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download sample checklist</div>
+  <div class="box-title hands-on-title" id="hands-on-download-sample-checklist"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download sample checklist</div>
   <ol>
     <li>From the Dashboard, inside the ‘Samples’ box, click on ‘Register Samples’.</li>
     <li>Expand the ‘Download spreadsheet to register samples’ box and select ‘Other Checklists’.</li>
@@ -1444,7 +1444,7 @@ Study Fields are editable after submission should you need to update any informa
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-sample-checklist"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload sample checklist</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-sample-checklist"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload sample checklist</div>
   <ol>
     <li>Open the Checklist_*.tsv file in a text editor of your choice e.g. MS Excel.</li>
     <li>Fill one sample per row, starting from row 4. Make sure you fill in all the columns.</li>
@@ -1485,7 +1485,7 @@ Metadata required for this are:</p>
 <p>First, we need to confirm that your read files are in the correct format. Refer to <a href="https://ena-docs.readthedocs.io/en/latest/submit/fileprep/reads.html">ENAs file format guidelines</a> if you are not sure.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-linux-or-osx"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Linux or OSX</div>
+  <div class="box-title hands-on-title" id="hands-on-linux-or-osx"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Linux or OSX</div>
   <h4 id="on-a-linux-based-operating-system">On a Linux-based operating system</h4>
   <ol>
     <li>
@@ -1512,7 +1512,7 @@ gzip *.fastq
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-read-checklist-submission"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read checklist submission</div>
+  <div class="box-title hands-on-title" id="hands-on-read-checklist-submission"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read checklist submission</div>
   <ol>
     <li>From the ‘Dashboard’ select ‘Submit Reads’ from Raw Reads box.</li>
     <li>Similar to how you downloaded the sample checklist, download the Read submission template for ‘paired reads using two fastq files’.</li>
@@ -1611,9 +1611,16 @@ curl -T &lt;&lt;your_file&gt;&gt;.gz -u Webin-XXX:password ftp://webin2.ebi.ac.u
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/fair/faqs/">FAQ page for the FAIR Data, Workflows, and Research topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/fair/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1778,17 +1785,17 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -1797,7 +1804,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1879,7 +1886,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

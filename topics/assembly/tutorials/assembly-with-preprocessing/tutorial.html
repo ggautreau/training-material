@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1961,7 +1961,7 @@ steps are independent of the data source you choose.</p>
 <h2 id="get-data-from-ncbi-sra">Get data from NCBI SRA</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-to-galaxy-from-ncbi-sra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload to Galaxy from NCBI SRA</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-to-galaxy-from-ncbi-sra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload to Galaxy from NCBI SRA</div>
 
   <ol>
     <li>
@@ -2087,7 +2087,7 @@ verify that they are empty, then delete them from your history.</p>
 <h2 id="get-data-from-zenodo">Get data from Zenodo</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-to-galaxy-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload to Galaxy from Zenodo</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-to-galaxy-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload to Galaxy from Zenodo</div>
 
   <ol>
     <li>
@@ -2273,7 +2273,7 @@ trimming of adapter sequences (which the tool auto-detects for us) is at least
 metrics for all samples before and after preprocessing.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-reads-preprocessing-and-quality-reporting"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reads preprocessing and quality reporting</div>
+  <div class="box-title hands-on-title" id="hands-on-reads-preprocessing-and-quality-reporting"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Reads preprocessing and quality reporting</div>
   <ol>
     <li><strong>fastp</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -2345,7 +2345,7 @@ the same reasons. Here we restrict ourselves to a simple quality check with
 <strong>NanoPlot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>, a dedicated QC tool for Nanopore-sequenced reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-checking-the-quality-of-nanopore-reads-with-nanoplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Checking the quality of Nanopore reads with NanoPlot</div>
+  <div class="box-title hands-on-title" id="hands-on-checking-the-quality-of-nanopore-reads-with-nanoplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Checking the quality of Nanopore reads with NanoPlot</div>
   <ol>
     <li><strong>NanoPlot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -2412,7 +2412,7 @@ of length &gt; 100 nts, but we opt for the conservative approach of using a
 widely-used, well-tested tool here.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapping-with-bowtie2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapping with Bowtie2</div>
+  <div class="box-title hands-on-title" id="hands-on-mapping-with-bowtie2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mapping with Bowtie2</div>
   <ol>
     <li><strong>Bowtie2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -2488,7 +2488,7 @@ contained in this BALF sample.</li>
 aligner, which is particularly efficient for mapping long reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-nanopore-reads-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Nanopore reads mapping</div>
+  <div class="box-title hands-on-title" id="hands-on-nanopore-reads-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Nanopore reads mapping</div>
 
   <ol>
     <li><strong>Map with minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2562,7 +2562,7 @@ those reads that were <em>not</em> mapped to the human genome, <em>i.e</em> thos
 potential viral origin.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapped-reads-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapped reads filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-mapped-reads-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mapped reads filtering</div>
 
   <ol>
     <li><strong>Samtools view</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to filter the Illumina-sequenced reads mapped with Bowtie2:
@@ -2647,7 +2647,7 @@ to convert the retained Illumina- and Nanopore-sequenced reads back into their
 original format before proceeding to assembly.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-bam-to-fastq-format-conversion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: BAM to fastq format conversion</div>
+  <div class="box-title hands-on-title" id="hands-on-bam-to-fastq-format-conversion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: BAM to fastq format conversion</div>
 
   <ol>
     <li><strong>Samtools fastx</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to convert the filtered Illumina-sequenced reads to fastq format
@@ -2685,7 +2685,7 @@ for assembling the reads would not be able to handle the nested data correctly.<
 <p>Thus, the following just serves as an illustration and is entirely optional.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-arrange-two-list-collections-into-a-list-of-pairs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Arrange two list collections into a list of pairs</div>
+  <div class="box-title hands-on-title" id="hands-on-arrange-two-list-collections-into-a-list-of-pairs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Arrange two list collections into a list of pairs</div>
 
   <ol>
     <li><strong>Zip Collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2714,7 +2714,7 @@ the earlier <strong>Samtools fastx</strong> <i class="fas fa-wrench" aria-hidden
 data structured into three corresponding collections for us.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-collapsing-each-collection-into-a-single-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Collapsing each collection into a single dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-collapsing-each-collection-into-a-single-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Collapsing each collection into a single dataset</div>
 
   <ol>
     <li><strong>Collapse Collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> of Illumina-sequenced <em>forward</em> reads
@@ -2768,7 +2768,7 @@ likely lead to poor assembly outcomes.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-subsampling-of-paired-end-short-reads-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Subsampling of paired-end short-reads data</div>
+  <div class="box-title hands-on-title" id="hands-on-subsampling-of-paired-end-short-reads-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Subsampling of paired-end short-reads data</div>
 
   <ol>
     <li><strong>seqtk_sample</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2787,7 +2787,7 @@ first and the second run of <strong>Collapse Collection</strong></li>
 <h2 id="create-assembly">Create assembly</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-assembly-of-sars-cov2-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assembly of SARS-CoV2 genome</div>
+  <div class="box-title hands-on-title" id="hands-on-assembly-of-sars-cov2-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assembly of SARS-CoV2 genome</div>
 
   <ol>
     <li><strong>Create assemblies with Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2844,7 +2844,7 @@ exploring assembly graphs through summary reports and visualizations of their
 contents.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-assembly-stats-and-visualization-with-bandage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assembly stats and visualization with Bandage</div>
+  <div class="box-title hands-on-title" id="hands-on-assembly-stats-and-visualization-with-bandage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assembly stats and visualization with Bandage</div>
 
   <ol>
     <li><strong>Bandage Info</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2910,7 +2910,7 @@ sequences based on the length threshold in Galaxy, then BLAST all retained
 sequences in one go.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-fasta-sequences-by-their-length"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter FASTA sequences by their length</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-fasta-sequences-by-their-length"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter FASTA sequences by their length</div>
 
   <ol>
     <li><strong>Filter sequences by length</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
@@ -2944,7 +2944,7 @@ from the output.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-ncbi-blast-of-multiple-contigs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: NCBI BLAST of multiple contigs</div>
+  <div class="box-title hands-on-title" id="hands-on-ncbi-blast-of-multiple-contigs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: NCBI BLAST of multiple contigs</div>
 
   <ol>
     <li>View the output of <strong>Filter sequences by length</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by
@@ -3073,9 +3073,18 @@ of incorporation of sequencing errors into the final assembly.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/assembly/faqs/">FAQ page for the Assembly topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/assembly/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3278,7 +3287,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">7</td>
 			</tr>
 		   
@@ -3441,7 +3450,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

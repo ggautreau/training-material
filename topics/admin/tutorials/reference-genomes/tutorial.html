@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1354,7 +1354,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We will install a data manager that can fetch the various genome sequences from multiple sources.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-install-the-fetch-genome-data-manager"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Install the Fetch Genome Data Manager</div>
+  <div class="box-title hands-on-title" id="hands-on-install-the-fetch-genome-data-manager"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Install the Fetch Genome Data Manager</div>
 
   <ol>
     <li>Access the <strong>Admin</strong> menu from the top bar (you need to be logged-in with an email specified in the <code class="language-plaintext highlighter-rouge">admin_users</code> setting)</li>
@@ -1381,14 +1381,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     </ul>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+      <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
       <p>Let’s investigate the data manager config file.</p>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /srv/galaxy/var/config/shed_data_manager_conf.xml
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out code-max-300">
-      <div class="box-title code-out-title" id="code-out-bash"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+      <div class="box-title code-out-title" id="code-out-bash"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
       <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;data_managers&gt;&lt;data_manager</span> <span class="na">id=</span><span class="s">"fetch_genome_all_fasta_dbkeys"</span> <span class="na">guid=</span><span class="s">"toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager/fetch_genome_all_fasta_dbkeys/0.0.1"</span> <span class="na">shed_conf_file=</span><span class="s">"/srv/galaxy/var/config/shed_tool_conf.xml"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;tool</span> <span class="na">file=</span><span class="s">"toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/4d3eff1bc421/data_manager_fetch_genome_dbkeys_all_fasta/data_manager/data_manager_fetch_genome_all_fasta_dbkeys.xml"</span> <span class="na">guid=</span><span class="s">"toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager_fetch_genome_all_fasta_dbkey/0.0.4"</span><span class="nt">&gt;&lt;tool_shed&gt;</span>toolshed.g2.bx.psu.edu<span class="nt">&lt;/tool_shed&gt;&lt;repository_name&gt;</span>data_manager_fetch_genome_dbkeys_all_fasta<span class="nt">&lt;/repository_name&gt;&lt;repository_owner&gt;</span>devteam<span class="nt">&lt;/repository_owner&gt;&lt;installed_changeset_revision&gt;</span>4d3eff1bc421<span class="nt">&lt;/installed_changeset_revision&gt;&lt;id&gt;</span>toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager_fetch_genome_all_fasta_dbkey/0.0.4<span class="nt">&lt;/id&gt;&lt;version&gt;</span>0.0.4<span class="nt">&lt;/version&gt;&lt;/tool&gt;&lt;data_table</span> <span class="na">name=</span><span class="s">"all_fasta"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;output&gt;</span>
@@ -1424,14 +1424,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     </blockquote>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+      <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
       <p>Let’s also investigate the tool data table config file.</p>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /srv/galaxy/var/config/shed_tool_data_table_conf.xml
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out code-max-300">
-      <div class="box-title code-out-title" id="code-out-bash-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+      <div class="box-title code-out-title" id="code-out-bash-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
       <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" ?&gt;</span>
 <span class="nt">&lt;tables&gt;</span>
     <span class="nt">&lt;table</span> <span class="na">name=</span><span class="s">"all_fasta"</span> <span class="na">comment_char=</span><span class="s">"#"</span><span class="nt">&gt;</span>
@@ -1467,7 +1467,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Next, we will install some reference data. Specifically, we will grab sacCer2 (version 2 of the <em>Saccharomyces cerevisiae</em> genome).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-download-and-install-saccer2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download and install sacCer2</div>
+  <div class="box-title hands-on-title" id="hands-on-download-and-install-saccer2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download and install sacCer2</div>
 
   <ol>
     <li>Access the Admin menu from the top bar</li>
@@ -1557,27 +1557,27 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     </ul>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+      <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
       <p>Get the path to the <code class="language-plaintext highlighter-rouge">all_fasta.loc</code> file:</p>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s1">'data_manager_fetch_genome_dbkeys_all_fasta.*all_fasta.loc'</span> /srv/galaxy/var/config/shed_tool_data_table_conf.xml
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-bash-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+      <div class="box-title code-out-title" id="code-out-bash-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
       <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>        <span class="nt">&lt;file</span> <span class="na">path=</span><span class="s">"/srv/galaxy/var/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/4d3eff1bc421/all_fasta.loc"</span><span class="nt">/&gt;</span>
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+      <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
       <p>Let’s investigate the contents of the location file identified above (the path to yours may be different if you installed a different version of the data manager):</p>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /srv/galaxy/var/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/4d3eff1bc421/all_fasta.loc
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-bash-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+      <div class="box-title code-out-title" id="code-out-bash-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#This file lists the locations and dbkeys of all the fasta files</span>
 <span class="c">#under the "genome" directory (a directory that contains a directory</span>
 <span class="c">#for each build). The script extract_fasta.py will generate the file</span>
@@ -1601,14 +1601,14 @@ sacCer2	sacCer2	S. cerevisiae June 2008 <span class="o">(</span>SGD/sacCer2<span
     </blockquote>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+      <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
       <p>Finally, verify that we have some sequences in the genome fasta file:</p>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="s1">'^&gt;'</span> /srv/galaxy/var/tool-data/sacCer2/seq/sacCer2.fa
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-bash-4"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+      <div class="box-title code-out-title" id="code-out-bash-4"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt;2micron
 &gt;chrI
 &gt;chrII
@@ -1641,7 +1641,7 @@ sacCer2	sacCer2	S. cerevisiae June 2008 <span class="o">(</span>SGD/sacCer2<span
 <p>In this part we will repeat the same process as when we installed the Fetch Genome data manager, except that we will install the BWA/BWA-MEM data manager this time.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-install-the-bwa-bwa-mem-data-manager"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Install the BWA/BWA-MEM Data Manager</div>
+  <div class="box-title hands-on-title" id="hands-on-install-the-bwa-bwa-mem-data-manager"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Install the BWA/BWA-MEM Data Manager</div>
 
   <ol>
     <li>Access the <strong>Admin</strong> menu from the top bar</li>
@@ -1657,7 +1657,7 @@ sacCer2	sacCer2	S. cerevisiae June 2008 <span class="o">(</span>SGD/sacCer2<span
 <p>In this part we will actually build the BWA index for sacCer2. It will automatically be added to our list of available reference genomes in the BWA tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-build-the-saccer2-bwa-index"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Build the sacCer2 BWA index</div>
+  <div class="box-title hands-on-title" id="hands-on-build-the-saccer2-bwa-index"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Build the sacCer2 BWA index</div>
 
   <ol>
     <li>Access the Admin menu from the top bar</li>
@@ -1691,14 +1691,14 @@ sacCer2	sacCer2	S. cerevisiae June 2008 <span class="o">(</span>SGD/sacCer2<span
     </ul>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+      <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
 
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> <span class="nt">-l</span> /srv/galaxy/var/tool-data/sacCer2/bwa_mem_index/sacCer2
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-bash-5"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+      <div class="box-title code-out-title" id="code-out-bash-5"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
       <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">total 20800
 </span><span class="gp">lrwxrwxrwx 1 galaxy galaxy       20 Dec  9 18:29 sacCer2.fa -&gt;</span><span class="w"> </span>../../seq/sacCer2.fa
 <span class="go">-rw-r--r-- 1 galaxy galaxy       14 Dec  9 18:29 sacCer2.fa.amb
@@ -1732,14 +1732,14 @@ pipeline, using Ephemeris. For a more in-depth look at Ephemeris, especially in 
 <h2 id="install-a-the-fetch-genome-data-manager-from-the-tool-shed-1">Install a the Fetch Genome Data Manager from the Tool Shed</h2>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-install-the-fetch-genome-data-manager-with-ephemeris"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Install the Fetch Genome Data Manager with Ephemeris</div>
+  <div class="box-title hands-on-title" id="hands-on-install-the-fetch-genome-data-manager-with-ephemeris"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Install the Fetch Genome Data Manager with Ephemeris</div>
 
   <ol>
     <li>
       <p>Re-activate the virtualenv you created for the <a href="/training-material/topics/admin/tutorials/tool-management/tutorial.html">ephemeris tool management tutorial</a>.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>. ~/ephemeris_venv/bin/activate
 </code></pre></div>        </div>
       </blockquote>
@@ -1759,14 +1759,14 @@ pip <span class="nb">install </span>ephemeris
       <p>Install the <code class="language-plaintext highlighter-rouge">data_manager_fetch_genome_dbkeys_all_fasta</code> data manager tool owned by <code class="language-plaintext highlighter-rouge">devteam</code>.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <p>Be sure to adjust the value of <code class="language-plaintext highlighter-rouge">-g</code> appropriately for your Galaxy server, and replace the value of <code class="language-plaintext highlighter-rouge">-a</code> with your API key.</p>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">shed-tools install -g https://galaxy.example.org -a &lt;api-key&gt;</span><span class="w"> </span><span class="nt">--name</span> data_manager_fetch_genome_dbkeys_all_fasta <span class="nt">--owner</span> devteam
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Storing log file in: /tmp/ephemeris_x9xeu8ro
 (1/1) Installing repository data_manager_fetch_genome_dbkeys_all_fasta from devteam to section "None" at revision 4d3eff1bc421 (TRT: 0:00:00.401143)
 	repository data_manager_fetch_genome_dbkeys_all_fasta installed successfully (in 0:00:25.530604) at revision 4d3eff1bc421
@@ -1785,7 +1785,7 @@ Total run time: 0:00:25.932659
 <h2 id="download-and-install-a-reference-genome-sequence-1">Download and install a reference genome sequence</h2>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-download-and-install-saccer3-with-ephemeris"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download and install sacCer3 with Ephemeris</div>
+  <div class="box-title hands-on-title" id="hands-on-download-and-install-saccer3-with-ephemeris"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download and install sacCer3 with Ephemeris</div>
 
   <ol>
     <li>
@@ -1860,13 +1860,13 @@ Total run time: 0:00:25.932659
       <p>Run the Genome Fetch DM with <code class="language-plaintext highlighter-rouge">run-data-managers</code>:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-8"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-8"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">run-data-managers -g https://galaxy.example.org -a &lt;api-key&gt;</span><span class="w"> </span><span class="nt">--config</span> fetch-sacCer3.yml
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Storing log file in: /tmp/ephemeris_f6klyy7v
 Running data managers that populate the following source data tables: ['all_fasta']
 Dispatched job 1. Running DM: "toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/data_manager_fetch_genome_all_fasta_dbkey/0.0.4" with parameters: {'dbkey_source|dbkey': 'sacCer3', 'dbkey_source|dbkey_name': 'S. cerevisiae Apr. 2011 (SacCer_Apr2011/sacCer3)', 'reference_source|reference_source_selector': 'ucsc', 'reference_source|requested_dbkey': 'sacCer3'}
@@ -1899,13 +1899,13 @@ Failed jobs: 0
           <p>The <code class="language-plaintext highlighter-rouge">all_fasta.loc</code> file contains the entry for our new genome. If you need a reminder on how to locate it, see the <em>What did this data manager execution change?</em> question in the UI section above.</p>
 
           <blockquote class="code-in">
-            <div class="box-title code-in-title" id="code-in-bash-9"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+            <div class="box-title code-in-title" id="code-in-bash-9"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
             <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /srv/galaxy/var/tool-data/toolshed.g2.bx.psu.edu/repos/devteam/data_manager_fetch_genome_dbkeys_all_fasta/4d3eff1bc421/all_fasta.loc
 </code></pre></div>            </div>
           </blockquote>
 
           <blockquote class="code-out">
-            <div class="box-title code-out-title" id="code-out-bash-6"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Bash</div>
+            <div class="box-title code-out-title" id="code-out-bash-6"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Bash</div>
             <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#This file lists the locations and dbkeys of all the fasta files</span>
 <span class="c">#under the "genome" directory (a directory that contains a directory</span>
 <span class="c">#for each build). The script extract_fasta.py will generate the file</span>
@@ -1948,20 +1948,20 @@ sacCer3	sacCer3	S. cerevisiae Apr. 2011 <span class="o">(</span>SacCer_Apr2011/s
 <h2 id="download-and-install-the-bwa-data-manager-1">Download and install the BWA data manager</h2>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-install-the-bwa-bwa-mem-data-manager-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Install the BWA/BWA-MEM Data Manager</div>
+  <div class="box-title hands-on-title" id="hands-on-install-the-bwa-bwa-mem-data-manager-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Install the BWA/BWA-MEM Data Manager</div>
 
   <ol>
     <li>
       <p>Install the <code class="language-plaintext highlighter-rouge">bwa_mem_index_builder_data_manager</code> data manager tool owned by <code class="language-plaintext highlighter-rouge">devteam</code>.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-10"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-10"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">shed-tools install -g https://galaxy.example.org -a &lt;api-key&gt;</span><span class="w"> </span><span class="nt">--name</span> data_manager_bwa_mem_index_builder <span class="nt">--owner</span> devteam
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Storing log file in: /tmp/ephemeris_2dyujjvi
 (1/1) Installing repository data_manager_bwa_mem_index_builder from devteam to section "None" at revision 63d5652be07a (TRT: 0:00:00.204350)
 	repository data_manager_bwa_mem_index_builder installed successfully (in 0:00:05.599382) at revision 63d5652be07a
@@ -1980,7 +1980,7 @@ Total run time: 0:00:05.804217
 <h2 id="build-the-bwa-index-for-a-reference-genome-1">Build the BWA index for a reference genome</h2>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-build-the-saccer3-bwa-index"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Build the sacCer3 BWA index</div>
+  <div class="box-title hands-on-title" id="hands-on-build-the-saccer3-bwa-index"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Build the sacCer3 BWA index</div>
 
   <ol>
     <li>
@@ -2002,13 +2002,13 @@ Total run time: 0:00:05.804217
       <p>Run the BWA-MEM index builder DM with <code class="language-plaintext highlighter-rouge">run-data-managers</code>:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-11"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-11"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">run-data-managers -g https://galaxy.example.org -a &lt;api-key&gt;</span><span class="w"> </span><span class="nt">--config</span> build-sacCer3-bwa.yml
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">Storing log file in: /tmp/ephemeris_esecdef4
 Running data managers that populate the following source data tables: ['all_fasta']
 Running data managers that index sequences.
@@ -2037,7 +2037,7 @@ Failed jobs: 0
 <p>Finally, we will verify that the BWA tool can see the new genome indexes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configure-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configure Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-configure-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Configure Galaxy</div>
 
   <ol>
     <li>
@@ -2106,9 +2106,18 @@ Failed jobs: 0
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/admin/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2251,12 +2260,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -2380,7 +2389,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1300,7 +1300,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Forking a repository is a simple two-step process:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fork-the-repository"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fork the repository</div>
+  <div class="box-title hands-on-title" id="hands-on-fork-the-repository"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fork the repository</div>
 
   <ol>
     <li>Go on the GitHub repository: <a href="https://github.com/galaxyproject/training-material">https://github.com/galaxyproject/training-material</a></li>
@@ -1325,7 +1325,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <figure id="figure-3" style="max-width: 90%;"><img src="../../images/PR_schema_02.png" alt="Explanation of the cloning. " width="1282" height="872" loading="lazy" /><a target="_blank" href="../../images/PR_schema_02.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> Cloning a repository</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clone-the-github-repository"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Clone the GitHub repository</div>
+  <div class="box-title hands-on-title" id="hands-on-clone-the-github-repository"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Clone the GitHub repository</div>
 
   <ol>
     <li>Get the URL of your fork. You can find this on the main page of your fork under the green button:
@@ -1377,7 +1377,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Here for this tutorial, you will create a branch called “my_new_branch” in which you will modify the <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file, the file used to generate the <a href="/training-material/hall-of-fame.html">Hall of Fame</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-branch"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a branch</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-branch"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a branch</div>
 
   <ol>
     <li>
@@ -1413,7 +1413,7 @@ Switched to a new branch 'my_new_branch'
 <figure id="figure-6" style="max-width: 90%;"><img src="../../images/PR_branches_02.png" alt="Divergence of the branch compared to main. " width="546" height="90" loading="lazy" /><a target="_blank" href="../../images/PR_branches_02.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 6</strong>:</span> The changes on your branch will not be on the main branch</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-changes-in-a-branch"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Make changes in a branch</div>
+  <div class="box-title hands-on-title" id="hands-on-make-changes-in-a-branch"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Make changes in a branch</div>
 
   <ol>
     <li>Open with your favorite text editor the <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file that is on your computer</li>
@@ -1454,7 +1454,7 @@ $ git commit -m "Add ..."
 <p>The changes you made on your branch are only on the local copy of the repository. To propagate them online, you need to push them on your fork on GitHub:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-push-the-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Push the changes</div>
+  <div class="box-title hands-on-title" id="hands-on-push-the-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Push the changes</div>
 
   <ol>
     <li>
@@ -1495,7 +1495,7 @@ $ git commit -m "Add ..."
 <figure id="figure-8" style="max-width: 90%;"><img src="../../images/PR_schema_05.png" alt="Pull request. " width="1007" height="1012" loading="lazy" /><a target="_blank" href="../../images/PR_schema_05.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 8</strong>:</span> Pull Requests provide a way to notify project maintainers about the changes you'd like them to consider</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a pull request</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a pull request</div>
 
   <ol>
     <li>Go to your GitHub repository</li>
@@ -1548,7 +1548,7 @@ $ git commit -m "Add ..."
 <p>One of the reviewers of your pull request asked you to add your name after your GitHub username in the <code class="language-plaintext highlighter-rouge">CONTRIBUTORS.yaml</code> file</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-further-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Make further changes</div>
+  <div class="box-title hands-on-title" id="hands-on-make-further-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Make further changes</div>
 
   <ol>
     <li>
@@ -1632,7 +1632,7 @@ $ git commit -m "Add ..."
 <p>You now want to work on a new tutorial or make some other new changes. However since you get a local copy, some changes have happened to the original GitHub repository. You need then to update your local copy of the repository before changing anything.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-update-the-local-copy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Update the local copy</div>
+  <div class="box-title hands-on-title" id="hands-on-update-the-local-copy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Update the local copy</div>
 
   <ol>
     <li>
@@ -1672,7 +1672,7 @@ Reviewers can now approve and merge your pull request.</p>
 <p>Because this was just a practice pull request, let’s close it again.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-close-the-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Close the Pull Request</div>
+  <div class="box-title hands-on-title" id="hands-on-close-the-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Close the Pull Request</div>
 
   <p>Once you have run through all these steps, please close the pull request again.</p>
 
@@ -1768,9 +1768,18 @@ Reviewers can now approve and merge your pull request.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/contributing/faqs/">FAQ page for the Contributing to the Galaxy Training Material topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/contributing/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2053,7 +2062,7 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">6</td>
 			</tr>
 		   
@@ -2200,7 +2209,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

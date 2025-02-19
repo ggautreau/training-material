@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1552,7 +1552,7 @@ We will perform GO enrichment analysis as a type of over-representation analysis
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Data Upload from Zenodo</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Data Upload from Zenodo</div>
 
   <ol>
     <li>
@@ -1611,7 +1611,7 @@ https://zenodo.org/records/13461890/files/Galaxy1-[Markers_-_genotype_].tabular
 <p>To perform GO enrichment analysis on each cell cluster individually, we need to separate our “Markers_clusters Dataset” into seven files, one for each cluster and the “Markers_genotype Dataset” into 2 files, one for each condition. We’ll use the “Split file” tool for this step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-file-splitting"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: File splitting</div>
+  <div class="box-title hands-on-title" id="hands-on-file-splitting"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: File splitting</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/split_file_on_column/tp_split_on_column/0.4" title="Split file tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Split file</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.4)</span> with the following parameters:
@@ -1635,7 +1635,7 @@ https://zenodo.org/records/13461890/files/Galaxy1-[Markers_-_genotype_].tabular
 <p>Next, we need to isolate the Ensembl gene IDs column from each file. We’ll use the “Cut Columns” tool to achieve this.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-ensembl-ids"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract Ensembl IDs</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-ensembl-ids"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract Ensembl IDs</div>
 
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut</strong></span> with the following parameters:
@@ -1659,7 +1659,7 @@ https://zenodo.org/records/13461890/files/Galaxy1-[Markers_-_genotype_].tabular
 <p>Now we will perform the GO Enrichment analysis on the list of ensembl gene IDs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-goenrichment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  GOEnrichment</div>
+  <div class="box-title hands-on-title" id="hands-on-goenrichment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  GOEnrichment</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/goenrichment/goenrichment/2.0.1" title="GOEnrichment tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GOEnrichment</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.1)</span> with the following parameters:
@@ -1705,7 +1705,7 @@ https://zenodo.org/records/13461890/files/Galaxy1-[Markers_-_genotype_].tabular
 <p>The gProfiler GOSt (Gene Ontology Sequential Testing) is another popular tool used to perform gene ontology (GO) enrichment analysis. In addition to providing enrichment results for the standard GO categories of Biological Process (BP), Cellular Component (CC), and Molecular Function (MF), the tool also analyzes enrichment across several other functional annotation databases, including KEGG Pathways, Reactome Pathways, WikiPathways and TF Targets. It also gives a plot to better visualize the results.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-gprofiler-gost"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  gProfiler GOSt</div>
+  <div class="box-title hands-on-title" id="hands-on-gprofiler-gost"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  gProfiler GOSt</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gprofiler_gost/gprofiler_gost/0.1.7+galaxy11" title="gProfiler GOSt tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>gProfiler GOSt</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.7+galaxy11)</span> with the following parameters:
@@ -1798,9 +1798,18 @@ https://zenodo.org/records/13461890/files/Galaxy1-[Markers_-_genotype_].tabular
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1896,8 +1905,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2050,7 +2059,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2152,7 +2161,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

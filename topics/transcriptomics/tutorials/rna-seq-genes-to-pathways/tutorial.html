@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1422,7 +1422,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h1 id="import-data">Import data</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1512,7 +1512,7 @@ https://zenodo.org/record/2596382/files/limma-voom_filtered_counts
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-the-two-inputs-for-goseq"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare the two inputs for GOSeq</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-the-two-inputs-for-goseq"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare the two inputs for GOSeq</div>
 
   <ol>
     <li><strong>Compute an expression on every row</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1554,7 +1554,7 @@ https://zenodo.org/record/2596382/files/limma-voom_filtered_counts
 <p>We now have the two required input files for goseq.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-go-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform GO analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-go-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform GO analysis</div>
 
   <ol>
     <li><strong>goseq</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -1621,7 +1621,7 @@ https://zenodo.org/record/2596382/files/limma-voom_filtered_counts
 <p>There are several ways we could choose to rank our genes, we could rank by log-fold change (most upregulated to most downregulated) but that doesn’t take into account any error in the log fold change value. Another way is to use the “signed fold change” which is to rank by the sign of the fold change multiplied by the P value (as described <a href="http://genomespot.blogspot.com/2014/09/data-analysis-step-8-pathway-analysis.html">here</a>. We could also use the t statistic that’s output from limma, as that takes into account the log-fold change and it’s standard error, see <a href="https://support.bioconductor.org/p/6124/">here</a> for more explanation. We’ll use the t statistic to rank here.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-gene-set-enrichment-with-fgsea"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform gene set enrichment with fgsea</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-gene-set-enrichment-with-fgsea"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform gene set enrichment with fgsea</div>
 
   <ol>
     <li><strong>Cut columns from a table</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -1687,7 +1687,7 @@ https://zenodo.org/record/2596382/files/limma-voom_filtered_counts
 <p>The ensemble of genes set enrichment analyses (EGSEA) <a href="https://www.ncbi.nlm.nih.gov/pubmed/27694195">(Alhamdoosh et al, 2017)</a> is a method developed for RNA-seq data that combines results from multiple algorithms and calculates collective gene set scores, to try to improve the biological relevance of the highest ranked gene sets. EGSEA has built-in gene sets from MSigDB and KEGG for human and mouse. We’ll show here how it can be used with the MSigDB Hallmark collection and KEGG pathways. For input we need a count matrix and EGSEA will perform a limma-voom analysis before gene set testing. We can use the provided filtered counts file output from limma, where the low count genes have been filtered out (output from limma by selecting <em>“Output Filtered Counts Table?”</em>: <code class="language-plaintext highlighter-rouge">Yes</code>). We just need to remove the gene symbol and description columns. We also need a symbols mapping file containing just the Entrez ids and symbols, which we can generate from the filtered counts file. The third input we need is a factors information file, containing what groups the samples belong to, we can use the same one from the tutorial <a href="/training-material/topics/transcriptomics/tutorials/rna-seq-counts-to-genes/tutorial.html">RNA-seq counts to genes</a>. EGSEA provides twelve base methods and we will select eleven, all except roast, as the fry method is a fast approximation of roast.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-ensemble-gene-set-testing-with-egsea"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform ensemble gene set testing with EGSEA</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-ensemble-gene-set-testing-with-egsea"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform ensemble gene set testing with EGSEA</div>
 
   <ol>
     <li><strong>Cut columns from a table (cut)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1803,9 +1803,18 @@ https://zenodo.org/record/2596382/files/limma-voom_filtered_counts
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1966,22 +1975,22 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">9</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2222222222222222">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.1111111111111111">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.1111111111111111">1</td>
 			</tr>
 		   
@@ -2166,7 +2175,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

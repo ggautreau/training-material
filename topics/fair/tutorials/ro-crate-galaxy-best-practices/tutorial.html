@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1204,7 +1204,7 @@ has created for workflows.</p>
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-apply-best-practices-for-workflow-structure-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Apply best practices for workflow structure</div>
+  <div class="box-title hands-on-title" id="hands-on-apply-best-practices-for-workflow-structure-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Apply best practices for workflow structure</div>
 
   <ol>
     <li>Open your workflow for editing and find the <strong>Best Practices</strong> panel (see the tip above).</li>
@@ -1243,7 +1243,7 @@ repo2rocrate <span class="nt">--repo-url</span> https://github.com/iwc-workflows
 <p>As an example we will use this <a href="https://github.com/crs4/life_monitor/blob/50cdb790ff125613aa07e70cb439e3a36b82d0bf/interaction_experiments/workflow_examples/galaxy/sort-and-change-case/sort-and-change-case.ga">simple workflow</a>, which has only two steps: it sorts the input lines and changes them to upper case. Follow these steps to generate a test layout for it:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-workflow-tests-with-planemo-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate Workflow Tests With Planemo</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-workflow-tests-with-planemo-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate Workflow Tests With Planemo</div>
   <ol>
     <li>Download <a href="https://raw.githubusercontent.com/crs4/life_monitor/50cdb790ff125613aa07e70cb439e3a36b82d0bf/interaction_experiments/workflow_examples/galaxy/sort-and-change-case/sort-and-change-case.ga">the workflow</a> to a <code class="language-plaintext highlighter-rouge">sort-and-change-case.ga</code> file.</li>
     <li>Download <a href="https://raw.githubusercontent.com/crs4/life_monitor/50cdb790ff125613aa07e70cb439e3a36b82d0bf/interaction_experiments/workflow_examples/galaxy/sort-and-change-case/input.bed">this input dataset</a> to an <code class="language-plaintext highlighter-rouge">input.bed</code> file.</li>
@@ -1316,7 +1316,7 @@ repo2rocrate <span class="nt">--repo-url</span> https://github.com/iwc-workflows
 <p>Each invocation should test a different behavior of the workflow. This could mean using different datatypes for inputs, or changing the workflow settings to produce different results.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-tests-for-your-own-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate tests for your own workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-tests-for-your-own-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate tests for your own workflow</div>
   <ol>
     <li>Create a new folder on your computer to store the workflow.</li>
     <li>Download the Galaxy workflow you updated to follow best practices earlier in this tutorial. You can do this by going to the Workflow page and clicking <i class="fas fa-download" aria-hidden="true"></i><span class="visually-hidden">galaxy-download</span> <strong>Download workflow in .ga format</strong>.</li>
@@ -1420,9 +1420,18 @@ repo2rocrate <span class="nt">--repo-url</span> https://github.com/iwc-workflows
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/fair/faqs/">FAQ page for the FAIR Data, Workflows, and Research topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/fair/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1582,7 +1591,7 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -1591,7 +1600,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1673,7 +1682,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

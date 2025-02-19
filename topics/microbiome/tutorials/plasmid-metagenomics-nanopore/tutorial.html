@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1624,7 +1624,7 @@ We will use the plasmid dataset created by <span class="citation"><a href="#LiXi
 <p>For this tutorial, in order to speed up the analysis time, we will use 6 of the 12 samples from the original study.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtaining-our-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtaining our data</div>
+  <div class="box-title hands-on-title" id="hands-on-obtaining-our-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Obtaining our data</div>
 
   <ol>
     <li>
@@ -1669,7 +1669,7 @@ report page.</p>
 <p><a href="../../images/plasmid-metagenomics-nanopore/NanoPlot.png" rel="noopener noreferrer"><img src="../../images/plasmid-metagenomics-nanopore/NanoPlot.png" alt="NanoPlot example. " width="367" height="366" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-scripts-for-long-read-sequencing-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting scripts for long read sequencing data</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-scripts-for-long-read-sequencing-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting scripts for long read sequencing data</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/1.28.2+galaxy1" title="Nanoplot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Nanoplot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28.2+galaxy1)</span> with the following parameters
@@ -1731,7 +1731,7 @@ the Minimap2 publication (<span class="citation"><a href="#Li2018">Li 2018</a></
 <p><a href="../../images/plasmid-metagenomics-nanopore/Minimap2.png" rel="noopener noreferrer"><img src="../../images/plasmid-metagenomics-nanopore/Minimap2.png" alt="Pairwise alignment. " width="361" height="121" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-pairwise-sequence-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Pairwise sequence alignment</div>
+  <div class="box-title hands-on-title" id="hands-on-pairwise-sequence-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Pairwise sequence alignment</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2" title="Map with minimap2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with minimap2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.17+galaxy2)</span> with the following parameters
@@ -1858,7 +1858,7 @@ Thus the per-base error rate is similar to the raw input reads.</p>
 <figure id="figure-1" style="max-width: 90%;"><img src="../../images/plasmid-metagenomics-nanopore/Miniasm.png" alt="Pairwise alignment. " width="496" height="496" loading="lazy" /><a target="_blank" href="../../images/plasmid-metagenomics-nanopore/Miniasm.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Sequencing and Assembly Schematic. A longer sequence is constructed from many smaller, overlapping fragments. These are aligned and reconstructed during assembly to produce the best guess assembly.</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-de-novo-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: De novo assembly</div>
+  <div class="box-title hands-on-title" id="hands-on-de-novo-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: De novo assembly</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/0.3+galaxy0" title="miniasm tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>miniasm</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.3+galaxy0)</span> with the following parameters
@@ -1890,7 +1890,7 @@ a	utg000001l	0	channel_364_204a2254-2b6f-4f10-9ec5-6d40f0b870e4_template:101-445
 <p>The Assembly graph created can be used for mapping again with Minimap2, but first the graph should be transformed to FASTA format.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-pairwise-sequence-alignment-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Pairwise sequence alignment</div>
+  <div class="box-title hands-on-title" id="hands-on-pairwise-sequence-alignment-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Pairwise sequence alignment</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gfa_to_fa/gfa_to_fa/0.1.1" title="GFA to Fasta tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFA to Fasta</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.1)</span> with the following parameters
@@ -1950,7 +1950,7 @@ It supports data produced by both Pacific Biosciences and Oxford Nanopore Techno
 <p><a href="../../images/plasmid-metagenomics-nanopore/Racon.png" rel="noopener noreferrer"><img src="../../images/plasmid-metagenomics-nanopore/Racon.png" alt="Consensus Module. " width="342" height="93" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-consensus-module"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Consensus module</div>
+  <div class="box-title hands-on-title" id="hands-on-consensus-module"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Consensus module</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/racon/racon/1.4.13" title="Racon tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Racon</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.4.13)</span> with the following parameters
@@ -1984,7 +1984,7 @@ Sequence assembler programs (such as <strong>Miniasm</strong> <i class="fas fa-w
 <p><a href="../../images/plasmid-metagenomics-nanopore/Bandage.png" rel="noopener noreferrer"><img src="../../images/plasmid-metagenomics-nanopore/Bandage.png" alt="Bandage GUI. " width="1392" height="836" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualising-de-novo-assembly-graphs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualising de novo assembly graphs</div>
+  <div class="box-title hands-on-title" id="hands-on-visualising-de-novo-assembly-graphs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualising de novo assembly graphs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2" title="Bandage image tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Bandage image</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.1+galaxy2)</span> with the following parameters
@@ -2034,7 +2034,7 @@ This is not the case for most of the samples, but we will improve our assemblies
 <p>Let’s try it on our data!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-unicycler-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Unicycler assembly</div>
+  <div class="box-title hands-on-title" id="hands-on-unicycler-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Unicycler assembly</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0" title="Create assemblies with Unicycler tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Create assemblies with Unicycler</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.4.8.0)</span> with the following parameters
@@ -2104,7 +2104,7 @@ It relies on the neural network models trained on full genome and plasmid sequen
 <p><a href="../../images/plasmid-metagenomics-nanopore/PlasFlow.png" rel="noopener noreferrer"><img src="../../images/plasmid-metagenomics-nanopore/PlasFlow.png" alt="Pairwise alignment. " width="594" height="418" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prediction-of-plasmid-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prediction of plasmid sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-prediction-of-plasmid-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prediction of plasmid sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/plasflow/PlasFlow/1.0" title="PlasFlow tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PlasFlow</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0)</span> with the following parameters
@@ -2157,7 +2157,7 @@ and compiles a summary report of detected antimicrobial resistance genes.</p>
 <p><a href="../../images/plasmid-metagenomics-nanopore/StarAmr.png" rel="noopener noreferrer"><img src="../../images/plasmid-metagenomics-nanopore/StarAmr.png" alt="Pairwise alignment. " width="234" height="312" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prediction-of-amr-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prediction of AMR genes</div>
+  <div class="box-title hands-on-title" id="hands-on-prediction-of-amr-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prediction of AMR genes</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/staramr/staramr_search/0.7.1+galaxy2" title="staramr tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>staramr</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.1+galaxy2)</span> with the following parameters
@@ -2277,9 +2277,18 @@ may provide further insight.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/microbiome/faqs/">FAQ page for the Microbiome topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/microbiome/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2518,12 +2527,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">11</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.09090909090909091">1</td>
 			</tr>
 		   
@@ -2664,7 +2673,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1660,7 +1660,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Before diving in the tutorial, we need to open <span class="tool" data-tool="interactive_tool_rstudio" title="RStudio tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>RStudio</strong></span>. If you do not know how or never interacted with RStudio, please follow the <a href="/training-material/topics/galaxy-interface/tutorials/rstudio/tutorial.html">dedicated tutorial</a>.</p>
 
 <!--SNIPPET-->
-<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch RStudio</div>   <p>Depending on which server you are using, you may be able to run RStudio directly in Galaxy. If that is not available, RStudio Cloud can be an alternative.</p>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently RStudio in Galaxy is only available on <a href="https://usegalaxy.eu">UseGalaxy.eu</a> and <a href="https://usegalaxy.org">UseGalaxy.org</a></p>   <ol>     <li>Open the Rstudio tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_rstudio">here to launch RStudio</a></li>     <li>Click Run Tool</li>     <li>The tool will start running and will stay running permanently</li>     <li>Click on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started.</li>   </ol> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-cloud-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-cloud-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio Cloud if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If RStudio is not available on the Galaxy instance:</p>   <ol>     <li>Register for <a href="https://client.login.rstudio.cloud/oauth/login?show_auth=0&amp;show_login=1&amp;show_setup=1">RStudio Cloud</a>, or login if you already have an account</li>     <li>Create a new project</li>   </ol> </blockquote> </blockquote>
+<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-rstudio"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Launch RStudio</div>   <p>Depending on which server you are using, you may be able to run RStudio directly in Galaxy. If that is not available, RStudio Cloud can be an alternative.</p>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently RStudio in Galaxy is only available on <a href="https://usegalaxy.eu">UseGalaxy.eu</a> and <a href="https://usegalaxy.org">UseGalaxy.org</a></p>   <ol>     <li>Open the Rstudio tool <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_rstudio">here to launch RStudio</a></li>     <li>Click Run Tool</li>     <li>The tool will start running and will stay running permanently</li>     <li>Click on the “User” menu at the top and go to “Active InteractiveTools” and locate the RStudio instance you started.</li>   </ol> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-rstudio-cloud-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-rstudio-cloud-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch RStudio Cloud if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If RStudio is not available on the Galaxy instance:</p>   <ol>     <li>Register for <a href="https://client.login.rstudio.cloud/oauth/login?show_auth=0&amp;show_login=1&amp;show_setup=1">RStudio Cloud</a>, or login if you already have an account</li>     <li>Create a new project</li>   </ol> </blockquote> </blockquote>
 <p><!--END_SNIPPET--></p>
 
 <h1 id="creating-objects-in-r">Creating objects in R</h1>
@@ -1681,7 +1681,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-first-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a first object</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-first-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a first object</div>
 
   <ol>
     <li>Assign <code class="language-plaintext highlighter-rouge">1</code> to the object <code class="language-plaintext highlighter-rouge">a</code> using the R assignment operator <code class="language-plaintext highlighter-rouge">&lt;-</code> in your script</li>
@@ -1805,7 +1805,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Once an object has a value, you can change that value by overwriting it. R will not give you a warning or error if you overwriting an object, which may or may not be a good thing depending on how you look at it.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-overwrite-an-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Overwrite an object</div>
+  <div class="box-title hands-on-title" id="hands-on-overwrite-an-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Overwrite an object</div>
 
   <ol>
     <li>
@@ -1833,7 +1833,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>You can also remove an object from R’s memory entirely</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-an-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove an object</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-an-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove an object</div>
 
   <ol>
     <li>
@@ -1887,7 +1887,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Data types are familiar in many programming languages, but also in natural language where we refer to them as the parts of speech, e.g. nouns, verbs, adverbs, etc. Once you know if a word - perhaps an unfamiliar one - is a noun, you can probably guess you can count it and make it plural if there is more than one (e.g. 1 <a href="https://en.wikipedia.org/wiki/Tuatara">Tuatara</a>, or 2 Tuataras). If something is a adjective, you can usually change it into an adverb by adding “-ly” (e.g. <a href="https://www.merriam-webster.com/dictionary/jejune">jejune</a> vs. jejunely). Depending on the context, you may need to decide if a word is in one category or another (e.g “cut” may be a noun when it’s on your finger, or a verb when you are preparing vegetables). These concepts have important analogies when working with R objects.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-an-object-and-check-its-mode"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create an object and check its mode</div>
+  <div class="box-title hands-on-title" id="hands-on-create-an-object-and-check-its-mode"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create an object and check its mode</div>
 
   <ol>
     <li>
@@ -1983,7 +1983,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-execute-mathematical-operations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Execute mathematical operations</div>
+  <div class="box-title hands-on-title" id="hands-on-execute-mathematical-operations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Execute mathematical operations</div>
 
   <ol>
     <li>
@@ -2036,7 +2036,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>One of the most common ways to create a vector is to use the <code class="language-plaintext highlighter-rouge">c()</code> function - the “concatenate” or “combine” function. Inside the function you may enter one or more values, separated by a comma.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-vector"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a vector</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-vector"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a vector</div>
 
   <ol>
     <li>
@@ -2055,7 +2055,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Vectors always have a <strong>mode</strong> and a <strong>length</strong>. In the <strong>Environment</strong> panel, we could already have an insight on these properties: <code class="language-plaintext highlighter-rouge">chr [1:4]</code> may indicate character and 4 values.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-vector-properties"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check vector properties</div>
+  <div class="box-title hands-on-title" id="hands-on-check-vector-properties"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check vector properties</div>
 
   <ol>
     <li>
@@ -2094,7 +2094,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Once we have vectors, one thing we may want to do is specifically retrieve one or more values from our vector. To do so, we use <strong>bracket notation</strong>. We type the name of the vector followed by square brackets. In those square brackets we place the index (e.g. a number) in that bracket.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-values-from-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get values from vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-get-values-from-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get values from vectors</div>
 
   <ol>
     <li>Create several vectors
@@ -2127,7 +2127,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>You can also retrieve a range of numbers:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieve-a-range-of-values-from-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve a range of values from vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieve-a-range-of-values-from-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve a range of values from vectors</div>
   <ol>
     <li>
       <p>Get the 1st through 3rd value in the <code class="language-plaintext highlighter-rouge">snp_genes</code> vector</p>
@@ -2154,7 +2154,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 examples</a>). Also, several of these subsetting expressions can be combined.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieve-a-complex-range-of-values-from-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve a complex range of values from vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieve-a-complex-range-of-values-from-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve a complex range of values from vectors</div>
   <ol>
     <li>
       <p>Get the 1st through the 3rd value, and 4th value in the <code class="language-plaintext highlighter-rouge">snp_genes</code> vector</p>
@@ -2173,7 +2173,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>Once you have an existing vector, you may want to add a new item to it. To do so, you can use the <code class="language-plaintext highlighter-rouge">c()</code> function again to add your new value.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-values-to-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add values to vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-add-values-to-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add values to vectors</div>
   <ol>
     <li>
       <p>Add “CYP1A1”, “APOA5” to <code class="language-plaintext highlighter-rouge">snp_genes</code> vector</p>
@@ -2196,7 +2196,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>To remove a value from a vection, we can use a negative index that will return a version a vector with that index’s value removed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-values-to-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove values to vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-values-to-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove values to vectors</div>
   <ol>
     <li>
       <p>Check value corresponding to <code class="language-plaintext highlighter-rouge">-6</code> in <code class="language-plaintext highlighter-rouge">snp_genes</code></p>
@@ -2219,7 +2219,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>We can also explicitly rename or add a value to our index using double bracket notation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-rename-values-in-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Rename values in vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-rename-values-in-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Rename values in vectors</div>
   <ol>
     <li>
       <p>Rename the 7th value to “APOA5”</p>
@@ -2269,7 +2269,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>For example, let’s say we wanted get</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-subset-logically-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Subset logically vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-subset-logically-vectors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Subset logically vectors</div>
   <ol>
     <li>
       <p>Extract all of the SNPs in our vector of SNP positions (<code class="language-plaintext highlighter-rouge">snp_positions</code>) that were greater than 100,000,000</p>
@@ -2312,7 +2312,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>How to know which <strong>index</strong> (1, 2, 3, or 4) in our vector of SNP positions was the one that was greater than 100,000,000?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-getting-which-indices-of-any-item-that-evaluates-as-true"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Getting which indices of any item that evaluates as TRUE</div>
+  <div class="box-title hands-on-title" id="hands-on-getting-which-indices-of-any-item-that-evaluates-as-true"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Getting which indices of any item that evaluates as TRUE</div>
   <ol>
     <li>
       <p>Return the indices in our vector of SNP positions (<code class="language-plaintext highlighter-rouge">snp_positions</code>) that were greater than 100,000,000</p>
@@ -2327,7 +2327,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p><strong>Why this is important?</strong> Often in programming we will not know what inputs and values will be used when our code is executed. Rather than put in a pre-determined value (e.g 100000000) we can use an object that can take on whatever value we need.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-subset-logically-vectors-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Subset logically vectors</div>
+  <div class="box-title hands-on-title" id="hands-on-subset-logically-vectors-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Subset logically vectors</div>
   <ol>
     <li>Create a <code class="language-plaintext highlighter-rouge">snp_marker_cutoff</code> containing <code class="language-plaintext highlighter-rouge">100000000</code></li>
     <li>Extract all of the SNPs in <code class="language-plaintext highlighter-rouge">snp_positions</code> that were greater than <code class="language-plaintext highlighter-rouge">snp_marker_cutoff</code></li>
@@ -2347,7 +2347,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>Finally, there are a few other common retrieve or replace operations you may want to know about. First, you can check to see if any of the values of your vector are missing (i.e. are <code class="language-plaintext highlighter-rouge">NA</code>). Missing data will get a more detailed treatment later, but the <code class="language-plaintext highlighter-rouge">is.NA()</code> function will return a logical vector, with TRUE for any NA value:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-for-missing-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check for missing values</div>
+  <div class="box-title hands-on-title" id="hands-on-check-for-missing-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check for missing values</div>
   <ol>
     <li>
       <p>Check what are the missing values in <code class="language-plaintext highlighter-rouge">snp_genes</code></p>
@@ -2365,7 +2365,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>Sometimes, you may wish to find out if a specific value (or several values) is present a vector. You can do this using the comparison operator <code class="language-plaintext highlighter-rouge">%in%</code>, which will return TRUE for any value in your collection that is in the vector you are searching.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-for-presence-of-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check for presence of values</div>
+  <div class="box-title hands-on-title" id="hands-on-check-for-presence-of-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check for presence of values</div>
   <ol>
     <li>
       <p>Check if “ACTN3” and “APOA5” are in <code class="language-plaintext highlighter-rouge">snp_genes</code></p>
@@ -2500,7 +2500,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>We can use the <code class="language-plaintext highlighter-rouge">as.</code> functions to explicitly coerce values from one form into another.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-coerce-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Coerce values</div>
+  <div class="box-title hands-on-title" id="hands-on-coerce-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Coerce values</div>
   <ol>
     <li>
       <p>Create a <code class="language-plaintext highlighter-rouge">positions</code> object with “8762685”, “66560624”, “67545785”, “154039662”</p>
@@ -2533,7 +2533,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 <p>Here the coercion is straight forward, but what would happen if we tried using <code class="language-plaintext highlighter-rouge">as.numeric()</code> on <code class="language-plaintext highlighter-rouge">snp_chromosomes_2</code></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-issue-with-coercing-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Issue with coercing values</div>
+  <div class="box-title hands-on-title" id="hands-on-issue-with-coercing-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Issue with coercing values</div>
   <ol>
     <li>
       <p>Create a <code class="language-plaintext highlighter-rouge">chromosomes_2</code> object with 3, 11, ‘X’, 6</p>
@@ -2586,7 +2586,7 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-and-manipulate-list-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create and manipulate list objects</div>
+  <div class="box-title hands-on-title" id="hands-on-create-and-manipulate-list-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create and manipulate list objects</div>
   <ol>
     <li>
       <p>Create a named list containing the genes, reference SNPs, chromomosome and position objects we create before</p>
@@ -2671,9 +2671,18 @@ examples</a>). Also, several of these subsetting expressions can be combined.</p
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2796,8 +2805,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2957,22 +2966,22 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">16</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.0625">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.125">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.1875">3</td>
 			</tr>
 		   
@@ -3213,7 +3222,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

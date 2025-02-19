@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1822,7 +1822,7 @@ more in-depth discussion of each step, please see the <a href="/training-materia
 <h1 id="data-upload">Data upload</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1887,7 +1887,7 @@ https://zenodo.org/record/4776250/files/T1A_reverse.fastqsanger
 <p>We will run all these steps using a single workflow, then discuss each step and the results in more detail.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-pretreatments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Pretreatments</div>
+  <div class="box-title hands-on-title" id="hands-on-pretreatments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Pretreatments</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -2128,7 +2128,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 <p>As rRNAs reads are good marker genes, we will use directly the quality controlled files (output of <strong>Cutadapt</strong>) with all reads (not only the non rRNAs).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-community-profile"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Community Profile</div>
+  <div class="box-title hands-on-title" id="hands-on-community-profile"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Community Profile</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -2289,7 +2289,7 @@ In this tutorial we use similar tools as described in the tutorial <a href="/tra
 <p>To identify the functions made by the community, we do not need the rRNA sequences, since they do not contain gene coding regions and will slow the run. We will use the output of <strong>SortMeRNA</strong>, but also the identified community profile from <strong>MetaPhlAn</strong>. This will help <strong>HUMAnN</strong> to focus on the known sequences for the identified organisms.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-functional-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Functional Information</div>
+  <div class="box-title hands-on-title" id="hands-on-functional-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Functional Information</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -2679,7 +2679,7 @@ with the following parameters:
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-combine-taxonomic-and-functional-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Combine taxonomic and functional information</div>
+  <div class="box-title hands-on-title" id="hands-on-combine-taxonomic-and-functional-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Combine taxonomic and functional information</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bebatut/combine_metaphlan2_humann2/combine_metaphlan2_humann2/0.2.0" title="Combine MetaPhlAn2 and HUMAnN2 outputs tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Combine MetaPhlAn2 and HUMAnN2 outputs</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.0)</span>  with the following parameters:
@@ -2733,7 +2733,7 @@ Coprothermobacter	31.76629	Coprothermobacter_proteolyticus	31.76629	UniRef90_B5Y
         <p>To answer the questions, we need to group the contents of the output of <strong>Combine MetaPhlAn2 and HUMAnN2 outputs</strong> by 1st column and count the number of occurrences of gene families. We do that using <strong>Group data by a column</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>:</p>
 
         <blockquote class="notranslate hands_on">
-          <div class="box-title hands-on-title" id="hands-on-group-by-genus-and-count-gene-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Group by genus and count gene families</div>
+          <div class="box-title hands-on-title" id="hands-on-group-by-genus-and-count-gene-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Group by genus and count gene families</div>
           <ol>
             <li><span class="tool" data-tool="Grouping1" title="Group data by a column tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Group data by a column</strong></span>
               <ul>
@@ -2763,7 +2763,7 @@ Coprothermobacter	31.76629	Coprothermobacter_proteolyticus	31.76629	UniRef90_B5Y
         <p>For this question, we should group on the 3rd column:</p>
 
         <blockquote class="notranslate hands_on">
-          <div class="box-title hands-on-title" id="hands-on-group-by-species-and-count-gene-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Group by species and count gene families</div>
+          <div class="box-title hands-on-title" id="hands-on-group-by-species-and-count-gene-families"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Group by species and count gene families</div>
           <ol>
             <li><span class="tool" data-tool="Grouping1" title="Group data by a column tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Group data by a column</strong></span>
               <ul>
@@ -2869,9 +2869,18 @@ Coprothermobacter	31.76629	Coprothermobacter_proteolyticus	31.76629	UniRef90_B5Y
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/microbiome/faqs/">FAQ page for the Microbiome topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/microbiome/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3127,7 +3136,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -3229,7 +3238,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

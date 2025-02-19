@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1322,7 +1322,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We proceed to the analysis by uploading the RNA-seq dataset. The dataset has <code class="language-plaintext highlighter-rouge">133</code> rows corresponding to human patients and over <code class="language-plaintext highlighter-rouge">27,000</code> columns specifying genes. The last column <code class="language-plaintext highlighter-rouge">age</code> contains the chronological age. For the validation set, this <code class="language-plaintext highlighter-rouge">age</code> column is predicted and the R2 metric is computed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1370,7 +1370,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We can see that this RNA-seq dataset is high-dimensional. There are over <code class="language-plaintext highlighter-rouge">27,000</code> columns/features. Generally, not all the features in the dataset are useful for prediction. We need only those features which increase the predictive ability of the model. To filter these features, we perform feature selection and retain only those which are useful. To do that, we use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html#sklearn.feature_selection.SelectKBest">SelectKBest</a> module. This approach involves extracting those features which are most correlated to the target (<code class="language-plaintext highlighter-rouge">age</code> in our dataset). <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.f_regression.html#sklearn.feature_selection.f_regression">F-regression</a> is used for the extraction of features. Moreover, we are not sure of how many of these features we will need. To find the right number of features, we do a hyperparameter search (to find the best combination of values of different parameters). It works by setting many different numbers of features to determine to number which gives the highest accuracy. To wrap this feature selector with a regressor, we will use the <strong>Pipeline builder</strong> tool. This tool creates a sequential flow of algorithms to execute on datasets. Since the hyperparameters will be tuned, we choose to output the parameters for searchCV. The tool does not take any dataset as input. Rather, the outputs will be used as inputs to the <strong>Hyperparameter search</strong> tool (explained in the following step). We will use ElasticNet as a regressor which creates an age prediction model. It is a linear regressor with <code class="language-plaintext highlighter-rouge">l1</code> (also called lasso) and <code class="language-plaintext highlighter-rouge">l2</code> (also called ridge) as regularisers. Regularisation is a technique used in machine learning to prevent overfitting. Overfitting happens when a machine learning algorithm starts memorising the dataset it is trained upon, rather than learning general features. The consequence of overfitting is that the accuracy on the training set is good, but results on the unseen set (test set) are poor, which happens because the algorithm has not learned general features from the dataset. To prevent overfitting, regularisers like <code class="language-plaintext highlighter-rouge">l1</code> and <code class="language-plaintext highlighter-rouge">l2</code> are used. <code class="language-plaintext highlighter-rouge">L1</code> is a linear term added to the error function of a machine learning algorithm and <code class="language-plaintext highlighter-rouge">l2</code> adds a squared term to the error function. More details about <code class="language-plaintext highlighter-rouge">l1</code> and <code class="language-plaintext highlighter-rouge">l2</code> can found <a href="https://www.kaggle.com/residentmario/l1-norms-versus-l2-norms">here</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create pipeline</div>
+  <div class="box-title hands-on-title" id="hands-on-create-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create pipeline</div>
 
   <ol>
     <li><strong>Pipeline builder</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1452,7 +1452,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We will use the <strong>Hyperparameter search</strong> tool to find the best values for each hyperparameter. These values will lead us to create the best model based on the search space chosen for each hyperparameter.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hyperparameter search</div>
+  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hyperparameter search</div>
 
   <ol>
     <li><strong>Hyperparameter search</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1572,7 +1572,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We will visualize the tabular output of <strong>Hyperparameter search</strong> tool from the previous step using the <strong>Parallel coordinates plot of tabular data</strong> tool. There are multiple columns in the tabular output, but we will focus on only a few of them.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-parallel-coordinates-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create parallel coordinates plot</div>
+  <div class="box-title hands-on-title" id="hands-on-create-parallel-coordinates-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create parallel coordinates plot</div>
 
   <ol>
     <li><strong>Parallel coordinates plot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1627,7 +1627,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We proceed with the analysis by uploading new datasets. You might want to create a new history first. The training set contains <code class="language-plaintext highlighter-rouge">208</code> rows corresponding to humans and <code class="language-plaintext highlighter-rouge">13</code> features (age-correlated CpG sites in DNA methylation dataset). The last column is <code class="language-plaintext highlighter-rouge">age</code>. The test set contains <code class="language-plaintext highlighter-rouge">104</code> rows and the same number of features as the training set. The <code class="language-plaintext highlighter-rouge">age</code> column in the test set is predicted after training on the training set. Another dataset <code class="language-plaintext highlighter-rouge">test_rows_labels</code> contains the true age values of the test set which is used to compute R2 scores between true and predicted age.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1668,7 +1668,7 @@ https://zenodo.org/record/2545213/files/test_rows.csv
 <p>We will create a pipeline with <strong>Pipeline builder</strong> tool, but this time, we just specify the regressor. <a href="https://www.sciencedirect.com/science/article/pii/S1872497317301643?via%3Dihub">Jana Naue et al. 2017</a> has used <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor">Random Forest</a> as the regressor and we can conclude from this study that the ensemble-based regressor works well on this DNA methylation dataset. Therefore, we will use <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html#sklearn.ensemble.GradientBoostingRegressor">Gradient boosting</a> which is an ensemble-based regressor because it uses multiple decision tree regressors internally and predicts by taking the collective performances of the predictions (by multiple decision trees). It has a good predictive power and is robust to outliers. It creates an ensemble of weak learners (decision trees) and iteratively minimises error. One disadvantage, which comes from its basic principle of boosting, is that it cannot be parallelised. The <strong>Pipeline builder</strong> tool will wrap this regressor and return a zipped file and a tabular file containing all tunable hyperparameters.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-pipeline-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create pipeline</div>
+  <div class="box-title hands-on-title" id="hands-on-create-pipeline-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create pipeline</div>
 
   <ol>
     <li><strong>Pipeline builder</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1705,7 +1705,7 @@ We use only one parameter <code class="language-plaintext highlighter-rouge">n_e
 <p>We will use the <strong>Hyperparameter search</strong> tool to find the best values for each hyperparameter. These values will lead us to create the best model based on the search space chosen for each hyperparameter.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hyperparameter search</div>
+  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hyperparameter search</div>
 
   <ol>
     <li><strong>Hyperparameter search</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1807,7 +1807,7 @@ We use only one parameter <code class="language-plaintext highlighter-rouge">n_e
 <p>Using the <strong>Hyperparameter search</strong> tool, we found the best model based on the training data. Now, we will predict age in the test dataset using this model in order to see if the model has learned important features which can be generalised on a new dataset. The test dataset (<code class="language-plaintext highlighter-rouge">test_rows</code>) contains the same number of features, but does not contain the <code class="language-plaintext highlighter-rouge">age</code> column. This is predicted using the trained model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-age"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict age</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-age"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict age</div>
 
   <ol>
     <li><strong>Ensemble methods for classification and regression</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1830,7 +1830,7 @@ We use only one parameter <code class="language-plaintext highlighter-rouge">n_e
 <p>In the previous step, we generated predictions for the test dataset. We have one more dataset (<code class="language-plaintext highlighter-rouge">test_rows_labels</code>) which contains the true age values of the test set. Using the true and predicted values of age in the test set, we will verify the performance by analysing the plots.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-regression-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create regression plots</div>
+  <div class="box-title hands-on-title" id="hands-on-create-regression-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create regression plots</div>
 
   <ol>
     <li><strong>Plot actual vs predicted curves and residual plots of tabular data</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1924,9 +1924,18 @@ We use only one parameter <code class="language-plaintext highlighter-rouge">n_e
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/statistics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2079,12 +2088,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
@@ -2219,7 +2228,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

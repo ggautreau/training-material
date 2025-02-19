@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1818,7 +1818,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Any analysis should get its own Galaxy history. So let’s start by creating a new one:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-the-galaxy-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare the Galaxy history</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-the-galaxy-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare the Galaxy history</div>
 
   <ol>
     <li>
@@ -1848,7 +1848,7 @@ for each of the samples, and which we now need to import into Galaxy.</p>
 <p>For the purpose of this tutorial, it is enough if you simply follow the step-by-step instructions provided here exactly.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1975,7 +1975,7 @@ they only contain <strong>fixed SNPs</strong>, which we (somewhat arbitrarily) d
 <p><em>Note: TB variant Filter refers to SNPs as SNVs. These two short forms are interchangeable, meaning <strong>S</strong>ingle <strong>N</strong>ucleotide <strong>P</strong>olymorphism and <strong>S</strong>ingle <strong>N</strong>ucleotide <strong>V</strong>ariant, respectively.</em></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-vcf-files-for-epidemiological-investigation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter VCF files for epidemiological investigation</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-vcf-files-for-epidemiological-investigation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter VCF files for epidemiological investigation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/tb_variant_filter/tb_variant_filter/0.3.6+galaxy0" title="TB Variant Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>TB Variant Filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.3.6+galaxy0)</span> with the following parameters:
@@ -2018,7 +2018,7 @@ SNP described in the VCF otherwise. This is exactly what the tool <strong>bcftoo
 given the reference genome and the VCF of the strain we want to reconstruct the genome for.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-reconstruct-the-complete-genome-of-each-sample"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reconstruct the complete genome of each sample</div>
+  <div class="box-title hands-on-title" id="hands-on-reconstruct-the-complete-genome-of-each-sample"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Reconstruct the complete genome of each sample</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bcftools_consensus/bcftools_consensus/1.15.1+galaxy3" title="bcftools consensus tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bcftools consensus</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.15.1+galaxy3)</span> with the following parameters:
@@ -2096,7 +2096,7 @@ TTCGTTCGATGACCCCGGTTCAGGCTTCACCACAGTGTGGAACG...
 However we can do the same with a specific command that <em>concatenates</em> datasets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-concatenate-genomes-to-build-a-msa"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Concatenate genomes to build a MSA</div>
+  <div class="box-title hands-on-title" id="hands-on-concatenate-genomes-to-build-a-msa"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Concatenate genomes to build a MSA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1" title="Concatenate datasets tail-to-head (cat) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Concatenate datasets tail-to-head (cat)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.1)</span> with the following parameters:
@@ -2159,7 +2159,7 @@ our file larger than necessary.</p>
 <figure id="figure-3" style="max-width: 90%;"><img src="./images/SNP_MSA.png" alt="MSA of 5 MTB genomes. " width="626" height="129" loading="lazy" /><a target="_blank" href="./images/SNP_MSA.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 3</strong>:</span> A SNP alignment where all positions are polymorphic</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-removing-invariant-sites-from-a-msa"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Removing invariant sites from a MSA</div>
+  <div class="box-title hands-on-title" id="hands-on-removing-invariant-sites-from-a-msa"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Removing invariant sites from a MSA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snp_sites/snp_sites/2.5.1+galaxy0" title="Finds SNP sites tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Finds SNP sites</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.5.1+galaxy0)</span> with the following parameters:
@@ -2189,7 +2189,7 @@ patients are within the same transmission cluster or not. Having a SNP alignment
 easy. We will use <strong>SNP distance matrix</strong>, that will generate a matrix with pairwise SNP distances.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-distance-matrix-from-snp-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Distance matrix from SNP alignment.</div>
+  <div class="box-title hands-on-title" id="hands-on-distance-matrix-from-snp-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Distance matrix from SNP alignment.</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snp_dists/snp_dists/0.8.2+galaxy0" title="SNP distance matrix tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SNP distance matrix</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.2+galaxy0)</span> with the following parameters:
@@ -2261,7 +2261,7 @@ An Rstudio dataset will appear in your history, representing an interactive tool
 This is the normal behaviour because, indeed, Rstudio is getting executed until we finish using it.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-interactive-tool-session-to-generate-a-cluster-report"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Interactive tool session to generate a cluster report</div>
+  <div class="box-title hands-on-title" id="hands-on-interactive-tool-session-to-generate-a-cluster-report"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Interactive tool session to generate a cluster report</div>
 
   <ol>
     <li>Note the dataset number (the number in front of and separated with a <strong>:</strong> from the dataset name) of the SNP distance matrix generated by the last tool run in your history</li>
@@ -2396,7 +2396,7 @@ all of them.</p>
 <p>Like in part 1, we can use Galaxy’s rule-based uploader functionality to upload the data, build a collection from it and name its elements correctly, all in one step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -2552,7 +2552,7 @@ pattern, it will print as a result <strong>the complete line</strong> containing
 as output the complete line, for example <code class="language-plaintext highlighter-rouge">Drug-resistance: MDR</code></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-keep-only-drug-resistance-lines-from-tb-profiler-reports"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Keep only `Drug-resistance:` lines from TB-profiler reports</div>
+  <div class="box-title hands-on-title" id="hands-on-keep-only-drug-resistance-lines-from-tb-profiler-reports"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Keep only `Drug-resistance:` lines from TB-profiler reports</div>
 
   <ol>
     <li><span class="tool" data-tool="Grep1" title="Select lines that match an expression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select lines that match an expression</strong></span> with the following parameters:
@@ -2571,7 +2571,7 @@ as output the complete line, for example <code class="language-plaintext highlig
 <p>Next, we want to turn the collection of single-line datasets we just created into a single two-column table with
 one column of sample IDs and another one with the corresponding drug resistance status.</p>
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepend-the-sample-name-to-the-dr-profile"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepend the sample name to the DR profile</div>
+  <div class="box-title hands-on-title" id="hands-on-prepend-the-sample-name-to-the-dr-profile"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepend the sample name to the DR profile</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.1.0)</span> with the following parameters:
@@ -2593,7 +2593,7 @@ one column of sample IDs and another one with the corresponding drug resistance 
 <p>In this step we will use a simple tool that searches and replaces text to remove the redundant string “Drug-resistance: “ from our table by replacing it with <em>nothing</em>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-removing-redundant-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Removing redundant content</div>
+  <div class="box-title hands-on-title" id="hands-on-removing-redundant-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Removing redundant content</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/1.1.2" title="Replace Text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.2)</span> with the following parameters:
@@ -2653,7 +2653,7 @@ If we have a look at the respective TB-profiler reports, we can see that these t
 <p>The two tables we have generated in the two parts of the tutorial share a sample column, which we can use now to join the two tables.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-joining-tables"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Joining tables</div>
+  <div class="box-title hands-on-title" id="hands-on-joining-tables"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Joining tables</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_easyjoin_tool/1.1.2" title="Join two files tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Join two files</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.2)</span> with the following parameters:
@@ -2946,9 +2946,18 @@ in the follow-up tutorial <a href="/training-material/topics/evolution/tutorials
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/evolution/faqs/">FAQ page for the Evolution topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/evolution/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3179,17 +3188,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">5</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.8">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">1</td>
 			</tr>
 		   
@@ -3330,7 +3339,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

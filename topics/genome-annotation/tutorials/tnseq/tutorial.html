@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1508,7 +1508,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Let’s start with uploading the data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import the data</div>
+  <div class="box-title hands-on-title" id="hands-on-import-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import the data</div>
 
   <ol>
     <li>
@@ -1576,7 +1576,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>First we divide the initial data set by experimental conditions using the 8 bp barcode added during the Illumina multiplexing protocol.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-condition-barcodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect condition barcodes</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-condition-barcodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect condition barcodes</div>
 
   <ol>
     <li>Inspect the <code class="language-plaintext highlighter-rouge">condition_barcodes</code> file</li>
@@ -1603,7 +1603,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>We would like now to split our Tnseq reads in <code class="language-plaintext highlighter-rouge">Tnseq-Tutorial-reads</code> given the barcodes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-split-reads-by-condition-barcodes-using-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Split reads by condition barcodes using Cutadapt</div>
+  <div class="box-title hands-on-title" id="hands-on-split-reads-by-condition-barcodes-using-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Split reads by condition barcodes using Cutadapt</div>
 
   <ol>
     <li><strong>Cutadapt</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -1677,7 +1677,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>Our reads are now divided by condition. We need to trim their tail containing the Illumina adapters, used for initiating the sequencing (<code class="language-plaintext highlighter-rouge">CGTTATGGCACGC</code>, here). To do so, we remove the adapter and everything downstream, using the end adapter option of <strong>Cutadapt</strong> and not anchor the sequence anywhere. To eliminate reads that might not have been trimmed because of too many mismatches or other reasons, we filter the reads by size, given the known approximate size of the remaining sequences (<strong>how is it computed??</strong>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-adapter-with-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove Adapter with Cutadapt</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-adapter-with-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove Adapter with Cutadapt</div>
 
   <ol>
     <li><strong>Cutadapt</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to remove adapters with:
@@ -1785,7 +1785,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-construct-barcodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect construct barcodes</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-construct-barcodes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect construct barcodes</div>
 
   <ol>
     <li>
@@ -1806,7 +1806,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-barcode-split-with-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Barcode split with Cutadapt</div>
+  <div class="box-title hands-on-title" id="hands-on-barcode-split-with-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Barcode split with Cutadapt</div>
 
   <ol>
     <li><strong>Cutadapt</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -1871,7 +1871,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>The last remaining transposon sequence in the reads is the linker with the MmeI restriction site (<code class="language-plaintext highlighter-rouge">ACAGGTTGGATGATAAGTCCCCGGTCTATATTGAGAGTAACTACATTT</code>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-linker-with-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Remove Linker with Cutadapt</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-linker-with-cutadapt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Remove Linker with Cutadapt</div>
 
   <ol>
     <li><strong>Cutadapt</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -1928,7 +1928,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-map-reads-with-bowtie"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Map reads with Bowtie</div>
+  <div class="box-title hands-on-title" id="hands-on-map-reads-with-bowtie"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Map reads with Bowtie</div>
 
   <ol>
     <li><strong>Map with Bowtie for Illumina</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -1980,7 +1980,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <figure id="figure-4" style="max-width: 90%;"><img src="../../images/tnseq/Map_cov.png" alt="A read align to the genome with its 3' end covering half of the TA site. " width="935" height="222" loading="lazy" /><a target="_blank" href="../../images/tnseq/Map_cov.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Mapping read and TA site coverage</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-genome-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute genome coverage</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-genome-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute genome coverage</div>
 
   <ol>
     <li><strong>bamCoverage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2008,7 +2008,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>As you can see on the <a href="#figure-4">previous figure</a>, the read can cover one side or the other of the TA depending on the direction of insertion of the transposon. Depending on the direction of insertion the coverage will be counted on the leftmost position of the TA site or on the rightmost. As we are not considering strand separately in this analyses, we will consider both count as attached to the leftmost base of the TA site. To do that we will create two list of TA site positions, listing the 5’ end of each TA site for forward and reverse strand, and then merge them to get a global count per TA site.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-ta-sites-coordinates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get TA sites coordinates</div>
+  <div class="box-title hands-on-title" id="hands-on-get-ta-sites-coordinates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get TA sites coordinates</div>
 
   <ol>
     <li><strong>Nucleotide subsequence search</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2035,7 +2035,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>The only information we need here are the positions of the 5’ end of each TA site for each strand.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-forward-and-reverse-strand-positions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get forward and reverse strand positions</div>
+  <div class="box-title hands-on-title" id="hands-on-get-forward-and-reverse-strand-positions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get forward and reverse strand positions</div>
 
   <ol>
     <li><strong>Cut columns from a table</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2083,7 +2083,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>We have now 2 files containing the coordinates of our TA sites for both strands. We should cross them with the coverage files to get the coverage on both sides of each TA site.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-coverage-of-ta-sites"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Get coverage of TA sites</div>
+  <div class="box-title hands-on-title" id="hands-on-get-coverage-of-ta-sites"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Get coverage of TA sites</div>
 
   <ol>
     <li><strong>Join two files</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2119,7 +2119,7 @@ https://zenodo.org/record/2579335/files/staph_aur.gff3
 <p>We now have a read count for each nucleotide at the different TA sites. The insertions on the forward strand files are in a different direction than those on the reverse strand file. In our case, we are only interested in studying the gene disruption, and therefore we do not want to consider the directions separately. We can then combine the forward and reverse counts together to get a total count per TA site. In order to do that we need to assign the count of both strand to the same nucleotide, by shifting by one position the count on the reverse strand.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-total-count-per-ta-site"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get total count per TA site</div>
+  <div class="box-title hands-on-title" id="hands-on-get-total-count-per-ta-site"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get total count per TA site</div>
 
   <ol>
     <li><strong>Compute an expression on every row</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to shift the positions of reverse strand counts with:
@@ -2274,7 +2274,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 <p>In order to use transit, we need to create a an annotation file in the <code class="language-plaintext highlighter-rouge">prot_table</code> format, specific to the Transit tool. It can be created this file from a GFF3 from GenBank like the one we uploaded earlier.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hands-on-create-annotation-file-in-prot-table-format"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hands-on : Create annotation file in prot_table format</div>
+  <div class="box-title hands-on-title" id="hands-on-hands-on-create-annotation-file-in-prot-table-format"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hands-on : Create annotation file in prot_table format</div>
   <ol>
     <li>Check that the format of <code class="language-plaintext highlighter-rouge">staph_aur.gff3</code> file is <code class="language-plaintext highlighter-rouge">gff3</code> and not <code class="language-plaintext highlighter-rouge">gff</code></li>
     <li>
@@ -2301,7 +2301,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-gene-essentiality-with-transit"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict gene essentiality with Transit</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-gene-essentiality-with-transit"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict gene essentiality with Transit</div>
 
   <ol>
     <li><strong>Gumbel</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2349,7 +2349,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 <p>We can obtain the list of genes predicted as essential by filtering on the essentiality call.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hands-on-get-table-of-essential-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hands-on : Get table of essential genes</div>
+  <div class="box-title hands-on-title" id="hands-on-hands-on-get-table-of-essential-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hands-on : Get table of essential genes</div>
 
   <ol>
     <li><strong>Filter data on any column using simple expressions</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2380,7 +2380,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 <p>Now let’s compare the results between out two conditions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-separate-files-from-the-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Separate Files from the collection</div>
+  <div class="box-title hands-on-title" id="hands-on-separate-files-from-the-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Separate Files from the collection</div>
 
   <ol>
     <li><strong>Extract Dataset from a list</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to extract 1st file in the collection with:
@@ -2413,7 +2413,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 <p>We would like now to get the list of essential gene in both conditions</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-gene-essential-in-both-conditions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get gene essential in both conditions</div>
+  <div class="box-title hands-on-title" id="hands-on-get-gene-essential-in-both-conditions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get gene essential in both conditions</div>
 
   <ol>
     <li><strong>Join two files</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2432,7 +2432,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 <p>Let’s now get the list of essential gene that are different between the two conditions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-gene-essential-only-in-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get gene essential only in control</div>
+  <div class="box-title hands-on-title" id="hands-on-get-gene-essential-only-in-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get gene essential only in control</div>
 
   <ol>
     <li><strong>Join two files</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2448,7 +2448,7 @@ creating libraries with lower insertion rates. The difference from the Gumbel me
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hands-on-get-gene-essential-only-in-condition"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hands-on : Get gene essential only in condition</div>
+  <div class="box-title hands-on-title" id="hands-on-hands-on-get-gene-essential-only-in-condition"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hands-on : Get gene essential only in condition</div>
 
   <ol>
     <li><strong>Join two files</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with:
@@ -2557,9 +2557,18 @@ For repetitive analyses, the steps are fewer : mapping, coverage, attribution to
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/genome-annotation/faqs/">FAQ page for the Genome Annotation topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/genome-annotation/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2741,12 +2750,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">1</td>
 			</tr>
 		   
@@ -2859,7 +2868,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

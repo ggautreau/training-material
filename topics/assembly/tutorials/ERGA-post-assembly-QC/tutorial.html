@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1742,7 +1742,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>As a first step we will get the data from Zenodo.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload data</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload data</div>
 
   <ol>
     <li>
@@ -1832,7 +1832,7 @@ Diamond_db   https://zenodo.org/record/7788734/files/Diamond_makedb.dmnd  dmnd  
 <p>Once we have imported all the datasets, we will move each one to its correspondent history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload data</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload data</div>
 
   <ol>
     <li>Create three new empty histories, one for each specie.</li>
@@ -1895,7 +1895,7 @@ Diamond_db   https://zenodo.org/record/7788734/files/Diamond_makedb.dmnd  dmnd  
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-bam-file-with-minimap2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate BAM file with Minimap2</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-bam-file-with-minimap2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate BAM file with Minimap2</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.1.0)</span> with the following parameters:
@@ -1928,7 +1928,7 @@ Diamond_db   https://zenodo.org/record/7788734/files/Diamond_makedb.dmnd  dmnd  
 <p><strong>DIAMOND</strong> is a sequence alignment tool that utilizes a more efficient algorithm compared to BLAST, allowing for much faster searches of large sequence databases. Specifically, DIAMOND uses a sensitive seed-extension approach that compares a set of small segments (seeds) from the query sequence to a database, and then extends the alignments based on the highest-scoring hits. This approach allows DIAMOND to perform up to 20,000 times faster than BLAST, with comparable or improved sensitivity and accuracy (<span class="citation"><a href="#Buchfink2014">Buchfink <i>et al.</i> 2014</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/diamond/bg_diamond/2.0.15+galaxy0" title="Diamond tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Diamond</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.15+galaxy0)</span> with the following parameters:
@@ -1985,7 +1985,7 @@ Diamond_db   https://zenodo.org/record/7788734/files/Diamond_makedb.dmnd  dmnd  
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-estimate-single-copy-gene-representation-completeness"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Estimate single copy gene representation completeness</div>
+  <div class="box-title hands-on-title" id="hands-on-estimate-single-copy-gene-representation-completeness"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Estimate single copy gene representation completeness</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/5.7.1+galaxy0" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.7.1+galaxy0)</span> with the following parameters:
@@ -2041,7 +2041,7 @@ Diamond_db   https://zenodo.org/record/7788734/files/Diamond_makedb.dmnd  dmnd  
 <p>To get a more meaningful analysis and therefore more useful information about our assembly, it is better to provide as much data as we can get. In our case we will also provide a metadata file if possible, NCBI taxonomy ID and the NCBI taxdump directory (<span class="citation"><a href="#Challis2020">Challis <i>et al.</i> 2020</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-the-blobdir-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Creating the BlobDir dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-the-blobdir-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Creating the BlobDir dataset</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/blobtoolkit/blobtoolkit/3.4.0+galaxy0" title="BlobToolKit tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>BlobToolKit</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.4.0+galaxy0)</span> with the following parameters:
@@ -2186,7 +2186,7 @@ Diamond_db   https://zenodo.org/record/7788734/files/Diamond_makedb.dmnd  dmnd  
 <p>Meryl is a powerful tool for counting k-mers in large-scale genomic datasets. It uses a sorting-based approach that sorts the k-mers in lexicographical order.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generating-k-mer-profile"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generating k-mer profile</div>
+  <div class="box-title hands-on-title" id="hands-on-generating-k-mer-profile"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generating k-mer profile</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy6" title="Meryl tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Meryl</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3+galaxy6)</span> with the following parameters:
@@ -2239,7 +2239,7 @@ In our case we set the k-mer size to 21.</p>
 <p><strong>Genomescope</strong> is used for analysing genomes with the help of k-mer profile analysis. It estimates the overall genome characteristics and the overall read characteristics. The tool will use a given k-mer profile which is calculated only from raw reads sequencing data. It then generates a plot with the calculated data giving us information about the completeness and quality of the to be assembled data. (<span class="citation"><a href="#Vurture2017">Vurture <i>et al.</i> 2017</a></span>)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-plots-for-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate plots for analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-plots-for-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate plots for analysis</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.0+galaxy2" title="GenomeScope tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GenomeScope</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0+galaxy2)</span> with the following parameters:
@@ -2287,7 +2287,7 @@ In our case we set the k-mer size to 21.</p>
 Merqury works by comparing k-mers of an assembly to those from unassembled high-accuracy reads of the raw sequencing data. K-mer-based methods are also used to identify errors and missing sequences. (<span class="citation"><a href="#Rhie2020">Rhie <i>et al.</i> 2020</a></span>)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generating-stats-and-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generating stats and plots</div>
+  <div class="box-title hands-on-title" id="hands-on-generating-stats-and-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generating stats and plots</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy2" title="Merqury tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Merqury</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3+galaxy2)</span> with the following parameters:
@@ -2351,7 +2351,7 @@ Merqury works by comparing k-mers of an assembly to those from unassembled high-
 <p>gfastats is a tool for providing summary statistics and genome file manipulation. In our case it will generate genome assembly statistics in a tabular-format output. Metrics like N50/L50, GC-content and lengths of contigs, scaffolds and gaps as well as other statistical information are provided for assessing the contiguity of the assembly.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-summary-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate summary statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-summary-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate summary statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.2.0+galaxy0" title="gfastats tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>gfastats</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.0+galaxy0)</span> with the following parameters:
@@ -2415,7 +2415,7 @@ It is based on cross-linking the DNA in the nucleus and its histones (proteins a
 If you have only one pair of datasets, skip this step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-merge-em-erythrolamprus-reginae-em-hi-c-data-into-single-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Merge  <em>Erythrolamprus reginae</em> Hi-C data into single datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-merge-em-erythrolamprus-reginae-em-hi-c-data-into-single-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Merge  <em>Erythrolamprus reginae</em> Hi-C data into single datasets</div>
   <ol>
     <li>
       <p>Create a collection with the Hi-C forward reads name <code class="language-plaintext highlighter-rouge">EReginae Hi-C forward reads</code>.</p>
@@ -2453,7 +2453,7 @@ If you have only one pair of datasets, skip this step.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapping-hi-c-reads-against-a-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Mapping Hi-C reads against a reference genome</div>
+  <div class="box-title hands-on-title" id="hands-on-mapping-hi-c-reads-against-a-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Mapping Hi-C reads against a reference genome</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/2.2.1+galaxy0" title="BWA-MEM2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>BWA-MEM2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1+galaxy0)</span> with the following parameters:
@@ -2511,7 +2511,7 @@ If you have only one pair of datasets, skip this step.</p>
 <p>PretextMap converts BAM/SAM files into genome contact maps. With those contact maps it is possible to analyse the 3D organisation of chromosomes. The resulting map will be used for visualisation and editing contigs/scaffolds. (<span class="citation"><a href="#Kumar2017">Kumar <i>et al.</i> 2017</a></span>)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-a-contact-map-with-pretextmap-and-pretextsnapshot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate a contact map with PretextMap and PretextSnapshot</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-a-contact-map-with-pretextmap-and-pretextsnapshot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate a contact map with PretextMap and PretextSnapshot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.1.9+galaxy1" title="PretextMap tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PretextMap</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.9+galaxy1)</span> with the following parameters:
@@ -2555,7 +2555,7 @@ If you have only one pair of datasets, skip this step.</p>
 <p>Bandage is a tool to visualise <em>de novo</em> assembly graphs with connections. (<span class="citation"><a href="#Wick2015">Wick <i>et al.</i> 2015</a></span>)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-assembly-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate assembly graph</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-assembly-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate assembly graph</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.6+galaxy0" title="gfastats tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>gfastats</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.6+galaxy0)</span> with the following parameters:
@@ -2652,9 +2652,18 @@ If you have only one pair of datasets, skip this step.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/assembly/faqs/">FAQ page for the Assembly topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/assembly/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2917,7 +2926,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -3019,7 +3028,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

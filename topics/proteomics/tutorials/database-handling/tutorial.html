@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1601,7 +1601,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In this tutorial, we will explore <strong>Protein Database Downloader</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> for generating a protein search database. For this we will download the proteome of an organism of interest. In this tutorial, we will use a database of the human proteome.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-uploading-a-protein-search-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Uploading a protein search database</div>
+  <div class="box-title hands-on-title" id="hands-on-uploading-a-protein-search-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Uploading a protein search database</div>
 
   <ol>
     <li>
@@ -1648,7 +1648,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>A widely used database for common contaminants is the <strong>c</strong>ommon <strong>R</strong>epository of <strong>A</strong>dventitious <strong>P</strong>roteins (cRAP). When using samples generated in cell cultures, it is furthermore recommended to include <em>Mycoplasma</em> proteomes in the search database. <em>Mycoplasma</em> infections are very common in cell culture and often go unnoticed (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3463982/">Drexler and Uphoff, Cytotechnology, 2002</a>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-contaminant-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Contaminant databases</div>
+  <div class="box-title hands-on-title" id="hands-on-contaminant-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Contaminant databases</div>
   <ol>
     <li>Open <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/dbbuilder/dbbuilder/0.3.1" title="Protein Database Downloader tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Protein Database Downloader</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.3.1)</span></li>
     <li>Select <em>“Download from”</em>: <code class="language-plaintext highlighter-rouge">cRAP (contaminants)</code> and execute.</li>
@@ -1687,7 +1687,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-optional-hands-on-mycoplasma-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Optional Hands-On: _Mycoplasma_ databases</div>
+  <div class="box-title hands-on-title" id="hands-on-optional-hands-on-mycoplasma-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Optional Hands-On: _Mycoplasma_ databases</div>
   <p>90 - 95 % of mycoplasma infection in cell culture originates from the following species: <em>M. orale, M. hyorhinis, M. arginini, M. fermentans, M. hominis</em> and <em>A. laidlawii</em> (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3463982/">Drexler and Uphoff, Cytotechnology, 2002</a>).</p>
 
   <ol>
@@ -1708,7 +1708,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Depending on the search algorithm in use,  you might need to merge all FASTA entries (i.e. proteins of interest and contaminants) in a single database. Make sure to merge the tagged versions of your contaminant databases.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-merging-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Merging databases</div>
+  <div class="box-title hands-on-title" id="hands-on-merging-databases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Merging databases</div>
 
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0" title="FASTA Merge Files and Filter Unique Sequences tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FASTA Merge Files and Filter Unique Sequences</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.0)</span> on the main database and the tagged cRAP database.
@@ -1748,7 +1748,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The most common method of peptide and protein False Discovery Rate (FDR) calculation is by adding protein sequences that are not expected to be present in the sample. These are also called decoy protein sequences. This can be done by generating reverse sequences of the target protein entries and appending these protein entries to the protein database. Some search algoritmms use premade target-decoy protein sequences while others can generate a target-decoy protein sequence database from a target protein sequence database before using them for peptide spectral matching.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-a-decoy-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a Decoy Database</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-a-decoy-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating a Decoy Database</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/openms_decoydatabase/DecoyDatabase/2.6+galaxy0" title="DecoyDatabase tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>DecoyDatabase</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6+galaxy0)</span> on the merged database.</li>
     <li>Rename the final database to <code class="language-plaintext highlighter-rouge">human reviewed cRAP decoy database</code>, or <code class="language-plaintext highlighter-rouge">human reviewed cRAP mycoplasma decoy database</code></li>
@@ -1822,9 +1822,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/proteomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1980,12 +1989,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">1</td>
 			</tr>
 		   
@@ -2109,7 +2118,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

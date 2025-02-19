@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -70,7 +70,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Data Manipulation Olympics">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-19 11:42:08 +0000">
+<meta name="DC.date" content="2025-02-19 15:15:03 +0000">
 <meta name="DC.creator" content="Saskia Hiltemann">
 <meta name="DC.creator" content="Yongbin Li"><meta name="description" content="These lessons will help you get your feet in data science and give you tools to help you slice and dice your data into results.">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -189,8 +189,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-19 11:42:08 +0000",
-  "datePublished": "2025-02-19 11:42:08 +0000",
+  "dateModified": "2025-02-19 15:15:03 +0000",
+  "datePublished": "2025-02-19 15:15:03 +0000",
   "copyrightHolder": {
     "@type": "Organization",
     "http://purl.org/dc/terms/conformsTo": {
@@ -1121,7 +1121,7 @@ Also make sure to include many exercises (with answers) for your section!
 <p>Before we can do any manipulation, we will need some data. Let’s upload our table with Olympics results now.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get data</div>
+  <div class="box-title hands-on-title" id="hands-on-get-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get data</div>
 
   <ol>
     <li>
@@ -1216,7 +1216,7 @@ At the bottom is also a preview (peek) of the dataset and numbered columns</li>
 <p>Galaxy can convert these two formats into each other.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-convert-tabular-to-csv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert Tabular to CSV</div>
+  <div class="box-title hands-on-title" id="hands-on-convert-tabular-to-csv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Convert Tabular to CSV</div>
 
   <ol>
     <li>
@@ -1267,7 +1267,7 @@ This is because Galaxy is optimized to work with <code class="language-plaintext
 <p>When you upload a file to Galaxy, by default it will attempt to auto-detect the file format. This is very often correct, but some times you may need to manually set the datatype to the correct value.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-datatype-from-tabular-to-txt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change datatype from Tabular to TXT</div>
+  <div class="box-title hands-on-title" id="hands-on-change-datatype-from-tabular-to-txt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Change datatype from Tabular to TXT</div>
 
   <ol>
     <li>
@@ -1320,7 +1320,7 @@ it displays the data as-is, no longer arranging the view into neat columns.</p>
 <p>We have a lot of data in this file, but it is ordered by the athlete ID number, which is a somewhat arbitrary and meaningless number. But we can sort the rows in this file to something more convenient, for example alphabetically by name of the athlete, or chronologically by year of the Olympics.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sort-table-based-on-a-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Sort table based on a column</div>
+  <div class="box-title hands-on-title" id="hands-on-sort-table-based-on-a-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Sort table based on a column</div>
 
   <ol>
     <li>
@@ -1401,7 +1401,7 @@ data manipulation steps. Do future-you a favour and give datasets good names!</l
 <p>So we want to sort twice, first by year, and then within each year, we sort again alphabetically by name. The sort tool can do this!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sort-table-based-on-a-column-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Sort table based on a column</div>
+  <div class="box-title hands-on-title" id="hands-on-sort-table-based-on-a-column-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Sort table based on a column</div>
 
   <ol>
     <li>
@@ -1569,7 +1569,7 @@ and because we want the tallest on top, we will need to sort in <em>descending</
 <h2 id="filtering-based-on-column-contents">Filtering based on column contents</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-table-based-on-a-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter table based on a column</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-table-based-on-a-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter table based on a column</div>
 
   <p>We will filter the file to show only winter Olympics</p>
 
@@ -1778,7 +1778,7 @@ It is always useful to take a moment to think about the expected outcome; this m
 </blockquote>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-based-on-substring-occurrence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering Based on Substring Occurrence</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-based-on-substring-occurrence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering Based on Substring Occurrence</div>
 
   <p>Ok, great, now that you’ve got the hang of writing expressions for this tool, let’s filter the file for rows where column 11 contains “Summer”:</p>
 
@@ -1845,7 +1845,7 @@ It is always useful to take a moment to think about the expected outcome; this m
 </blockquote>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-rows-that-start-or-end-with-a-specific-value"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering Rows that Start or End with a Specific Value</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-rows-that-start-or-end-with-a-specific-value"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering Rows that Start or End with a Specific Value</div>
 
   <p>Ok, great, now that you’ve got the hang of writing expressions for this tool, let’s filter the file to find all athletes whose names start with “Liu”:</p>
 
@@ -1889,7 +1889,7 @@ It is always useful to take a moment to think about the expected outcome; this m
 <p>For example, if we want to find athletes with three-part names by counting spaces in the name column.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-based-on-the-count-of-substring-occurrences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering Based on the Count of Substring Occurrences</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-based-on-the-count-of-substring-occurrences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering Based on the Count of Substring Occurrences</div>
 
   <p>We want to filter the dataset to find athletes with three-part names.</p>
 
@@ -2041,7 +2041,7 @@ Five spaces means a 6-part name. For example Patricia Galvin de la Tour d’Auve
 <p>A common operation we might want to perform on tables of data, is simple counting. How many times does a certain value appear? For our dataset for instance, we might want to know how many countries participated in each Olympics, how many women, etc; any column that has categorical data that we can count. The tool <span class="tool" data-tool="Count1" title="**Count** occurrences of each record tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong><strong>Count</strong> occurrences of each record</strong></span> does exactly this.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-count-occurrences-of-values-in-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Count occurrences of values in columns</div>
+  <div class="box-title hands-on-title" id="hands-on-count-occurrences-of-values-in-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Count occurrences of values in columns</div>
 
   <p>Let’s start by simply counting how many different Olympic Games we have in our dataset, and how many times it appears (so how many participations there were each year)</p>
 
@@ -2148,7 +2148,7 @@ The file looks something like this:
 <p>To answer these types of questions we can use a slightly more advanced tool, called <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0+galaxy2" title="Datamash tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Datamash</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0+galaxy2)</span>. This tool can do a lot more than counting, but here we will show you how to use it to count in this way.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-counting-number-of-different-sports-per-olympic-games"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Counting number of different sports per Olympic Games</div>
+  <div class="box-title hands-on-title" id="hands-on-counting-number-of-different-sports-per-olympic-games"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Counting number of different sports per Olympic Games</div>
 
   <p>We will now determine how many different sport there were in each of the different Olympics</p>
 
@@ -2289,7 +2289,7 @@ tool will perform the sorting step before its calculation.</li>
 <p>We can use the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.1.0+galaxy2" title="Datamash tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Datamash</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0+galaxy2)</span> tool for this purpose.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-tallest-athlete-per-sport"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Tallest athlete per sport</div>
+  <div class="box-title hands-on-title" id="hands-on-tallest-athlete-per-sport"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Tallest athlete per sport</div>
 
   <p>We would like to answer the following question: <em>How tall was the tallest athlete of each sport?</em></p>
 
@@ -2361,7 +2361,7 @@ tool will perform the sorting step before its calculation.</li>
 <p>You may have noticed that we could also provide multiple columns to group on. If we do this, we can compute values for combinations of groups, such as sex and sport, to find e.g. the tallest woman in basketball or the shortest man per Olympics. There are also many more options for the computation we perform, so perhaps we are more interested not in the tallest athlete, but the average height. Let’s perform some of these slightly more advanced queries now.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-average-height-of-men-and-women-per-sport"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Average height of men and women per sport</div>
+  <div class="box-title hands-on-title" id="hands-on-average-height-of-men-and-women-per-sport"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Average height of men and women per sport</div>
 
   <p>The question we would like to answer here, is what is the average height for men and women per sport?</p>
 
@@ -2564,7 +2564,7 @@ be found in <a href="/training-material/faqs/galaxy/analysis_troubleshooting.htm
 <p>As an example, let’s calculate the age of each athlete at the time of participation, and add this as a new column to our dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-age-of-athletes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute age of athletes</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-age-of-athletes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute age of athletes</div>
 
   <ol>
     <li>Open the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.0" title="Compute on rows tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compute on rows</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0)</span> tool.
@@ -2757,7 +2757,7 @@ In his defense, he did argue it should not be used at individual levels, however
 <p>Let’s start with a simple example:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-and-replace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find and Replace</div>
+  <div class="box-title hands-on-title" id="hands-on-find-and-replace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find and Replace</div>
 
   <p>Our file uses a mix of <code class="language-plaintext highlighter-rouge">Athina</code> and <code class="language-plaintext highlighter-rouge">Athens</code> to indicate the Capital City of Greece in the <code class="language-plaintext highlighter-rouge">city</code> column.
 Let’s standardize this by replacing occurrences of <code class="language-plaintext highlighter-rouge">Athina</code> with <code class="language-plaintext highlighter-rouge">Athens</code>.</p>
@@ -2819,7 +2819,7 @@ If we had used the line replace tool, it would have replaced all occurrences of 
 <p>Different tools may expect different ways of handling missing data. So you may have to change your missing data from empty to <code class="language-plaintext highlighter-rouge">NA</code>, <code class="language-plaintext highlighter-rouge">NaN</code>, or something else, between analysis steps</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fill-empty-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fill empty cells</div>
+  <div class="box-title hands-on-title" id="hands-on-fill-empty-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fill empty cells</div>
 
   <p>We will now replace empty cells in the <code class="language-plaintext highlighter-rouge">birth_place</code> column, to use <code class="language-plaintext highlighter-rouge">NA</code> instead</p>
 
@@ -2881,7 +2881,7 @@ If we had used the line replace tool, it would have replaced all occurrences of 
 <p>Look at the <code class="language-plaintext highlighter-rouge">birth_day</code> column. It has values in a format like <code class="language-plaintext highlighter-rouge">12 December</code>. Suppose we have a tool that expects this data to be in the reverse format, <code class="language-plaintext highlighter-rouge">December 12</code>. The file is too big to change this manually in every column. But with regular expression tools we can make this replacement easily</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-reverse-birthday-format"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reverse Birthday Format</div>
+  <div class="box-title hands-on-title" id="hands-on-reverse-birthday-format"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Reverse Birthday Format</div>
 
   <p>We will now change the format in birthday column from <code class="language-plaintext highlighter-rouge">day month</code> to <code class="language-plaintext highlighter-rouge">month day</code></p>
 
@@ -2969,7 +2969,7 @@ and tweak your expression until it works.</li>
 <p>To do the reverse, adding one or more columns, we can use the <span class="tool" data-tool="Paste1" title="Paste tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Paste</strong></span> tool. This assumes we have the same number of rows in both files, already in the correct order. It is a very “dumb” tool that simple combines the two files next to each other.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove columns</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove columns</div>
 
   <p>Suppose we want to simplify our file a bit. All we want is file with 4 columns: athlete name, sport, olympic games, and medals.</p>
 
@@ -3082,7 +3082,7 @@ but on the other hand it is also a bit less error-prone (i.e. it is easier to mi
 <p>Let’s say we would like to create a list of all unique athletes (id and name).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtaining-list-of-unique-athletes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtaining list of unique athletes</div>
+  <div class="box-title hands-on-title" id="hands-on-obtaining-list-of-unique-athletes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Obtaining list of unique athletes</div>
 
   <p>First we will cut just the <code class="language-plaintext highlighter-rouge">athlete_id</code> and <code class="language-plaintext highlighter-rouge">name</code> columns from our dataset
 (please see the <a href="#removing-columns">Removing Columns</a> section for more info on this step)</p>
@@ -3160,7 +3160,7 @@ but on the other hand it is also a bit less error-prone (i.e. it is easier to mi
 <p>We obtained country information data from <a href="https://datahub.io/core/country-codes">DataHub</a>. More information about this file can be found in the description there. It has 56 columns with a wide variety of data about each country (from country codes, to capital city, languages spoken, etc)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get data</div>
+  <div class="box-title hands-on-title" id="hands-on-get-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get data</div>
 
   <ol>
     <li>
@@ -3202,7 +3202,7 @@ but on the other hand it is also a bit less error-prone (i.e. it is easier to mi
 <p>We would now like to take our Olympics dataset as the basis, and add columns to every row of this file with some information about the country. In order to join, we will need to have one column that is shared between the two files, on which we can match. The <code class="language-plaintext highlighter-rouge">NOC</code> column is perfect for this because it is a defined standard. Both files also contain a column with the country name in it, which is also a possible candidate to use for joining, but because it is less standardised, it is safer to use the NOC column. For example, if one file uses “Netherlands”, while the other uses “The Netherlands” to indicate the same country, the joining will fail for these rows. So always make sure the columns you join on are compatible!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-joining-country-information-to-the-olympics-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Joining country information to the Olympics data.</div>
+  <div class="box-title hands-on-title" id="hands-on-joining-country-information-to-the-olympics-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Joining country information to the Olympics data.</div>
 
   <ol>
     <li>Open <span class="tool" data-tool="join1" title="Join two Datasets side by side on a specified field tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Join two Datasets side by side on a specified field</strong></span>, and read the help text at the bottom
@@ -3257,7 +3257,7 @@ If you do not need all these columns, it could save you a lot of space to remove
 <p>First, let’s get this data for the 2022 Olympics</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-2022-olympics-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get 2022 Olympics data</div>
+  <div class="box-title hands-on-title" id="hands-on-get-2022-olympics-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get 2022 Olympics data</div>
 
   <ol>
     <li>
@@ -3299,7 +3299,7 @@ If you do not need all these columns, it could save you a lot of space to remove
 <p>Since this new dataset has the exact same structure (number and order of columns), we can simply add the lines from this file to the end of our existing <code class="language-plaintext highlighter-rouge">olympics.tsv</code> file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-2022-olympics-to-our-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding 2022 Olympics to our dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-2022-olympics-to-our-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding 2022 Olympics to our dataset</div>
 
   <p>First we need to remove the header line from the 2022 file (since these lines will be added to the end of our olympic dataset, we don’t want to have a second header line floating around in our file)</p>
 
@@ -3356,7 +3356,7 @@ If you do not need all these columns, it could save you a lot of space to remove
 <p>Tip: use this tool only if you want a separate file for <strong>all values</strong> in a column. For example, if you want a file for each Olympic games, use the split tool, but if you just want a file for one particular Olympics (say Tokyo 2020), you could simply use the <a href="#filtering">Filter</a> tools to extract the data from the full dataset, without making files for all the other Olympics as well.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-splitting-the-dataset-by-olympics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Splitting the dataset by Olympics</div>
+  <div class="box-title hands-on-title" id="hands-on-splitting-the-dataset-by-olympics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Splitting the dataset by Olympics</div>
 
   <p>We would like to create a separate file for each Olympic event.</p>
 
@@ -3762,9 +3762,16 @@ Please explore the tools for yourself, and check back with this tutorial often, 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3966,7 +3973,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -4068,7 +4075,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

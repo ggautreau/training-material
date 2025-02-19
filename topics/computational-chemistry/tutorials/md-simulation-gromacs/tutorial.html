@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1527,7 +1527,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>A prepared file is available via Zenodo. Alternatively, you can prepare the file yourself. Download a PDB structure file from the <a href="https://www.rcsb.org/">Protein Data Bank</a> and remove the unwanted atoms using the grep text processing tool. This simply removes the lines in the PDB file that refer to the unwanted atoms.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-an-initial-structure"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload an initial structure</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-an-initial-structure"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload an initial structure</div>
   <ol>
     <li>
       <p>First of all, create a new history and give it a name.</p>
@@ -1597,7 +1597,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>After these files have been generated, a further step is required to define a simulation box (unit cell) in which the simulation can take place. This can be done with the <strong>GROMACS structure configuration</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool. It also defines the unit cell ‘box’, centered on the structure. Options include box dimensions and shape; here, while a cuboidal box may be most intuitive, rhombic dodecahedron is the most efficient option, as it can contain the protein using the smallest volume, thus reducing the simulation resources devoted to the solvent.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-initial-processing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: perform initial processing</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-initial-processing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: perform initial processing</div>
 
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/gmx_setup/gmx_setup/2020.4+galaxy0" title="GROMACS initial setup tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GROMACS initial setup</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2020.4+galaxy0)</span> with the following parameters:
@@ -1643,7 +1643,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <figure id="figure-2" style="max-width: 90%;"><img src="/training-material/topics/computational-chemistry/images/solvated_protein.png" alt="Solvated protein. " width="1620" height="893" loading="lazy" /><a target="_blank" href="/training-material/topics/computational-chemistry/images/solvated_protein.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Solvated protein in a cubic unit cell</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-solvation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: solvation</div>
+  <div class="box-title hands-on-title" id="hands-on-solvation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: solvation</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/gmx_solvate/gmx_solvate/2020.4+galaxy1" title="GROMACS solvation and adding ions tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GROMACS solvation and adding ions</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2020.4+galaxy1)</span> with the following parameters:</p>
   <ul>
@@ -1664,7 +1664,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Here, and in the later steps, two options are presented under ‘Parameter input’. Firstly, the default setting, which we will use for this tutorial, requires options to be selected through the Galaxy interface. Alternatively, you can choose to upload an MDP (molecular dynamics parameters) file to define the simulation parameters. Using your own MDP file will allow greater customization, as not all parameters are implemented in Galaxy (yet); however, it requires a more advanced knowledge of GROMACS. Description of all parameters can be found <a href="http://manual.gromacs.org/documentation/2018/user-guide/mdp-options.html">here</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-energy-minimization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: energy minimization</div>
+  <div class="box-title hands-on-title" id="hands-on-energy-minimization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: energy minimization</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/gmx_em/gmx_em/2020.4+galaxy0" title="GROMACS energy minimization tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GROMACS energy minimization</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2020.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1695,7 +1695,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Firstly, we perform equilibration using classical NVT dynamics.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-nvt-dynamics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: NVT dynamics</div>
+  <div class="box-title hands-on-title" id="hands-on-nvt-dynamics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: NVT dynamics</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/gmx_sim/gmx_sim/2020.4+galaxy1" title="GROMACS simulation tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GROMACS simulation</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2020.4+galaxy1)</span> with the following parameters:</p>
   <ul>
@@ -1730,7 +1730,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Note that we can continue where the last simulation left off (with new parameters) by using the checkpoint (CPT) file saved at the end of the NVT simulation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-npt-dynamics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: NPT dynamics</div>
+  <div class="box-title hands-on-title" id="hands-on-npt-dynamics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: NPT dynamics</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/gmx_sim/gmx_sim/2020.4+galaxy1" title="GROMACS simulation tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GROMACS simulation</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2020.4+galaxy1)</span> with the following parameters:</p>
   <ul>
@@ -1775,7 +1775,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Now that equilibration is complete, we can release the position restraints. We are now finally ready to perform a production MD simulation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-production-simulation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Production simulation</div>
+  <div class="box-title hands-on-title" id="hands-on-production-simulation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Production simulation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/chemteam/gmx_sim/gmx_sim/2020.4+galaxy1" title="GROMACS simulation tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GROMACS simulation</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2020.4+galaxy1)</span> with the following parameters:
@@ -1861,9 +1861,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/computational-chemistry/faqs/">FAQ page for the Computational chemistry topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/computational-chemistry/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1962,8 +1971,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2132,12 +2141,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">8</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.125">1</td>
 			</tr>
 		   
@@ -2294,7 +2303,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

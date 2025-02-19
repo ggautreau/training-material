@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1381,7 +1381,7 @@ This Beacon will have administrative user rights to modify it, and an additional
 <p>We will use docker and docker-compose for this step. If you don’t have it installed, please follow this <a href="https://docs.docker.com/engine/install/">documentation</a> to install it</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-beacon-database-on-mongodb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create Beacon Database on MongoDB</div>
+  <div class="box-title hands-on-title" id="hands-on-create-beacon-database-on-mongodb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create Beacon Database on MongoDB</div>
   <ol>
     <li>Create a directory in your local environment and name it as <code class="language-plaintext highlighter-rouge">beacon</code>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>beacon
@@ -1535,7 +1535,7 @@ a148fb3db385   mongo-express   "/sbin/tini -- /dock…"   5 weeks ago   Restarti
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1599,7 +1599,7 @@ from the original tagged dataset.
 <p>This step is to preprocess the genomic variant data and convert it from VCF to JSON.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-convert-the-genomic-variants-vcf-file-into-json"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert the Genomic Variants VCF file into JSON</div>
+  <div class="box-title hands-on-title" id="hands-on-convert-the-genomic-variants-vcf-file-into-json"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Convert the Genomic Variants VCF file into JSON</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/cnv_vcf2json/cnv_vcf2json/1.1.0+galaxy0.1" title=" CNV VCF2JSON tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong> CNV VCF2JSON</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0+galaxy0.1)</span> on the structural variants VCF file
       <ul>
@@ -1675,7 +1675,7 @@ few examples. The same Biosample may be referred to by many instances (e.g., tec
 <figure id="figure-2" style="max-width: 90%;"><img src="../../images/phenopacket-schema-v2-overview.png" alt="v2.0 phenopacket schema. " width="2092" height="755" loading="lazy" /><a target="_blank" href="../../images/phenopacket-schema-v2-overview.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Overview of v2.0 of the schema optained from Phenopacket Schema Documentation</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-phenopacket-schema-json-file-from-metadata"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create Phenopacket Schema JSON file from Metadata</div>
+  <div class="box-title hands-on-title" id="hands-on-create-phenopacket-schema-json-file-from-metadata"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create Phenopacket Schema JSON file from Metadata</div>
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/cnv_phenopacket/cnv_phenopacket/1.0.2+galaxy0" title=" CNV Phenopacket tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong> CNV Phenopacket</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.2+galaxy0)</span> on the structural variants VCF file
       <ul>
@@ -1764,7 +1764,7 @@ of the individual described, facilitating insights into genetic variations and t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-data-into-beacon-mongodb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import data into Beacon MongoDB</div>
+  <div class="box-title hands-on-title" id="hands-on-import-data-into-beacon-mongodb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import data into Beacon MongoDB</div>
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/beacon2_import/beacon2_import/2.1.1+galaxy0" title="Beacon2 Import tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Beacon2 Import</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.1+galaxy0)</span> to import genomic variant file Beacon database
       <ul>
@@ -1804,7 +1804,7 @@ of the individual described, facilitating insights into genetic variations and t
 <p>We are looking to see if there is a deletion mutation in the gene <strong>located</strong> in <code class="language-plaintext highlighter-rouge">chromosome 1</code>, which <strong>starts</strong> at <code class="language-plaintext highlighter-rouge">58278107</code> and <strong>ends</strong> at <code class="language-plaintext highlighter-rouge">58279217</code>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-query-the-beacon-mongodb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Query the Beacon MongoDB</div>
+  <div class="box-title hands-on-title" id="hands-on-query-the-beacon-mongodb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Query the Beacon MongoDB</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/beacon2_cnv/beacon2_cnv/2.1.1+galaxy0" title="Beacon2 CNV tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Beacon2 CNV</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.1+galaxy0)</span> to perform a range query on Beacon <strong>genomicVariations</strong> collection
@@ -1914,9 +1914,18 @@ For more information go to the <a href="https://cnvar.org/resources/CNV-annotati
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/variant-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2065,7 +2074,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2147,7 +2156,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -729,7 +729,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The author recommends running this code in a ‘Jekyll Console’ context. Jekyll does not natively have support for a console, but <a href="https://github.com/jekyll/jekyll/pull/8164">there is an open Pull Request to add it</a>. We recommend you install this yourself to most easily run the following code. You can do that by:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-installing-jekyll-s-console"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Installing Jekyll's Console</div>
+  <div class="box-title hands-on-title" id="hands-on-installing-jekyll-s-console"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Installing Jekyll's Console</div>
   <ol>
     <li>View <a href="https://github.com/jekyll/jekyll/pull/8164">the open Pull Request to add it</a></li>
     <li>Download <code class="language-plaintext highlighter-rouge">lib/jekyll/commands/console.rb</code> to somewhere on your computer.</li>
@@ -737,13 +737,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Find out where jekyll is installed:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem which jekyll
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/user/galaxy/training-material/.direnv/ruby/gems/jekyll-4.3.3/lib/jekyll.rb
 </code></pre></div>        </div>
       </blockquote>
@@ -751,13 +751,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>That means the commands should be in:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> /home/user/galaxy/training-material/.direnv/ruby/gems/jekyll-4.3.3/lib/jekyll/commands/
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>build.rb  clean.rb  doctor.rb  help.rb  new.rb  new_theme.rb  serve  serve.rb
 </code></pre></div>        </div>
       </blockquote>
@@ -1350,9 +1350,16 @@ All of the subsequent steps can be run in a normal Ruby environment, but you mig
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/contributing/faqs/">FAQ page for the Contributing to the Galaxy Training Material topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/contributing/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1600,8 +1607,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -1717,7 +1724,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1799,7 +1806,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

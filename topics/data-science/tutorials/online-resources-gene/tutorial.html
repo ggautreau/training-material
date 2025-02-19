@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1229,7 +1229,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>To seach Human Opsins, we will start by checking the <a href="https://www.ncbi.nlm.nih.gov/genome/gdv">NCBI Genome Data Viewer</a>. The NCBI Genome Data Viewer (GDV) (<span class="citation"><a href="#rangwala2021accessing">Rangwala <i>et al.</i> 2021</a></span>) is a genome browser supporting the exploration and analysis of annotated eukaryotic genome assemblies. The GDV browser displays biological information mapped to a genome, including gene annotation, variation data, BLAST alignments, and experimental study data from the NCBI GEO and dbGaP databases. GDV release notes describe new features relating to this browser.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-ncbi-genome-data-viewer"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open NCBI Genome Data Viewer</div>
+  <div class="box-title hands-on-title" id="hands-on-open-ncbi-genome-data-viewer"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open NCBI Genome Data Viewer</div>
 
   <ol>
     <li>Open the NCBI Genome Data Viewer at <a href="https://www.ncbi.nlm.nih.gov/genome/gdv/">www.ncbi.nlm.nih.gov/genome/gdv</a></li>
@@ -1244,7 +1244,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The panel on the right reports multiple assemblies of the genome of interest, and a map of the chromosomes in that genome. We can search for Opsins there.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-search-for-opsinsopen-ncbi-genome-data-viewer"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Search for OpsinsOpen NCBI Genome Data Viewer</div>
+  <div class="box-title hands-on-title" id="hands-on-search-for-opsinsopen-ncbi-genome-data-viewer"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Search for OpsinsOpen NCBI Genome Data Viewer</div>
 
   <ol>
     <li>Type <code class="language-plaintext highlighter-rouge">opsin</code> in the <em>Search in genome</em> box</li>
@@ -1289,7 +1289,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Let’s now focus on one specific opsin, the gene OPN1LW.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-genome-browser-for-gene-opn1lw"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open Genome Browser for gene OPN1LW</div>
+  <div class="box-title hands-on-title" id="hands-on-open-genome-browser-for-gene-opn1lw"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open Genome Browser for gene OPN1LW</div>
 
   <ol>
     <li>Click on the blue arrow that appears in the results table when you hover your mouse on the OPN1LW row</li>
@@ -1349,7 +1349,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>But what is the sequence of this gene? There are multiple ways to retrieve this information, we will go through what we think is one of the most intituitive.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-genome-browser-for-gene-opn1lw-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open Genome Browser for gene OPN1LW</div>
+  <div class="box-title hands-on-title" id="hands-on-open-genome-browser-for-gene-opn1lw-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open Genome Browser for gene OPN1LW</div>
 
   <ol>
     <li>Click on the <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <em>Tools</em> section on the top right of the box showing the gene</li>
@@ -1364,7 +1364,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>This sequence box is not showing the entire gene at the moment, but a subsequence of it. You can move upstream and downstream the genetic code with the arrows <em>Prev Page</em> and <em>Next Page</em>, or start from a specific position with the <em>Go To Position</em> button. We suggest to start with the start of the coding part of the gene, which as we learned earlier is at position 154,144,243.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-go-to-a-specific-position-in-sequence-view"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Go to a specific position in Sequence View</div>
+  <div class="box-title hands-on-title" id="hands-on-go-to-a-specific-position-in-sequence-view"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Go to a specific position in Sequence View</div>
 
   <ol>
     <li>Click on <em>Go To Position</em></li>
@@ -1414,7 +1414,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Let’s now get an overview of the information we have (in the literature) about our gene, using the NCBI resources</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-go-to-a-specific-position-in-sequence-view-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Go to a specific position in Sequence View</div>
+  <div class="box-title hands-on-title" id="hands-on-go-to-a-specific-position-in-sequence-view-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Go to a specific position in Sequence View</div>
 
   <ol>
     <li>Open the NCBI search at <a href="https://www.ncbi.nlm.nih.gov/search/">www.ncbi.nlm.nih.gov/search</a></li>
@@ -1442,7 +1442,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-pubmed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open PubMed</div>
+  <div class="box-title hands-on-title" id="hands-on-open-pubmed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open PubMed</div>
 
   <ol>
     <li>Click on <em>PubMed</em> in the <em>Literature</em> box</li>
@@ -1472,7 +1472,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-back-to-ncbi-search-page"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Back to NCBI Search page</div>
+  <div class="box-title hands-on-title" id="hands-on-back-to-ncbi-search-page"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Back to NCBI Search page</div>
 
   <ol>
     <li>Go back the <a href="https://www.ncbi.nlm.nih.gov/search/all/?term=OPN1LW">NCBI Search page</a></li>
@@ -1485,7 +1485,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Let’s now focus on the <em>Clinical</em> box, and specially on <em>OMIM</em>. OMIM, the Online Mendeliam Inheritance in Man (and woman!), is a catalog of human genes and genetic disorders.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-omim"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open OMIM</div>
+  <div class="box-title hands-on-title" id="hands-on-open-omim"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open OMIM</div>
 
   <ol>
     <li>Click on <em>OMIM</em> in the <em>Clinical</em> box</li>
@@ -1496,7 +1496,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Each OMIM entry is a genetic disorder (here mostly types of colorblindness) associated with mutations in this gene.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-read-as-much-as-your-interest-dictates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read as much as your interest dictates</div>
+  <div class="box-title hands-on-title" id="hands-on-read-as-much-as-your-interest-dictates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read as much as your interest dictates</div>
 
   <ol>
     <li>Follow links to get more information about each entry</li>
@@ -1514,7 +1514,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>How do variations in the gene affect the protein product, and its functions? Let’s go back to the NIH page and investigate access the list of Single Nucleotide Polymorphisms (SNPs) that were detected by genetics studies in the gene.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-dbsnp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open dbSNP</div>
+  <div class="box-title hands-on-title" id="hands-on-open-dbsnp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open dbSNP</div>
 
   <ol>
     <li>Go back the <a href="https://www.ncbi.nlm.nih.gov/search/all/?term=OPN1LW">NCBI Search page</a></li>
@@ -1549,7 +1549,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Let’s investigate about more on the rs104894913 variant</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-learn-more-about-a-variant-dbsnp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Learn more about a variant dbSNP</div>
+  <div class="box-title hands-on-title" id="hands-on-learn-more-about-a-variant-dbsnp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Learn more about a variant dbSNP</div>
 
   <ol>
     <li>Click on <code class="language-plaintext highlighter-rouge">rs104894913</code> to open its <a href="https://www.ncbi.nlm.nih.gov/snp/rs104894913">dedicated page</a></li>
@@ -1600,7 +1600,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="protein">Protein</h2>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-protein"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open Protein</div>
+  <div class="box-title hands-on-title" id="hands-on-open-protein"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open Protein</div>
 
   <ol>
     <li>Go back the <a href="https://www.ncbi.nlm.nih.gov/search/all/?term=OPN1LW">NCBI Search page</a></li>
@@ -1615,7 +1615,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>This page presents once again some data that we are familiar with (e.g. distribution of the exons along the gene sequence).</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-download-the-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download the protein sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-download-the-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download the protein sequences</div>
 
   <ol>
     <li>Click on <em>Download Datasets</em></li>
@@ -1660,7 +1660,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>What could we do with these sequences that we just downloaded? Let’s assume that we just sequenced the transcripts that we isolated through an experiment - so we know the sequence of our entity of interest, but don’t know what it is. What we need to do in this case is to search the entire database of sequences known to science and match our unknown entity with an entry that has some annotation. Let’s do it.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-search-the-protein-sequence-against-all-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Search the protein sequence against all protein sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-search-the-protein-sequence-against-all-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Search the protein sequence against all protein sequences</div>
 
   <ol>
     <li>Open (with the simplest text editor you have installed) the <code class="language-plaintext highlighter-rouge">protein.faa</code> file that you just downloaded.</li>
@@ -1682,7 +1682,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <figure id="figure-7" style="max-width: 90%;"><img src="./images/BLASTresults.png" alt="Screenshot of BLAST results, one big header on top and the results listed as a table on bottom. " width="2550" height="1898" loading="lazy" /><a target="_blank" href="./images/BLASTresults.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 7</strong>:</span> BLAST results</figcaption></figure>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-graphic-summary-of-the-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Graphic Summary of the protein sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-graphic-summary-of-the-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Graphic Summary of the protein sequences</div>
 
   <ol>
     <li>Click on the tab <em>Graphic Summary</em></li>
@@ -1692,7 +1692,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We access a box containing lots of colored lines. Each line represents a hit from your blast search. If you click on a red line, the narrow box just above the box gives a brief description of the hit.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-descriptions-of-the-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Descriptions of the protein sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-descriptions-of-the-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Descriptions of the protein sequences</div>
 
   <ol>
     <li>Click on the tab <em>Descriptions</em></li>
@@ -1721,7 +1721,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The hits are for our red opsin in human but also other opsins in other primates. We could want that, for example if we wanted to use this data to build a phylogenetic tree. If we instead are pretty sure that our sequence of interest is human, we could also have filtered the search only in human sequences.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-filter-a-blast-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter a BLAST Search</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-a-blast-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter a BLAST Search</div>
 
   <ol>
     <li>Click on <em>Edit Search</em></li>
@@ -1769,7 +1769,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-dowloading"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Dowloading</div>
+  <div class="box-title hands-on-title" id="hands-on-dowloading"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Dowloading</div>
 
   <ol>
     <li>Click on <em>Descriptions</em> tab</li>
@@ -1784,7 +1784,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>While in the previous sections of this tutorial we extensively used the web interfaces of the tools (genomic viewers, quick literature scanning, reading annotations, etc.), this BLAST search is an example of a step that you could fully automate with Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-similarity-search-with-blast-in-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Similarity search with BLAST in Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-similarity-search-with-blast-in-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Similarity search with BLAST in Galaxy</div>
 
   <ol>
     <li>
@@ -1862,7 +1862,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The portal to visit to obtain all information about a protein is <a href="https://www.uniprot.org/">UniProt</a>. We can search it using a text search, or the gene or protein name. Let’s go for our usual <code class="language-plaintext highlighter-rouge">OPN1LW</code> keyword.</p>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-searching-on-uniprot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Searching on UniProt</div>
+  <div class="box-title hands-on-title" id="hands-on-searching-on-uniprot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Searching on UniProt</div>
 
   <ol>
     <li>Open  <a href="https://www.uniprot.org/">UniProt</a></li>
@@ -1879,7 +1879,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </ol>
 
 <blockquote class="hands-on">
-  <div class="box-title hands-on-title" id="hands-on-open-a-result-on-uniprot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open a result on UniProt</div>
+  <div class="box-title hands-on-title" id="hands-on-open-a-result-on-uniprot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open a result on UniProt</div>
 
   <ol>
     <li>Click on <code class="language-plaintext highlighter-rouge">P04000 · OPSR_HUMAN</code></li>
@@ -1943,9 +1943,16 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2113,7 +2120,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2195,7 +2202,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1323,7 +1323,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>For this training we will use a subset of the genome (chromosome 5) from four strains of <em>S. cerevisiae</em>. The GenBank annotated sequenced were produced using ‘funannotate predict annotation’ (Galaxy Version 1.8.9+galaxy2) on the nucleotide sequences sequences.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1371,7 +1371,7 @@ This program has historically made use of <a href="https://www.girinst.org/repba
 <p>RepeatMasker will only accept compact fasta headers. Before we can mask repetitive regions with RepeatMasker we must trim the NCBI long header (<code class="language-plaintext highlighter-rouge">BK006939.2 TPA_inf: Saccharomyces cerevisiae S288C chromosome V, complete sequence</code>) to leave only the accession number (<code class="language-plaintext highlighter-rouge">&gt;BK006939.2</code>) by using a regular expression.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mask-repetitive-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Mask repetitive sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-mask-repetitive-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Mask repetitive sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/1.1.2" title="Replace Text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.2)</span> with the following parameters:
@@ -1437,7 +1437,7 @@ This program has historically made use of <a href="https://www.girinst.org/repba
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-annotate-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Annotate genome</div>
+  <div class="box-title hands-on-title" id="hands-on-annotate-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Annotate genome</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/funannotate_predict/funannotate_predict/1.8.9+galaxy2" title="Funannotate predict annotation tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Funannotate predict annotation</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.9+galaxy2)</span> with the following parameters:
@@ -1494,7 +1494,7 @@ This program has historically made use of <a href="https://www.girinst.org/repba
 <p>So far, we have kept sequence files in a collection. Now we will combine all predicted proteins from all samples into one big multi-fasta file. Later, we will retrieve ortholog sequences from this file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-orfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract ORFs</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-orfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract ORFs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/glimmer_gbk_to_orf/glimmer_gbk_to_orf/3.02" title="Extract ORF tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Extract ORF</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.02)</span> with the following parameters:
@@ -1553,7 +1553,7 @@ The result file ‘orthology-groups’ contains one row per orthogroup and one c
 <p>Next, we select orthogroups where all the species are represented by only one protein, 1:1 single copy orthologs (a total of 4 proteins per orthogroup for this dataset).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-and-filter-orthologs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Find and filter orthologs</div>
+  <div class="box-title hands-on-title" id="hands-on-find-and-filter-orthologs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Find and filter orthologs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/proteinortho/proteinortho/6.0.14+galaxy2.9.1" title="Proteinortho tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Proteinortho</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 6.0.14+galaxy2.9.1)</span> with the following parameters:
@@ -1620,7 +1620,7 @@ Here we use it for quality control of the assembly and annotation produced above
 It outputs a proxy of completeness, duplication and fragmentation of the annotation (Busco can also be used to assess the completeness of a genome assembly).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-qc-with-busco"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QC with Busco</div>
+  <div class="box-title hands-on-title" id="hands-on-qc-with-busco"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QC with Busco</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -1670,7 +1670,7 @@ It outputs a proxy of completeness, duplication and fragmentation of the annotat
 <p>Next we extract 1:1 single copy orthologs and generate one multi fasta file per ortholog.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract protein sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-protein-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract protein sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/proteinortho_grab_proteins/proteinortho_grab_proteins/6.0.14+galaxy2.9.1" title="Proteinortho grab proteins tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Proteinortho grab proteins</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 6.0.14+galaxy2.9.1)</span> with the following parameters:
@@ -1696,7 +1696,7 @@ It outputs a proxy of completeness, duplication and fragmentation of the annotat
 <p>First we modify the headers of the multi-fasta file, such that only the sample name is retained. This is important for future conatenation of alignment into a supermatrix (see Maximum likelihood GTN training)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-align-orthologs-with-clustalw"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Align orthologs with ClustalW</div>
+  <div class="box-title hands-on-title" id="hands-on-align-orthologs-with-clustalw"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Align orthologs with ClustalW</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regex1/1.0.1" title="Regex Find And Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Regex Find And Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span> with the following parameters:
@@ -1795,9 +1795,16 @@ It outputs a proxy of completeness, duplication and fragmentation of the annotat
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1993,7 +2000,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2075,7 +2082,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

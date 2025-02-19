@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1950,13 +1950,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In Galaxy, <em>server</em> and <em>instance</em> are often used interchangeably. These terms basically mean that different regions have different Galaxy servers/instances, with slightly different tool installations and appearances. If you don’t have a specific server/instance in mind, we recommend registering at one of the main public servers/instances, detailed below.</p>
 
 <!--SNIPPET-->
-<blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-create-an-account-on-a-public-galaxy-instance"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-create-an-account-on-a-public-galaxy-instance" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I create an account on a public Galaxy instance?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>     <p>To create an account at any public Galaxy instance, choose your server from the available <a href="https://galaxyproject.org/use/">list of Galaxy Platforms</a>.</p>     <p>There are several UseGalaxy servers:</p>     <ul>       <li>         <p><a href="https://usegalaxy.org">UseGalaxy.org</a> (<strong>US</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org.au">UseGalaxy.org.au</a> (<strong>AU</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.eu">UseGalaxy.eu</a> (<strong>EU</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.fr">UseGalaxy.fr</a> (<strong>FR</strong>)</p>       </li>     </ul>   </li>   <li>     <p>Click on <strong>“Login or Register”</strong> in the masthead on the server.</p>     <p><img src="/training-material/faqs/galaxy/images/login_register.png" alt="Login or Register on the top panel" /></p>   </li>   <li>     <p>On the login page, find the <strong>Register here</strong> link and click on it.</p>   </li>   <li>     <p>Fill in the the registration form, then click on <strong>Create</strong>.</p>     <p>Your account should now get created, but will remain inactive until you verify the email address you provided in the registration form.</p>     <p><img src="/training-material/faqs/galaxy/images/unverified_account.png" alt="Banner warning about account with unverified email address" /></p>   </li>   <li>     <p>Check for a <strong>Confirmation Email</strong> in the email you used for account creation.</p>     <p>Missing? Check your <strong>Trash</strong> and <strong>Spam</strong> folders.</p>   </li>   <li>     <p>Click on the <strong>Email confirmation link</strong> to fully activate your account.</p>     <p><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> Delivery of the confimation email is blocked by your email provider or you mistyped the email address in the registration form?</p>     <p>Please do <strong>not</strong> register again, but follow the <a href="/training-material/faqs/galaxy/user_preferences_manage_information.html">instructions to change the email address</a> registered with your account! The confirmation email will be resent to your new address once you have changed it.</p>     <p>Trouble logging in later? Account email addresses and public names are caSe-sensiTive. Check your activation email for formats.</p>   </li> </ol> </blockquote>
+<blockquote class="tip">   <div class="box-title tip-title" id="tip-how-do-i-create-an-account-on-a-public-galaxy-instance"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-do-i-create-an-account-on-a-public-galaxy-instance" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How do I create an account on a public Galaxy instance?</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ol>   <li>     <p>To create an account at any public Galaxy instance, choose your server from the available <a href="https://galaxyproject.org/use/">list of Galaxy Platforms</a>.</p>     <p>There are several UseGalaxy servers:</p>     <ul>       <li>         <p><a href="https://usegalaxy.fr">UseGalaxy.fr</a> (<strong>FR</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org">UseGalaxy.org</a> (<strong>US</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.org.au">UseGalaxy.org.au</a> (<strong>AU</strong>)</p>       </li>       <li>         <p><a href="https://usegalaxy.eu">UseGalaxy.eu</a> (<strong>EU</strong>)</p>       </li>     </ul>   </li>   <li>     <p>Click on <strong>“Login or Register”</strong> in the masthead on the server.</p>     <p><img src="/training-material/faqs/galaxy/images/login_register.png" alt="Login or Register on the top panel" /></p>   </li>   <li>     <p>On the login page, find the <strong>Register here</strong> link and click on it.</p>   </li>   <li>     <p>Fill in the the registration form, then click on <strong>Create</strong>.</p>     <p>Your account should now get created, but will remain inactive until you verify the email address you provided in the registration form.</p>     <p><img src="/training-material/faqs/galaxy/images/unverified_account.png" alt="Banner warning about account with unverified email address" /></p>   </li>   <li>     <p>Check for a <strong>Confirmation Email</strong> in the email you used for account creation.</p>     <p>Missing? Check your <strong>Trash</strong> and <strong>Spam</strong> folders.</p>   </li>   <li>     <p>Click on the <strong>Email confirmation link</strong> to fully activate your account.</p>     <p><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> Delivery of the confimation email is blocked by your email provider or you mistyped the email address in the registration form?</p>     <p>Please do <strong>not</strong> register again, but follow the <a href="/training-material/faqs/galaxy/user_preferences_manage_information.html">instructions to change the email address</a> registered with your account! The confirmation email will be resent to your new address once you have changed it.</p>     <p>Trouble logging in later? Account email addresses and public names are caSe-sensiTive. Check your activation email for formats.</p>   </li> </ol> </blockquote>
 <p><!--END_SNIPPET--></p>
 
 <h2 id="what-does-galaxy-look-like">What does Galaxy look like?</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log in to Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Log in to Galaxy</div>
   <ol>
     <li>Open your favorite browser (Chrome, Safari, Edge or Firefox as your browser, not Internet Explorer!)</li>
     <li>Browse to your Galaxy instance</li>
@@ -1994,7 +1994,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Your “History” is in the panel at the right. It is a record of the actions you have taken.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-name-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Name history</div>
+  <div class="box-title hands-on-title" id="hands-on-name-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Name history</div>
   <ol>
     <li>Go to the <strong>History</strong> panel (on the right)</li>
     <li>
@@ -2025,7 +2025,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The “Activity Bar” can be seen on the left-most part of the interface.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-a-file-from-url"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload a file from URL</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-a-file-from-url"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload a file from URL</div>
   <ol>
     <li>
       <p>At the top of the <strong>Activity Bar</strong>, click the <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Upload</strong> activity</p>
@@ -2081,7 +2081,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>What is this file?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-view-the-dataset-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View the dataset content</div>
+  <div class="box-title hands-on-title" id="hands-on-view-the-dataset-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: View the dataset content</div>
   <ol>
     <li>
       <p>Click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the dataset name, to look at the file content</p>
@@ -2102,7 +2102,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>Let’s look at the quality of the reads in this file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-use-a-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Use a tool</div>
+  <div class="box-title hands-on-title" id="hands-on-use-a-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Use a tool</div>
   <ol>
     <li>Type <strong>FastQC</strong> in the tools panel search box (top)</li>
     <li>
@@ -2141,7 +2141,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-view-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View results</div>
+  <div class="box-title hands-on-title" id="hands-on-view-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: View results</div>
   <ul>
     <li>
       <p>Once it’s green, click the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> (eye) icon next to the “Webpage” output dataset.</p>
@@ -2177,7 +2177,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>Let’s run a tool to filter out lower-quality reads from our FASTQ file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-another-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run another tool</div>
+  <div class="box-title hands-on-title" id="hands-on-run-another-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run another tool</div>
   <ol>
     <li>Type <strong>Filter by quality</strong> in the tools panel search box (top)</li>
     <li>Click the tool <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.2+galaxy2" title="Filter by quality tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter by quality</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.2+galaxy2)</span></li>
@@ -2204,7 +2204,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>We could click on the eye icon to view the contents of this output file, but it will not be very informative - we will just see a list of reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-metadata-about-a-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get metadata about a file</div>
+  <div class="box-title hands-on-title" id="hands-on-get-metadata-about-a-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get metadata about a file</div>
   <ol>
     <li>
       <p>Click the dataset (around where its name is) in the History panel.</p>
@@ -2233,7 +2233,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>We can now try to filter our input reads to an even higher standard, and see how this changes the resulting output (an exploratory analysis). We will change the filter settings and re-run the tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-re-run-the-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Re-run the tool</div>
+  <div class="box-title hands-on-title" id="hands-on-re-run-the-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Re-run the tool</div>
   <ol>
     <li>
       <p>Click the <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> icon (<strong>Run Job Again</strong>) for the output dataset of <strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
@@ -2288,7 +2288,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>Galaxy makes this very easy with the <code class="language-plaintext highlighter-rouge">Extract workflow</code> option. This means any time you want to build a workflow, you can just perform the steps once manually, and then convert it to a workflow, so that next time it will be a lot less work to do the same analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract workflow</div>
 
   <ol>
     <li>
@@ -2330,7 +2330,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>Let’s create a new history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-new-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: New history</div>
+  <div class="box-title hands-on-title" id="hands-on-new-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: New history</div>
   <ol>
     <li>
       <p>Create a new history</p>
@@ -2357,7 +2357,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>Where is your first history, called “My Analysis”?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-view-histories-in-i-history-multiview-i"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View histories in <i>History Multiview</i></div>
+  <div class="box-title hands-on-title" id="hands-on-view-histories-in-i-history-multiview-i"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: View histories in <i>History Multiview</i></div>
   <p>One of the ways to view multiple histories at once in Galaxy is through the <strong>History Multiview</strong></p>
   <ol>
     <li>There are multiple ways to get to the multview:
@@ -2409,7 +2409,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>Now that we have built our workflow, let’s use it to re-create our small analysis in a single step. The same workflow could also be used on some new FASTQ data to quickly repeat the same analysis on different inputs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run workflow</div>
 
   <ol>
     <li>
@@ -2507,9 +2507,18 @@ the gray (preparing/queued) and yellow (running) states to become green (success
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/introduction/faqs/">FAQ page for the Introduction to Galaxy Analyses topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/introduction/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2721,32 +2730,32 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">534</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.16666666666666666">89</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.02247191011235955">12</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.009363295880149813">5</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.0018726591760299626">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.0056179775280898875">3</td>
 			</tr>
 		   
@@ -3520,7 +3529,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

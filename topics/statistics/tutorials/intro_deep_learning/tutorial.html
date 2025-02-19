@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1265,7 +1265,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The datasets used for this tutorial contain gene expression profiles of humans suffering from two types of cancer - <a href="https://en.wikipedia.org/wiki/Acute_myeloid_leukemia">acute myeloid leukemia (AML)</a> and <a href="https://en.wikipedia.org/wiki/Acute_lymphoblastic_leukemia">acute lymphoblastic leukemia (ALL)</a>. The tutorial aims to differentiate between these two cancer types, predicting a cancer type for each patient, by learning unique patterns in gene expression profiles of patients. The data is divided into 2 parts - one for training and another for prediction. Each part contains two datasets - one has the gene expression profiles and another has labels (the types of cancer). The size of the training data (<code class="language-plaintext highlighter-rouge">X_train</code>) is (38, 7129) where 38 is the number of patients and 7129 is the number of genes. The label dataset (<code class="language-plaintext highlighter-rouge">y_train</code>) is of size (38, 1) and contains the information of the type of cancer for each patient (label encoding is 0 for ALL and 1 for AML). The test dataset (<code class="language-plaintext highlighter-rouge">X_test</code>) is of size (34, 7129) and contains the same genes for 34 different patients. The label dataset for test is <code class="language-plaintext highlighter-rouge">y_test</code> and is of size (34, 1). The neural network, which will be formulated in the remaining part of the tutorial, learns on the training data and its labels to create a trained model. The prediction ability of this model is evaluated on the test data (which is unseen during training to get an unbiased estimate of prediction ability). These datasets are uploaded to Galaxy by following the steps defined below:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1312,7 +1312,7 @@ https://zenodo.org/record/3706539/files/y_train.tsv
 <h3 id="create-architecture-choose-layers">Create architecture: Choose layers</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-deep-learning-model-architecture-using-keras"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a deep learning model architecture using Keras</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-deep-learning-model-architecture-using-keras"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a deep learning model architecture using Keras</div>
 
   <ol>
     <li><strong>Create a deep learning model architecture using Keras</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1366,7 +1366,7 @@ https://zenodo.org/record/3706539/files/y_train.tsv
 <h3 id="create-architecture-add-training-parameters">Create architecture: Add training parameters</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-deep-learning-model-with-an-optimizer-loss-function-and-fit-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create deep learning model with an optimizer, loss function and fit parameters</div>
+  <div class="box-title hands-on-title" id="hands-on-create-deep-learning-model-with-an-optimizer-loss-function-and-fit-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create deep learning model with an optimizer, loss function and fit parameters</div>
 
   <ol>
     <li><strong>Create deep learning model with an optimizer, loss function and fit parameters</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1408,7 +1408,7 @@ https://zenodo.org/record/3706539/files/y_train.tsv
 <p>A neural network is trained on training data to learn hidden representations and mapping from features (genes) to both the types of cancer. As discussed earlier, the neural network minimises the error, which is given by the loss function, between actual and predicted labels while adjusting the weights of connections among neurons in multiple layers. Once the training is finished, the architecture and learned weights are saved. They are used to predict labels in test data. The deep learning training is set up as follows:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-deep-learning-training-and-evaluation-conduct-deep-training-and-evaluation-either-implicitly-or-explicitly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Deep learning training and evaluation conduct deep training and evaluation either implicitly or explicitly</div>
+  <div class="box-title hands-on-title" id="hands-on-deep-learning-training-and-evaluation-conduct-deep-training-and-evaluation-either-implicitly-or-explicitly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Deep learning training and evaluation conduct deep training and evaluation either implicitly or explicitly</div>
 
   <ol>
     <li><strong>Deep learning training and evaluation conduct deep training and evaluation</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1440,7 +1440,7 @@ https://zenodo.org/record/3706539/files/y_train.tsv
 <p>After training, the saved architecture (fitted estimator) and weights are used to predict labels for the test data. For each patient in the test data, a type of cancer is predicted using the trained model learned in the previous step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-model-prediction-predicts-on-new-data-using-a-preffited-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Model Prediction predicts on new data using a preffited model</div>
+  <div class="box-title hands-on-title" id="hands-on-model-prediction-predicts-on-new-data-using-a-preffited-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Model Prediction predicts on new data using a preffited model</div>
 
   <ol>
     <li><strong>Model Prediction predicts on new data using a preffited model</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1467,7 +1467,7 @@ https://zenodo.org/record/3706539/files/y_train.tsv
 <p>Visualising the results is important to ascertain the generalisation ability of the trained model on an unseen dataset. Using a dataset with the actual labels for the test data, the performance of the trained model is estimated by comparing the actual labels against the predicted labels using a confusion matrix plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-machine-learning-visualization-extension-includes-several-types-of-plotting-for-machine-learning"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Machine Learning Visualization Extension includes several types of plotting for machine learning</div>
+  <div class="box-title hands-on-title" id="hands-on-machine-learning-visualization-extension-includes-several-types-of-plotting-for-machine-learning"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Machine Learning Visualization Extension includes several types of plotting for machine learning</div>
 
   <ol>
     <li><strong>Machine Learning Visualization Extension includes several types of plotting for machine learning</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1538,9 +1538,18 @@ https://zenodo.org/record/3706539/files/y_train.tsv
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/statistics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1693,12 +1702,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.6666666666666666">2</td>
 			</tr>
 		   
@@ -1833,7 +1842,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1108,7 +1108,7 @@ The climate data is mainly represented in these three categories : <a href="http
 <h1 id="get-data">Get data</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1178,7 +1178,7 @@ For a multidimensional data consisting of latitudes and longitudes along with th
 <h2 id="netcdf-xarray-metadata-info">NetCDF xarray Metadata Info</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-netcdf-dataset-with-xarray-metadata-galaxy-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: netCDF dataset with xarray metadata Galaxy Tool</div>
+  <div class="box-title hands-on-title" id="hands-on-netcdf-dataset-with-xarray-metadata-galaxy-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: netCDF dataset with xarray metadata Galaxy Tool</div>
 
   <ol>
     <li>In the tools search for <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_metadata_info/xarray_metadata_info/0.15.1" title="NetCDF xarray Metadata Info tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray Metadata Info</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.15.1)</span> with the following parameter:
@@ -1215,7 +1215,7 @@ For a multidimensional data consisting of latitudes and longitudes along with th
     </ol>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+      <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xarray.Dataset <span class="o">{</span>
 dimensions:
 lat <span class="o">=</span> 721 <span class="p">;</span>
@@ -1261,7 +1261,7 @@ variables:
 <h2 id="sub-step-with-netcdf-xarray-coordinate-info">Sub-step with <strong>NetCDF xarray Coordinate Info</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-coordinate-information-with-xarray-coordinate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Get Coordinate information with xarray Coordinate</div>
+  <div class="box-title hands-on-title" id="hands-on-get-coordinate-information-with-xarray-coordinate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Get Coordinate information with xarray Coordinate</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_coords_info/xarray_coords_info/0.20.2+galaxy0" title="NetCDF xarray Coordinate Info tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray Coordinate Info</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.2+galaxy0)</span> with the following parameters:
@@ -1303,7 +1303,7 @@ variables:
     </ol>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+      <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0  2022-05-01 00:00:00
 1  2022-05-01 01:00:00
 2  2022-05-01 02:00:00
@@ -1325,7 +1325,7 @@ variables:
 <p>We have hourly data. In order to plot it, we must first extract the hours from the bigger dataset. This is done using the <code class="language-plaintext highlighter-rouge">seltimestep</code> and the <code class="language-plaintext highlighter-rouge">splithour</code> options available in the <code class="language-plaintext highlighter-rouge">CDO Operations</code> tool. <code class="language-plaintext highlighter-rouge">splithour</code> is used when we wish to plot more than an hour. Our main aim is to plot the last hour data on the last day present in the dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-defining-a-particular-time-range-using-seltimestep"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Defining a particular time range using seltimestep</div>
+  <div class="box-title hands-on-title" id="hands-on-defining-a-particular-time-range-using-seltimestep"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Defining a particular time range using seltimestep</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/climate/cdo_operations/cdo_operations/2.0.0+galaxy0" title="CDO Operations tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>CDO Operations</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0+galaxy0)</span> with the following parameters:
@@ -1375,7 +1375,7 @@ Suppose your selected range was <code class="language-plaintext highlighter-roug
 <h2 id="finding-the--netcdf-xarray-metadata-info">Finding the  <strong>NetCDF xarray Metadata Info</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-netcdf-dataset-with-xarray-metadata-galaxy-tool-for-the-hourly-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: netCDF dataset with xarray metadata Galaxy Tool for the hourly plots</div>
+  <div class="box-title hands-on-title" id="hands-on-netcdf-dataset-with-xarray-metadata-galaxy-tool-for-the-hourly-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: netCDF dataset with xarray metadata Galaxy Tool for the hourly plots</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_metadata_info/xarray_metadata_info/0.15.1" title="NetCDF xarray Metadata Info tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray Metadata Info</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.15.1)</span> with the following parameters:
@@ -1395,7 +1395,7 @@ Suppose your selected range was <code class="language-plaintext highlighter-roug
 <h1 id="map-plotting-using-netcdf-xarray-map-plotting">Map Plotting using <strong>NetCDF xarray map plotting</strong></h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-the-data-of-the-last-hour-of-the-day"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting the data of the last hour of the day</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-the-data-of-the-last-hour-of-the-day"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting the data of the last hour of the day</div>
   <p>The air temperatures corresponding to the 744th time step from the original netCDF file, namely <code class="language-plaintext highlighter-rouge">23:00:00</code> for 31st May 2022 is plotted here :</p>
 
   <ol>
@@ -1579,7 +1579,7 @@ The <strong>conic type</strong> is based on the concept of projecting the surfac
 
     <p>Plotting different projections using <strong>NetCDF xarray map plotting</strong>:</p>
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-plotting-the-major-projections-using-the-xarray-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting the major projections using the xarray tool.</div>
+      <div class="box-title hands-on-title" id="hands-on-plotting-the-major-projections-using-the-xarray-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting the major projections using the xarray tool.</div>
 
       <ol>
         <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_mapplot/xarray_mapplot/0.20.2+galaxy0" title="NetCDF xarray map plotting tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray map plotting</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.2+galaxy0)</span> with the following parameters:
@@ -1937,7 +1937,7 @@ Below is the complete list for reference.</p>
 
     <h2 id="plotting-different-colormaps-using-netcdf-xarray-map-plotting">Plotting different colormaps using <strong>NetCDF xarray map plotting</strong></h2>
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-plotting-the-major-colormaps-using-the-xarray-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting the major colormaps using the xarray tool.</div>
+      <div class="box-title hands-on-title" id="hands-on-plotting-the-major-colormaps-using-the-xarray-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting the major colormaps using the xarray tool.</div>
 
       <ol>
         <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_mapplot/xarray_mapplot/0.20.2+galaxy0" title="NetCDF xarray map plotting tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray map plotting</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.2+galaxy0)</span> with the following parameters:
@@ -2066,9 +2066,16 @@ Here you can see that all the projections we plotted above have been shown in a 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2228,7 +2235,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2310,7 +2317,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

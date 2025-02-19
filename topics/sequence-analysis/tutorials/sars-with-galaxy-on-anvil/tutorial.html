@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1624,7 +1624,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clone-the-workspace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Clone the Workspace</div>
+  <div class="box-title hands-on-title" id="hands-on-clone-the-workspace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Clone the Workspace</div>
 
   <ol>
     <li>Use a web browser to go to the AnVIL website. In the browser type: <code class="language-plaintext highlighter-rouge">anvil.terra.bio</code>. Log into AnVIL.</li>
@@ -1659,7 +1659,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clone-the-workspace-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Clone the Workspace</div>
+  <div class="box-title hands-on-title" id="hands-on-clone-the-workspace-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Clone the Workspace</div>
 
   <ol>
     <li>In your new Workspace, click on the “ANALYSES” tab. Next, click on “START”. You should see a popup window on the right side of the screen. 
@@ -1705,7 +1705,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Luckily, we linked to the original data when we cloned our Workspace! We have three files we will need for our activity. These are (1) the reference genome for SARS-CoV-2, and both forward (2) and reverse (3) reads for our sample. Our sample has two sets of reads because the scientists who collected it used paired-end sequencing. The reference genome ends in “.fasta” because it has already been cleaned up by scientists. The sample we are looking at ends in “.fastq” because it is raw data from the sequencer.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-data-from-the-workspace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import Data from the Workspace</div>
+  <div class="box-title hands-on-title" id="hands-on-import-data-from-the-workspace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import Data from the Workspace</div>
 
   <ol>
     <li>Click on Upload Data in the Tools pane.</li>
@@ -1754,7 +1754,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>FastQC is a tool which aims to provide simple quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a set of analyses which you can use to get a quick impression of whether your data has any problems of which you should be aware before doing any further analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-determine-the-quality-of-the-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Determine the Quality of the Samples</div>
+  <div class="box-title hands-on-title" id="hands-on-determine-the-quality-of-the-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Determine the Quality of the Samples</div>
 
   <ol>
     <li>Find <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> in the GENOMIC FILE MANIPULATION: FASTQ Quality Control tool folder.
@@ -1812,7 +1812,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-align-to-the-reference-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Align to the Reference Dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-align-to-the-reference-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Align to the Reference Dataset</div>
 
   <ol>
     <li>Go to GENOMICS ANALYSIS and expand the Mapping menu. Select <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2" title="Map with BWA-MEM tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with BWA-MEM</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.17.2)</span>. This program will align your reads to your SARS reference genome. Some of our reads are &gt;100 base pairs so we will use the MEM option.
@@ -1855,7 +1855,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We have aligned our data but it is currently a table of where the reads align. This is hard to read, so we will use <a href="https://jbrowse.org/jbrowse1.html">JBrowse</a> to view the data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-reference-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Reference Data</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-reference-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Reference Data</div>
 
   <ol>
     <li>Scroll down in the Tools menu to STATISTICS AND VISUALIZATION. Under “Graph/Display Data”, select <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.9+galaxy0" title="JBrowse tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.9+galaxy0)</span>.
@@ -1877,7 +1877,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>This is interesting, but it doesn’t let us compare the genome to the sample we have. We suspect there may be some differences that indicate our sample is the delta variant.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-aligned-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Aligned Data</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-aligned-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Aligned Data</div>
 
   <ol>
     <li>Scroll down in the Tools menu to STATISTICS AND VISUALIZATION. Under “Graph/Display Data”, select <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.9+galaxy0" title="JBrowse tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.9+galaxy0)</span>.
@@ -1899,7 +1899,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>You should see a new JBrowse item appear in your history. Click the eye icon <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> to open JBrowse. Make sure that all boxes are checked on the left side: “Available Tracks”. The tracks will show up in the order that you click on them.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-aligned-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Aligned Data</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-aligned-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Aligned Data</div>
 
   <ol>
     <li>Select the tracks from the BWA-MEM tool run.
@@ -1948,7 +1948,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>It’s a good idea to export your “History” so that your collaborators can see what you did.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-export-history-to-workspace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Export History to Workspace</div>
+  <div class="box-title hands-on-title" id="hands-on-export-history-to-workspace"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Export History to Workspace</div>
 
   <ol>
     <li>Click on the History Menu <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> and click on “Export History to File”.
@@ -1967,7 +1967,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Once you are done with the activity, you’ll need to shut down your Galaxy cloud environment. This frees up the cloud resources for others and minimizes computing cost. The following steps will delete your work, so make sure you are completely finished at this point. Otherwise, you will have to repeat your work from the previous steps.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-shut-down-galaxy-in-anvil"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Shut Down Galaxy in AnVIL</div>
+  <div class="box-title hands-on-title" id="hands-on-shut-down-galaxy-in-anvil"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Shut Down Galaxy in AnVIL</div>
   <ol>
     <li>Return to AnVIL, and find the Galaxy logo that shows your cloud environment is running. Click on the Galaxy logo.
   <a href="../../images/sars-with-galaxy-in-anvil/19-galaxy-env.png" rel="noopener noreferrer"><img src="../../images/sars-with-galaxy-in-anvil/19-galaxy-env.png" alt="Screenshot of the Workspace menu. The currently running Galaxy cloud environment logo on the right of the page is highlighted." width="2653" height="1691" loading="lazy" /></a></li>
@@ -2022,9 +2022,16 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/sequence-analysis/faqs/">FAQ page for the Sequence analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/sequence-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2220,7 +2227,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2302,7 +2309,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

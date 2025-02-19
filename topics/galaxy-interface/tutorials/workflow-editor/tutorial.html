@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1379,7 +1379,7 @@ currently workflow inputs, tools, and workflows.</p>
 <h2 id="creating-a-new-workflow">Creating a new workflow</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-new-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a new workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-new-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a new workflow</div>
 
   <ul>
     <li>Click on <strong>Workflow</strong> in the top panel of the Galaxy page</li>
@@ -1405,7 +1405,7 @@ the editor.</p>
 add more advanced features.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-insert-a-dataset-input"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Insert a dataset input</div>
+  <div class="box-title hands-on-title" id="hands-on-insert-a-dataset-input"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Insert a dataset input</div>
 
   <ol>
     <li>Expand the “Inputs” section in the tool panel and click on “Input dataset” to create a new dataset input</li>
@@ -1440,7 +1440,7 @@ for a detailed description of how to use these.</p>
 <p>We’re now ready to add a first tool and connect it to our input dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-b-tac-reverse-a-file-reverse-cat-b-to-your-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add <b>tac reverse a file (reverse cat)</b> to your workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-add-b-tac-reverse-a-file-reverse-cat-b-to-your-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add <b>tac reverse a file (reverse cat)</b> to your workflow</div>
 
   <ol>
     <li>Find <strong>tac reverse a file (reverse cat)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> in the tool panel and click on it</li>
@@ -1490,7 +1490,7 @@ just mention the tool and parameters to insert, since the procedure is always
 the same.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-b-select-first-lines-from-a-dataset-b-to-your-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add <b>Select first lines from a dataset</b> to your workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-add-b-select-first-lines-from-a-dataset-b-to-your-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add <b>Select first lines from a dataset</b> to your workflow</div>
 
   <ol>
     <li><strong>Select first lines from a dataset</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
@@ -1509,7 +1509,7 @@ then output the first line of the resulting dataset. Now we’re ready to upload
 a test dataset and run our workflow.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running the workflow</div>
 
   <ol>
     <li>Return to the analysis page by clicking the Home button <i class="fas fa-home" aria-hidden="true"></i><span class="visually-hidden">galaxy-home</span> (or <em>Analyze Data</em> on older versions of Galaxy) on the top</li>
@@ -1562,7 +1562,7 @@ to change a text output to tabular or gff/bed for instance.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-editing-our-simple-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Editing our simple workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-editing-our-simple-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Editing our simple workflow</div>
 
   <ol>
     <li>Open our simple workflow in the Workflow Editor</li>
@@ -1590,7 +1590,7 @@ to change a text output to tabular or gff/bed for instance.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running the workflow</div>
 
   <ol>
     <li>Return to the analysis page by clicking the Home button <i class="fas fa-home" aria-hidden="true"></i><span class="visually-hidden">galaxy-home</span> (or <em>Analyze Data</em> on older versions of Galaxy) on the top</li>
@@ -1630,7 +1630,7 @@ and update closely related workflows.</p>
 of each workflow together.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-embedding-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Embedding a workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-embedding-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Embedding a workflow</div>
 
   <ol>
     <li>Create a new, empty workflow</li>
@@ -1730,9 +1730,18 @@ make your analyses more efficient and less manual!</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/galaxy-interface/faqs/">FAQ page for the Using Galaxy and Managing your Data topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/galaxy-interface/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1865,17 +1874,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.75">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.25">1</td>
 			</tr>
 		   
@@ -2016,7 +2025,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

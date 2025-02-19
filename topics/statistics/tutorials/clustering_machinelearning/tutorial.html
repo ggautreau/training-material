@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1439,7 +1439,7 @@ For more history of this dataset read here <a href="https://en.wikipedia.org/wik
 <p>At the first step, we should upload the iris dataset and two other datasets which will be used at the end of the tutorial.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1505,7 +1505,7 @@ https://zenodo.org/record/3813447/files/moon.csv
 <strong>Hint</strong>: Please find the <code class="language-plaintext highlighter-rouge">Numeric Clustering</code> tool in the <code class="language-plaintext highlighter-rouge">Statistics</code> tool section.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hierarchical-clustering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hierarchical clustering</div>
+  <div class="box-title hands-on-title" id="hands-on-hierarchical-clustering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hierarchical clustering</div>
 
   <ol>
     <li><strong>Numeric Clustering</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following clustering parameters:
@@ -1543,7 +1543,7 @@ https://zenodo.org/record/3813447/files/moon.csv
 Let’s visualize the clustering results to see how groups have been built. <strong>Hint</strong>: Please find the <code class="language-plaintext highlighter-rouge">Scatterplot with ggplot2</code> tool in the <code class="language-plaintext highlighter-rouge">Graph/Display data</code> tool section.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-hierarchical-clustering-result"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize hierarchical clustering result</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-hierarchical-clustering-result"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize hierarchical clustering result</div>
 
   <ol>
     <li><strong>Scatterplot with ggplot2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1612,7 +1612,7 @@ Let’s visualize the clustering results to see how groups have been built. <str
 <p>The parameters that minimize the cost function are learned through an iterative process of assigning data points to clusters and then moving the clusters. A restriction for the k-means algorithm is that the dataset should be continuous.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-k-means-clustering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: K-means clustering</div>
+  <div class="box-title hands-on-title" id="hands-on-k-means-clustering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: K-means clustering</div>
 
   <ol>
     <li><strong>Numeric Clustering</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following clustering parameters:
@@ -1643,7 +1643,7 @@ Let’s visualize the clustering results to see how groups have been built. <str
 <h3 id="visualize-k-means-clustering">Visualize k-means clustering</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-k-means-clustering-result"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize k-means clustering result</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-k-means-clustering-result"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize k-means clustering result</div>
 
   <ol>
     <li><strong>Scatterplot with ggplot2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1730,7 +1730,7 @@ additional clusters beyond the fourth have little value.</p>
 <p>DBSCAN (Density-based spatial clustering of applications with noise) is a popular clustering algorithm and finds clusters as regions of high density followed by regions of low density. Clusters found by DBSCAN can be of any shape, as opposed to k-means which works well if the clusters are spherical in shape. The central component of the DBSCAN algorithm are the core samples which are present in the areas of high density. A cluster is, therefore, a set of core samples close to one other (measured by some distance measure) and a set of non-core samples that are close to core samples (but are not core samples themselves). There are two important parameters in DBSCAN algorithm - <code class="language-plaintext highlighter-rouge">min_samples</code> is the number of samples in a neighborhood for a point to be considered as a core point and <code class="language-plaintext highlighter-rouge">eps</code> is the maximum distance (between two samples) for a sample to be considered as in the neighborhood of the other. Higher the value of <code class="language-plaintext highlighter-rouge">min_samples</code> or lower the value of eps indicate higher density necessary to form a cluster. DBSCAN does not require one to specify the number of clusters in the data a priori, as opposed to k-means.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-dbscan-clustering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: DBSCAN clustering</div>
+  <div class="box-title hands-on-title" id="hands-on-dbscan-clustering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: DBSCAN clustering</div>
 
   <ol>
     <li><strong>Numeric Clustering</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following clustering parameters:
@@ -1756,7 +1756,7 @@ additional clusters beyond the fourth have little value.</p>
 <h3 id="visualise-dbscan-clustering">Visualise DBSCAN clustering</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-dbscan-clustering-result"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize DBSCAN clustering result</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-dbscan-clustering-result"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize DBSCAN clustering result</div>
 
   <ol>
     <li><strong>Scatterplot with ggplot2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1821,7 +1821,7 @@ It increases as the quality of the clusters increase; it is large for compact cl
 <h2 id="visualise-datasets">Visualise datasets</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-scatter-plot-of-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize scatter plot of data</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-scatter-plot-of-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize scatter plot of data</div>
 
   <ol>
     <li>
@@ -1859,7 +1859,7 @@ It increases as the quality of the clusters increase; it is large for compact cl
 <p>Now you can find clusters in these datasets using the aforementioned algorithms.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hierarchical-clustering-of-circles-and-moon-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hierarchical clustering of circles and moon datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-hierarchical-clustering-of-circles-and-moon-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hierarchical clustering of circles and moon datasets</div>
 
   <ol>
     <li>
@@ -1897,7 +1897,7 @@ It increases as the quality of the clusters increase; it is large for compact cl
 <p>Then, you can visualize the clustering results using the following steps:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-hierarchical-clustering-result-on-circles-and-moon-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize hierarchical clustering result on circles and moon datasets.</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-hierarchical-clustering-result-on-circles-and-moon-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize hierarchical clustering result on circles and moon datasets.</div>
 
   <ol>
     <li>
@@ -1993,9 +1993,18 @@ It increases as the quality of the clusters increase; it is large for compact cl
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/statistics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2136,7 +2145,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">8</td>
 			</tr>
 		   
@@ -2266,7 +2275,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

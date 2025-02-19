@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1952,7 +1952,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>I see, you can’t wait to get DAC access. To download the data from zenodo for this tutorial you can follow the step below.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-retrieve-data-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve data from zenodo</div>
+    <div class="box-title hands-on-title" id="hands-on-retrieve-data-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve data from zenodo</div>
 
     <ol>
       <li>Import the 3 VCFs from <a href="https://zenodo.org/record/6483454">Zenodo</a> to Galaxy <strong>as a collection</strong>.
@@ -1990,7 +1990,7 @@ https://zenodo.org/record/6483454/files/Case5_M.17.g.vcf.gz
   <p>Our test data is stored in EGA, which can be easily accessed using the EGA Download Client. Our specific EGA dataset accession ID is: “EGAD00001008392”. However, before you can access this data you need to request DAC access to this dataset. This can be requested by emailing to <a href="mailto:helpdesk@ega-archive.org">helpdesk@ega-archive.org</a>, don’t forget to mention the dataset ID! When the EGA grants you access it will create an account for you, if you don’t have it already. Next, you should link your account to your Galaxy account by going to the homepage on Galaxy and at the top bar click <strong>User &gt; Preferences &gt; Manage Information</strong>. Now add your email and password of your (new) EGA account under: <strong>Your EGA (european Genome Archive) account</strong>. After that you can check if you can log in and see if you have access to the dataset.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-check-log-in-and-authorized-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check log-in and authorized datasets</div>
+    <div class="box-title hands-on-title" id="hands-on-check-log-in-and-authorized-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check log-in and authorized datasets</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ega_download_client/pyega3/5.0.2+galaxy0" title="EGA Download Client tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>EGA Download Client</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0.2+galaxy0)</span> with the following parameters:
@@ -2012,7 +2012,7 @@ https://zenodo.org/record/6483454/files/Case5_M.17.g.vcf.gz
   <p>When you have access to the EGA dataset, you can download all the needed files. However, the EGA dataset contains many different filetypes and cases, but we are only interested in the VCFs from case 5 and, to reduce execution time, the variants on chromosome 17. To be able to donwload these files we first need to request the list of files from which we can download. Make sure to use <strong>version 4+</strong> of the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ega_download_client/pyega3/5.0.2+galaxy0" title="EGA Download Client tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>EGA Download Client</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0.2+galaxy0)</span>.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-request-list-of-files-in-the-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Request list of files in the dataset</div>
+    <div class="box-title hands-on-title" id="hands-on-request-list-of-files-in-the-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Request list of files in the dataset</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ega_download_client/pyega3/5.0.2+galaxy0" title="EGA Download Client tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>EGA Download Client</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0.2+galaxy0)</span> <strong>version 4+</strong> with the following parameters:
@@ -2033,7 +2033,7 @@ https://zenodo.org/record/6483454/files/Case5_M.17.g.vcf.gz
   <p>Now that we have listed all the files, we need to filter out the files we actually need. We can do this by using a simple regular expression or regex. With regex it will be easy to find or replace patterns within a textfile.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-filter-out-vcfs-from-list-of-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter out VCFs from list of files</div>
+    <div class="box-title hands-on-title" id="hands-on-filter-out-vcfs-from-list-of-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter out VCFs from list of files</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/1.1.1" title="Search in textfiles tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Search in textfiles</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.1)</span> with the following parameters:
@@ -2056,7 +2056,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 </code></pre></div>  </div>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-download-listed-vcfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download listed VCFs</div>
+    <div class="box-title hands-on-title" id="hands-on-download-listed-vcfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download listed VCFs</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ega_download_client/pyega3/5.0.2+galaxy0" title="EGA Download Client tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>EGA Download Client</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0.2+galaxy0)</span> with the following parameters:
@@ -2083,7 +2083,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
   <p>Finally, we need to decompress our bgzipped VCFs, since we will use a text manipulation tool as a next step to process the VCFs. To decompress the vcf we will use a built-in tool from Galaxy, which can be accessed by manipulating the file itself in a similair fashion as changing its detected type.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-convert-compressed-vcf-to-uncompressed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert compressed vcf to uncompressed.</div>
+    <div class="box-title hands-on-title" id="hands-on-convert-compressed-vcf-to-uncompressed"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Convert compressed vcf to uncompressed.</div>
 
     <p>Open the collection of VCFs and execute the following steps for each VCF.</p>
 
@@ -2119,7 +2119,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 <p>Firstly, our next tool has some assumptions about our input VCFs. The tool expects the chromosome numbers to start with a prefix <code class="language-plaintext highlighter-rouge">chr</code>. Our VCFs only use the chromosome numbers however, the VCFs just use the chromosome numbers. This is due to a difference in reference genome used when creating the VCFs. To change the prefix in the VCFs we will use regex again.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-chr-prefix-using-regex"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add chr prefix using regex</div>
+  <div class="box-title hands-on-title" id="hands-on-add-chr-prefix-using-regex"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add chr prefix using regex</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regexColumn1/1.0.1" title="Column Regex Find And Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Column Regex Find And Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span> with the following parameters:
@@ -2178,7 +2178,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 <figure id="figure-2" style="max-width: 90%;"><img src="../../images/trio-analysis/variant_normalization.png" alt="Image of different representations of the same variant. On the top the variant is shown in the reference sequence GGGCACACACAGGG and the alternate sequence GGGCACACAGGG. Underneath the image is divided into two panels, the left panel aligns each allele to the reference genome, and the right panel represents the variants in a VCF with the columns POS (position), REF (reference), and ALT (alternate). From top to bottom it shows that A is not left-aligned with the reference CAC and the alternate C  at position 6, B is neither left-aligned nor parsimonious with reference GCACA and alternate GCA at position 3, C is not parsimonious with reference GGCA and alternate GG at position 2, and D is normalized with reference GCA and the alternate position G at position 3." width="700" height="525" loading="lazy" /><a target="_blank" href="../../images/trio-analysis/variant_normalization.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> The different ways to represent INDELs. (Source: https://academic.oup.com/bioinformatics/article/31/13/2202/196142)</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-normalize-vcf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Normalize VCF</div>
+  <div class="box-title hands-on-title" id="hands-on-normalize-vcf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Normalize VCF</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/1.9+galaxy1" title="bcftools norm tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bcftools norm</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9+galaxy1)</span> with the following parameters:
@@ -2215,7 +2215,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 <p>After normalizing the VCFs we will filter out the variants with a NON_REF tag in the ALT column, the column which represents the mutated nucleotide(s). According to the header, these sites correspond to: “any possible alternative allele at this location”. So these sites are a sort of placeholders for potential variants. However we are not interested in this kind of variants and they slow our analysis down quite a lot, so we will filter them out.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-out-non-ref-sites"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter out NON_REF sites</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-out-non-ref-sites"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter out NON_REF sites</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong></span> with the following parameters:
@@ -2251,7 +2251,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 <p>Finally, we can merge the 3 separate files of the parents and patient into a single VCF. This will put overlapping variants on the same line by aligning the samples format column. If a sample misses a certain variant then on the line of that variant the sample’s format information will look like this: <code class="language-plaintext highlighter-rouge">./.:.:.:.:.:.</code>. This makes it easier to find shared and missing variants between the parents and ofspring. A tool which can do this is the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bcftools_merge/bcftools_merge/1.10" title="bcftools merge tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bcftools merge</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10)</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-merge-vcfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Merge VCFs</div>
+  <div class="box-title hands-on-title" id="hands-on-merge-vcfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Merge VCFs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bcftools_merge/bcftools_merge/1.10" title="bcftools merge tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bcftools merge</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.10)</span> with the following parameters:
@@ -2287,7 +2287,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 <p>Running SnpEff will produce the annotated VCF and an HTML summary file. The annotations are added to the INFO column in the VCF and the added INFO IDs (<code class="language-plaintext highlighter-rouge">ANN</code>, <code class="language-plaintext highlighter-rouge">LOF</code>, and <code class="language-plaintext highlighter-rouge">NMD</code>) are explained in the header. The summary files include the HTML stats file which contains general metrics, such as the number of annotated variants, the impact of all the variants, and much more.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-annotation-with-snpeff"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Annotation with SnpEff</div>
+  <div class="box-title hands-on-title" id="hands-on-annotation-with-snpeff"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Annotation with SnpEff</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1" title="SnpEff eff: tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnpEff eff:</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.3+T.galaxy1)</span> with the following parameters:
@@ -2329,7 +2329,7 @@ EGAF00005573882	1	42856357	14b53924d1492e28ad6078ceb8cfdbc7	Case5_F.17.g.vcf.gz
 <p>Now that we have finished running all the tools which require the VCF format as input, they can be converted back to the <strong>vcf_bgzip</strong> format. To compress the VCF we will use a built-in tool from Galaxy, which can be accessed by manipulating the file itself in a similair fashion as changing its detected type.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compress-vcf-back-to-vcf-bgzip"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Compress **vcf** back to **vcf_bgzip**</div>
+  <div class="box-title hands-on-title" id="hands-on-compress-vcf-back-to-vcf-bgzip"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Compress **vcf** back to **vcf_bgzip**</div>
 
   <p>Execute the following steps for the SnpEff VCF.</p>
 
@@ -2369,7 +2369,7 @@ All these steps are performed by the <span class="tool" data-tool="toolshed.g2.b
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-the-ped-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating the PED file</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-the-ped-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating the PED file</div>
 
   <ol>
     <li>Upload the pedigree file from below.
@@ -2393,7 +2393,7 @@ FAM0001822	Case6C	Case6F	Case6M	2	2
 <p>Now we can transform the subsampled VCF and PED file into a GEMINI database. Note that this can take a very long time depending on the size of the VCF. In our case it should take around 30-40 minutes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-transform-vcf-and-ped-files-into-a-gemini-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Transform VCF and PED files into a GEMINI database</div>
+  <div class="box-title hands-on-title" id="hands-on-transform-vcf-and-ped-files-into-a-gemini-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Transform VCF and PED files into a GEMINI database</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gemini_load/gemini_load/0.20.1+galaxy2" title="GEMINI load tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GEMINI load</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.1+galaxy2)</span> with the following parameters:
@@ -2439,7 +2439,7 @@ FAM0001822	Case6C	Case6F	Case6M	2	2
 <p>To find the most plausible causative variant we will use the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/0.20.1" title="GEMINI inheritance pattern tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GEMINI inheritance pattern</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.1)</span> tool. This tool allows us to select the most likely inheritance pattern (autosomal dominant). Below it is explained how to run the tool for this specific pattern, but you can always try other inheritence patterns if you are curious.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-gemini-autosomal-dominant-inhertiance-pattern"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run GEMINI autosomal dominant inhertiance pattern</div>
+  <div class="box-title hands-on-title" id="hands-on-run-gemini-autosomal-dominant-inhertiance-pattern"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run GEMINI autosomal dominant inhertiance pattern</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gemini_inheritance/gemini_inheritance/0.20.1" title="GEMINI inheritance pattern tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GEMINI inheritance pattern</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.1)</span> with the following parameters:
@@ -2497,7 +2497,7 @@ FAM0001822	Case6C	Case6F	Case6M	2	2
 <p>Alternatively, the trio analysis can be done using gene.iobio <span class="citation"><a href="#Di_Sera_2021">Sera <i>et al.</i> 2021</a></span>. The <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/geneiobio/gene_iobio_display_generation_iframe/4.7.1" title="gene.iobio visualisation tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>gene.iobio visualisation</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.7.1)</span> tool generates an html file which sends the VCFs to the iobio site using public URLs. Therefore, your history has to be shared, i.e. <strong>everyone with a link can access your history!</strong></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-files-accessible-for-gene-iobio"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Make files accessible for gene.iobio</div>
+  <div class="box-title hands-on-title" id="hands-on-make-files-accessible-for-gene-iobio"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Make files accessible for gene.iobio</div>
 
   <ol>
     <li>Open the <strong>History Options menu</strong> <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden">galaxy-dropdown</span> at the topright corner of your history panel.</li>
@@ -2510,7 +2510,7 @@ FAM0001822	Case6C	Case6F	Case6M	2	2
 <p>For this tool it is not required to set any filtering steps or determine the most plausible inheritence pattern. Since gene.iobio runs multiple default filtering steps for autosomal dominant, recessive, <em>De novo</em>, compound heterozygous, and X-linked recessive inheritance patterns. In addition, it prioritizes variants based on gene-disease association algorithms, which significantly reduces processing time.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-gene-iobio-html"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate gene.iobio html</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-gene-iobio-html"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate gene.iobio html</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/geneiobio/gene_iobio_display_generation_iframe/4.7.1" title="gene.iobio visualisation tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>gene.iobio visualisation</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.7.1)</span> with the following parameters:
@@ -2620,9 +2620,16 @@ FAM0001822	Case6C	Case6F	Case6M	2	2
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/variant-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2808,7 +2815,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2890,7 +2897,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

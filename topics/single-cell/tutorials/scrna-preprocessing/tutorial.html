@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2101,7 +2101,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <figure id="figure-4" style="max-width: 90%;"><img src="/training-material/topics/single-cell/images/scrna-pre-processing/scrna_workflow_upper.png" alt="Workflow Upper. " width="2500" height="1124" loading="lazy" /><a target="_blank" href="/training-material/topics/single-cell/images/scrna-pre-processing/scrna_workflow_upper.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 4</strong>:</span> Single batch processing</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload and organization</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload and organization</div>
 
   <ol>
     <li>
@@ -2148,7 +2148,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>We will be demultiplexing our FASTQ batch data by performing barcode extraction whilst also making use of the provided barcodes file to filter for <em>specific</em> cell barcodes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-barcode-extraction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Barcode Extraction</div>
+  <div class="box-title hands-on-title" id="hands-on-barcode-extraction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Barcode Extraction</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_extract/umi_tools_extract/0.5.5.1" title="UMI-tools extract tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>UMI-tools extract</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.5.1)</span> with the following parameters:
@@ -2206,7 +2206,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>For alignment, we will use RNA-STAR for performance and splice-awareness.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-performing-the-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Performing the Alignment</div>
+  <div class="box-title hands-on-title" id="hands-on-performing-the-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Performing the Alignment</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/rgrnastar/rna_star/2.7.7a" title="RNA-STAR tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>RNA-STAR</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.7.7a)</span> with the following parameters:
@@ -2317,7 +2317,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>We now have a BAM file of our aligned reads, with cell and UMI barcodes embedded in the read headers. We also have the chromosome and base-pair positions of where these reads are aligned. The can be confirmed by peeking into the BAM file:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-confirming-the-alignment-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Confirming the Alignment Data</div>
+  <div class="box-title hands-on-title" id="hands-on-confirming-the-alignment-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Confirming the Alignment Data</div>
 
   <ol>
     <li>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> symbol of the BAM output from STAR.</li>
@@ -2374,7 +2374,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>Another filtering measure we can apply is to keep reads that we are confident about, e.g those with a minimum number of mismatches to the reference within an acceptable range. Specifically, we want to keep all reads that align to the forward or reverse strand that also have less that 3 mismatches to the reference, and are also mapped only once to the reference.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.4.1" title="Filter BAM datasets on a variety of attributes tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter BAM datasets on a variety of attributes</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.4.1)</span> with the following parameters:
@@ -2582,7 +2582,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>Let us annotate our BAM file with desired gene tags.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quantification-assist-via-featurecounts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quantification assist via FeatureCounts</div>
+  <div class="box-title hands-on-title" id="hands-on-quantification-assist-via-featurecounts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quantification assist via FeatureCounts</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/2.0.1" title="FeatureCounts tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FeatureCounts</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.1)</span> with the following parameters:
@@ -2624,7 +2624,7 @@ With all the relevant data now in our BAM file, we can actually perform the coun
 <h3 id="counting-genes--cell">Counting Genes / Cell</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-final-quantification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Final Quantification</div>
+  <div class="box-title hands-on-title" id="hands-on-final-quantification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Final Quantification</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/umi_tools_count/umi_tools_count/0.5.5.1" title="UMI-tools count tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>UMI-tools count</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.5.1)</span> with the following parameters:
@@ -2742,7 +2742,7 @@ The number of columns can be seen by scrolling the file preview window completel
 <p>Once again, file naming is important, and so we will rename our matrix files appropriately to the plate and batch they are supposed to originate from.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload and organisation</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload and organisation</div>
 
   <ol>
     <li>
@@ -2823,7 +2823,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>Let us now merge our matrices from different batches. In order to ensure that our batches are merged in the order that we wish, we should first create a list of datasets so that our matrices are merged in the order given by the list.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-table-merge"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Table Merge</div>
+  <div class="box-title hands-on-title" id="hands-on-table-merge"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Table Merge</div>
 
   <ol>
     <li>
@@ -2986,7 +2986,7 @@ https://zenodo.org/record/3253142/files/celseq_barcodes.192.tabular
 <p>Let us now apply this protocol to our count matrix, and look for any cross-contamination.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-barcode-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Barcode Filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-barcode-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Barcode Filtering</div>
 
   <p>Select <strong>Cross-contamination Barcode Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:</p>
   <ul>
@@ -3158,9 +3158,18 @@ Factoid: We can convert the number of UMIs to the number of molecules using a tr
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3261,8 +3270,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3470,22 +3479,22 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">6</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.16666666666666666">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.16666666666666666">1</td>
 			</tr>
 		   
@@ -3642,7 +3651,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

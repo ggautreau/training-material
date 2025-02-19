@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1166,7 +1166,7 @@ HoloViz provides high-level Python tools that are designed to work together to s
   <p>You can come back to where you left off the tutorial anytime by clicking <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log in to Galaxy</div>
+    <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Log in to Galaxy</div>
     <ol>
       <li>Open your favorite browser (Chrome, Safari or Firefox as your browser, not Internet Explorer!)</li>
       <li>Browse to your <a href="https://earth-system.usegalaxy.eu/">Galaxy instance</a></li>
@@ -1190,7 +1190,7 @@ HoloViz provides high-level Python tools that are designed to work together to s
 <h1 id="copernicus-data-space-ecosystem">Copernicus Data Space Ecosystem</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launch-the-interactive-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Launch the interactive tool</div>
+  <div class="box-title hands-on-title" id="hands-on-launch-the-interactive-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Launch the interactive tool</div>
 
   <ol>
     <li><span class="tool" data-tool="interactive_tool_copernicus_notebook" title="Copernicus Data Space Ecosystem tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Copernicus Data Space Ecosystem</strong></span> with the following parameters:
@@ -1211,7 +1211,7 @@ HoloViz provides high-level Python tools that are designed to work together to s
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-navigate-the-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Navigate the jupyterlab</div>
+  <div class="box-title hands-on-title" id="hands-on-navigate-the-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Navigate the jupyterlab</div>
   <ol>
     <li>Once you are in the jupyterlab go to :
       <ul>
@@ -1258,7 +1258,7 @@ Everytime you press this button you can excecute a one by one the cells.</li>
 <h1 id="holoviz">Holoviz</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launch-holoviz"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Launch Holoviz</div>
+  <div class="box-title hands-on-title" id="hands-on-launch-holoviz"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Launch Holoviz</div>
 
   <ol class="code-in">
     <li><span class="tool" data-tool="interactive_tool_holoviz" title="Holoviz tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Holoviz</strong></span> with the following parameters:
@@ -1278,7 +1278,7 @@ Everytime you press this button you can excecute a one by one the cells.</li>
     <li>Once, you are in the jupyterlab go in the the <strong>notebooks</strong> folder</li>
     <li>Open a terminal in bash and write the following
       <blockquote>
-        <div class="box-title code-in-title" id="code-in-download-the-notebook"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Download the notebook</div>
+        <div class="box-title code-in-title" id="code-in-download-the-notebook"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Download the notebook</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://raw.githubusercontent.com/fair-ease/Holoviz/main/Tabular_Datasets_NDVI.ipynb
 </code></pre></div>        </div>
       </blockquote>
@@ -1333,9 +1333,18 @@ Everytime you press this button you can excecute a one by one the cells.</li>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1516,7 +1525,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1598,7 +1607,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

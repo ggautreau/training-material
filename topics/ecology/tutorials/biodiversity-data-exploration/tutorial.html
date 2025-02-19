@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1573,7 +1573,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial and give it a name (example: “RLS for biodiversity data exploration tutorial”)
@@ -1615,7 +1615,7 @@ metadata of the dataframe in the first lines before the dataframe so you’ll ha
 <p>In order to clean unnecessary informations from the table we will now cut a few columns and change the format of time information.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clean-your-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Clean your data</div>
+  <div class="box-title hands-on-title" id="hands-on-clean-your-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Clean your data</div>
 
   <ol>
     <li>Use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/1.1.0" title="Advanced cut columns from a table (cut) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Advanced cut columns from a table (cut)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0)</span>
@@ -1652,7 +1652,7 @@ with following parameters :
 <h2 id="homoscedasticity-and-normality-analysis">Homoscedasticity and normality analysis</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-here-we-will-check-homogeneity-of-variances-levene-test-for-every-species-and-represent-it-through-multiple-boxplots-and-the-normal-distribution-kolmogorov-smirnov-test-represented-by-a-distribution-histogram-and-a-q-q-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Here we will check homogeneity of variances (Levene test) for every species and represent it through multiple boxplots and the normal distribution (Kolmogorov-Smirnov test) represented by a distribution histogram and a Q-Q plot.</div>
+  <div class="box-title hands-on-title" id="hands-on-here-we-will-check-homogeneity-of-variances-levene-test-for-every-species-and-represent-it-through-multiple-boxplots-and-the-normal-distribution-kolmogorov-smirnov-test-represented-by-a-distribution-histogram-and-a-q-q-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Here we will check homogeneity of variances (Levene test) for every species and represent it through multiple boxplots and the normal distribution (Kolmogorov-Smirnov test) represented by a distribution histogram and a Q-Q plot.</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_homogeneity_normality/ecology_homogeneity_normality/0.0.0" title="Homoscedasticity and normality tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Homoscedasticity and normality</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1678,7 +1678,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="autocorrelation-in-your-data">Autocorrelation in your data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-autocorrelation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Autocorrelation</div>
+  <div class="box-title hands-on-title" id="hands-on-autocorrelation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Autocorrelation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_link_between_var/ecology_link_between_var/0.0.0" title="Variables exploration tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Variables exploration</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1706,7 +1706,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="check-collinearity-in-your-data">Check collinearity in your data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-collinearity-between-numerical-variables"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Collinearity between numerical variables</div>
+  <div class="box-title hands-on-title" id="hands-on-collinearity-between-numerical-variables"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Collinearity between numerical variables</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_link_between_var/ecology_link_between_var/0.0.0" title="Variables exploration tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Variables exploration</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1733,7 +1733,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-abundance-repartition-through-space">Visualize abundance repartition through space</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-abundance-map-in-the-environment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Abundance map in the environment</div>
+  <div class="box-title hands-on-title" id="hands-on-abundance-map-in-the-environment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Abundance map in the environment</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0" title="Presence-absence and abundance tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Presence-absence and abundance</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1762,7 +1762,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-the-number-of-locations-where-each-taxons-are-present">Visualize the number of locations where each taxons are present</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-presence-count-of-taxons-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Presence count of taxons (barplot)</div>
+  <div class="box-title hands-on-title" id="hands-on-presence-count-of-taxons-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Presence count of taxons (barplot)</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0" title="Presence-absence and abundance tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Presence-absence and abundance</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1787,7 +1787,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-the-rarefaction-curves-of-your-species">Visualize the rarefaction curves of your species</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-rarefaction-curve-of-species"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Rarefaction curve of species</div>
+  <div class="box-title hands-on-title" id="hands-on-rarefaction-curve-of-species"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Rarefaction curve of species</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_presence_abs_abund/ecology_presence_abs_abund/0.0.0" title="Presence-absence and abundance tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Presence-absence and abundance</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1814,7 +1814,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="visualize-the-dispersion-of-a-numeric-variable-and-the-correlation-between-species-absence">Visualize the dispersion of a numeric variable and the correlation between species absence</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-boxplot-of-dispersion-and-correlation-of-absence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Boxplot of dispersion and correlation of absence</div>
+  <div class="box-title hands-on-title" id="hands-on-boxplot-of-dispersion-and-correlation-of-absence"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Boxplot of dispersion and correlation of absence</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_stat_presence_abs/ecology_stat_presence_abs/0.0.0" title="Statistics on presence-absence tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Statistics on presence-absence</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1840,7 +1840,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="local-and-species-contribution-to-beta-diversity-scbd-and-lcbd">Local and Species Contribution to Beta Diversity (SCBD and LCBD)</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/ecology_beta_diversity/ecology_beta_diversity/0.0.0" title="Local Contributions to Beta Diversity (LCBD) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Local Contributions to Beta Diversity (LCBD)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1881,7 +1881,7 @@ The two tests have to be significant so variances aren’t homogenous and data i
 <h2 id="bonus-spatial-coordinates-anonymization">Bonus! Spatial coordinates anonymization</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/tool_anonymization/tool_anonymization/0.0.0" title="Spatial coordinates anonymization tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Spatial coordinates anonymization</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.0)</span> with the following parameters:
@@ -1935,9 +1935,16 @@ The two tests have to be significant so variances aren’t homogenous and data i
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2194,7 +2201,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2296,7 +2303,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

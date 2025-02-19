@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1710,7 +1710,7 @@ of each species.</p>
 <h2 id="data-upload">Data upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1875,7 +1875,7 @@ level you want to take into account in your statistical analysis.</p>
 <h3 id="concatenation-of-data-files">Concatenation of data files</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-files-concatenation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data files concatenation</div>
+  <div class="box-title hands-on-title" id="hands-on-data-files-concatenation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data files concatenation</div>
 
   <ol>
     <li>
@@ -1959,7 +1959,7 @@ populations of the same species that do not interact with each other. Therefore,
 the three <code class="language-plaintext highlighter-rouge">#BITS</code>, <code class="language-plaintext highlighter-rouge">#EVHOE</code> and <code class="language-plaintext highlighter-rouge">#SWCIBTS</code> original tabular files used for the concatenation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-the-quot-location-quot-field"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create the &quot;location&quot; field</div>
+  <div class="box-title hands-on-title" id="hands-on-create-the-quot-location-quot-field"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create the &quot;location&quot; field</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regexColumn1/1.0.0" title="Column Regex Find And Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Column Regex Find And Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.0)</span> with following parameters:
@@ -2009,7 +2009,7 @@ separated with <code class="language-plaintext highlighter-rouge">-</code>.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-column-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change column names</div>
+  <div class="box-title hands-on-title" id="hands-on-change-column-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Change column names</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regex1/1.0.0" title="Regex Find And Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Regex Find And Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.0)</span> with following parameters :</p>
   <ul>
@@ -2063,7 +2063,7 @@ separated with <code class="language-plaintext highlighter-rouge">-</code>.</p>
 and Population metrics. Then, we’ll be creating the observation unit file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-community-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute Community metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-community-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute Community metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/pampa_communitymetrics/pampa_communitymetrics/0.0.2" title="Calculate community metrics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Calculate community metrics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with following parameters:
@@ -2081,7 +2081,7 @@ and Population metrics. Then, we’ll be creating the observation unit file.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-population-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute Population metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-population-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute Population metrics</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/pampa_presabs/pampa_presabs/0.0.2" title="Calculate presence absence table tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Calculate presence absence table</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> <em>“Input file”</em>: <code class="language-plaintext highlighter-rouge">#EVHOE</code>, <code class="language-plaintext highlighter-rouge">#BITS</code> and <code class="language-plaintext highlighter-rouge">#SWCIBTS</code> Regex Find And Replace data files</p>
 
@@ -2099,7 +2099,7 @@ nomenclature for the “observation.unit” fields, namely:</p>
 <p><code class="language-plaintext highlighter-rouge">['year' in four numbers]_[Identifier of the precise sampled location in any character chain]</code></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-the-observation-unit-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create the observation unit file</div>
+  <div class="box-title hands-on-title" id="hands-on-create-the-observation-unit-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create the observation unit file</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regexColumn1/1.0.0" title="Column Regex Find And Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Column Regex Find And Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.0)</span> with following parameters:
@@ -2246,7 +2246,7 @@ the metrics cited above.</p>
 <p>As said above, analyses will be separated by the field “Survey” (first column) to avoid bias.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-glmm-on-community-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute GLMM on Community metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-glmm-on-community-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute GLMM on Community metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/pampa_glmcomm/pampa_glmcomm/0.0.2" title="Compute GLM on community data tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compute GLM on community data</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with following parameters:
@@ -2474,7 +2474,7 @@ Here, for these models, we know these plots won’t be trust-worthy but it can s
 <h3 id="create-and-read-plots">Create and read plots</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-plots-from-community-metrics-file-and-glmm-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create plots from Community metrics file and GLMM results</div>
+  <div class="box-title hands-on-title" id="hands-on-create-plots-from-community-metrics-file-and-glmm-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create plots from Community metrics file and GLMM results</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/pampa_plotglm/pampa_plotglm/0.0.2" title="Create a plot from GLM data tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Create a plot from GLM data</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with following parameters:</p>
   <ul>
@@ -2524,7 +2524,7 @@ the GLM(M) tool again and choose the fifth column of the <code class="language-p
 files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-glmm-on-population-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute GLMM on Population metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-glmm-on-population-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute GLMM on Population metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/pampa_glmsp/pampa_glmsp/0.0.2" title="Compute GLM on population data tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compute GLM on population data</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with following parameters:
@@ -2652,7 +2652,7 @@ Hence, more interesting to look at.</p>
 <h3 id="create-and-read-plots-1">Create and read plots</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-plots-from-population-metrics-file-and-glmm-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create plots from Population metrics file and GLMM results</div>
+  <div class="box-title hands-on-title" id="hands-on-create-plots-from-population-metrics-file-and-glmm-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create plots from Population metrics file and GLMM results</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/pampa_plotglm/pampa_plotglm/0.0.2" title="Create a plot from GLM data tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Create a plot from GLM data</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with following parameters:</p>
   <ul>
@@ -2778,9 +2778,18 @@ that helps evaluate the quality of your GL(M)M (found in the rating file).</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3034,7 +3043,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -3136,7 +3145,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

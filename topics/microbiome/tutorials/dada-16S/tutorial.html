@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1613,7 +1613,7 @@ weight observed during the first 10 dpw affected the stability microbiome compar
 <p>Any analysis should get its own Galaxy history. So let’s start by creating a new one:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-history-creation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: History creation</div>
+  <div class="box-title hands-on-title" id="hands-on-history-creation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: History creation</div>
 
   <ol>
     <li>
@@ -1650,7 +1650,7 @@ weight observed during the first 10 dpw affected the stability microbiome compar
 <p>The rest of the file name is identical, except for <code class="language-plaintext highlighter-rouge">_R1</code> and <code class="language-plaintext highlighter-rouge">_R2</code>, this is used to indicate the forward and reverse reads respectively.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-import-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import datasets</div>
 
   <ol>
     <li>
@@ -1724,7 +1724,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p>We can recognize the pairing from the file names, which will differ only by <code class="language-plaintext highlighter-rouge">_R1</code> or <code class="language-plaintext highlighter-rouge">_R2</code> in the filename. We can tell Galaxy about this paired naming convention, so that our tools will know which files belong together. We do this by building a <strong>List of Dataset Pairs</strong></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-organizing-our-data-into-a-sorted-paired-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Organizing our data into a sorted paired collection</div>
+  <div class="box-title hands-on-title" id="hands-on-organizing-our-data-into-a-sorted-paired-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Organizing our data into a sorted paired collection</div>
 
   <ol>
     <li>
@@ -1816,11 +1816,11 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Workflow">
 
   <!--SNIPPET-->
-  <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-workflowhub-eu-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Importing and Launching a WorkflowHub.eu Workflow</div>   <!-- GTN:IGNORE:011 _blank is used here due to iframeing sites that (can) set x-frame-options. The contexts in which _blank is set are only visible when iframe'd -->   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://workflowhub.eu/ga4gh/trs/v2/tools/790/versions/2">   Launch <strong>dada2/main (v2)</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a target="_blank" href="https://workflowhub.eu/workflows/790?version=2">View on WorkflowHub</a>) </div>   <div class="hide-when-galaxy-proxy-active"> <a href="https://my.galaxy.training/?path=/workflows/trs_import%3ftrs_server=workflowhub.eu%26run_form=true%26trs_id=790%26trs_version=2">   Launch <strong>dada2/main (v2)</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://workflowhub.eu/workflows/790?version=2">View on WorkflowHub</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p><a href="https://workflowhub.eu/">WorkflowHub</a> is a workflow management system which allows workflows to be FAIR (Findable, Accessible, Interoperable, and Reusable), citable, have managed metadata profiles, and be openly available for review and analytics.</p>   <ol>   <li>Ensure that you are logged in to your Galaxy account.</li>   <li>Click on the <strong>Workflow</strong> menu, located in the top bar.</li>   <li>Click on the <strong>Import</strong> button, located in the right corner.</li>   <li>In the section “Import a Workflow from Configured GA4GH Tool Registry Servers (e.g. Dockstore)”, click on <strong>Search form</strong>.</li>   <li>In the <strong>TRS Server: <em>workflowhub.eu</em></strong> menu you should type <code class="language-plaintext highlighter-rouge">name:"dada2/main"</code> <img src="/training-material/topics/assembly/images/vgp_assembly/workflow_list.png" alt="galaxy TRS workflow search field, name:vgp is entered in the search bar, and five different workflows all labelled VGP are listed" /></li>   <li>Click on the desired workflow, and finally select the latest available version.</li> </ol>   <p>After that, the imported workflows will appear in the main workflow menu. In order to run the workflow, just need to click in the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden">workflow-run</span> <strong>Run workflow</strong> icon.</p>   <p>Below is a short video showing this uncomplicated procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing from WorkflowHub" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing from WorkflowHub</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
+  <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-workflowhub-eu-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Importing and Launching a WorkflowHub.eu Workflow</div>   <!-- GTN:IGNORE:011 _blank is used here due to iframeing sites that (can) set x-frame-options. The contexts in which _blank is set are only visible when iframe'd -->   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://workflowhub.eu/ga4gh/trs/v2/tools/790/versions/2">   Launch <strong>dada2/main (v2)</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a target="_blank" href="https://workflowhub.eu/workflows/790?version=2">View on WorkflowHub</a>) </div>   <div class="hide-when-galaxy-proxy-active"> <a href="https://my.galaxy.training/?path=/workflows/trs_import%3ftrs_server=workflowhub.eu%26run_form=true%26trs_id=790%26trs_version=2">   Launch <strong>dada2/main (v2)</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://workflowhub.eu/workflows/790?version=2">View on WorkflowHub</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p><a href="https://workflowhub.eu/">WorkflowHub</a> is a workflow management system which allows workflows to be FAIR (Findable, Accessible, Interoperable, and Reusable), citable, have managed metadata profiles, and be openly available for review and analytics.</p>   <ol>   <li>Ensure that you are logged in to your Galaxy account.</li>   <li>Click on the <strong>Workflow</strong> menu, located in the top bar.</li>   <li>Click on the <strong>Import</strong> button, located in the right corner.</li>   <li>In the section “Import a Workflow from Configured GA4GH Tool Registry Servers (e.g. Dockstore)”, click on <strong>Search form</strong>.</li>   <li>In the <strong>TRS Server: <em>workflowhub.eu</em></strong> menu you should type <code class="language-plaintext highlighter-rouge">name:"dada2/main"</code> <img src="/training-material/topics/assembly/images/vgp_assembly/workflow_list.png" alt="galaxy TRS workflow search field, name:vgp is entered in the search bar, and five different workflows all labelled VGP are listed" /></li>   <li>Click on the desired workflow, and finally select the latest available version.</li> </ol>   <p>After that, the imported workflows will appear in the main workflow menu. In order to run the workflow, just need to click in the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden">workflow-run</span> <strong>Run workflow</strong> icon.</p>   <p>Below is a short video showing this uncomplicated procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing from WorkflowHub" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing from WorkflowHub</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
   <p><!--END_SNIPPET--></p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-define-dada2-workflow-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Define DADA2 workflow parameters</div>
+    <div class="box-title hands-on-title" id="hands-on-define-dada2-workflow-parameters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Define DADA2 workflow parameters</div>
 
     <ol>
       <li>Select following parameters:
@@ -1851,7 +1851,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-inspect-read-quality-profiles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect read quality profiles</div>
+    <div class="box-title hands-on-title" id="hands-on-inspect-read-quality-profiles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect read quality profiles</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_plotqualityprofile/dada2_plotQualityProfile/1.28+galaxy0" title="dada2: plotQualityProfile tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: plotQualityProfile</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -1876,7 +1876,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p><strong>dada2: plotQualityProfile</strong> generates 2 files with quality profiles per sample: 1 PDF for forward reads and 1 PDF for reverse reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-read-quality-profiles-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect read quality profiles</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-read-quality-profiles-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect read quality profiles</div>
 
   <ol>
     <li>Inspect <strong>plotQualityProfile</strong> forward read output</li>
@@ -1929,7 +1929,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
   <p>Let’s now trim and filter the reads:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-filter-and-trim"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter and trim</div>
+    <div class="box-title hands-on-title" id="hands-on-filter-and-trim"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter and trim</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_filterandtrim/dada2_filterAndTrim/1.28+galaxy0" title="dada2: filterAndTrim tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: filterAndTrim</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2023,7 +2023,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-inspect-read-quality-profiles-after-filter-and-trim"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect read quality profiles after Filter And Trim</div>
+    <div class="box-title hands-on-title" id="hands-on-inspect-read-quality-profiles-after-filter-and-trim"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect read quality profiles after Filter And Trim</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_plotqualityprofile/dada2_plotQualityProfile/1.28+galaxy0" title="dada2: plotQualityProfile tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: plotQualityProfile</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2080,7 +2080,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
   <p><strong>dada2: learnErrors</strong> tool expects as input one collection and not a paired collection. We then need to split to paired collection into 2 collections: one with forward reads and one with reverse reads.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-unzip-paired-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Unzip paired collection</div>
+    <div class="box-title hands-on-title" id="hands-on-unzip-paired-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Unzip paired collection</div>
 
     <ol>
       <li><span class="tool" data-tool="__UNZIP_COLLECTION__" title="Unzip collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Unzip collection</strong></span> with the following parameters:
@@ -2102,7 +2102,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
   <p>Let’s now run <strong>dada2: learnErrors</strong> on both collections.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-learn-the-error-rate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Learn the Error Rate</div>
+    <div class="box-title hands-on-title" id="hands-on-learn-the-error-rate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Learn the Error Rate</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_learnerrors/dada2_learnErrors/1.28+galaxy0" title="dada2: learnErrors tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: learnErrors</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2156,7 +2156,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-sample-inference"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Sample Inference</div>
+    <div class="box-title hands-on-title" id="hands-on-sample-inference"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Sample Inference</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_dada/dada2_dada/1.28+galaxy0" title="dada2: dada tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: dada</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2221,7 +2221,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p>We can look at the number of true sequence variants from unique sequences have been inferred by <strong>DADA2</strong>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-number-of-true-sequence-variants-from-unique-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Inspect number of true sequence variants from unique sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-number-of-true-sequence-variants-from-unique-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Inspect number of true sequence variants from unique sequences</div>
 
   <ol>
     <li>Click one output collection of <strong>dada2: dada</strong></li>
@@ -2257,7 +2257,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-merge-paired-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Merge paired reads</div>
+    <div class="box-title hands-on-title" id="hands-on-merge-paired-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Merge paired reads</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_mergepairs/dada2_mergePairs/1.28+galaxy0" title="dada2: mergePairs tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: mergePairs</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2334,7 +2334,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-make-sequence-table"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Make sequence table</div>
+    <div class="box-title hands-on-title" id="hands-on-make-sequence-table"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Make sequence table</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_makesequencetable/dada2_makeSequenceTable/1.28+galaxy0" title="dada2: makeSequenceTable tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: makeSequenceTable</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2409,7 +2409,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-remove-chimeras"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Remove chimeras</div>
+    <div class="box-title hands-on-title" id="hands-on-remove-chimeras"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Remove chimeras</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_removebimeradenovo/dada2_removeBimeraDenovo/1.28+galaxy0" title="dada2: removeBimeraDenovo tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: removeBimeraDenovo</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2453,7 +2453,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-track-reads-through-the-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Track reads through the pipeline</div>
+    <div class="box-title hands-on-title" id="hands-on-track-reads-through-the-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Track reads through the pipeline</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_seqcounts/dada2_seqCounts/1.28+galaxy0" title="dada2: sequence counts tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: sequence counts</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2541,7 +2541,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <div class="Step-by-step">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-assign-taxonomy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Assign taxonomy</div>
+    <div class="box-title hands-on-title" id="hands-on-assign-taxonomy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Assign taxonomy</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/dada2_assigntaxonomyaddspecies/dada2_assignTaxonomyAddspecies/1.28+galaxy0" title="dada2: assignTaxonomy and addSpecies tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>dada2: assignTaxonomy and addSpecies</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.28+galaxy0)</span> with the following parameters:
@@ -2696,7 +2696,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-metadata-table"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare metadata table</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-metadata-table"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare metadata table</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/collection_element_identifiers/collection_element_identifiers/0.0.2" title="Extract element identifiers tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Extract element identifiers</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.2)</span> with the following parameters:
       <ul>
@@ -2829,7 +2829,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p>We now construct a phyloseq object directly with it and the DADA2 outputs and launch Shiny-phyloseq (<span class="citation"><a href="#mcmurdie2015shiny">McMurdie and Holmes 2015</a></span>) to explore the phyloseq object.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-phyloseq-object-and-launch-phyloseq-exploration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Create phyloseq object and launch phyloseq exploration</div>
+  <div class="box-title hands-on-title" id="hands-on-create-phyloseq-object-and-launch-phyloseq-exploration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Create phyloseq object and launch phyloseq exploration</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/phyloseq_from_dada2/phyloseq_from_dada2/1.46.0+galaxy0" title="Create phyloseq object from dada2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Create phyloseq object from dada2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.46.0+galaxy0)</span> with the following parameters:
@@ -2878,7 +2878,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-α-diversity"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot α diversity</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-α-diversity"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot α diversity</div>
 
   <ol>
     <li>Click on <strong>Alpha Diversity</strong> tab</li>
@@ -2941,7 +2941,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p>Here we will plot <strong>NMDS</strong>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-nmds-ordination-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot NMDS Ordination plot</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-nmds-ordination-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot NMDS Ordination plot</div>
 
   <ol>
     <li>Click on <strong>Ordination</strong> tab</li>
@@ -2979,7 +2979,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p>Let’s plot an abundance stacked barplot at the family level.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-abundance-stacked-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot abundance stacked barplot</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-abundance-stacked-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot abundance stacked barplot</div>
 
   <ol>
     <li>Click on <strong>Bar</strong> tab</li>
@@ -2999,7 +2999,7 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
 <p>The barplot is hard to read here: many families are in white because the color palette is reduced and we can not distinguish them. We need to filter to data to display only the most abundant families. We will select only taxa with more than 500 counts.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-and-plot-abundance-stacked-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter and Plot abundance stacked barplot</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-and-plot-abundance-stacked-barplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter and Plot abundance stacked barplot</div>
 
   <ol>
     <li>Click on <strong>Filter</strong> tab</li>
@@ -3092,9 +3092,18 @@ https://zenodo.org/record/800651/files/Mock_R2.fastq
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/microbiome/faqs/">FAQ page for the Microbiome topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/microbiome/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3363,12 +3372,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.75">3</td>
 			</tr>
 		   
@@ -3492,7 +3501,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

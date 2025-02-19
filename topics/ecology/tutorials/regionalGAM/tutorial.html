@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1551,7 +1551,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="data-upload">Data upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1597,7 +1597,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Here, we will only keep the sites that are in the Netherlands (NLBMS.XX). We want to create a down-sampled file, by selecting the lines where NLBMS is found.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-downsample-and-hide-some-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Downsample and hide some information</div>
+  <div class="box-title hands-on-title" id="hands-on-downsample-and-hide-some-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Downsample and hide some information</div>
   <ol>
     <li><strong>Text reformatting with awk</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
       <ul>
@@ -1639,7 +1639,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
   <div class="box-title details-title" id="details-if-your-original-data-is-in-rdata-format"><button class="gtn-boxify-button details" type="button" aria-controls="details-if-your-original-data-is-in-rdata-format" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> <span>Details: If your original data is in RData format</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload.</div>
+    <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload.</div>
     <ol>
       <li>
         <p>Import the RData</p>
@@ -1702,7 +1702,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
 <p>As the dataset is quite big and may contain heterogeneous information, we need to know whether the data are about one species or more.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-how-many-species-are-taken-into-account-in-this-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: How many species are taken into account in this dataset?</div>
+  <div class="box-title hands-on-title" id="hands-on-how-many-species-are-taken-into-account-in-this-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: How many species are taken into account in this dataset?</div>
 
   <ol>
     <li><strong>Count occurrences of each record</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1752,7 +1752,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
   <p>We now need to create a new file containing the data for only one species</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-creating-a-new-file-containing-only-the-data-from-one-species"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a new file containing only the data from one species</div>
+    <div class="box-title hands-on-title" id="hands-on-creating-a-new-file-containing-only-the-data-from-one-species"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating a new file containing only the data from one species</div>
     <ol>
       <li>Copy the name of the species you are interested in (for example: “Aglais io”).</li>
       <li><strong>Filter data on any column using simple expressions</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
@@ -1781,7 +1781,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
 <p>Now you have a file containing all the data on the species of interest. The main goal of this step is to model one phenology per year using a general additive model (GAM) with time and sites as explanatory variables. This model will be used to predict values for missing counts at local sites in order to improve the quality of the abundance indices.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-phenology"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Phenology</div>
+  <div class="box-title hands-on-title" id="hands-on-phenology"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Phenology</div>
   <ol>
     <li><strong>Flight curve</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -1821,7 +1821,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
 <p>This graph displays the modeled flight curve of <em>Pyronia tithonus</em> over the years. But the first year is “null”, probably a left-over of the 1st line with the header, and the week number is not shown.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-new-column-of-the-dataset-containing-the-week-and-the-year"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a new column of the dataset containing the week and the year</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-new-column-of-the-dataset-containing-the-week-and-the-year"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a new column of the dataset containing the week and the year</div>
   <ol>
     <li><strong>Count occurrences of each record</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -1911,7 +1911,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
 <p>This shows the abundance of <em>Pyronia tithonus</em>, over the weeks. We can see there is a peak every year as expected and we can notice some differences in the values between the weeks and years, but not how the weeks overlap between the years. We will plot a stalked version of this visualization to check if there are no unexpected changes and have an idea of the quality of the reconstructed phenology.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-the-years-on-a-stacked-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize the years on a stacked graph</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-the-years-on-a-stacked-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize the years on a stacked graph</div>
   <ol>
     <li><strong>Scatterplot w ggplot2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
       <ul>
@@ -1941,7 +1941,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
   <p>If you are working with more than one species, you should follow the next steps</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+    <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
     <ol>
       <li><strong>Paste two files side by side</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
         <ul>
@@ -1972,7 +1972,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
   <p>If your input dataset contains information about more than one species, you can now generate a chart for the multi-species dataset:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+    <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
     <ol>
       <li>Inspect and expand the output data from <strong>flight curve</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       <li>Click on the <i class="fas fa-chart-column" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> (<strong>Visualize</strong>) icon</li>
@@ -2016,7 +2016,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
 <p>We now would like to create a file showing the abundance index per year of a chosen species in a certain site.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-an-abundance-index"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate an abundance index</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-an-abundance-index"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate an abundance index</div>
   <ol>
     <li><strong>Abundance index</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
       <ul>
@@ -2041,7 +2041,7 @@ Warning: depending on the Galaxy instance your are using, this tool can not appe
 <p>The expected temporal trend allows you to have an overview of the evolution of a species in a certain type of environment in the future.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-expected-temporal-trend"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Expected temporal trend</div>
+  <div class="box-title hands-on-title" id="hands-on-expected-temporal-trend"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Expected temporal trend</div>
   <ol>
     <li><strong>Expected temporal trend</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
       <ul>
@@ -2082,7 +2082,7 @@ with \(Y\_i\) = value of the dependent variable for the unit \(i\)
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-model-temporal-trend-with-linear-regression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Model temporal trend with linear regression</div>
+  <div class="box-title hands-on-title" id="hands-on-model-temporal-trend-with-linear-regression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Model temporal trend with linear regression</div>
   <ol>
     <li><strong>Model temporal trend with a simple linear regression</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>
       <ul>
@@ -2131,7 +2131,7 @@ with \(Y\_i\) = value of the dependent variable for the unit \(i\)
 <p>We can also test for autocorrelation in the data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-if-there-is-autocorrelation-of-residuals"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check if there is autocorrelation of residuals</div>
+  <div class="box-title hands-on-title" id="hands-on-check-if-there-is-autocorrelation-of-residuals"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check if there is autocorrelation of residuals</div>
   <ol>
     <li><strong>Autocorrelation test check for temporal autocorrelation in the residuals</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters.
       <ul>
@@ -2148,7 +2148,7 @@ with \(Y\_i\) = value of the dependent variable for the unit \(i\)
 <h2 id="take-into-account-the-autocorrelation">Take into account the autocorrelation</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-model-temporal-trend-taking-into-account-autocorrelation-of-residuals"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Model temporal trend taking into account autocorrelation of residuals</div>
+  <div class="box-title hands-on-title" id="hands-on-model-temporal-trend-taking-into-account-autocorrelation-of-residuals"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Model temporal trend taking into account autocorrelation of residuals</div>
   <ol>
     <li><strong>Linear regression ajusted for autocorrelation in the residuals</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters.
       <ul>
@@ -2175,7 +2175,7 @@ We will therefore, based on the AIC, select the model taking into account the au
 We can now represent the data with the trend line from the model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-data-and-the-trend-line-from-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot the data and the trend line from the model</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-data-and-the-trend-line-from-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot the data and the trend line from the model</div>
   <ol>
     <li><strong>Plot abundance with trend line</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters.
       <ul>
@@ -2238,9 +2238,18 @@ We can now represent the data with the trend line from the model.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2435,7 +2444,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2517,7 +2526,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

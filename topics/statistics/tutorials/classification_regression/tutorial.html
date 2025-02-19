@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1450,7 +1450,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The datasets to be used for classification contain 9 features. Each feature contains some unique information about breast cancer including the thickness of clump, cell-size, cell-shape and so on. More information about the dataset can be found here - <a href="https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original)">a</a> and <a href="https://sites.google.com/a/googlesciencefair.com/science-fair-2012-project-64a91af142a459cfb486ed5cb05f803b2eb41354-1333130785-87/observations">b</a>. In addition to these features, the training dataset contains one more column as the <code class="language-plaintext highlighter-rouge">target</code>. It has a binary value (0 or 1) for each row. <code class="language-plaintext highlighter-rouge">0</code> indicates no breast cancer (benign) and <code class="language-plaintext highlighter-rouge">1</code> (malignant) indicates breast cancer. The test dataset does not contain the <code class="language-plaintext highlighter-rouge">target</code> column (which should be predicted by a classifier). The third dataset contains all the samples from the test dataset, this time including the <code class="language-plaintext highlighter-rouge">target</code> column which is needed to compare between real and predicted targets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1488,7 +1488,7 @@ https://zenodo.org/record/3248907/files/breast-w_train.tsv
 <p>The training dataset is used for learning the associations between features and the targets. The classifier learns general patterns in a dataset and saves a trained model. This model can be used for classifying a new sample. In this step, we will use <code class="language-plaintext highlighter-rouge">breast-w_train</code> as the training dataset and apply <a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC">SVM</a> (support vector machine) classifier. It will learn features from the dataset and maps them to the targets. This mapping is called a trained model. The training step produces a model file of type <code class="language-plaintext highlighter-rouge">zip</code>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train the model</div>
+  <div class="box-title hands-on-title" id="hands-on-train-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train the model</div>
 
   <ol>
     <li><strong>Support vector machines (SVMs) for classification</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters to train the classifier on training dataset:
@@ -1546,7 +1546,7 @@ These attributes are stored in the trained model and can be accessed by reading 
 <p>After the training process is complete, we can see the trained model file (<code class="language-plaintext highlighter-rouge">zip</code> file) which contains information about patterns in the form of weights. The trained model is used to predict the classes of the test (<code class="language-plaintext highlighter-rouge">breast-w_test</code>) dataset. It assigns a class (either tumor or no tumor) to each row in the <code class="language-plaintext highlighter-rouge">breast-w_test</code> dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-classes-using-the-trained-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict classes using the trained model</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-classes-using-the-trained-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict classes using the trained model</div>
 
   <ol>
     <li><strong>Support vector machines (SVMs) for classification</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters to predict classes of test dataset using the trained model:
@@ -1570,7 +1570,7 @@ These attributes are stored in the trained model and can be accessed by reading 
 <p>We should evaluate the quality of predictions by comparing them against the true targets. To do this, we will use another dataset (<code class="language-plaintext highlighter-rouge">breast-w_targets</code>). This is the same as the test dataset (<code class="language-plaintext highlighter-rouge">breast-w_test</code>) but contains an extra <code class="language-plaintext highlighter-rouge">target</code> column containing the true classes of the test dataset. With the predicted and true classes, the learned model is evaluated to verify how correct the predictions are. To visualise these predictions, a plotting tool is used. It creates three plots - confusion matrix, precision, recall and F1 and ROC and AUC. We will mainly analyze the precision and recall plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the predictions</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the predictions</div>
   <ol>
     <li><strong>Plot confusion matrix, precision, recall and ROC and AUC curves</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters to visualise the predictions:
       <ul>
@@ -1619,7 +1619,7 @@ These attributes are stored in the trained model and can be accessed by reading 
 <p>The dataset contains information about human <a href="https://rstudio-pubs-static.s3.amazonaws.com/65314_c0d1e5696cdd4e93a3784ea67f9e3d34.html">body density</a>. It includes 14 features like underwater body density, age, weight, height, neck circumference and so on. The target is the percent body fat. The aim of the task is to learn a mapping between several body features and fat content inside the human body. Using this learning, the body fat percentage can be predicted using other features. To carry out this task, we will need training and test datasets. Again, we will also prepare another test dataset with targets included to evaluate the regression performance. <code class="language-plaintext highlighter-rouge">body_fat_train</code> dataset is used as the training dataset and <code class="language-plaintext highlighter-rouge">body_fat_test</code> as the test dataset. The dataset <code class="language-plaintext highlighter-rouge">body_fat_test_labels</code> contains the true targets for the test dataset (<code class="language-plaintext highlighter-rouge">body_fat_test</code>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial.</li>
@@ -1652,7 +1652,7 @@ https://zenodo.org/record/3248907/files/body_fat_test.tsv
 the <a href="http://scikit-learn.org/stable/modules/ensemble.html#regression">Gradient boosting regressor</a>. It is an ensemble-based regressor because its prediction is the collective performance of multiple weak learners (e.g. decision trees). It learns features from training dataset (<code class="language-plaintext highlighter-rouge">body_fat_train</code>) and maps all the rows to their respective targets (real numbers). The process of mapping gives a trained model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-a-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train a model</div>
+  <div class="box-title hands-on-title" id="hands-on-train-a-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train a model</div>
 
   <ol>
     <li><strong>Ensemble methods for classification and regression</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters to train the regressor:
@@ -1711,7 +1711,7 @@ These attributes are used to predict the target for a new sample and are stored 
 <p>After learning on the training dataset, we should evaluate the performance on the test dataset to know whether the algorithm learned general patterns from the training dataset or not. These patterns are used to predict a new sample and a similar accuracy is expected. Similar to the classification task, the trained model is evaluated on <code class="language-plaintext highlighter-rouge">body_fat_test</code> which predicts a target value for each row. The predicted targets are compared to the expected targets to measure the robustness of learning.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict targets using the model</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict targets using the model</div>
 
   <ol>
     <li><strong>Ensemble methods for classification and regression</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters to predict targets of test dataset using the trained model:
@@ -1735,7 +1735,7 @@ These attributes are used to predict the target for a new sample and are stored 
 <p>We will evaluate the predictions by comparing them to the expected targets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the predictions</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the predictions</div>
   <ol>
     <li><strong>Plot actual vs predicted curves and residual plots</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters to visualise the predictions:
       <ul>
@@ -1824,9 +1824,18 @@ These attributes are used to predict the target for a new sample and are stored 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/statistics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1974,7 +1983,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2076,7 +2085,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

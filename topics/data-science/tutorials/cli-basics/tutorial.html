@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1469,7 +1469,7 @@ You may have seen it in a text editor program, for example.</p>
 <p>So let’s try our first command, <code class="language-plaintext highlighter-rouge">ls</code> which is short for listing.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-open-a-jupyter-terminal-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open a Jupyter Terminal</div>
+  <div class="box-title hands-on-title" id="hands-on-open-a-jupyter-terminal-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open a Jupyter Terminal</div>
   <p>This tutorial will let you accomplish almost everything from this view, running code in the cells below directly in the training material. You can choose between running the code here, or opening up a terminal tab in which to run it.</p>
 
   <p>Here are some instructions for how to do this on various environments.</p>
@@ -1522,13 +1522,13 @@ You may have seen it in a text editor program, for example.</p>
 will print an error message such as:</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-9"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-9"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ks
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-6"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+    <div class="box-title code-out-title" id="code-out-6"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ks: command not found
 </code></pre></div>    </div>
   </blockquote>
@@ -1751,13 +1751,13 @@ information on how to use the command or program.</p>
 will usually print an error message similar to:</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-10"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-10"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls -j
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-7"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+    <div class="box-title code-out-title" id="code-out-7"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls: invalid option -- 'j'
 Try 'ls --help' for more information.
 </code></pre></div>    </div>
@@ -1770,13 +1770,13 @@ Try 'ls --help' for more information.
 <p>The other way to learn about <code class="language-plaintext highlighter-rouge">ls</code> is to type</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-11"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-11"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ man ls
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-8"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+  <div class="box-title code-out-title" id="code-out-8"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>LS(1)                                                          User Commands                                                          LS(1)
 
 NAME
@@ -2060,13 +2060,13 @@ we’re looking for, we can use <code class="language-plaintext highlighter-roug
 to move to <code class="language-plaintext highlighter-rouge">shell-lesson-data</code>.</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-12"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-12"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pwd
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-9"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+  <div class="box-title code-out-title" id="code-out-9"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/nelle/
 </code></pre></div>  </div>
 </blockquote>
@@ -2741,31 +2741,31 @@ identical file names cannot be created.</li>
   <p>What is the output of the closing <code class="language-plaintext highlighter-rouge">ls</code> command in the sequence shown below?</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-13"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-13"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pwd
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-10"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+    <div class="box-title code-out-title" id="code-out-10"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/Users/jamie/data
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-14"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-14"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ls
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-11"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+    <div class="box-title code-out-title" id="code-out-11"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proteins.dat
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-15"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-15"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir recombined
 mv proteins.dat recombined/
 cp recombined/proteins.dat ../proteins-saved.dat
@@ -2877,7 +2877,7 @@ or specifying a naming pattern using wildcards.</p>
   <p>In the example below, what does <code class="language-plaintext highlighter-rouge">cp</code> do when given several filenames and a directory name?</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-16"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-16"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir backup
 $ cp amino-acids.txt animals.txt backup/
 </code></pre></div>    </div>
@@ -2886,7 +2886,7 @@ $ cp amino-acids.txt animals.txt backup/
   <p>In the example below, what does <code class="language-plaintext highlighter-rouge">cp</code> do when given three or more file names?</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-bash-17"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+    <div class="box-title code-in-title" id="code-in-bash-17"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -F
 amino-acids.txt  animals.txt  backup/  elements/  morse.txt  pdb/
 planets.txt  salmon.txt  sunspot.txt
@@ -3137,7 +3137,7 @@ so that your final directory structure looks like this:</p>
 What would the other commands do?</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-option-1-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Option 1</div>
+    <div class="box-title code-in-title" id="code-in-option-1-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Option 1</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir 2016-05-20
 $ mkdir 2016-05-20/data
 $ mkdir 2016-05-20/data/processed
@@ -3146,7 +3146,7 @@ $ mkdir 2016-05-20/data/raw
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-option-2-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Option 2</div>
+    <div class="box-title code-in-title" id="code-in-option-2-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Option 2</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir 2016-05-20
 $ cd 2016-05-20/
 $ mkdir data/
@@ -3156,21 +3156,21 @@ $ mkdir raw processed
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-option-3-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Option 3</div>
+    <div class="box-title code-in-title" id="code-in-option-3-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Option 3</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir 2016-05-20/data/raw
 $ mkdir 2016-05-20/data/processed
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-option-4-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Option 4</div>
+    <div class="box-title code-in-title" id="code-in-option-4-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Option 4</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir -p 2016-05-20/data/raw
 $ mkdir -p 2016-05-20/data/processed
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-option-5-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Option 5</div>
+    <div class="box-title code-in-title" id="code-in-option-5-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Option 5</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir 2016-05-20
 $ cd 2016-05-20
 $ mkdir data
@@ -3317,9 +3317,18 @@ as the ‘data’ directory.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3442,8 +3451,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3712,7 +3721,7 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -3820,7 +3829,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

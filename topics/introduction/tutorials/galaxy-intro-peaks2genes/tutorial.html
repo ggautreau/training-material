@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2557,7 +2557,7 @@ The closest thing we could find is a file in GEO containing a list of the region
 <h1 id="pretreatments">Pretreatments</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-open-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Open Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-open-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Open Galaxy</div>
 
   <ol>
     <li>Browse to a Galaxy instance: the one recommended by your instructor or one in the list <strong>Galaxy instance</strong> on the head of this page</li>
@@ -2576,7 +2576,7 @@ The closest thing we could find is a file in GEO containing a list of the region
 <p>Let’s start with a fresh history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create history</div>
+  <div class="box-title hands-on-title" id="hands-on-create-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create history</div>
 
   <ol>
     <li>
@@ -2611,7 +2611,7 @@ The closest thing we could find is a file in GEO containing a list of the region
 <h2 id="data-upload">Data upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Download the list of peak regions (the file <a href="https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSE37268&amp;format=file&amp;file=GSE37268%5Fmof3%2Eout%2Ehpeak%2Etxt%2Egz"><code class="language-plaintext highlighter-rouge">GSE37268_mof3.out.hpeak.txt.gz</code></a>) from <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE37268">GEO</a> to your computer</li>
@@ -2663,7 +2663,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-and-edit-attributes-of-a-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect and edit attributes of a file</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-and-edit-attributes-of-a-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect and edit attributes of a file</div>
 
   <ol>
     <li>
@@ -2708,7 +2708,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 we also need a list of genes in mice, which we can obtain from UCSC.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-from-ucsc"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload from UCSC</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-from-ucsc"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload from UCSC</div>
 
   <ol>
     <li>
@@ -2783,7 +2783,7 @@ we also need a list of genes in mice, which we can obtain from UCSC.</p>
 <p>Let’s have a look at our files to see what we actually have here.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-view-file-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View file content</div>
+  <div class="box-title hands-on-title" id="hands-on-view-file-content"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: View file content</div>
 
   <ol>
     <li>
@@ -2831,7 +2831,7 @@ we also need a list of genes in mice, which we can obtain from UCSC.</p>
 As we can see, the peak file lacks <code class="language-plaintext highlighter-rouge">chr</code> before any chromosome number. But what happens with chromosome 20 and 21? Will it be X and Y instead? Let’s check:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-view-end-of-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: View end of file</div>
+  <div class="box-title hands-on-title" id="hands-on-view-end-of-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: View end of file</div>
 
   <ol>
     <li>Search for <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_tail_tool/9.3+galaxy1" title="Select last lines from a dataset (tail) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select last lines from a dataset (tail)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> tool and run with the following settings:
@@ -2874,7 +2874,7 @@ As we can see, the peak file lacks <code class="language-plaintext highlighter-r
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adjust-chromosome-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adjust chromosome names</div>
+  <div class="box-title hands-on-title" id="hands-on-adjust-chromosome-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adjust chromosome names</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_column/1.1.3" title="Replace Text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.3)</span> in a specific column with the following settings:
@@ -2954,7 +2954,7 @@ you want to include transcriptions factors in ChIP-seq experiments. There is no 
 <p><a href="../../images/intro_get_flanks.png" rel="noopener noreferrer"><img src="../../images/intro_get_flanks.png" alt="Get Flanks. " width="295" height="206" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-promoter-region-to-gene-records"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add promoter region to gene records</div>
+  <div class="box-title hands-on-title" id="hands-on-add-promoter-region-to-gene-records"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add promoter region to gene records</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/get_flanks/get_flanks1/1.0.0" title="Get Flanks tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Get Flanks</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.0)</span> returns flanking region/s for every gene, with the following settings:
@@ -2998,7 +2998,7 @@ you want to include transcriptions factors in ChIP-seq experiments. There is no 
 <p>You might have noticed that the UCSC file is in <code class="language-plaintext highlighter-rouge">BED</code> format and has a database associated to it. That’s what we want for our peak file as well. The <strong>Intersect</strong> tool we will use can automatically convert interval files to BED format but we’ll convert our interval file explicitly here to show how this can be achieved with Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-format-and-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change format and database</div>
+  <div class="box-title hands-on-title" id="hands-on-change-format-and-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Change format and database</div>
 
   <ol>
     <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> (pencil) icon in the history entry of our peak region file</li>
@@ -3013,7 +3013,7 @@ you want to include transcriptions factors in ChIP-seq experiments. There is no 
 <p>It’s time to find the overlapping intervals (finally!). To do that, we want to extract the genes which overlap/intersect with our peaks.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-overlaps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Overlaps</div>
+  <div class="box-title hands-on-title" id="hands-on-find-overlaps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Overlaps</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/intersect/gops_intersect_1/1.0.0" title="Intersect tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Intersect</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.0)</span> the intervals of two datasets, with the following settings:
@@ -3039,7 +3039,7 @@ you want to include transcriptions factors in ChIP-seq experiments. There is no 
 We will group the table by chromosome and count the number of genes with peaks on each chromosome</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-count-genes-on-different-chromosomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Count genes on different chromosomes</div>
+  <div class="box-title hands-on-title" id="hands-on-count-genes-on-different-chromosomes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Count genes on different chromosomes</div>
 
   <ol>
     <li><span class="tool" data-tool="Grouping1" title="Group tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Group</strong></span> data by a column and perform aggregate operation on other columns, with the following settings:
@@ -3084,7 +3084,7 @@ alphabetically).</p>
 <p>We can fix this by running a dedicated tool for sorting on our data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fix-sort-order-of-gene-counts-table"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fix sort order of gene counts table</div>
+  <div class="box-title hands-on-title" id="hands-on-fix-sort-order-of-gene-counts-table"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fix sort order of gene counts table</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sort_header_tool/1.1.1" title="Sort tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Sort</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.1)</span> data in ascending or descending order, with the following settings:
@@ -3110,7 +3110,7 @@ alphabetically).</p>
 <p>Great, we are ready to plot things!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-draw-barchart"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Draw barchart</div>
+  <div class="box-title hands-on-title" id="hands-on-draw-barchart"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Draw barchart</div>
 
   <ol>
     <li>Click on <i class="fas fa-chart-column" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> (visualize) icon on the output from the <strong>Sort</strong> tool</li>
@@ -3137,7 +3137,7 @@ Wouldn’t it be nice to just convert this history into a workflow that we’ll 
 <p>Galaxy makes this very simple with the <code class="language-plaintext highlighter-rouge">Extract workflow</code> option. This means that any time you want to build a workflow, you can just perform it manually once, and then convert it to a workflow, so that next time it will be a lot less work to do the same analysis. It also allows you to easily share or publish your analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract workflow</div>
 
   <ol>
     <li>
@@ -3220,7 +3220,7 @@ Wouldn’t it be nice to just convert this history into a workflow that we’ll 
 <p>We again need our peak file, but we’d like to work in a clean history. Instead of uploading it twice, we can copy it to a new history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-copy-history-items"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Copy history items</div>
+  <div class="box-title hands-on-title" id="hands-on-copy-history-items"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Copy history items</div>
 
   <ol>
     <li>
@@ -3246,7 +3246,7 @@ Wouldn’t it be nice to just convert this history into a workflow that we’ll 
 <p>We need to generate a new BED file from the original peak file that contains the positions of the peak summits. The start of the summit is the start of the peak (column 2) plus the location within the peak that has the highest hypothetical DNA fragment coverage (column 5, rounded down to the next smallest integer because some peak summits fall in between to bases). As the end of the peak region, we will simply define <code class="language-plaintext highlighter-rouge">start + 1</code>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-peak-summit-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create peak summit file</div>
+  <div class="box-title hands-on-title" id="hands-on-create-peak-summit-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create peak summit file</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.0" title="Compute on rows tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compute on rows</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0)</span> with the following parameters:
@@ -3283,7 +3283,7 @@ Wouldn’t it be nice to just convert this history into a workflow that we’ll 
 <p>Now we cut out just the chromosome plus the start and end of the summit:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cut-out-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Cut out columns</div>
+  <div class="box-title hands-on-title" id="hands-on-cut-out-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Cut out columns</div>
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut</strong></span> columns from a table with the following settings:
       <ul>
@@ -3318,7 +3318,7 @@ Wouldn’t it be nice to just convert this history into a workflow that we’ll 
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -3353,7 +3353,7 @@ It should look similar to below:
 <p>It’s time to reuse the workflow we created earlier.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run a workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-a-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run a workflow</div>
   <ol>
     <li>Open the workflow menu (left menu bar)</li>
     <li>Find the workflow you made in the previous section, and select the option <strong>Run</strong></li>
@@ -3371,7 +3371,7 @@ It should look similar to below:
 But wouldn’t it be more interesting to know the number of peaks in each unique gene? Let’s rerun the workflow with different settings!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-a-workflow-with-changed-settings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run a workflow with changed settings</div>
+  <div class="box-title hands-on-title" id="hands-on-run-a-workflow-with-changed-settings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run a workflow with changed settings</div>
   <ol>
     <li>Open the workflow menu (left menu bar)</li>
     <li>Find the workflow you made in the previous section, and select the option <strong>Run</strong></li>
@@ -3431,7 +3431,7 @@ But wouldn’t it be more interesting to know the number of peaks in each unique
 <p><a href="../../images/publish.png" rel="noopener noreferrer"><img src="../../images/publish.png" alt="The menu for sharing histories includes buttons for making the history accessible, publishing it on this Galaxy server, and displays a sharable link to the history. At the bottom is a button for sharing the history with individual users." width="585" height="397" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-share-history-and-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Share history and workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-share-history-and-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Share history and workflow</div>
 
   <ol>
     <li>Share one of your histories with your neighbour</li>
@@ -3499,9 +3499,18 @@ But wouldn’t it be more interesting to know the number of peaks in each unique
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/introduction/faqs/">FAQ page for the Introduction to Galaxy Analyses topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/introduction/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3733,32 +3742,32 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">52</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3269230769230769">17</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.07692307692307693">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.057692307692307696">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.1346153846153846">7</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.019230769230769232">1</td>
 			</tr>
 		   
@@ -4039,7 +4048,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

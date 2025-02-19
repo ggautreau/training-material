@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1955,7 +1955,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="step-1-get-data">Step 1: Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
   <ol>
     <li>
       <p>Create and name a new history for this tutorial.</p>
@@ -1994,7 +1994,7 @@ https://zenodo.org/record/2579279/files/RBFOX2-204-INPUT_S2_R2.fastq
 <h2 id="report-with-fastqc">Report with <strong>FastQC</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control-with-fastqc"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality control with FastQC</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control-with-fastqc"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality control with FastQC</div>
 
   <ol>
     <li>
@@ -2046,7 +2046,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 <p>In this task we are going to remove two 3’ and two 5’ adapters from the reads (Note: The eCLIP protocol uses more adapter sequences, for more information take a look in the original publication <span class="citation"><a href="#VanNostrand2016">Nostrand <i>et al.</i> 2016</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adapter-removal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adapter Removal</div>
+  <div class="box-title hands-on-title" id="hands-on-adapter-removal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adapter Removal</div>
 
   <p><strong>Cutadapt (v. 4.0)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:</p>
   <ul>
@@ -2189,7 +2189,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 <p>In this task we are going to remove the UMI at the 5’ end of the second read. We are then going to use the removed UMIs later on to de-duplicate our read library and account for PCR duplicates.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-umi-removal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: UMI Removal</div>
+  <div class="box-title hands-on-title" id="hands-on-umi-removal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: UMI Removal</div>
 
   <ol>
     <li><strong>UMI-tools extract</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2237,7 +2237,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 <h2 id="aligning-with-rna-star">Aligning with <strong>RNA STAR</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Alignment</div>
+  <div class="box-title hands-on-title" id="hands-on-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Alignment</div>
 
   <ol>
     <li><strong>RNA STAR</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2319,7 +2319,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 <h2 id="de-duplication-with-umi-tools-deduplicate">De-duplication with <strong>UMI-tools deduplicate</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-de-duplication"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: De-Duplication</div>
+  <div class="box-title hands-on-title" id="hands-on-de-duplication"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: De-Duplication</div>
 
   <ol>
     <li><strong>UMI-tools deduplicate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2369,7 +2369,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 <h2 id="quality-check-of-the-de-duplication-with-fastqc">Quality check of the de-duplication with <strong>FastQC</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-de-duplication-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: De-duplication quality control</div>
+  <div class="box-title hands-on-title" id="hands-on-de-duplication-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: De-duplication quality control</div>
 
   <ol>
     <li><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2408,7 +2408,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 <h2 id="check-the-read-coverage-with-plotfingerprint">Check the read coverage with <strong>plotFingerprint</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-the-read-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check the read coverage</div>
+  <div class="box-title hands-on-title" id="hands-on-check-the-read-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check the read coverage</div>
 
   <ol>
     <li><strong>plotFingerprint</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2458,7 +2458,7 @@ To do this, first select the “Multiple datasets” icon (two stacked pages) un
 We are therefore going to further check the correlation between our control and CLIP experiment.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-assessing-correlation-between-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assessing correlation between samples</div>
+  <div class="box-title hands-on-title" id="hands-on-assessing-correlation-between-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assessing correlation between samples</div>
 
   <ol>
     <li><strong>multiBamSummary</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2512,7 +2512,7 @@ We are therefore going to further check the correlation between our control and 
 <h2 id="peak-calling-with-peakachu">Peak calling with <strong>PEAKachu</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peak-calling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Peak calling</div>
+  <div class="box-title hands-on-title" id="hands-on-peak-calling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Peak calling</div>
 
   <ol>
     <li><strong>PEAKachu</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2581,7 +2581,7 @@ If we would <strong>increase</strong> the log2 fold-change threshold, then we wo
 <p>Lets first find out which sequence motifs RBFOX2 might preferentially bind to.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-motif-detection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Motif detection</div>
+  <div class="box-title hands-on-title" id="hands-on-motif-detection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Motif detection</div>
 
   <ol>
     <li><strong>Text reformatting</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2693,7 +2693,7 @@ If we would <strong>increase</strong> the log2 fold-change threshold, then we wo
 <p>Lets move to the next step and find out where these motifs might come from, i.e., which kind of RNAs RBFOX2 preferentially bind to. For that we will use the <code class="language-plaintext highlighter-rouge">RNA Centric Annotation System</code>. Run the tool and then try to answer the subsequent questions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-functional-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Functional analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-functional-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Functional analysis</div>
 
   <ol>
     <li><strong>RNA Centric Annotation System (v. 1.5.4)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2742,7 +2742,7 @@ If we would <strong>increase</strong> the log2 fold-change threshold, then we wo
 <p>We will first generate coverage files that gives us a better visualization for our read coverage along the genome. SAM or BAM files can be used too, but they are often to big and harder to handle, if you try to inspect the read coverage. Therefore we are going to generate a bigWig (binary form of a BedGraph) file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><strong>Extract alignment ends</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2787,7 +2787,7 @@ If we would <strong>increase</strong> the log2 fold-change threshold, then we wo
 <p><strong>Try to answer the questions for this hands-on.</strong> It will give you an idea why it would be wise to inspect the read coverage of the peaks.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-igv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: IGV</div>
+  <div class="box-title hands-on-title" id="hands-on-igv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: IGV</div>
 
   <ol>
     <li>Open IGV on your local computer.</li>
@@ -2901,9 +2901,18 @@ If we would <strong>increase</strong> the log2 fold-change threshold, then we wo
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3121,12 +3130,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -3228,7 +3237,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

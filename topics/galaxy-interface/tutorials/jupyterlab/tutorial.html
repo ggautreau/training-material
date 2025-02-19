@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1367,7 +1367,7 @@ We will introduce additional benefits of using JupyterLab as you cover the lesso
 <p>Opening up <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="JupyterLab tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JupyterLab</strong></span> is quite easy:</p>
 
 <!--SNIPPET-->
-<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch JupyterLab</div>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-jupyterlab-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-jupyterlab-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch JupyterLab in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently JupyterLab in Galaxy is available on <a href="https://live.usegalaxy.eu">Live.useGalaxy.eu</a>, <a href="https://usegalaxy.org">usegalaxy.org</a> and <a href="https://usegalaxy.eu">usegalaxy.eu</a>.</p>   <blockquote class="notranslate hands_on">     <div class="box-title hands-on-title" id="hands-on-run-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run JupyterLab</div>     <ol>       <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive Jupyter Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive Jupyter Notebook</strong></span>. Note that on some Galaxies this is called <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span>:</li>       <li>Click Run Tool</li>       <li>         <p>The tool will start running and will stay running permanently</p>         <p>This may take a moment, but once the <code class="language-plaintext highlighter-rouge">Executed notebook</code> in your history is <strong>orange</strong>, you are up and running!</p>       </li>       <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the JupyterLab instance you started.</li>       <li>Click on your JupyterLab instance</li>     </ol>   </blockquote> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-try-jupyterlab-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-try-jupyterlab-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch Try JupyterLab if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If JupyterLab is not available on the Galaxy instance:</p>   <ol>     <li>Start <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab">Try JupyterLab</a></li>   </ol> </blockquote> </blockquote>
+<blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Launch JupyterLab</div>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-jupyterlab-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-jupyterlab-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch JupyterLab in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently JupyterLab in Galaxy is available on <a href="https://live.usegalaxy.eu">Live.useGalaxy.eu</a>, <a href="https://usegalaxy.org">usegalaxy.org</a> and <a href="https://usegalaxy.eu">usegalaxy.eu</a>.</p>   <blockquote class="notranslate hands_on">     <div class="box-title hands-on-title" id="hands-on-run-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run JupyterLab</div>     <ol>       <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive Jupyter Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive Jupyter Notebook</strong></span>. Note that on some Galaxies this is called <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span>:</li>       <li>Click Run Tool</li>       <li>         <p>The tool will start running and will stay running permanently</p>         <p>This may take a moment, but once the <code class="language-plaintext highlighter-rouge">Executed notebook</code> in your history is <strong>orange</strong>, you are up and running!</p>       </li>       <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the JupyterLab instance you started.</li>       <li>Click on your JupyterLab instance</li>     </ol>   </blockquote> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-try-jupyterlab-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-try-jupyterlab-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch Try JupyterLab if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If JupyterLab is not available on the Galaxy instance:</p>   <ol>     <li>Start <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab">Try JupyterLab</a></li>   </ol> </blockquote> </blockquote>
 <p><!--END_SNIPPET--></p>
 
 <p>You should now be looking at a page with the JupyterLab interface:</p>
@@ -1386,7 +1386,7 @@ We will introduce additional benefits of using JupyterLab as you cover the lesso
 <p>Now that we are ready to start exploring JupyterLab, we will want to keep a record of the commands we are using. To do this we can start a Notebook.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-start-a-notebook"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Start a notebook</div>
+  <div class="box-title hands-on-title" id="hands-on-start-a-notebook"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Start a notebook</div>
 
   <ol>
     <li>On the left side bar, in the <strong>File Browser</strong>, double-click on the file called <strong>ipython_galaxy_notebook.ipynb</strong>. This will open the
@@ -1398,7 +1398,7 @@ default notebook in the main work area.</li>
 <p>A new notebook appears in the centre panel. Before we go any further, you should learn to save your script.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-save-a-python-notebook"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Save a Python notebook</div>
+  <div class="box-title hands-on-title" id="hands-on-save-a-python-notebook"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Save a Python notebook</div>
 
   <ol>
     <li>Click the <strong>File</strong> menu and select **Save Notebook As…
@@ -1457,7 +1457,7 @@ Alternatively, you can also:</li>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-python-libraries"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import Python libraries</div>
+  <div class="box-title hands-on-title" id="hands-on-import-python-libraries"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import Python libraries</div>
 
   <ol>
     <li>Click on a cell of your notebook to edit it (verify that it is defined as a “Code” cell)</li>
@@ -1476,7 +1476,7 @@ Alternatively, you can also:</li>
 <p>In this tutorial we are going to simply plot a simple graph using generated data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-draw-a-simple-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Draw a simple plot</div>
+  <div class="box-title hands-on-title" id="hands-on-draw-a-simple-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Draw a simple plot</div>
 
   <ol>
     <li>
@@ -1517,7 +1517,7 @@ Alternatively, you can also:</li>
 <p>If you want to save a file you generated in your notebook, use the <code class="language-plaintext highlighter-rouge">put("file_name")</code> command. That is what we are going to do with our distribution plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-save-an-jupyter-generated-image-into-a-galaxy-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Save an Jupyter generated image into a Galaxy History</div>
+  <div class="box-title hands-on-title" id="hands-on-save-an-jupyter-generated-image-into-a-galaxy-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Save an Jupyter generated image into a Galaxy History</div>
 
   <ol>
     <li>Create an image file with the figure you just draw with the command <code class="language-plaintext highlighter-rouge">fig.savefig('simpleplot.png')</code></li>
@@ -1533,7 +1533,7 @@ Alternatively, you can also:</li>
 <p>This will create a new notebook <code class="language-plaintext highlighter-rouge">.pynb</code> file in your history every time you click on this icon.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-closing-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Closing JupyterLab</div>
+  <div class="box-title hands-on-title" id="hands-on-closing-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Closing JupyterLab</div>
 
   <ol>
     <li>
@@ -1584,9 +1584,18 @@ Alternatively, you can also:</li>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/galaxy-interface/faqs/">FAQ page for the Using Galaxy and Managing your Data topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/galaxy-interface/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1714,7 +1723,7 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -1816,7 +1825,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

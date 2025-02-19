@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1616,7 +1616,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <h1 id="get-data">Get data</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-download-images-from-the-idr"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download images from the IDR</div>
+  <div class="box-title hands-on-title" id="hands-on-download-images-from-the-idr"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download images from the IDR</div>
 
   <ol>
     <li>
@@ -1686,7 +1686,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>The tool <strong>Starting Modules</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> comprises the first 4 modules of the standalone CellProfiler. It needs to be the first tool of a workflow because it sets the naming and metadata handling for the rest of tools.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-specify-metadata-to-cellprofiler"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Specify metadata to CellProfiler</div>
+  <div class="box-title hands-on-title" id="hands-on-specify-metadata-to-cellprofiler"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Specify metadata to CellProfiler</div>
 
   <ol>
     <li><strong>Starting Modules</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1756,7 +1756,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>In the first step, we will identify the nuclei that are complete, meaning that they are not touching the borders of the image.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-segment-nuclei-that-are-complete-within-the-boundaries-of-the-image"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Segment nuclei that are complete within the boundaries of the image</div>
+  <div class="box-title hands-on-title" id="hands-on-segment-nuclei-that-are-complete-within-the-boundaries-of-the-image"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Segment nuclei that are complete within the boundaries of the image</div>
 
   <ol>
     <li><strong>IdentifyPrimaryObjects</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1842,7 +1842,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mask-the-nuclei-detected"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mask the nuclei detected</div>
+  <div class="box-title hands-on-title" id="hands-on-mask-the-nuclei-detected"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mask the nuclei detected</div>
 
   <ol>
     <li><strong>ConvertObjectsToImage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1908,7 +1908,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>The nucleoli are lacking intensity in the DNA staining and therefore, we need to enhance the black holes before masking.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-detect-and-mask-dark-holes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Detect and mask dark holes</div>
+  <div class="box-title hands-on-title" id="hands-on-detect-and-mask-dark-holes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Detect and mask dark holes</div>
 
   <ol>
     <li><strong>EnhanceOrSuppressFeatures</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1947,7 +1947,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>Now that we have all the holes in one mask, we can segment the nucleoli as individual objects in the same way as we did with the nuclei. All the nucleoli can be then combined into one single image.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-segment-nucleoli-as-individual-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Segment nucleoli as individual objects</div>
+  <div class="box-title hands-on-title" id="hands-on-segment-nucleoli-as-individual-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Segment nucleoli as individual objects</div>
 
   <ol>
     <li><strong>IdentifyPrimaryObjects</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2004,7 +2004,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <figure id="figure-5" style="max-width: 90%;"><img src="../../images/tutorial-CP/img_combined_masks.png" alt="Combined mask for nuclei and nucleoli. " width="2116" height="1708" loading="lazy" /><a target="_blank" href="../../images/tutorial-CP/img_combined_masks.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Combined segmentation masks for nuclei (blue) and nucleoli (magenta).</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-convert-and-save-the-nuclei-and-nucleoli-masks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert and save the nuclei and nucleoli masks</div>
+  <div class="box-title hands-on-title" id="hands-on-convert-and-save-the-nuclei-and-nucleoli-masks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Convert and save the nuclei and nucleoli masks</div>
 
   <ol>
     <li><strong>GrayToColor</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2065,7 +2065,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <h2 id="identify-the-foreground">Identify the foreground</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-segment-all-nuclei"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Segment all nuclei</div>
+  <div class="box-title hands-on-title" id="hands-on-segment-all-nuclei"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Segment all nuclei</div>
 
   <ol>
     <li><strong>IdentifyPrimaryObjects</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2119,7 +2119,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <h2 id="remove-the-foreground-from-the-original-image">Remove the foreground from the original image</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-subtract-the-foreground-from-the-original-image"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Subtract the foreground from the original image</div>
+  <div class="box-title hands-on-title" id="hands-on-subtract-the-foreground-from-the-original-image"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Subtract the foreground from the original image</div>
 
   <p><strong>ImageMath</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:</p>
   <ul>
@@ -2175,7 +2175,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <h2 id="measure-the-granularity-texture-intensity-size-and-shape">Measure the granularity, texture, intensity, size and shape</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-measure-the-granularity-texture-intensity-size-and-shape"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Measure the granularity, texture, intensity, size and shape</div>
+  <div class="box-title hands-on-title" id="hands-on-measure-the-granularity-texture-intensity-size-and-shape"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Measure the granularity, texture, intensity, size and shape</div>
 
   <ol>
     <li><strong>MeasureGranularity</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2284,7 +2284,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>It might be relevant to compute some statistics on the number of nucleoli inside each nucleus. CellProfiler has a very interesting module to relate both objects, in which each one of the nucleoli is assigned an identifier and linked to the identifier of its parent nucleus.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-relate-nucleoli-to-their-parent-nucleus"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Relate nucleoli to their parent nucleus</div>
+  <div class="box-title hands-on-title" id="hands-on-relate-nucleoli-to-their-parent-nucleus"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Relate nucleoli to their parent nucleus</div>
 
   <ol>
     <li><strong>RelateObjects</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2309,7 +2309,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>In this section, we will measure the image quality, the area occupied by the nuclei and nucleoli in the original image and the intensity of the foreground and background.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-measure-the-image-quality"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Measure the image quality</div>
+  <div class="box-title hands-on-title" id="hands-on-measure-the-image-quality"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Measure the image quality</div>
 
   <ol>
     <li><strong>MeasureImageQuality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2420,7 +2420,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>All the parameters that we have measured related to the images and objects need to be exported to a file for each one of 6 example images analysed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-export-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Export features</div>
+  <div class="box-title hands-on-title" id="hands-on-export-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Export features</div>
 
   <p><strong>ExportToSpreadsheet</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:</p>
   <ul>
@@ -2438,7 +2438,7 @@ The images and associated metadata will be retrieved from the <a href="http://id
 <p>All the steps in our workflow (except for the <strong>IDR download</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>) have been passing through an <code class="language-plaintext highlighter-rouge">output_pipeline</code> as a parameter. This was the way to assemble all the modules from CellProfiler, now we can run all of them together!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-cellprofiler-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run CellProfiler pipeline</div>
+  <div class="box-title hands-on-title" id="hands-on-run-cellprofiler-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run CellProfiler pipeline</div>
 
   <p><strong>CellProfiler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:</p>
   <ul>
@@ -2507,9 +2507,18 @@ The images and associated metadata will be retrieved from the <a href="http://id
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/imaging/faqs/">FAQ page for the Imaging topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/imaging/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2748,7 +2757,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2830,7 +2839,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

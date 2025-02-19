@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1021,7 +1021,7 @@ One challenge in secondary metabolite discovery using genome mining requires to 
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-history-creation-and-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  History Creation and Data Upload</div>
+  <div class="box-title hands-on-title" id="hands-on-history-creation-and-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  History Creation and Data Upload</div>
 
   <ol>
     <li>
@@ -1087,7 +1087,7 @@ E.g. the workflow could be combined with metagenomic workflows, that allow to sc
 <h2 id="download-a-bacterial-genome-with-ncbi-accession-download">Download a bacterial genome with <strong>NCBI Accession Download</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ncbi_acc_download/ncbi_acc_download/0.2.8+galaxy0" title="NCBI Accession Download tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NCBI Accession Download</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.8+galaxy0)</span> with the following parameters:
@@ -1114,7 +1114,7 @@ which should be a great source for biosynthetic gene clusters (BGCs).</p>
 <h2 id="detect-bgcs-and-predict-nrps--pks-metabolite-structures-with-antismash">Detect BGCs and predict NRPS / PKS metabolite structures with <strong>Antismash</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/antismash/antismash/6.1.1+galaxy1" title="Antismash tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Antismash</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 6.1.1+galaxy1)</span> with the following parameters:
@@ -1157,7 +1157,7 @@ But prism can only be used via a web server and is therefore not integrable into
 <h2 id="collapse-single-bgc-genbank-files-into-one-with-collapse-collection">Collapse single BGC Genbank files into one with <strong>Collapse Collection</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.1.0)</span> with the following parameters:
@@ -1207,7 +1207,7 @@ However, unfortunately both tools seem to have difficulty to parse SMILES and in
 This is in fact a great chance to demonstrate how the interactive <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span> can be used to connect workflow steps, for which there is no dedicated tool yet available in Galaxy, showing the flexible nature of Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-3"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-3"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span> with the following parameters:
@@ -1332,7 +1332,7 @@ The natural compound library we are using here comprises all the compounds found
 not have a header.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-table-to-smi-format-conversion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Table to smi format conversion</div>
+  <div class="box-title hands-on-title" id="hands-on-table-to-smi-format-conversion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Table to smi format conversion</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/1.1.2" title="Text reformatting tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Text reformatting</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.2)</span> with the following parameters:
@@ -1360,7 +1360,7 @@ not have a header.</p>
 <h2 id="remove-duplicated-molecules">Remove duplicated molecules</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-duplicated-molecules"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Remove duplicated molecules</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-duplicated-molecules"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Remove duplicated molecules</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_remduplicates/openbabel_remDuplicates/3.1.1+galaxy0" title="Remove duplicated molecules tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Remove duplicated molecules</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.1+galaxy0)</span> with the following parameters:
@@ -1384,7 +1384,7 @@ not have a header.</p>
 <p>Various molecular fingerprint options can be used to convert the compounds. Details about molecular fingerprint can be found in <span class="citation"><a href="#muegge_overview_2016">Muegge and Mukherjee 2016</a></span> and <span class="citation"><a href="#capecchi_one_2020">Capecchi <i>et al.</i> 2020</a></span>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-4"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-4"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/chemfp/ctb_chemfp_mol2fps/1.5" title="Molecule to fingerprint tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Molecule to fingerprint</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.5)</span> with the following parameters:
@@ -1415,7 +1415,7 @@ not have a header.</p>
 <h2 id="compare-prediction-with-target-db-using-similarity-search">Compare prediction with target DB using <strong>Similarity Search</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-5"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-5"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/simsearch/ctb_simsearch/0.2" title="Similarity Search tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Similarity Search</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2)</span> with the following parameters:
@@ -1445,7 +1445,7 @@ natural products we can estimate the novelty of our predicted structure. This co
 mine metagenomic datasets for likely sources of uncharacterized molecular scaffolds.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-6"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-6"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/natural_product_likeness/ctb_np-likeness-calculator/2.1" title="Natural Product tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Natural Product</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1)</span> with the following parameters:
@@ -1464,7 +1464,7 @@ mine metagenomic datasets for likely sources of uncharacterized molecular scaffo
 <p>The eight properties used are: molecular weight (MW), octanol–water partition coefficient (ALOGP), number of hydrogen bond donors (HBDs), number of hydrogen bond acceptors (HBAs), molecular polar surface area (PSA), number of rotatable bonds (ROTBs), number of aromatic rings (AROMs) and number of structural alerts (ALERTS).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-7"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-7"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/qed/ctb_silicos_qed/2021.03.4+galaxy0" title="Drug-likeness tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Drug-likeness</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2021.03.4+galaxy0)</span> with the following parameters:
@@ -1524,9 +1524,18 @@ mine metagenomic datasets for likely sources of uncharacterized molecular scaffo
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/genome-annotation/faqs/">FAQ page for the Genome Annotation topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/genome-annotation/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1721,7 +1730,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1803,7 +1812,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1990,7 +1990,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h1 id="configuring-authentication">Configuring Authentication</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuring-everything"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuring everything</div>
+  <div class="box-title hands-on-title" id="hands-on-configuring-everything"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Configuring everything</div>
 
   <ol>
     <li>Edit the galaxy.j2 template file in the templates/nginx directory and update the main location block defined for serving galaxy. Add the parameters:
@@ -2014,7 +2014,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-how-to-read-a-diff"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-to-read-a-diff" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How to read a Diff</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you haven’t worked with diffs before, this can be something quite new or different.</p>   <p>If we have two files, let’s say a grocery list, in two files. We’ll call them ‘a’ and ‘b’.</p>   <blockquote class="code-2col">   <blockquote class="code-in">     <div class="box-title code-in-title" id="code-in-old"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Old</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat old<br />🍎<br />🍐<br />🍊<br />🍋<br />🍒<br />🥑<br /></code></pre></div>    </div>   </blockquote>   <blockquote class="code-out">     <div class="box-title code-out-title" id="code-out-new"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: New</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat new<br />🍎<br />🍐<br />🍊<br />🍋<br />🍍<br />🥑<br /></code></pre></div>    </div>   </blockquote> </blockquote>   <p>We can see that they have some different entries. We’ve removed 🍒 because they’re awful, and replaced them with an 🍍</p>   <p>Diff lets us compare these files</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff old new<br />5c5<br />&lt; 🍒<br /><span class="nt">---</span><br /><span class="o">&gt;</span> 🍍<br /></code></pre></div></div>   <p>Here we see that 🍒 is only in a, and 🍍 is only in b. But otherwise the files are identical.</p>   <p>There are a couple different formats to diffs, one is the ‘unified diff’</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> old new<br /><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:06:36.340962616 +0100<br />@@ <span class="nt">-3</span>,4 +3,4 @@<br /> 🍊<br /> 🍋<br />-🍒<br />+🍍<br /> 🥑<br /></code></pre></div></div>   <p>This is basically what you see in the training materials which gives you a lot of context about the changes:</p>   <ul>   <li><code class="language-plaintext highlighter-rouge">--- old</code> is the ‘old’ file in our view</li>   <li><code class="language-plaintext highlighter-rouge">+++ new</code> is the ‘new’ file</li>   <li>@@ these lines tell us where the change occurs and how many lines are added or removed.</li>   <li>Lines starting with a - are removed from our ‘new’ file</li>   <li>Lines with a + have been added.</li> </ul>   <p>So when you go to apply these diffs to your files in the training:</p>   <ol>   <li>Ignore the header</li>   <li>Remove lines starting with - from your file</li>   <li>Add lines starting with + to your file</li> </ol>   <p>The other lines (🍊/🍋 and 🥑) above just provide “context”, they help you know where a change belongs in a file, but <strong>should not be edited</strong> when you’re making the above change. Given the above diff, you would find a line with a 🍒, and replace it with a 🍍</p>   <h4 id="added--removed-lines">Added &amp; Removed Lines</h4>   <p>Removals are very easy to spot, we just have removed lines</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:10:14.370722802 +0100<br />@@ <span class="nt">-4</span>,3 +4,2 @@<br /> 🍋<br /> 🍒<br />-🥑<br /></code></pre></div></div>   <p>And additions likewise are very easy, just add a new line, between the other lines in your file.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:11:11.422135393 +0100<br />@@ <span class="nt">-1</span>,3 +1,4 @@<br /> 🍎<br />+🍍<br /> 🍐<br /> 🍊<br /></code></pre></div></div>   <h4 id="completely-new-files">Completely new files</h4>   <p>Completely new files look a bit different, there the “old” file is <code class="language-plaintext highlighter-rouge">/dev/null</code>, the empty file in a Linux machine.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> /dev/null old<br /><span class="nt">---</span> /dev/null	2022-02-15 11:47:16.100000270 +0100<br />+++ old	2022-02-16 14:06:19.697132568 +0100<br />@@ <span class="nt">-0</span>,0 +1,6 @@<br />+🍎<br />+🍐<br />+🍊<br />+🍋<br />+🍒<br />+🥑<br /></code></pre></div></div>   <p>And removed files are similar, except with the new file being /dev/null</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ /dev/null	2022-02-15 11:47:16.100000270 +0100<br />@@ <span class="nt">-1</span>,6 +0,0 @@<br />-🍎<br />-🍐<br />-🍊<br />-🍋<br />-🍒<br />-🥑<br /></code></pre></div></div> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-how-to-read-a-diff"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-to-read-a-diff" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How to read a Diff</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you haven’t worked with diffs before, this can be something quite new or different.</p>   <p>If we have two files, let’s say a grocery list, in two files. We’ll call them ‘a’ and ‘b’.</p>   <blockquote class="code-2col">   <blockquote class="code-in">     <div class="box-title code-in-title" id="code-in-old"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Old</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat old<br />🍎<br />🍐<br />🍊<br />🍋<br />🍒<br />🥑<br /></code></pre></div>    </div>   </blockquote>   <blockquote class="code-out">     <div class="box-title code-out-title" id="code-out-new"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: New</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat new<br />🍎<br />🍐<br />🍊<br />🍋<br />🍍<br />🥑<br /></code></pre></div>    </div>   </blockquote> </blockquote>   <p>We can see that they have some different entries. We’ve removed 🍒 because they’re awful, and replaced them with an 🍍</p>   <p>Diff lets us compare these files</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff old new<br />5c5<br />&lt; 🍒<br /><span class="nt">---</span><br /><span class="o">&gt;</span> 🍍<br /></code></pre></div></div>   <p>Here we see that 🍒 is only in a, and 🍍 is only in b. But otherwise the files are identical.</p>   <p>There are a couple different formats to diffs, one is the ‘unified diff’</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> old new<br /><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:06:36.340962616 +0100<br />@@ <span class="nt">-3</span>,4 +3,4 @@<br /> 🍊<br /> 🍋<br />-🍒<br />+🍍<br /> 🥑<br /></code></pre></div></div>   <p>This is basically what you see in the training materials which gives you a lot of context about the changes:</p>   <ul>   <li><code class="language-plaintext highlighter-rouge">--- old</code> is the ‘old’ file in our view</li>   <li><code class="language-plaintext highlighter-rouge">+++ new</code> is the ‘new’ file</li>   <li>@@ these lines tell us where the change occurs and how many lines are added or removed.</li>   <li>Lines starting with a - are removed from our ‘new’ file</li>   <li>Lines with a + have been added.</li> </ul>   <p>So when you go to apply these diffs to your files in the training:</p>   <ol>   <li>Ignore the header</li>   <li>Remove lines starting with - from your file</li>   <li>Add lines starting with + to your file</li> </ol>   <p>The other lines (🍊/🍋 and 🥑) above just provide “context”, they help you know where a change belongs in a file, but <strong>should not be edited</strong> when you’re making the above change. Given the above diff, you would find a line with a 🍒, and replace it with a 🍍</p>   <h4 id="added--removed-lines">Added &amp; Removed Lines</h4>   <p>Removals are very easy to spot, we just have removed lines</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:10:14.370722802 +0100<br />@@ <span class="nt">-4</span>,3 +4,2 @@<br /> 🍋<br /> 🍒<br />-🥑<br /></code></pre></div></div>   <p>And additions likewise are very easy, just add a new line, between the other lines in your file.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:11:11.422135393 +0100<br />@@ <span class="nt">-1</span>,3 +1,4 @@<br /> 🍎<br />+🍍<br /> 🍐<br /> 🍊<br /></code></pre></div></div>   <h4 id="completely-new-files">Completely new files</h4>   <p>Completely new files look a bit different, there the “old” file is <code class="language-plaintext highlighter-rouge">/dev/null</code>, the empty file in a Linux machine.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> /dev/null old<br /><span class="nt">---</span> /dev/null	2022-02-15 11:47:16.100000270 +0100<br />+++ old	2022-02-16 14:06:19.697132568 +0100<br />@@ <span class="nt">-0</span>,0 +1,6 @@<br />+🍎<br />+🍐<br />+🍊<br />+🍋<br />+🍒<br />+🥑<br /></code></pre></div></div>   <p>And removed files are similar, except with the new file being /dev/null</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ /dev/null	2022-02-15 11:47:16.100000270 +0100<br />@@ <span class="nt">-1</span>,6 +0,0 @@<br />-🍎<br />-🍐<br />-🍊<br />-🍋<br />-🍒<br />-🥑<br /></code></pre></div></div> </blockquote>
       <p><!--END_SNIPPET--></p>
 
       <blockquote class="tip">
@@ -2105,7 +2105,7 @@ This can happen mostly when some users have command line access to the Galaxy se
 <p>You should now be presented with a password dialog when attempting to load the Galaxy UI.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-testing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Testing</div>
+  <div class="box-title hands-on-title" id="hands-on-testing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Testing</div>
 
   <ol>
     <li>
@@ -2143,7 +2143,7 @@ This can happen mostly when some users have command line access to the Galaxy se
 <p>We don’t want to leave Galaxy this way for the rest of our workshop.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-reverting-the-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reverting the changes</div>
+  <div class="box-title hands-on-title" id="hands-on-reverting-the-changes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Reverting the changes</div>
 
   <ol>
     <li>
@@ -2199,9 +2199,18 @@ This can happen mostly when some users have command line access to the Galaxy se
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/admin/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2333,7 +2342,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2415,7 +2424,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

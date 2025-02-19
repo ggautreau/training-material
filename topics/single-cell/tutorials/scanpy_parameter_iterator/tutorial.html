@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1758,7 +1758,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Here are several ways of getting our toy dataset – choose whichever you like!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 1: Data upload - Import history</div>
+  <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 1: Data upload - Import history</div>
 
   <ol>
     <li>
@@ -1776,7 +1776,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 2: Data upload - Add to history</div>
+  <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 2: Data upload - Add to history</div>
 
   <ol>
     <li>
@@ -1847,7 +1847,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>The kNN graph will be needed for plotting a UMAP. According to the <a href="https://github.com/lmcinnes/umap">UMAP developers</a>: “Larger neighbor values will result in more global structure being preserved at the loss of detailed local structure. In general this parameter should often be in the range 5 to 50, with a choice of 10 to 15 being a sensible default”. Therefore, let’s pick some values bigger and smaller than 15 to check how it changes the final UMAP. This is where the Parameter Iterator comes in!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-set-your-values-in-parameter-iterator"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Set your values in Parameter Iterator</div>
+  <div class="box-title hands-on-title" id="hands-on-set-your-values-in-parameter-iterator"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Set your values in Parameter Iterator</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_parameter_iterator/scanpy_parameter_iterator/0.0.1+galaxy9" title="Scanpy ParameterIterator tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy ParameterIterator</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.1+galaxy9)</span> with the following parameters:
@@ -1878,7 +1878,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>The output of the Parameter Iterator is the list of datasets. We will be working on dataset collections quite a lot, so if you want to gain more understanding of collection operations, visit the <a href="/training-material/topics/galaxy-interface/tutorials/collections/tutorial.html">corresponding tutorial</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-derive-knn-graph-with-iterated-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Derive kNN graph with iterated parameter</div>
+  <div class="box-title hands-on-title" id="hands-on-derive-knn-graph-with-iterated-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Derive kNN graph with iterated parameter</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.8.1+galaxy9" title="Scanpy ComputeGraph tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy ComputeGraph</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -1919,7 +1919,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <figure id="figure-2" style="max-width: 90%;"><img src="../../images/scrna-casestudy_parameter-iterator/workflow_n-neighbours.png" alt="Image showing the step we are at: after Scanpy RunPCA, already run Scanpy ComputeGraph, and before Scanpy RunTSNE, Scanpy RunUMAP, Scanpy FindCluster, Scanpy PlotEmbed. " width="3360" height="804" loading="lazy" /><a target="_blank" href="../../images/scrna-casestudy_parameter-iterator/workflow_n-neighbours.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> We used the Parameter Iterator for the k nearest neighbours to derive the kNN graph. Now we’ll complete our small workflow to see the differences at the end.</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-complete-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Complete the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-complete-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Complete the workflow</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_tsne/scanpy_run_tsne/1.8.1+galaxy9" title="Scanpy RunTSNE tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy RunTSNE</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -1962,7 +1962,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>The differences will only appear in the UMAP embedding, so we’ll plot only them. However, when you run your own analysis, you might want to check if there are changes in other embeddings as well.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-umap-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot UMAP embedding</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-umap-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot UMAP embedding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PlotEmbed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -1988,7 +1988,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>Here is the answer: The datasets that are included in the collections can be accessed separately if you go to your history and click on <em>Show hidden</em> (<i class="fas fa-eye-slash" aria-hidden="true"></i><span class="visually-hidden">galaxy-show-hidden</span> icon). You can bring each individual dataset to the visible and active datasets by clicking <em>Unhide</em>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-unhide-the-dataset-of-interest"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Unhide the dataset of interest</div>
+  <div class="box-title hands-on-title" id="hands-on-unhide-the-dataset-of-interest"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Unhide the dataset of interest</div>
   <ol>
     <li>In <em>Show hidden</em> find the dataset <code class="language-plaintext highlighter-rouge">Scanpy ComputeGraph on data X and data Y: Graph object AnnData</code> with the tag <code class="language-plaintext highlighter-rouge">#n-neighbours_15</code> (or any value that you want to go forward with).</li>
     <li>Click on <em>Unhide</em></li>
@@ -2005,7 +2005,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>The next tool in our workflow is Scanpy RunTSNE, which contains the perplexity parameter. Although the tool description says that this value should be an integer, we tested it with float values and it works. Therefore, you can use ‘Step increase values to be iterated’. Keep in mind that perplexity should take values between 5 and 50. Let’s run the Parameter Iterator again.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-set-your-values-in-parameter-iterator-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Set your values in Parameter Iterator</div>
+  <div class="box-title hands-on-title" id="hands-on-set-your-values-in-parameter-iterator-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Set your values in Parameter Iterator</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_parameter_iterator/scanpy_parameter_iterator/0.0.1+galaxy9" title="Scanpy ParameterIterator tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy ParameterIterator</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.1+galaxy9)</span> with the following parameters:
@@ -2036,7 +2036,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-runtsne-with-iterated-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  RunTSNE with iterated parameter</div>
+  <div class="box-title hands-on-title" id="hands-on-runtsne-with-iterated-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  RunTSNE with iterated parameter</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_tsne/scanpy_run_tsne/1.8.1+galaxy9" title="Scanpy RunTSNE tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy RunTSNE</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
       <ul>
@@ -2059,7 +2059,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>Changing the value of perplexity will only affect the tSNE graphs, so we can complete the workflow and compare the tSNE plots to choose the best value for further analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-complete-the-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Complete the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-complete-the-workflow-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Complete the workflow</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_umap/scanpy_run_umap/1.8.1+galaxy9" title="Scanpy RunUMAP tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy RunUMAP</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
       <ul>
@@ -2091,7 +2091,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-tsne-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot tSNE embedding</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-tsne-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot tSNE embedding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PlotEmbed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2119,7 +2119,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>The input data for the <strong>Scanpy FindCluster</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> is the output of <strong>Scanpy RunUMAP</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>, so let’s get this single dataset with the parameter values (from previous tools) of our choice, that is n-neighbours=15 and perplexity=30.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-unhide-the-dataset-of-interest-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Unhide the dataset of interest</div>
+  <div class="box-title hands-on-title" id="hands-on-unhide-the-dataset-of-interest-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Unhide the dataset of interest</div>
   <ol>
     <li>In <em>Show hidden</em> find the dataset <code class="language-plaintext highlighter-rouge">Scanpy RunUMAP on data X: UMAP object AnnData</code> with the tags <code class="language-plaintext highlighter-rouge">#n-neighbours_15</code> and <code class="language-plaintext highlighter-rouge">#perplexity_30</code> (or any value that you want to go forward with).</li>
     <li>Click on <em>Unhide</em></li>
@@ -2131,7 +2131,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>The last tool that we can use Parameter Iterator for is <strong>Scanpy FindCluster</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>. We will iterate over the resolution values. In this case, those values can be floats, so you can use either ‘List of all parameter values to be iterated’ or ‘Step increase values to be iterated’. Keep in mind that when it comes to the resolution, a high value means more and smaller clusters.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-set-your-values-in-parameter-iterator-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Set your values in Parameter Iterator</div>
+  <div class="box-title hands-on-title" id="hands-on-set-your-values-in-parameter-iterator-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Set your values in Parameter Iterator</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_parameter_iterator/scanpy_parameter_iterator/0.0.1+galaxy9" title="Scanpy ParameterIterator tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy ParameterIterator</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.1+galaxy9)</span> with the following parameters:
@@ -2162,7 +2162,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-findcluster-with-iterated-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  FindCluster with iterated parameter</div>
+  <div class="box-title hands-on-title" id="hands-on-findcluster-with-iterated-parameter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  FindCluster with iterated parameter</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_find_cluster/scanpy_find_cluster/1.8.1+galaxy9" title="Scanpy FindCluster tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy FindCluster</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
       <ul>
@@ -2186,7 +2186,7 @@ For the detailed explanation of the tools presented above, check out <a href="/t
 <p>You can see the effect of resolution parameter on all embeddings: UMAP, tSNE and PCA so you can plot them all and compare the granularity of the clusters. It is also useful to see how the equal increments affect the clustering and what is the rate of change of the granularity.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-embeddings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot the embeddings</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-embeddings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot the embeddings</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PlotEmbed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2293,9 +2293,18 @@ For the detailed explanation of the tools presented above, check out <a href="/t
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2422,8 +2431,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2595,7 +2604,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2677,7 +2686,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

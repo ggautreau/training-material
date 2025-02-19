@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1137,7 +1137,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setup-your-local-galaxy-instance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setup your local Galaxy instance</div>
+  <div class="box-title hands-on-title" id="hands-on-setup-your-local-galaxy-instance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Setup your local Galaxy instance</div>
 
   <ol>
     <li>Use GitHub UI to fork Galaxy’s repository at <code class="language-plaintext highlighter-rouge">galaxyproject/galaxy</code>.</li>
@@ -1145,7 +1145,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Clone your forked repository to a local path, further referred to as <code class="language-plaintext highlighter-rouge">GALAXY_ROOT</code> and <code class="language-plaintext highlighter-rouge">cd</code> into <code class="language-plaintext highlighter-rouge">GALAXY_ROOT</code>. Note that we specify the tutorial branch with the <code class="language-plaintext highlighter-rouge">-b</code> option:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/&lt;your-username&gt;/galaxy GALAXY_ROOT
 <span class="nb">cd </span>GALAXY_ROOT
 </code></pre></div>        </div>
@@ -1155,7 +1155,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Before we can use Galaxy, we need to create a virtual environment and install the required dependencies. This is generally done with the <code class="language-plaintext highlighter-rouge">common_startup.sh</code> script:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash scripts/common_startup.sh <span class="nt">--dev-wheels</span>
 </code></pre></div>        </div>
       </blockquote>
@@ -1166,7 +1166,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Activate your new virtual environment:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">.</span> .venv/bin/activate
 </code></pre></div>        </div>
       </blockquote>
@@ -1177,7 +1177,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Finally, let’s create a new branch for your edits:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> my-training
 </code></pre></div>        </div>
       </blockquote>
@@ -1186,13 +1186,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
       <blockquote class="code-2col">
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+          <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git branch
 </code></pre></div>          </div>
         </blockquote>
 
         <blockquote class="code-out">
-          <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+          <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  training
 <span class="k">*</span> my-training
 </code></pre></div>          </div>
@@ -1566,7 +1566,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Run the tests to verify they pass. You can use the <code class="language-plaintext highlighter-rouge">pytest</code> command:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest <span class="nb">test</span>/unit/util/test_bytesize.py
 </code></pre></div>  </div>
 </blockquote>
@@ -1764,7 +1764,7 @@ following. Note that the test function takes 2 additional arguments.</p>
 <p>Now run the tests for this module:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pytest <span class="nb">test</span>/unit/data/security/test_validate_user_input.py
 </code></pre></div>  </div>
 </blockquote>
@@ -2255,9 +2255,16 @@ the fixtures outside the class body, so that they can be reused by other test co
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/dev/faqs/">FAQ page for the Development in Galaxy topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/dev/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2389,7 +2396,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2471,7 +2478,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

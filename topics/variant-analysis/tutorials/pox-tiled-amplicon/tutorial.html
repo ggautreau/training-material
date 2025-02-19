@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1784,7 +1784,7 @@ Likewise, we will use a 5’-masked genome for the mapping of the “pool 2” r
 <p>Any analysis should get its own Galaxy history. So let’s start by creating a new one:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-the-galaxy-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare the Galaxy history</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-the-galaxy-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare the Galaxy history</div>
 
   <ol>
     <li>
@@ -1850,7 +1850,7 @@ This gives us the opportunity to evaluate the correctness of our analysis by com
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get the data</div>
+  <div class="box-title hands-on-title" id="hands-on-get-the-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get the data</div>
 
   <ol>
     <li>
@@ -2081,7 +2081,7 @@ Likewise, for the “pool2” read mapping, we would like to use a reference ver
 <p>As this is a complex task that would take a considerable amount of time to perform step-by-step via manual tool runs, we are providing a pre-built workflow for you that you only need to import and run on the input data in your history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-and-run-the-reference-masking-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import and run the reference masking workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-import-and-run-the-reference-masking-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import and run the reference masking workflow</div>
 
   <ol>
     <li>Go to the training material <a href="workflows/">page for this workflow</a> and use one of the options listed there to import the workflow into your account on your Galaxy server.</li>
@@ -2165,7 +2165,7 @@ Also note that amplicon 12 is contained in both pools and the masking takes this
 <p>The tool <strong>fastp</strong> lets us perform these tasks and obtain a nice quality report for our reads before and after processing in one go, but many other options exist to perform sequenced reads quality control and trimming/filtering in Galaxy, and the dedicated tutorial on <a href="/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html">quality control</a> introduces more of them.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-qc-and-read-trimming-filtering-with-fastp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: QC and read trimming/filtering with fastp</div>
+  <div class="box-title hands-on-title" id="hands-on-qc-and-read-trimming-filtering-with-fastp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: QC and read trimming/filtering with fastp</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0" title="fastp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>fastp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.23.2+galaxy0)</span> on the collection of <strong>pool1</strong> reads
@@ -2272,7 +2272,7 @@ quality standards that are good enough for many (including training) purposes.</
 <p>We are now ready to map each pool of each sample to the corresponding masked reference. We will use the tool BWA-MEM with essentially default settings for this purpose. As shown in figure 1, however, we want to merge the mapping results afterwards, but still be able to tell mapped reads from pool 1 and pool 2 apart. To this end, we need to tag reads with <code class="language-plaintext highlighter-rouge">pool1</code> and <code class="language-plaintext highlighter-rouge">pool2</code> read group identifiers, respectively, at the mapping step. Just because a sample has pool1 and pool2 reads it is still just one sample though, and we are going to express that fact through a common sample name (which we let BWA-MEM autodetect as the name of the collection elements).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-read-mapping-and-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read mapping and quality control</div>
+  <div class="box-title hands-on-title" id="hands-on-read-mapping-and-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read mapping and quality control</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2" title="Map with BWA-MEM tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with BWA-MEM</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.17.2)</span> for <strong>pool1</strong> data
@@ -2345,7 +2345,7 @@ When we do this, Galaxy will recognize that the tool cannot handle this, but tha
 <p>We can do the necessary restructuring in two steps, then pass the result to <strong>samtools merge</strong>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-reorganize-the-data-and-merge-across-pools-within-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reorganize the data and merge across pools within samples</div>
+  <div class="box-title hands-on-title" id="hands-on-reorganize-the-data-and-merge-across-pools-within-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Reorganize the data and merge across pools within samples</div>
 
   <ol>
     <li><span class="tool" data-tool="__ZIP_COLLECTION__" title="Zip collections tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Zip collections</strong></span> with the following parameters
@@ -2470,7 +2470,7 @@ When we do this, Galaxy will recognize that the tool cannot handle this, but tha
 <p>Finally, we will use <strong>Qualimap BamQC</strong> to generate a quality report on the trimmed and filtered mapped reads, which we’ll inspect to judge whether read mapping worked well enough for consensus generation purposes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapped-reads-filtering-and-trimming-and-quality-control-for-mappings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapped reads filtering and trimming and quality control for mappings</div>
+  <div class="box-title hands-on-title" id="hands-on-mapped-reads-filtering-and-trimming-and-quality-control-for-mappings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mapped reads filtering and trimming and quality control for mappings</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0" title="Samtools view tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools view</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.15.1+galaxy0)</span> for filtering the mapped reads
@@ -2568,7 +2568,7 @@ The “Coverage Histogram” plot also reveals that the coverage distribution fo
 <p><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">galaxy-info</span> All of the above limits for consensus base calling are arbitrary to some degree, and depend somewhat on the quality of the sequencing data. With very high overall coverage, for example, it is possible to increase the coverage threshold, but if you increase that threshold too much, you may end up with a consensus sequence consisting mostly of Ns.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-consensus-building"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Consensus building</div>
+  <div class="box-title hands-on-title" id="hands-on-consensus-building"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Consensus building</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ivar_consensus/ivar_consensus/1.4.2+galaxy0" title="ivar consensus tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>ivar consensus</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.4.2+galaxy0)</span>
@@ -2612,7 +2612,7 @@ The “Coverage Histogram” plot also reveals that the coverage distribution fo
 <p>Luckily, there is a tool to help us, and we have even used it before to check the masking of the reference genome!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-consensus-sequences-for-unresolved-bases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check consensus sequences for unresolved bases</div>
+  <div class="box-title hands-on-title" id="hands-on-check-consensus-sequences-for-unresolved-bases"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check consensus sequences for unresolved bases</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/mbernt/fasta_regex_finder/fasta_regex_finder/0.1.0" title="Fasta regular expression finder tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Fasta regular expression finder</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span>
@@ -2688,7 +2688,7 @@ and on these shorter sequences the binding site of the 3’-most primer would be
 <p>This leaves us with the tasks of obtaining the sequence for parent P1 (accession number: KX764644) and of combining this sequence, our reference and our two consensus sequences into an MSA.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-build-multiple-sequence-alignment-between-samples-and-two-lsdv-references"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Build multiple-sequence alignment between samples and two LSDV references</div>
+  <div class="box-title hands-on-title" id="hands-on-build-multiple-sequence-alignment-between-samples-and-two-lsdv-references"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Build multiple-sequence alignment between samples and two LSDV references</div>
 
   <ol>
     <li>
@@ -2770,7 +2770,7 @@ and on these shorter sequences the binding site of the 3’-most primer would be
 <p>For a rather long MSA like this one, the second approach may be faster, but the visual one may still be easier to understand. So lets go through both of them.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-the-multiple-sequence-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize the multiple-sequence alignment</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-the-multiple-sequence-alignment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize the multiple-sequence alignment</div>
 
   <ol>
     <li>Visualize the multiple-sequence alignment
@@ -2792,7 +2792,7 @@ and on these shorter sequences the binding site of the 3’-most primer would be
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-list-of-snvs-between-aligned-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate list of SNVs between aligned sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-list-of-snvs-between-aligned-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate list of SNVs between aligned sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ucsc_fatovcf/fatovcf/426+galaxy0" title="faToVcf tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>faToVcf</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 426+galaxy0)</span>
@@ -2860,7 +2860,7 @@ To have those listed, you would have to run the tool again with AF325528.1 as th
 <p>Instead of downloading the Genbank sequences into Galaxy and running yet another alignment job, we will take a shortcut this time and just do a BLAST of our consensus sequences using the public NCBI BLAST service:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-ncbi-blast-of-consensus-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: NCBI BLAST of consensus sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-ncbi-blast-of-consensus-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: NCBI BLAST of consensus sequences</div>
 
   <ol>
     <li>Click on the collection of generated consensus sequences in your history; output of <strong>ivar consensus</strong></li>
@@ -2891,7 +2891,7 @@ The MZ577076.1 Genbank sequence is reported to have a length of 150,664 bases so
 <p>So if our 20L70 consensus is identical to the published 20L70 sequence, it should also be identical to our 20L81 sequence. One way to confirm the identity of two sequences is to calculate checksums for both of them and see if they match. Obtaining a checksum of an entire dataset is possible in Galaxy with the tool <strong>Secure Hash / Message Digest</strong>, but makes limited sense when the goal is to compare FASTA sequences as these will typically differ in the sequence title line, can have different line breaks structure in the sequence part, or differ in case of any number of bases. That’s why a specialized tool is needed that only compares the sequences themselves.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-checking-two-sequences-for-identity"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Checking two sequences for identity</div>
+  <div class="box-title hands-on-title" id="hands-on-checking-two-sequences-for-identity"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Checking two sequences for identity</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/wolma/mimodd_main/mimodd_info/0.1.8_1" title="MiModD File Information tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MiModD File Information</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.8_1)</span>
@@ -2966,9 +2966,18 @@ The MZ577076.1 Genbank sequence is reported to have a length of 150,664 bases so
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/variant-analysis/faqs/">FAQ page for the Variant Analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/variant-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3257,12 +3266,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">1</td>
 			</tr>
 		   
@@ -3375,7 +3384,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1565,7 +1565,7 @@ analysis steps, please see the <a href="/training-material/topics/genome-annotat
 <p>Maker will align the transcript and protein sequences on the genome sequence to determine gene positions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1616,7 +1616,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-choose-your-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Choose your Genome</div>
+  <div class="box-title hands-on-title" id="hands-on-choose-your-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Choose your Genome</div>
 
   <ol>
     <li>
@@ -1647,7 +1647,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>Before running the full annotation process, you need first to evaluate the quality of the sequence. It will give you a good idea of what you can expect from it at the end of the annotation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-genome-sequence-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get genome sequence statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-get-genome-sequence-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get genome sequence statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/1.0.1" title="Fasta Statistics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Fasta Statistics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span> with the following parameters:
@@ -1681,7 +1681,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>We will first run this tool on the genome sequence to evaluate its quality.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-busco-on-the-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run Busco on the genome</div>
+  <div class="box-title hands-on-title" id="hands-on-run-busco-on-the-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run Busco on the genome</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -1741,7 +1741,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>For this first round, we configure Maker to construct gene models only by aligning <a href="https://en.wikipedia.org/wiki/Expressed_sequence_tag">ESTs</a> and proteins to the genome. This will produce a first draft annotation that we will improve in the next steps.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-first-draft-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: First draft annotation with Maker</div>
+  <div class="box-title hands-on-title" id="hands-on-first-draft-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: First draft annotation with Maker</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11" title="Maker tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Maker</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> with the following parameters:
@@ -1798,7 +1798,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>First, use the <code class="language-plaintext highlighter-rouge">Genome annotation statistics</code> that will compute some general statistics on the annotation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get annotation statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get annotation statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4" title="Genome annotation statistics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Genome annotation statistics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.4)</span> with the following parameters:
@@ -1842,7 +1842,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>First we need to compute all the transcript sequences from the Maker annotation, using <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.1" title="GFFread tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFFread</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1.1)</span>. This tool will compute the sequence of each transcript that was predicted by <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11" title="Maker tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Maker</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> and write them all in a FASTA file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract transcript sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract transcript sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.1" title="GFFread tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFFread</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1.1)</span> with the following parameters:
@@ -1869,7 +1869,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>Now run BUSCO with the predicted transcript sequences:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-busco"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run BUSCO</div>
+  <div class="box-title hands-on-title" id="hands-on-run-busco"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run BUSCO</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -1908,7 +1908,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>We will use two of the most widely used ab-initio predictors: SNAP and Augustus. Before using it within Maker, we need to train them with the first annotation draft we produced in the previous steps. We know the quality of this draft is not perfect, but only the best scoring genes (ie the ones having the strongest evidences) will be retained to train the predictors.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-snap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train SNAP</div>
+  <div class="box-title hands-on-title" id="hands-on-train-snap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train SNAP</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snap_training/snap_training/2013_11_29+galaxy1" title="Train SNAP tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Train SNAP</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2013_11_29+galaxy1)</span> with the following parameters:
@@ -1924,7 +1924,7 @@ https://zenodo.org/records/4406623/files/augustus_training_2.tar.gz?download=1
 <p>Augustus is trained in a very similar way.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-augustus"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train Augustus</div>
+  <div class="box-title hands-on-title" id="hands-on-train-augustus"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train Augustus</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/augustus_training/augustus_training/3.3.3" title="Train Augustus tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Train Augustus</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.3.3)</span> with the following parameters:
@@ -1950,7 +1950,7 @@ But this time, enable ab-initio gene prediction, and input the output of <span c
 We also disable inferring gene predictions directly from all ESTs and proteins: now we want Maker to infer gene predictions by reconciliating evidence alignments <em>and</em> ab-initio gene predictions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-second-draft-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Second draft annotation with Maker</div>
+  <div class="box-title hands-on-title" id="hands-on-second-draft-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Second draft annotation with Maker</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11" title="Maker tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Maker</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> with the following parameters:
@@ -2002,7 +2002,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>Do we get a better result from Maker after this second run? Let’s run the same tools as after the first run, and compare the results.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get annotation statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get annotation statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4" title="Genome annotation statistics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Genome annotation statistics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.4)</span> with the following parameters:
@@ -2022,7 +2022,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <h2 id="busco-1">Busco</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract transcript sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract transcript sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.1" title="GFFread tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFFread</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1.1)</span> with the following parameters:
@@ -2049,7 +2049,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>Now run BUSCO with the predicted transcript sequences:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-busco-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run BUSCO</div>
+  <div class="box-title hands-on-title" id="hands-on-run-busco-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run BUSCO</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -2088,7 +2088,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>To get better results, we are going to perform a second training of SNAP and Augustus, and then run Maker for a third (final) time.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-snap-and-augustus"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train SNAP and Augustus</div>
+  <div class="box-title hands-on-title" id="hands-on-train-snap-and-augustus"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train SNAP and Augustus</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snap_training/snap_training/2013_11_29+galaxy1" title="Train SNAP tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Train SNAP</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2013_11_29+galaxy1)</span> with the following parameters:
@@ -2117,7 +2117,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>Let’s run the final round of Maker, in the same way as we did for the second run.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-final-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Final annotation with Maker</div>
+  <div class="box-title hands-on-title" id="hands-on-final-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Final annotation with Maker</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11" title="Maker tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Maker</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> with the following parameters:
@@ -2166,7 +2166,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>Do we get a better result from Maker after this third run? Let’s run the same tools as after the first and second run, and compare the results.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get annotation statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get annotation statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4" title="Genome annotation statistics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Genome annotation statistics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.4)</span> with the following parameters:
@@ -2186,7 +2186,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <h2 id="busco-2">Busco</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract transcript sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract transcript sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.1" title="GFFread tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFFread</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1.1)</span> with the following parameters:
@@ -2215,7 +2215,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>Now run BUSCO with the predicted transcript sequences:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-busco-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run BUSCO</div>
+  <div class="box-title hands-on-title" id="hands-on-run-busco-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run BUSCO</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -2250,7 +2250,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>If you look at the content of the <code class="language-plaintext highlighter-rouge">final annotation</code> dataset, you will notice that the gene names are long, complicated, and not very readable. That’s because Maker assign them automatic names based on the way it computed each gene model. We are now going to automatically assign more readable names.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-gene-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change gene names</div>
+  <div class="box-title hands-on-title" id="hands-on-change-gene-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Change gene names</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker_map_ids/maker_map_ids/2.31.11" title="Map annotation ids tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map annotation ids</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> with the following parameters:
@@ -2277,7 +2277,7 @@ We also disable inferring gene predictions directly from all ESTs and proteins: 
 <p>With Galaxy, you can visualize the annotation you have generated using JBrowse. This allows you to navigate along the chromosomes of the genome and see the structure of each predicted gene.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-annotations-in-jbrowse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize annotations in JBrowse</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-annotations-in-jbrowse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize annotations in JBrowse</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.10+galaxy0" title="JBrowse tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.10+galaxy0)</span> with the following parameters:
@@ -2348,7 +2348,7 @@ After the third round, the two genes were merged into a single one. Training Aug
 <p>You might want to understand how a specific gene model was predicted by Maker. You can easily visualise the evidences used by Maker (EST alignments, protein alignments, ab-initio predictions, …) by using JBrowse too.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-evidences-in-jbrowse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize evidences in JBrowse</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-evidences-in-jbrowse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize evidences in JBrowse</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.10+galaxy0" title="JBrowse tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.10+galaxy0)</span> with the following parameters:
@@ -2442,9 +2442,18 @@ After the third round, the two genes were merged into a single one. Training Aug
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/genome-annotation/faqs/">FAQ page for the Genome Annotation topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/genome-annotation/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2620,27 +2629,27 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">5</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.4">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">1</td>
 			</tr>
 		   
@@ -2808,7 +2817,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

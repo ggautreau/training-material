@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Clinical Metaproteomics 3: Verification">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-19 11:42:09 +0000">
+<meta name="DC.date" content="2025-02-19 15:15:03 +0000">
 <meta name="DC.creator" content="Subina Mehta">
 <meta name="DC.creator" content="Katherine Do">
 <meta name="DC.creator" content="Dechen Bhuming"><meta name="description" content="A microbiome is the community of microorganisms that can usually be found living together in any given habitat. Microbiome research has grown substantially over the past decade in terms of the range of biomes sampled, identified taxa, and the volume of data derived from the samples. ">
@@ -188,8 +188,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-19 11:42:09 +0000",
-  "datePublished": "2025-02-19 11:42:09 +0000",
+  "dateModified": "2025-02-19 15:15:03 +0000",
+  "datePublished": "2025-02-19 15:15:03 +0000",
   "copyrightHolder": {
     "@type": "Organization",
     "http://purl.org/dc/terms/conformsTo": {
@@ -1101,7 +1101,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Data Upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Data Upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1150,14 +1150,14 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <h1 id="import-workflow">Import Workflow</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the Workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running the Workflow</div>
 
   <ol>
     <li>
       <p><strong>Import the workflow</strong> into Galaxy:</p>
 
       <!--SNIPPET-->
-      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-gtn-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Importing and launching a GTN workflow</div>   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-3-verification/versions/wf3_verification_workflow">   Launch <strong>Verification Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">Download workflow</a>) workflow. </div>   <div class="hide-when-galaxy-proxy-active"> Click to  <a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-3-verification/versions/wf3_verification_workflow">     Launch <strong>Verification Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">Download workflow</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Paste the following URL into the box labelled <em>“Archived Workflow URL”</em>: <code class="language-plaintext highlighter-rouge">https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga</code></li>   <li>Click the <strong>Import workflow</strong> button</li> </ul>   <p>Below is a short video demonstrating how to import a workflow from GitHub using this procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing a workflow from URL" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing a workflow from URL</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
+      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-gtn-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Importing and launching a GTN workflow</div>   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-3-verification/versions/wf3_verification_workflow">   Launch <strong>Verification Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">Download workflow</a>) workflow. </div>   <div class="hide-when-galaxy-proxy-active"> Click to  <a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-3-verification/versions/wf3_verification_workflow">     Launch <strong>Verification Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga">Download workflow</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Paste the following URL into the box labelled <em>“Archived Workflow URL”</em>: <code class="language-plaintext highlighter-rouge">https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-3-verification/workflows/WF3_Verification_Workflow.ga</code></li>   <li>Click the <strong>Import workflow</strong> button</li> </ul>   <p>Below is a short video demonstrating how to import a workflow from GitHub using this procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing a workflow from URL" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing a workflow from URL</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
     <li>
@@ -1184,7 +1184,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>First, we will use the Cut tool to select the peptide and protein columns from the SearchGUI/PeptideShaker and MaxQuant Peptide Reports. Then we use Remove header lines from SGPS and MaxQuant to prepare for concatenation with Remove beginning.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extracting-peptides"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extracting peptides</div>
+  <div class="box-title hands-on-title" id="hands-on-extracting-peptides"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extracting peptides</div>
 
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut</strong></span> with the following parameters:
@@ -1218,7 +1218,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>We will now concatenate the peptide and protein datasets from SearchGUI/PeptideShaker and MaxQuant. Later, we will generate a list of confident peptides using PepQuery2. The list of confident peptides will be searched against the concatenated peptide-protein datasets from SearchGUI/PeptideShaker and MaxQuant to generate a list of verified peptides.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-concatenate-sgps-and-maxquant-peptides"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Concatenate SGPS and MaxQuant peptides</div>
+  <div class="box-title hands-on-title" id="hands-on-concatenate-sgps-and-maxquant-peptides"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Concatenate SGPS and MaxQuant peptides</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/0.1.1" title="Concatenate datasets tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Concatenate datasets</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.1)</span> with the following parameters:
@@ -1235,7 +1235,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>We generate and merge Human UniProt (with Isoforms) and contaminants (cRAP) to make an input database for PepQuery2.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fasta-merge-files-and-filter-unique-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  FASTA Merge Files and Filter Unique Sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-fasta-merge-files-and-filter-unique-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  FASTA Merge Files and Filter Unique Sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0" title="FASTA Merge Files and Filter Unique Sequences tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FASTA Merge Files and Filter Unique Sequences</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.0)</span> with the following parameters:
@@ -1270,7 +1270,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>Interestingly, the PepQuery2 tool does not rely on searching peptides against a reference protein sequence database as “traditional” shotgun proteomics does, which enables it to identify novel, disease-specific sequences with sensitivity and specificity in its protein validation. More information about PepQuery is available, including the first <span class="citation"><a href="#Wen2019">Wen <i>et al.</i> 2019</a></span> and second iterations <span class="citation"><a href="#Wen2023">Wen and Zhang 2023</a></span>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peptide-verification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Peptide verification</div>
+  <div class="box-title hands-on-title" id="hands-on-peptide-verification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Peptide verification</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/pepquery2/pepquery2/2.0.2+galaxy0" title="PepQuery2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PepQuery2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.2+galaxy0)</span> with the following parameters:
@@ -1344,7 +1344,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>Remember that PepQuery2 generates a PSM Rank file for each input MGF file, so we will have four PSM Rank files. To make the analysis more efficient, we will collapse these four PSM Rank files into one dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-collasping-psm-rank-files-into-a-singular-dataset-using-collapse-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Collasping PSM rank files into a singular dataset using Collapse Collection</div>
+  <div class="box-title hands-on-title" id="hands-on-collasping-psm-rank-files-into-a-singular-dataset-using-collapse-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Collasping PSM rank files into a singular dataset using Collapse Collection</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.1.0)</span> with the following parameters:
@@ -1362,7 +1362,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>Now, we want to filter for confident peptides from PepQuery2 and prepare them for the Query Tabular tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter</div>
+  <div class="box-title hands-on-title" id="hands-on-filter"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong></span> with the following parameters:
@@ -1377,7 +1377,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-header-line-from-filtered-pepquery-peptides-with-remove-beginning"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Remove header line from filtered PepQuery peptides with Remove beginning</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-header-line-from-filtered-pepquery-peptides-with-remove-beginning"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Remove header line from filtered PepQuery peptides with Remove beginning</div>
 
   <ol>
     <li><span class="tool" data-tool="Remove beginning1" title="Remove beginning tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Remove beginning</strong></span> with the following parameters:
@@ -1390,7 +1390,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cut-select-out-peptide-sequences-from-pepquery-output-with-cut"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Cut (select out) peptide sequences from PepQuery output with Cut</div>
+  <div class="box-title hands-on-title" id="hands-on-cut-select-out-peptide-sequences-from-pepquery-output-with-cut"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Cut (select out) peptide sequences from PepQuery output with Cut</div>
 
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut</strong></span> with the following parameters:
@@ -1408,7 +1408,7 @@ https://zenodo.org/records/10105821/files/Distinct_Peptides_for_PepQuery.tabular
 <p>We will use the Query Tabular tool <span class="citation"><a href="#Johnson2019">Johnson <i>et al.</i> 2019</a></span> to search the PepQuery-verified peptides against the concatenated dataset that contains peptides and proteins from SearchGUI/Peptide and MaxQuant. This step ensures all the PepQuery-verified peptides are assigned to their protein/protein groups.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-querying-verified-peptides"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Querying verified peptides</div>
+  <div class="box-title hands-on-title" id="hands-on-querying-verified-peptides"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Querying verified peptides</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/3.3.0" title="Query Tabular tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Query Tabular</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.3.0)</span> with the following parameters:
@@ -1455,7 +1455,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `</li>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-header-with-remove-beginning"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Remove Header with Remove beginning</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-header-with-remove-beginning"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Remove Header with Remove beginning</div>
 
   <ol>
     <li><span class="tool" data-tool="Remove beginning1" title="Remove beginning tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Remove beginning</strong></span> with the following parameters:
@@ -1470,7 +1470,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `</li>
 <p>Using the Group tool, we can select distinct (unique) peptides and proteins from the Query Tabular tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-distinct-peptides-with-group"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract distinct peptides with Group</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-distinct-peptides-with-group"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract distinct peptides with Group</div>
 
   <ol>
     <li><span class="tool" data-tool="Grouping1" title="Group tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Group</strong></span> with the following parameters:
@@ -1498,7 +1498,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `</li>
 <p>Again, we will use the Query Tabular tool to retrieve UniProt IDs (accession numbers) for the distinct (grouped) peptides.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-query-tabular"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Query Tabular</div>
+  <div class="box-title hands-on-title" id="hands-on-query-tabular"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Query Tabular</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/query_tabular/query_tabular/3.3.0" title="Query Tabular tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Query Tabular</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.3.0)</span> with the following parameters:
@@ -1603,7 +1603,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `</li>
 <p>Using the UniProt IDs from Query Tabular, we will be able to generate a FASTA database for our PepQuery-verified peptides.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-uniprotxml-downloader"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  UniprotXML-downloader</div>
+  <div class="box-title hands-on-title" id="hands-on-uniprotxml-downloader"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  UniprotXML-downloader</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/uniprotxml_downloader/uniprotxml_downloader/2.4.0" title="UniProt tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>UniProt</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.4.0)</span> with the following parameters:
@@ -1627,7 +1627,7 @@ INNER JOIN  prot on pep.mpep=prot.pep `</li>
 <p>Lastly, we will merge the Human UniProt (with isoforms), contaminants (cRAP) and the PepQuery-verified FASTA databases into one Quantitation Database that will be used as input for the <a href="https://github.com/subinamehta/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-quantitation/tutorial.md">Quantification Module</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generation-of-compact-verified-database-with-uniprot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generation of Compact Verified Database with UniProt</div>
+  <div class="box-title hands-on-title" id="hands-on-generation-of-compact-verified-database-with-uniprot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generation of Compact Verified Database with UniProt</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/fasta_merge_files_and_filter_unique_sequences/fasta_merge_files_and_filter_unique_sequences/1.2.0" title="FASTA Merge Files and Filter Unique Sequences tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FASTA Merge Files and Filter Unique Sequences</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.0)</span> with the following parameters:
@@ -1696,9 +1696,18 @@ INNER JOIN  prot on pep.mpep=prot.pep `</li>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/microbiome/faqs/">FAQ page for the Microbiome topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/microbiome/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1799,8 +1808,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -1981,7 +1990,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2063,7 +2072,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

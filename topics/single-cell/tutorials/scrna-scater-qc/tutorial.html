@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1846,7 +1846,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h1 id="data-upload">Data upload</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1881,7 +1881,7 @@ https://zenodo.org/record/3386291/files/mt_controls.txt
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculate QC metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Calculate QC metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scater_create_qcmetric_ready_sce/scater_create_qcmetric_ready_sce/1.12.2" title="Scater: Calculate QC metrics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scater: Calculate QC metrics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.2)</span>  with the following parameters:
@@ -1904,7 +1904,7 @@ https://zenodo.org/record/3386291/files/mt_controls.txt
 <p>Next, lets take a look at the data by plotting various properties to see what our data looks like.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-library-qc"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot library QC</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-library-qc"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot library QC</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_dist_scatter/scater_plot_dist_scatter/1.12.2" title="Scater: plot library QC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scater: plot library QC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.2)</span>  with the following parameters:
@@ -1946,7 +1946,7 @@ The final scatterplot is the <strong>% MT genes</strong>, which plots the number
 Here, we’ll use the manual filtering method.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-with-scater"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering with scater</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-with-scater"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering with scater</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scater_filter/scater_filter/1.12.2" title="Scater: filter SCE tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scater: filter SCE</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.2)</span>  with the following parameters:
@@ -1979,7 +1979,7 @@ Here, we’ll use the manual filtering method.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-library-qc-after-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot library QC after filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-library-qc-after-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot library QC after filtering</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_dist_scatter/scater_plot_dist_scatter/1.12.2" title="Scater: plot library QC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scater: plot library QC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.2)</span>  with the following parameters:
@@ -2009,7 +2009,7 @@ Here, we’ll use the manual filtering method.</p>
 <p>As we are using a rather small test dataset, it’s unlikely that PCA filtering will make any difference; for a larger, noisier dataset this is what we would perform instead:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scater_filter/scater_filter/1.12.2" title="Scater: filter SCE tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scater: filter SCE</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.2)</span>  with the following parameters:
       <ul>
@@ -2040,7 +2040,7 @@ Here, we’ll use the manual filtering method.</p>
 <p>As discussed previously, technical artefacts can bias scRNA-seq analyses. Strong batch effects can mask real biological differences in the data, so must be identified and removed from the data. Logging meta-data details such as date of library construction, sequencing batch, sample name, technical replicate, plate number, etc., is essential to identify batch effects in the data. We can use this information to visualise the data to examine it for clustering according to batch, rather than any real biological feature.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-pca-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: PCA plot</div>
+  <div class="box-title hands-on-title" id="hands-on-pca-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: PCA plot</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scater_plot_pca/scater_plot_pca/1.12.2" title="Scater: PCA plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scater: PCA plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.2)</span>  with the following parameters:
       <ul>
@@ -2122,9 +2122,18 @@ The workflow available from the “Supporting Materials” of this tutorial can 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2225,8 +2234,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2388,7 +2397,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2470,7 +2479,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1450,7 +1450,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1508,7 +1508,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
 <h2 id="opening-up-panoply">Opening up Panoply</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launch-panoply"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Launch Panoply</div>
+  <div class="box-title hands-on-title" id="hands-on-launch-panoply"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Launch Panoply</div>
 
   <p>Panoply is available as a Galaxy interactive tool and may not be available on all Galaxy servers.</p>
 
@@ -1533,7 +1533,7 @@ We will be using a freely available dataset representing Essential Biodiversity 
 <h2 id="inspect-metadata">Inspect metadata</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect dataset</div>
 
   <ol>
     <li>
@@ -1591,7 +1591,7 @@ metric_2: Absolute change in the number of species</p>
 <h2 id="create-geo-referenced-longitude-latitude-plot">Create Geo-referenced Longitude-Latitude plot</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-geographical-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: geographical map</div>
+  <div class="box-title hands-on-title" id="hands-on-geographical-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: geographical map</div>
 
   <ol>
     <li>Double click on the variable <strong>ebv_cube</strong> from <code class="language-plaintext highlighter-rouge">metric_1</code> and click on <strong>Create</strong>
@@ -1647,7 +1647,7 @@ You need to make sure to save all your plot in the <em>outputs</em> folder other
 <h2 id="changing-map-projection">Changing map projection</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-projection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change projection</div>
+  <div class="box-title hands-on-title" id="hands-on-change-projection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Change projection</div>
 
   <p>From your previous plot window, click on Tab <strong>Map</strong> and change <strong>Projection</strong>. Try a few of them and save each of your plot with <strong>File</strong> –&gt; <strong>Save Image As</strong>.</p>
 
@@ -1658,7 +1658,7 @@ You need to make sure to save all your plot in the <em>outputs</em> folder other
 <h2 id="export-animation">Export Animation</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-export-animation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Export animation</div>
+  <div class="box-title hands-on-title" id="hands-on-export-animation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Export animation</div>
 
   <ol>
     <li>From your previous plot window, click on <strong>File</strong> and select <strong>Export Animation</strong>. Save your plot using either <strong>MOV</strong> or <strong>AVI</strong> format.
@@ -1670,7 +1670,7 @@ You will be able to download the resulting movie from Galaxy once you quit Panop
 <h2 id="quit-panoply">Quit Panoply</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quit-panoply-to-keep-your-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quit Panoply to keep your plots</div>
+  <div class="box-title hands-on-title" id="hands-on-quit-panoply-to-keep-your-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quit Panoply to keep your plots</div>
 
   <ol>
     <li>To make sure all your plots stored in <strong>outputs</strong> folder get exported to Galaxy, you need to quit panoply:
@@ -1727,9 +1727,16 @@ You will be able to download the resulting movie from Galaxy once you quit Panop
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1930,7 +1937,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2012,7 +2019,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1656,7 +1656,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1689,7 +1689,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="unzip-the-downloaded-archive"><strong>Unzip</strong> the downloaded archive</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-unzip-the-downladed-zip-archive-and-prepare-unzipped-files-to-be-used-by-obitools"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Unzip the downladed .zip archive and prepare unzipped files to be used by OBITools</div>
+  <div class="box-title hands-on-title" id="hands-on-unzip-the-downladed-zip-archive-and-prepare-unzipped-files-to-be-used-by-obitools"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Unzip the downladed .zip archive and prepare unzipped files to be used by OBITools</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/imgteam/unzip/unzip/0.2" title="Unzip tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Unzip</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2)</span> with the following parameters:
@@ -1748,7 +1748,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The forward and reverse reads of the same fragment are at the same line position in the two FASTQ files obtained after sequencing. Based on these two files, the assembly of the forward and reverse reads is done with the <strong>illuminapairedend</strong> utility that aligns the two reads and returns the reconstructed sequence.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-recover-consensus-sequences-from-overlapping-forward-and-reverse-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Recover consensus sequences from overlapping forward and reverse reads.</div>
+  <div class="box-title hands-on-title" id="hands-on-recover-consensus-sequences-from-overlapping-forward-and-reverse-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Recover consensus sequences from overlapping forward and reverse reads.</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/obi_illumina_pairend/obi_illumina_pairend/1.2.13" title="illuminapairedend tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>illuminapairedend</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.13)</span> with the following parameters:
@@ -1775,7 +1775,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In this step we are going to use the value of the mode attribute in the sequence header of the illuminapairedend output file to discard sequences indicated as “joined”, so not assembled (“alignment”) (see explanation about this mode on the previous step)</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-unaligned-sequence-records"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove unaligned sequence records</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-unaligned-sequence-records"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove unaligned sequence records</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/obi_grep/obi_grep/1.2.13" title="obigrep tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>obigrep</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.13)</span> with the following parameters:
@@ -1836,7 +1836,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="assign-each-sequence-record-to-the-corresponding-samplemarker-combination-with-ngsfilter">Assign each sequence record to the corresponding sample/marker combination with <strong>NGSfilter</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-assigns-sequence-records-to-the-corresponding-experiment-sample-based-on-dna-tags-and-primers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assigns sequence records to the corresponding experiment/sample based on DNA tags and primers</div>
+  <div class="box-title hands-on-title" id="hands-on-assigns-sequence-records-to-the-corresponding-experiment-sample-based-on-dna-tags-and-primers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assigns sequence records to the corresponding experiment/sample based on DNA tags and primers</div>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-3"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
@@ -1887,7 +1887,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="dereplicate-reads-into-uniq-sequences-with-obiuniq">Dereplicate reads into uniq sequences with <strong>obiuniq</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-groups-together-sequence-records"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Groups together sequence records</div>
+  <div class="box-title hands-on-title" id="hands-on-groups-together-sequence-records"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Groups together sequence records</div>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-4"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
@@ -1935,7 +1935,7 @@ Definition: Dereplicate reads into unique sequences</p>
 <h2 id="limit-number-of-informations-with-obiannotate">Limit number of informations with <strong>obiannotate</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adds-edits-sequence-record-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adds/Edits sequence record annotations</div>
+  <div class="box-title hands-on-title" id="hands-on-adds-edits-sequence-record-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adds/Edits sequence record annotations</div>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-5"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
@@ -1965,7 +1965,7 @@ Once such attributes are added, they can be used by the other OBITools commands 
 <h2 id="computes-basic-statistics-for-attribute-values-with-obistat">Computes basic statistics for attribute values with <strong>obistat</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-computes-basic-statistics-for-attribute-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Computes basic statistics for attribute values</div>
+  <div class="box-title hands-on-title" id="hands-on-computes-basic-statistics-for-attribute-values"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Computes basic statistics for attribute values</div>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-6"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
@@ -2029,7 +2029,7 @@ Once such attributes are added, they can be used by the other OBITools commands 
 <p>In this step, we are going to use <em>obigrep</em> in order to keep only the sequences having a count greater or equal to 10 and a length shorter than 80 bp.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-sequences-with-b-obigrep-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: filter sequences with <b>obigrep</b></div>
+  <div class="box-title hands-on-title" id="hands-on-filter-sequences-with-b-obigrep-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: filter sequences with <b>obigrep</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/obi_grep/obi_grep/1.2.13" title="obigrep tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>obigrep</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.13)</span> with the following parameters:
@@ -2085,7 +2085,7 @@ Based on previous knowledge we also remove sequences with a length shorter than 
 <h2 id="clean-the-sequences-for-pcrsequencing-errors-sequence-variants-with-obiclean">Clean the sequences for PCR/sequencing errors (sequence variants) with <strong>obiclean</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clean-the-sequences-for-pcr-sequencing-errors-sequence-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Clean the sequences for PCR/sequencing errors (sequence variants)</div>
+  <div class="box-title hands-on-title" id="hands-on-clean-the-sequences-for-pcr-sequencing-errors-sequence-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Clean the sequences for PCR/sequencing errors (sequence variants)</div>
 
   <p>As a final denoising step, using the obiclean program, we keep the head sequences that are sequences with no variants with a count greater than 5% of their own count</p>
 
@@ -2106,7 +2106,7 @@ Based on previous knowledge we also remove sequences with a length shorter than 
 <h2 id="taxonomic-assignment-of-sequences-with-ncbi-blast-blastn">Taxonomic assignment of sequences with <strong>NCBI BLAST+ blastn</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-search-nucleotide-database-with-nucleotide-query-sequence-s-from-obitools-treatments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Search nucleotide database with nucleotide query sequence(s) from OBITools treatments</div>
+  <div class="box-title hands-on-title" id="hands-on-search-nucleotide-database-with-nucleotide-query-sequence-s-from-obitools-treatments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Search nucleotide database with nucleotide query sequence(s) from OBITools treatments</div>
 
   <p>Once denoising has been done, the next step in diet analysis is to assign the barcodes to the corresponding species in order to get the complete list of species associated to each sample. Taxonomic assignment of sequences requires a reference database compiling all possible species to be identified in the sample. Assignment is then done based on sequence comparison between sample sequences and reference sequences. We here propose to use BLAST+ blastn.</p>
 
@@ -2135,7 +2135,7 @@ Based on previous knowledge we also remove sequences with a length shorter than 
 <h2 id="filter-database-and-query-sequences-by-id-to-re-associate-informations-with-filter-sequences-by-id">Filter database and query sequences by ID to re associate informations with <strong>Filter sequences by ID</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-blast-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter Blast results</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-blast-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter Blast results</div>
 
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-9"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
@@ -2170,7 +2170,7 @@ We will also use it to re-associate all the query sequences information, notably
 <h2 id="from-fasta-to-tabular-with-obitab">From FASTA to tabular with <strong>Obitab</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-convert-fasta-filtered-files-in-tabular-ones"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Convert fasta filtered files in tabular ones</div>
+  <div class="box-title hands-on-title" id="hands-on-convert-fasta-filtered-files-in-tabular-ones"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Convert fasta filtered files in tabular ones</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/obi_tab/obi_tab/1.2.13" title="obitab tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>obitab</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.13)</span> with the following parameters:
@@ -2196,7 +2196,7 @@ We will also use it to re-associate all the query sequences information, notably
 <h2 id="create-a-final-synthesis-as-a-tabular-file">create a final synthesis as a tabular file</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-join-blast-and-obitab-files-then-cut-relevant-column-and-apply-filters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Join blast and obitab files then cut relevant column and apply filters</div>
+  <div class="box-title hands-on-title" id="hands-on-join-blast-and-obitab-files-then-cut-relevant-column-and-apply-filters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Join blast and obitab files then cut relevant column and apply filters</div>
 
   <ol>
     <li><span class="tool" data-tool="join1" title="Join two datasets side by side on a specified field tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Join two datasets side by side on a specified field</strong></span> with the following parameters:
@@ -2311,9 +2311,16 @@ We will also use it to re-associate all the query sequences information, notably
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2565,7 +2572,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2574,7 +2581,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2656,7 +2663,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

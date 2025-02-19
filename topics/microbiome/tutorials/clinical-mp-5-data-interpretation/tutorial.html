@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Clinical Metaproteomics 5: Data Interpretation">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-19 11:42:09 +0000">
+<meta name="DC.date" content="2025-02-19 15:15:03 +0000">
 <meta name="DC.creator" content="Subina Mehta">
 <meta name="DC.creator" content="Katherine Do">
 <meta name="DC.creator" content="Dechen Bhuming"><meta name="description" content="A microbiome is the community of microorganisms that can usually be found living together in any given habitat. Microbiome research has grown substantially over the past decade in terms of the range of biomes sampled, identified taxa, and the volume of data derived from the samples. ">
@@ -188,8 +188,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-19 11:42:09 +0000",
-  "datePublished": "2025-02-19 11:42:09 +0000",
+  "dateModified": "2025-02-19 15:15:03 +0000",
+  "datePublished": "2025-02-19 15:15:03 +0000",
   "copyrightHolder": {
     "@type": "Organization",
     "http://purl.org/dc/terms/conformsTo": {
@@ -1091,7 +1091,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Data Upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Data Upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1138,14 +1138,14 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 <h1 id="import-workflow">Import Workflow</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the Workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running the Workflow</div>
 
   <ol>
     <li>
       <p><strong>Import the workflow</strong> into Galaxy:</p>
 
       <!--SNIPPET-->
-      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-gtn-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Importing and launching a GTN workflow</div>   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-5-data-interpretation/versions/wf5_data_interpretation_worklow">   Launch <strong>Data Interpretation Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">Download workflow</a>) workflow. </div>   <div class="hide-when-galaxy-proxy-active"> Click to  <a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-5-data-interpretation/versions/wf5_data_interpretation_worklow">     Launch <strong>Data Interpretation Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">Download workflow</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Paste the following URL into the box labelled <em>“Archived Workflow URL”</em>: <code class="language-plaintext highlighter-rouge">https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga</code></li>   <li>Click the <strong>Import workflow</strong> button</li> </ul>   <p>Below is a short video demonstrating how to import a workflow from GitHub using this procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing a workflow from URL" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing a workflow from URL</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
+      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-gtn-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Importing and launching a GTN workflow</div>   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-5-data-interpretation/versions/wf5_data_interpretation_worklow">   Launch <strong>Data Interpretation Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">Download workflow</a>) workflow. </div>   <div class="hide-when-galaxy-proxy-active"> Click to  <a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/proteomics-clinical-mp-5-data-interpretation/versions/wf5_data_interpretation_worklow">     Launch <strong>Data Interpretation Workflow</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga">Download workflow</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Paste the following URL into the box labelled <em>“Archived Workflow URL”</em>: <code class="language-plaintext highlighter-rouge">https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/clinical-mp-5-data-interpretation/workflows/WF5_Data_Interpretation_Worklow.ga</code></li>   <li>Click the <strong>Import workflow</strong> button</li> </ul>   <p>Below is a short video demonstrating how to import a workflow from GitHub using this procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing a workflow from URL" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing a workflow from URL</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
     <li>
@@ -1171,7 +1171,7 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 <p>Unipept serves as a vital bioinformatics platform for the analysis of mass spectrometry-based shotgun proteomics data, especially in the study of microbial communities. Its primary utility lies in taxonomic and functional analyses, enabling researchers to identify and quantify microorganisms within diverse environments. The platform facilitates comparative studies across samples, conditions, or time points, shedding light on the dynamic responses of microbial communities to environmental changes. Unipept integrates with public databases like UniProt, ensuring access to comprehensive and updated information for annotations. Being community-driven and open source, Unipept fosters collaboration and transparency, with a user-friendly web interface that accommodates researchers of varying bioinformatics expertise. In essence, Unipept is an invaluable resource, offering tools for the exploration of metaproteomic data and contributing to advancements in our understanding of microbial ecology.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-unipept-5-0"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Unipept 5.0</div>
+  <div class="box-title hands-on-title" id="hands-on-unipept-5-0"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Unipept 5.0</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/unipept/unipept/4.5.1" title="Unipept tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Unipept</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.5.1)</span> with the following parameters:
@@ -1196,7 +1196,7 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 <h2 id="extraction-of-microbial-sequences">Extraction of Microbial Sequences</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-microbial-sequences-with-select"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract Microbial sequences with Select</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-microbial-sequences-with-select"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract Microbial sequences with Select</div>
 
   <ol>
     <li><span class="tool" data-tool="Grep1" title="Select tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select</strong></span> with the following parameters:
@@ -1212,7 +1212,7 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-select-sequences-matching-quot-human-quot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Select sequences matching &quot;HUMAN&quot;</div>
+  <div class="box-title hands-on-title" id="hands-on-select-sequences-matching-quot-human-quot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Select sequences matching &quot;HUMAN&quot;</div>
 
   <ol>
     <li><span class="tool" data-tool="Grep1" title="Select tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select</strong></span> with the following parameters:
@@ -1227,7 +1227,7 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-select-out-reverse-and-contaminants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Select out reverse and contaminants</div>
+  <div class="box-title hands-on-title" id="hands-on-select-out-reverse-and-contaminants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Select out reverse and contaminants</div>
 
   <ol>
     <li><span class="tool" data-tool="Grep1" title="Select tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select</strong></span> with the following parameters:
@@ -1248,7 +1248,7 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 <h2 id="statistical-analysis-of-microbial-proteins-with-msstatstmt">Statistical Analysis of Microbial proteins with <strong>MSstatsTMT</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-msstatstmt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  MSstatsTMT</div>
+  <div class="box-title hands-on-title" id="hands-on-msstatstmt"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  MSstatsTMT</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/msstatstmt/msstatstmt/2.0.0+galaxy1" title="MSstatsTMT tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MSstatsTMT</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0+galaxy1)</span> with the following parameters:
@@ -1291,7 +1291,7 @@ https://zenodo.org/records/10105821/files/Quantified-Peptides.tabular
 <h2 id="statistical-analysis-of-human-proteins-with-msstatstmt">Statistical Analysis of Human proteins with <strong>MSstatsTMT</strong></h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-msstatstmt-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  MSstatsTMT</div>
+  <div class="box-title hands-on-title" id="hands-on-msstatstmt-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  MSstatsTMT</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/msstatstmt/msstatstmt/2.0.0+galaxy1" title="MSstatsTMT tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MSstatsTMT</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0+galaxy1)</span> with the following parameters:
@@ -1379,9 +1379,18 @@ Example of our data interpretation:</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/microbiome/faqs/">FAQ page for the Microbiome topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/microbiome/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1477,8 +1486,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -1634,7 +1643,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1716,7 +1725,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

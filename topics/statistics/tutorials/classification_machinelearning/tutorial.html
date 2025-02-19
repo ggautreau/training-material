@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1630,7 +1630,7 @@ In the following part, we will perform classification on the biodegradability da
 <p>Let’s begin by uploading the necessary datasets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1678,7 +1678,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 <p>The second thing we need is an optimization algorithm for iteratively updating the weights so as to minimize this loss function. The standard algorithm for this is gradient descent. So, the dataset is divided into two parts - training and test sets. The training set is used to train a classifier and the test set is used to evaluate the performance of the trained model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-logistic-regression-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train logistic regression classifier</div>
+  <div class="box-title hands-on-title" id="hands-on-train-logistic-regression-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train logistic regression classifier</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_generalized_linear/sklearn_generalized_linear/1.0.11.0" title="Generalized linear models for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generalized linear models for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1736,7 +1736,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 <p>Now, we will predict the class in the test dataset using this classifier in order to see if it has learned important features which can be generalized on a new dataset. The test dataset (<code class="language-plaintext highlighter-rouge">test_rows</code>) contains the same number of features but does not contain the <code class="language-plaintext highlighter-rouge">Class</code> column. This is predicted using the trained classifier.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-class-using-the-logistic-regression-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict class using the logistic regression classifier</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-class-using-the-logistic-regression-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict class using the logistic regression classifier</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_generalized_linear/sklearn_generalized_linear/1.0.11.0" title="Generalized linear models for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generalized linear models for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1760,7 +1760,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 <p>We will evaluate the classification by comparing the predicted with the expected classes. In the previous step, we classified the test dataset (<code class="language-plaintext highlighter-rouge">LogisticRegression_result</code>). We have one more dataset (<code class="language-plaintext highlighter-rouge">test_rows_labels</code>) which contains the true class label of the test set. Using the true and predicted class labels in the test set, we will verify the performance by analyzing the plots. As you can see, <code class="language-plaintext highlighter-rouge">LogisticRegression_result</code> has no header, so first we should remove the header from <code class="language-plaintext highlighter-rouge">test_rows_labels</code> to compare.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-the-header"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove the header</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-the-header"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove the header</div>
 
   <ol>
     <li><strong>Remove beginning</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1776,7 +1776,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 <p>Now we visualize and analyze the classification using the “Plot confusion matrix, precision, recall and ROC and AUC curves” tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-classification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the classification</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-classification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the classification</div>
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4" title="Plot confusion matrix, precision, recall and ROC and AUC curves tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot confusion matrix, precision, recall and ROC and AUC curves</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.4)</span>:</p>
   <ul>
     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select input data file”</em>: <code class="language-plaintext highlighter-rouge">test_rows_labels_noheader</code></li>
@@ -1874,7 +1874,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-k-nearest-neighbor-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train k-nearest neighbor classifier</div>
+  <div class="box-title hands-on-title" id="hands-on-train-k-nearest-neighbor-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train k-nearest neighbor classifier</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_nn_classifier/sklearn_nn_classifier/1.0.11.0" title="Nearest Neighbors Classification tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Nearest Neighbors Classification</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -1927,7 +1927,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 <p>Now, we should evaluate the performance on the test dataset to find out whether the KNN classifier is a good model from the training dataset or not.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-class-using-the-k-nearest-neighbor-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict class using the k-nearest neighbor classifier</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-class-using-the-k-nearest-neighbor-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict class using the k-nearest neighbor classifier</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_nn_classifier/sklearn_nn_classifier/1.0.11.0" title="Nearest Neighbors Classification tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Nearest Neighbors Classification</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -1946,7 +1946,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 <p>Now we visualize and analyze the classification. As you can see, <code class="language-plaintext highlighter-rouge">NearestNeighbors_result</code> has a header, so use <code class="language-plaintext highlighter-rouge">test_rows_labels</code> to compare.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-classification-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the classification</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-classification-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the classification</div>
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4" title="Plot confusion matrix, precision, recall and ROC and AUC curves tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot confusion matrix, precision, recall and ROC and AUC curves</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.4)</span>:</p>
   <ul>
     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select input data file”</em>: <code class="language-plaintext highlighter-rouge">test_rows_labels</code></li>
@@ -1973,7 +1973,7 @@ https://zenodo.org/record/3738729/files/test_rows.csv
 kernel trick. In the next step, we will build a SVM classifier with our data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-a-svm-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train a SVM classifier</div>
+  <div class="box-title hands-on-title" id="hands-on-train-a-svm-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train a SVM classifier</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_svm_classifier/sklearn_svm_classifier/1.0.11.0" title="Support vector machines (SVMs) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Support vector machines (SVMs)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -2027,7 +2027,7 @@ kernel trick. In the next step, we will build a SVM classifier with our data.</p
 <p>Now we will evaluate the performance of the SVM classifier:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-class-svm-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict class SVM classifier</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-class-svm-classifier"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict class SVM classifier</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_svm_classifier/sklearn_svm_classifier/1.0.11.0" title="Support vector machines (SVMs) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Support vector machines (SVMs)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -2046,7 +2046,7 @@ kernel trick. In the next step, we will build a SVM classifier with our data.</p
 <p>Now let’s visualize the results:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-classification-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the classification</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-classification-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the classification</div>
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/plotly_ml_performance_plots/plotly_ml_performance_plots/0.4" title="Plot confusion matrix, precision, recall and ROC and AUC curves tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot confusion matrix, precision, recall and ROC and AUC curves</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.4)</span>:</p>
   <ul>
     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select input data file”</em>: <code class="language-plaintext highlighter-rouge">test_rows_labels</code></li>
@@ -2066,7 +2066,7 @@ kernel trick. In the next step, we will build a SVM classifier with our data.</p
 <p>One big advantage of random forest is that it can be used for both classification and regression problems. The main idea behind the random forest is adding additional randomness to the model, while growing the trees and instead of searching for the most important feature while splitting a node, it searches for the best feature among a random subset of features. This results in a better model because of wide diversity. Generally, the more trees in the forest, the more robust the model. Therefore, when using the random forest classifier, a larger number of trees in the forest gives higher accuracy results. Similarly there are two stages in the random forest algorithm: one is random forest creation, the other is to make a prediction from the random forest classifier created in the first stage.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-random-forest"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train random forest</div>
+  <div class="box-title hands-on-title" id="hands-on-train-random-forest"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train random forest</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0" title="Ensemble methods for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Ensemble methods for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -2122,7 +2122,7 @@ kernel trick. In the next step, we will build a SVM classifier with our data.</p
 <p>After learning on the training dataset, we should evaluate the performance on the test dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-random-forest"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict targets using the random forest</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-random-forest"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict targets using the random forest</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0" title="Ensemble methods for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Ensemble methods for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -2162,7 +2162,7 @@ kernel trick. In the next step, we will build a SVM classifier with our data.</p
 <p>At the last step, we will create a bagging classifier by using  the <strong>Pipeline builder</strong> tool. Bagging or Bootstrap Aggregating is a widely used ensemble learning algorithm in machine learning. The bagging algorithm creates multiple models from randomly taken subsets of the training dataset and then aggregates learners to build overall stronger classifiers that combine the predictions to produce a final prediction. The <strong>Pipeline builder</strong> tool builds the classifier and returns a <code class="language-plaintext highlighter-rouge">h5mlm</code> file. This tool creates another file which is tabular and contains a list of all the different hyperparameters of the preprocessors and estimators. This tabular file will be used in the <strong>Hyperparameter search</strong> tool to populate the list of hyperparameters with their respective (default) values.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create pipeline</div>
+  <div class="box-title hands-on-title" id="hands-on-create-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create pipeline</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0" title="Pipeline builder tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Pipeline builder</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -2185,7 +2185,7 @@ We choose <code class="language-plaintext highlighter-rouge">Final Estimator</co
 <p>After extracting the parameter names from the <strong>Pipeline builder</strong> file, we will use the <strong>Hyperparameter search</strong> tool to find the best values for each hyperparameter. These values will lead us to create the best model based on the search space chosen for each hyperparameter. We use only one parameter <code class="language-plaintext highlighter-rouge">n_estimators</code> of <code class="language-plaintext highlighter-rouge">BaggingClassifier</code> for this task. This parameter specifies the number of bagging stages the learning process has to go through. The default value of <code class="language-plaintext highlighter-rouge">n_estimators</code> for this regressor is <code class="language-plaintext highlighter-rouge">10</code>. However, we are not sure if this gives the best accuracy. Therefore, it is important to set this parameter to different values to find the optimal one. We choose a value which is less than <code class="language-plaintext highlighter-rouge">10</code> and a few which are more than <code class="language-plaintext highlighter-rouge">10</code>. The hyperparameter search will look for the optimal number of estimators and gives the best-trained model as one of the outputs. This model is used in the next step to classify the test dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hyperparameter search</div>
+  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hyperparameter search</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/1.0.11.0" title="Hyperparameter search tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Hyperparameter search</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -2253,7 +2253,7 @@ We choose <code class="language-plaintext highlighter-rouge">Final Estimator</co
 <p>Using the <strong>Hyperparameter search</strong> tool, we found the best model, based on the training data. Now, we will predict age in the test dataset using this model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-age"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict age</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-age"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict age</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0" title="Ensemble methods for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Ensemble methods for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -2336,9 +2336,18 @@ We choose <code class="language-plaintext highlighter-rouge">Final Estimator</co
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/statistics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2501,17 +2510,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">9</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2222222222222222">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.1111111111111111">1</td>
 			</tr>
 		   
@@ -2697,7 +2706,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

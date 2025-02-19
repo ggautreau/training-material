@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2219,7 +2219,7 @@ separately.</p>
 <p>To demonstrate a real-life scenario and <abbr title="Total Perspective Vortex">TPV</abbr>’s role in it, let’s plan on setting up a configuration where the VM designated for training jobs doesn’t run real jobs and hence doesn’t get overloaded. To start, we’ll create a “testing” tool that we’ll use in our configuration. This testing tool can run quickly, and without overloading our small machines.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-deploying-a-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Deploying a Tool</div>
+  <div class="box-title hands-on-title" id="hands-on-deploying-a-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Deploying a Tool</div>
 
   <ol>
     <li>
@@ -2243,7 +2243,7 @@ separately.</p>
 </code></pre></div>      </div>
 
       <!--SNIPPET-->
-      <blockquote class="tip">   <div class="box-title tip-title" id="tip-how-to-read-a-diff"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-to-read-a-diff" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How to read a Diff</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you haven’t worked with diffs before, this can be something quite new or different.</p>   <p>If we have two files, let’s say a grocery list, in two files. We’ll call them ‘a’ and ‘b’.</p>   <blockquote class="code-2col">   <blockquote class="code-in">     <div class="box-title code-in-title" id="code-in-old"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Old</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat old<br />🍎<br />🍐<br />🍊<br />🍋<br />🍒<br />🥑<br /></code></pre></div>    </div>   </blockquote>   <blockquote class="code-out">     <div class="box-title code-out-title" id="code-out-new"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: New</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat new<br />🍎<br />🍐<br />🍊<br />🍋<br />🍍<br />🥑<br /></code></pre></div>    </div>   </blockquote> </blockquote>   <p>We can see that they have some different entries. We’ve removed 🍒 because they’re awful, and replaced them with an 🍍</p>   <p>Diff lets us compare these files</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff old new<br />5c5<br />&lt; 🍒<br /><span class="nt">---</span><br /><span class="o">&gt;</span> 🍍<br /></code></pre></div></div>   <p>Here we see that 🍒 is only in a, and 🍍 is only in b. But otherwise the files are identical.</p>   <p>There are a couple different formats to diffs, one is the ‘unified diff’</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> old new<br /><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:06:36.340962616 +0100<br />@@ <span class="nt">-3</span>,4 +3,4 @@<br /> 🍊<br /> 🍋<br />-🍒<br />+🍍<br /> 🥑<br /></code></pre></div></div>   <p>This is basically what you see in the training materials which gives you a lot of context about the changes:</p>   <ul>   <li><code class="language-plaintext highlighter-rouge">--- old</code> is the ‘old’ file in our view</li>   <li><code class="language-plaintext highlighter-rouge">+++ new</code> is the ‘new’ file</li>   <li>@@ these lines tell us where the change occurs and how many lines are added or removed.</li>   <li>Lines starting with a - are removed from our ‘new’ file</li>   <li>Lines with a + have been added.</li> </ul>   <p>So when you go to apply these diffs to your files in the training:</p>   <ol>   <li>Ignore the header</li>   <li>Remove lines starting with - from your file</li>   <li>Add lines starting with + to your file</li> </ol>   <p>The other lines (🍊/🍋 and 🥑) above just provide “context”, they help you know where a change belongs in a file, but <strong>should not be edited</strong> when you’re making the above change. Given the above diff, you would find a line with a 🍒, and replace it with a 🍍</p>   <h4 id="added--removed-lines">Added &amp; Removed Lines</h4>   <p>Removals are very easy to spot, we just have removed lines</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:10:14.370722802 +0100<br />@@ <span class="nt">-4</span>,3 +4,2 @@<br /> 🍋<br /> 🍒<br />-🥑<br /></code></pre></div></div>   <p>And additions likewise are very easy, just add a new line, between the other lines in your file.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:11:11.422135393 +0100<br />@@ <span class="nt">-1</span>,3 +1,4 @@<br /> 🍎<br />+🍍<br /> 🍐<br /> 🍊<br /></code></pre></div></div>   <h4 id="completely-new-files">Completely new files</h4>   <p>Completely new files look a bit different, there the “old” file is <code class="language-plaintext highlighter-rouge">/dev/null</code>, the empty file in a Linux machine.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> /dev/null old<br /><span class="nt">---</span> /dev/null	2022-02-15 11:47:16.100000270 +0100<br />+++ old	2022-02-16 14:06:19.697132568 +0100<br />@@ <span class="nt">-0</span>,0 +1,6 @@<br />+🍎<br />+🍐<br />+🍊<br />+🍋<br />+🍒<br />+🥑<br /></code></pre></div></div>   <p>And removed files are similar, except with the new file being /dev/null</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ /dev/null	2022-02-15 11:47:16.100000270 +0100<br />@@ <span class="nt">-1</span>,6 +0,0 @@<br />-🍎<br />-🍐<br />-🍊<br />-🍋<br />-🍒<br />-🥑<br /></code></pre></div></div> </blockquote>
+      <blockquote class="tip">   <div class="box-title tip-title" id="tip-how-to-read-a-diff"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-how-to-read-a-diff" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: How to read a Diff</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If you haven’t worked with diffs before, this can be something quite new or different.</p>   <p>If we have two files, let’s say a grocery list, in two files. We’ll call them ‘a’ and ‘b’.</p>   <blockquote class="code-2col">   <blockquote class="code-in">     <div class="box-title code-in-title" id="code-in-old"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Old</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat old<br />🍎<br />🍐<br />🍊<br />🍋<br />🍒<br />🥑<br /></code></pre></div>    </div>   </blockquote>   <blockquote class="code-out">     <div class="box-title code-out-title" id="code-out-new"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: New</div>     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat new<br />🍎<br />🍐<br />🍊<br />🍋<br />🍍<br />🥑<br /></code></pre></div>    </div>   </blockquote> </blockquote>   <p>We can see that they have some different entries. We’ve removed 🍒 because they’re awful, and replaced them with an 🍍</p>   <p>Diff lets us compare these files</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff old new<br />5c5<br />&lt; 🍒<br /><span class="nt">---</span><br /><span class="o">&gt;</span> 🍍<br /></code></pre></div></div>   <p>Here we see that 🍒 is only in a, and 🍍 is only in b. But otherwise the files are identical.</p>   <p>There are a couple different formats to diffs, one is the ‘unified diff’</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> old new<br /><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:06:36.340962616 +0100<br />@@ <span class="nt">-3</span>,4 +3,4 @@<br /> 🍊<br /> 🍋<br />-🍒<br />+🍍<br /> 🥑<br /></code></pre></div></div>   <p>This is basically what you see in the training materials which gives you a lot of context about the changes:</p>   <ul>   <li><code class="language-plaintext highlighter-rouge">--- old</code> is the ‘old’ file in our view</li>   <li><code class="language-plaintext highlighter-rouge">+++ new</code> is the ‘new’ file</li>   <li>@@ these lines tell us where the change occurs and how many lines are added or removed.</li>   <li>Lines starting with a - are removed from our ‘new’ file</li>   <li>Lines with a + have been added.</li> </ul>   <p>So when you go to apply these diffs to your files in the training:</p>   <ol>   <li>Ignore the header</li>   <li>Remove lines starting with - from your file</li>   <li>Add lines starting with + to your file</li> </ol>   <p>The other lines (🍊/🍋 and 🥑) above just provide “context”, they help you know where a change belongs in a file, but <strong>should not be edited</strong> when you’re making the above change. Given the above diff, you would find a line with a 🍒, and replace it with a 🍍</p>   <h4 id="added--removed-lines">Added &amp; Removed Lines</h4>   <p>Removals are very easy to spot, we just have removed lines</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:10:14.370722802 +0100<br />@@ <span class="nt">-4</span>,3 +4,2 @@<br /> 🍋<br /> 🍒<br />-🥑<br /></code></pre></div></div>   <p>And additions likewise are very easy, just add a new line, between the other lines in your file.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ new	2022-02-16 14:11:11.422135393 +0100<br />@@ <span class="nt">-1</span>,3 +1,4 @@<br /> 🍎<br />+🍍<br /> 🍐<br /> 🍊<br /></code></pre></div></div>   <h4 id="completely-new-files">Completely new files</h4>   <p>Completely new files look a bit different, there the “old” file is <code class="language-plaintext highlighter-rouge">/dev/null</code>, the empty file in a Linux machine.</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>diff <span class="nt">-U2</span> /dev/null old<br /><span class="nt">---</span> /dev/null	2022-02-15 11:47:16.100000270 +0100<br />+++ old	2022-02-16 14:06:19.697132568 +0100<br />@@ <span class="nt">-0</span>,0 +1,6 @@<br />+🍎<br />+🍐<br />+🍊<br />+🍋<br />+🍒<br />+🥑<br /></code></pre></div></div>   <p>And removed files are similar, except with the new file being /dev/null</p>   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">---</span> old	2022-02-16 14:06:19.697132568 +0100<br />+++ /dev/null	2022-02-15 11:47:16.100000270 +0100<br />@@ <span class="nt">-1</span>,6 +0,0 @@<br />-🍎<br />-🍐<br />-🍊<br />-🍋<br />-🍒<br />-🥑<br /></code></pre></div></div> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
     <li>
@@ -2268,7 +2268,7 @@ separately.</p>
       <p>Run the Galaxy playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2313,7 +2313,7 @@ separately.</p>
 And of course, Galaxy has an Ansible Role for that.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-automated-tpv-lind-and-copy-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding automated TPV-lind-and-copy-script</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-automated-tpv-lind-and-copy-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding automated TPV-lind-and-copy-script</div>
 
   <ol>
     <li>
@@ -2335,7 +2335,7 @@ And of course, Galaxy has an Ansible Role for that.</p>
       <p>Install the missing role</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-galaxy <span class="nb">install</span> <span class="nt">-p</span> roles <span class="nt">-r</span> requirements.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2398,7 +2398,7 @@ linter can work.</p>
 <p>We want our tool to run with more than one core. To do this, we need to instruct Slurm to allocate more cores for this job. First however, we need to configure Galaxy to use TPV.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-tpv-to-your-job-configuration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding TPV to your job configuration</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-tpv-to-your-job-configuration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding TPV to your job configuration</div>
 
   <ol>
     <li>
@@ -2524,7 +2524,7 @@ destination is able to accept jobs greater than 1 core, TPV will automatically r
       <p>Run the Galaxy playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2561,7 +2561,7 @@ destination is able to accept jobs greater than 1 core, TPV will automatically r
 <p>Now that we’ve configured the resource requirements for a single tool, let’s see how we can configure defaults for all tools, and reuse those defaults to reduce repetition.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuring-defaults-and-inheritance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuring defaults and inheritance</div>
+  <div class="box-title hands-on-title" id="hands-on-configuring-defaults-and-inheritance"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Configuring defaults and inheritance</div>
 
   <ol>
     <li>
@@ -2597,7 +2597,7 @@ We can also explicitly specify an <code class="language-plaintext highlighter-ro
       <p>Run the Galaxy playbook. When the new <code class="language-plaintext highlighter-rouge">tpv_rules_local.yml</code> is copied, TPV will automatically pickup the changes without requiring a restart of Galaxy.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2616,7 +2616,7 @@ We can also explicitly specify an <code class="language-plaintext highlighter-ro
 on settings that have worked well in the usegalaxy.* federation. The rule file can simply be imported directly, with local overrides applied on top.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-the-tpv-shared-database-to-job-conf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding the TPV shared database to job_conf</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-the-tpv-shared-database-to-job-conf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding the TPV shared database to job_conf</div>
 
   <ol>
     <li>
@@ -2674,7 +2674,7 @@ any tools that exceed your cluster’s capabilities, and decide whether you want
       <p>Run the Galaxy playbook.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2692,7 +2692,7 @@ can be matched up so that only desired combinations are compatible with each oth
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-using-conditionals-to-restrict-a-tool-to-admins-only"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Using conditionals to restrict a tool to admins only</div>
+  <div class="box-title hands-on-title" id="hands-on-using-conditionals-to-restrict-a-tool-to-admins-only"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Using conditionals to restrict a tool to admins only</div>
 
   <ol>
     <li>
@@ -2730,7 +2730,7 @@ It is similarly possible to conditionally add job parameters, modify cores/mem/g
       <p>Run the Galaxy playbook to update the TPV rules.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2756,7 +2756,7 @@ This of course assumes that your users are well behaved enough not to choose the
 <p>Such form elements can be added to tools without modifying each tool’s configuration file through the use of the <strong>job resource parameters configuration file</strong></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-configuring-a-resource-selector"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Configuring a Resource Selector</div>
+  <div class="box-title hands-on-title" id="hands-on-configuring-a-resource-selector"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Configuring a Resource Selector</div>
 
   <ol>
     <li>
@@ -2849,7 +2849,7 @@ This of course assumes that your users are well behaved enough not to choose the
 <p>Lastly, we need to write a rule in TPV that will read the value of the job resource parameter form fields and decide how to submit the job.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-processing-job-resource-parameters-in-tpv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Processing job resource parameters in TPV</div>
+  <div class="box-title hands-on-title" id="hands-on-processing-job-resource-parameters-in-tpv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Processing job resource parameters in TPV</div>
 
   <ol>
     <li>
@@ -2907,7 +2907,7 @@ Note also that Python code-blocks can be multi-line, and that the final line mus
       <p>Run the Galaxy playbook to update the TPV rules.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div data-cmd="true" class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook galaxy.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -2933,14 +2933,14 @@ Note also that Python code-blocks can be multi-line, and that the final line mus
 <p>The cores parameter can be verified from the output of the tool. The walltime can be verified with <code class="language-plaintext highlighter-rouge">scontrol</code>:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+  <div class="box-title code-in-title" id="code-in-bash-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
   <p>Your job number may be different.</p>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>scontrol show job 24
 </code></pre></div>  </div>
 </blockquote>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+  <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
   <p>Your output may look slightly different. Note that the <code class="language-plaintext highlighter-rouge">TimeLimit</code> for this job (which I gave a 12 hour time limit) was set to <code class="language-plaintext highlighter-rouge">12:00:00</code>.</p>
   <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">JobId=24 JobName=g24_multi_anonymous_10_0_2_2
    UserId=galaxy(999) GroupId=galaxy(999)
@@ -3040,9 +3040,18 @@ d. Linting, formatting and dry-run - Automatically format tpv rule files, catch 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/admin/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3189,12 +3198,12 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">7</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5714285714285714">4</td>
 			</tr>
 		   
@@ -3335,7 +3344,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

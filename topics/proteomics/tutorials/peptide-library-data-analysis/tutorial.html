@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1306,7 +1306,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>An easy way to install and use the PDAUG toolset, and follow this tutorial is via a prebuilt docker image equipped with a PDAUG toolset, workflow, and data library. A prebuilds docker image can be downloaded and run by typing a simple command at the terminal after installing docker software on any operating system.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-easy-access-of-tools-workflows-and-data-from-docker-image"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Easy access of tools, workflows and data from docker image</div>
+  <div class="box-title hands-on-title" id="hands-on-easy-access-of-tools-workflows-and-data-from-docker-image"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Easy access of tools, workflows and data from docker image</div>
 
   <ol>
     <li>Downloading the docker image from the docker hub using <code class="language-plaintext highlighter-rouge">docker pull jayadevjoshi12/galaxy_pdaug:latest</code> command.</li>
@@ -1337,7 +1337,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Several inbuilt data sets have been provided with the tool<code class="language-plaintext highlighter-rouge">PDAUG Peptide Data Access</code>. The antimicrobial peptides (AMPs) versus transmembrane peptides (TMPs) dataset was used as an example data set to understand the overall relation between features and biological properties of peptides. AMPs consist of an intersection of all activity annotations of the APD2 and CAMP databases, where gram-positive, gram-negative, and antifungal exact matches were observed. TMPs were extracted from alpha-helical transmembrane regions of proteins for classification.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fetching-inbuild-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fetching inbuild data</div>
+  <div class="box-title hands-on-title" id="hands-on-fetching-inbuild-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fetching inbuild data</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_peptide_data_access/pdaug_peptide_data_access/0.1.0" title="PDAUG Peptide Data Access tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Peptide Data Access</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1354,7 +1354,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p><code class="language-plaintext highlighter-rouge">PDAUG Peptide Data Access</code> tool returns data as a tabular file that contains sequences from both the classes. In order to utilize this data in the next steps, first we need to convert tabular data into fasta format. If data contains sequences from two different classes <code class="language-plaintext highlighter-rouge">PDAUG TSVtoFASTA</code> tool converts and splits data into two separate files for each of the class,  AMPs, and TMPs.  The reason behind converting and splitting the data is that all the downstream tools require two separate files if we are comparing two different peptide classes or calculating features.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-converting-tabular-data-into-fasta-formate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Converting tabular data into fasta formate</div>
+  <div class="box-title hands-on-title" id="hands-on-converting-tabular-data-into-fasta-formate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Converting tabular data into fasta formate</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_tsvtofasta/pdaug_tsvtofasta/0.1.0" title="PDAUG TSVtoFASTA tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG TSVtoFASTA</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1376,7 +1376,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In this step, we utilize <code class="language-plaintext highlighter-rouge">PDAUG Peptide Sequence Analysis</code> tool to compare peptide sequences based on hydrophobicity, hydrophobic movement, charge, amino acid fraction, and sequence length and create a summary plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generating-a-summary-plot-to-assess-peptide-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generating a summary plot to assess peptide dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-generating-a-summary-plot-to-assess-peptide-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generating a summary plot to assess peptide dataset</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_peptide_sequence_analysis/pdaug_peptide_sequence_analysis/0.1.0" title="PDAUG Peptide Sequence Analysis tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Peptide Sequence Analysis</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1420,7 +1420,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In this tool, we have used <code class="language-plaintext highlighter-rouge">PDAUG Fisher's Plot</code> that compares two peptide libraries based on the feature space using the Fisher test.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generating-a-fisher-s-plot-to-assess-peptide-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generating a Fisher's plot to assess peptide dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-generating-a-fisher-s-plot-to-assess-peptide-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generating a Fisher's plot to assess peptide dataset</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_fishers_plot/pdaug_fishers_plot/0.1.0" title="PDAUG Fisher's Plot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Fisher’s Plot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1457,7 +1457,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In this step we will calculate Composition, Transition and Distribution (CTD) descriptos. Composition describptors are defined as the number of amino acids of a particular property divided by total number of amino acids.  Transition descriptors are representd as the number of transition from a particular property to different property divided by (total number of amino acids − 1). Distribution descriptors are derived by chain length and the amino acids of a particular property located on this length <span class="citation"><a href="#Govindan_Nair_2013">Govindan and Nair 2013</a></span>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculating-descriptors-for-the-peptide-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculating descriptors for the peptide dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-calculating-descriptors-for-the-peptide-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Calculating descriptors for the peptide dataset</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_sequence_property_based_descriptors/pdaug_sequence_property_based_descriptors/0.1.0" title="PDAUG Sequence Property Based Descriptors tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Sequence Property Based Descriptors</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1485,7 +1485,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-class-labels-target-labels-to-the-tabular-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding Class Labels (target labels) to the tabular data</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-class-labels-target-labels-to-the-tabular-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding Class Labels (target labels) to the tabular data</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_addclasslabel/pdaug_addclasslabel/0.1.0" title="PDAUG Add Class Label tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Add Class Label</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1509,7 +1509,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We utilize <code class="language-plaintext highlighter-rouge">PDAUG Merge Dataframes</code> to merge two tabular data files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-merging-two-tabular-data-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Merging two tabular data files</div>
+  <div class="box-title hands-on-title" id="hands-on-merging-two-tabular-data-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Merging two tabular data files</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_merge_dataframes/pdaug_merge_dataframes/0.1.0" title="PDAUG Merge Dataframes tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Merge Dataframes</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1527,7 +1527,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Tool <code class="language-plaintext highlighter-rouge">PDAUG Basic Plots</code> will be used to compare two peptide libraries based on three CTD descriptors <code class="language-plaintext highlighter-rouge">SecondaryStrD1100</code>, <code class="language-plaintext highlighter-rouge">SolventAccessibilityD2001</code>, and <code class="language-plaintext highlighter-rouge">NormalizedVDWVD3050</code> respectively. A 3D scatter plot will be generated.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generating-a-scatter-plot-to-assess-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generating a scatter plot to assess features</div>
+  <div class="box-title hands-on-title" id="hands-on-generating-a-scatter-plot-to-assess-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generating a scatter plot to assess features</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/jay/pdaug_basic_plots/pdaug_basic_plots/0.1.0" title="PDAUG Basic Plots tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>PDAUG Basic Plots</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.0)</span> with the following parameters:
@@ -1592,9 +1592,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/proteomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1768,7 +1777,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -1777,7 +1786,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1859,7 +1868,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

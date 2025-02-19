@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2138,7 +2138,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Any analysis should get its own Galaxy history. So let’s start by creating a new one:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -2162,7 +2162,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Before we can begin any Galaxy analysis, we need to upload the input data: FASTQ files with the sequenced samples.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-import-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import datasets</div>
 
   <ol>
     <li>
@@ -2254,7 +2254,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
   <p>We will run all these steps using a single workflow, then discuss each step and the results in more detail.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-pre-processing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Pre-Processing</div>
+    <div class="box-title hands-on-title" id="hands-on-pre-processing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Pre-Processing</div>
 
     <ol>
       <li><strong>Import the workflow</strong> into Galaxy
@@ -2306,7 +2306,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
     <div class="Long-Version">
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-initial-quality-assessment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Initial quality assessment</div>
+        <div class="box-title hands-on-title" id="hands-on-initial-quality-assessment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Initial quality assessment</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> with the following parameters:
             <ul>
@@ -2368,7 +2368,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
     <div class="Long-Version">
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-read-trimming-and-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Read trimming and filtering</div>
+        <div class="box-title hands-on-title" id="hands-on-read-trimming-and-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Read trimming and filtering</div>
 
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/porechop/porechop/0.2.4" title="Porechop tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Porechop</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.4)</span> with the following parameters:
@@ -2407,7 +2407,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
     <div class="Long-Version">
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-final-quality-checks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Final quality checks</div>
+        <div class="box-title hands-on-title" id="hands-on-final-quality-checks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Final quality checks</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span> with the following parameters:
             <ul>
@@ -2521,7 +2521,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
     <div class="Long-Version">
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-read-taxonomic-classification-for-host-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read taxonomic classification for host filtering</div>
+        <div class="box-title hands-on-title" id="hands-on-read-taxonomic-classification-for-host-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read taxonomic classification for host filtering</div>
 
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.24+galaxy0" title="Map with minimap2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with minimap2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.24+galaxy0)</span> with the following parameters:
@@ -2568,7 +2568,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
     <div class="Long-Version">
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-read-taxonomic-classification-for-host-filtering-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read taxonomic classification for host filtering</div>
+        <div class="box-title hands-on-title" id="hands-on-read-taxonomic-classification-for-host-filtering-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read taxonomic classification for host filtering</div>
 
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/kraken2/kraken2/2.1.1+galaxy1" title="Kraken2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Kraken2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.1+galaxy1)</span> with the following parameters:
@@ -2624,7 +2624,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
     <div class="Long-Version">
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-host-read-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Host read filtering</div>
+        <div class="box-title hands-on-title" id="hands-on-host-read-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Host read filtering</div>
 
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/krakentools_extract_kraken_reads/krakentools_extract_kraken_reads/1.2+galaxy1" title="Krakentools: Extract Kraken Reads By ID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Krakentools: Extract Kraken Reads By ID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2+galaxy1)</span> with the following parameters:
@@ -2667,7 +2667,7 @@ https://zenodo.org/record/11222469/files/Barcode11_Spike2b.fastq.gz
   <p>We will need the outputs from this section in the next one.  If yours is still running or you get an error you can go on and upload it so you can start the next workflow, the next hands-on is optional.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-optional-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Optional Data upload</div>
+    <div class="box-title hands-on-title" id="hands-on-optional-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Optional Data upload</div>
 
     <ol>
       <li>
@@ -2705,7 +2705,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
 <div class="Short-Version">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-taxonomy-profiling-and-visualisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Taxonomy Profiling and visualisation</div>
+    <div class="box-title hands-on-title" id="hands-on-taxonomy-profiling-and-visualisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Taxonomy Profiling and visualisation</div>
 
     <ol>
       <li><strong>Import the workflow</strong> into Galaxy
@@ -2736,7 +2736,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
 <div class="Long-Version">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-taxonomy-profiling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Taxonomy Profiling</div>
+    <div class="box-title hands-on-title" id="hands-on-taxonomy-profiling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Taxonomy Profiling</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/kraken2/kraken2/2.1.1+galaxy1" title="Kraken2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Kraken2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.1+galaxy1)</span> with the following parameters:
@@ -2788,7 +2788,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
 <div class="Long-Version">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-visualisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Visualisation</div>
+    <div class="box-title hands-on-title" id="hands-on-visualisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Visualisation</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/krakentools_kreport2krona/krakentools_kreport2krona/1.2+galaxy1" title="Krakentools: Convert kraken report file tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Krakentools: Convert kraken report file</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2+galaxy1)</span> with the following parameters:
@@ -2870,7 +2870,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
 <div class="Short-Version">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-gene-based-pathogenic-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Gene based Pathogenic Identification</div>
+    <div class="box-title hands-on-title" id="hands-on-gene-based-pathogenic-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Gene based Pathogenic Identification</div>
 
     <ol>
       <li><strong>Import the workflow</strong> into Galaxy
@@ -2909,7 +2909,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-assembly-with-flye"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Assembly with Flye</div>
+        <div class="box-title hands-on-title" id="hands-on-assembly-with-flye"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Assembly with Flye</div>
 
         <ol>
           <li><span class="tool" data-tool="__BUILD_LIST__" title="Build list tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Build list</strong></span> with the following parameters:
@@ -2953,7 +2953,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-visualization-of-the-assembly-grap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Visualization of the assembly grap</div>
+        <div class="box-title hands-on-title" id="hands-on-visualization-of-the-assembly-grap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Visualization of the assembly grap</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2" title="Bandage Image tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Bandage Image</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.1+galaxy2)</span> with the following parameters:
             <ul>
@@ -2971,7 +2971,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-contig-polishing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Contig polishing</div>
+        <div class="box-title hands-on-title" id="hands-on-contig-polishing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Contig polishing</div>
 
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/medaka_consensus_pipeline/medaka_consensus_pipeline/1.7.2+galaxy0" title="medaka consensus pipeline tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>medaka consensus pipeline</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.7.2+galaxy0)</span> with the following parameters:
@@ -2988,7 +2988,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
       <p>To keep information about the provenance of the contigs, we extract the sample names from the <strong>collection of preprocessed samples</strong> collection and add it to the contigs files.</p>
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-contig-renaming-to-add-sample-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Contig renaming to add sample names</div>
+        <div class="box-title hands-on-title" id="hands-on-contig-renaming-to-add-sample-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Contig renaming to add sample names</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fasta_to_tabular/fasta2tab/1.1.1" title="FASTA-to-Tabular tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FASTA-to-Tabular</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.1)</span> with the following parameters:
             <ul>
@@ -3106,7 +3106,7 @@ https://zenodo.org/record/11222469/files/preprocessed_sample_barcode11_spike2b.f
 
 <div class="Long-Version" markdown="1">
 
-> <div class="box-title hands-on-title" id="hands-on-multilocus-sequence-typing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Multilocus Sequence Typing</div>
+> <div class="box-title hands-on-title" id="hands-on-multilocus-sequence-typing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Multilocus Sequence Typing</div>
 >
 > 1. <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/mlst/mlst/2.22.0" title="MLST tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MLST</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.22.0)</span> with the following parameters:
 >    - <i class="far fa-copy" aria-hidden="true"></i><span class="visually-hidden">param-files</span> *"input_files"*:  collection output of **medaka consensus pipeline** <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> FASTA files with contigs
@@ -3145,7 +3145,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Long-Version">
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-antimicrobial-resistance-genes-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Antimicrobial Resistance Genes Identification</div>
+    <div class="box-title hands-on-title" id="hands-on-antimicrobial-resistance-genes-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Antimicrobial Resistance Genes Identification</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/1.0.1" title="ABRicate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>ABRicate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span> with the following parameters:
@@ -3185,7 +3185,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 
 <!--<div class="Long-Version" markdown="1">
 
-> <div class="box-title hands-on-title" id="hands-on-antimicrobial-resistance-genes-identification-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Antimicrobial Resistance Genes Identification</div>
+> <div class="box-title hands-on-title" id="hands-on-antimicrobial-resistance-genes-identification-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Antimicrobial Resistance Genes Identification</div>
 > 2. <span class="tool" data-tool="Cut1" title="Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut</strong></span> with the following parameters:
 >    - *"Cut columns"*: `c13`
 >    - <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> *"From"*: `report` (output of the **ABRicate** <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> run)
@@ -3201,7 +3201,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Long-Version">
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-antimicrobial-resistance-genes-identification-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Antimicrobial Resistance Genes Identification</div>
+    <div class="box-title hands-on-title" id="hands-on-antimicrobial-resistance-genes-identification-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Antimicrobial Resistance Genes Identification</div>
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.4)</span> with the following parameters:
         <ul>
@@ -3293,7 +3293,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Long-Version">
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-virulence-factor-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Virulence Factor identification</div>
+    <div class="box-title hands-on-title" id="hands-on-virulence-factor-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Virulence Factor identification</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/abricate/abricate/1.0.1" title="ABRicate tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>ABRicate</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span> with the following parameters:
@@ -3338,7 +3338,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Long-Version">
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-replace-text"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Replace Text</div>
+    <div class="box-title hands-on-title" id="hands-on-replace-text"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Replace Text</div>
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/1.1.4" title="Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.4)</span> with the following parameters:
         <ul>
@@ -3394,7 +3394,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <p>In this training, we are testing <em>Salmonella enterica</em>, with different strains of which our samples were spiked. So we will now upload to our history the reference genome of <a href="https://www.ncbi.nlm.nih.gov/genome/?term=txid99287[Organism:exp]"><em>S. enterica</em></a> we originally obtained from the <a href="https://www.ncbi.nlm.nih.gov/">National Center for Biotechnology Information (NCBI) database</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -3410,7 +3410,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Short-Version">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-allele-based-pathogenic-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Allele based Pathogenic Identification</div>
+    <div class="box-title hands-on-title" id="hands-on-allele-based-pathogenic-identification"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Allele based Pathogenic Identification</div>
 
     <ol>
       <li><strong>Import the workflow</strong> into Galaxy
@@ -3452,7 +3452,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-mapping-to-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Mapping to reference genome</div>
+        <div class="box-title hands-on-title" id="hands-on-mapping-to-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Mapping to reference genome</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.24+galaxy0" title="Map with minimap2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with minimap2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.24+galaxy0)</span> with the following parameters:
             <ul>
@@ -3484,7 +3484,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-variant-or-snp-calling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Variant or SNP Calling</div>
+        <div class="box-title hands-on-title" id="hands-on-variant-or-snp-calling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Variant or SNP Calling</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/clair3/clair3/0.1.12+galaxy0" title="Clair3 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Clair3</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.12+galaxy0)</span> with the following parameters:
             <ul>
@@ -3524,7 +3524,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-left-align-and-normalize-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Left-align and normalize indels</div>
+        <div class="box-title hands-on-title" id="hands-on-left-align-and-normalize-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Left-align and normalize indels</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bcftools_norm/bcftools_norm/1.9+galaxy1" title="bcftools norm tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bcftools norm</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9+galaxy1)</span> with the following parameters:
             <ul>
@@ -3553,7 +3553,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-filter-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter variants</div>
+        <div class="box-title hands-on-title" id="hands-on-filter-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter variants</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_filter/4.3+t.galaxy1" title="SnpSift Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnpSift Filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.3+t.galaxy1)</span> with the following parameters:
             <ul>
@@ -3591,7 +3591,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
     <div class="Long-Version">
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-extract-a-tabular-report"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract a tabular report</div>
+        <div class="box-title hands-on-title" id="hands-on-extract-a-tabular-report"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract a tabular report</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_extractFields/4.3+t.galaxy0" title="SnpSift Extract Fields tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnpSift Extract Fields</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.3+t.galaxy0)</span> with the following parameters:
             <ul>
@@ -3635,7 +3635,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Long-Version">
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-mapping-depth-and-mapping-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Mapping Depth and Mapping Coverage</div>
+    <div class="box-title hands-on-title" id="hands-on-mapping-depth-and-mapping-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Mapping Depth and Mapping Coverage</div>
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_depth/samtools_depth/1.15.1+galaxy2" title="Samtools depth tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools depth</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.15.1+galaxy2)</span> with the following parameters:
         <ul>
@@ -3688,7 +3688,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
 <div class="Long-Version">
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-consensus-genome-building"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Consensus Genome Building</div>
+    <div class="box-title hands-on-title" id="hands-on-consensus-genome-building"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Consensus Genome Building</div>
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bcftools_consensus/bcftools_consensus/1.15.1+galaxy3" title="bcftools consensus tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bcftools consensus</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.15.1+galaxy3)</span> with the following parameters:
         <ul>
@@ -3735,7 +3735,7 @@ The output file of the **MLST** tool is a tab-separated output file which contai
     <p>If you did not get your <strong>Gene-based pathogen identification</strong> section output files needed yet or you got an error for some reason, you can go on and download them all or the ones missing from Zenodo so you can start this workflow, please don’t forget to create the collections for them as explained in the pervious hands-on.</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-optional-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Optional Data upload</div>
+      <div class="box-title hands-on-title" id="hands-on-optional-data-upload-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Optional Data upload</div>
 
       <ol>
         <li>
@@ -3768,7 +3768,7 @@ https://zenodo.org/record/11222469/files/Contigs_Barcode11.fasta
   <p>With these two types of visualizations we can have an overview of all samples and the genes, but also how samples are related to each other i.e. which common pathogenic genes they share. Given the time of the sampling and the location one can easily identify using these graphs, where and when the contamination has occurred among the different samples.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-organize-imported-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Organize imported data</div>
+    <div class="box-title hands-on-title" id="hands-on-organize-imported-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Organize imported data</div>
 
     <p>Follow these steps only if you imported the datasets, but if your <strong>Gene-based Pathogen Identification</strong> part is already finished correctly then skip the following 3 steps.</p>
 
@@ -3799,7 +3799,7 @@ https://zenodo.org/record/11222469/files/Contigs_Barcode11.fasta
     <p>If you did not get your <strong>Gene-based pathogen identification</strong> section output files needed yet or you got an error for some reason, you can go on and download them all or the ones missing from Zenodo so you can start this workflow, please don’t forget to create the collections for them as explained in the pervious hands-on. You also need to download and import more tabular files that are generated from the output of <strong>Preprocessing</strong> and <strong>Allele-based pathogen identification</strong>.</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-optional-data-upload-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Optional Data upload</div>
+      <div class="box-title hands-on-title" id="hands-on-optional-data-upload-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Optional Data upload</div>
 
       <ol>
         <li>
@@ -3840,7 +3840,7 @@ https://zenodo.org/record/11222469/files/Contigs_Barcode11.fasta
   <p>With the visualizations types in this workflow, e.g. Heatmaps, Phylogenetic trees and Barplots, we can have an overview of all samples and the genes, but also how samples are related to each other i.e. which common pathogenic genes they share. Given the time of the sampling and the location one can easily identify using these graphs, where and when the contamination has occurred among the different samples.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-organize-imported-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Organize imported data</div>
+    <div class="box-title hands-on-title" id="hands-on-organize-imported-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Organize imported data</div>
 
     <p>Follow these steps only if you imported the datasets, but if your <strong>Gene-based Pathogen Identification</strong> part is already finished correctly then skip the following 5 steps.</p>
 
@@ -3869,7 +3869,7 @@ https://zenodo.org/record/11222469/files/Contigs_Barcode11.fasta
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-all-samples-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: All Samples Analysis</div>
+    <div class="box-title hands-on-title" id="hands-on-all-samples-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: All Samples Analysis</div>
 
     <ol>
       <li><strong>Import the workflow</strong> into Galaxy
@@ -3919,7 +3919,7 @@ https://zenodo.org/record/11222469/files/Contigs_Barcode11.fasta
       <p>Combine VFs accessions for samples into a table and get 0 or 1 for absence / presence</p>
 
       <blockquote class="notranslate hands_on">
-        <div class="box-title hands-on-title" id="hands-on-heatmap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Heatmap</div>
+        <div class="box-title hands-on-title" id="hands-on-heatmap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Heatmap</div>
 
         <ol>
           <li><span class="tool" data-tool="Remove beginning1" title="Remove beginning tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Remove beginning</strong></span> with the following parameters:
@@ -3977,7 +3977,7 @@ https://zenodo.org/record/11222469/files/Contigs_Barcode11.fasta
       <p>Draw heatmap</p>
 
       <blockquote class="hands-on">
-        <div class="box-title hands-on-title" id="hands-on-heatmap-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Heatmap</div>
+        <div class="box-title hands-on-title" id="hands-on-heatmap-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Heatmap</div>
         <ol>
           <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_heatmap/ggplot2_heatmap/3.4.0+galaxy0" title="Heatmap w ggplot tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Heatmap w ggplot</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.4.0+galaxy0)</span> with the following parameters:
             <ul>
@@ -4056,7 +4056,7 @@ Other factors such as the <strong>time</strong> and <strong>location</strong> of
   <p>To get the sequence to align, we need to extract the sequences of the VFs in the contigs:</p>
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-extract-the-sequences-of-the-vfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract the sequences of the VFs</div>
+    <div class="box-title hands-on-title" id="hands-on-extract-the-sequences-of-the-vfs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract the sequences of the VFs</div>
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.1.0)</span> with the following parameters:
         <ul>
@@ -4106,7 +4106,7 @@ Other factors such as the <strong>time</strong> and <strong>location</strong> of
   <p>We can now run multiple sequence alignment, build the trees for each VF and display them.</p>
 
   <blockquote class="hands-on">
-    <div class="box-title hands-on-title" id="hands-on-phylogenetic-tree-building"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Phylogenetic Tree building</div>
+    <div class="box-title hands-on-title" id="hands-on-phylogenetic-tree-building"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Phylogenetic Tree building</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/clustalw/clustalw/2.1+galaxy1" title="ClustalW tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>ClustalW</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1+galaxy1)</span> with the following parameters:
@@ -4205,9 +4205,18 @@ Other factors such as the <strong>time</strong> and <strong>location</strong> of
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/microbiome/faqs/">FAQ page for the Microbiome topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/microbiome/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -4686,7 +4695,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">4</td>
 			</tr>
 		   
@@ -4799,7 +4808,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

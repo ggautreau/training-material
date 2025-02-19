@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2149,7 +2149,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <h2 id="import-data-from-urls">Import data from URLs</h2>
 
-<p>Read sequences are usually stored in compressed (gzipped) FASTQ files. Before the differential expression analysis can proceed, these reads must be aligned to the reference genome and counted into annotated genes. Mapping reads to the genome is a very important task, and many different aligners are available, such as HISAT2 (<span class="citation"><a href="#kim2015hisat">Kim <i>et al.</i> 2015</a></span>), STAR (<span class="citation"><a href="#dobin2013star">Dobin <i>et al.</i> 2013</a></span>) and Subread (<span class="citation"><a href="#Liao2013">Liao <i>et al.</i> 2013</a></span>). Most mapping tasks require larger computers than an average laptop, so usually read mapping is done on a server in a linux-like environment, requiring some programming knowledge. However, Galaxy enables you to do this mapping without needing to know programming and if you don’t have access to a server you can try to use one of the publically available Galaxies e.g. <a href="https://usegalaxy.fr">UseGalaxy.fr</a>, <a href="https://usegalaxy.eu">UseGalaxy.eu</a>, <a href="https://usegalaxy.org.au">UseGalaxy.org.au</a>, <a href="https://usegalaxy.org">UseGalaxy.org</a>.</p>
+<p>Read sequences are usually stored in compressed (gzipped) FASTQ files. Before the differential expression analysis can proceed, these reads must be aligned to the reference genome and counted into annotated genes. Mapping reads to the genome is a very important task, and many different aligners are available, such as HISAT2 (<span class="citation"><a href="#kim2015hisat">Kim <i>et al.</i> 2015</a></span>), STAR (<span class="citation"><a href="#dobin2013star">Dobin <i>et al.</i> 2013</a></span>) and Subread (<span class="citation"><a href="#Liao2013">Liao <i>et al.</i> 2013</a></span>). Most mapping tasks require larger computers than an average laptop, so usually read mapping is done on a server in a linux-like environment, requiring some programming knowledge. However, Galaxy enables you to do this mapping without needing to know programming and if you don’t have access to a server you can try to use one of the publically available Galaxies e.g. <a href="https://usegalaxy.org">UseGalaxy.org</a>, <a href="https://usegalaxy.eu">UseGalaxy.eu</a>, <a href="https://usegalaxy.fr">UseGalaxy.fr</a>, <a href="https://usegalaxy.org.au">UseGalaxy.org.au</a>.</p>
 
 <p>The raw reads used in this tutorial were obtained from SRA from the link in GEO for the the mouse mammary gland dataset (e.g <code class="language-plaintext highlighter-rouge">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP%2FSRP045%2FSRP045534</code>). For the purpose of this tutorial we are going to be working with a small part of the FASTQ files. We are only going to be mapping 1000 reads from each sample to enable running through all the steps quickly. If working with your own data you would use the full data and some results for the full mouse dataset will be shown for comparison. The small FASTQ files are available in <a href="https://zenodo.org/record/4249555">Zenodo</a> and the links to the FASTQ files are provided below.</p>
 
@@ -2218,7 +2218,7 @@ MCL1-LA	luminalvirgin	https://zenodo.org/record/4249555/files/SRR1552444.fastq.g
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -2340,7 +2340,7 @@ MCL1-LA	luminalvirgin	https://zenodo.org/record/4249555/files/SRR1552444.fastq.g
 <p>Take a look at one of the FASTQ files to see what it contains.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-take-a-look-at-fastq-format"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Take a look at FASTQ format</div>
+  <div class="box-title hands-on-title" id="hands-on-take-a-look-at-fastq-format"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Take a look at FASTQ format</div>
 
   <ol>
     <li>Click on the collection name (<code class="language-plaintext highlighter-rouge">fastqs</code>)</li>
@@ -2360,7 +2360,7 @@ MCL1-LA	luminalvirgin	https://zenodo.org/record/4249555/files/SRR1552444.fastq.g
 <p>Sequence quality control is therefore an essential first step in your analysis. We will use similar tools as described in the <a href="/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html">“Quality control” tutorial</a>: <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> and Cutadapt (<span class="citation"><a href="#marcel2011cutadapt">Marcel 2011</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-raw-reads-with-b-fastqc-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check raw reads with <b>FastQC</b></div>
+  <div class="box-title hands-on-title" id="hands-on-check-raw-reads-with-b-fastqc-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check raw reads with <b>FastQC</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span>
@@ -2402,7 +2402,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>The FastQC report contains a lot of information and we can look at the report for each sample. However, that is quite a few reports, 12 for this dataset. If you had more samples it could be a lot more. Luckily, there is a very useful tool called MultiQC (<span class="citation"><a href="#ewels2016multiqc">Ewels <i>et al.</i> 2016</a></span>) that can summarise QC information for multiple samples into a single report. We’ll generate a few MultiQC outputs in this tutorial so we’ll add name tags so we can differentiate them.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-aggregate-fastqc-reports-with-b-multiqc-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Aggregate FastQC reports with <b>MultiQC</b></div>
+  <div class="box-title hands-on-title" id="hands-on-aggregate-fastqc-reports-with-b-multiqc-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Aggregate FastQC reports with <b>MultiQC</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.11+galaxy0)</span> with the following parameters to aggregate the FastQC reports
@@ -2469,7 +2469,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <h2 id="trim-reads">Trim reads</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-trim-reads-with-b-cutadapt-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Trim reads with <b>Cutadapt</b></div>
+  <div class="box-title hands-on-title" id="hands-on-trim-reads-with-b-cutadapt-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Trim reads with <b>Cutadapt</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/3.7+galaxy0" title="Cutadapt tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cutadapt</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.7+galaxy0)</span>
@@ -2520,7 +2520,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <h2 id="trimmed-reads-qc">Trimmed reads QC</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-qc-of-trimmed-reads-with-b-fastqc-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: QC of trimmed reads with <b>FastQC</b></div>
+  <div class="box-title hands-on-title" id="hands-on-qc-of-trimmed-reads-with-b-fastqc-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: QC of trimmed reads with <b>FastQC</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.73+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.73+galaxy0)</span>
@@ -2566,7 +2566,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <h2 id="map-reads-to-reference-genome">Map reads to reference genome</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-map-reads-to-reference-with-b-hisat2-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Map reads to reference with <b>HISAT2</b></div>
+  <div class="box-title hands-on-title" id="hands-on-map-reads-to-reference-with-b-hisat2-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Map reads to reference with <b>HISAT2</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.2.1+galaxy0" title="HISAT2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>HISAT2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1+galaxy0)</span> with the following parameters:
@@ -2633,7 +2633,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>A BAM (<a href="https://en.wikipedia.org/wiki/SAM_(file_format)">Binary Alignment Map</a>) file is a compressed binary file storing the read sequences, whether they have been aligned to a reference sequence (e.g. a chromosome), and if so, the position on the reference sequence at which they have been aligned.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-a-bam-sam-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect a BAM/SAM file</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-a-bam-sam-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect a BAM/SAM file</div>
 
   <ol>
     <li>Inspect the <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> output of <strong>HISAT2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
@@ -2766,7 +2766,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <h2 id="count-reads-mapped-to-genes">Count reads mapped to genes</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-count-reads-mapped-to-genes-with-b-featurecounts-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Count reads mapped to genes with <b>featureCounts</b></div>
+  <div class="box-title hands-on-title" id="hands-on-count-reads-mapped-to-genes-with-b-featurecounts-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Count reads mapped to genes with <b>featureCounts</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/2.0.1+galaxy2" title="featureCounts tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>featureCounts</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.1+galaxy2)</span> with the following parameters:
@@ -2838,7 +2838,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>The counts files are currently in the format of one file per sample. However, it is often convenient to have a count matrix. A count matrix is a single table containing the counts for all samples, with the genes in rows and the samples in columns. The counts files are all within a collection so we can use the Galaxy <strong>Column Join on multiple datasets</strong> tool to easily create a count matrix from the single counts files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-count-matrix-with-b-column-join-on-multiple-datasets-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create count matrix with <b>Column Join on multiple datasets</b></div>
+  <div class="box-title hands-on-title" id="hands-on-create-count-matrix-with-b-column-join-on-multiple-datasets-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create count matrix with <b>Column Join on multiple datasets</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/collection_column_join/collection_column_join/0.0.3" title="Column Join on multiple datasets tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Column Join on multiple datasets</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.3)</span> with the following parameters:
@@ -2866,7 +2866,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>We’ll use a prepared workflow to run the first few of the QCs below. This will also demonstrate how you can make use of Galaxy workflows to easily run and reuse multiple analysis steps. The workflow will run the first three tools: <strong>Infer Experiment</strong>, <strong>MarkDuplicates</strong> and <strong>IdxStats</strong> and generate a <strong>MultiQC</strong> report. You can then edit the workflow if you’d like to add other steps.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-qc-report-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run QC report workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-qc-report-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run QC report workflow</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -2876,7 +2876,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
       </ul>
 
       <!--SNIPPET-->
-      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-gtn-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Importing and launching a GTN workflow</div>   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-rna-seq-reads-to-counts/versions/qc_report">   Launch <strong>QC Report</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">Download workflow</a>) workflow. </div>   <div class="hide-when-galaxy-proxy-active"> Click to  <a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-rna-seq-reads-to-counts/versions/qc_report">     Launch <strong>QC Report</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">Download workflow</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Paste the following URL into the box labelled <em>“Archived Workflow URL”</em>: <code class="language-plaintext highlighter-rouge">https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga</code></li>   <li>Click the <strong>Import workflow</strong> button</li> </ul>   <p>Below is a short video demonstrating how to import a workflow from GitHub using this procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing a workflow from URL" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing a workflow from URL</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
+      <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-importing-and-launching-a-gtn-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Importing and launching a GTN workflow</div>   <div class="show-when-galaxy-proxy-active"> <span class="workflow" data-workflow="https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-rna-seq-reads-to-counts/versions/qc_report">   Launch <strong>QC Report</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </span> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">Download workflow</a>) workflow. </div>   <div class="hide-when-galaxy-proxy-active"> Click to  <a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/transcriptomics-rna-seq-reads-to-counts/versions/qc_report">     Launch <strong>QC Report</strong> <i class="fas fa-share-alt" aria-hidden="true"></i> </a> (<a href="https://github.com/galaxyproject/training-material/blob/main/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">View on GitHub</a>, <a href="https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga">Download workflow</a>) </div>   <!--SNIPPET-->   <blockquote class="tip">   <div class="box-title tip-title" id="tip-if-this-does-not-work"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-if-this-does-not-work" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: If this does not work</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on <em>Workflow</em> on the top menu bar of Galaxy. You will see a list of all your workflows.</li>   <li>Click on <i class="fas fa-upload" aria-hidden="true"></i><span class="visually-hidden">galaxy-upload</span> <strong>Import</strong> at the top-right of the screen</li>   <li>Paste the following URL into the box labelled <em>“Archived Workflow URL”</em>: <code class="language-plaintext highlighter-rouge">https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/rna-seq-reads-to-counts/workflows/qc_report.ga</code></li>   <li>Click the <strong>Import workflow</strong> button</li> </ul>   <p>Below is a short video demonstrating how to import a workflow from GitHub using this procedure:</p>   <figure> <iframe credentialless="" allowfullscreen="" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups" allow="accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'none'; battery 'none'; bluetooth 'none'; browsing-topics 'none'; camera 'none'; ch-ua 'none'; display-capture 'none'; domain-agent 'none'; document-domain 'none'; encrypted-media 'none'; execution-while-not-rendered 'none'; execution-while-out-of-viewport 'none'; gamepad 'none'; geolocation 'none'; gyroscope 'none'; hid 'none'; identity-credentials-get 'none'; idle-detection 'none'; keyboard-map 'none'; local-fonts 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; navigation-override 'none'; otp-credentials 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-create 'none'; publickey-credentials-get 'none'; screen-wake-lock 'none'; serial 'none'; speaker-selection 'none'; sync-xhr 'none'; usb 'none'; web-share 'none'; window-management 'none'; xr-spatial-tracking 'none'" csp="sandbox allow-scripts allow-same-origin;" width="560" height="315" src="https://www.youtube-nocookie.com/embed/hoP36Te5wko" title="Importing a workflow from URL" frameborder="0" loading="lazy"></iframe> <figcaption>   <span class="figcaption-prefix"><strong>Video</strong>:</span> Importing a workflow from URL</figcaption> </figure> </blockquote>   <p><!--END_SNIPPET--></p> </blockquote>
       <p><!--END_SNIPPET--></p>
     </li>
     <li>Import this file as type BED file:
@@ -2908,7 +2908,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>As far as we know this data is unstranded, but as a sanity check you can check the strandness. You can use RSeQC Infer Experiment tool to “guess” the strandness, as explained in the <a href="/training-material/topics/transcriptomics/tutorials/ref-based/tutorial.html">RNA-seq ref-based tutorial</a>. This is done through comparing the “strandness of reads” with the “strandness of transcripts”. For this tool, and many of the other RSeQC (<span class="citation"><a href="#wang2012rseqc">Wang <i>et al.</i> 2012</a></span>) tools, a reference bed file of genes (<code class="language-plaintext highlighter-rouge">reference genes</code>) is required. RSeQC provides some reference BED files for model organisms. You can import the RSeQC mm10 RefSeq BED file from the link <code class="language-plaintext highlighter-rouge">https://sourceforge.net/projects/rseqc/files/BED/Mouse_Mus_musculus/mm10_RefSeq.bed.gz/download</code> (and rename to <code class="language-plaintext highlighter-rouge">reference genes</code>) or import a file from Data if provided. Alternatively, you can provide your own BED file of reference genes, for example from UCSC (see the <a href="/training-material/topics/introduction/tutorials/galaxy-intro-peaks2genes/tutorial.html">Peaks to Genes tutorial</a>. Or the <strong>Convert GTF to BED12</strong> tool can be used to convert a GTF into a BED file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-strandness-with-b-infer-experiment-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check strandness with <b>Infer Experiment</b></div>
+  <div class="box-title hands-on-title" id="hands-on-check-strandness-with-b-infer-experiment-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check strandness with <b>Infer Experiment</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_infer_experiment/2.6.4.1" title="Infer Experiment tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Infer Experiment</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4.1)</span> with the following parameters:
@@ -2961,7 +2961,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>Duplicate reads are usually kept in RNA-seq differential expression analysis as they can come from highly-expressed genes but it is still a good metric to check. A high percentage of duplicates can indicate a problem with the sample, for example, PCR amplification of a low complexity library (not many transcripts) due to not enough RNA used as input. FastQC gives us an idea of duplicates in the reads before mapping (note that it just takes a sample of the data). We can assess the numbers of duplicates in all mapped reads using the <strong>Picard MarkDuplicates</strong> tool. Picard considers duplicates to be reads that map to the same location, based on the start position of where the read maps. In general, we consider normal to obtain up to 50% of duplication.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-duplicate-reads-with-b-markduplicates-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check duplicate reads with <b>MarkDuplicates</b></div>
+  <div class="box-title hands-on-title" id="hands-on-check-duplicate-reads-with-b-markduplicates-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check duplicate reads with <b>MarkDuplicates</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.3" title="MarkDuplicates tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MarkDuplicates</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.18.2.3)</span> with the following parameters:
@@ -3013,7 +3013,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>You can check the numbers of reads mapped to each chromosome with the <strong>Samtools IdxStats</strong> tool. This can help assess the sample quality, for example, if there is an excess of mitochondrial contamination. It could also help to check the sex of the sample through the numbers of reads mapping to X/Y or to see if any chromosomes have highly expressed genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-count-reads-mapping-to-each-chromosome-with-b-idxstats-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Count reads mapping to each chromosome with <b>IdxStats</b></div>
+  <div class="box-title hands-on-title" id="hands-on-count-reads-mapping-to-each-chromosome-with-b-idxstats-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Count reads mapping to each chromosome with <b>IdxStats</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/samtools_idxstats/samtools_idxstats/2.0.4" title="IdxStats tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>IdxStats</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.4)</span> with the following parameters:
@@ -3072,7 +3072,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>The coverage of reads along gene bodies can be assessed to check if there is any bias in coverage. For example, a bias towards the 3’ end of genes could indicate degradation of the RNA. Alternatively, a 3’ bias could indicate that the data is from a 3’ assay (e.g. oligodT-primed, 3’RNA-seq). You can use the RSeQC <strong>Gene Body Coverage (BAM)</strong> tool to assess gene body coverage in the BAM files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-coverage-of-genes-with-b-gene-body-coverage-bam-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check coverage of genes with <b>Gene Body Coverage (BAM)</b></div>
+  <div class="box-title hands-on-title" id="hands-on-check-coverage-of-genes-with-b-gene-body-coverage-bam-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check coverage of genes with <b>Gene Body Coverage (BAM)</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/2.6.4.3" title="Gene Body Coverage (BAM) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Gene Body Coverage (BAM)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4.3)</span> with the following parameters:
@@ -3133,7 +3133,7 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
 <p>We can also check the distribution of reads across known gene features, such as exons (CDS, 5’UTR, 3’UTR), introns and intergenic regions. In RNA-seq we expect most reads to map to exons rather than introns or intergenic regions. It is also the reads mapped to exons that will be counted so it is good to check what proportions of reads have mapped to those. High numbers of reads mapping to intergenic regions could indicate the presence of DNA contamination.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-distribution-of-reads-with-b-read-distribution-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check distribution of reads with <b>Read Distribution</b></div>
+  <div class="box-title hands-on-title" id="hands-on-check-distribution-of-reads-with-b-read-distribution-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check distribution of reads with <b>Read Distribution</b></div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_distribution/2.6.4.1" title="Read Distribution tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Read Distribution</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4.1)</span> with the following parameters:
@@ -3258,9 +3258,18 @@ This information can be seen at the top of the FastQC Webpage as below.</li>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3366,8 +3375,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3572,17 +3581,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">31</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.16129032258064516">5</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.03225806451612903">1</td>
 			</tr>
 		   
@@ -3825,7 +3834,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

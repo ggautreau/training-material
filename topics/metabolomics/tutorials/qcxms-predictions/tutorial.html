@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1332,7 +1332,7 @@ We will simply start with molecule’s SMILES.
 You have three options for uploading the data. The first two - importing via history and Zenodo link will give a file specific to this tutorial, while the last one – “Paste data uploader” gives you more flexibility in terms of the compounds you would like to test with this workflow.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 1: Data upload - Import history</div>
+    <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 1: Data upload - Import history</div>
 
     <ol>
       <li>
@@ -1350,7 +1350,7 @@ You have three options for uploading the data. The first two - importing via his
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history-via-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 2: Data upload - Add to history via Zenodo</div>
+    <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history-via-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 2: Data upload - Add to history via Zenodo</div>
 
     <ol>
       <li>Create a new history for this tutorial</li>
@@ -1369,7 +1369,7 @@ You have three options for uploading the data. The first two - importing via his
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-3-data-upload-paste-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Option 3: Data Upload  - paste data</div>
+    <div class="box-title hands-on-title" id="hands-on-option-3-data-upload-paste-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Option 3: Data Upload  - paste data</div>
 
     <ol>
       <li>Create a new history for this tutorial</li>
@@ -1400,7 +1400,7 @@ You have three options for uploading the data. The first two - importing via his
   <h2 id="smiles-to-sdf">SMILES to SDF</h2>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-convert-smiles-to-sdf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Convert SMILES to SDF</div>
+    <div class="box-title hands-on-title" id="hands-on-convert-smiles-to-sdf"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Convert SMILES to SDF</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0" title="Compound conversion tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compound conversion</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.1+galaxy0)</span> with the following parameters:</p>
     <ul>
@@ -1428,7 +1428,7 @@ You have three options for uploading the data. The first two - importing via his
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-generate-conformers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate conformers</div>
+    <div class="box-title hands-on-title" id="hands-on-generate-conformers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate conformers</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/ctb_im_conformers/ctb_im_conformers/1.1.4+galaxy0" title="Generate conformers tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generate conformers</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.4+galaxy0)</span> with the following parameters:</p>
     <ul>
@@ -1441,7 +1441,7 @@ You have three options for uploading the data. The first two - importing via his
   <p>Now - once again format conversion! This time we will convert the generated conformers from the SDF format to Cartesian coordinate (XYZ) format. The XYZ format lists the atoms in a molecule and their respective 3D coordinates, which is a common format used in computational chemistry for further processing and analysis.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-molecular-format-conversion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Molecular Format Conversion</div>
+    <div class="box-title hands-on-title" id="hands-on-molecular-format-conversion"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Molecular Format Conversion</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0" title="Compound conversion tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compound conversion</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.1+galaxy0)</span> with the following parameters:
@@ -1467,7 +1467,7 @@ You have three options for uploading the data. The first two - importing via his
   <p>As shown in the image in the <i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> <em>Details box</em> above, different conformers have different energies. Therefore, our next step will optimize the geometry of the molecules to find the lowest energy conformation. This is crucial to achieve convergence in the next steps. If the input geometry for the QCxMS method is too crude, the ground state neutral run will not converge and we won’t be able to sample the geometry to calculate individual trajectories. We will perform semi-empirical optimization on the molecules using the <a href="https://github.com/grimme-lab/xtb">Extended Tight-Binding (xTB)</a> method. The level of optimization accuracy to be used can be specified as an input parameter, <em>“Optimization Levels”</em>. The default quantum chemical method is GFN2-xTB.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-molecular-optimisation-with-xtb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Molecular optimisation with xTB</div>
+    <div class="box-title hands-on-title" id="hands-on-molecular-optimisation-with-xtb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Molecular optimisation with xTB</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/xtb_molecular_optimization/xtb_molecular_optimization/6.6.1+galaxy1" title="xtb molecular optimization tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xtb molecular optimization</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 6.6.1+galaxy1)</span> with the following parameters:</p>
     <ul>
@@ -1485,7 +1485,7 @@ You have three options for uploading the data. The first two - importing via his
   <p>Finally, let’s predict the spectra for our molecule. As mentioned, we will use <a href="https://github.com/qcxms/QCxMS">QCxMS</a> for this purpose. First, we need to prepare the necessary input files for the QCxMS production runs. These files are required for running the QCxMS simulations, which will predict the mass spectrum of the molecule. This step typically formats the optimized molecular data into a format that can be used for the production simulations. This step performs the ground state calculations. The resulting geometry trajectory is then sampled and one representation is used for each trajectory.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-qcxms-neutral-run"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QCxMS neutral run</div>
+    <div class="box-title hands-on-title" id="hands-on-qcxms-neutral-run"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QCxMS neutral run</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/5.2.1+galaxy3" title="QCxMS neutral run tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>QCxMS neutral run</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.1+galaxy3)</span> with the following parameters:</p>
     <ul>
@@ -1505,7 +1505,7 @@ You have three options for uploading the data. The first two - importing via his
   <p>We can now use those files as input for the next tool which calculates the mass spectra using QCxMS. This simulation generates .res files, which contain the raw results of the mass spectra calculations. These results are essential for predicting how the molecules will appear in mass spectrometry experiments.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-qcxms-production-run"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QCxMS production run</div>
+    <div class="box-title hands-on-title" id="hands-on-qcxms-production-run"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QCxMS production run</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/qcxms_production_run/qcxms_production_run/5.2.1+galaxy3" title="QCxMS production run tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>QCxMS production run</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.1+galaxy3)</span> with the following parameters:
@@ -1524,7 +1524,7 @@ You have three options for uploading the data. The first two - importing via his
   <p>It might be the case that some runs might have failed, therefore it is crucial to filter out any failed runs from the dataset to ensure only successful results are processed further. This step is important to maintain the integrity and quality of the data being analyzed in subsequent steps. The output is a file containing only the successful mass spectra results.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-filter-failed-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter failed datasets</div>
+    <div class="box-title hands-on-title" id="hands-on-filter-failed-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter failed datasets</div>
 
     <ol>
       <li><span class="tool" data-tool="__FILTER_FAILED_DATASETS__" title="Filter failed datasets tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter failed datasets</strong></span> with the following parameters:
@@ -1541,7 +1541,7 @@ You have three options for uploading the data. The first two - importing via his
   <p>The filtered collection contains .res files from the QCxMS production run. This final step converts the .res files into simulated mass spectra in MSP (Mass Spectrum Peak) file format. The MSP format is widely used for storing and sharing mass spectrometry data, enabling easy comparison and analysis of the results, for example by comparing the spectra using the <a href="https://github.com/matchms/matchms">matchms</a> package.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-qcxms-get-msp-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QCxMS get MSP results</div>
+    <div class="box-title hands-on-title" id="hands-on-qcxms-get-msp-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QCxMS get MSP results</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/qcxms_getres/qcxms_getres/5.2.1+galaxy2" title="QCxMS get results tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>QCxMS get results</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.1+galaxy2)</span> with the following parameters:
@@ -1579,7 +1579,7 @@ We will start with a table with the first column being molecule names and the se
 You have three options for uploading the data. The first two - importing via history and Zenodo link will give a file specific to this tutorial, while the last one – “Paste data uploader” gives you more flexibility in terms of the compounds you would like to test with this workflow.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 1: Data upload - Import history</div>
+    <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 1: Data upload - Import history</div>
 
     <ol>
       <li>
@@ -1597,7 +1597,7 @@ You have three options for uploading the data. The first two - importing via his
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history-via-zenodo-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 2: Data upload - Add to history via Zenodo</div>
+    <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history-via-zenodo-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 2: Data upload - Add to history via Zenodo</div>
 
     <ol>
       <li>Create a new history for this tutorial</li>
@@ -1616,7 +1616,7 @@ You have three options for uploading the data. The first two - importing via his
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-3-data-upload-paste-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Option 3: Data Upload  - paste data</div>
+    <div class="box-title hands-on-title" id="hands-on-option-3-data-upload-paste-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Option 3: Data Upload  - paste data</div>
 
     <ol>
       <li>Create a new history for this tutorial</li>
@@ -1651,7 +1651,7 @@ ethylene C=C
   <p>Once your dataset is uploaded, we can do some simple pre-processing to prepare the file for downstream analysis. Let’s start with ‘cutting’ the table into two columns – one with SMILES, the other with the molecule name – and then separating each entry to create a dataset collection, followed by parsing out the text information.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-cutting-out-name-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Cutting out name column</div>
+    <div class="box-title hands-on-title" id="hands-on-cutting-out-name-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Cutting out name column</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.3+galaxy1" title="Advanced Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Advanced Cut</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
@@ -1678,7 +1678,7 @@ ethylene C=C
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-creating-dataset-collection-molecule-name"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Creating dataset collection (molecule name)</div>
+    <div class="box-title hands-on-title" id="hands-on-creating-dataset-collection-molecule-name"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Creating dataset collection (molecule name)</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.5.2" title="Split file to dataset collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Split file to dataset collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.2)</span> with the following parameters:</p>
     <ul>
@@ -1695,7 +1695,7 @@ ethylene C=C
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-parsing-out-name-info"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Parsing out name info</div>
+    <div class="box-title hands-on-title" id="hands-on-parsing-out-name-info"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Parsing out name info</div>
 
     <p><span class="tool" data-tool="param_value_from_file" title="Parse parameter value tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Parse parameter value</strong></span> with the following parameters:</p>
     <ul>
@@ -1714,7 +1714,7 @@ ethylene C=C
   <p>We will repeat the first two steps, but processing SMILES this time.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-cutting-out-smiles-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Cutting out SMILES column</div>
+    <div class="box-title hands-on-title" id="hands-on-cutting-out-smiles-column"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Cutting out SMILES column</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.3+galaxy1" title="Advanced Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Advanced Cut</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
@@ -1741,7 +1741,7 @@ ethylene C=C
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-creating-dataset-collection-smiles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:   Creating dataset collection (SMILES)</div>
+    <div class="box-title hands-on-title" id="hands-on-creating-dataset-collection-smiles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:   Creating dataset collection (SMILES)</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/split_file_to_collection/split_file_to_collection/0.5.2" title="Split file to dataset collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Split file to dataset collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.2)</span> with the following parameters:
@@ -1770,7 +1770,7 @@ ethylene C=C
   <p>Now, onto format conversion. Let’s convert our SMILES to SDF (Structure Data File) and append the molecule’s name that we have already extracted.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-convert-smiles-to-sdf-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Convert SMILES to SDF</div>
+    <div class="box-title hands-on-title" id="hands-on-convert-smiles-to-sdf-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Convert SMILES to SDF</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0" title="Compound conversion tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compound conversion</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.1+galaxy0)</span> with the following parameters:</p>
     <ul>
@@ -1794,7 +1794,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>We now have two SDF files, each containing the coordinates of the atoms and the name of the investigated molecule. Let’s combine them to make life easier and work on just one file.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-concatenating-the-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Concatenating the files</div>
+    <div class="box-title hands-on-title" id="hands-on-concatenating-the-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Concatenating the files</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/9.3+galaxy1" title="Concatenate datasets tail-to-head (cat) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Concatenate datasets tail-to-head (cat)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:</p>
     <ul>
@@ -1821,7 +1821,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-generate-conformers-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Generate conformers</div>
+    <div class="box-title hands-on-title" id="hands-on-generate-conformers-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Generate conformers</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/ctb_im_conformers/ctb_im_conformers/1.1.4+galaxy0" title="Generate conformers tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generate conformers</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.4+galaxy0)</span> with the following parameters:</p>
     <ul>
@@ -1834,7 +1834,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>Now - once again format conversion! This time we will convert the generated conformers from the SDF format to Cartesian coordinate (XYZ) format. The XYZ format lists the atoms in a molecule and their respective 3D coordinates, which is a common format used in computational chemistry for further processing and analysis.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-molecular-format-conversion-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Molecular Format Conversion</div>
+    <div class="box-title hands-on-title" id="hands-on-molecular-format-conversion-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Molecular Format Conversion</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/openbabel_compound_convert/openbabel_compound_convert/3.1.1+galaxy0" title="Compound conversion tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compound conversion</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.1+galaxy0)</span> with the following parameters:
@@ -1861,7 +1861,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>As shown in the image in the <i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> <em>Details box</em> above, different conformers have different energies. Therefore, our next step will optimize the geometry of the molecules to find the lowest energy conformation. This is crucial to achieve convergence in the next steps. If the input geometry for the QCxMS method is too crude, the ground state neutral run will not converge and we won’t be able to sample the geometry to calculate individual trajectories. We will perform semi-empirical optimization on the molecules using the <a href="https://github.com/grimme-lab/xtb">Extended Tight-Binding (xTB)</a> method. The level of optimization accuracy to be used can be specified as an input parameter, <em>“Optimization Levels”</em>. The default quantum chemical method is GFN2-xTB.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-molecular-optimisation-with-xtb-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Molecular optimisation with xTB</div>
+    <div class="box-title hands-on-title" id="hands-on-molecular-optimisation-with-xtb-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Molecular optimisation with xTB</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/xtb_molecular_optimization/xtb_molecular_optimization/6.6.1+galaxy1" title="xtb molecular optimization tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xtb molecular optimization</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 6.6.1+galaxy1)</span> with the following parameters:</p>
     <ul>
@@ -1879,7 +1879,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>Finally, let’s predict the spectra for our molecules. As mentioned, we will use <a href="https://github.com/qcxms/QCxMS">QCxMS</a> for this purpose. First, we need to prepare the necessary input files for the QCxMS production runs. These files are required for running the QCxMS simulations, which will predict the mass spectra of the molecules. This step typically formats the optimized molecular data into a format that can be used for the production simulations. This step performs the ground state calculations. The resulting geometry trajectory is then sampled and one representation is used for each trajectory.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-qcxms-neutral-run-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QCxMS neutral run</div>
+    <div class="box-title hands-on-title" id="hands-on-qcxms-neutral-run-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QCxMS neutral run</div>
 
     <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/qcxms_neutral_run/qcxms_neutral_run/5.2.1+galaxy3" title="QCxMS neutral run tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>QCxMS neutral run</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.1+galaxy3)</span> with the following parameters:</p>
     <ul>
@@ -1899,7 +1899,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>We can now use those files as input for the next tool which calculates the mass spectra for each molecule using QCxMS (Quantum Chemistry and Mass Spectrometry). This simulation generates .res files, which contain the raw results of the mass spectra calculations. These results are essential for predicting how the molecules will appear in mass spectrometry experiments.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-qcxms-production-run-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QCxMS production run</div>
+    <div class="box-title hands-on-title" id="hands-on-qcxms-production-run-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QCxMS production run</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/qcxms_production_run/qcxms_production_run/5.2.1+galaxy3" title="QCxMS production run tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>QCxMS production run</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.1+galaxy3)</span> with the following parameters:
@@ -1918,7 +1918,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>It might be the case that some runs might have failed, therefore it is crucial to filter out any failed runs from the dataset to ensure only successful results are processed further. This step is important to maintain the integrity and quality of the data being analyzed in subsequent steps. The output is a file containing only the successful mass spectra results.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-filter-failed-datasets-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter failed datasets</div>
+    <div class="box-title hands-on-title" id="hands-on-filter-failed-datasets-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter failed datasets</div>
 
     <ol>
       <li><span class="tool" data-tool="__FILTER_FAILED_DATASETS__" title="Filter failed datasets tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter failed datasets</strong></span> with the following parameters:
@@ -1935,7 +1935,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>The filtered collection contains .res files from the QCxMS production run. This final step converts the .res files into simulated mass spectra in MSP (Mass Spectrum Peak) file format. The MSP format is widely used for storing and sharing mass spectrometry data, enabling easy comparison and analysis of the results, for example by comparing the spectra using the <a href="https://github.com/matchms/matchms">matchms</a> package.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-qcxms-get-msp-results-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  QCxMS get MSP results</div>
+    <div class="box-title hands-on-title" id="hands-on-qcxms-get-msp-results-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  QCxMS get MSP results</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/qcxms_getres/qcxms_getres/5.2.1+galaxy2" title="QCxMS get results tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>QCxMS get results</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.1+galaxy2)</span> with the following parameters:
@@ -1951,7 +1951,7 @@ However, if your input is a collection of SMILES (like in this case), then you h
   <p>The output of this step is a collection of two MSP files - one per each molecule. However, if you want, you can combine those two into one MSP file.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-combine-msp-files-into-one"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Combine MSP files into one</div>
+    <div class="box-title hands-on-title" id="hands-on-combine-msp-files-into-one"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Combine MSP files into one</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cat/9.3+galaxy1" title="Concatenate datasets tail-to-head (cat) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Concatenate datasets tail-to-head (cat)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
@@ -2031,9 +2031,18 @@ However, if your input is a collection of SMILES (like in this case), then you h
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/metabolomics/faqs/">FAQ page for the Metabolomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/metabolomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2238,7 +2247,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2320,7 +2329,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

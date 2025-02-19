@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1876,7 +1876,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The first step of our analysis consists of retrieving the miRNA-Seq datasets from Zenodo and organizing them into collections.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieve-mirna-seq-and-mrna-seq-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve miRNA-Seq and mRNA-Seq datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieve-mirna-seq-and-mrna-seq-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve miRNA-Seq and mRNA-Seq datasets</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1930,7 +1930,7 @@ SRR1019439	BR treated mRNA	https://zenodo.org/record/4710649/files/SRR1019439_RN
 <p>Next we will retrieve the remaining datasets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieve-the-additional-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve the additional datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieve-the-additional-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve the additional datasets</div>
 
   <ol>
     <li>
@@ -1968,7 +1968,7 @@ miRNA_stem-loop_seq.fasta	https://zenodo.org/record/4710649/files/miRNA_stem-loo
   <p>As indicated above, for this tutorial the depth of the samples was reduced in order to speed up the time needed to carry out the analysis. This was done as follows:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-dataset-subsampling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Dataset subsampling</div>
+    <div class="box-title hands-on-title" id="hands-on-dataset-subsampling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Dataset subsampling</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/peterjc/sample_seqs/sample_seqs/0.2.5" title="Sub-sample sequences files  tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Sub-sample sequences files </strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.5)</span> with the following parameters:
@@ -2001,7 +2001,7 @@ For more information on the topic of quality control, please see our <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-initial-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Initial quality check</div>
+  <div class="box-title hands-on-title" id="hands-on-initial-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Initial quality check</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.72+galaxy1)</span> with the following parameters:
@@ -2059,7 +2059,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>To remove the adapters contamination, we will employ the <strong>Trim Galore</strong> tool, a wrapper script around <a href="https://journal.embnet.org/index.php/embnetjournal/article/view/200"><strong>Cutadapt</strong></a> and <strong>FastQC</strong> which automates quality and adapter trimming.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-trimming-of-adapter-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Trimming of adapter sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-trimming-of-adapter-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Trimming of adapter sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/trim_galore/trim_galore/0.4.3.1" title="Trim Galore! tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Trim Galore!</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.4.3.1)</span> with the following parameters:
@@ -2081,7 +2081,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>Next, we will reassess the quality of the sequences to check if the adapters have been removed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-post-processing-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Post-processing quality check</div>
+  <div class="box-title hands-on-title" id="hands-on-post-processing-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Post-processing quality check</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.72+galaxy1)</span> with the following parameters:
@@ -2143,7 +2143,7 @@ For more information on the topic of quality control, please see our <a href="/t
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quantification-of-mirnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quantification of miRNAs</div>
+  <div class="box-title hands-on-title" id="hands-on-quantification-of-mirnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quantification of miRNAs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/rnateam/mirdeep2_mapper/rbc_mirdeep2_mapper/2.0.0" title="MiRDeep2 Mapper tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MiRDeep2 Mapper</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0)</span> with the following parameters:
@@ -2175,7 +2175,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>To use the outputs generated by <strong>MiRDeep2 Quantifier</strong> in the differential expression analysis, it is necessary to modify the datasets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-edition-of-mirdeep2-quantifier-outputs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Edition of MiRDeep2 Quantifier outputs</div>
+  <div class="box-title hands-on-title" id="hands-on-edition-of-mirdeep2-quantifier-outputs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Edition of MiRDeep2 Quantifier outputs</div>
 
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut columns from a table tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut columns from a table</strong></span> with the following parameters:
@@ -2209,7 +2209,7 @@ For more information on the topic of quality control, please see our <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-differential-expression-analysis-using-deseq2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Differential expression analysis using DESeq2</div>
+  <div class="box-title hands-on-title" id="hands-on-differential-expression-analysis-using-deseq2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Differential expression analysis using DESeq2</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.6+galaxy1" title="DESeq2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>DESeq2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.11.40.6+galaxy1)</span> with the following parameters:
@@ -2269,7 +2269,7 @@ For more information on the topic of quality control, please see our <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-differentially-expressed-mirnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter differentially expressed miRNAs</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-differentially-expressed-mirnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter differentially expressed miRNAs</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong></span> data on any column using simple expressions (Galaxy Version 1.1.1) with the following parameters:
@@ -2298,7 +2298,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>To get any sensible results, it is worth analyzing the full dataset. You can analyze the full datasets following the above tutorial. Otherwise, you can import the DESeq2 analysis results that we generated from full dataset into your history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieve-the-deseq2-analysis-results-on-full-mirna-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve the DESeq2 analysis results on full miRNA dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieve-the-deseq2-analysis-results-on-full-mirna-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve the DESeq2 analysis results on full miRNA dataset</div>
 
   <ol>
     <li>
@@ -2323,7 +2323,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>Repeat the filtering step on the imported DESeq2 result.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-and-sort-differentially-expressed-mirnas-from-the-full-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter and sort differentially expressed miRNAs from the full dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-and-sort-differentially-expressed-mirnas-from-the-full-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter and sort differentially expressed miRNAs from the full dataset</div>
 
   <ol class="comment">
     <li><span class="tool" data-tool="Filter1" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong></span> data on any column using simple expressions (Galaxy Version 1.1.1) with the following parameters:
@@ -2378,7 +2378,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>As in the previous section, we shall begin by assessing the quality of our sequences.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-initial-quality-check-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Initial quality check</div>
+  <div class="box-title hands-on-title" id="hands-on-initial-quality-check-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Initial quality check</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72+galaxy1" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.72+galaxy1)</span> with the following parameters:
@@ -2454,7 +2454,7 @@ For more information on the topic of quality control, please see our <a href="/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quantify-gene-expression-with-salmon"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quantify gene expression with Salmon</div>
+  <div class="box-title hands-on-title" id="hands-on-quantify-gene-expression-with-salmon"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quantify gene expression with Salmon</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/salmon/salmon/0.14.1.2+galaxy1" title="Salmon quant tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Salmon quant</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.14.1.2+galaxy1)</span> with the following parameters:
@@ -2555,7 +2555,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>Now, let’s analyze which genes show statistically significant differential expression in response to brassinosteoids.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-differential-expression-analysis-using-deseq2-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Differential expression analysis using DEseq2</div>
+  <div class="box-title hands-on-title" id="hands-on-differential-expression-analysis-using-deseq2-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Differential expression analysis using DEseq2</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.6+galaxy1" title="DESeq2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>DESeq2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.11.40.6+galaxy1)</span> with the following parameters:
@@ -2626,7 +2626,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>To conclude the analysis of the differential expression of mRNAs, we will extract those transcripts that show a significant induction of expression in response to brassinosteroids. Before continuing with further analysis, similar to miRNA data analysis, import the DESeq2 results generated from full mRNA datasets.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieve-the-deseq2-analysis-results-on-full-mrna-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieve the DESeq2 analysis results on full mRNA dataset</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieve-the-deseq2-analysis-results-on-full-mrna-dataset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieve the DESeq2 analysis results on full mRNA dataset</div>
 
   <ol>
     <li>
@@ -2651,7 +2651,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>Now we continue with the DE genes analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-significantly-de-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract significantly DE genes</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-significantly-de-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract significantly DE genes</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong></span> data on any column using simple expressions (Galaxy Version 1.1.1) with the following parameters:
@@ -2709,7 +2709,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>To predict which miRNAs target which mRNAs, first we need their transcriptomic sequences in FASTA format. Now we will obtain the sequences of miRNAs whose expression is induced by brassinosteroids.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtaining-the-sequences-of-upregulated-mirnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtaining the sequences of upregulated miRNAs</div>
+  <div class="box-title hands-on-title" id="hands-on-obtaining-the-sequences-of-upregulated-mirnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Obtaining the sequences of upregulated miRNAs</div>
   <blockquote class="comment">
     <div class="box-title comment-title" id="comment-3"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment</div>
 
@@ -2770,7 +2770,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>To identify putative targets of upregulated miRNAs, it is necessary to obtain the sequences of all downregulated mRNAs in FASTA format.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-obtaining-the-gene-sequences-of-downregulated-mrnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Obtaining the gene sequences of downregulated mRNAs</div>
+  <div class="box-title hands-on-title" id="hands-on-obtaining-the-gene-sequences-of-downregulated-mrnas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Obtaining the gene sequences of downregulated mRNAs</div>
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut columns from a table tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut columns from a table</strong></span> with the following parameters:
       <ul>
@@ -2805,7 +2805,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>We are now ready to launch the search for miRNA target genes. For this we will use the <strong>TargetFinder</strong> tool that is implemented and used for miRNA target prediction in plants (<span class="citation"><a href="#Srivastava2014">Srivastava <i>et al.</i> 2014</a></span>, <span class="citation"><a href="#Ma2017">Ma <i>et al.</i> 2017</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-identification-of-potential-mirna-targets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: identification of potential miRNA targets</div>
+  <div class="box-title hands-on-title" id="hands-on-identification-of-potential-mirna-targets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: identification of potential miRNA targets</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/rnateam/targetfinder/targetfinder/1.7.0+galaxy1" title="TargetFinder tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>TargetFinder</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.7.0+galaxy1)</span> with the following parameters:
@@ -2849,7 +2849,7 @@ For more information on the topic of quality control, please see our <a href="/t
 <p>As additional activity, you can try to repeat the workflow by using the sequences stored in the NCBI GEO database with the accession number <code class="language-plaintext highlighter-rouge">GSE119382</code>. In that case, we will compare gene expression patterns of mutants overexpressing the brassinosteroid receptor BRL3 under two experimental conditions: control and drought-stress. The required datasets are available in the data library:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-data-from-the-data-libraries"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import data from the Data Libraries</div>
+  <div class="box-title hands-on-title" id="hands-on-import-data-from-the-data-libraries"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import data from the Data Libraries</div>
   <ol>
     <li>Go into <strong>Data</strong> (top panel) and click on <strong>Data Libraries</strong></li>
     <li>In the search box enter the following identifier: <code class="language-plaintext highlighter-rouge">4710649</code></li>
@@ -2924,9 +2924,18 @@ https://zenodo.org/record/4710649/files/SRR7779229_BRL3_mRNA_watered.fastqsanger
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3130,7 +3139,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">4</td>
 			</tr>
 		   
@@ -3243,7 +3252,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1293,7 +1293,7 @@ the geoscience community.</p>
   <p>You can come back to where you left off the tutorial anytime by clicking <i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="visually-hidden">level</span>.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log in to Galaxy</div>
+    <div class="box-title hands-on-title" id="hands-on-log-in-to-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Log in to Galaxy</div>
     <ol>
       <li>Open your favorite browser (Chrome, Safari or Firefox as your browser, not Internet Explorer!)</li>
       <li>Browse to your <a href="https://earth-system.usegalaxy.eu/">Galaxy instance</a></li>
@@ -1335,7 +1335,7 @@ Another tutorial on this event is available on the <a href="/training-material/t
 <blockquote class="tip">
   <div class="box-title tip-title" id="tip-history-set-up-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-history-set-up-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip:  History set up on Galaxy </span><span class="fold-unfold fa fa-minus-square"></span></button></div>
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-history-management"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  History management</div>
+    <div class="box-title hands-on-title" id="hands-on-history-management"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  History management</div>
 
     <p>Create a new history for this tutorial and give it a name (example: “Argo data with Pangeo”) for you to find it again later if needed.</p>
 
@@ -1347,7 +1347,7 @@ Another tutorial on this event is available on the <a href="/training-material/t
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-arge-data-fetching"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Arge data fetching</div>
+  <div class="box-title hands-on-title" id="hands-on-arge-data-fetching"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Arge data fetching</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/argo_getdata/argo_getdata/0.1.15+galaxy0" title="Argo data access tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Argo data access</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.15+galaxy0)</span> with the following parameters:
@@ -1394,7 +1394,7 @@ know about the actual data entries present under the various variables.</p>
 <h2 id="get-metadata">Get metadata</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-netcdf-dataset-with-xarray-metadata-galaxy-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  NetCDF dataset with Xarray metadata Galaxy Tool</div>
+  <div class="box-title hands-on-title" id="hands-on-netcdf-dataset-with-xarray-metadata-galaxy-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  NetCDF dataset with Xarray metadata Galaxy Tool</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_metadata_info/xarray_metadata_info/2022.3.0+galaxy0" title="NetCDF xarray Metadata Info tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray Metadata Info</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2022.3.0+galaxy0)</span> with the following parameters:
@@ -1418,7 +1418,7 @@ know about the actual data entries present under the various variables.</p>
 <h2 id="coordinates-information">Coordinates information</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-coordinate-information-with-xarray-coordinate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Get Coordinate information with Xarray Coordinate</div>
+  <div class="box-title hands-on-title" id="hands-on-get-coordinate-information-with-xarray-coordinate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Get Coordinate information with Xarray Coordinate</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/xarray_coords_info/xarray_coords_info/2022.3.0+galaxy0" title="NetCDF xarray Coordinate Info tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF xarray Coordinate Info</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2022.3.0+galaxy0)</span> with the following parameters:
@@ -1445,7 +1445,7 @@ know about the actual data entries present under the various variables.</p>
 <h2 id="timeseries-visualisation">Timeseries visualisation</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-netcdf-timeseries-extractor"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  NetCDF timeseries Extractor</div>
+  <div class="box-title hands-on-title" id="hands-on-netcdf-timeseries-extractor"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  NetCDF timeseries Extractor</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/timeseries_extraction/timeseries_extraction/2022.3.0+galaxy0" title="NetCDF timeseries Extractor tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>NetCDF timeseries Extractor</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2022.3.0+galaxy0)</span> with the following parameters:
@@ -1483,7 +1483,7 @@ The ESM that the project tries to implement includes coastal water dynamics, oce
 <p>ODV is now integrated with Galaxy as an interactive tool. This kind of tool works differently than classical tools as it allows the user to interact with a dedicated graphical interface. Those tools are used to give access to Jupyter Notebooks, RStudio or R Shiny apps for example.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-launch-odv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Launch ODV</div>
+  <div class="box-title hands-on-title" id="hands-on-launch-odv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Launch ODV</div>
 
   <ol>
     <li><span class="tool" data-tool="interactive_tool_odv" title="ODV tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>ODV</strong></span> with the following parameters:
@@ -1516,7 +1516,7 @@ The ESM that the project tries to implement includes coastal water dynamics, oce
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-with-odv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Visualise with ODV</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-with-odv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Visualise with ODV</div>
 
   <p>In the new tab in ODV.</p>
   <ol>
@@ -1557,7 +1557,7 @@ You should see a folder open it (double clicking)</p>
 <figure id="figure-5" style="max-width: 90%;"><img src="../../images/argo_pangeo/argo_odv_open.png" alt="Visualistation on a ODV map. " width="1844" height="1010" loading="lazy" /><a target="_blank" href="../../images/argo_pangeo/argo_odv_open.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> ODV map of the Argo data</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-temperature-on-a-map-with-odv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Visualise the temperature on a map with ODV</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-temperature-on-a-map-with-odv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Visualise the temperature on a map with ODV</div>
   <ol>
     <li>Go on the big <strong>+</strong> on the top left</li>
     <li>Select “1 SURFACE Window”</li>
@@ -1581,7 +1581,7 @@ You should see a folder open it (double clicking)</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-save-your-visualisation-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Save your visualisation map</div>
+  <div class="box-title hands-on-title" id="hands-on-save-your-visualisation-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Save your visualisation map</div>
   <ol>
     <li>Click right on the map select <strong>Save Plot As…</strong></li>
     <li>In the pop-up screen go to the folder <strong>ODV</strong>, <strong>galaxy</strong>, <strong>outputs</strong>.</li>
@@ -1648,9 +1648,18 @@ Ocean Data View.
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/climate/faqs/">FAQ page for the Climate topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/climate/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1848,7 +1857,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1930,7 +1939,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

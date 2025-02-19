@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1287,7 +1287,7 @@ to learn how to perform the training steps, please see the <a href="/training-ma
 <p>Maker will align the transcript and protein sequences on the genome sequence to determine gene positions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1344,7 +1344,7 @@ https://zenodo.org/records/4406623/files/snap_training_2.snaphmm?download=1
 <p>Before running the full annotation process, you need first to evaluate the quality of the sequence. It will give you a good idea of what you can expect from it at the end of the annotation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-genome-sequence-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get genome sequence statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-get-genome-sequence-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get genome sequence statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fasta_stats/fasta-stats/1.0.1" title="Fasta Statistics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Fasta Statistics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.1)</span> with the following parameters:
@@ -1378,7 +1378,7 @@ https://zenodo.org/records/4406623/files/snap_training_2.snaphmm?download=1
 <p>We will first run this tool on the genome sequence to evaluate its quality.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-busco-on-the-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run Busco on the genome</div>
+  <div class="box-title hands-on-title" id="hands-on-run-busco-on-the-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run Busco on the genome</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -1435,7 +1435,7 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
 <p>Let’s run Maker to predict gene models! Maker will use align <a href="https://en.wikipedia.org/wiki/Expressed_sequence_tag">ESTs</a> and proteins to the genome, and it will run ab initio predictors (SNAP and Augustus) using pre-trained models for this organism (have a look at the <a href="/training-material/topics/genome-annotation/tutorials/annotation-with-maker/tutorial.html">longer version of tutorial</a> to understand how they were trained).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Annotation with Maker</div>
+  <div class="box-title hands-on-title" id="hands-on-annotation-with-maker"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Annotation with Maker</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11" title="Maker tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Maker</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> with the following parameters:
@@ -1495,7 +1495,7 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
 <p>First, use the <code class="language-plaintext highlighter-rouge">Genome annotation statistics</code> that will compute some general statistics on the annotation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get annotation statistics</div>
+  <div class="box-title hands-on-title" id="hands-on-get-annotation-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get annotation statistics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jcvi_gff_stats/jcvi_gff_stats/0.8.4" title="Genome annotation statistics tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Genome annotation statistics</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.8.4)</span> with the following parameters:
@@ -1539,7 +1539,7 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
 <p>First we need to compute all the transcript sequences from the Maker annotation, using <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.1" title="GFFread tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFFread</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1.1)</span>. This tool will compute the sequence of each transcript that was predicted by <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker/maker/2.31.11" title="Maker tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Maker</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> and write them all in a FASTA file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract transcript sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-transcript-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract transcript sequences</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/gffread/gffread/2.2.1.1" title="GFFread tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>GFFread</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.2.1.1)</span> with the following parameters:
@@ -1566,7 +1566,7 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
 <p>Now run BUSCO with the predicted transcript sequences:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-busco"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run BUSCO</div>
+  <div class="box-title hands-on-title" id="hands-on-run-busco"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run BUSCO</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/4.1.4" title="Busco tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Busco</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.1.4)</span> with the following parameters:
@@ -1599,7 +1599,7 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
 <p>If you look at the content of the <code class="language-plaintext highlighter-rouge">final annotation</code> dataset, you will notice that the gene names are long, complicated, and not very readable. That’s because Maker assign them automatic names based on the way it computed each gene model. We are now going to automatically assign more readable names.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-gene-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Change gene names</div>
+  <div class="box-title hands-on-title" id="hands-on-change-gene-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Change gene names</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/maker_map_ids/maker_map_ids/2.31.11" title="Map annotation ids tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map annotation ids</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.31.11)</span> with the following parameters:
@@ -1626,7 +1626,7 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
 <p>With Galaxy, you can visualize the annotation you have generated using JBrowse. This allows you to navigate along the chromosomes of the genome and see the structure of each predicted gene.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-annotations-in-jbrowse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize annotations in JBrowse</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-annotations-in-jbrowse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize annotations in JBrowse</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/jbrowse/jbrowse/1.16.10+galaxy0" title="JBrowse tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>JBrowse</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.10+galaxy0)</span> with the following parameters:
@@ -1722,9 +1722,18 @@ As we only analysed chromosome III, many BUSCO genes are missing, but still ~100
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/genome-annotation/faqs/">FAQ page for the Genome Annotation topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/genome-annotation/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1890,12 +1899,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">1</td>
 			</tr>
 		   
@@ -2008,7 +2017,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

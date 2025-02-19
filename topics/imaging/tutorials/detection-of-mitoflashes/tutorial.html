@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1448,7 +1448,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="data-upload">Data Upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data Upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data Upload</div>
 
   <ol>
     <li>
@@ -1495,7 +1495,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="step-1-mitochondrion-detection">Step 1: Mitochondrion Detection</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mitochondrion-detection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mitochondrion Detection</div>
+  <div class="box-title hands-on-title" id="hands-on-mitochondrion-detection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mitochondrion Detection</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/imgteam/spot_detection_2d/ip_spot_detection_2d/0.0.1" title="Spot Detection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Spot Detection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.1)</span> with the following recommended parameters:
@@ -1522,7 +1522,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>By linking each mitochondrion’s position across frames, we ensure that intensity fluctuations represent true changes within the same mitochondrial structure, enabling precise analysis of events like mitoflashes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-tracking-mitochondrial-movement"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Tracking Mitochondrial Movement</div>
+  <div class="box-title hands-on-title" id="hands-on-tracking-mitochondrial-movement"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Tracking Mitochondrial Movement</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/imgteam/points_association_nn/ip_points_association_nn/0.0.3-2" title="Perform linking in time series (nearest neighbors) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Perform linking in time series (nearest neighbors)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.3-2)</span> with the following recommended parameters:
@@ -1546,7 +1546,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="step-3-curve-fitting-for-mitoflash-detection">Step 3: Curve Fitting for Mitoflash Detection</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mitoflash-detection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mitoflash Detection</div>
+  <div class="box-title hands-on-title" id="hands-on-mitoflash-detection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mitoflash Detection</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/imgteam/curve_fitting/ip_curve_fitting/0.0.3-2" title="Perform curve fitting tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Perform curve fitting</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.3-2)</span> with the following parameters:
@@ -1765,9 +1765,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/imaging/faqs/">FAQ page for the Imaging topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/imaging/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1922,7 +1931,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2004,7 +2013,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

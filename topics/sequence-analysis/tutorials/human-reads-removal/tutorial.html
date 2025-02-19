@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1479,7 +1479,7 @@ Nevertheless the cleaning processs does not rely on any particular sample isolat
 <p>As always, it is best to give each analysis you are performing with Galaxy its own history, so let’s start with preparing this:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-new-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare new history</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-new-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare new history</div>
 
   <ol>
     <li>
@@ -1503,7 +1503,7 @@ Nevertheless the cleaning processs does not rely on any particular sample isolat
 After that, we will arrange the uploaded data into a collection in our Galaxy history to facilitate its handling in the analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-and-rearrangement"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload and rearrangement</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-and-rearrangement"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload and rearrangement</div>
 
   <ol>
     <li>
@@ -1562,7 +1562,7 @@ https://zenodo.org/record/3732359/files/SRR10903402_r2.fq.gz
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-trim-reads-and-map-them-to-the-human-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Trim reads and map them to the human reference genome</div>
+  <div class="box-title hands-on-title" id="hands-on-trim-reads-and-map-them-to-the-human-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Trim reads and map them to the human reference genome</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/pjbriggs/trimmomatic/trimmomatic/0.38.0" title="Trimmomatic tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Trimmomatic</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.38.0)</span> with default settings and:
@@ -1617,7 +1617,7 @@ https://zenodo.org/record/3732359/files/SRR10903402_r2.fq.gz
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-for-read-pairs-not-mapping-to-the-human-genome-and-extract-their-identifiers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter for read pairs not mapping to the human genome and extract their identifiers</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-for-read-pairs-not-mapping-to-the-human-genome-and-extract-their-identifiers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter for read pairs not mapping to the human genome and extract their identifiers</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_fastx/samtools_fastx/1.9+galaxy1" title="Samtools fastx tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools fastx</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9+galaxy1)</span> with the following parameter settings:
@@ -1693,7 +1693,7 @@ For this reason, we need to first unzip our collection into two simple list coll
 Then, after processing both with <strong>seqtk_subseq</strong>, we zip the filtered collections back into one.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-identifier-based-extraction-of-non-human-reads-from-the-input-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Identifier-based extraction of non-human reads from the input data</div>
+  <div class="box-title hands-on-title" id="hands-on-identifier-based-extraction-of-non-human-reads-from-the-input-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Identifier-based extraction of non-human reads from the input data</div>
 
   <ol>
     <li><span class="tool" data-tool="__UNZIP_COLLECTION__" title="Unzip Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Unzip Collection</strong></span> with the following setting:
@@ -1781,9 +1781,18 @@ Cleaning of single-end data would use the same tools (with adjusted settings), b
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/sequence-analysis/faqs/">FAQ page for the Sequence analysis topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/sequence-analysis/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1944,7 +1953,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">7</td>
 			</tr>
 		   
@@ -2052,7 +2061,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

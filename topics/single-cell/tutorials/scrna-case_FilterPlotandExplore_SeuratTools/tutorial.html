@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1782,7 +1782,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <div class="EBI-Data-Retrieval">
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-ebi-data-retrieval"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: EBI Data Retrieval</div>
+    <div class="box-title hands-on-title" id="hands-on-ebi-data-retrieval"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: EBI Data Retrieval</div>
 
     <p>You may retrieve that files necessary to construct a Seurat Object in this way. Doing to will alleviate the necessity to convert AnnData (Python) objects into Seurat (R) objects:</p>
 
@@ -1796,7 +1796,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <div class="Importing-from-a-history">
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-importing-from-a-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Importing from a history</div>
+    <div class="box-title hands-on-title" id="hands-on-importing-from-a-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Importing from a history</div>
     <p>You can import <a href="https://singlecell.usegalaxy.eu/u/camila-goclowski/h/tool-based-seurat-fpe-input-data">this history</a></p>
 
     <!--SNIPPET-->
@@ -1815,7 +1815,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>This can be accomplished via the Read10x step. <strong>Read10x</strong> tool implements Seurat’s function to create a matrix and add in feature and barcode names simultaneously:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-read10x"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Read10X</div>
+    <div class="box-title hands-on-title" id="hands-on-read10x"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Read10X</div>
 
     <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_read10x/seurat_read10x/4.0.4+galaxy0" title="Seurat Read10x tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Read10x</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
     <ul>
@@ -1838,7 +1838,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   <h2 id="get-data-onto-galaxy">Get Data onto Galaxy</h2>
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-uploading-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Uploading from Zenodo</div>
+    <div class="box-title hands-on-title" id="hands-on-uploading-from-zenodo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Uploading from Zenodo</div>
 
     <ol>
       <li>Create a new history for this tutorial</li>
@@ -1875,7 +1875,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 Simply run the tool without any actual filtering thresholds and with the following parameters:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-filter-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter Cells</div>
+    <div class="box-title hands-on-title" id="hands-on-filter-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter Cells</div>
 
     <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_filter_cells/seurat_filter_cells/4.0.4+galaxy0" title="Seurat FilterCells tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat FilterCells</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
     <ul>
@@ -1903,7 +1903,7 @@ Simply run the tool without any actual filtering thresholds and with the followi
 <p>So let’s generate some QC plots. First off, let’s visualize the spread of our data:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1921,7 +1921,7 @@ Simply run the tool without any actual filtering thresholds and with the followi
 <p>In a similar fashion we can visualize the spread of cells in our data expressing a given number of features (or genes):</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Features</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Features</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1939,7 +1939,7 @@ Simply run the tool without any actual filtering thresholds and with the followi
 <p>We can, and should, ask a number of questions about the quality of our data before conducting any actual analyses. Batch effect, for example carries the potential to alter the conclusions we make. Let’s take a look at whether this may be the case here:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-individual"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts Split by Individual</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-individual"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts Split by Individual</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1971,7 +1971,7 @@ If you are analyzing your own data, try plotting another variable which you know
 <h2 id="1-sex-differences-in-counts">1. Sex Differences in Counts?</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-sex"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts Split by Sex</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-sex"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts Split by Sex</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1990,7 +1990,7 @@ If you are analyzing your own data, try plotting another variable which you know
 <h2 id="2-genotype-differences-in-counts">2. Genotype Differences in Counts?</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts Split by Genotype</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts Split by Genotype</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2045,7 +2045,7 @@ If you are analyzing your own data, try plotting another variable which you know
 <p>In order to include more than one parameter by which to filter, use the “Insert Subsets used to filter cells” button below the first parameter box.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-cells-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter Cells</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-cells-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter Cells</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_filter_cells/seurat_filter_cells/4.0.4+galaxy0" title="Seurat FilterCells tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat FilterCells</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2100,7 +2100,7 @@ If you are analyzing your own data, try plotting another variable which you know
 <p>Normalisation helps reduce the differences between gene and UMI counts by fitting total counts across cells in our data to be comparable to one another. SCTransform regularizes the gene expression profiles via a negative binomial regression while also controlling for overfitting of the data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-normalize-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Normalize Data</div>
+  <div class="box-title hands-on-title" id="hands-on-normalize-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Normalize Data</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_normalise_data/seurat_normalise_data/4.0.4+galaxy0" title="Seurat NormaliseData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat NormaliseData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2120,7 +2120,7 @@ If you are analyzing your own data, try plotting another variable which you know
 <p>The find variable genes step flags genes that <em>do</em> vary across cells to expedite future analyses and ensure that we, and Seurat, don’t waste time looking for meaningful differences where they don’t exist.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-variable-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Variable Genes</div>
+  <div class="box-title hands-on-title" id="hands-on-find-variable-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Variable Genes</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_find_variable_genes/seurat_find_variable_genes/4.0.4+galaxy0" title="Seurat FindVariableGenes tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat FindVariableGenes</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2154,7 +2154,7 @@ If you are analyzing your own data, try plotting another variable which you know
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-scale-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Scale Data</div>
+  <div class="box-title hands-on-title" id="hands-on-scale-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Scale Data</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_scale_data/seurat_scale_data/4.0.4+galaxy0" title="Seurat ScaleData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat ScaleData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2195,7 +2195,7 @@ As currently written, this tool only allows us to regress out a single variable:
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run PCA</div>
+  <div class="box-title hands-on-title" id="hands-on-run-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run PCA</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_run_pca/seurat_run_pca/4.0.4+galaxy0" title="Seurat RunPCA tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat RunPCA</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2239,7 +2239,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Let’s now use the 15 PC threshold we chose from the Elbowplot and apply it to find neighbors:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-neighbors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Neighbors</div>
+  <div class="box-title hands-on-title" id="hands-on-find-neighbors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Neighbors</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_find_neighbours/seurat_find_neighbours/4.0.4+galaxy0" title="Seurat FindNeighbours tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat FindNeighbours</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2255,7 +2255,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Now we can use the neighborhood graph to identify clusters of cells whose transcriptional profiles appear most similar to one another: we can identify and label clusters:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Clusters</div>
+  <div class="box-title hands-on-title" id="hands-on-find-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Clusters</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_find_clusters/seurat_find_clusters/4.0.4+galaxy0" title="Seurat FindClusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat FindClusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2294,7 +2294,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run UMAP</div>
+  <div class="box-title hands-on-title" id="hands-on-run-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run UMAP</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_run_umap/seurat_run_umap/4.0.4+galaxy0" title="Seurat UMAP tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat UMAP</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2312,7 +2312,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Now that we have run dimensionality reduction on our dataset, it is ready for visualization. Let’s take a look at what our cells look like in a UMAP projection:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot UMAP</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot UMAP</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2329,7 +2329,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>We can also look for expression of particular genes and see how those map to our UMAP projection. This is often useful in getting an initial understanding of which clusters might be representative of which cell types.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-gapdh"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Gapdh</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-gapdh"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Gapdh</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2348,7 +2348,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>For example, we can plot early T-cell marker Il2ra and get an idea of which cells and/or clusters might resemble the early T-cells:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-il2ra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Il2ra</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-il2ra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Il2ra</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2370,7 +2370,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>To do so, we’ll run Seurat’s FindMarkers function, which will compare each identity (in this case cluster) against every other identity within its class (all the other clusters). This function of marker finding is particularly useful in identifying up, or down, regulated genes that drive differences in identity/cluster.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Markers</div>
+  <div class="box-title hands-on-title" id="hands-on-find-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Markers</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_find_markers/seurat_find_markers/4.0.4+galaxy0" title="Seurat FindMarkers tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat FindMarkers</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2391,7 +2391,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Let’s take another look at what our clusters look like:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-umap-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot UMAP</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-umap-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot UMAP</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2442,7 +2442,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>We can plot these markers as a means of discerning which cluster might be representing a given cell type. Let’s start with the Mature T-cell marker Itm2a:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-itm2a"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Itm2a</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-itm2a"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Itm2a</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2459,7 +2459,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Now what about the opposite end of the spectrum: the double negative early T-cells? We can see from our table about that Il2ra is a known marker of this cell type, let’s see where it’s most strongly expressed in the data:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-il2ra-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Il2ra</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-il2ra-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Il2ra</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2478,7 +2478,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Now for the intermediate populations–which may be a bit more tricky to deconvolute. Based on our known markers, we see that both the double-positive populations express many of the same genes: Cd8b1, Cd8a, and Cd4. Let’s make sure that the remaining clusters (0, 1, 3, 4, 5, 6, and 7) all express these:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-cd8b1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Cd8b1</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-cd8b1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Cd8b1</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2493,7 +2493,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>It looks like clusters 1, 4, 5, and 6 pretty strongly express Cd8b1, now what about Cd8a?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-cd8a"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Cd8a</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-cd8a"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Cd8a</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2508,7 +2508,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>This looks pretty consistent with the Cd8b1 plot, which is expected as these are markers of a double positive population! The true discernment between the two populations will be the level of Cd4 expression:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-cd4"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Cd4</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-cd4"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Cd4</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2567,7 +2567,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Are there any differences in genotype? Or in biological terms, is there an impact of growth restriction on T-cell development in the thymus? We can begin to answer this question visually by using the “split.by” parameter in Seurat’s plot functions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-genotype-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts Split by Genotype</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-genotype-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts Split by Genotype</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2591,7 +2591,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>First thing’s first, is there a batch effect?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-individual-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts Split by Individual</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-individual-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts Split by Individual</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2609,7 +2609,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Additionally, we will also look at the confounding effect of sex:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-sex-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize Counts Split by Sex</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-counts-split-by-sex-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize Counts Split by Sex</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2627,7 +2627,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Are there any clusters or differences being driven by sequencing depth, a technical factor?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Counts</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Counts</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2642,7 +2642,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>There doesn’t visually appear to be any differences in sequencing depth across the clusters, but let’s check out some of those other variables we grouped by:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Features</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Features</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2667,7 +2667,7 @@ You can also think about it like choosing a threshold of variance explained. Con
 <p>Do you think we processed these samples well enough? We have seen in the previous images that these clusters are not very tight or distinct, so we could consider stronger filtering. Let’s take a look at gene expression of a gene we know should not be expressed in tCells as a sanity check:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-hba-a1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot Hba-a1</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-hba-a1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot Hba-a1</div>
 
   <p>Run<span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_plot/seurat_plot/4.0.4+galaxy0" title="Plot with Seurat tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Seurat</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2726,9 +2726,16 @@ You can also think about it like choosing a threshold of variance explained. Con
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2831,8 +2838,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3121,7 +3128,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -3223,7 +3230,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

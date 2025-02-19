@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1842,7 +1842,7 @@ genome sequences of eight MRSA strains isolated from patients in Japan.</p>
 <p>Any analysis should get its own Galaxy history. So let’s start by creating a new one and get the data into it.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-history-creation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: History creation</div>
+  <div class="box-title hands-on-title" id="hands-on-history-creation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: History creation</div>
 
   <ol>
     <li>
@@ -1866,7 +1866,7 @@ genome sequences of eight MRSA strains isolated from patients in Japan.</p>
 <p>Now, we need to import the data: 1 FASTQ file containing the reads from the sequencer.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
   <ol>
     <li>
       <p><span class="tool" data-tool="upload1" title="Import tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Import</strong></span> the files from <a href="https://zenodo.org/record/10669812">Zenodo</a> or from the shared data library</p>
@@ -1976,7 +1976,7 @@ represents a quality score, which will be explained later)</li>
 <div class="With-Illumina-MiSeq-data">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-illumina-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Illumina Data upload</div>
+    <div class="box-title hands-on-title" id="hands-on-illumina-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Illumina Data upload</div>
     <ol>
       <li>
         <p><span class="tool" data-tool="upload1" title="Import tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Import</strong></span> the files from <a href="https://zenodo.org/record/10669812">Zenodo</a> or from the shared data library</p>
@@ -2016,7 +2016,7 @@ https://zenodo.org/record/10669812/files/DRR187559_2.fastqsanger.bz2
 <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> are made, which will generate a summary and plots of the data statistics. NanoPlot is mainly used for long-read data, like ONT and PACBIO and FastQC for any read.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality Control</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality Control</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.74+galaxy0" title="FastQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>FastQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.74+galaxy0)</span> with the following parameters:
@@ -2043,7 +2043,7 @@ https://zenodo.org/record/10669812/files/DRR187559_2.fastqsanger.bz2
   </ul>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-quality-improvement-of-the-illumina-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality improvement of the Illumina reads</div>
+    <div class="box-title hands-on-title" id="hands-on-quality-improvement-of-the-illumina-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality improvement of the Illumina reads</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0" title="fastp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>fastp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.23.2+galaxy0)</span> with the following parameters:
@@ -2097,7 +2097,7 @@ https://zenodo.org/record/10669812/files/DRR187559_2.fastqsanger.bz2
 </div>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/filtlong/filtlong/0.2.1+galaxy0" title="filtlong tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>filtlong</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.1+galaxy0)</span> with the following parameters:
       <ul>
@@ -2134,7 +2134,7 @@ https://zenodo.org/record/10669812/files/DRR187559_2.fastqsanger.bz2
 <p>The output can be evaluated using <strong>NanoPlot</strong> for plotting long read sequencing data and alignments</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filtering-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-filtering-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filtering</div>
   <ol>
     <li>
       <p>Convert the datatype of <code class="language-plaintext highlighter-rouge">DRR187567</code> to uncompress it</p>
@@ -2194,7 +2194,7 @@ https://zenodo.org/record/10669812/files/DRR187559_2.fastqsanger.bz2
     <p>We can compare the two generated reports. Galaxy allows to view several datasets side-by-side using the Window Manager function</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-inspect-nanoplot-reports"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect NanoPlot reports</div>
+      <div class="box-title hands-on-title" id="hands-on-inspect-nanoplot-reports"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect NanoPlot reports</div>
 
       <ol>
         <li>
@@ -2307,7 +2307,7 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-assembly-using-flye"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assembly using Flye</div>
+  <div class="box-title hands-on-title" id="hands-on-assembly-using-flye"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assembly using Flye</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/flye/flye/2.9.1+galaxy0" title="Flye assembly tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Flye assembly</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.9.1+galaxy0)</span> with the following parameters:
@@ -2344,7 +2344,7 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
     <p>We can visualize the assembly graph using the <code class="language-plaintext highlighter-rouge">graphical fragment assembly</code> with <strong>Bandage</strong> (<span class="citation"><a href="#wick2015bandage">Wick <i>et al.</i> 2015</a></span>), a package for exploring assembly graphs through summary reports and visualizations of their contents.</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-assembly-inspection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Assembly inspection</div>
+      <div class="box-title hands-on-title" id="hands-on-assembly-inspection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Assembly inspection</div>
       <ol>
         <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/2022.09+galaxy4" title="Bandage Image tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Bandage Image</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2022.09+galaxy4)</span> with the following parameters:
           <ul>
@@ -2425,7 +2425,7 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
 <p>To evaluate the assembly, we use also <a href="http://quast.bioinf.spbau.ru/">Quast</a> (<span class="citation"><a href="#Gurevich2013">Gurevich <i>et al.</i> 2013</a></span>) (QUality ASsessment Tool), a tool providing quality metrics for assemblies. This tool can be used to compare multiple assemblies, can take an optional reference file as input to provide complementary metrics, etc</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control-of-assembly-using-quast"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality Control of assembly using Quast</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control-of-assembly-using-quast"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality Control of assembly using Quast</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.2.0+galaxy1" title="Quast tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Quast</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.0+galaxy1)</span> with the following parameters:
@@ -2487,7 +2487,7 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
   <p>We need to set up <strong>BWA-MEM</strong> so it aligns each read to all possible locations, not just the best location. This option does not work with paired-end alignment. We will then need to align forward and reverse read files separately, instead of aligning both read files with a single BWA-MEM run as usually recommended.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-align-short-reads-on-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Align short-reads on assembly</div>
+    <div class="box-title hands-on-title" id="hands-on-align-short-reads-on-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Align short-reads on assembly</div>
     <ol>
       <li>
         <p>Change the datatype of both FASTQ outputs of <strong>fastp</strong> to <code class="language-plaintext highlighter-rouge">fastqsanger.gz</code></p>
@@ -2531,7 +2531,7 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
   <p>We can now run <strong>Polypolish</strong>.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-polish-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Polish assembly</div>
+    <div class="box-title hands-on-title" id="hands-on-polish-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Polish assembly</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/polypolish/polypolish/0.5.0+galaxy2" title="Polypolish tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Polypolish</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.5.0+galaxy2)</span> with the following parameters:
@@ -2556,7 +2556,7 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
   <p>To check the impact of the polishing, let’s run <strong>QUAST</strong> on both <strong>Flye</strong> and <strong>Polypolish</strong> outputs.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-quality-control-of-polished-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality Control of polished assembly</div>
+    <div class="box-title hands-on-title" id="hands-on-quality-control-of-polished-assembly"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality Control of polished assembly</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/quast/quast/5.2.0+galaxy1" title="Quast tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Quast</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.2.0+galaxy1)</span> with the following parameters:
@@ -2670,9 +2670,18 @@ novo assembler for single molecule sequencing reads. It can be used from bacteri
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/assembly/faqs/">FAQ page for the Assembly topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/assembly/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2835,8 +2844,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3056,12 +3065,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -3169,7 +3178,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

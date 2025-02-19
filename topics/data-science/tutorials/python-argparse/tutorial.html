@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1233,7 +1233,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In the coding world, whenever you run a Python script on the command line, it has a special variable available to it named <code class="language-plaintext highlighter-rouge">argv</code>. This is a list of all of the arguments used when you run a command line program.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-print-out-argv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Print out argv</div>
+  <div class="box-title hands-on-title" id="hands-on-print-out-argv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Print out argv</div>
 
   <ol>
     <li>Create / open the file <code class="language-plaintext highlighter-rouge">run.py</code> in your text editor of choice</li>
@@ -1280,7 +1280,7 @@ python run.py --help
 <p>Let’s sum up all of the numbers passed on the command line. We’ll do this by hand, and then we’ll replace it with <code class="language-plaintext highlighter-rouge">argparse</code> to see how much effort that saves us.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
   <p>Update your script to sum up every number passed to it on the command line.</p>
 
   <p>It should handle:</p>
@@ -1378,7 +1378,7 @@ args.sum # A boolean, True or False.
 <p>Let’s go back to our script, and replace <code class="language-plaintext highlighter-rouge">sys</code> with argparse.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-replacing-argv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Replacing argv.</div>
+  <div class="box-title hands-on-title" id="hands-on-replacing-argv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Replacing argv.</div>
 
   <ol>
     <li>
@@ -1465,7 +1465,7 @@ python run.py <span class="nt">--help</span>
 <p>With the <code class="language-plaintext highlighter-rouge">argparse2tool</code> project, and eventually <code class="language-plaintext highlighter-rouge">pyGalGen</code> which will be merged into <code class="language-plaintext highlighter-rouge">planemo</code>, you can generate Galaxy tools automatically from <code class="language-plaintext highlighter-rouge">argparse</code> based Python scripts.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-a-galaxy-tool-wrapper-from-your-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate a Galaxy tool wrapper from your script</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-a-galaxy-tool-wrapper-from-your-script"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate a Galaxy tool wrapper from your script</div>
   <ol>
     <li>
       <p>Write out the python script to a file named <code class="language-plaintext highlighter-rouge">main.py</code></p>
@@ -1497,13 +1497,13 @@ python run.py <span class="nt">--help</span>
       <p>Generate the tool interface:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-command"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Command</div>
+        <div class="box-title code-in-title" id="code-in-command"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Command</div>
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PYTHONPATH=$(argparse2tool) python main.py --generate_galaxy_xml
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-galaxy-xml"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Galaxy XML</div>
+        <div class="box-title code-out-title" id="code-out-galaxy-xml"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Galaxy XML</div>
         <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;tool</span> <span class="na">name=</span><span class="s">"main.py"</span> <span class="na">id=</span><span class="s">"main.py"</span> <span class="na">version=</span><span class="s">"1.0"</span><span class="nt">&gt;</span>
   <span class="nt">&lt;description&gt;</span>Sum some numbers<span class="nt">&lt;/description&gt;</span>
   <span class="nt">&lt;stdio&gt;</span>
@@ -1583,9 +1583,16 @@ python run.py <span class="nt">--help</span>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1706,8 +1713,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
 
@@ -1754,7 +1761,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1836,7 +1843,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

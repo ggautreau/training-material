@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2038,7 +2038,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <div class="History_import">
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 1: Data upload - Import history</div>
+    <div class="box-title hands-on-title" id="hands-on-option-1-data-upload-import-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 1: Data upload - Import history</div>
 
     <ol>
       <li>
@@ -2058,7 +2058,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <div class="Zenodo_import">
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Option 2: Data upload - Add to history</div>
+    <div class="box-title hands-on-title" id="hands-on-option-2-data-upload-add-to-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Option 2: Data upload - Add to history</div>
 
     <ol>
       <li>Create a new history for this tutorial</li>
@@ -2096,7 +2096,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>One problem with our current dataset is that it’s not just T-cells: we found in the previous tutorial that it also contains macrophages. This is a problem, because trajectory analysis will generally try to find relationships between all the cells in the sample. We need to remove those cell types to analyse the trajectory.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-removing-macrophages"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Removing macrophages</div>
+  <div class="box-title hands-on-title" id="hands-on-removing-macrophages"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Removing macrophages</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.7.5+galaxy1" title="Manipulate AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.5+galaxy1)</span> with the following parameters:
@@ -2135,7 +2135,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="calculate-force-directed-graph">Calculate force-directed graph</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-draw-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Draw FDG</div>
+  <div class="box-title hands-on-title" id="hands-on-draw-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Draw FDG</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9" title="Scanpy RunFDG tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy RunFDG</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2160,7 +2160,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>And now time to plot it!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot the FDG</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot the FDG</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PlotEmbed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2201,7 +2201,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="draw-diffusion-map">Draw diffusion map</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-draw-the-diffusion-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Draw the Diffusion Map</div>
+  <div class="box-title hands-on-title" id="hands-on-draw-the-diffusion-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Draw the Diffusion Map</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_diffmap/scanpy_run_diffmap/1.8.1+galaxy9" title="Scanpy DiffusionMap tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy DiffusionMap</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2225,7 +2225,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Now that we have our diffusion map, we need to re-calculate neighbors using the diffusion map instead of the PCs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-neighbours-using-diffusion-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Compute neighbours using diffusion map</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-neighbours-using-diffusion-map"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Compute neighbours using diffusion map</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.8.1+galaxy9" title="Scanpy ComputeGraph tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy ComputeGraph</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2249,7 +2249,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Now that we’ve re-calculated the nearest neighbours, we can use these new neighbours to re-draw the FDG to see how this changes the plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-a-new-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot a new FDG</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-a-new-fdg"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot a new FDG</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9" title="Scanpy RunFDG tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy RunFDG</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2316,7 +2316,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p><a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.paga.html">PAGA</a> is used to generalise relationships between groups, or likely clusters, in this case. It will make it much easier to see the trajectories between our clusters of T-cells.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-paga"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot PAGA</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-paga"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot PAGA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_paga/scanpy_run_paga/1.8.1+galaxy9" title="Scanpy PAGA tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PAGA</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2376,7 +2376,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Force-directed graphs can be initialised randomly, or we can prod it in the right direction. We’ll prod it with our PAGA calculations. Note that you could also try prodding it with tSNE or UMAP. A lot of these tools can be used on top of each other or with each other in different ways, this tutorial is just one example. Similarly, you could be using any <strong>obs</strong> information for grouping, so could do this for <em>louvain</em> or <em>cell_type</em> for instance.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-initialise-fdg-using-paga"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Initialise FDG using PAGA</div>
+  <div class="box-title hands-on-title" id="hands-on-initialise-fdg-using-paga"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Initialise FDG using PAGA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_fdg/scanpy_run_fdg/1.8.1+galaxy9" title="Scanpy RunFDG tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy RunFDG</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2428,7 +2428,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The easiest way to do this is just to rerun <i class="fas fa-redo" aria-hidden="true"></i><span class="visually-hidden">galaxy-refresh</span> the previous step, but change the attribute we want to use to colour the FDG plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-by-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot by genotype</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-by-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot by genotype</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PlotEmbed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2468,7 +2468,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We’re also interested in the expression of the two genes that are known to be markers of the two different types of mature T-cells: Cd4 and Cd8. We can colour in our plot to show which cells are expressing these genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-for-gene-expression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot for gene expression</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-for-gene-expression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot for gene expression</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_plot_embed/scanpy_plot_embed/1.8.1+galaxy9" title="Scanpy PlotEmbed tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy PlotEmbed</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2524,7 +2524,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>On to the <a href="https://scanpy.readthedocs.io/en/stable/api/scanpy.tl.dpt.html">diffusion pseudotime</a>, where we infer multiple time points within the same piece of data!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-dpt-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  DPT Plot</div>
+  <div class="box-title hands-on-title" id="hands-on-dpt-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  DPT Plot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_run_dpt/scanpy_run_dpt/1.8.1+galaxy9" title="Scanpy DPT tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy DPT</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
@@ -2622,9 +2622,16 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2724,8 +2731,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3004,12 +3011,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.5">1</td>
 			</tr>
 		   
@@ -3123,7 +3130,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

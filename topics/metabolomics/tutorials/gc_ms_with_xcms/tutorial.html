@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1521,7 +1521,7 @@ The 3 samples used in this training are pooled quality control (QC) samples comi
 <h2 id="import-the-data-into-galaxy">Import the data into Galaxy</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Upload data</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Upload data</div>
 
   <ol>
     <li>
@@ -1597,7 +1597,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>Our input data are in <code class="language-plaintext highlighter-rouge">.raw</code> format, which is not suitable for the downstream tools in this tutorial. We use the tool <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/msconvert/msconvert/3.0.20287.2" title="msconvert tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>msconvert</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.0.20287.2)</span> to convert our samples to the appropriate format (<code class="language-plaintext highlighter-rouge">.mzML</code> in this case).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-convert-the-raw-data-to-mzml"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Convert the raw data to mzML</div>
+  <div class="box-title hands-on-title" id="hands-on-convert-the-raw-data-to-mzml"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Convert the raw data to mzML</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/msconvert/msconvert/3.0.20287.2" title="msconvert tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>msconvert</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.0.20287.2)</span> with the following parameters:
@@ -1627,7 +1627,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>The first part of data processing is using the <strong>XCMS</strong> tool to detect peaks in the MS signal. For that, we first need to take the <code class="language-plaintext highlighter-rouge">.mzML</code> files and create a format usable by the <strong>XCMS</strong> tool. <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/msnbase_readmsdata/msnbase_readmsdata/2.16.1+galaxy0" title="MSnbase readMSData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MSnbase readMSData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.16.1+galaxy0)</span> (<span class="citation"><a href="#gatto2012msnbase">Gatto and Lilley 2012</a></span>. <span class="citation"><a href="#gatto2020msnbase">Gatto <i>et al.</i> 2020</a></span>) takes as input our files and prepares <code class="language-plaintext highlighter-rouge">RData</code> files for the first <strong>XCMS</strong> step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-the-xcms-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Create the XCMS object</div>
+  <div class="box-title hands-on-title" id="hands-on-create-the-xcms-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Create the XCMS object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/msnbase_readmsdata/msnbase_readmsdata/2.16.1+galaxy0" title="MSnbase readMSData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MSnbase readMSData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.16.1+galaxy0)</span> with the following parameters:
@@ -1658,7 +1658,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
   <p>Since this step is already covered in a <a href="/training-material/topics/metabolomics/tutorials/lcms-preprocessing/tutorial.html">separate tutorial</a>, it is possible to skip it. Instead, you can continue with <a href="/training-material/topics/metabolomics/tutorials/gc_ms_with_xcms/tutorial.html#peak-deconvolution">Peak deconvolution</a> step using a preprocessed <strong>XCMS</strong> object file prepared for you.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-upload-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Upload data</div>
+    <div class="box-title hands-on-title" id="hands-on-upload-data-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Upload data</div>
 
     <ol>
       <li>
@@ -1695,7 +1695,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>The first step is to extract peaks from each of your data files independently. For this purpose, we use the <em>centWave</em> chromatographic peak detection algorithm implemented in <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_xcmsset/abims_xcms_xcmsSet/3.12.0+galaxy0" title="xcms findChromPeaks (xcmsSet) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms findChromPeaks (xcmsSet)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peak-picking"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Peak picking</div>
+  <div class="box-title hands-on-title" id="hands-on-peak-picking"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Peak picking</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_xcmsset/abims_xcms_xcmsSet/3.12.0+galaxy0" title="xcms findChromPeaks (xcmsSet) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms findChromPeaks (xcmsSet)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1723,7 +1723,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>At this step, you obtain a dataset collection containing one <code class="language-plaintext highlighter-rouge">RData</code> file per sample, with independent lists of ions. Next, we want to identify the ions shared between samples. To do so, first, you need to group your individual <code class="language-plaintext highlighter-rouge">RData</code> files into a single one.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-merging-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Merging files</div>
+  <div class="box-title hands-on-title" id="hands-on-merging-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Merging files</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_merge/xcms_merge/3.12.0+galaxy0" title="xcms findChromPeaks Merger tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms findChromPeaks Merger</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1738,7 +1738,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>Now we can proceed with the grouping and determining shared ions among samples. The aim of this step, called <em>grouping</em>, is to obtain a single matrix of ions’ intensities across all samples.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-grouping-peaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Grouping peaks</div>
+  <div class="box-title hands-on-title" id="hands-on-grouping-peaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Grouping peaks</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_group/abims_xcms_group/3.12.0+galaxy0" title="xcms groupChromPeaks (group) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms groupChromPeaks (group)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1761,7 +1761,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>A deviation in retention time occurs from one sample to another, especially when you inject large sequences of samples. This step aims at correcting retention time drift for each peak among samples.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retention-time-correction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Retention time correction</div>
+  <div class="box-title hands-on-title" id="hands-on-retention-time-correction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Retention time correction</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_retcor/abims_xcms_retcor/3.12.0+galaxy0" title="xcms adjustRtime (retcor) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms adjustRtime (retcor)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1782,7 +1782,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>By applying retention time correction, the used retention time values were modified. Consequently, applying this step to your data requires completing it with an additional <em>grouping</em> step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-grouping-peaks-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Grouping peaks</div>
+  <div class="box-title hands-on-title" id="hands-on-grouping-peaks-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Grouping peaks</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_group/abims_xcms_group/3.12.0+galaxy0" title="xcms groupChromPeaks (group) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms groupChromPeaks (group)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1811,7 +1811,7 @@ https://zenodo.org/record/7890956/files/sample_metadata.tsv
 <p>At this point, the peak list may contain <code class="language-plaintext highlighter-rouge">NA</code> values when peaks were not considered in only some of the samples in the first peak-picking step. In this step, we will integrate the signal in the m/z-rt area of an ion (chromatographic peak group) for samples in which no chromatographic peak for this ion was identified.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-integrating-areas-of-missing-peaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Integrating areas of missing peaks</div>
+  <div class="box-title hands-on-title" id="hands-on-integrating-areas-of-missing-peaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Integrating areas of missing peaks</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lecorguille/xcms_fillpeaks/abims_xcms_fillPeaks/3.12.0+galaxy0" title="xcms fillChromPeaks (fillPeaks) tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>xcms fillChromPeaks (fillPeaks)</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.12.0+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1855,7 +1855,7 @@ your data:</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peak-deconvolution"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Peak deconvolution</div>
+  <div class="box-title hands-on-title" id="hands-on-peak-deconvolution"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Peak deconvolution</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/ramclustr/ramclustr/1.3.0+galaxy0" title="RAMClustR tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>RAMClustR</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.3.0+galaxy0)</span> with the following parameters:
@@ -1892,7 +1892,7 @@ your data:</p>
 <p>The spectral data comes as an <code class="language-plaintext highlighter-rouge">.msp</code> file, which is a text file structured according to the <strong>NIST MSSearch</strong> spectra format. <code class="language-plaintext highlighter-rouge">.msp</code> is one of the generally accepted formats for mass spectral libraries (or collections of unidentified spectra, so called spectral archives), and it is compatible with lots of spectra processing programmes (MS-DIAL, NIST MS Search, AMDIS, etc.). Because <code class="language-plaintext highlighter-rouge">.msp</code> files are text-based, they can be viewed as simple <code class="language-plaintext highlighter-rouge">txt</code> files:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-exploration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Data Exploration</div>
+  <div class="box-title hands-on-title" id="hands-on-data-exploration"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Data Exploration</div>
 
   <p>Click <em>“View data”</em> <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> icon next to the dataset in the Galaxy history. The contents of the file would look like this:</p>
 
@@ -1952,7 +1952,7 @@ Num Peaks:165
 <p>We use the package <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.4+galaxy1" title="RIAssigner tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>RIAssigner</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.3.4+galaxy1)</span> to compute retention indices for files in the <code class="language-plaintext highlighter-rouge">.msp</code> format using an indexed reference list of alkanes in <code class="language-plaintext highlighter-rouge">.csv</code> or <code class="language-plaintext highlighter-rouge">.msp</code> format. The output follows the same format as the input but with added retention index values. These can be used at a subsequent stage to improve compound identification (<span class="citation"><a href="#kumari2011applying">Kumari <i>et al.</i> 2011</a></span>). Multiple computation methods (e.g. piecewise-linear or cubic spline) are supported by the tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retention-index-calculation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Retention index calculation</div>
+  <div class="box-title hands-on-title" id="hands-on-retention-index-calculation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Retention index calculation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/riassigner/riassigner/0.3.4+galaxy1" title="RIAssigner tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>RIAssigner</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.3.4+galaxy1)</span> with the following parameters:
@@ -2021,7 +2021,7 @@ Num Peaks:165
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-compute-similarity-scores"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Compute similarity scores</div>
+  <div class="box-title hands-on-title" id="hands-on-compute-similarity-scores"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Compute similarity scores</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/matchms_similarity/matchms_similarity/0.20.0+galaxy0" title="matchms similarity tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>matchms similarity</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.0+galaxy0)</span> with the following parameters:
@@ -2077,7 +2077,7 @@ Num Peaks:165
 <p>The output table contains the scores and number of matched ions of the deconvoluted spectra with the spectra in the reference library. The raw output can be filtered to only contain the top matches (3 by default) and/or to contain only pairs with a score and number of matched ions larger than provided thresholds.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-format-the-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Format the output</div>
+  <div class="box-title hands-on-title" id="hands-on-format-the-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Format the output</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/matchms_formatter/matchms_formatter/0.20.0+galaxy0" title="matchms scores formatter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>matchms scores formatter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.0+galaxy0)</span> with the following parameters:
@@ -2191,9 +2191,18 @@ Another option for normalization outside of the built-in normalization tools of 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/metabolomics/faqs/">FAQ page for the Metabolomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/metabolomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2413,7 +2422,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2515,7 +2524,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

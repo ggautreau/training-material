@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1771,7 +1771,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Due to the large size of the original sRNA-seq datasets, we have downsampled them to only inlcude a subset of reads. These datasets are available at <a href="https://doi.org/10.5281/zenodo.826906"><code class="language-plaintext highlighter-rouge">Zenodo</code></a> where you can find the FASTQ files corresponding to replicate sRNA-seq experiments and additional annotation files for the <em>Drosophila melanogaster</em> genome version dm3.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload and organization</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-and-organization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload and organization</div>
 
   <ol>
     <li>
@@ -1839,7 +1839,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>Read quality scores (phred scores) in FASTQ-formatted data can be encoded by one of a few different encoding schemes. Most Galaxy tools assume that input FASTQ files are using the Sanger/Illumina 1.9 encoding scheme. If the input FASTQ files are using an alternate encoding scheme, then some tools will not interpret the quality score encodings correctly. It is good practice to confirm the quality encoding scheme of your data and then convert to Sanger/Illumina 1.9, if necessary. We can check the quality encoding scheme using the <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a> tool (further described in the <a href="/training-material/topics/sequence-analysis">NGS-QC tutorial</a>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-checking"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality checking</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-checking"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality checking</div>
 
   <ol>
     <li>Run <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the <code class="language-plaintext highlighter-rouge">Blank</code> collection
@@ -1888,7 +1888,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-formatting"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Formatting</div>
+  <div class="box-title hands-on-title" id="hands-on-formatting"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Formatting</div>
 
   <p>If your data are not in <strong>Sanger / Illumina 1.9 format</strong>:</p>
   <ol>
@@ -1921,7 +1921,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>sRNA-seq library preparation involves adding an artificial adaptor sequence to both the 5’ and 3’ ends of the small RNAs. While the 5’ adaptor anchors reads to the sequencing surface and thus are not sequenced, the 3’ adaptor is typically sequenced immediately following the sRNA sequence. In the example datasets here, the 3’ adaptor sequence is identified as the Illumina Universal Adapter, and needs to be removed from each read before aligning to a reference. We will be using the Galaxy tool <strong>Trim Galore!</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> which implements the <a href="https://cutadapt.readthedocs.io/en/stable/"><code class="language-plaintext highlighter-rouge">cutadapt</code></a> tool for adapter trimming.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adaptor-trimming"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adaptor trimming</div>
+  <div class="box-title hands-on-title" id="hands-on-adaptor-trimming"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adaptor trimming</div>
 
   <ol>
     <li><strong>Trim Galore!</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on each collection of FASTQ read files to remove Illumina adapters from the 3’ ends of reads with the following parameters:
@@ -1950,7 +1950,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>We don’t want to trim for quality because the adapter-trimmed sequences represent a full small RNA molecule, and we want to maintain the integrity of the entire molecule. We increase the minimum read length required to keep a read because small RNAs can potentially be shorter than 20 nt (the default value). We can check out the generated report file for any sample and see the command for the tool, a summary of the total reads processed and number of reads with an adapter identified, and histogram data of the length of adaptor trimmed. We also see that a very small percentage of low-quality bases have been trimmed</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adaptor-trimming-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adaptor trimming check</div>
+  <div class="box-title hands-on-title" id="hands-on-adaptor-trimming-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adaptor trimming check</div>
 
   <ol>
     <li><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on each collection of trimmed FASTQ read files to assess whether adapters were successfully removed.</li>
@@ -1992,7 +1992,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>To first identify rRNA-originating reads (which we are not interested in in this case), we will align the reads to a reference set of rRNA sequences using <a href="https://ccb.jhu.edu/software/hisat2/index.shtml"><strong>HISAT2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></a>, an accurate and fast tool for aligning reads to a reference.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hierarchical-alignment-to-rrna-and-mirna-reference-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hierarchical alignment to rRNA and miRNA reference sequences</div>
+  <div class="box-title hands-on-title" id="hands-on-hierarchical-alignment-to-rrna-and-mirna-reference-sequences"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hierarchical alignment to rRNA and miRNA reference sequences</div>
 
   <ol>
     <li><strong>HISAT2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on each collection of trimmed reads to align to reference rRNA sequences with the following parameters
@@ -2017,7 +2017,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>We now need to extract the <em>unaligned</em> reads from the output BAM file for aligning to reference miRNA sequences. We can do this by using the <code class="language-plaintext highlighter-rouge">Filter SAM or BAM, output SAM or BAM</code> tool to obtain reads with a bit flag = 4 (meaning the read is unaligned) and then converting the filtered BAM file to FASTQ format with the <code class="language-plaintext highlighter-rouge">Convert from BAM to FastQ</code> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hierarchical-alignment-to-rrna-and-mirna-reference-sequences-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hierarchical alignment to rRNA and miRNA reference sequences (2)</div>
+  <div class="box-title hands-on-title" id="hands-on-hierarchical-alignment-to-rrna-and-mirna-reference-sequences-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hierarchical alignment to rRNA and miRNA reference sequences (2)</div>
   <ol>
     <li><strong>Filter SAM or BAM, output SAM or BAM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on collection of HISAT2 output BAM files with the following parameters
       <ul>
@@ -2042,7 +2042,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>Next we will align the non-rRNA reads to a known set of miRNA hairpin sequences to identify miRNA reads.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hierarchical-alignment-to-rrna-and-mirna-reference-sequences-3"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hierarchical alignment to rRNA and miRNA reference sequences (3)</div>
+  <div class="box-title hands-on-title" id="hands-on-hierarchical-alignment-to-rrna-and-mirna-reference-sequences-3"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hierarchical alignment to rRNA and miRNA reference sequences (3)</div>
   <ol>
     <li><strong>HISAT2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on each collection of filtered HISAT2 output FASTQ files to align non-rRNA reads to reference miRNA hairpin sequences using the following parameters:
       <ul>
@@ -2072,7 +2072,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>In <em>Drosophila</em>, non-miRNA small RNAs are typically divided into two major groups: endogenous siRNAs which are 20-22nt long and piRNAs which are 23-29nt long. We want to analyze these sRNA subclasses independently, so next we are going to filter the non-r/miRNA reads based on length using the <strong>Manipulate FASTQ</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-subclasses"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract subclasses</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-subclasses"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract subclasses</div>
 
   <ol>
     <li><strong>Manipulate FASTQ</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on each collection of non-r/miRNA reads to identify siRNAs (20-22nt) using the following parameters.
@@ -2114,7 +2114,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>The regular expression in the <strong>Match by</strong> parameter tells the tool to identify sequences that are length 12-19 or 23-50 (inclusive), and the <strong>Miscellaneous Manipulation Type</strong> parameter tells the tool to remove these sequences. What remains are sequences of length 20-22nt. We will now repeat these steps to identify sequences in the size-range of piRNAs (23-29nt).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-subclasses-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract subclasses</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-subclasses-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract subclasses</div>
   <ol>
     <li><strong>Manipulate FASTQ</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run <code class="language-plaintext highlighter-rouge">Manipulate FASTQ</code> on each collection of non-r/miRNA reads to identify sequences in the size-range of piRNAs (23-29nt)
       <ul>
@@ -2153,7 +2153,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-the-read-length"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check the read length</div>
+  <div class="box-title hands-on-title" id="hands-on-check-the-read-length"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check the read length</div>
   <ol>
     <li><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run <code class="language-plaintext highlighter-rouge">FastQC</code> on each collection of siRNA and piRNA read files to confirm the correct read lengths.</li>
   </ol>
@@ -2170,7 +2170,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p>We want to identify which siRNAs are differentially abundance between the blank and <em>Symplekin</em> RNAi conditions. To do this we will implement a counting approach using <strong>Salmon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to quantify siRNAs per RNA feature. Specifically, we will analyzing mRNA and TE elements by counting siRNAs against a FASTA file of transcript sequences, not the reference genome. This approach is especially useful in this case because we are interested in TEs, which occur at many copies (100s - 1000s) in the genome, and thus will result in multiple alignments if we align to the genome with a tool like <strong>HISAT2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>. Further, we will be counting abundance of siRNAs that align <em>sense</em> or <em>antisense</em> to an RNA feature independently, as opposite sense alignments are correlated with unique downstream silencing effects. Then, we will provide this information to <strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to generate normalized counts and significance testing for differential abundance of siRNAs per feature.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sirna-abundance-estimation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: siRNA abundance estimation</div>
+  <div class="box-title hands-on-title" id="hands-on-sirna-abundance-estimation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: siRNA abundance estimation</div>
 
   <ol>
     <li><strong>Salmon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on each collection of siRNA reads (20-22nt) to quantify the abundance of <em>antisense</em> siRNAs at relevant targets
@@ -2210,7 +2210,7 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
 <p><a href="https://bioconductor.org/packages/release/bioc/html/DESeq2.html"><strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></a> is a great tool for differential expression analysis, but we also employ it here for estimation of abundance of reads targeting each of our RNA features. As input, <strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> can take <em>t</em>ranscripts <em>p</em>er <em>m</em>illion (TPM) counts produced by <strong>Salmon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> for each feature. TPMs are estimates of the relative abundance of a given transcript in units, and analogously can be used here to quantify siRNAs that align either sense or antisense to transcripts.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sirna-differential-abundance-testing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: siRNA differential abundance testing</div>
+  <div class="box-title hands-on-title" id="hands-on-sirna-differential-abundance-testing"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: siRNA differential abundance testing</div>
 
   <ol>
     <li><strong>DESeq2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> to test for differential abundance of <em>antisense</em> siRNAs at mRNA and TE features using the following parameters:
@@ -2374,9 +2374,18 @@ https://zenodo.org/record/826906/files/dm3_rRNA_sequences.fa.gz
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2547,17 +2556,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.6666666666666666">2</td>
 			</tr>
 		   
@@ -2692,7 +2701,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

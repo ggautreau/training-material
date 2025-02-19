@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1064,7 +1064,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The FASTA file used in this example is, intentionally, a very small fraction of a genome (spanning exactly 1 BGC), and it’s main purpose is to quickly check that all the pieces of the workflow are working.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Data Upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Data Upload</div>
 
   <ol>
     <li>
@@ -1120,7 +1120,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
   <h1 id="import-and-launch-the-workflow">Import and launch the workflow</h1>
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-import-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import the workflow</div>
+    <div class="box-title hands-on-title" id="hands-on-import-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import the workflow</div>
     <ul>
       <li>Click on Workflow on the top menu bar of Galaxy. You will see a list of all your workflows.</li>
       <li>Option 1: use the URL
@@ -1138,7 +1138,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   </blockquote>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-run-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run the workflow</div>
+    <div class="box-title hands-on-title" id="hands-on-run-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run the workflow</div>
     <ul>
       <li>Click on Workflow on the top menu bar of Galaxy. You will see a list of all your workflows.</li>
       <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden">workflow-run</span> (Run workflow) button next to your workflow</li>
@@ -1161,7 +1161,7 @@ When the workflow is fully completed you should have the following history.</p>
     <p>After the workflow has completed, we can export the RO-Crate. The crate does not appear in your history, but can be accessed from the User -&gt; Workflow Invocations menu on the top bar.</p>
 
     <blockquote class="hands-on">
-      <div class="box-title hands-on-title" id="hands-on-extract-a-ro-crate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Extract a RO-Crate</div>
+      <div class="box-title hands-on-title" id="hands-on-extract-a-ro-crate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Extract a RO-Crate</div>
 
       <ol>
         <li>In the top right of your history, go to <i class="fas fa-bars" aria-hidden="true"></i><span class="visually-hidden">galaxy-history-options</span> -&gt; Show Invocations</li>
@@ -1202,7 +1202,7 @@ When the workflow is fully completed you should have the following history.</p>
   <p>Prodigal is a tool that predicts protein-coding genes from DNA sequences. It takes a nucleotide FASTA file as input and identifies regions that are likely to code for proteins. The output is a protein FASTA file where each sequence represents a predicted protein. Some of these sequences end with an asterisk (*), which marks the end of a complete protein sequence identified by Prodigal. This asterisk is added when Prodigal detects a full protein-coding region that ends with a stop codon. Sequences without an asterisk either represent partial proteins or do not end in a typical stop codon.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-run-prodigal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Run prodigal</div>
+    <div class="box-title hands-on-title" id="hands-on-run-prodigal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Run prodigal</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/prodigal/prodigal/2.6.3+galaxy0" title="Prodigal Gene Predictor tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Prodigal Gene Predictor</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.3+galaxy0)</span> with the following parameters:
@@ -1230,7 +1230,7 @@ You can click on it and then click on the <i class="far fa-eye" aria-hidden="tru
   <p>This step combines the original nucleotide sequences with the cleaned protein sequences to create a GenBank format file. This format is widely used for storing and organising information about DNA sequences and their annotations. In this step, the DNA sequences and their corresponding coding regions are transformed into a format that is suitable for SanntiS.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-build-genbank"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Build Genbank</div>
+    <div class="box-title hands-on-title" id="hands-on-build-genbank"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Build Genbank</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/SanntiS_marine/SanntiS_marine/0.9.3.5+galaxy1" title="SanntiS biosynthetic gene clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SanntiS biosynthetic gene clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.9.3.5+galaxy1)</span> with the following parameters:
@@ -1258,7 +1258,7 @@ You can click on it and then click on the <i class="far fa-eye" aria-hidden="tru
   <p>The asterisks at the end of some protein sequences are informative but can cause issues with some analysis tools. In this step, we remove these asterisks to produce a clean protein FASTA file, making it ready for further analysis.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-remove"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Remove *</div>
+    <div class="box-title hands-on-title" id="hands-on-remove"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Remove *</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/regex_find_replace/regex1/1.0.3" title="Regex Find And Replace tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Regex Find And Replace</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.3)</span> with the following parameters:
@@ -1288,7 +1288,7 @@ You can click on it and then click on the <i class="far fa-eye" aria-hidden="tru
   <p>InterProScan is a tool that helps identify and predict the functions of proteins by comparing them to known databases. This tool analyses the protein sequences and produces an output file containing detailed information about the possible functions, domains, and families associated with these proteins.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+    <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/interproscan/interproscan/5.59-91.0+galaxy3" title="InterProScan tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>InterProScan</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.59-91.0+galaxy3)</span> with the following parameters:
@@ -1309,7 +1309,7 @@ You can leave all the other parameters on the default input.</li>
   <p>SanntiS is a tool specifically designed to detect and annotate biosynthetic gene clusters (BGCs). It uses neural networks trained on InterPro signatures to achieve high accuracy in identifying BGCs in both genomic and metagenomic datasets 1. A significant benefit of using SanntiS is that your results will be comparable with a large number of datasets, including over 5,000 marine metagenomic assemblies archived in the <a href="https://www.ebi.ac.uk/metagenomics">MGnify</a> resource. This tool provides valuable insights into the biosynthetic potential of organisms or environmental samples. The final output is a GFF file containing detailed BGC annotations, which can be used for further analyses or applications.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-identify-biosynthetic-gene-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Identify biosynthetic gene clusters</div>
+    <div class="box-title hands-on-title" id="hands-on-identify-biosynthetic-gene-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Identify biosynthetic gene clusters</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ecology/sanntis_marine/sanntis_marine/0.9.3.5+galaxy1" title="SanntiS biosynthetic gene clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SanntiS biosynthetic gene clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.9.3.5+galaxy1)</span> with the following parameters:
@@ -1379,9 +1379,18 @@ You can leave all the other parameters on the default input.</li>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/ecology/faqs/">FAQ page for the Ecology topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/ecology/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1582,7 +1591,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1664,7 +1673,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

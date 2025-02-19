@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2205,7 +2205,7 @@ Duplicates are identified as read pairs having identical 5' positions (coordinat
 <p>First we need to find a good dataset to play with. The <a href="https://www.ncbi.nlm.nih.gov/sra">Sequence Read Archive (SRA)</a> is the primary archive of <em>unassembled reads</em>  operated by the <a href="https://www.ncbi.nlm.nih.gov/">US National Institutes of Health (NIH)</a>.  SRA is a great place to get the sequencing data that underlie publications and studies. Let’s do that:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-metadata-from-ncbi-sra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get Metadata from NCBI SRA</div>
+  <div class="box-title hands-on-title" id="hands-on-get-metadata-from-ncbi-sra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get Metadata from NCBI SRA</div>
 
   <ol>
     <li>Go to NCBI’s SRA page by pointing your browser to https://www.ncbi.nlm.nih.gov/sra</li>
@@ -2238,7 +2238,7 @@ Here is how it should look like:
 <h2 id="process-and-filter-sraruninfocsv-file-in-galaxy">Process and filter <code class="language-plaintext highlighter-rouge">SraRunInfo.csv</code> file in Galaxy</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-sraruninfo-csv-file-into-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload `SraRunInfo.csv` file into Galaxy</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-sraruninfo-csv-file-into-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload `SraRunInfo.csv` file into Galaxy</div>
 
   <ol>
     <li>Go to your Galaxy instance of choice such as one of the <a href="https://galaxyproject.org/usegalaxy/">UseGalaxy.* instances</a> or any other. (This tutorial uses usegalaxy.org).</li>
@@ -2260,7 +2260,7 @@ Here is how it should look like:
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-a-subset-of-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a subset of data</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-a-subset-of-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating a subset of data</div>
 
   <ol>
     <li>Find <span class="tool" data-tool="Grep1" title="Select lines that match an expression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select lines that match an expression</strong></span> tool in <strong>Filter and Sort</strong> section of the tool panel.
@@ -2291,7 +2291,7 @@ SRR11954102
 <h2 id="download-sequencing-data">Download sequencing data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-data-from-sra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get data from SRA</div>
+  <div class="box-title hands-on-title" id="hands-on-get-data-from-sra"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get data from SRA</div>
 
   <ol>
     <li>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fasterq_dump/2.10.9+galaxy0" title="Faster Download and Extract Reads in FASTQ tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Faster Download and Extract Reads in FASTQ</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.10.9+galaxy0)</span> with the following parameters:
@@ -2347,7 +2347,7 @@ being updated continuously as new datasets are made public.</p>
 <p>This data is <a href="https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.fna.gz">available from directly from GenBank</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-the-reference-genome-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get the reference genome data</div>
+  <div class="box-title hands-on-title" id="hands-on-get-the-reference-genome-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get the reference genome data</div>
 
   <ol>
     <li>
@@ -2369,7 +2369,7 @@ being updated continuously as new datasets are made public.</p>
 <p>Removing sequencing adapters improves alignments and variant calling. <strong>fastp</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> can automatically detect widely used sequencing adapters.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-fastp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running `fastp`</div>
+  <div class="box-title hands-on-title" id="hands-on-running-fastp"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running `fastp`</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.20.1+galaxy0" title="fastp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>fastp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.20.1+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2391,7 +2391,7 @@ being updated continuously as new datasets are made public.</p>
 <p><strong>Map with BWA-MEM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> is a widely used sequence aligner for short-read sequencing datasets such as those we are analysing in this tutorial.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-map-sequencing-reads-to-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Map sequencing reads to reference genome</div>
+  <div class="box-title hands-on-title" id="hands-on-map-sequencing-reads-to-reference-genome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Map sequencing reads to reference genome</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1" title="Map with BWA-MEM tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Map with BWA-MEM</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.7.17.1)</span> with the following parameters:</p>
   <ul>
@@ -2416,7 +2416,7 @@ being updated continuously as new datasets are made public.</p>
 <p><strong>MarkDuplicates</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> removes duplicate sequences originating from library preparation artifacts and sequencing artifacts. It is important to remove these artefactual sequences to avoid artificial overrepresentation of single molecule.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-duplicates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove duplicates</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-duplicates"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove duplicates</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2" title="MarkDuplicates tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MarkDuplicates</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.18.2.2)</span> with the following parameters:</p>
   <ul>
@@ -2432,7 +2432,7 @@ being updated continuously as new datasets are made public.</p>
 
 After the duplicate marking step above we can generate statistic about the alignment we have generated.
 
-> <div class="box-title hands-on-title" id="hands-on-generate-alignment-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate alignment statistics</div>
+> <div class="box-title hands-on-title" id="hands-on-generate-alignment-statistics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate alignment statistics</div>
 >
 > 1. **Samtools stats** <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
 >    - <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> *"BAM file"*: `outFile` (output of **MarkDuplicates** <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)
@@ -2450,7 +2450,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p><strong>Realign reads</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> corrects misalignments around insertions and deletions. This is required in order to accurately detect variants.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-realign-reads-around-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Realign reads around indels</div>
+  <div class="box-title hands-on-title" id="hands-on-realign-reads-around-indels"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Realign reads around indels</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/2.1.5+galaxy0" title="Realign reads tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Realign reads</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.5+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2473,7 +2473,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>This step adds indel qualities into our alignment file. This is necessary in order to call variants using <strong>Call variants</strong> with lofreq <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-indel-qualities"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add indel qualities</div>
+  <div class="box-title hands-on-title" id="hands-on-add-indel-qualities"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add indel qualities</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/2.1.5+galaxy0" title="Insert indel qualities tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Insert indel qualities</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.5+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2496,7 +2496,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>We are now ready to call variants.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-call-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Call variants</div>
+  <div class="box-title hands-on-title" id="hands-on-call-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Call variants</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/2.1.5+galaxy1" title="Call variants tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Call variants</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.1.5+galaxy1)</span> with the following parameters:</p>
   <ul>
@@ -2539,7 +2539,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>We will now annotate the variants we called in the previous step with the effect they have on the SARS-CoV-2 genome.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-annotate-variant-effects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Annotate variant effects</div>
+  <div class="box-title hands-on-title" id="hands-on-annotate-variant-effects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Annotate variant effects</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snpeff_sars_cov_2/snpeff_sars_cov_2/4.5covid19" title="SnpEff eff: annotate variants for SARS-CoV-2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnpEff eff: annotate variants for SARS-CoV-2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.5covid19)</span> with the following parameters:</p>
   <ul>
@@ -2560,7 +2560,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>We will now select various effects from the VCF and create a tabular file that is easier to understand for humans.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-table-of-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create table of variants</div>
+  <div class="box-title hands-on-title" id="hands-on-create-table-of-variants"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create table of variants</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snpsift/snpSift_extractFields/4.3+t.galaxy0" title="SnpSift Extract Fields tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnpSift Extract Fields</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.3+t.galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2581,7 +2581,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>We will now summarize our analysis with MultiQC, which generates a beautiful report for our data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-summarize-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Summarize data</div>
+  <div class="box-title hands-on-title" id="hands-on-summarize-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Summarize data</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+galaxy1" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8+galaxy1)</span> with the following parameters:</p>
   <ul>
@@ -2628,7 +2628,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>We now extracted meaningful fields from VCF datasets. But they still exist as a collection. To move towards secondary analysis we need to <strong>collapse</strong> this collection into a single dataset. For more information about collapsing collections see <a href="https://www.youtube.com/embed/ypuFZ1RKMIY">this video on collections</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-collapse-a-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Collapse a collection</div>
+  <div class="box-title hands-on-title" id="hands-on-collapse-a-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Collapse a collection</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/4.0" title="Collapse Collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Collapse Collection</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0)</span> with the following parameters:</p>
   <ul>
@@ -2642,7 +2642,7 @@ After the duplicate marking step above we can generate statistic about the align
 <p>You can see that this tool takes lines from all collection elements (in our case we have two), add element name as the first column, and pastes everything together. So if we have a collection as an input:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-a-collection-with-two-items"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: A collection with two items</div>
+  <div class="box-title code-in-title" id="code-in-a-collection-with-two-items"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: A collection with two items</div>
   <p>A collection element named <code class="language-plaintext highlighter-rouge">SRR11954102</code></p>
 
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>NC_045512.2  84 PASS  C T  960.0  28  1.0       0 0,0,15,13 MODIFIER  NONE  INTERGENIC
@@ -2659,7 +2659,7 @@ NC_045512.2 823 PASS  C T 1199.0  50  0.76      3 5,6,13,26 LOW       LOW   LOW
 <p>We will have a single dataset as the output:</p>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-a-single-dataset"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: A single dataset</div>
+  <div class="box-title code-out-title" id="code-out-a-single-dataset"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: A single dataset</div>
 
   <p>then the <strong>Collapse Collection</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> will produce this:</p>
 
@@ -2691,7 +2691,7 @@ After a dataset is converted into an intermediary result (such as variant table 
 > Jupyter notebook functionality in Galaxy is currently in Beta. It means that we are still working on it and its implementation is constantly changing. Be aware of this fact.
 {: .warning}
 
-> <div class="box-title hands-on-title" id="hands-on-analyze-data-in-jupyter-from-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Analyze data in Jupyter from Galaxy</div>
+> <div class="box-title hands-on-title" id="hands-on-analyze-data-in-jupyter-from-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Analyze data in Jupyter from Galaxy</div>
 >
 > 1. Open <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> **Interactive Jupyter Notebook** from section **Interactive Tools**
 > 1. *"Do you already have a notebook?"*: `Start with a fresh notebook`
@@ -2742,7 +2742,7 @@ After a dataset is converted into an intermediary result (such as variant table 
 
 We can also import data directly into Google Colab:
 
-> <div class="box-title hands-on-title" id="hands-on-analyze-data-in-google-colab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Analyze data in Google Colab</div>
+> <div class="box-title hands-on-title" id="hands-on-analyze-data-in-google-colab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Analyze data in Google Colab</div>
 >
 > 1. Expand history dataset containing the output of the collection collapse step
 > 1. Right click on <i class="far fa-save" aria-hidden="true"></i><span class="visually-hidden">galaxy-save</span> (disk) icon and copy link to clipboard
@@ -2843,9 +2843,18 @@ We can also import data directly into Google Colab:
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/introduction/faqs/">FAQ page for the Introduction to Galaxy Analyses topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/introduction/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3053,27 +3062,27 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">38</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3157894736842105">12</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.15789473684210525">6</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.05263157894736842">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.07894736842105263">3</td>
 			</tr>
 		   
@@ -3334,7 +3343,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

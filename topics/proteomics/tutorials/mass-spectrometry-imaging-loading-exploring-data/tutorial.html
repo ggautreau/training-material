@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1597,7 +1597,7 @@ The imzML file consists of two files: The first file contains the metadata in an
 <figure id="figure-2" style="max-width: 90%;"><img src="../../images/MSI1_mouse_kidney.png" alt="mouse kidney image. " width="1050" height="489" loading="lazy" /><a target="_blank" href="../../images/MSI1_mouse_kidney.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Mouse kidney sample before and after mass spectrometry measurement and H&amp;E staining</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-uploading-an-imzml-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Uploading an imzML file</div>
+  <div class="box-title hands-on-title" id="hands-on-uploading-an-imzml-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Uploading an imzML file</div>
 
   <ol>
     <li>
@@ -1678,7 +1678,7 @@ Internal calibrants or other known, ubiquitous m/z features can be used to obtai
 <em>Fibrinopeptide B</em> and <em>ACTH_18-39</em>. We furthermore spotted <em>Bombesin</em> peptides close to the tissue to monitor the digestion quality with the fold change of digested vs. undigested <em>Bombesin</em>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-the-msi-qualitycontrol-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running the MSI Qualitycontrol tool</div>
+  <div class="box-title hands-on-title" id="hands-on-running-the-msi-qualitycontrol-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running the MSI Qualitycontrol tool</div>
   <ol>
     <li>Create the tabular file with the m/z values of the internal calibrants:
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>m/z       name
@@ -1807,7 +1807,7 @@ Both plots can also serve to check for spraying gradients or reduced machine per
 The spectra data output can be filtered for certain spectra to obtain some spectra properties such as the accurate value of its base peak that could not be accurately determined in the corresponding plot of the quality report before.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-export-and-explore-information-from-msi-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Export and explore information from MSI data</div>
+  <div class="box-title hands-on-title" id="hands-on-export-and-explore-information-from-msi-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Export and explore information from MSI data</div>
 
   <ol>
     <li>Run <strong>MSI data exporter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1902,9 +1902,18 @@ Exporting and filtering the spectra information for three pixel that have differ
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/proteomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2054,7 +2063,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2063,7 +2072,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2145,7 +2154,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

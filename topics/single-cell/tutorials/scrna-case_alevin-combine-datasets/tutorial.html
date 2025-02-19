@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2108,7 +2108,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-for-7-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload for 7 files</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-for-7-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload for 7 files</div>
 
   <ol>
     <li>Create a new history for this tutorial (if you’re not importing the history above)</li>
@@ -2160,7 +2160,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <h2 id="concatenating-objects">Concatenating objects</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-concatenating-anndata-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Concatenating AnnData objects</div>
+  <div class="box-title hands-on-title" id="hands-on-concatenating-anndata-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Concatenating AnnData objects</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.3+galaxy0" title="Manipulate AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> with the following parameters:
@@ -2193,7 +2193,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>Now let’s look at what we’ve done! Unfortunately, AnnData objects are quite complicated, so the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">galaxy-eye</span> won’t help us too much here. Instead, we’re going to use a tool to look into our object from now on.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspecting-anndata-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspecting AnnData Objects</div>
+  <div class="box-title hands-on-title" id="hands-on-inspecting-anndata-objects"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspecting AnnData Objects</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0" title="Inspect AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Inspect AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> with the following parameters:
@@ -2306,7 +2306,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>The two critical pieces of metadata in this experiment are <strong>sex</strong> and <strong>genotype</strong>. I will later want to color my cell plots by these parameters, so I want to add them in now!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-labelling-sex"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Labelling sex</div>
+  <div class="box-title hands-on-title" id="hands-on-labelling-sex"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Labelling sex</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_column/9.3+galaxy0" title="Replace Text in a specific column tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text in a specific column</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy0)</span> with the following parameters:
@@ -2361,7 +2361,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>That was so fun, let’s do it all again but for genotype!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-labelling-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Labelling genotype</div>
+  <div class="box-title hands-on-title" id="hands-on-labelling-genotype"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Labelling genotype</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_column/9.3+galaxy0" title="Replace Text in a specific column tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text in a specific column</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy0)</span> with the following parameters:
@@ -2414,7 +2414,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>You might want to do this with all sorts of different metadata - which labs handled the samples, which days they were run, etc. Once you’ve added all your metadata columns, we can add them together before plugging them into the AnnData object itself.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-combining-metadata-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Combining metadata columns</div>
+  <div class="box-title hands-on-title" id="hands-on-combining-metadata-columns"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Combining metadata columns</div>
 
   <ol>
     <li><span class="tool" data-tool="Paste1" title="Paste two files side by side tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Paste two files side by side</strong></span> with the following parameters:
@@ -2431,7 +2431,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>Let’s add it to the AnnData object!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-metadata-to-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding metadata to AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-metadata-to-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding metadata to AnnData object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.3+galaxy0" title="Manipulate AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> with the following parameters:
@@ -2448,7 +2448,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>Woohoo! We’re there! You can run an <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0" title="Inspect AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Inspect AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> to check now, but I want to clean up this AnnData object just a bit more first. It would be a lot nicer if ‘batch’ meant something, rather than ‘the order in which the Manipulate AnnData tool added my datasets’.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-labelling-batches"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Labelling batches</div>
+  <div class="box-title hands-on-title" id="hands-on-labelling-batches"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Labelling batches</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/0.10.3+galaxy0" title="Manipulate AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Manipulate AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> with the following parameters:
@@ -2470,7 +2470,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>Do you remember when we mentioned mitochondria early on in this tutorial? And how often in single cell samples, mitochondrial RNA is often an indicator of stress during dissociation? We should probably do something with our column of true/false in the gene annotation that tells us information about the cells. You will need to do this whether you have combined FASTQ files or are analysing just one.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculating-mitochondrial-rna-in-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculating mitochondrial RNA in cells</div>
+  <div class="box-title hands-on-title" id="hands-on-calculating-mitochondrial-rna-in-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Calculating mitochondrial RNA in cells</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0" title="AnnData Operations tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>AnnData Operations</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.3+galaxy0)</span> with the following parameters:
@@ -2496,7 +2496,7 @@ https://zenodo.org/records/10852529/files/N707-400k-AnnData.h5ad
 <p>If you wish, you can have a closer look how to pull this dataset from the Single Cell Expression Atlas by following another tutorial: <a href="/training-material/topics/single-cell/tutorials/EBI-retrieval/tutorial.html">Importing files from public atlases</a>.</p>
 
 <!---
-> <div class="box-title hands-on-title" id="hands-on-retrieving-data-from-single-cell-expression-atlas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieving data from Single Cell Expression Atlas</div>
+> <div class="box-title hands-on-title" id="hands-on-retrieving-data-from-single-cell-expression-atlas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieving data from Single Cell Expression Atlas</div>
 >
 > 1. <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/retrieve_scxa/retrieve_scxa/v0.0.2+galaxy2" title="EBI SCXA Data Retrieval tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>EBI SCXA Data Retrieval</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version v0.0.2+galaxy2)</span> with the following parameters:
 >      - *"SC-Atlas experiment accession"*: `E-MTAB-6945`
@@ -2564,9 +2564,18 @@ You may be interested in seeing an <a href="https://usegalaxy.eu/u/j.jakiela/h/c
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2666,8 +2675,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2835,7 +2844,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2937,7 +2946,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

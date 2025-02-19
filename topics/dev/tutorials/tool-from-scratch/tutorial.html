@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1369,7 +1369,7 @@ Recipes should always define the following 6 sections in the <code class="langua
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-writing-a-bioconda-recipe"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Writing a Bioconda Recipe</div>
+  <div class="box-title hands-on-title" id="hands-on-writing-a-bioconda-recipe"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Writing a Bioconda Recipe</div>
 
   <ol>
     <li>
@@ -1383,7 +1383,7 @@ Recipes should always define the following 6 sections in the <code class="langua
 conda-build preinstalled, and a folder for the meta.yaml file.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> bellerophon_bioconda
 conda create <span class="nt">-y</span> <span class="nt">--name</span> bellerophon_bioconda pip python conda-build
 conda activate bellerophon_bioconda
@@ -1395,14 +1395,14 @@ conda activate bellerophon_bioconda
       <p>Next we determine the SHA-256 checksum of the source tarball.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-O</span> bellerophon.tar.gz https://github.com/davebx/bellerophon/archive/1.0.tar.gz
 <span class="nb">sha256sum </span>bellerophon.tar.gz <span class="c"># Copy the 64-character hexadecimal number that this outputs.</span>
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>036c5e23f53ed5b612525d3a32095acca073a9c8d2bf73883deb852c89f40dcf  bellerophon.tar.gz
 </code></pre></div>        </div>
       </blockquote>
@@ -1414,7 +1414,7 @@ With these definitions, Bioconda’s automatic version updater should recognize 
 create a pull request to update the Bioconda package.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>vim recipes/bellerophon_bis/meta.yaml <span class="c"># vim can of course be replaced with any other editor.</span>
 </code></pre></div>        </div>
       </blockquote>
@@ -1565,14 +1565,14 @@ homepage, and optionally the github username of the person responsible for maint
 <p>Now that your recipe is written, you can try to build it locally.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-building-the-recipe-locally"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Building the recipe locally</div>
+  <div class="box-title hands-on-title" id="hands-on-building-the-recipe-locally"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Building the recipe locally</div>
 
   <ol>
     <li>
       <p>Run conda-build</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda build recipes/bellerophon_bis
 </code></pre></div>        </div>
       </blockquote>
@@ -1582,7 +1582,7 @@ homepage, and optionally the github username of the person responsible for maint
 At the end, you should see something like this:</p>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
 
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TEST END: /home/abretaud/miniconda3/conda-bld/noarch/bellerophon-1.0-py_0.tar.bz2
 Renaming work directory [...]
@@ -1617,20 +1617,20 @@ The automatic testing of your recipe on GitHub when you create a Pull Request is
 <p>After the recipe is complete, and when we have checked that it builds locally, we can commit and push to our fork, so that the recipe can eventually be integrated into Bioconda.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-the-pr"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating the PR</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-the-pr"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating the PR</div>
 
   <ol>
     <li>
       <p>We start by making sure we’re on a branch, and that <code class="language-plaintext highlighter-rouge">recipes/bellerophon/meta.yaml</code> is the only modified file.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
 
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>On branch bellerophon_bioconda
 Untracked files:
@@ -1646,7 +1646,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
       <p>Add your recipes folder, commit, and push it.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-5"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add recipes/bellerophon_bis
 git commit <span class="nt">-m</span> <span class="s1">'Add recipe for bellerophon 1.0'</span>
 git push origin <span class="nt">-u</span> bellerophon_bioconda
@@ -1656,7 +1656,7 @@ git push origin <span class="nt">-u</span> bellerophon_bioconda
       <p>Git will give you a url for creating the pull request, which can be clicked to be taken to github.</p>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out-3"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git push origin <span class="nt">-u</span> bellerophon_bioconda
 Total 0 <span class="o">(</span>delta 0<span class="o">)</span>, reused 0 <span class="o">(</span>delta 0<span class="o">)</span>
 remote:
@@ -1708,7 +1708,7 @@ next section of this tutorial, one of its functions is necessary for the tool wr
 via the python package manager <code class="language-plaintext highlighter-rouge">pip</code>. To that end, before beginning this section, please install planemo locally by running</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-installing-planemo-via-pip"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Installing `planemo` via pip</div>
+  <div class="box-title hands-on-title" id="hands-on-installing-planemo-via-pip"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Installing `planemo` via pip</div>
 
   <p>It is advised to install <code class="language-plaintext highlighter-rouge">planemo</code> in a virtual environment (step 1-2).</p>
 
@@ -1722,20 +1722,20 @@ via the python package manager <code class="language-plaintext highlighter-rouge
 <p>Note that for using <code class="language-plaintext highlighter-rouge">planemo</code>from a new shell you will need to activate the python virtual environment again.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-testing-planemo-and-getting-help"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Testing `planemo` and getting help</div>
+  <div class="box-title hands-on-title" id="hands-on-testing-planemo-and-getting-help"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Testing `planemo` and getting help</div>
 
   <ol>
     <li>
       <p>In order to test if the installation worked execute</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-input-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-input-bash"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Input: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo <span class="nt">--version</span>
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-output"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Output</div>
+        <div class="box-title code-in-title" id="code-in-output"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Output</div>
         <p>This should output the version of <code class="language-plaintext highlighter-rouge">planemo</code>, e.g.</p>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo, version 0.74.3
 </code></pre></div>        </div>
@@ -1751,7 +1751,7 @@ via the python package manager <code class="language-plaintext highlighter-rouge
 <p>Initializing a tool wrapper to be run in Galaxy is simple</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-a-tool-wrapper-skeleton"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating a Tool Wrapper Skeleton</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-a-tool-wrapper-skeleton"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating a Tool Wrapper Skeleton</div>
   <ol>
     <li>Go to the “tools” directory in your Galaxy instance.</li>
     <li>Make a new directory for tools you will be wrapping.</li>
@@ -1816,7 +1816,7 @@ via the python package manager <code class="language-plaintext highlighter-rouge
 The tool ID and name are defined here as well as which minimum version of Galaxy is required to run it.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-defining-the-tool-section"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Defining the tool section:</div>
+  <div class="box-title hands-on-title" id="hands-on-defining-the-tool-section"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Defining the tool section:</div>
   <p>For this section, the following is necessary:</p>
 
   <ul>
@@ -1849,7 +1849,7 @@ The tool ID and name are defined here as well as which minimum version of Galaxy
 The description is simply presented as plaintext between the tags. Bellerophon’s would look like this:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-a-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding a description</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-a-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding a description</div>
   <p>Add the following description to your tool</p>
   <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;description&gt;</span>chimeric reads from Arima Genomics<span class="nt">&lt;/description&gt;</span>
 </code></pre></div>  </div>
@@ -1869,7 +1869,7 @@ useful for tools which have multiple options/modes that reuse parameters. We wil
 <p>The @TOOL_VERSION@ and @VERSION_SUFFIX@ used in the Tool line are defined here. Each need their own ‘token’ line, resulting in</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-macros"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Macros</div>
+  <div class="box-title hands-on-title" id="hands-on-macros"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Macros</div>
   <p>Add the following macros section to your tool:</p>
   <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;macros&gt;</span>
     <span class="nt">&lt;token</span> <span class="na">name=</span><span class="s">"@TOOL_VERSION@"</span><span class="nt">&gt;</span>1.0<span class="nt">&lt;/token&gt;</span>
@@ -1904,7 +1904,7 @@ of the requirement would change the value for <code class="language-plaintext hi
 <p>We will now add a useful macro entry. With the Galaxy ecosystem is becoming more reliant on metadata, a bio.tools ID can help Galaxy to pull standardized metadata for your tool. This enables users to find and use the tool more easily from across the web, so we highly recommend setting a bio.tools identifier. If an entry already exists on <a href="https://bio.tools">https://bio.tools</a>, it’s a simple task.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-a-bio-tools-id"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting a bio.tools ID:</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-a-bio-tools-id"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Setting a bio.tools ID:</div>
 
   <p>If we go to <a href="https://bio.tools">https://bio.tools</a> and search “Bellerophon”, we find that it already has a bio.tools entry:</p>
 
@@ -1962,7 +1962,7 @@ This specifies the</p>
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-requirements"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding requirements</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-requirements"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding requirements</div>
   <p>In the case of bellerophon, which requires two dependencies, bellerophon and samtools, the requirements section appears like so. Add them to your tool XML.</p>
 
   <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;requirements&gt;</span>
@@ -2146,7 +2146,7 @@ goes to the stderr instead of an output file, this can also be skipped. All thre
 but not exposed to the user.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-parameters-to-your-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding parameters to your tool</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-parameters-to-your-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding parameters to your tool</div>
   <ol>
     <li>Using information in the above sections, add parameters for the forward, reverse, and quality flags to your tool xml.</li>
   </ol>
@@ -2180,7 +2180,7 @@ a user from inputting a value below a specified number. Here, the quality flag c
 It also defines the format of that file and the name shown to the user in the history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-your-outputs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding your outputs</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-your-outputs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding your outputs</div>
   <p>As Bellerophon has a single output file, add the following outputs section to your tool:</p>
 
   <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;outputs&gt;</span>
@@ -2297,7 +2297,7 @@ For example</p>
 <h4 id="in-practice"><em>In practice</em></h4>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-writing-the-command-block"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Writing the command block</div>
+  <div class="box-title hands-on-title" id="hands-on-writing-the-command-block"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Writing the command block</div>
 
   <p>The bellerophon command section, based on the variables set previously, would be as follows. Please add it to your tool XML.</p>
 
@@ -2368,7 +2368,7 @@ for the test. These params can also be placed inside a conditional, simulating t
 <p>As all parameters in bellerophon are accessible at once, and do not contradict one another, only one test is necessary.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-a-test"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding a test</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-a-test"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding a test</div>
   <p>Add the following test case to your tool:</p>
   <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;tests&gt;</span>
         <span class="nt">&lt;test</span> <span class="na">expect_num_outputs=</span><span class="s">"1"</span><span class="nt">&gt;</span>
@@ -2438,7 +2438,7 @@ of an Arima Genomics tool in association with the Vertebrate Genomes project, th
 <p>Multiple citations can be added by using additional citation tags.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-a-citation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding a citation</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-a-citation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding a citation</div>
   <p>Add the citation above using either method (but not both!)</p>
 </blockquote>
 
@@ -2557,7 +2557,7 @@ see it in action linting, testing, and serving the tool.</p>
 By default <code class="language-plaintext highlighter-rouge">planemo</code> will fail if any warning or error is found, i.e. return a non-zero exit code.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-lint-a-tool-with-planemo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Lint a tool with `planemo`</div>
+  <div class="box-title hands-on-title" id="hands-on-lint-a-tool-with-planemo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Lint a tool with `planemo`</div>
 
   <ol>
     <li>Change into the directory containing the tool</li>
@@ -2583,7 +2583,7 @@ In order to do so <code class="language-plaintext highlighter-rouge">planemo</co
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-test-a-tool-with-planemo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Test a tool with `planemo`</div>
+  <div class="box-title hands-on-title" id="hands-on-test-a-tool-with-planemo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Test a tool with `planemo`</div>
 
   <ol>
     <li>Change into the directory containing the tool</li>
@@ -2664,7 +2664,7 @@ to determine the source of the test failure.</p>
 <p>It can be very useful to check how Galaxy renders a tool and if this meets the expectations of the developer. For instance this is the best way to check if the help section is rendered as expected.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-serve-a-tool-with-planemo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Serve a tool with `planemo`</div>
+  <div class="box-title hands-on-title" id="hands-on-serve-a-tool-with-planemo"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Serve a tool with `planemo`</div>
 
   <ol>
     <li>Change into the directory containing the tool</li>
@@ -2736,7 +2736,7 @@ But, the steps can be adapted easily by exchanging the repository URLs. Note tha
 the development branch may have the name <code class="language-plaintext highlighter-rouge">master</code> instead of <code class="language-plaintext highlighter-rouge">main</code>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fork-and-clone-the-iuc-github-repository"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fork and clone the IUC github repository</div>
+  <div class="box-title hands-on-title" id="hands-on-fork-and-clone-the-iuc-github-repository"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fork and clone the IUC github repository</div>
 
   <ol>
     <li>If you don’t have an account on github you need to sign up at first.</li>
@@ -2757,7 +2757,7 @@ the development branch may have the name <code class="language-plaintext highlig
       <p>In order to obtain a clone (i.e. a local copy of your fork) click the green button with text “Code” and copy the link. And execute the following commands on your computer</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Bash</div>
+        <div class="box-title code-in-title" id="code-in-bash-6"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Bash</div>
         <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>A_DIR_WHERE_YOU_WANT_TO_CREATE_THE_CLONE
 git clone LINK_TO_YOUR_FORK
 <span class="nb">cd </span>tools-iuc/
@@ -2775,7 +2775,7 @@ The last command will add the original sandbox repository as a remote with the n
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-keeping-your-fork-in-sync"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Keeping your fork in sync</div>
+  <div class="box-title hands-on-title" id="hands-on-keeping-your-fork-in-sync"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Keeping your fork in sync</div>
 
   <p>You should execute the following steps always before creating a new branch:</p>
 
@@ -2789,7 +2789,7 @@ The last command will add the original sandbox repository as a remote with the n
 <h2 id="create-a-pull-request-for-a-new-tool">Create a pull request for a new tool</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a pull request</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-pull-request"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a pull request</div>
   <ol>
     <li><code class="language-plaintext highlighter-rouge">git checkout main</code></li>
     <li><code class="language-plaintext highlighter-rouge">git checkout -b NAME_OF_THE_BRANCH</code>: create a new feature branch and change to this branch. The branch name should not contain names and should be short and if possible descriptive, e.g. the tool name.</li>
@@ -2804,7 +2804,7 @@ The last command will add the original sandbox repository as a remote with the n
 <p>After you created a PR your changes will be reviewed and improvements will be requested. You can add changes to the PR as follows.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adding-changes-to-a-pr"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adding changes to a PR</div>
+  <div class="box-title hands-on-title" id="hands-on-adding-changes-to-a-pr"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adding changes to a PR</div>
   <ol>
     <li><code class="language-plaintext highlighter-rouge">git checkout NAME_OF_THE_BRANCH</code></li>
     <li>Make changes as requested.</li>
@@ -2911,9 +2911,18 @@ Test tools: planemo test – contains the output of <code class="language-plaint
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/dev/faqs/">FAQ page for the Development in Galaxy topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/dev/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3041,12 +3050,12 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.6666666666666666">2</td>
 			</tr>
 		   
@@ -3187,7 +3196,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

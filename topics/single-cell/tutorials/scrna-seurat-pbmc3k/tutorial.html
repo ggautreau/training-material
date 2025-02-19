@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1558,7 +1558,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="data-upload">Data upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1645,7 +1645,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>Creating a SeuratObject in R would require two steps - first, we would need to read in our data, in this case using the <code class="language-plaintext highlighter-rouge">Read10X</code> function, then secondly we would turn it into a SeuratObject using the <code class="language-plaintext highlighter-rouge">CreateSeuratObject</code> function. On Galaxy, we can perform both steps with a single tool. The <code class="language-plaintext highlighter-rouge">CreateSeuratObject</code> function also generates some QC metrics and performs basic filtering of the data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-seuratobject"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a SeuratObject</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-seuratobject"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a SeuratObject</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_create/seurat_create/5.0+galaxy1" title="Seurat Create tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Create</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy1)</span> with the following parameters:
@@ -1676,7 +1676,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>We can’t look at the RDS file directly as it is designed for computers to read, rather than humans, but the Seurat tools will now be able to interact with the data. We can also use the <span><strong>Seurat Data Management</strong> <i class="fas fa-wrench" aria-hidden="true"></i></span> tool to look inside our new SeuratObject.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-the-input-3k-pbmc-seuratobject"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect the `Input 3k PBMC` SeuratObject</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-the-input-3k-pbmc-seuratobject"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect the `Input 3k PBMC` SeuratObject</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_data/seurat_data/5.0+galaxy0" title="Seurat Data Management tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Data Management</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -1761,7 +1761,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>We can identify mitochondrial genes from their gene symbols. Human genes that are encoded in the mitochondrial DNA (rather than in the cell nucleus) have names beginning with ‘MT-‘. Different naming patterns are used in other species. The <span><strong>Seurat Create</strong> <i class="fas fa-wrench" aria-hidden="true"></i></span> tool can identify genes based on a specific naming pattern and then calculate the proportion of reads in each cell that came from these genes. We could use this tool to calculate the proportions of other genes with shared naming patterns too, such as ribosomal genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-the-proportion-of-mitochondrial-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Calculate the Proportion of Mitochondrial Reads</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-the-proportion-of-mitochondrial-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Calculate the Proportion of Mitochondrial Reads</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_create/seurat_create/5.0+galaxy1" title="Seurat Create tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Create</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy1)</span> with the following parameters:
@@ -1788,7 +1788,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>We can visualise the QC metrics to help us decide where to set our thresholds for filtering out low quality cells. We want to get rid of cells that have unusually high or low numbers of genes or unique features, as well as cells that have higher proportions of mitochondrial genes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise QC Metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise QC Metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -1889,7 +1889,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>We’re setting QC thresholds based on our visual inspections of the data, but we could take different approaches too. We could calculate the interquartile range for our QC metrics and use this to set a threshold (e.g. maximum of 1.5 times the IQ range above the median). We could also try running the analysis with different thresholds to see how it affects the results - this could help us to see if we’re excluding any biological variation, for example if we’re filtering out a specific high-energy cell type with our mitochondrial threshold.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-out-low-quality-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Filter Out Low Quality Cells</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-out-low-quality-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Filter Out Low Quality Cells</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_create/seurat_create/5.0+galaxy1" title="Seurat Create tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Create</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy1)</span> with the following parameters:
@@ -1913,7 +1913,7 @@ https://zenodo.org/record/3581213/files/matrix.mtx
 <p>If we produce the same plots again, we can see what has changed in our data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-re-visualise-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Re-Visualise QC Metrics</div>
+  <div class="box-title hands-on-title" id="hands-on-re-visualise-qc-metrics"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Re-Visualise QC Metrics</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2051,7 +2051,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 
 <div class="Separate-Preprocessing-Steps">
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-separate-preprocessing-steps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Separate Preprocessing Steps</div>
+    <div class="box-title hands-on-title" id="hands-on-separate-preprocessing-steps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Separate Preprocessing Steps</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_preprocessing/seurat_preprocessing/5.0+galaxy0" title="Seurat Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2097,7 +2097,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 
 <div class="SCTransform">
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-sctransform"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: SCTransform</div>
+    <div class="box-title hands-on-title" id="hands-on-sctransform"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: SCTransform</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_preprocessing/seurat_preprocessing/5.0+galaxy0" title="Seurat Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2140,7 +2140,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 <h3 id="visualise-highly-variable-genes">Visualise Highly Variable Genes</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise Results</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise Results</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2336,7 +2336,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 <p>The standard Seurat pipeline performs the PCA on the Variable Features only, rather than the complete dataset. You can change this using the <code class="language-plaintext highlighter-rouge">features</code> parameter, but you will need to scale the chosen features using <code class="language-plaintext highlighter-rouge">ScaleData</code> before running the PCA, if you didn’t already choose this option during the preprocessing stage as we did above.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-the-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform the PCA</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-the-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform the PCA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_reduce_dimension/seurat_reduce_dimension/5.0+galaxy0" title="Seurat Run Dimensional Reduction tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Run Dimensional Reduction</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2367,7 +2367,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 <p>Rather than just looking at a list of genes, we can also produce plots to help us better understand how our cells and genes relate to the PCs we have just computed. Let’s start by finding out more about the genes that were most strongly associated with our top three PCs. We can do this with the <code class="language-plaintext highlighter-rouge">VizDimLoadings</code> plot, which shows the genes associated with each PC, how strongly each gene affected the PC, and whether it was positively or negatively correlated with the PC. The plots will look a bit different depending on which preprocessing approach you followed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-dimensional-loadings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise the PCA Results - Dimensional Loadings</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-dimensional-loadings"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise the PCA Results - Dimensional Loadings</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2436,7 +2436,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 <p>Next, let’s see how our cells are distributed along the top PCs. We can use <code class="language-plaintext highlighter-rouge">DimPlot</code> to create a 2-dimensional plot where each axis represents one of the PCs - being able to produce these plots is one of the benefits of dimensional reduction as it makes our data easier to interpret when we can see it on two axes rather than imagining it along thousands. If we’re plotting the top PCs then we should see cells or clumps of cells spread along these axes. If PC1 is really explaining a lot of the variation in the data then we should see that there are cells with both high and low values along this axis - if they’re all grouped together at one end of the axis then the PC wouldn’t be telling us much about the differences between cells. We’d hope to see a similar effect along the next PCs, although it won’t be as strong as for the top PC because that’s the one that explained the most variation in the dataset. We should see similar relationships no matter which preprocessing approach we used, although of course the plots will look a bit different.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-dimplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise the PCA Results - DimPlot</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-dimplot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise the PCA Results - DimPlot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2487,7 +2487,7 @@ The Seurat pipeline can include another step during preprocessing of our single 
 <p>We don’t have to use PCs 1 and 2 as the axes. We can decide which PCs we want to plot our data along. We can also use the <code class="language-plaintext highlighter-rouge">FeaturePlot</code> function to colour the plots by the expression levels of specific genes to see how this relates to the PCs, so let’s see how the top genes relate to the top three PCs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-feature-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise the PCA Results - Feature Plots</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-feature-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise the PCA Results - Feature Plots</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2597,7 +2597,7 @@ Now it is the top genes for PC1 that don’t show any relationship with the axes
 <p>Another option for visualising our PCA results is to use <code class="language-plaintext highlighter-rouge">DimHeatmap</code> to produce a heatmap of the PCA scores for the top genes in each cell. We can see which genes scored highly in the same cells and get an idea of how the scores varied across the dataset. We can look for groups of cells that had similar scores for a particular PC, suggesting that they share similar expression profiles - these groups of cells might become our clusters. We can also compare the patterns for different PCs. We would expect to see more similarities (genes with similar scores across cells and more cells grouping together) for the top PCs since these explain more of the variation in the data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-heatmaps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise the PCA Results - Heatmaps</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-pca-results-heatmaps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise the PCA Results - Heatmaps</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2691,7 +2691,7 @@ The distinction becomes less clear in later PCs, with more cells showing differe
 <p>The Elbow Plot ranks the PCs based on the percentage of variance that each of them explains. We should see that the top PCs each explain a substantial amount of the data, but that there is a bend or elbow where the dots start lining up along the bottom axis. The PCs before the elbow explain most of the variation while those after the elbow don’t provide much additional information, so we don’t need to include them in our analysis.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-an-elbow-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Make an Elbow Plot</div>
+  <div class="box-title hands-on-title" id="hands-on-make-an-elbow-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Make an Elbow Plot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2772,7 +2772,7 @@ We can actually use more PCs when we preprocess with SCTransform than if we used
 <p>The best approach to building the neighborhood graph and the optimal value for <code class="language-plaintext highlighter-rouge">k</code> will depend on the data we are analysing - sometimes we’ll need to try a few options to find the right fit. We’ll use Seurat’s default value of 20 for now - we’ll know how well it worked when we take a look at our clusters later.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-neighbors-by-computing-a-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Neighbors by Computing a Neighborhood Graph</div>
+  <div class="box-title hands-on-title" id="hands-on-find-neighbors-by-computing-a-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Neighbors by Computing a Neighborhood Graph</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2801,7 +2801,7 @@ We can actually use more PCs when we preprocess with SCTransform than if we used
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-clusters-using-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find Clusters using the Neighborhood Graph</div>
+  <div class="box-title hands-on-title" id="hands-on-find-clusters-using-the-neighborhood-graph"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find Clusters using the Neighborhood Graph</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2831,7 +2831,7 @@ We can actually use more PCs when we preprocess with SCTransform than if we used
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-dimensional-reduction-with-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform Dimensional Reduction with UMAP</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-dimensional-reduction-with-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform Dimensional Reduction with UMAP</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_reduce_dimension/seurat_reduce_dimension/5.0+galaxy0" title="Seurat Run Dimensional Reduction tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Run Dimensional Reduction</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2860,7 +2860,7 @@ We can actually use more PCs when we preprocess with SCTransform than if we used
 <p>Now we can visualise the UMAP, just as we did with the PCA. We can also colour in the UMAP plot based on the expression of genes we’re interested in - we’ll start by seeing where the cells expressing the top genes associated with PCs 1-3 have ended up in the UMAP plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-the-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise the UMAP</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-the-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise the UMAP</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -2937,7 +2937,7 @@ As well as the broader patterns across the plot, we can also see some relationsh
 <p>UMAP plots aren’t the only way to see what is going on with the clusters we’ve just identified - and they aren’t always the best choice when we’re interested in which cells express specific genes. For example, we can create violin plots to show the expression of our top six genes from the PCA across the clusters we’ve just identified.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualise-expression-across-clusters-with-a-violin-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualise Expression across Clusters with a Violin Plot</div>
+  <div class="box-title hands-on-title" id="hands-on-visualise-expression-across-clusters-with-a-violin-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualise Expression across Clusters with a Violin Plot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3017,7 +3017,7 @@ We can also see that there is some expression of the top genes outside the clust
 <p>We can look for both positive and negative markers, or limit the results to just the positive markers for the clusters. We’ll start by looking for the positive markers of all clusters.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-use-findallmarkers-to-compare-all-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Use `FindAllMarkers` to Compare All Clusters</div>
+  <div class="box-title hands-on-title" id="hands-on-use-findallmarkers-to-compare-all-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Use `FindAllMarkers` to Compare All Clusters</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3164,7 +3164,7 @@ If you then click on the <i class="far fa-eye" aria-hidden="true"></i><span clas
 <p>Let’s try finding the positive and negative markers of cluster 2.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-use-findmarkers-on-a-single-cluster"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Use `FindMarkers` on a Single Cluster</div>
+  <div class="box-title hands-on-title" id="hands-on-use-findmarkers-on-a-single-cluster"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Use `FindMarkers` on a Single Cluster</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3303,7 +3303,7 @@ If you then click on the <i class="far fa-eye" aria-hidden="true"></i><span clas
 <p>We just used <code class="language-plaintext highlighter-rouge">FindMarkers</code> to run the same test on cluster 2 as <code class="language-plaintext highlighter-rouge">FindAllMarkers</code> performs for all the clusters, but we can also use it to ask different questions. If we are interested in what makes one cluster different from another, then we might want to look for genes that are differentially expressed between two specific clusters. We can also choose to compare expression with more than one cluster. We might do this if we want to focus on differences between two specific cell types, without considering what makes them different from the rest of the dataset - this could be handy if we have two very similar cell types or subtypes.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-use-findmarkers-to-compare-specific-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Use `FindMarkers` to Compare Specific Clusters</div>
+  <div class="box-title hands-on-title" id="hands-on-use-findmarkers-to-compare-specific-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Use `FindMarkers` to Compare Specific Clusters</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3424,7 +3424,7 @@ We wouldn’t expect to see the same results because we’re now looking for dif
 <p>We can also use other methods for DE analyis in Seurat. We can use the ‘ROC’ test to find out the ‘classification power’ of marker genes for our clusters. A classification power of 1 means that the expression level of this gene can perfectly assign cells to this cluster. A classification power of 0 means that the expression of this gene is useless for identifying cells in this particular cluster - it’s completely random!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-use-findmarkers-to-calculate-classification-power"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Use `FindMarkers` to Calculate Classification Power</div>
+  <div class="box-title hands-on-title" id="hands-on-use-findmarkers-to-calculate-classification-power"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Use `FindMarkers` to Calculate Classification Power</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3562,7 +3562,7 @@ We wouldn’t expect to see the same results because we’re now looking for dif
 <p>If we’re taking the unsupervised approach, then we might want to limit our markers to the ones that showed the biggest differences in expression. We can do this using some of the extra parametes provided by <code class="language-plaintext highlighter-rouge">FindAllMarkers</code>. Let’s refine the parameters to find the top 10 positive markers for each cluster that showed a log fold change of at least 1 (meaning their expression was at least twice as high).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-the-top-10-positive-markers-for-each-cluster"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find the Top 10 Positive Markers for Each Cluster</div>
+  <div class="box-title hands-on-title" id="hands-on-find-the-top-10-positive-markers-for-each-cluster"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find the Top 10 Positive Markers for Each Cluster</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_clustering/seurat_clustering/5.0+galaxy0" title="Seurat Find Clusters tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Find Clusters</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3752,7 +3752,7 @@ We wouldn’t expect to see the same results because we’re now looking for dif
 <p>The suggested marker gene for B cells isn’t our top marker, CD79A, but MS4A1. If we look back at our table of the top 10 markers, we can see that this was actually the second gene in the list, so if we’d continued with the unsupervised approach we’d have ended up using the same gene to help identify our B cells. Both of these genes are actually very good markers for B cells, so some lists of B cell markers might suggest using CD79A rather than (or in addition to) MS4A1. If we plot the expression of both genes across our clusters, we should be able to see where our B cells are.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-violin-plots-of-b-cell-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Make Violin Plots of B Cell Markers</div>
+  <div class="box-title hands-on-title" id="hands-on-make-violin-plots-of-b-cell-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Make Violin Plots of B Cell Markers</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3786,7 +3786,7 @@ We wouldn’t expect to see the same results because we’re now looking for dif
 <p>Sometimes the results aren’t quite so clear as markers might be expressed across multiple clusters of the same or different cell types. We might need to use multiple markers to differentiate between these groups - as with T cells in this dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-make-violin-plots-of-t-cell-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Make Violin Plots of T Cell Markers</div>
+  <div class="box-title hands-on-title" id="hands-on-make-violin-plots-of-t-cell-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Make Violin Plots of T Cell Markers</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -3844,7 +3844,7 @@ Unfortunately, there isn’t always an easy answer - it depends on how well defi
 <p>To continue with the supervised approach, we can check the expression of the chosen markers in our clusters to see if they match the known expression patterns of specific cell types. We could just look for these genes in our list of the top positive markers, but there are also several options for visualising marker gene expression. We’ll try a few of them here to give you an idea of the types of plots you can use in the future.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-colour-the-umap-plot-by-canonical-marker-expression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Colour the UMAP Plot by Canonical Marker Expression</div>
+  <div class="box-title hands-on-title" id="hands-on-colour-the-umap-plot-by-canonical-marker-expression"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Colour the UMAP Plot by Canonical Marker Expression</div>
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
       <ul>
@@ -3902,7 +3902,7 @@ Unfortunately, there isn’t always an easy answer - it depends on how well defi
 <p>Another option for visualising marker gene expression across clusters is the Violin Plot, which can sometimes make it easier to distinguish between clusters. Each cluster is plotted separately, so we don’t need to work out which cluster a cell belongs to, which can be tricky when we have similar clusters close together and often overlapping on the UMAP plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-use-violin-plots-to-compare-expression-of-canonical-markers-by-cluster"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Use Violin Plots to Compare Expression of Canonical Markers by Cluster</div>
+  <div class="box-title hands-on-title" id="hands-on-use-violin-plots-to-compare-expression-of-canonical-markers-by-cluster"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Use Violin Plots to Compare Expression of Canonical Markers by Cluster</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -4129,7 +4129,7 @@ Unfortunately, there isn’t always an easy answer - it depends on how well defi
 <p>We can now rename our clusters using these cell names, while keeping a copy of the original idents (the cluster numbers) in case we want to use them again. It will be easier to interpret our plots and any downstream analyses we run if we can use cell names rather than cluster numbers!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-rename-clusters-with-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Rename Clusters with Cell Types</div>
+  <div class="box-title hands-on-title" id="hands-on-rename-clusters-with-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Rename Clusters with Cell Types</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_data/seurat_data/5.0+galaxy0" title="Seurat Data Management tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Data Management</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -4159,7 +4159,7 @@ Unfortunately, there isn’t always an easy answer - it depends on how well defi
 <p>Now we can plot our UMAP again, this time showing the names of our clusters.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-revisualise-the-umap-with-cell-type-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Revisualise the UMAP with Cell Type Annotations</div>
+  <div class="box-title hands-on-title" id="hands-on-revisualise-the-umap-with-cell-type-annotations"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Revisualise the UMAP with Cell Type Annotations</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/seurat_plot/seurat_plot/5.0+galaxy0" title="Seurat Visualize tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Visualize</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0+galaxy0)</span> with the following parameters:
@@ -4195,7 +4195,7 @@ Unfortunately, there isn’t always an easy answer - it depends on how well defi
 <p>In order to create a heatmap, we need to prepare a tabular file with a list of the genes we want to plot. For the canonical markers, you could create this table outside of Galaxy and then upload it or follow the first step below to create the file in Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-heatmaps-to-compare-expression-by-cluster-canonical-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create Heatmaps to Compare Expression by Cluster - Canonical Markers</div>
+  <div class="box-title hands-on-title" id="hands-on-create-heatmaps-to-compare-expression-by-cluster-canonical-markers"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create Heatmaps to Compare Expression by Cluster - Canonical Markers</div>
 
   <ol>
     <li>
@@ -4299,7 +4299,7 @@ PPBP
 In order to do this, we’ll need to turn the output from <code class="language-plaintext highlighter-rouge">FindAllMarkers</code> into a tabular file type. We can then cut out the column with the list of gene names, getting rid of the column header, and use this as an input for the plot.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-heatmaps-to-compare-expression-by-cluster-markers-from-de"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create Heatmaps to Compare Expression by Cluster - Markers from DE</div>
+  <div class="box-title hands-on-title" id="hands-on-create-heatmaps-to-compare-expression-by-cluster-markers-from-de"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create Heatmaps to Compare Expression by Cluster - Markers from DE</div>
 
   <ol>
     <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> pencil icon of the file we renamed as <code class="language-plaintext highlighter-rouge">DE Markers</code> (this was the CSV output from <code class="language-plaintext highlighter-rouge">FindAllMarkers</code>) then
@@ -4460,9 +4460,16 @@ If we couldn’t see strong associations between our clusters and the different 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -4563,8 +4570,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -4736,7 +4743,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -4816,7 +4823,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

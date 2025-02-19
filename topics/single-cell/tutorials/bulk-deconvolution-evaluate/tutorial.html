@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1378,7 +1378,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>First we need to create a new history in Galaxy and load in our single-cell data. We are going to use the single-cell dataset from a previous deconvolution tutorial found here: <a href="/training-material/topics/single-cell/tutorials/bulk-music/tutorial.html">https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/bulk-music/tutorial.html</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial <em>“Deconvolution: Evaluating Reference Data”</em></li>
@@ -1426,7 +1426,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p>Before continuing lets quickly inspect our single-cell data. We can find all of the cell types present in the data alongside their proportions by using the count tool to count the occurrence of each cell type category in the metadata file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-get-cell-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Get cell counts</div>
+  <div class="box-title hands-on-title" id="hands-on-get-cell-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Get cell counts</div>
 
   <ol>
     <li><span class="tool" data-tool="Count1" title="Count tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Count</strong></span> with the following parameters:
@@ -1548,7 +1548,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p>If we inspect the expression data file downloaded earlier, we can see that currently the rows represent genes and columns represent cells. However, this needs to be swapped for the later workflows. To fix this we will transpose the expression matrix.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-transpose-expression-matrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Transpose expression matrix</div>
+  <div class="box-title hands-on-title" id="hands-on-transpose-expression-matrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Transpose expression matrix</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/datamash_transpose/datamash_transpose/1.8+galaxy1" title="Transpose tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Transpose</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8+galaxy1)</span> with the following parameters:
@@ -1568,7 +1568,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p>We will now duplicate our single-cell data 20 times and store it in a collection. This will be done for both the expression data and metadata files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-collections-from-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate collections from data</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-collections-from-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate collections from data</div>
 
   <ol>
     <li><span class="tool" data-tool="__DUPLICATE_FILE_TO_COLLECTION__" title="Duplicate file to collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Duplicate file to collection</strong></span> with the following parameters:
@@ -1610,7 +1610,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p><strong>Remember</strong> since we have a collection of 20 inputs, the output of this workflow will be a collection of 20 elements, each corresponding to the input elements. Each output will have its own random selection of 200 cells.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-pseudo-bulk-and-actual-proportions-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run pseudo-bulk and actual proportions workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-pseudo-bulk-and-actual-proportions-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run pseudo-bulk and actual proportions workflow</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -1704,7 +1704,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p><strong>Note: We are using the original imported data here, not the transposed data or collections.</strong></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-build-the-expression-set-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Build the Expression Set object</div>
+  <div class="box-title hands-on-title" id="hands-on-build-the-expression-set-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Build the Expression Set object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/music_construct_eset/music_construct_eset/0.1.1+galaxy3" title="Construct Expression Set Object tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Construct Expression Set Object</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.1+galaxy3)</span> with the following parameters:
@@ -1730,7 +1730,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p>Similar to the expression data, this ExpressionSet object needs to be duplicated 20 times into a collection for later batch processing.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generate-eset-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate ESet collection</div>
+  <div class="box-title hands-on-title" id="hands-on-generate-eset-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate ESet collection</div>
 
   <ol>
     <li><span class="tool" data-tool="__DUPLICATE_FILE_TO_COLLECTION__" title="Duplicate file to collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Duplicate file to collection</strong></span> with the following parameters:
@@ -1749,7 +1749,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p>The following workflow will take the two pseudo-bulk samples (A and B), as well as the original single-cell data as reference and output the deconvolution results for both samples and deconvolution methods. Thus producing 4 output collections. The pdf results of the deconvolution tools will also be outputted from the workflow but won’t be needed for the tutorial.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-inferring-cellular-proportions-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run inferring cellular proportions workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-inferring-cellular-proportions-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run inferring cellular proportions workflow</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -1795,7 +1795,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-visualisation-pre-processing-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run visualisation pre-processing workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-visualisation-pre-processing-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run visualisation pre-processing workflow</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -1880,7 +1880,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-actual-and-inferred-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot the actual and inferred data</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-actual-and-inferred-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot the actual and inferred data</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.4.0+galaxy1" title="Scatterplot with ggplot2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scatterplot with ggplot2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.4.0+galaxy1)</span> with the following parameters:
@@ -1994,7 +1994,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract Cell Types</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract Cell Types</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.3+galaxy2" title="Advanced Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Advanced Cut</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy2)</span> with the following parameters:
@@ -2044,7 +2044,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-violin-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot violin plots</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-violin-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot violin plots</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_violin/ggplot2_violin/3.4.0+galaxy1" title="Violin plot w ggplot2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Violin plot w ggplot2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.4.0+galaxy1)</span> with the following parameters:
@@ -2177,7 +2177,7 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
 <p>With a basic understanding of some useful metrics, we will now compute these to get quantitative values alongside our visualisation results. The following workflow needs to be run for both the MuSiC and NNLS results table.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-metrics-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run metrics workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-metrics-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run metrics workflow</div>
 
   <ol>
     <li><strong>Import the workflow</strong> into Galaxy
@@ -2283,9 +2283,16 @@ https://zenodo.org/record/5719228/files/EMTABesethealthy.phenotype.tabular
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2411,8 +2418,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2564,7 +2571,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2644,7 +2651,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

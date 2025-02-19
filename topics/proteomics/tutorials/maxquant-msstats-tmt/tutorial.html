@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1491,7 +1491,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The raw data is available via the PRIDE repository under the ID: <a href="https://www.ebi.ac.uk/pride/archive/projects/PXD014145">PXD014145</a>. The MaxQuant experimental design template file, MSstatsTMT annotation file and FASTA file for this training are deposited at Zenodo(https://zenodo.org/record/5195800). It is of course possible to use another FASTA file with human proteome sequences, but to ensure that the results are compatible, we recommend using the provided FASTA file. MaxQuant not only adds known contaminants to the FASTA file, but also generates the “decoy” hits for false discovery rate estimation itself, therefore the FASTA file is not allowed to have decoy entries. To learn more about FASTA files, have a look at <a href="/training-material/topics/proteomics/tutorials/database-handling/tutorial.html">Protein FASTA Database Handling tutorial</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1547,7 +1547,7 @@ ftp://ftp.pride.ebi.ac.uk/pride-archive/2020/05/PXD014145/MFA391.raw
 <p>We start the MaxQuant run with TMT parameters for MS2 based reporter quantitation. A quality control report will be generated with the <a href="https://pubs.acs.org/doi/10.1021/acs.jproteome.5b00780">PTXQC functionality</a> that is directly implemented in the MaxQuant Galaxy tool. For more information about MaxQuant and its parameter please have a look at the <a href="/training-material/topics/proteomics/tutorials/maxquant-label-free/tutorial.html">Label-free data analysis using MaxQuant tutorial</a>. To continue with statistical analysis in MSstatsTMT, the Protein Groups and the Evidence files are needed from MaxQuant. The run time of MaxQuant depends on the number and size of the input files and on the chosen parameters. The run of the training datasets will take a while, but the training can be directly continued with the MaxQuant result files from Zenodo.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-maxquant-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: MaxQuant analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-maxquant-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: MaxQuant analysis</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/maxquant/maxquant/1.6.17.0+galaxy2" title="MaxQuant tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MaxQuant</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.6.17.0+galaxy2)</span> with the following parameters:
@@ -1634,7 +1634,7 @@ For thermo.raw files, “.raw” is considered a part of the filename. Therefore
 For this dataset, the standard parameters of MSstatsTMT fit quite nicely, as this is a straightforward two group comparison. If you have more than two groups, you may consider using the comparison matrix option of MSstatsTMT (for more information see <a href="/training-material/topics/proteomics/tutorials/maxquant-msstats-dda-lfq/tutorial.html">label-free MSstats training</a>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-msstatstmt-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: MSstatsTMT analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-msstatstmt-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: MSstatsTMT analysis</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/galaxyp/msstatstmt/msstatstmt/2.0.0+galaxy0" title="MSstatsTMT tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MSstatsTMT</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.0+galaxy0)</span> with the following parameters:
@@ -2036,9 +2036,18 @@ Please bear in mind that TMT quantitation suffers from ratio compression. There 
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/proteomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2182,12 +2191,12 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2300,7 +2309,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2028,7 +2028,7 @@ The input files are used to identify potential sequencing bias, like open chroma
 <p>The first step of any ChIP-Seq data analysis is quality control of the raw sequencing data.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality control</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality control</div>
 
   <ol>
     <li>
@@ -2104,7 +2104,7 @@ The input files are used to identify potential sequencing bias, like open chroma
 <p>It is often necessary to trim sequenced read, for example, to get rid of bases that were sequenced with high uncertainty (= low quality bases).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality control</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality control</div>
 
   <ol>
     <li>Run <strong>Trim Galore!</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2135,7 +2135,7 @@ The input files are used to identify potential sequencing bias, like open chroma
 <p>Nowadays, there are many read alignment programs for shotgun sequenced DNA, Bowtie2 being one of them.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapping</div>
+  <div class="box-title hands-on-title" id="hands-on-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mapping</div>
 
   <ol>
     <li><strong>Bowtie2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2177,7 +2177,7 @@ The input files are used to identify potential sequencing bias, like open chroma
 <h2 id="visualization-using-a-genome-browser">Visualization using a Genome Browser</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualization-of-the-reads-in-igv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualization of the reads in IGV</div>
+  <div class="box-title hands-on-title" id="hands-on-visualization-of-the-reads-in-igv"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualization of the reads in IGV</div>
 
   <ol>
     <li>Click on the <code class="language-plaintext highlighter-rouge">display with IGV local</code> to load the reads into the IGV browser</li>
@@ -2212,7 +2212,7 @@ The input files are used to identify potential sequencing bias, like open chroma
 <p>As mentioned above, you can convert the binary BAM file into a simple (but large!) text file, which is called a <a href="https://en.wikipedia.org/wiki/SAM_(file_format)">SAM</a> (Sequence Alignment Map) file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-conversion-into-a-sam-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Conversion into a SAM file</div>
+  <div class="box-title hands-on-title" id="hands-on-conversion-into-a-sam-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Conversion into a SAM file</div>
 
   <ol>
     <li><strong>BAM-to-SAM</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2268,7 +2268,7 @@ That is, because the input samples should not have enriched regions included - r
 To save time, we already did that and we can now work directly on the BAM files of the 8 samples</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-correlation-between-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Correlation between samples</div>
+  <div class="box-title hands-on-title" id="hands-on-correlation-between-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Correlation between samples</div>
 
   <ol>
     <li>Create a new history</li>
@@ -2344,7 +2344,7 @@ To save time, we already did that and we can now work directly on the BAM files 
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-ip-strength-estimation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: IP strength estimation</div>
+  <div class="box-title hands-on-title" id="hands-on-ip-strength-estimation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: IP strength estimation</div>
 
   <ol>
     <li><strong>plotFingerprint</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2378,7 +2378,7 @@ To save time, we already did that and we can now work directly on the BAM files 
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-optional-ip-strength-estimation-other-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: (Optional) IP strength estimation (other samples)</div>
+  <div class="box-title hands-on-title" id="hands-on-optional-ip-strength-estimation-other-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: (Optional) IP strength estimation (other samples)</div>
 
   <ol>
     <li>Run the same analysis on data of the 3 other patients</li>
@@ -2403,7 +2403,7 @@ to extract which parts of the genome have been enriched (more reads mapped) with
 These differences can bias the interpretation of the number of reads mapped to a specific genome region.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-coverage-file-normalization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Coverage file normalization</div>
+  <div class="box-title hands-on-title" id="hands-on-coverage-file-normalization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Coverage file normalization</div>
 
   <ol>
     <li><strong>IdxStats</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2479,7 +2479,7 @@ files are much smaller than BAM or SAM files.</p>
 <p>To extract only the information induced by the immunoprecipitation, we normalize for each patient the coverage file for the sample that underwent immunoprecipitation by the coverage file for the input sample. Here we use the tool bamCompare which compare 2 BAM files while caring for sequencing depth normalization.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-generation-of-input-normalized-coverage-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generation of input-normalized coverage files</div>
+  <div class="box-title hands-on-title" id="hands-on-generation-of-input-normalized-coverage-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generation of input-normalized coverage files</div>
 
   <ol>
     <li><strong>bamCompare</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2524,7 +2524,7 @@ files are much smaller than BAM or SAM files.</p>
 <p>We can also call the enriched regions, or peaks, found in the ChIP-seq samples.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peak-calling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Peak calling</div>
+  <div class="box-title hands-on-title" id="hands-on-peak-calling"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Peak calling</div>
 
   <ol>
     <li><strong>MACS2 callpeak</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2562,7 +2562,7 @@ If your sample has a low duplication rate (<em>e.g.</em> below 10%), you might k
 <h2 id="computematrix">computeMatrix</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualization-of-the-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualization of the coverage</div>
+  <div class="box-title hands-on-title" id="hands-on-visualization-of-the-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualization of the coverage</div>
 
   <ol>
     <li><strong>UCSC Main</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2596,7 +2596,7 @@ If your sample has a low duplication rate (<em>e.g.</em> below 10%), you might k
 <h2 id="plotheatmap">plotHeatmap</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualization-of-the-coverage-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualization of the coverage</div>
+  <div class="box-title hands-on-title" id="hands-on-visualization-of-the-coverage-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualization of the coverage</div>
   <ol>
     <li><strong>plotHeatmap</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
       <ul>
@@ -2643,7 +2643,7 @@ We need to check that our samples do not have more reads from regions of the gen
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-gc-bias-assessment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: GC bias assessment</div>
+  <div class="box-title hands-on-title" id="hands-on-gc-bias-assessment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: GC bias assessment</div>
 
   <ol>
     <li><strong>computeGCbias</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with
@@ -2679,7 +2679,7 @@ We need to check that our samples do not have more reads from regions of the gen
 <h2 id="plotting-heatmap-from-multiple-samples-with-clustering">Plotting heatmap from multiple samples with clustering</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-multiple-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: plotting multiple samples</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-multiple-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: plotting multiple samples</div>
 
   <ol>
     <li>Run <strong>bamCompare</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with  same parameters as above, for all 4 patients:
@@ -2768,9 +2768,18 @@ Inspect the output</li>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/epigenetics/faqs/">FAQ page for the Epigenetics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/epigenetics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2968,7 +2977,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2977,7 +2986,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -3059,7 +3068,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

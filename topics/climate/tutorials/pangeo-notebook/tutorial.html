@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1705,7 +1705,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                      
                     
                         
-                        <!--SNIPPET--><blockquote class="comment">   <div class="box-title comment-title" id="comment-this-is-best-viewed-in-pangeo-jupyter-lab"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: This is best viewed in Pangeo Jupyter Lab</div>   <ol>     <li>       <p>Create a history</p>       <blockquote class="hands_on">         <div class="box-title hands-on-title" id="hands-on-create-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create history</div>         <ol>           <li>Make sure you start from an empty analysis history.</li>           <li><strong>Rename your history</strong> to be meaningful and easy to find. For instance, you can choose <strong>Xarray with Pangeo notebook</strong> as the name of your new history.</li>         </ol>       </blockquote>     </li>     <li>       <p>Upload CAMS PM2.5 data</p>       <p>Data can be retrieved directly from <a href="https://ads.atmosphere.copernicus.eu/">Copernicus Atmosphere Monitoring Service</a> but to make it easier, you can download the tutorial data from <a href="https://zenodo.org/record/5805953/files/CAMS-PM2_5-20211222.netcdf">Zenodo</a>.</p>       <blockquote class="hands_on">         <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>         <ol>           <li>Create a new history for this tutorial</li>           <li>             <p>Import the files from <a href="https://doi.org/10.5281/zenodo.5805953">Zenodo</a> or from the shared data library (<code class="language-plaintext highlighter-rouge">GTN - Material</code> -&gt; <code class="language-plaintext highlighter-rouge">Climate</code> -&gt; <code class="language-plaintext highlighter-rouge">Pangeo Notebook in Galaxy - Introduction to Xarray</code>):</p>             <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/5805953/files/CAMS-PM2_5-20211222.netcdf<br></code></pre></div>            </div>           </li>           <li>Rename the dataset to <strong>CAMS-PM2_5-20211222.netcdf</strong></li>           <li>Check that the datatype is <strong>netcdf</strong></li>         </ol>       </blockquote>     </li>     <li>       <p>Starting Galaxy Pangeo JupyterLab</p>       <blockquote class="hands_on">         <div class="box-title hands-on-title" id="hands-on-launch-pangeo-notebook-jupyterlab-in-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Launch Pangeo notebook JupyterLab in Galaxy</div>         <p>Currently Pangeo notebook in Galaxy is available on <a href="https://usegalaxy.eu">useGalaxy.eu</a> only. Make sure you login to Galaxy and search for Pangeo notebook and not the default JupyterLab in Galaxy to make sure you ahve all the Pangeo Software stack available. The default JupyterLab in Galaxy would not be sufficient for executing all the tasks in this tutorial.</p>         <ol>           <li>Open the <span class="tool" data-tool="interactive_tool_pangeo_notebook" title="Pangeo Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Pangeo Notebook</strong></span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_pangeo_notebook">here to launch it on EU</a></li>           <li><em>Include data into the environment</em>: <code class="language-plaintext highlighter-rouge">CAMS-PM2_5-20211222.netcdf</code></li>           <li>Click on <strong>Run Tool</strong>: the tool will start running and will stay running</li>           <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the Pangeo JupyterLab instance you started.</li>           <li>Click on your Pangeo JupyterLab instance</li>         </ol>       </blockquote>     </li>     <li>       <p>Once the notebook has started, open a Terminal in Jupyter <strong>File → New → Terminal</strong></p>     </li>     <li>       <p>Run the following command:</p>       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://training.galaxyproject.org/training-material/topics/climate/tutorials/pangeo-notebook/climate-pangeo-notebook.ipynb<br></code></pre></div>      </div>     </li>     <li>       <p>Switch to the Notebook that appears in the list of files on the left</p>     </li>   </ol> </blockquote> <!--END_SNIPPET-->
+                        <!--SNIPPET--><blockquote class="comment">   <div class="box-title comment-title" id="comment-this-is-best-viewed-in-pangeo-jupyter-lab"><i class="far fa-comment-dots" aria-hidden="true" ></i> Comment: This is best viewed in Pangeo Jupyter Lab</div>   <ol>     <li>       <p>Create a history</p>       <blockquote class="hands_on">         <div class="box-title hands-on-title" id="hands-on-create-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create history</div>         <ol>           <li>Make sure you start from an empty analysis history.</li>           <li><strong>Rename your history</strong> to be meaningful and easy to find. For instance, you can choose <strong>Xarray with Pangeo notebook</strong> as the name of your new history.</li>         </ol>       </blockquote>     </li>     <li>       <p>Upload CAMS PM2.5 data</p>       <p>Data can be retrieved directly from <a href="https://ads.atmosphere.copernicus.eu/">Copernicus Atmosphere Monitoring Service</a> but to make it easier, you can download the tutorial data from <a href="https://zenodo.org/record/5805953/files/CAMS-PM2_5-20211222.netcdf">Zenodo</a>.</p>       <blockquote class="hands_on">         <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>         <ol>           <li>Create a new history for this tutorial</li>           <li>             <p>Import the files from <a href="https://doi.org/10.5281/zenodo.5805953">Zenodo</a> or from the shared data library (<code class="language-plaintext highlighter-rouge">GTN - Material</code> -&gt; <code class="language-plaintext highlighter-rouge">Climate</code> -&gt; <code class="language-plaintext highlighter-rouge">Pangeo Notebook in Galaxy - Introduction to Xarray</code>):</p>             <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/5805953/files/CAMS-PM2_5-20211222.netcdf<br></code></pre></div>            </div>           </li>           <li>Rename the dataset to <strong>CAMS-PM2_5-20211222.netcdf</strong></li>           <li>Check that the datatype is <strong>netcdf</strong></li>         </ol>       </blockquote>     </li>     <li>       <p>Starting Galaxy Pangeo JupyterLab</p>       <blockquote class="hands_on">         <div class="box-title hands-on-title" id="hands-on-launch-pangeo-notebook-jupyterlab-in-galaxy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Launch Pangeo notebook JupyterLab in Galaxy</div>         <p>Currently Pangeo notebook in Galaxy is available on <a href="https://usegalaxy.eu">useGalaxy.eu</a> only. Make sure you login to Galaxy and search for Pangeo notebook and not the default JupyterLab in Galaxy to make sure you ahve all the Pangeo Software stack available. The default JupyterLab in Galaxy would not be sufficient for executing all the tasks in this tutorial.</p>         <ol>           <li>Open the <span class="tool" data-tool="interactive_tool_pangeo_notebook" title="Pangeo Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Pangeo Notebook</strong></span> by clicking <a href="https://usegalaxy.eu/?tool_id=interactive_tool_pangeo_notebook">here to launch it on EU</a></li>           <li><em>Include data into the environment</em>: <code class="language-plaintext highlighter-rouge">CAMS-PM2_5-20211222.netcdf</code></li>           <li>Click on <strong>Run Tool</strong>: the tool will start running and will stay running</li>           <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the Pangeo JupyterLab instance you started.</li>           <li>Click on your Pangeo JupyterLab instance</li>         </ol>       </blockquote>     </li>     <li>       <p>Once the notebook has started, open a Terminal in Jupyter <strong>File → New → Terminal</strong></p>     </li>     <li>       <p>Run the following command:</p>       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://training.galaxyproject.org/training-material/topics/climate/tutorials/pangeo-notebook/climate-pangeo-notebook.ipynb<br></code></pre></div>      </div>     </li>     <li>       <p>Switch to the Notebook that appears in the list of files on the left</p>     </li>   </ol> </blockquote> <!--END_SNIPPET-->
                     
                 </section>
                 
@@ -1780,7 +1780,7 @@ analysis.</p>
 <p>Below is what you should get if everything goes fine.</p>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-7"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+  <div class="box-title code-out-title" id="code-out-7"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> &lt;xarray.Dataset&gt;
  Dimensions:     (longitude: 700, latitude: 400, level: 1, time: 97)
  Coordinates:
@@ -1837,13 +1837,13 @@ it needs to be in the same directory as your Jupyter Notebook.</p>
     </ol>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-python-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+      <div class="box-title code-in-title" id="code-in-python-7"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">dset</span><span class="p">.</span><span class="n">pm2p5_conc</span><span class="p">)</span>
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-8"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+      <div class="box-title code-out-title" id="code-out-8"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   &lt;xarray.DataArray <span class="s1">'pm2p5_conc'</span> <span class="o">(</span><span class="nb">time</span>: 97, level: 1, latitude: 400, longitude: 700<span class="o">)&gt;</span>
    <span class="o">[</span>27160000 values with <span class="nv">dtype</span><span class="o">=</span>float32]
    Coordinates:
@@ -1911,13 +1911,13 @@ it needs to be in the same directory as your Jupyter Notebook.</p>
     <p>Data starts on December, 22nd 2021 at 00:00 UTC so we need to add 2 days and 12 hours to select the correct time index.</p>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-python-8"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+      <div class="box-title code-in-title" id="code-in-python-8"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="n">dset</span><span class="p">.</span><span class="nf">sel</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">timedelta64</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="sh">'</span><span class="s">D</span><span class="sh">'</span><span class="p">)</span><span class="o">+</span> <span class="n">np</span><span class="p">.</span><span class="nf">timedelta64</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="sh">'</span><span class="s">h</span><span class="sh">'</span><span class="p">))))</span>
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-9"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+      <div class="box-title code-out-title" id="code-out-9"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;xarray.Dataset&gt;
 Dimensions:     <span class="o">(</span>longitude: 700, latitude: 400, level: 1<span class="o">)</span>
 Coordinates:
@@ -2076,7 +2076,7 @@ The reason is that when using slice, you need to specify values using the same o
 decreasing order for CAMS.</p>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-python-9"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+      <div class="box-title code-in-title" id="code-in-python-9"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
 
 <span class="c1"># We're using cartopy to project our data.
@@ -2188,7 +2188,7 @@ You may not see any changes when printing the dataset but if you look carefuly a
 </code></pre></div></div>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-10"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+  <div class="box-title code-out-title" id="code-out-10"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;xarray.Dataset&gt;
 Dimensions:     <span class="o">()</span>
  Data variables:
@@ -2206,13 +2206,13 @@ Dimensions:     <span class="o">()</span>
     <p>We  select the same sub-area: 11. East to 15.0 East and 40. N to 43. N and compute the maximum with <code class="language-plaintext highlighter-rouge">max</code>. The maximum PM2.5 value is <strong>59.13694382</strong> μm.m-3 (that is rounded to <strong>59.14</strong>).</p>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-python-10"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+      <div class="box-title code-in-title" id="code-in-python-10"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dset</span><span class="p">.</span><span class="nf">sel</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="nf">slice</span><span class="p">(</span><span class="mf">43.</span><span class="p">,</span> <span class="mf">40.</span><span class="p">),</span> <span class="n">longitude</span><span class="o">=</span><span class="nf">slice</span><span class="p">(</span><span class="mf">11.</span><span class="p">,</span><span class="mf">15.</span><span class="p">)).</span><span class="nf">max</span><span class="p">()</span>
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-11"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+      <div class="box-title code-out-title" id="code-out-11"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xarray.Dataset
 Dimensions:
 Coordinates: <span class="o">(</span>0<span class="o">)</span>
@@ -2238,7 +2238,7 @@ Attributes: <span class="o">(</span>0<span class="o">)</span>
     <p>We will select a sub-area: 11. East to 15.0 East and 40. N to 43. N and average over the entire selected area and search where the maximum PM2.5 value of 59.13694382 μm.m-3 is found. The maximum PM2.5 value occurs on 2021-12-22 at 20:00 UTC.</p>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-python-11"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+      <div class="box-title code-in-title" id="code-in-python-11"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dset_tmean</span> <span class="o">=</span> <span class="n">dset</span><span class="p">.</span><span class="nf">sel</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="nf">slice</span><span class="p">(</span><span class="mf">43.</span><span class="p">,</span> <span class="mf">40.</span><span class="p">),</span> <span class="n">longitude</span><span class="o">=</span><span class="nf">slice</span><span class="p">(</span><span class="mf">11.</span><span class="p">,</span><span class="mf">15.</span><span class="p">)).</span><span class="nf">max</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="p">(</span><span class="sh">'</span><span class="s">latitude</span><span class="sh">'</span><span class="p">,</span> <span class="sh">'</span><span class="s">longitude</span><span class="sh">'</span><span class="p">))</span>
 <span class="n">dset_tmean_max</span> <span class="o">=</span> <span class="n">dset_tmean</span><span class="p">.</span><span class="nf">where</span><span class="p">(</span><span class="n">dset_tmean</span><span class="p">[</span><span class="sh">'</span><span class="s">pm2p5_conc</span><span class="sh">'</span><span class="p">]</span> <span class="o">==</span> <span class="mf">59.13694382</span><span class="p">,</span> <span class="n">drop</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="n">dset_tmean_max</span><span class="p">)</span>
@@ -2246,7 +2246,7 @@ Attributes: <span class="o">(</span>0<span class="o">)</span>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-12"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+      <div class="box-title code-out-title" id="code-out-12"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
       <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;xarray.Dataset&gt;
 Dimensions:     <span class="o">(</span><span class="nb">time</span>: 1, level: 1<span class="o">)</span>
 Coordinates:
@@ -2275,7 +2275,7 @@ Data variables:
 </code></pre></div></div>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-13"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+  <div class="box-title code-out-title" id="code-out-13"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
   <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;xarray.Dataset&gt;
 Dimensions:     <span class="o">(</span><span class="nb">time</span>: 5, longitude: 700, latitude: 400, level: 1<span class="o">)</span>
 Coordinates:
@@ -2300,7 +2300,7 @@ Data variables:
   <p>Increasing the frequency of your data e.g. artificially creating data may not be scientifically relevant. Please use it carefully! Interpolating is not always scientifically relevant and sometimes you may prefer to choose a different method, like taking the nearest value for instance:</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-python-12"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+    <div class="box-title code-in-title" id="code-in-python-12"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">dset</span><span class="p">.</span><span class="nf">resample</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="sh">'</span><span class="s">30min</span><span class="sh">'</span><span class="p">).</span><span class="nf">nearest</span><span class="p">()</span>
 </code></pre></div>    </div>
   </blockquote>
@@ -2317,7 +2317,7 @@ Data variables:
     <p>PM2.5 over Italy is overall decreasing over the next 4 forecasted days.</p>
 
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-python-13"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Python</div>
+      <div class="box-title code-in-title" id="code-in-python-13"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Python</div>
       <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">[</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
 
 <span class="c1"># We're using cartopy to project our data.
@@ -2407,9 +2407,18 @@ Data variables:
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/climate/faqs/">FAQ page for the Climate topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/climate/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2508,8 +2517,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2564,7 +2573,7 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2573,7 +2582,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2655,7 +2664,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

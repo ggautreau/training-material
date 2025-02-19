@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1664,7 +1664,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The dataset required for this tutorial contains a screen of DAPI stained HeLa nuclei (<a href="https://zenodo.org/record/3360236">more information</a>). We will use a sample image from this dataset for training basic image processing skills in Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1764,7 +1764,7 @@ max	100000	0.5
 <p>First, we will create and test a workflow which extracts mean DAPI intensity, area, and major axis length of cell nuclei from an image.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-feature-extraction-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create feature extraction workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-create-feature-extraction-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create feature extraction workflow</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/imgteam/2d_simple_filter/ip_filter_standard/1.12.0+galaxy1" title="Filter 2-D image tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter 2-D image</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.12.0+galaxy1)</span> with the following parameters to smooth the image:
@@ -1858,7 +1858,7 @@ max	100000	0.5
 <p>Now we want to apply our extracted workflow to a series of images and merge the results. For this purpose, we create a workflow which uses the previously created workflow as a sub-workflow.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-screen-analysis-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create screen analysis workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-create-screen-analysis-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create screen analysis workflow</div>
 
   <ol>
     <li>
@@ -1894,7 +1894,7 @@ max	100000	0.5
 <figure id="figure-2" style="max-width: 90%;"><img src="../../images/hela-screen-analysis/analyze_screen_workflow.png" alt="screen analysis workflow. " width="1560" height="466" loading="lazy" /><a target="_blank" href="../../images/hela-screen-analysis/analyze_screen_workflow.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Full screen analysis workflow.</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-run-screen-analysis-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run screen analysis workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-run-screen-analysis-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run screen analysis workflow</div>
 
   <ol>
     <li>
@@ -1916,7 +1916,7 @@ max	100000	0.5
 <p>Finally, we want to plot the results for better interpretation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-feature-extraction-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot feature extraction results</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-feature-extraction-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot feature extraction results</div>
 
   <ol>
     <li>Click on the <strong>Visualize</strong> <i class="fas fa-chart-column" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> icon of the <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <strong>4: Collapse Collection</strong> results.</li>
@@ -2011,9 +2011,18 @@ max	100000	0.5
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/imaging/faqs/">FAQ page for the Imaging topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/imaging/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2137,8 +2146,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2275,7 +2284,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">2</td>
 			</tr>
 		   
@@ -2284,7 +2293,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2366,7 +2375,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

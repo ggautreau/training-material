@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1399,10 +1399,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <h1 id="what-does-galaxy-look-like">What does Galaxy look like?</h1>
 
-<p>Many different Galaxy servers exist. Some are public, some are private, some focus on a specific topic and others like the usegalaxy.* servers cover a broad range of tools. To reproduce published results it is highly recommended to use the same Galaxy server that was used in the original study. In the case that this was a private server that is not accessible to you, you might want to use one of the main Galaxy servers: <a href="https://usegalaxy.fr">UseGalaxy.fr</a>, <a href="https://usegalaxy.org">UseGalaxy.org</a>, <a href="https://usegalaxy.eu">UseGalaxy.eu</a>, <a href="https://usegalaxy.org.au">UseGalaxy.org.au</a>. To learn more about the different Galaxy servers visit the <a href="/training-material//topics/introduction/tutorials/options-for-using-galaxy/slides.html">slides: options for using Galaxy</a>. The particular Galaxy server that you are using may look slightly different than the one shown in this training. Galaxy instance administrators can choose the exact version of Galaxy they would like to offer and can customize its look to some extent. The basic functionality will be rather similar across instances, so don’t worry! In this training we will use the European Galaxy server on which the original analysis was performed and shared.</p>
+<p>Many different Galaxy servers exist. Some are public, some are private, some focus on a specific topic and others like the usegalaxy.* servers cover a broad range of tools. To reproduce published results it is highly recommended to use the same Galaxy server that was used in the original study. In the case that this was a private server that is not accessible to you, you might want to use one of the main Galaxy servers: <a href="https://usegalaxy.eu">UseGalaxy.eu</a>, <a href="https://usegalaxy.org.au">UseGalaxy.org.au</a>, <a href="https://usegalaxy.fr">UseGalaxy.fr</a>, <a href="https://usegalaxy.org">UseGalaxy.org</a>. To learn more about the different Galaxy servers visit the <a href="/training-material//topics/introduction/tutorials/options-for-using-galaxy/slides.html">slides: options for using Galaxy</a>. The particular Galaxy server that you are using may look slightly different than the one shown in this training. Galaxy instance administrators can choose the exact version of Galaxy they would like to offer and can customize its look to some extent. The basic functionality will be rather similar across instances, so don’t worry! In this training we will use the European Galaxy server on which the original analysis was performed and shared.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-log-in-or-register"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log in or register</div>
+  <div class="box-title hands-on-title" id="hands-on-log-in-or-register"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Log in or register</div>
   <ol>
     <li>Open your favorite browser (Chrome/Chromium, Safari or Firefox, but not Internet Explorer/Edge!)</li>
     <li>Browse to the <a href="https://usegalaxy.eu/">Galaxy Europe instance</a> or to a Galaxy instance of your choosing</li>
@@ -1431,7 +1431,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Each analysis in Galaxy starts by creating a new analysis history and loading data into it. Galaxy supports a huge variety of data types and data sources. Different ways of bringing data into Galaxy are explained <a href="/training-material/topics/galaxy-interface/tutorials/get-data/slides.html">in the interface slides</a>. To reproduce published results, the data needs to be loaded from the public repository where the authors have deposited the data. This is most often done by importing data via a web link.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create history</div>
+  <div class="box-title hands-on-title" id="hands-on-create-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create history</div>
 
   <ol>
     <li>
@@ -1460,7 +1460,7 @@ You can find more detailed information about this dataset on its dedicated <a hr
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1563,7 +1563,7 @@ In WorkflowHub there is an option to directly run a workflow.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-and-run-workflow-available-as-ga-file-or-link"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import and run workflow available as .ga file or link</div>
+  <div class="box-title hands-on-title" id="hands-on-import-and-run-workflow-available-as-ga-file-or-link"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import and run workflow available as .ga file or link</div>
 
   <ol>
     <li>
@@ -1623,7 +1623,7 @@ In WorkflowHub there is an option to directly run a workflow.</p>
 <p>Each history item represents one file or dataset, except when collections are used. History items are numbered, duplicates are not possible because any type of dataset manipulation will automatically generate a separate dataset in the history. Some tools produce several output files and therefore the number of history items can be larger than the number of steps in a workflow. Dataset names in the analysis history are not relevant for the tool run, therefore they can be adjusted in order to make the history easier to understand. The default name of a history item is composed of the tool name that was run and the history item number(s) of the input file(s), e.g. ‘Unique on data 5’</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect history</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect history</div>
 
   <ol>
     <li>
@@ -1688,7 +1688,7 @@ In WorkflowHub there is an option to directly run a workflow.</p>
 <p>Maybe you are interested in changing some of the original tool parameters and see how this changes the result. The parameter changes can be either done inside the workflow editor, which makes it easy to change many parameters at once (training on <a href="/training-material/topics/galaxy-interface/tutorials/workflow-parameters/tutorial.html">Using Workflow Parameters</a>) or directly in the history. To repeat a single analysis step with new parameters this can be done directly in the Galaxy history with the <code class="language-plaintext highlighter-rouge">re-run</code> option.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-manipulate-the-analysis-steps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Manipulate the analysis steps</div>
+  <div class="box-title hands-on-title" id="hands-on-manipulate-the-analysis-steps"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Manipulate the analysis steps</div>
 
   <ol>
     <li>
@@ -1712,7 +1712,7 @@ In WorkflowHub there is an option to directly run a workflow.</p>
 <p>Often not only workflows and raw data are published, but also the full Galaxy histories. These histories can either be inspected via their provided link, or imported in order to enable manipulating them in your own Galaxy account.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-importing-a-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Importing a history</div>
+  <div class="box-title hands-on-title" id="hands-on-importing-a-history"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Importing a history</div>
 
   <ol>
     <li>
@@ -1828,9 +1828,18 @@ the scatter plot that color is linked to the price of the diamond. So color also
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/introduction/faqs/">FAQ page for the Introduction to Galaxy Analyses topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/introduction/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2006,17 +2015,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">1</td>
 			</tr>
 		   
@@ -2129,7 +2138,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

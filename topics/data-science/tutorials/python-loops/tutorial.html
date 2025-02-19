@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1608,7 +1608,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <blockquote class="code-2col">
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-manually-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Manually</div>
+    <div class="box-title code-in-title" id="code-in-manually-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Manually</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(2)
 print(3)
 print(5)
@@ -1618,7 +1618,7 @@ print(11)
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-with-loops-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: With Loops</div>
+    <div class="box-title code-out-title" id="code-out-with-loops-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: With Loops</div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">]:</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
 </code></pre></div>    </div>
@@ -1644,7 +1644,7 @@ print(11)
 
 <blockquote class="code-2col">
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-the-loop-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: The loop</div>
+    <div class="box-title code-in-title" id="code-in-the-loop-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: The loop</div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">]:</span>
     <span class="n">doubled</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span>
     <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s"> doubled is </span><span class="si">{</span><span class="n">doubled</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
@@ -1652,7 +1652,7 @@ print(11)
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-what-s-really-happening-internally-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: What's really happening internally</div>
+    <div class="box-title code-out-title" id="code-out-what-s-really-happening-internally-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: What's really happening internally</div>
     <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># First iteration, number = 2
 </span><span class="n">doubled</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mi">2</span>
 <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="si">{</span><span class="n">number</span><span class="si">}</span><span class="s"> doubled is </span><span class="si">{</span><span class="n">doubled</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
@@ -2276,9 +2276,16 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2371,8 +2378,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
 
@@ -2419,7 +2426,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2501,7 +2508,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

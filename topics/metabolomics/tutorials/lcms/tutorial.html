@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1510,7 +1510,7 @@ pre-processing in parallel, since the initial actions in the extraction process 
 having to launch jobs manually for each sample. You can start using the dataset collection option from the very beginning of your analysis, when uploading your data into Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload-the-mzxml-with-b-get-data-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload the mzXML with <b>Get data</b></div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload-the-mzxml-with-b-get-data-b"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload the mzXML with <b>Get data</b></div>
 
   <ol>
     <li>
@@ -1568,7 +1568,7 @@ https://zenodo.org/record/3244991/files/QC1_014.mzML
 <p><strong>MSnbase readMSData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> takes as input your raw files and prepares <code class="language-plaintext highlighter-rouge">RData</code> files for the first XCMS step.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-msnbase-readmsdata"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: MSnbase readMSData</div>
+  <div class="box-title hands-on-title" id="hands-on-msnbase-readmsdata"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: MSnbase readMSData</div>
 
   <ol>
     <li><strong>MSnbase readMSData</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1645,7 +1645,7 @@ Note that you can either:</p>
   </ol>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-xcms-get-a-samplemetadata-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms get a sampleMetadata file</div>
+    <div class="box-title hands-on-title" id="hands-on-xcms-get-a-samplemetadata-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms get a sampleMetadata file</div>
 
     <ol>
       <li><strong>xcms get a sampleMetadata file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1936,7 +1936,7 @@ be uploaded into Galaxy.</p>
 <h3 id="upload-the-samplemetada-file-with-get-data">Upload the sampleMetada file with ‘Get data’</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-the-samplemetada"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload the sampleMetada</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-the-samplemetada"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload the sampleMetada</div>
 
   <ol>
     <li>Import the <code class="language-plaintext highlighter-rouge">sampleMetadata_completed.tsv</code> file from Zenodo or from a shared data library (ask your instructor)
@@ -2019,7 +2019,7 @@ The tool automatically takes the second column as colour groups when a file is p
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-xcms-plot-chromatogram"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms plot chromatogram</div>
+  <div class="box-title hands-on-title" id="hands-on-xcms-plot-chromatogram"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms plot chromatogram</div>
 
   <ol>
     <li><strong>xcms plot chromatogram</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2079,7 +2079,7 @@ pre-processing.</p>
 <p>Let’s try performing the peakpicking step with the <strong>xcms findChromPeaks (xcmsSet)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-xcms-findchrompeaks-xcmsset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms findChromPeaks (xcmsSet)</div>
+  <div class="box-title hands-on-title" id="hands-on-xcms-findchrompeaks-xcmsset"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms findChromPeaks (xcmsSet)</div>
 
   <ol>
     <li><strong>xcms findChromPeaks (xcmsSet)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2133,7 +2133,7 @@ at this step that you need to provide the needed information if you want distinc
 the Merger tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-xcms-findchrompeaks-merger"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms findChromPeaks Merger</div>
+  <div class="box-title hands-on-title" id="hands-on-xcms-findchrompeaks-merger"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms findChromPeaks Merger</div>
 
   <ol>
     <li><strong>xcms findChromPeaks Merger</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2170,7 +2170,7 @@ on the resulting matrix. It must be chosen according to the quality of the chrom
 than a given number of samples. Either a percentage of the total number of samples or an absolute value of samples can be given. This is defined by the user.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-xcms-groupchrompeaks-group"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms groupChromPeaks (group)</div>
+  <div class="box-title hands-on-title" id="hands-on-xcms-groupchrompeaks-group"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms groupChromPeaks (group)</div>
 
   <ol>
     <li><strong>xcms groupChromPeaks (group)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2244,7 +2244,7 @@ peaks’ parameter to put them aside.</p>
 <p>The algorithm uses statistical smoothing methods. You can choose between linear or loess regression.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-xcms-adjustrtime-retcor"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms adjustRtime (retcor)</div>
+  <div class="box-title hands-on-title" id="hands-on-xcms-adjustrtime-retcor"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms adjustRtime (retcor)</div>
 
   <ol>
     <li><strong>xcms adjustRtime (retcor)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2282,7 +2282,7 @@ It also allows you to check whether the well behaved peaks were distributed homo
 correction by comparing the chromatogram you obtained previously to a new one generated after correction.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-xcms-plot-chromatogram-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms plot chromatogram</div>
+    <div class="box-title hands-on-title" id="hands-on-xcms-plot-chromatogram-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms plot chromatogram</div>
 
     <ol>
       <li><strong>xcms plot chromatogram</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2311,7 +2311,7 @@ since retention times are supposed to be less variable inside a same peak group 
 lower a little the bandwidth parameter.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-second-xcms-groupchrompeaks-group"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: second 'xcms groupChromPeaks (group)'</div>
+  <div class="box-title hands-on-title" id="hands-on-second-xcms-groupchrompeaks-group"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: second 'xcms groupChromPeaks (group)'</div>
 
   <ol>
     <li><strong>xcms groupChromPeaks (group)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2393,7 +2393,7 @@ an overview of it using the <strong>Intensity Check</strong> <i class="fas fa-wr
 chromatographic peak for this ion was identified.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-xcms-fillchrompeaks-fillpeaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: xcms fillChromPeaks (fillPeaks)</div>
+  <div class="box-title hands-on-title" id="hands-on-xcms-fillchrompeaks-fillpeaks"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: xcms fillChromPeaks (fillPeaks)</div>
 
   <ol>
     <li><strong>xcms fillChromPeaks (fillPeaks)</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2456,7 +2456,7 @@ for a first attempt to run this function. Nevertheless, a few parameters have to
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-camera-annotate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: CAMERA.annotate</div>
+  <div class="box-title hands-on-title" id="hands-on-camera-annotate"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: CAMERA.annotate</div>
 
   <ol>
     <li><strong>CAMERA.annotate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2526,7 +2526,7 @@ long and thus may reduce the names’ readability. Hence, we highly recommend yo
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-copying-the-3-tables-into-a-new-history-and-renaming-them"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Copying the 3 tables into a new history and renaming them</div>
+  <div class="box-title hands-on-title" id="hands-on-copying-the-3-tables-into-a-new-history-and-renaming-them"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Copying the 3 tables into a new history and renaming them</div>
 
   <ol>
     <li>
@@ -2580,7 +2580,7 @@ analysis. One of the most commonly used method is the <strong>Principal Componen
 over useful information using the <strong>Quality Metrics</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-using-b-quality-metrics-b-to-get-an-overview-of-your-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Using <b>Quality Metrics</b> to get an overview of your data</div>
+  <div class="box-title hands-on-title" id="hands-on-using-b-quality-metrics-b-to-get-an-overview-of-your-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Using <b>Quality Metrics</b> to get an overview of your data</div>
 
   <ol>
     <li><strong>Quality Metrics</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2657,7 +2657,7 @@ rid of these unwanted variabilities.</p>
 to get rid of it.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-normalisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data normalisation</div>
+  <div class="box-title hands-on-title" id="hands-on-data-normalisation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data normalisation</div>
 
   <ol>
     <li><strong>Batch_correction</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2712,7 +2712,7 @@ whatever the pool CV value, it will be lower than the corresponding sample CV va
 by biological variability. Thus, we can filter the ions that do not respect this particular condition.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-cv-calculation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: CV calculation</div>
+  <div class="box-title hands-on-title" id="hands-on-cv-calculation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: CV calculation</div>
 
   <ol>
     <li><strong>Quality Metrics</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2737,7 +2737,7 @@ What we are going to use this time is the tabular output, but while you are at i
 your data using the <strong>Generic_Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-data-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data filtering</div>
 
   <ol>
     <li><strong>Generic_Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2845,7 +2845,7 @@ statistical analysis performed on LC-MS data, you can take a few minutes to watc
 and the ions that we have in our dataset. For this calculation we can use the <strong>Univariate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-statistical-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Statistical analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-statistical-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Statistical analysis</div>
 
   <ol>
     <li><strong>Univariate</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2906,7 +2906,7 @@ absolute value above 0.9.</li>
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-variable-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Variable filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-variable-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Variable filtering</div>
 
   <ol>
     <li><strong>Generic_Filter</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -2981,7 +2981,7 @@ bank HMDB (The Human Metabolome Database). Let’s try requesting directly into 
 <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-annotating-the-data-using-the-hmdb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Annotating the data using the HMDB</div>
+  <div class="box-title hands-on-title" id="hands-on-annotating-the-data-using-the-hmdb"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Annotating the data using the HMDB</div>
 
   <ol>
     <li><strong>HMDB MS search</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -3068,9 +3068,18 @@ and create, run and share!</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/metabolomics/faqs/">FAQ page for the Metabolomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/metabolomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3299,7 +3308,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">7</td>
 			</tr>
 		   
@@ -3440,7 +3449,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

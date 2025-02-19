@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1360,11 +1360,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Workflows and data for this tutorial are hosted on <a href="https://github.com/usegalaxy-eu/workflow-automation-tutorial">GitHub</a>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-download-workflow-and-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Download workflow and data</div>
+  <div class="box-title hands-on-title" id="hands-on-download-workflow-and-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Download workflow and data</div>
   <p>Download the workflows and data for this tutorial using <code class="language-plaintext highlighter-rouge">git clone</code>.</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-git-clone"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: git clone</div>
+    <div class="box-title code-in-title" id="code-in-git-clone"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: git clone</div>
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/usegalaxy-eu/workflow-automation-tutorial.git
 </code></pre></div>    </div>
   </blockquote>
@@ -1372,14 +1372,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>Next, step into the cloned folder and take a look around.</p>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in"><i class="far fa-keyboard" aria-hidden="true" ></i> Input</div>
+    <div class="box-title code-in-title" id="code-in"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In</div>
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>workflow-automation-tutorial
 <span class="nb">ls</span>
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-folder-contents"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Folder contents</div>
+    <div class="box-title code-out-title" id="code-out-folder-contents"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Folder contents</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>example  LICENSE  pangolin  README.md
 </code></pre></div>    </div>
   </blockquote>
@@ -1406,18 +1406,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>For this section, we will use a very simple workflow consisting of two text manipulation tools chained together.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-step-into-and-explore-the-example-folder"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Step into and explore the example folder</div>
+  <div class="box-title hands-on-title" id="hands-on-step-into-and-explore-the-example-folder"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Step into and explore the example folder</div>
 
   <blockquote class="code-2col">
     <blockquote class="code-in">
-      <div class="box-title code-in-title" id="code-in-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input</div>
+      <div class="box-title code-in-title" id="code-in-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In</div>
       <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>example
 <span class="nb">ls</span>
 </code></pre></div>      </div>
     </blockquote>
 
     <blockquote class="code-out">
-      <div class="box-title code-out-title" id="code-out-folder-contents-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Folder contents</div>
+      <div class="box-title code-out-title" id="code-out-folder-contents-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Folder contents</div>
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tutorial.ga
 </code></pre></div>      </div>
     </blockquote>
@@ -1428,14 +1428,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The <code class="language-plaintext highlighter-rouge">tutorial.ga</code> file defines the workflow in JSON format; if we are confident we have a functional workflow, we don’t need to worry about its contents or modify it. However, we need a second file, the so-called ‘job file’, which specifies the particular dataset and parameter inputs which should be used to execute the workflow. We can create a template for this file using the <code class="language-plaintext highlighter-rouge">planemo workflow_job_init</code> subcommand.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-the-job-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating the job file</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-the-job-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating the job file</div>
 
   <ol>
     <li>
       <p>Run the <code class="language-plaintext highlighter-rouge">planemo workflow_job_init</code> subcommand.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-workflow-job-init"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: workflow_job_init</div>
+        <div class="box-title code-in-title" id="code-in-workflow-job-init"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: workflow_job_init</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo workflow_job_init tutorial.ga <span class="nt">-o</span> tutorial-init-job.yml
 <span class="c"># Now let's view the contents</span>
 <span class="nb">cat </span>tutorial-init-job.yml
@@ -1444,7 +1444,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-file-contents"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: File contents</div>
+        <div class="box-title code-out-title" id="code-out-file-contents"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: File contents</div>
         <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Dataset 1</span><span class="pi">:</span>
   <span class="na">class</span><span class="pi">:</span> <span class="s">File</span>
   <span class="na">path</span><span class="pi">:</span> <span class="s">todo_test_data_path.ext</span>
@@ -1461,7 +1461,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Create two files which can be used as inputs:</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-creating-the-input-files"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Creating the input files</div>
+        <div class="box-title code-in-title" id="code-in-creating-the-input-files"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Creating the input files</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">printf</span> <span class="s2">"hello</span><span class="se">\n</span><span class="s2">world"</span> <span class="o">&gt;</span> dataset1.txt
 <span class="nb">printf</span> <span class="s2">"hello</span><span class="se">\n</span><span class="s2">universe!"</span> <span class="o">&gt;</span> dataset2.txt
 <span class="nb">ls</span>
@@ -1470,7 +1470,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output</div>
+        <div class="box-title code-out-title" id="code-out"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dataset1.txt  dataset2.txt  tutorial.ga  tutorial-init-job.yml
 </code></pre></div>        </div>
       </blockquote>
@@ -1501,14 +1501,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p><!--END_SNIPPET--></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-our-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running our workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-running-our-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running our workflow</div>
 
   <ol>
     <li>
       <p>Run the <code class="language-plaintext highlighter-rouge">planemo run</code> subcommand.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-planemo-run"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: planemo run</div>
+        <div class="box-title code-in-title" id="code-in-planemo-run"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: planemo run</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo run tutorial.ga tutorial-init-job.yml <span class="nt">--galaxy_url</span> &lt;SERVER_URL&gt; <span class="nt">--galaxy_user_key</span> &lt;YOUR_API_KEY&gt; <span class="nt">--history_name</span> <span class="s2">"Test Planemo WF"</span> <span class="nt">--tags</span> <span class="s2">"planemo-tutorial"</span>
 </code></pre></div>        </div>
       </blockquote>
@@ -1519,7 +1519,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     <li>
       <p>Run the <code class="language-plaintext highlighter-rouge">planemo run</code> subcommand with the <code class="language-plaintext highlighter-rouge">--no_wait</code> flag.</p>
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-planemo-run-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: planemo run</div>
+        <div class="box-title code-in-title" id="code-in-planemo-run-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: planemo run</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo run tutorial.ga tutorial-init-job.yml <span class="nt">--galaxy_url</span> &lt;SERVER_URL&gt; <span class="nt">--galaxy_user_key</span> &lt;YOUR_API_KEY&gt; <span class="nt">--history_name</span> <span class="s2">"Test Planemo WF with no_wait"</span> <span class="nt">--tags</span> <span class="s2">"planemo-tutorial"</span> <span class="nt">--no_wait</span>
 </code></pre></div>        </div>
         <p>This time you should see that the <code class="language-plaintext highlighter-rouge">planemo run</code> command exits as soon as the two datasets have been uploaded and the workflow has been scheduled.</p>
@@ -1535,7 +1535,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Every object associated with Galaxy, including workflows, datasets and dataset collections, have hexadecimal IDs associated with them, which look something like <code class="language-plaintext highlighter-rouge">6b15dfc0393f172c</code>. Once the datasets and workflows we need have been uploaded to Galaxy once, we can use these IDs in our subsequent workflow invocations.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-running-our-workflow-using-dataset-and-workflow-ids"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Running our workflow using dataset and workflow IDs</div>
+  <div class="box-title hands-on-title" id="hands-on-running-our-workflow-using-dataset-and-workflow-ids"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Running our workflow using dataset and workflow IDs</div>
 
   <ol>
     <li>Navigate to one of the histories to get dataset IDs for the input datasets. For each one:
@@ -1569,7 +1569,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <p>Run the <code class="language-plaintext highlighter-rouge">planemo run</code> subcommand using the new workflow ID.</p>
 
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-planemo-run-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: planemo run</div>
+        <div class="box-title code-in-title" id="code-in-planemo-run-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: planemo run</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo run &lt;WORKFLOW ID&gt; tutorial-init-job.yml <span class="nt">--galaxy_url</span> &lt;SERVER_URL&gt; <span class="nt">--galaxy_user_key</span> &lt;YOUR_API_KEY&gt; <span class="nt">--history_name</span> <span class="s2">"Test Planemo WF with Planemo"</span> <span class="nt">--tags</span> <span class="s2">"planemo-tutorial"</span> <span class="nt">--no_wait</span>
 </code></pre></div>        </div>
       </blockquote>
@@ -1582,18 +1582,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Planemo provides a useful profile feature which can help simplify long commands. The idea is that flags which need to be used multiple times in different invocations can be combined together and run as a single profile. Let’s see how this works below.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-creating-and-using-planemo-profiles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Creating and using Planemo profiles</div>
+  <div class="box-title hands-on-title" id="hands-on-creating-and-using-planemo-profiles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Creating and using Planemo profiles</div>
 
   <ol>
     <li>Create a Planemo profile with the following command:
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-planemo-run-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: planemo run</div>
+        <div class="box-title code-in-title" id="code-in-planemo-run-3"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: planemo run</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo profile_create planemo-tutorial <span class="nt">--galaxy_url</span> &lt;SERVER_URL&gt; <span class="nt">--galaxy_user_key</span> &lt;YOUR_API_KEY&gt;
 </code></pre></div>        </div>
       </blockquote>
 
       <blockquote class="code-out">
-        <div class="box-title code-out-title" id="code-out-terminal"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Terminal</div>
+        <div class="box-title code-out-title" id="code-out-terminal"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Terminal</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Profile <span class="o">[</span>planemo-tutorial] created.
 </code></pre></div>        </div>
         <p>You can view and delete existing profiles using the <code class="language-plaintext highlighter-rouge">profile_list</code> and <code class="language-plaintext highlighter-rouge">profile_delete</code> subcommands.</p>
@@ -1601,7 +1601,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     </li>
     <li>Now we can run our workflow yet again using the profile we have created:
       <blockquote class="code-in">
-        <div class="box-title code-in-title" id="code-in-planemo-run-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: planemo run</div>
+        <div class="box-title code-in-title" id="code-in-planemo-run-4"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: planemo run</div>
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo run &lt;WORKFLOW ID&gt; tutorial-init-job.yml <span class="nt">--profile</span> planemo-tutorial <span class="nt">--history_name</span> <span class="s2">"Test Planemo WF with profile"</span> <span class="nt">--tags</span> <span class="s2">"planemo-tutorial"</span>
 </code></pre></div>        </div>
         <p>This invokes the workflow with all the parameters specified in the profile <code class="language-plaintext highlighter-rouge">planemo-tutorial</code>.</p>
@@ -1645,17 +1645,17 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>As a very first step, however, let’s look at how the material for this part is arranged.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-step-into-and-explore-the-pangolin-folder"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Step into and explore the pangolin folder</div>
+  <div class="box-title hands-on-title" id="hands-on-step-into-and-explore-the-pangolin-folder"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Step into and explore the pangolin folder</div>
 
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input</div>
+    <div class="box-title code-in-title" id="code-in-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In</div>
     <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ../pangolin
 <span class="nb">ls</span>
 </code></pre></div>    </div>
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-folder-contents-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Folder contents</div>
+    <div class="box-title code-out-title" id="code-out-folder-contents-2"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Folder contents</div>
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>data  solutions  vcf2lineage.ga
 </code></pre></div>    </div>
   </blockquote>
@@ -1667,7 +1667,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Now, as a start, let’s get the workflow running on the first batch of files in the <code class="language-plaintext highlighter-rouge">data/batch1/</code> subfolder.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-an-initial-workflow-run"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: An initial workflow run</div>
+  <div class="box-title hands-on-title" id="hands-on-an-initial-workflow-run"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: An initial workflow run</div>
 
   <ol>
     <li>Create a template job file for the <code class="language-plaintext highlighter-rouge">vcf2lineage.ga</code> workflow.
@@ -1675,7 +1675,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <div class="box-title details-title" id="details-solution"><button class="gtn-boxify-button details" type="button" aria-controls="details-solution" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> <span>Details: Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
         <p>We need to run <code class="language-plaintext highlighter-rouge">workflow_job_init</code> on the <code class="language-plaintext highlighter-rouge">vcf2lineage.ga</code> workflow.</p>
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-workflow-job-init-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: workflow_job_init</div>
+          <div class="box-title code-in-title" id="code-in-workflow-job-init-1"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: workflow_job_init</div>
           <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo workflow_job_init vcf2lineage.ga <span class="nt">-o</span> vcf2lineage-job.yml
 <span class="c"># Now let's view the contents</span>
 <span class="nb">cat </span>vcf2lineage-job.yml
@@ -1683,7 +1683,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </blockquote>
 
         <blockquote class="code-out">
-          <div class="box-title code-out-title" id="code-out-file-contents-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: File contents</div>
+          <div class="box-title code-out-title" id="code-out-file-contents-1"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: File contents</div>
           <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Reference genome</span><span class="pi">:</span>
   <span class="na">class</span><span class="pi">:</span> <span class="s">File</span>
   <span class="na">path</span><span class="pi">:</span> <span class="s">todo_test_data_path.ext</span>
@@ -1769,7 +1769,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       <blockquote class="details">
         <div class="box-title details-title" id="details-solution-2"><button class="gtn-boxify-button details" type="button" aria-controls="details-solution-2" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> <span>Details: Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-workflow-job-init-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: workflow_job_init</div>
+          <div class="box-title code-in-title" id="code-in-workflow-job-init-2"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: workflow_job_init</div>
           <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>planemo run vcf2lineage.ga vcf2lineage-job.yml <span class="nt">--profile</span> planemo-tutorial <span class="nt">--history_name</span> <span class="s2">"vcf2lineage test"</span>
 </code></pre></div>          </div>
         </blockquote>
@@ -1784,7 +1784,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The next step is to automate this process so we can run the workflow on each of the 10 <code class="language-plaintext highlighter-rouge">batch*/</code> directories in the <code class="language-plaintext highlighter-rouge">data/</code> folder. We can imagine that these are newly produced data released at regular intervals, which need to be analysed.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-automating-vcf2lineage-execution"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Automating vcf2lineage execution</div>
+  <div class="box-title hands-on-title" id="hands-on-automating-vcf2lineage-execution"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Automating vcf2lineage execution</div>
 
   <ol>
     <li>
@@ -1797,7 +1797,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <div class="box-title details-title" id="details-solution-3"><button class="gtn-boxify-button details" type="button" aria-controls="details-solution-3" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> <span>Details: Solution</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
         <p>We need to run <code class="language-plaintext highlighter-rouge">workflow_job_init</code> on the <code class="language-plaintext highlighter-rouge">vcf2lineage.ga</code> workflow.</p>
         <blockquote class="code-in">
-          <div class="box-title code-in-title" id="code-in-original-output-of-workflow-job-init"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Original output of workflow_job_init</div>
+          <div class="box-title code-in-title" id="code-in-original-output-of-workflow-job-init"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Original output of workflow_job_init</div>
           <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Reference genome</span><span class="pi">:</span>
   <span class="na">class</span><span class="pi">:</span> <span class="s">File</span>
   <span class="na">path</span><span class="pi">:</span> <span class="s">todo_test_data_path.ext</span>
@@ -1813,7 +1813,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </blockquote>
 
         <blockquote class="code-out">
-          <div class="box-title code-out-title" id="code-out-prepared-vcf2lineage-job-template-yml-file-contents"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Prepared `vcf2lineage-job-template.yml` file contents</div>
+          <div class="box-title code-out-title" id="code-out-prepared-vcf2lineage-job-template-yml-file-contents"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Prepared `vcf2lineage-job-template.yml` file contents</div>
           <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Reference genome</span><span class="pi">:</span>
   <span class="na">class</span><span class="pi">:</span> <span class="s">File</span>
   <span class="na">galaxy_id</span><span class="pi">:</span> <span class="s1">'</span><span class="s">1234567890abcdef'</span> <span class="c1"># replace with the ID you got from your own server</span>
@@ -1920,9 +1920,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/galaxy-interface/faqs/">FAQ page for the Using Galaxy and Managing your Data topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/galaxy-interface/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2075,7 +2084,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2177,7 +2186,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

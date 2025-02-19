@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1575,7 +1575,7 @@ We can use Jekyll to run a server to check if the tutorial is correctly added an
 <p>We also need to make sure that a couple of other utilities and build requirements are present: <strong>git</strong>, <strong>curl</strong> &amp; <strong>make</strong>. The easiest way to install these is with your package manager of choice - i.e. yum, apt, brew etc.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-install-the-requirements"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Install the requirements</div>
+  <div class="box-title hands-on-title" id="hands-on-install-the-requirements"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Install the requirements</div>
 
   <ol>
     <li>Open a Terminal</li>
@@ -1614,7 +1614,7 @@ We can use Jekyll to run a server to check if the tutorial is correctly added an
 <p>Once Jekyll and its modules are installed in our conda environment, we can check the generation of the website locally:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-checking-the-website-generation-locally"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Checking the website generation locally</div>
+  <div class="box-title hands-on-title" id="hands-on-checking-the-website-generation-locally"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Checking the website generation locally</div>
 
   <ol>
     <li>Run a local Jekyll server with <code class="language-plaintext highlighter-rouge">make serve-quick</code></li>
@@ -1672,7 +1672,7 @@ We can use Jekyll to run a server to check if the tutorial is correctly added an
 <p>Once you are done, you can stop the server and clean your repository.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-stopping-the-server"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Stopping the server</div>
+  <div class="box-title hands-on-title" id="hands-on-stopping-the-server"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Stopping the server</div>
 
   <ol>
     <li>Stop the server with <kbd>CTRL</kbd>-<kbd>C</kbd></li>
@@ -1722,9 +1722,18 @@ We can use Jekyll to run a server to check if the tutorial is correctly added an
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/contributing/faqs/">FAQ page for the Contributing to the Galaxy Training Material topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/contributing/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2007,22 +2016,22 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.25">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.25">1</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.25">1</td>
 			</tr>
 		   
@@ -2179,7 +2188,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

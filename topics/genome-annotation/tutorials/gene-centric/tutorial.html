@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1458,7 +1458,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <blockquote class="code-2col">
   <blockquote class="code-in">
-    <div class="box-title code-in-title" id="code-in-what-i-have"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: What I have</div>
+    <div class="box-title code-in-title" id="code-in-what-i-have"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: What I have</div>
     <ul>
       <li>I know the gene’s name</li>
       <li>I know which species I’m interested in</li>
@@ -1467,7 +1467,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   </blockquote>
 
   <blockquote class="code-out">
-    <div class="box-title code-out-title" id="code-out-what-i-want"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: What I want</div>
+    <div class="box-title code-out-title" id="code-out-what-i-want"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: What I want</div>
     <ul>
       <li>I work with a gene <em>X</em></li>
       <li>I would like to compare the structure of gene <em>X</em> across <em>N</em> genomes</li>
@@ -1546,7 +1546,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>You can use this history to understand the input datasets as well as outputs of the entire analysis. The key items in the history are labelled with <kbd>tags</kbd>:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-dataset-in-the-example-history"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: dataset in the example history</div>
+  <div class="box-title code-in-title" id="code-in-dataset-in-the-example-history"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: dataset in the example history</div>
   <ul>
     <li><kbd>EXONS</kbd> - amino acid translation of exons of the gene of interest (<em>XBP-1</em>)</li>
     <li><kbd>ORF_BED</kbd> - coordinates of predicted ORFs in the genomes of interest</li>
@@ -1555,7 +1555,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-in-the-sample-history"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: in the sample history</div>
+  <div class="box-title code-out-title" id="code-out-in-the-sample-history"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: in the sample history</div>
   <ul>
     <li><kbd>PlottingData</kbd> - summary necessary for plotting comparative genome graphs</li>
     <li><kbd>Trees</kbd> - phylogenetic trees for each exon</li>
@@ -1613,7 +1613,7 @@ ASGGLPQARKRQRLTHLSPEEKALR
 <h3 id="uploading-sample-data">Uploading sample data</h3>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-sample-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Sample Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-sample-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Sample Data upload</div>
 
   <ul>
     <li>Create a new history for this tutorial</li>
@@ -1649,7 +1649,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>Galaxy provides a direct connection to <a href="https://vgp.github.io/genomeark/">GenomeArk</a> from its “Upload Data” tool. To access GenomeArk data you need to:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-vgp-data-from-genomeark"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Upload VGP data from GenomeArk</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-vgp-data-from-genomeark"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Upload VGP data from GenomeArk</div>
 
   <ul>
     <li>Create a new history for this tutorial</li>
@@ -1680,7 +1680,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>After uploading data from GenomeArk you will end up with a number of FASTA datasets in your history. To proceed with the analysis you will need to combine these into a single dataset collection:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-combine-genome-assemblies-into-a-dataset-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Combine genome assemblies into a dataset collection</div>
+  <div class="box-title hands-on-title" id="hands-on-combine-genome-assemblies-into-a-dataset-collection"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Combine genome assemblies into a dataset collection</div>
 
   <p>To create a collection from genome assemblies you just uploaded into GenomeArk follow the steps in the video below. Obviously, you only want to click check-boxes next to FASTA files (assemblies) you want to include and leave everything else out.</p>
 
@@ -1697,7 +1697,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>Now we can go ahead and find all ORFs in all genome assemblies we have bundled into a collection. For this we will use tool called <a href="https://github.com/urmi-21/orfipy">ORFiPy</a>:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-find-orfs-witrh-orfipy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Find ORFs witrh ORFiPy</div>
+  <div class="box-title hands-on-title" id="hands-on-find-orfs-witrh-orfipy"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Find ORFs witrh ORFiPy</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/orfipy/orfipy/0.0.4+galaxy0" title="ORFiPy tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>ORFiPy</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -1719,7 +1719,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>Because we will be using the <a href="https://github.com/bbuchfink/diamond">Diamond</a> tool to find matches between our gene of interest and ORF translations we need to convert FASTA files into Diamond database using <strong>Diamond makedb</strong> tool:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-diamond-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create Diamond database</div>
+  <div class="box-title hands-on-title" id="hands-on-create-diamond-database"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create Diamond database</div>
 
   <p>Run <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/diamond/bg_diamond_makedb/2.0.15+galaxy0" title="Diamond makedb tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Diamond makedb</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.15+galaxy0)</span> on the collection containing amino acid translations of ORFs generated using <strong>ORFiPy</strong>:</p>
   <ul>
@@ -1745,7 +1745,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>The workflow takes three inputs:</p>
 
 <blockquote class="code-in">
-  <div class="box-title code-in-title" id="code-in-workflow-inputs"><i class="far fa-keyboard" aria-hidden="true" ></i> Input: Workflow inputs</div>
+  <div class="box-title code-in-title" id="code-in-workflow-inputs"><i class="far fa-keyboard" aria-hidden="true" ></i> Code In: Workflow inputs</div>
 
   <ol>
     <li><kbd>EXONS</kbd> - Amino acid translation of exons from the gene of interest (<a href="#step-2-get-amino-acid-translations-for-all-exons-of-my-gene-of-interest">Step 2</a> of this tutorial)</li>
@@ -1758,7 +1758,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>It produces two primary outputs:</p>
 
 <blockquote class="code-out">
-  <div class="box-title code-out-title" id="code-out-results"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Output: Results</div>
+  <div class="box-title code-out-title" id="code-out-results"><i class="fas fa-laptop-code" aria-hidden="true" ></i> Code Out: Results</div>
 
   <ol>
     <li><kbd>Trees</kbd> - Phylogenetic trees for each input exon as <a href="https://en.wikipedia.org/wiki/Newick_format">Newick</a> file</li>
@@ -1782,7 +1782,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <p>After running the workflow phylogenetic trees will be saved into a collection named <code class="language-plaintext highlighter-rouge">Join neighbors on ...</code>. This collection will also be labelled with tag <kbd>Trees</kbd>. To visualize the trees:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-the-trees"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize the trees</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-the-trees"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize the trees</div>
 
   <ul>
     <li>Expand the collection by clicking on it</li>
@@ -1846,7 +1846,7 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
 <div class="Galaxy-Europe-Australia-and-Others">
 
   <!--SNIPPET-->
-  <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands-on: Launch JupyterLab</div>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-jupyterlab-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-jupyterlab-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch JupyterLab in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently JupyterLab in Galaxy is available on <a href="https://live.usegalaxy.eu">Live.useGalaxy.eu</a>, <a href="https://usegalaxy.org">usegalaxy.org</a> and <a href="https://usegalaxy.eu">usegalaxy.eu</a>.</p>   <blockquote class="notranslate hands_on">     <div class="box-title hands-on-title" id="hands-on-run-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Run JupyterLab</div>     <ol>       <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive Jupyter Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive Jupyter Notebook</strong></span>. Note that on some Galaxies this is called <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span>:</li>       <li>Click Run Tool</li>       <li>         <p>The tool will start running and will stay running permanently</p>         <p>This may take a moment, but once the <code class="language-plaintext highlighter-rouge">Executed notebook</code> in your history is <strong>orange</strong>, you are up and running!</p>       </li>       <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the JupyterLab instance you started.</li>       <li>Click on your JupyterLab instance</li>     </ol>   </blockquote> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-try-jupyterlab-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-try-jupyterlab-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch Try JupyterLab if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If JupyterLab is not available on the Galaxy instance:</p>   <ol>     <li>Start <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab">Try JupyterLab</a></li>   </ol> </blockquote> </blockquote>
+  <blockquote class="notranslate hands_on">   <div class="box-title hands_on-title" id="hands-on-launch-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true"></i> Hands On: Launch JupyterLab</div>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-jupyterlab-in-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-jupyterlab-in-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch JupyterLab in Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>Currently JupyterLab in Galaxy is available on <a href="https://live.usegalaxy.eu">Live.useGalaxy.eu</a>, <a href="https://usegalaxy.org">usegalaxy.org</a> and <a href="https://usegalaxy.eu">usegalaxy.eu</a>.</p>   <blockquote class="notranslate hands_on">     <div class="box-title hands-on-title" id="hands-on-run-jupyterlab"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Run JupyterLab</div>     <ol>       <li><span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive Jupyter Notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive Jupyter Notebook</strong></span>. Note that on some Galaxies this is called <span class="tool" data-tool="interactive_tool_jupyter_notebook" title="Interactive JupyTool and notebook tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Interactive JupyTool and notebook</strong></span>:</li>       <li>Click Run Tool</li>       <li>         <p>The tool will start running and will stay running permanently</p>         <p>This may take a moment, but once the <code class="language-plaintext highlighter-rouge">Executed notebook</code> in your history is <strong>orange</strong>, you are up and running!</p>       </li>       <li>Click on the <strong>User</strong> menu at the top and go to <strong>Active Interactive Tools</strong> and locate the JupyterLab instance you started.</li>       <li>Click on your JupyterLab instance</li>     </ol>   </blockquote> </blockquote>   <blockquote class="tip">   <div class="box-title tip-title" id="tip-launch-try-jupyterlab-if-not-available-on-galaxy"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-launch-try-jupyterlab-if-not-available-on-galaxy" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true" ></i> <span>Tip: Launch Try JupyterLab if not available on Galaxy</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <p>If JupyterLab is not available on the Galaxy instance:</p>   <ol>     <li>Start <a href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab-demo/try.jupyter.org?urlpath=lab">Try JupyterLab</a></li>   </ol> </blockquote> </blockquote>
   <p><!--END_SNIPPET--></p>
 
   <ol>
@@ -5637,9 +5637,16 @@ https://zenodo.org/record/7034885/files/mHomSapT2T.fa
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/genome-annotation/faqs/">FAQ page for the Genome Annotation topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/genome-annotation/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -5848,7 +5855,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -5950,7 +5957,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

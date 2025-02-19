@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1422,7 +1422,7 @@ It has been recognized that DNA methylation analysis, which mostly occurs in a C
 <p>Whole blood samples are collected from humans with their ages falling in the range 18-69 and the best age-correlated CpG sites in the genome are chosen as features. The dataset is divided into two parts - training and test sets. The training set is used to train a regressor and the test set is used to evaluate the performance of the trained model. We proceed with the analysis by uploading new datasets and creating a new history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1472,7 +1472,7 @@ The <code class="language-plaintext highlighter-rouge">train_rows</code> contain
 <p>The dataset is divided into two parts - training and test sets. The training set is used to train a regressor and the test set is used to evaluate the performance of the trained model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-a-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train a model</div>
+  <div class="box-title hands-on-title" id="hands-on-train-a-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train a model</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_generalized_linear/sklearn_generalized_linear/1.0.11.0" title="Generalized linear models for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generalized linear models for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1530,7 +1530,7 @@ The <code class="language-plaintext highlighter-rouge">train_rows</code> contain
 <p>Now, we will predict age in the test dataset using this model in order to see if the model has learned important features which can be generalized on a new dataset. The test dataset (<code class="language-plaintext highlighter-rouge">test_rows</code>) contains the same number of features but does not contain the <code class="language-plaintext highlighter-rouge">Age</code> column; the age will instead be predicted using the trained model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict targets using the model</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-model"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict targets using the model</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_generalized_linear/sklearn_generalized_linear/1.0.11.0" title="Generalized linear models for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generalized linear models for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1554,7 +1554,7 @@ The <code class="language-plaintext highlighter-rouge">train_rows</code> contain
 <p>We will evaluate the predictions by comparing them to the expected targets. In the previous step, we generated predictions for the test dataset (<code class="language-plaintext highlighter-rouge">predicted_data_linear</code>). We have one more dataset (<code class="language-plaintext highlighter-rouge">test_rows_labels</code>) which contains the true age values of the test set. Using the true and predicted values of age in the test set, we will verify the performance by analyzing the plots. As you can see, <code class="language-plaintext highlighter-rouge">predicted_data_linear</code> has no header, so first we need to remove the header from <code class="language-plaintext highlighter-rouge">test_rows_labels</code> to perform the comparison.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-remove-the-header"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Remove the header</div>
+  <div class="box-title hands-on-title" id="hands-on-remove-the-header"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Remove the header</div>
 
   <ol>
     <li><strong>Remove beginning of a file</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1571,7 +1571,7 @@ The <code class="language-plaintext highlighter-rouge">train_rows</code> contain
 Hint: Please find the above tool in “Graph/Display data” tool section in Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the predictions</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the predictions</div>
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/plotly_regression_performance_plots/plotly_regression_performance_plots/0.1" title="Plot actual vs predicted curves and residual plots tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot actual vs predicted curves and residual plots</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1)</span>:</p>
   <ul>
     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select input data file”</em>: <code class="language-plaintext highlighter-rouge">test_rows_labels_without_header</code></li>
@@ -1645,7 +1645,7 @@ Hint: Please find the above tool in “Graph/Display data” tool section in Gal
 <p>Like the random forest method, gradient boosting is an ensemble-based regressor, because it uses multiple decision tree regressors internally and makes predictions by taking the collective performances of predictions made by multiple decision trees. It has a good predictive power and is robust to outliers. It creates an ensemble of weak learners (decision trees) and iteratively minimizes errors. One disadvantage, which comes from its basic principle of boosting, is that it cannot be parallelized. <em>Hint:</em> Please find the following tool in “Machine learning” tool section in Galaxy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-train-a-model-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Train a model</div>
+  <div class="box-title hands-on-title" id="hands-on-train-a-model-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Train a model</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0" title="Ensemble methods for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Ensemble methods for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1701,7 +1701,7 @@ These attributes are used to predict the target for a new sample and are stored 
 <p>After learning on the training dataset, we should evaluate the performance on the test dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-model-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict targets using the model</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-targets-using-the-model-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict targets using the model</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0" title="Ensemble methods for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Ensemble methods for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1722,7 +1722,7 @@ These attributes are used to predict the target for a new sample and are stored 
 
 <p>Now we can visualize and analyze the predictions using the <strong>Plot actual vs predicted curves and residual plots</strong> tool.</p>
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check and visualize the predictions</div>
+  <div class="box-title hands-on-title" id="hands-on-check-and-visualize-the-predictions-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check and visualize the predictions</div>
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/plotly_regression_performance_plots/plotly_regression_performance_plots/0.1" title="Plot actual vs predicted curves and residual plots tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot actual vs predicted curves and residual plots</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1)</span>:</p>
   <ul>
     <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select input data file”</em>: <code class="language-plaintext highlighter-rouge">test_rows_labels</code> (<em>Note:</em> use the <code class="language-plaintext highlighter-rouge">test_rows_labels</code> dataset, not the <code class="language-plaintext highlighter-rouge">test_rows_labels_without_header</code> one)</li>
@@ -1739,7 +1739,7 @@ These attributes are used to predict the target for a new sample and are stored 
 <p>In the final step, we will create a pipeline learner with the <strong>Pipeline builder</strong> tool but this time, we just specify the regressor. The <strong>Pipeline builder</strong> tool will wrap this regressor and return a zip file. By choosing <code class="language-plaintext highlighter-rouge">Yes</code> from the boolean option, tunable hyperparameters will be output in a separate file.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create pipeline</div>
+  <div class="box-title hands-on-title" id="hands-on-create-pipeline"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create pipeline</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_build_pipeline/sklearn_build_pipeline/1.0.11.0" title="Pipeline builder tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Pipeline builder</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -1774,7 +1774,7 @@ These attributes are used to predict the target for a new sample and are stored 
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Hyperparameter search</div>
+  <div class="box-title hands-on-title" id="hands-on-hyperparameter-search"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Hyperparameter search</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_searchcv/sklearn_searchcv/1.0.11.0" title="Hyperparameter search tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Hyperparameter search</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:</p>
   <ul>
@@ -1872,7 +1872,7 @@ These attributes are used to predict the target for a new sample and are stored 
 <p>Using the <strong>Hyperparameter search</strong> tool, we optimized our model, based on the training data. Now, we will predict the age from the test dataset using this model.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-predict-age"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Predict age</div>
+  <div class="box-title hands-on-title" id="hands-on-predict-age"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Predict age</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/sklearn_ensemble/sklearn_ensemble/1.0.11.0" title="Ensemble methods for classification and regression tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Ensemble methods for classification and regression</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.0.11.0)</span>:
@@ -1893,7 +1893,7 @@ These attributes are used to predict the target for a new sample and are stored 
 <p>Now we will verify the performance by creating and analyzing the plots.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-regression-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create regression plots</div>
+  <div class="box-title hands-on-title" id="hands-on-create-regression-plots"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create regression plots</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/plotly_regression_performance_plots/plotly_regression_performance_plots/0.1" title="Plot actual vs predicted curves and residual plots tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot actual vs predicted curves and residual plots</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1)</span>:</p>
   <ul>
@@ -1973,9 +1973,18 @@ The quality of predictions is visualized using multiple plots to ascertain the r
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/statistics/faqs/">FAQ page for the Statistics and machine learning topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/statistics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2128,22 +2137,22 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">15</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.26666666666666666">4</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.2">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.06666666666666667">1</td>
 			</tr>
 		   
@@ -2361,7 +2370,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

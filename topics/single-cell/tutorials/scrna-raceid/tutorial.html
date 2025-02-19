@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1797,7 +1797,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <h2 id="get-data">Get data</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -1868,7 +1868,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Is each batch equally populated? We can investigate this ourselves by extracting the headers, and reformatting them to see how many unique types we can detect:</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_head_tool/1.1.0" title="Select first tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select first</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0)</span>  with the following parameters:
@@ -1972,7 +1972,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We can refine filtering thresholds by examining how much a histogram of our plots change before and after filtering using standard parameters.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-unique-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Unique Cell Types</div>
+  <div class="box-title hands-on-title" id="hands-on-unique-cell-types"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Unique Cell Types</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_filtnormconf/raceid_filtnormconf/0.2.3+galaxy0" title="Initial processing using RaceID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Initial processing using RaceID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -2173,7 +2173,7 @@ As the variables of the dataset, the more genes included, the more complex the m
 <p>Here we assume that there is no unwanted technical or biological variability in the data and that the cells will cluster purely based on their phenotypes. This assumption is not completely without merit, since often the biological signal is strong enough to counter the lesser unwanted variation.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_clustering/raceid_clustering/0.2.3+galaxy0" title="Clustering using RaceID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Clustering using RaceID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -2500,7 +2500,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
 <p>The previous section produced plots that spoke about the quality of the clustering without really showing us the clusters projected into an understandable 2D space. To perform this, we must feed the clustered data into the cluster inspection tool.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/0.2.3+galaxy0" title="Cluster Inspection using RaceID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cluster Inspection using RaceID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -2638,7 +2638,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
 <p>Here we will compare how the cells in cluster 1 are differentially expressed compared to the cell of cluster 3.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-ma-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: MA plot</div>
+  <div class="box-title hands-on-title" id="hands-on-ma-plot"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: MA plot</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/0.2.3+galaxy0" title="Cluster Inspection using RaceID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cluster Inspection using RaceID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -2714,7 +2714,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
 <p>Here we will look at the combined expression of <em>Gstm3</em>, <em>St3gal4</em>, and <em>Gna11</em> which all had adjusted P-values of less than \(1 \cdot 10^{-15}\) in cluster 1.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-3"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-3"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspectclusters/raceid_inspectclusters/0.2.3+galaxy0" title="Cluster Inspection using RaceID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cluster Inspection using RaceID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -2772,7 +2772,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
 <h2 id="computing-the-lineage-tree">Computing the Lineage Tree</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_trajectory/raceid_trajectory/0.2.3+galaxy0" title="Lineage computation using StemID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Lineage computation using StemID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -2961,7 +2961,7 @@ such as <a href="https://en.wikipedia.org/wiki/Metric_(mathematics)">Euclidean d
 <p>Here we will explore one branching point of interest; <code class="language-plaintext highlighter-rouge">c3</code> giving rise to <code class="language-plaintext highlighter-rouge">c1</code> and <code class="language-plaintext highlighter-rouge">c5</code>. Will we be able to find an up or down regulation of genes between these two branches?</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-comparing-trajectory-paths-3-to-1-and-3-to-5"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Comparing trajectory paths 3 to 1, and 3 to 5</div>
+  <div class="box-title hands-on-title" id="hands-on-comparing-trajectory-paths-3-to-1-and-3-to-5"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Comparing trajectory paths 3 to 1, and 3 to 5</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/0.2.3+galaxy0" title="Lineage Branch Analysis using StemID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Lineage Branch Analysis using StemID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -3052,7 +3052,7 @@ Unsurprisingly, there is a higher score for the 3 to 1 trajectory for `c1` cells
 <p>Here we will see if we can see any pseudo-time dynamics taking place between the branching point (3 to 1, and 3 to 5) that we explored previously.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/raceid_inspecttrajectory/raceid_inspecttrajectory/0.2.3+galaxy0" title="Lineage Branch Analysis using StemID tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Lineage Branch Analysis using StemID</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.2.3+galaxy0)</span>  with the following parameters:
@@ -3162,9 +3162,18 @@ Unsurprisingly, there is a higher score for the 3 to 1 trajectory for `c1` cells
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3264,8 +3273,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3448,7 +3457,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">5</td>
 			</tr>
 		   
@@ -3572,7 +3581,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

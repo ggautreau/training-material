@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1843,7 +1843,7 @@ This tutorial will specifically cover automation with Jenkins as that is one of 
 <h2 id="jenkins">Jenkins</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-setting-up-jenkins"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Setting up Jenkins</div>
+  <div class="box-title hands-on-title" id="hands-on-setting-up-jenkins"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Setting up Jenkins</div>
 
   <ol>
     <li>
@@ -1945,7 +1945,7 @@ This tutorial will specifically cover automation with Jenkins as that is one of 
 <h2 id="a-simple-job">A simple job</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-a-simple-job"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create a simple job</div>
+  <div class="box-title hands-on-title" id="hands-on-create-a-simple-job"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create a simple job</div>
 
   <ol>
     <li>
@@ -2040,7 +2040,7 @@ env | sort
 <p>We will now setup Jenkins to run Ansible on cron. In the <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html">Galaxy Installation with Ansible</a> tutorial we emphasised that it is useful to often run the entire playbook to ensure that all changes are applied. UseGalaxy.eu likes to accomplish this by having Jenkins run the playbooks every day. We know that even if our coworkers made some changes to the servers, that by tomorrow it will be reverted to a known-good configuration.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-jenkins-running-ansible"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Jenkins running Ansible</div>
+  <div class="box-title hands-on-title" id="hands-on-jenkins-running-ansible"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Jenkins running Ansible</div>
 
   <ol>
     <li>
@@ -2141,7 +2141,7 @@ ok: [gcc-3.training.galaxyproject.eu]
 <p>You have already secured Jenkins in that it is protected with a good password and HTTPS. This is one important thing. The other portion is the visibility of jobs and their outputs. In the above Ansible Galaxy deployment job we set the parameter <code class="language-plaintext highlighter-rouge">--diff</code>, so we could see what changed. This is an extremely helpful thing to do to be able to audit changes from a particular run. But! If you change the <code class="language-plaintext highlighter-rouge">id_secret</code> or other secret variables, then this diff will be visible in the job’s console logs. This is useful to see for admins but needs to be restricted so that the whole world cannot see this.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-securing-jenkins"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Securing Jenkins</div>
+  <div class="box-title hands-on-title" id="hands-on-securing-jenkins"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Securing Jenkins</div>
 
   <ol>
     <li>
@@ -2438,9 +2438,18 @@ The checkboxes give you the ability to grant or deny permissions to certain clas
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/admin/faqs/">FAQ page for the Galaxy Server administration topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/admin/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2577,7 +2586,7 @@ tools: []
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2586,7 +2595,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2668,7 +2677,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

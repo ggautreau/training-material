@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -3191,7 +3191,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>In the second part of the tutorial, read counts of all 7 samples are used to identify and visualize the DE genes, gene families and molecular pathways due to the depletion of the <em>PS</em> gene.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -3295,7 +3295,7 @@ We will first need to transform our list of pairs to a simple list.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality control</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-control"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality control</div>
 
   <ol>
     <li><span class="tool" data-tool="__FLATTEN__" title="Flatten collection tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Flatten collection</strong></span> with the following parameters convert the list of pairs into a simple list:
@@ -3459,7 +3459,7 @@ We will first need to transform our list of pairs to a simple list.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-trimming-fastqs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Trimming FASTQs</div>
+  <div class="box-title hands-on-title" id="hands-on-trimming-fastqs"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Trimming FASTQs</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/4.9+galaxy1" title="Cutadapt tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cutadapt</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.9+galaxy1)</span> with the following parameters to trim low quality sequences:
@@ -3613,7 +3613,7 @@ We will first need to transform our list of pairs to a simple list.</p>
 <p>We will map our reads to the <em>Drosophila melanogaster</em> genome using <strong>STAR</strong> (<span class="citation"><a href="#dobin2013star">Dobin <i>et al.</i> 2013</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-spliced-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Spliced mapping</div>
+  <div class="box-title hands-on-title" id="hands-on-spliced-mapping"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Spliced mapping</div>
 
   <ol>
     <li>
@@ -3732,7 +3732,7 @@ We will first need to transform our list of pairs to a simple list.</p>
 <p>A BAM (<a href="https://en.wikipedia.org/wiki/SAM_(file_format)">Binary Alignment Map</a>) file is a compressed binary file storing the read sequences, whether they have been aligned to a reference sequence (e.g. a chromosome), and if so, the position on the reference sequence at which they have been aligned.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-a-bam-sam-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect a BAM/SAM file</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-a-bam-sam-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect a BAM/SAM file</div>
 
   <ol>
     <li>Inspect the <i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> output of <strong>RNA STAR</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
@@ -3850,7 +3850,7 @@ We will first need to transform our list of pairs to a simple list.</p>
 <p>The BAM file contains information for all our reads, making it difficult to inspect and explore in text format. A powerful tool to visualize the content of BAM files is the Integrative Genomics Viewer (<strong>IGV</strong>, <span class="citation"><a href="#robinson2011integrative">Robinson <i>et al.</i> 2011</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspection-of-mapping-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspection of mapping results</div>
+  <div class="box-title hands-on-title" id="hands-on-inspection-of-mapping-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspection of mapping results</div>
 
   <ol>
     <li>Install <a href="https://software.broadinstitute.org/software/igv/download"><strong>IGV</strong></a> (if not already installed)</li>
@@ -3957,7 +3957,7 @@ installed on your machine. However, the questions in this section can also be an
   <p><strong>MarkDuplicates</strong> from <a href="http://broadinstitute.github.io/picard/">Picard suite</a> examines aligned records from a BAM file to locate duplicate reads, i.e. reads mapping to the same location (based on the start position of the mapping).</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-check-duplicate-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check duplicate reads</div>
+    <div class="box-title hands-on-title" id="hands-on-check-duplicate-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check duplicate reads</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.4" title="MarkDuplicates tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MarkDuplicates</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.18.2.4)</span> with the following parameters:
@@ -4013,7 +4013,7 @@ installed on your machine. However, the questions in this section can also be an
   <p>To assess the sample quality (e.g. excess of mitochondrial contamination), we can check the sex of samples, or to see if any chromosomes have highly expressed genes, we can check the numbers of reads mapped to each chromosome using <strong>IdxStats</strong> from the <strong>Samtools</strong> suite.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-check-the-number-of-reads-mapped-to-each-chromosome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check the number of reads mapped to each chromosome</div>
+    <div class="box-title hands-on-title" id="hands-on-check-the-number-of-reads-mapped-to-each-chromosome"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check the number of reads mapped to each chromosome</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/samtools_idxstats/samtools_idxstats/2.0.4" title="Samtools idxstats tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools idxstats</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.4)</span> with the following parameters:
@@ -4084,7 +4084,7 @@ installed on your machine. However, the questions in this section can also be an
   <p>The different regions of a gene make up the gene body. It is important to check if read coverage is uniform across the gene body. For example, a bias towards the 5’ end of genes could indicate degradation of the RNA. Alternatively, a 3’ bias could indicate that the data is from a 3’ assay. To assess this, we can use the <strong>Gene Body Coverage</strong> tool from the RSeQC (<span class="citation"><a href="#wang2012rseqc">Wang <i>et al.</i> 2012</a></span>) tool suite. This tool scales all transcripts to 100 nucleotides (using a provided annotation file) and calculates the number of reads covering each (scaled) nucleotide position. As this tool is really slow, we will compute the coverage only on 200,000 random reads.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-check-gene-body-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check gene body coverage</div>
+    <div class="box-title hands-on-title" id="hands-on-check-gene-body-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check gene body coverage</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.15.1+galaxy0" title="Samtools view tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Samtools view</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.15.1+galaxy0)</span> with the following parameters:
@@ -4180,7 +4180,7 @@ installed on your machine. However, the questions in this section can also be an
   <p>Here we will use the <strong>Read Distribution</strong> tool from the RSeQC (<span class="citation"><a href="#wang2012rseqc">Wang <i>et al.</i> 2012</a></span>) tool suite, which uses the annotation file to identify the position of the different gene features.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-check-the-number-of-reads-mapped-to-each-chromosome-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check the number of reads mapped to each chromosome</div>
+    <div class="box-title hands-on-title" id="hands-on-check-the-number-of-reads-mapped-to-each-chromosome-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check the number of reads mapped to each chromosome</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_distribution/5.0.1+galaxy2" title="Read Distribution tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Read Distribution</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 5.0.1+galaxy2)</span> with the following parameters:
@@ -4351,7 +4351,7 @@ installed on your machine. However, the questions in this section can also be an
     <p>We can do a visual inspection of read strands on IGV (for Paired-end dataset it is less easy than with single read and when you have a lot of samples, this can be painful).</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-estimate-strandness-with-igv-for-a-paired-end-library"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Estimate strandness with IGV for a paired-end library</div>
+      <div class="box-title hands-on-title" id="hands-on-estimate-strandness-with-igv-for-a-paired-end-library"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Estimate strandness with IGV for a paired-end library</div>
 
       <ol>
         <li>
@@ -4415,7 +4415,7 @@ installed on your machine. However, the questions in this section can also be an
     <p>Alternatively, instead of using the BAM you can use the stranded coverage generated by <strong>STAR</strong>. Using <strong>pyGenomeTracks</strong> we will be able to visualize the coverage on each strand for each sample. This tool has a lot of parameters to customize your plots.</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-estimate-strandness-with-pygenometracks-from-star-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Estimate strandness with pyGenometracks from STAR coverage</div>
+      <div class="box-title hands-on-title" id="hands-on-estimate-strandness-with-pygenometracks-from-star-coverage"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Estimate strandness with pyGenometracks from STAR coverage</div>
 
       <ol>
         <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/pygenometracks/pygenomeTracks/3.8+galaxy2" title="pyGenomeTracks tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>pyGenomeTracks</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.8+galaxy2)</span>:
@@ -4505,7 +4505,7 @@ On the contrary for unstranded_PE the scale is comparable for both strand.</p>
     <p>You can use the output of <strong>STAR</strong> with the counts. Indeed as explained before, <strong>STAR</strong> evaluates the number of reads on genes for the three possible scenarios: unstranded library, stranded forward or stranded reverse. The condition which attributes more reads to gene must be the condition which matches your library.</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-estimate-strandness-with-star-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Estimate strandness with STAR counts</div>
+      <div class="box-title hands-on-title" id="hands-on-estimate-strandness-with-star-counts"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Estimate strandness with STAR counts</div>
 
       <ol>
         <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy1" title="MultiQC tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>MultiQC</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.11+galaxy1)</span> to aggregate the STAR counts with the following parameters:
@@ -4580,7 +4580,7 @@ The numbers are comparable between unstranded and reverse stranded because reall
     <p>This tool takes the BAM files from the mapping, selects a subsample of the reads and compares their genome coordinates and strands with those of the reference gene model (from an annotation file). Based on the strand of the genes, it can gauge whether sequencing is strand-specific, and if so, how reads are stranded (forward or reverse).</p>
 
     <blockquote class="notranslate hands_on">
-      <div class="box-title hands-on-title" id="hands-on-determining-the-library-strandness-using-infer-experiment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Determining the library strandness using Infer Experiment</div>
+      <div class="box-title hands-on-title" id="hands-on-determining-the-library-strandness-using-infer-experiment"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Determining the library strandness using Infer Experiment</div>
 
       <ol>
         <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gtftobed12/gtftobed12/357" title="Convert GTF to BED12 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Convert GTF to BED12</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 357)</span> to convert the GTF file to BED:
@@ -4787,7 +4787,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.9435
   <p>As you chose to use the featureCounts flavor of the tutorial, we now run <strong>featureCounts</strong> to count the number of reads per annotated gene.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-counting-the-number-of-reads-per-annotated-gene"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Counting the number of reads per annotated gene</div>
+    <div class="box-title hands-on-title" id="hands-on-counting-the-number-of-reads-per-annotated-gene"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Counting the number of reads per annotated gene</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/featurecounts/featurecounts/2.0.3+galaxy2" title="featureCounts tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>featureCounts</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0.3+galaxy2)</span> with the following parameters to count the number of reads per gene:
@@ -4869,7 +4869,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.9435
   <p>As written above, during mapping, <strong>STAR</strong> counted reads for each gene provided in the gene annotation file (this was achieved by the option <code class="language-plaintext highlighter-rouge">Per gene read counts (GeneCounts)</code>). However, this output provides some statistics at the beginning and the counts for each gene depending on the library (unstranded is column 2, stranded forward is column 3 and stranded reverse is column 4).</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-inspect-star-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect STAR output</div>
+    <div class="box-title hands-on-title" id="hands-on-inspect-star-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect STAR output</div>
 
     <ol>
       <li>Inspect the counts from <code class="language-plaintext highlighter-rouge">GSM461177_untreat_paired</code> in the collection <code class="language-plaintext highlighter-rouge">RNA STAR on collection N: reads per gene</code></li>
@@ -4910,7 +4910,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.9435
   <p>We will reformat the output of <strong>STAR</strong> to be similar to the output of <strong>featureCounts</strong> (or other counting softwares) which is only 2 columns, one with IDs and the other one with counts.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-reformatting-star-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Reformatting STAR output</div>
+    <div class="box-title hands-on-title" id="hands-on-reformatting-star-output"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Reformatting STAR output</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_tail_tool/1.1.0" title="Select last tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Select last</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.1.0)</span> lines from a dataset (tail) to remove the first 4 lines with the following parameters:
@@ -4934,7 +4934,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.9435
   <p>Later on the tutorial we will need to get the size of each gene. This is one of the output of <strong>FeatureCounts</strong> but we can also obtain it directly from the gene annotation file. As this is quite long, we recommand to launch it now.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-getting-gene-length"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Getting gene length</div>
+    <div class="box-title hands-on-title" id="hands-on-getting-gene-length"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Getting gene length</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/length_and_gc_content/length_and_gc_content/0.1.2" title="Gene length and GC content tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Gene length and GC content</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.1.2)</span> with the following parameters:
@@ -5000,7 +5000,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.9435
         <p>Comparing different output files is easier if we can view more than one dataset simultaneously. The Scratchbook function allows us to build up a collection of datasets that will be shown on the screen together.</p>
 
         <blockquote class="notranslate hands_on">
-          <div class="box-title hands-on-title" id="hands-on-optional-view-the-sorted-counts-using-the-scratchbook"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: (Optional) View the sorted counts using the Scratchbook</div>
+          <div class="box-title hands-on-title" id="hands-on-optional-view-the-sorted-counts-using-the-scratchbook"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: (Optional) View the sorted counts using the Scratchbook</div>
 
           <ol>
             <li>
@@ -5038,7 +5038,7 @@ Fraction of reads explained by "1+-,1-+,2++,2--": 0.9435
 <p>Here we counted reads mapped to genes for two samples. It is really interesting to redo the same procedure on the other datasets, especially to check how parameters differ given the different type of data (single-end versus paired-end).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-optional-re-run-on-the-other-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: (Optional) Re-run on the other datasets</div>
+  <div class="box-title hands-on-title" id="hands-on-optional-re-run-on-the-other-datasets"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: (Optional) Re-run on the other datasets</div>
 
   <p>You can do the same process on the other sequence files available on <a href="https://zenodo.org/record/6457007">Zenodo</a> and on the data library.</p>
 
@@ -5079,7 +5079,7 @@ https://zenodo.org/record/6457007/files/GSM461182.fastqsanger
 <p>To be able to identify differential gene expression induced by PS depletion, all datasets (3 treated and 4 untreated) must be analyzed following the same procedure. To save time, we have run the previous steps for you. We then obtain 7 files with the counts for each gene of <em>Drosophila</em> for each sample.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-import-all-count-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import all count files</div>
+  <div class="box-title hands-on-title" id="hands-on-import-all-count-files"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import all count files</div>
 
   <ol>
     <li>
@@ -5984,7 +5984,7 @@ https://zenodo.org/record/6457007/files/GSM461182_untreat_single_featureCounts.c
   <p>We can now run <strong>DESeq2</strong>:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-determine-differentially-expressed-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Determine differentially expressed features</div>
+    <div class="box-title hands-on-title" id="hands-on-determine-differentially-expressed-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Determine differentially expressed features</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.8+galaxy0" title="DESeq2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>DESeq2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.11.40.8+galaxy0)</span> with the following parameters:
@@ -6059,7 +6059,7 @@ https://zenodo.org/record/6457007/files/GSM461182_untreat_single_featureCounts.c
   <p>DESeq2 requires to provide for each factor, counts of samples in each category. We will thus use tags on our collection of counts to easily select all samples belonging to the same category. For more information about alternative ways to set group tags, please see <a href="/training-material/topics/galaxy-interface/tutorials/group-tags/tutorial.html">this tutorial</a>.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-add-tags-to-your-collection-for-each-of-these-factors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add tags to your collection for each of these factors</div>
+    <div class="box-title hands-on-title" id="hands-on-add-tags-to-your-collection-for-each-of-these-factors"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add tags to your collection for each of these factors</div>
 
     <ol>
       <li>
@@ -6123,7 +6123,7 @@ https://zenodo.org/record/6457007/files/GSM461182_untreat_single_featureCounts.c
   <p>We can now run <strong>DESeq2</strong>:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-determine-differentially-expressed-features-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Determine differentially expressed features</div>
+    <div class="box-title hands-on-title" id="hands-on-determine-differentially-expressed-features-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Determine differentially expressed features</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.8+galaxy0" title="DESeq2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>DESeq2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.11.40.8+galaxy0)</span> with the following parameters:
@@ -6203,7 +6203,7 @@ https://zenodo.org/record/6457007/files/GSM461182_untreat_single_featureCounts.c
   <p>DESeq2 requires to provide for each factor, counts of samples in each category. We will thus use patterns on the name of our samples to easily select all samples belonging to the same category.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-generate-a-collection-of-each-category"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Generate a collection of each category</div>
+    <div class="box-title hands-on-title" id="hands-on-generate-a-collection-of-each-category"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Generate a collection of each category</div>
 
     <ol>
       <li>
@@ -6267,7 +6267,7 @@ https://zenodo.org/record/6457007/files/GSM461182_untreat_single_featureCounts.c
   <p>We can now run <strong>DESeq2</strong>:</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-determine-differentially-expressed-features-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Determine differentially expressed features</div>
+    <div class="box-title hands-on-title" id="hands-on-determine-differentially-expressed-features-2"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Determine differentially expressed features</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/deseq2/deseq2/2.11.40.8+galaxy0" title="DESeq2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>DESeq2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.11.40.8+galaxy0)</span> with the following parameters:
@@ -6499,7 +6499,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>The ID for each gene is something like FBgn0003360, which is an ID from the corresponding database, here Flybase (<span class="citation"><a href="#thurmond2018flybase">Thurmond <i>et al.</i> 2018</a></span>). These IDs are unique but sometimes we prefer to have the gene names, even if they may not reference an unique gene (e.g. duplicated after re-annotation). But gene names may hint already to a function or they help you to search for desired candidates. We would also like to display the location of these genes within the genome. We can extract such information from the annotation file which we used for mapping and counting.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-annotation-of-the-deseq2-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Annotation of the DESeq2 results</div>
+  <div class="box-title hands-on-title" id="hands-on-annotation-of-the-deseq2-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Annotation of the DESeq2 results</div>
 
   <ol>
     <li>
@@ -6561,7 +6561,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>The annotated table contains no column names, which makes it difficult to read. We would like to add them before going further.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-add-column-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Add column names</div>
+  <div class="box-title hands-on-title" id="hands-on-add-column-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Add column names</div>
 
   <ol>
     <li>
@@ -6597,7 +6597,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>Now we would like to extract the most differentially expressed genes due to the treatment with a fold change &gt; 2 (or &lt; 1/2).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-the-most-differentially-expressed-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract the most differentially expressed genes</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-the-most-differentially-expressed-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract the most differentially expressed genes</div>
 
   <ol>
     <li><span class="tool" data-tool="Filter1" title="Filter data on any column using simple expressions tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter data on any column using simple expressions</strong></span> to extract genes with a significant change in gene expression (adjusted <em>p</em>-value below 0.05) between treated and untreated samples:
@@ -6693,7 +6693,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>To extract the normalized counts for the interesting genes, we join the normalized count table generated by DESeq2 with the table we just generated. We will then keep only the columns corresponding to the normalized counts.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-extract-the-normalized-counts-of-the-most-differentially-expressed-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Extract the normalized counts of the most differentially expressed genes</div>
+  <div class="box-title hands-on-title" id="hands-on-extract-the-normalized-counts-of-the-most-differentially-expressed-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Extract the normalized counts of the most differentially expressed genes</div>
 
   <ol>
     <li><span class="tool" data-tool="join1" title="Join two Datasets side by side on a specified field tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Join two Datasets side by side on a specified field</strong></span> with the following parameters:
@@ -6723,7 +6723,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>We now have a table with 114 lines (the 113 most differentially expressed genes and a header) and the normalized counts for these genes across the 7 samples.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-heatmap-of-the-normalized-counts-of-these-genes-for-the-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot the heatmap of the normalized counts of these genes for the samples</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-heatmap-of-the-normalized-counts-of-these-genes-for-the-samples"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot the heatmap of the normalized counts of these genes for the samples</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_heatmap2/ggplot2_heatmap2/3.1.3.1+galaxy0" title="heatmap2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>heatmap2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.3.1+galaxy0)</span> to plot the heatmap:
@@ -6786,7 +6786,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
   </ol>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-compute-the-z-score-of-all-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Compute the Z-score of all genes</div>
+    <div class="box-title hands-on-title" id="hands-on-compute-the-z-score-of-all-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Compute the Z-score of all genes</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/table_compute/table_compute/1.2.4+galaxy0" title="Table Compute tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Table Compute</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.2.4+galaxy0)</span> with the following parameters to &gt;  first substract the mean values per row
@@ -6881,7 +6881,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <figure id="figure-43" style="max-width: 90%;"><img src="../../images/ref-based/z-score-heatmap.png" alt="Heatmap with the Z-score counts for the most differentially expressed genes. " width="504" height="504" loading="lazy" /><a target="_blank" href="../../images/ref-based/z-score-heatmap.png" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 43</strong>:</span> Z-scores for the most differentially expressed genes</figcaption></figure>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-the-z-score-of-the-most-differentially-expressed-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plot the Z-score of the most differentially expressed genes</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-the-z-score-of-the-most-differentially-expressed-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plot the Z-score of the most differentially expressed genes</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_heatmap2/ggplot2_heatmap2/3.1.3.1+galaxy0" title="heatmap2 tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>heatmap2</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 3.1.3.1+galaxy0)</span> to plot the heatmap:
@@ -6920,7 +6920,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-the-first-dataset-for-goseq"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare the first dataset for goseq</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-the-first-dataset-for-goseq"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare the first dataset for goseq</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.0" title="Compute tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Compute</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.0)</span> on rows with the following parameters:
@@ -6963,7 +6963,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>We just generated the first input for <strong>goseq</strong>. As second input for <strong>goseq</strong> we need the gene lengths. We can use here the gene lengths generated by <strong>featureCounts</strong>  or <strong>Gene length and GC content</strong> and format the gene IDs.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-prepare-the-gene-length-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Prepare the gene length file</div>
+  <div class="box-title hands-on-title" id="hands-on-prepare-the-gene-length-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Prepare the gene length file</div>
 
   <div class="featureCounts">
     <ol>
@@ -7017,7 +7017,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>We have now the two required input files for goseq.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-go-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform GO analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-go-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform GO analysis</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/goseq/goseq/1.50.0+galaxy0" title="goseq tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>goseq</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.50.0+galaxy0)</span> with
@@ -7128,7 +7128,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p><a href="../../images/ref-based/dme00010_empty.png" rel="noopener noreferrer"><img src="../../images/ref-based/dme00010_empty.png" alt="dme00010 KEGG pathway. " width="494" height="707" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-perform-kegg-pathway-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Perform KEGG pathway analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-perform-kegg-pathway-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Perform KEGG pathway analysis</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/goseq/goseq/1.50.0+galaxy0" title="goseq tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>goseq</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.50.0+galaxy0)</span> with
@@ -7208,7 +7208,7 @@ correction for the variability due to the 2nd factor. In our current case, treat
 <p>Here we would like to visualize the 2 KEGG pathways: the over-represented <code class="language-plaintext highlighter-rouge">00010</code> (Glycolysis / Gluconeogenesis) and the most under-represented (yet not significantly) <code class="language-plaintext highlighter-rouge">03040</code> (Spliceosome). We would like the gene nodes to be colored by Log2 Fold Change for the differentially expressed genes because of the treatment.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-overlay-log2fc-on-kegg-pathway"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Overlay log2FC on KEGG pathway</div>
+  <div class="box-title hands-on-title" id="hands-on-overlay-log2fc-on-kegg-pathway"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Overlay log2FC on KEGG pathway</div>
 
   <ol>
     <li><span class="tool" data-tool="Cut1" title="Cut tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Cut</strong></span> columns from a table with the following parameters:
@@ -7333,9 +7333,18 @@ correction for the variability due to the 2nd factor. In our current case, treat
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -7450,8 +7459,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -7884,32 +7893,32 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">85</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.27058823529411763">23</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.03529411764705882">3</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">2 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.023529411764705882">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">1 stars</span><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.023529411764705882">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.011764705882352941">1</td>
 			</tr>
 		   
@@ -8185,7 +8194,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1953,7 +1953,7 @@ For this the following steps are necessary to be performed:</p>
 <h1 id="data-upload">Data upload</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>
@@ -2012,7 +2012,7 @@ It is important to have the forward and reverse strand individual as a FASTQ fil
 </ul>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-mapping-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Mapping reads</div>
+  <div class="box-title hands-on-title" id="hands-on-mapping-reads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Mapping reads</div>
 
   <ol>
     <li><strong>Map with Bowtie</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run Bowtie on both strands <code class="language-plaintext highlighter-rouge">HiC_S2_1p_10min_lowU_R1</code> and <code class="language-plaintext highlighter-rouge">HiC_S2_1p_10min_lowU_R2</code> with:
@@ -2038,7 +2038,7 @@ It is important to have the forward and reverse strand individual as a FASTQ fil
 <p>For this step we will use <a href="http://hicexplorer.readthedocs.io/en/latest/content/tools/hicBuildMatrix.html#hicbuildmatrix">hicBuildMatrix</a> tool, which builds the matrix of read counts over the bins in the genome, considering the sites around the given restriction site.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hicbuildmatrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: hicBuildMatrix</div>
+  <div class="box-title hands-on-title" id="hands-on-hicbuildmatrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: hicBuildMatrix</div>
 
   <ol>
     <li><strong>hicBuildMatrix</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicBuildMatrix on the <code class="language-plaintext highlighter-rouge">R1.bam</code> and <code class="language-plaintext highlighter-rouge">R2.bam</code> from previous step with modifying the following parameters:
@@ -2077,7 +2077,7 @@ A quality report is created in e.g. <code class="language-plaintext highlighter-
 <p><a href="http://hicexplorer.readthedocs.io/en/latest/content/tools/hicMergeMatrixBins.html#hicmergematrixbins">hicMergeMatrixBins</a> merges the bins into larger bins of given number (specified by –numBins). We will merge 100 bins in the original (uncorrected) matrix and then correct it. The new bin size is going to be 10.000 bp * 100 = 1.000.000 bp = 1 Mb</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-hicmergematrixbins"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: hicMergeMatrixBins</div>
+  <div class="box-title hands-on-title" id="hands-on-hicmergematrixbins"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: hicMergeMatrixBins</div>
 
   <ol>
     <li><strong>hicMergeMatrixBins</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicMergeMatrixBins on the output from previous step setting the following parameter:
@@ -2120,7 +2120,7 @@ A quality report is created in e.g. <code class="language-plaintext highlighter-
 <p>Matrix correction works in two steps: first a histogram containing the sum of contact per bin (row sum) is produced. This plot needs to be inspected to decide the best threshold for removing bins with lower number of reads. The second steps removes the low scoring bins and does the correction.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-matrix-diagnostic"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Matrix diagnostic</div>
+  <div class="box-title hands-on-title" id="hands-on-matrix-diagnostic"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Matrix diagnostic</div>
 
   <ol>
     <li><strong>hicCorrectMatrix</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicCorrectMatrix on the output from hicBuildMatrix <code class="language-plaintext highlighter-rouge">10 kb contact matrix</code> adjusting the parameters:
@@ -2142,7 +2142,7 @@ A quality report is created in e.g. <code class="language-plaintext highlighter-
 <p>In our case the distribution describes the counts per bin of a genomic distance. To remove all bins with a z-score threshold less / more than X means to remove all bins which have less / more counts than X of mean of their specific distribution in units of the standard deviation. Looking at the distribution, we can select the value of -1.6 (lower end) and 1.8 (upper end) to remove. This is given by the –filterThreshold option in hicCorrectMatrix set to ‘correct matrix’ mode.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-matrix-correction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Matrix correction</div>
+  <div class="box-title hands-on-title" id="hands-on-matrix-correction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Matrix correction</div>
 
   <ol>
     <li><strong>hicCorrectMatrix</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicCorrectMatrix on the original matrix <code class="language-plaintext highlighter-rouge">10 kb contact matrix</code> adjusting the parameters:
@@ -2176,7 +2176,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <p>We can now plot chromosome 2L with the corrected matrix.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-the-corrected-hi-c-matrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting the corrected Hi-C matrix</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-the-corrected-hi-c-matrix"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting the corrected Hi-C matrix</div>
 
   <ol>
     <li><strong>hicPlotMatrix</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicPlotMatrix on <code class="language-plaintext highlighter-rouge">10 kb corrected contact matrix</code> adjusting the parameters:
@@ -2204,7 +2204,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <p><a href="http://hicexplorer.readthedocs.io/en/latest/content/tools/hicFindTADs.html#hicfindtads">hicFindTADs</a> tries to identify sensible parameters but those can be change to identify more stringent set of boundaries.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-finding-tads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Finding TADs</div>
+  <div class="box-title hands-on-title" id="hands-on-finding-tads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Finding TADs</div>
 
   <ol>
     <li><strong>hicFindTADs</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicFindTADs on <code class="language-plaintext highlighter-rouge">corrected contact matrix dm3 large</code> adjusting the parameters:
@@ -2226,7 +2226,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <h1 id="ab-compartments-computation">A/B compartments computation</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-computing-a-b-compartments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Computing A / B compartments</div>
+  <div class="box-title hands-on-title" id="hands-on-computing-a-b-compartments"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Computing A / B compartments</div>
 
   <ol>
     <li><strong>hicPCA</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicPCA adjusting the parameters:
@@ -2241,7 +2241,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-the-pearson-matrix-and-pca-track"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting the pearson matrix and PCA track</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-the-pearson-matrix-and-pca-track"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting the pearson matrix and PCA track</div>
 
   <ol>
     <li><strong>hicPlotMatrix</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicPlotMatrix on <code class="language-plaintext highlighter-rouge">pearson_matrix from PCA computation</code> adjusting the parameters:
@@ -2279,7 +2279,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <p>For the next step we need additional data tracks. Please load <code class="language-plaintext highlighter-rouge">dm3_genes.bed</code>, <code class="language-plaintext highlighter-rouge">H3K27me3.bw</code>, <code class="language-plaintext highlighter-rouge">H3K36me3.bw</code> and <code class="language-plaintext highlighter-rouge">H4K16ac.bw</code> to your history.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-tads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting TADs</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-tads"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting TADs</div>
 
   <ol>
     <li><strong>pyGenomeTracks</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run pyGenomeTracks adjusting the parameters:
@@ -2385,7 +2385,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <p>This dataset is from the human cell GM12878, mapped to hg19 and of 10 kb resolution. We use a new file because to detect loop structures the read coverage is required to be in the hunderts of million; this was not the case for the previous used drosophila dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-matrix-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Matrix information</div>
+  <div class="box-title hands-on-title" id="hands-on-matrix-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Matrix information</div>
 
   <ol>
     <li><strong>hicInfo</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicInfo adjusting the parameters:
@@ -2400,7 +2400,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <p>We now investigate the result of hicInfo and see that the new imported file is having 1.2 billion non-zero elements, while the drosophila Hi-C interaction matrix has around 12 million non-zero elements.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-computing-loops"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Computing loops</div>
+  <div class="box-title hands-on-title" id="hands-on-computing-loops"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Computing loops</div>
 
   <ol>
     <li><strong>hicDetectLoops</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicDetectLoops adjusting the parameters:
@@ -2424,7 +2424,7 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
 <p><a href="../../images/loops_result.png" rel="noopener noreferrer"><img src="../../images/loops_result.png" alt="Loops computed_file. " width="638" height="485" loading="lazy" /></a></p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-of-loops"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Plotting of loops</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-of-loops"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Plotting of loops</div>
 
   <ol>
     <li><strong>hicPlotMatrix</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Run hicPlotMatrix adjusting the parameters:
@@ -2493,9 +2493,18 @@ This is often caused by bins of low counts. Use a more stringent filtering of bi
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/epigenetics/faqs/">FAQ page for the Epigenetics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/epigenetics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2746,17 +2755,17 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.3333333333333333">2</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">6</td>
 			</tr>
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">0 stars</span><i class="far fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 0.16666666666666666">1</td>
 			</tr>
 		   
@@ -2930,7 +2939,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

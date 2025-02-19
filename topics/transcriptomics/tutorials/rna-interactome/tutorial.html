@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1348,7 +1348,7 @@ results. <code class="language-plaintext highlighter-rouge">ChiRA</code> uses <c
 <h1 id="get-data">Get data</h1>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1397,7 +1397,7 @@ adapters.</p>
 <h2 id="quality-control">Quality control</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Quality check</div>
+  <div class="box-title hands-on-title" id="hands-on-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Quality check</div>
   <p>First use <code class="language-plaintext highlighter-rouge">FastQC</code> to assess the read quality</p>
 
   <ol>
@@ -1436,7 +1436,7 @@ in this analysis. In this step, we use <code class="language-plaintext highlight
 standard Illumina adapters, we need to provide them manually.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-adapter-trimming"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Adapter trimming</div>
+  <div class="box-title hands-on-title" id="hands-on-adapter-trimming"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Adapter trimming</div>
   <p>We use <code class="language-plaintext highlighter-rouge">cutadapt</code> to trim the adapter content</p>
 
   <ol>
@@ -1471,7 +1471,7 @@ standard Illumina adapters, we need to provide them manually.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-post-adapter-trimming-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Post adapter trimming quality check</div>
+  <div class="box-title hands-on-title" id="hands-on-post-adapter-trimming-quality-check"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Post adapter trimming quality check</div>
   <p>It is interesting to see whether our manually entered adapters were trimmed</p>
 
   <ol>
@@ -1516,7 +1516,7 @@ impact on the quantification of the loci because often these identical sequences
 a 5’ degenerate linker of length 5 nucleotides present in the reads. Hence we have to strip that too.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
 
   <ol>
     <li><strong>ChiRA collapse</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1541,7 +1541,7 @@ a 5’ degenerate linker of length 5 nucleotides present in the reads. Hence we 
 <h2 id="map-reads-to-the-reference-transcriptome">Map reads to the reference transcriptome</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-map-chimeric-reads-from-fasta-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Map chimeric reads from fasta file</div>
+  <div class="box-title hands-on-title" id="hands-on-map-chimeric-reads-from-fasta-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Map chimeric reads from fasta file</div>
   <p>Here we use <code class="language-plaintext highlighter-rouge">BWA-MEM</code> aligner in local alignment mode to locate the chimeric arms on the
 transcriptome. Your reference can be single or split in two. Two references are
 ideal for example if you have CLASH experimental data where you have separate
@@ -1572,7 +1572,7 @@ merging is also done on reads defining which parts of the reads are mapping that
 of read.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on</div>
+  <div class="box-title hands-on-title" id="hands-on-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On</div>
 
   <ol>
     <li><strong>ChiRA merge</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1623,7 +1623,7 @@ this information, <code class="language-plaintext highlighter-rouge">ChiRA quani
 using a simple expectation-maximization algorithm.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><strong>ChiRA qauntify</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1644,7 +1644,7 @@ reported. If there is more than one locus with the equal best score then all the
 genomic fasta file the tool can hybridize the interacting loci sequences using <code class="language-plaintext highlighter-rouge">IntaRNA</code>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Task description</div>
 
   <ol>
     <li><strong>ChiRA extract</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1685,7 +1685,7 @@ not directly work with the tabular output we have. Rather it needs a “sqlite�
 sqlite database from the <code class="language-plaintext highlighter-rouge">ChiRA</code> output.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-preperation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data preperation</div>
+  <div class="box-title hands-on-title" id="hands-on-data-preperation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data preperation</div>
 
   <ol>
     <li><strong>Query Tabular</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
@@ -1719,7 +1719,7 @@ sqlite database from the <code class="language-plaintext highlighter-rouge">ChiR
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-visualize-interactions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Visualize interactions</div>
+  <div class="box-title hands-on-title" id="hands-on-visualize-interactions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Visualize interactions</div>
 
   <ol>
     <li>Please click on <i class="fas fa-chart-column" aria-hidden="true"></i><span class="visually-hidden">galaxy-barchart</span> <em>“Visualize this data”</em>. Then click on the <code class="language-plaintext highlighter-rouge">ChiRAViz</code> visualization.
@@ -1742,7 +1742,7 @@ on the top and then click on <strong>“Get interactions”</strong>.</p>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-and-summarize-interactions-and-export-the-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter and summarize interactions and export the results</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-and-summarize-interactions-and-export-the-results"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter and summarize interactions and export the results</div>
   <p><code class="language-plaintext highlighter-rouge">ChiRAViz</code> provides filters to search for keywords like gene symbols, sort interactions by score, filter by score or
 hybridization energy. Then the filtered interactions can be summarized or exported to a file. In this step, we filter
 the interactions that <code class="language-plaintext highlighter-rouge">mmu-miR-190a</code> involved in and consider those which have an <code class="language-plaintext highlighter-rouge">IntaRNA</code> predicted hybrid.</p>
@@ -1784,7 +1784,7 @@ This filters out 10 more records and results in 17 records.</li>
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-viewing-individual-interaction-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Viewing individual interaction information</div>
+  <div class="box-title hands-on-title" id="hands-on-viewing-individual-interaction-information"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Viewing individual interaction information</div>
   <ul>
     <li>From the list of interactions in the left panel expand the interaction <code class="language-plaintext highlighter-rouge">mmu-miR-190a-5p:Myo5a</code> by clicking on “+” (highlighted in red). There are 4 sub-records
 corresponds to 4 different transcripts of the target gene <code class="language-plaintext highlighter-rouge">Myo5a</code>.</li>
@@ -1844,9 +1844,18 @@ corresponds to 4 different transcripts of the target gene <code class="language-
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/transcriptomics/faqs/">FAQ page for the Transcriptomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/transcriptomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2017,7 +2026,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2026,7 +2035,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2108,7 +2117,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

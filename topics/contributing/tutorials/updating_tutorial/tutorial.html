@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -994,7 +994,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <div class="No">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-check-for-an-outdated-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Check for an outdated workflow</div>
+    <div class="box-title hands-on-title" id="hands-on-check-for-an-outdated-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Check for an outdated workflow</div>
 
     <ol>
       <li><strong>Find a <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on tutorial</strong> in your training topic of interest (for example, Single-cell)</li>
@@ -1018,7 +1018,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <div class="Yes">
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-import-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Import the workflow</div>
+    <div class="box-title hands-on-title" id="hands-on-import-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Import the workflow</div>
 
     <ol>
       <li><strong>Navigate to your target <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on tutorial</strong></li>
@@ -1052,7 +1052,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>Now, you will update the workflow to using the latest <i class="fas fa-cubes" aria-hidden="true"></i><span class="visually-hidden">tool-versions</span> tool versions.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-update-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Update the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-update-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Update the workflow</div>
 
   <ol>
     <li>Select <i class="fas fa-cog" aria-hidden="true"></i><span class="visually-hidden">galaxy-wf-options</span> <strong>Workflow Options</strong> from the <strong>Workflow Editor</strong></li>
@@ -1067,7 +1067,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>It’s crucial to test the workflow, as often times the outputs will be different due to the new tool versions. It can also transpire that the newer tool versions lead to errors, either because they don’t work or because you need to change parameter settings that were previously unavailable or not required. Testing is key!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-test-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Test the workflow</div>
+  <div class="box-title hands-on-title" id="hands-on-test-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Test the workflow</div>
 
   <ol>
     <li>Import the input datasets from the tutorial you are upgrading (follow the instructions on the tutorial itself for this).</li>
@@ -1131,7 +1131,7 @@ If, however, you are able to finish the task yourself, please read on!</li>
 <p>The <code class="language-plaintext highlighter-rouge">tutorial.md</code> is what you’ll be editing, however you will also at the end upload a <code class="language-plaintext highlighter-rouge">workflow.ga</code> file and likely some image files.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-update-the-tools-in-the-tutorial"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Update the tools in the tutorial</div>
+  <div class="box-title hands-on-title" id="hands-on-update-the-tools-in-the-tutorial"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Update the tools in the tutorial</div>
 
   <ol>
     <li><strong>Update tool versions</strong>: Each <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> <em>Hands-on</em> step in the tutorial will likely have tool (s) with versions in the text. Update these versions / links to be equivalent to your <code class="language-plaintext highlighter-rouge">updated workflow</code>.</li>
@@ -1197,9 +1197,16 @@ Here’s the tutorial: <a href="/training-material/faqs/gtn/gtn_workflow_testing
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/contributing/faqs/">FAQ page for the Contributing to the Galaxy Training Material topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/contributing/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1486,7 +1493,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1568,7 +1575,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

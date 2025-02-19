@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1439,7 +1439,7 @@ After the transposition of nuclei in bulk, individual nuclei are put into Gel be
 
 <h2 id="get-data">Get Data</h2>
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data upload</div>
+  <div class="box-title hands-on-title" id="hands-on-data-upload"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data upload</div>
 
   <ol>
     <li>Create a new history for this tutorial</li>
@@ -1497,7 +1497,7 @@ https://zenodo.org/records/12707159/files/gencode.v46.annotation.gtf.gz
 <blockquote class="details">
   <div class="box-title details-title" id="details-creating-a-fragment-file"><button class="gtn-boxify-button details" type="button" aria-controls="details-creating-a-fragment-file" aria-expanded="true"><i class="fas fa-info-circle" aria-hidden="true" ></i> <span>Details: Creating a fragment file</span><span class="fold-unfold fa fa-minus-square"></span></button></div>
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-fragment-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: fragment file</div>
+    <div class="box-title hands-on-title" id="hands-on-fragment-file"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: fragment file</div>
     <ol>
       <li>Import the file  <code class="language-plaintext highlighter-rouge">BAM_500-PBMC</code> from <a href="https://zenodo.org/records/12707159">Zenodo</a> or from the shared data library
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/records/12707159/files/BAM_500-PBMC.bam
@@ -1557,7 +1557,7 @@ observations (i.e. cells) &lt;code&gt;obs&lt;/code&gt;, variables (i.e. genes) &
 <h2 id="import-files-to-snapatac2">Import files to SnapATAC2</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Create an AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-create-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Create an AnnData object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_preprocessing/snapatac2_preprocessing/2.6.4+galaxy1" title="SnapATAC2 Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -1594,7 +1594,7 @@ observations (i.e. cells) &lt;code&gt;obs&lt;/code&gt;, variables (i.e. genes) &
 Instead, we need to use a dedicated tool from the <strong>AnnData</strong> suite.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-inspect-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Inspect an AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-inspect-an-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Inspect an AnnData object</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0" title="Inspect AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Inspect AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> with the following parameters:
@@ -1667,7 +1667,7 @@ Instead, we need to use a dedicated tool from the <strong>AnnData</strong> suite
 <h2 id="calculate-and-visualize-qc-metrics">Calculate and visualize <abbr title="quality control">QC</abbr> metrics</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fragment-size-distribution"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Fragment-size distribution</div>
+  <div class="box-title hands-on-title" id="hands-on-fragment-size-distribution"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Fragment-size distribution</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_plotting/snapatac2_plotting/2.6.4+galaxy1" title="SnapATAC2 Plotting tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Plotting</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -1723,7 +1723,7 @@ Instead, we need to use a dedicated tool from the <strong>AnnData</strong> suite
 TSSe scores of individual cells can be calculated using SnapATAC2’s <em>metrics.tsse</em> function.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-calculate-and-plot-tsse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Calculate and Plot TSSe</div>
+  <div class="box-title hands-on-title" id="hands-on-calculate-and-plot-tsse"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Calculate and Plot TSSe</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_preprocessing/snapatac2_preprocessing/2.6.4+galaxy1" title="SnapATAC2 Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -1783,7 +1783,7 @@ High-quality cells can be identified in the plot of <abbr title="transcription s
 <p>Based on the <abbr title="transcription start site enrichment">TSSe</abbr> plot the cells can be filtered by TSSe and fragment counts.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter cells</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-cells"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter cells</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_preprocessing/snapatac2_preprocessing/2.6.4+galaxy1" title="SnapATAC2 Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -1844,7 +1844,7 @@ This creates a cell-by-bin matrix containing insertion counts across genome-wide
 
 <p>After creating the variables, the most accessible features are selected.</p>
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-select-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Select features</div>
+  <div class="box-title hands-on-title" id="hands-on-select-features"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Select features</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_preprocessing/snapatac2_preprocessing/2.6.4+galaxy1" title="SnapATAC2 Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -1960,7 +1960,7 @@ This creates a cell-by-bin matrix containing insertion counts across genome-wide
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-scrublet"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Scrublet</div>
+  <div class="box-title hands-on-title" id="hands-on-scrublet"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Scrublet</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_preprocessing/snapatac2_preprocessing/2.6.4+galaxy1" title="SnapATAC2 Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -2055,7 +2055,7 @@ This creates a cell-by-bin matrix containing insertion counts across genome-wide
 <p>The dimension reduction, produced by the algorithm <em>tl.spectral</em>, is required for later steps, such as plotting and clustering.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-spectral-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Spectral embedding</div>
+  <div class="box-title hands-on-title" id="hands-on-spectral-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Spectral embedding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_clustering/snapatac2_clustering/2.6.4+galaxy1" title="SnapATAC2 Clustering tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Clustering</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -2109,7 +2109,7 @@ This creates a cell-by-bin matrix containing insertion counts across genome-wide
 <strong>UMAP</strong> projects the cells and their relationship to each other into 2-dimensional space, which can be easily visualized (<span class="citation"><a href="#McInnes2018">McInnes <i>et al.</i> 2018</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-umap-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  UMAP embedding</div>
+  <div class="box-title hands-on-title" id="hands-on-umap-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  UMAP embedding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_clustering/snapatac2_clustering/2.6.4+galaxy1" title="SnapATAC2 Clustering tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Clustering</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -2133,7 +2133,7 @@ This method takes the k-nearest neighbor (KNN) graph as input data and produces 
 <h2 id="community-clustering">Community clustering</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-clustering-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Clustering analysis</div>
+  <div class="box-title hands-on-title" id="hands-on-clustering-analysis"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Clustering analysis</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_clustering/snapatac2_clustering/2.6.4+galaxy1" title="SnapATAC2 Clustering tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Clustering</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -2198,7 +2198,7 @@ This method takes the k-nearest neighbor (KNN) graph as input data and produces 
 <p>Now that we have produced <strong>UMAP</strong> embeddings of our cells and have organized the cells into <strong>leiden</strong> clusters, we can now visualize this information with <em>pl.umap</em>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plotting-the-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plotting the clusters</div>
+  <div class="box-title hands-on-title" id="hands-on-plotting-the-clusters"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plotting the clusters</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_plotting/snapatac2_plotting/2.6.4+galaxy1" title="SnapATAC2 Plotting tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Plotting</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -2249,7 +2249,7 @@ Marker genes for other single cell datasets can also be found in databases such 
 <p>Since our data currently doesn’t contain gene information, we have to create a cell-by-gene activity matrix using the function <em>pp.make_gene_matrix</em>.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Task description</div>
+  <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/snapatac2_preprocessing/snapatac2_preprocessing/2.6.4+galaxy1" title="SnapATAC2 Preprocessing tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SnapATAC2 Preprocessing</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 2.6.4+galaxy1)</span> with the following parameters:
@@ -2335,7 +2335,7 @@ In scRNA-seq, filtering and normalization are therefore required to produce a hi
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-filter-and-normalize"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Filter and normalize</div>
+  <div class="box-title hands-on-title" id="hands-on-filter-and-normalize"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Filter and normalize</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_filter/scanpy_filter/1.9.6+galaxy3" title="Filter tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Filter</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.6+galaxy3)</span> with the following parameters:
@@ -2424,7 +2424,7 @@ In scRNA-seq, filtering and normalization are therefore required to produce a hi
 <h2 id="copy-over-embeddings">Copy-over embeddings</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-copy-umap-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Copy UMAP embedding</div>
+  <div class="box-title hands-on-title" id="hands-on-copy-umap-embedding"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Copy UMAP embedding</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0" title="AnnData Operations tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>AnnData Operations</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.3+galaxy0)</span> with the following parameters:
@@ -2471,7 +2471,7 @@ In scRNA-seq, filtering and normalization are therefore required to produce a hi
 <p>The gene activity of selected marker genes can now be visualized with Scanpy.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-plot-marker-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Plot marker genes</div>
+  <div class="box-title hands-on-title" id="hands-on-plot-marker-genes"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Plot marker genes</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/scanpy_plot/scanpy_plot/1.9.6+galaxy3" title="Plot with Scanpy tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Plot with Scanpy</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.6+galaxy3)</span> with the following parameters:
@@ -2635,7 +2635,7 @@ In scRNA-seq, filtering and normalization are therefore required to produce a hi
 </ol>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-manual-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Manual annotation</div>
+  <div class="box-title hands-on-title" id="hands-on-manual-annotation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Manual annotation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/0.10.3+galaxy0" title="Inspect AnnData tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Inspect AnnData</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.10.3+galaxy0)</span> with the following parameters:
@@ -2977,9 +2977,18 @@ In scRNA-seq, filtering and normalization are therefore required to produce a hi
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -3113,8 +3122,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -3331,7 +3340,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -3413,7 +3422,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

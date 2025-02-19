@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1825,7 +1825,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 </blockquote>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-retrieving-data-from-single-cell-expression-atlas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Retrieving data from Single Cell Expression Atlas</div>
+  <div class="box-title hands-on-title" id="hands-on-retrieving-data-from-single-cell-expression-atlas"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Retrieving data from Single Cell Expression Atlas</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/retrieve_scxa/retrieve_scxa/v0.0.2+galaxy2" title="EBI SCXA Data Retrieval tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>EBI SCXA Data Retrieval</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version v0.0.2+galaxy2)</span> with the following parameters:
@@ -1893,7 +1893,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>The plotting tool that we will use later will fail if the entries are integers and not categorical values, so we will change <code class="language-plaintext highlighter-rouge">1</code> to <code class="language-plaintext highlighter-rouge">N01</code> and so on.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-batch-numbers-into-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Change batch numbers into names</div>
+  <div class="box-title hands-on-title" id="hands-on-change-batch-numbers-into-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Change batch numbers into names</div>
 
   <ol>
     <li>
@@ -1963,7 +1963,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>While we’re renaming things, let’s also fix our titles.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-change-cell-metadata-titles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Change cell metadata titles</div>
+  <div class="box-title hands-on-title" id="hands-on-change-cell-metadata-titles"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Change cell metadata titles</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.3+galaxy1" title="Replace parts of text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace parts of text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
@@ -2004,7 +2004,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <p>We might like to flag mitochondrial genes. They can be identified quite easily since - depending on the species and formatting convention - their names often start with <code class="language-plaintext highlighter-rouge">mt</code>. Since tools for flagging mitochondrial genes are often case-sensitive, it might be a good idea to check the formatting of the mitochondrial genes in our dataset.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-check-the-format-of-mitochondrial-genes-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Check the format of mitochondrial genes names</div>
+  <div class="box-title hands-on-title" id="hands-on-check-the-format-of-mitochondrial-genes-names"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Check the format of mitochondrial genes names</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.3+galaxy1" title="Search in textfiles tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Search in textfiles</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
@@ -2069,7 +2069,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>We will do several modifications within the AnnData object so that you can follow <a href="/training-material/topics/single-cell/tutorials/scrna-case_basic-pipeline/tutorial.html">the next tutorial</a>.</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-create-the-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Create the AnnData Object</div>
+    <div class="box-title hands-on-title" id="hands-on-create-the-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Create the AnnData Object</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.9.3+galaxy0" title="Scanpy Read10x tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Read10x</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.3+galaxy0)</span></li>
@@ -2098,7 +2098,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>And the good news is that we can do both those steps using only one tool!</p>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-modify-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Modify AnnData object</div>
+    <div class="box-title hands-on-title" id="hands-on-modify-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Modify AnnData object</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/anndata_ops/anndata_ops/1.9.3+galaxy0" title="AnnData Operations tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>AnnData Operations</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.3+galaxy0)</span></li>
@@ -2148,7 +2148,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <h2 id="creating-the-seurat-object">Creating the Seurat Object</h2>
 
   <blockquote class="notranslate hands_on">
-    <div class="box-title hands-on-title" id="hands-on-create-the-seurat-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Create the Seurat Object</div>
+    <div class="box-title hands-on-title" id="hands-on-create-the-seurat-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Create the Seurat Object</div>
 
     <ol>
       <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/seurat_read10x/seurat_read10x/4.0.4+galaxy0" title="Seurat Read10x tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Seurat Read10x</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 4.0.4+galaxy0)</span></li>
@@ -2190,7 +2190,7 @@ https://github.com/galaxyproject/training-material/issues/4567
 <p>Let’s use the suggested example of the project <em>Single cell transcriptome analysis of human pancreas</em>. If you check this project in HCA, you’ll find out that it’s actually its label. But it should work well if you enter the title or UUID!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-create-anndata-object"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create AnnData object</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/hca_matrix_downloader/hca_matrix_downloader/v0.0.4+galaxy0" title="Human Cell Atlas Matrix Downloader tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Human Cell Atlas Matrix Downloader</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version v0.0.4+galaxy0)</span> with the following parameters:</p>
   <ul>
@@ -2230,7 +2230,7 @@ https://github.com/galaxyproject/training-material/issues/4567
 <p>If you chose <strong>Loom</strong> format and you need to convert your file to other datatype, you can use <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/sceasy_convert/sceasy_convert/0.0.7+galaxy1" title="SCEasy tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>SCEasy</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 0.0.7+galaxy1)</span> (more details in the next section). If you chose <strong>Matrix Market</strong> format, you can then transform the output to AnnData or Seurat, as shown in the EBI SCXA example above. Below, you will find an example of transforming the output to AnnData object.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-create-anndata-object-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Create AnnData object</div>
+  <div class="box-title hands-on-title" id="hands-on-create-anndata-object-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Create AnnData object</div>
 
   <p><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_read_10x/scanpy_read_10x/1.8.1+galaxy9" title="Scanpy Read10x tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Scanpy Read10x</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.8.1+galaxy9)</span> with the following parameters:
  Make sure you are using version <strong>1.8.1+galaxy9</strong> of the tool (change by clicking on <i class="fas fa-cubes" aria-hidden="true"></i><span class="visually-hidden">tool-versions</span> Versions button)</p>
@@ -2305,9 +2305,16 @@ https://github.com/galaxyproject/training-material/issues/4567
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2436,8 +2443,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">Do you want to extend your knowledge?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Follow one of our recommended follow-up trainings:</strong>
                     <ul>
                         
     
@@ -2630,7 +2637,7 @@ tools:
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
 			<tr>
-				<th scope="row"><span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i></th>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
 				<td style="--size: 1.0">1</td>
 			</tr>
 		   
@@ -2732,7 +2739,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

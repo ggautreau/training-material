@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1740,7 +1740,7 @@ The results looks something like this:
 <p>We can use continue to use group by for this, but now we’ll need the max and min aggregate operations. Essentially every time we use <code class="language-plaintext highlighter-rouge">group by</code> we need to use an aggregation like finding the maximum, minimum, or counting the number of results.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-tallest-athlete-per-sport-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Tallest athlete per sport</div>
+  <div class="box-title hands-on-title" id="hands-on-tallest-athlete-per-sport-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Tallest athlete per sport</div>
 
   <p>We would like to answer the following question: <em>How tall was the tallest athlete of each sport?</em></p>
 
@@ -1770,7 +1770,7 @@ The results looks something like this:
 <p>You may have noticed that we could also provide multiple columns to group on. If we do this, we can compute values for combinations of groups, such as sex and sport, to find e.g. the tallest woman in basketball or the shortest man per Olympics. There are also many more options for the computation we perform, so perhaps we are more interested not in the tallest athlete, but the average height. Let’s perform some of these slightly more advanced queries now.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-average-height-of-men-and-women-per-sport-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Average height of men and women per sport</div>
+  <div class="box-title hands-on-title" id="hands-on-average-height-of-men-and-women-per-sport-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Average height of men and women per sport</div>
 
   <p>The question we would like to answer here, is what is the average height for men and women per sport?</p>
 
@@ -2018,7 +2018,7 @@ Let’s standardize this by replacing occurrences of <code class="language-plain
 <p>Different tools may expect different ways of handling missing data. So you may have to change your missing data from empty to <code class="language-plaintext highlighter-rouge">NA</code>, <code class="language-plaintext highlighter-rouge">NaN</code>, or something else, between analysis steps</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-fill-empty-cells-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Fill empty cells</div>
+  <div class="box-title hands-on-title" id="hands-on-fill-empty-cells-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Fill empty cells</div>
 
   <p>We will now replace empty cells in the <code class="language-plaintext highlighter-rouge">birth_place</code> column, to use <code class="language-plaintext highlighter-rouge">null</code> instead.</p>
 
@@ -2366,9 +2366,16 @@ perform our sort, so that our answer is on top.</p>
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the  <a href="/training-material/topics/data-science/faqs/">FAQ page for the Foundations of Data Science topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                
+                  <li><a href="/training-material/topics/data-science/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2543,7 +2550,7 @@ tools: []
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2625,7 +2632,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

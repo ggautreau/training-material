@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -1083,7 +1083,7 @@ Finally, the last layer is the <strong>protein</strong> level, where multiple pe
 <h2 id="data-upload">Data upload</h2>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-upload-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on:  Upload data</div>
+  <div class="box-title hands-on-title" id="hands-on-upload-data"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Upload data</div>
 
   <ol>
     <li>
@@ -1130,7 +1130,7 @@ https://zenodo.org/records/14650887/files/sampleAnnotation.txt
 <p><code class="language-plaintext highlighter-rouge">Remove empty columns</code> setting concerns the columns which contain only missing values. They typically occur if samples acquired with different multiplexing labels are merged into a single table. We suggest to set it to ‘Yes’. QC plots are generated in multiple places in the workflow and help to decide whether to change any current settings or estimate whether a batch effect is present in the data. As they can be very informative, we suggest to set the option to generate them to ‘Yes’.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-loading"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data loading</div>
+  <div class="box-title hands-on-title" id="hands-on-data-loading"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data loading</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1162,7 +1162,7 @@ https://zenodo.org/records/14650887/files/sampleAnnotation.txt
 <p>Finally, we will apply the filtering based on the <strong>q-values</strong>. In the evidences.txt table, there is already a posterior error probability (PEP) calculated. However, PEP is in general considered more stringent than the q-values as PEP measures the direct probability of an error in a single PSM, whereas q-value measures the error across a collection of PSMs, informing us whether the global false discovery rate is acceptable. Therefore, scp package contains the pep2qvalue function, where we just need to specify whether we want to compute the q-values on the PSM, peptide or protein level. We want to be quite stringent, so we will control the FDR at 0.01 meaning we approve that 1% of the PSMs will be identified incorrectly and 99% correctly.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-data-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Data filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-data-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Data filtering</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1199,7 +1199,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>By default, the aggregation will be done on the <strong>Modified.sequence</strong> column (found in the evidences table), which contains the peptide sequence along with its possible posttranslational modifications. All PSMs sharing the same modified.sequence will be aggregated by the function we choose - here we will use the colMedians, meaning that the aggregation will be done sample-wise by computing the column medians.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-aggregation-to-the-peptide-level"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Aggregation to the peptide level</div>
+  <div class="box-title hands-on-title" id="hands-on-aggregation-to-the-peptide-level"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Aggregation to the peptide level</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1221,7 +1221,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>After the filtering, we can remove the blank sample if we haven’t done it already (in case you would omit the filtering for the median intensity or medianCV step).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peptide-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Peptide filtering</div>
+  <div class="box-title hands-on-title" id="hands-on-peptide-filtering"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Peptide filtering</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1243,7 +1243,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>The next step is normalization, which helps us to remove the technical bias and variation from the samples, but still preserves the biological variation. In contrast to the common untargeted proteomics workflow, in the SCP experiment we perform dual normalization, firstly on columns (meaning samples) and second on rows (meaning features, so peptides). We provide two methods of normalization, either on means or medians, with the preferred options set as default.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-peptide-normalization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Peptide normalization</div>
+  <div class="box-title hands-on-title" id="hands-on-peptide-normalization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Peptide normalization</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1261,7 +1261,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>Due to the non-normal distribution which is common for the proteomics data, we usually follow with the log transformation and base of 2. There are certain reasons why base 2 is preferred over base 10, as better interpretation of the fold changes (where a log2FC = 1 means a 2-fold increase, log2FC = -1 means 2-fold decrease, and such symmetric interpretation makes it intuitive to compare the upregulation and downregulation), variance stabilization and handling data skewness (log2 transformation helps to reduce skewness and compresses large values while still preserving relative differences). After the transformation, peptide intensities shall follow roughly the normal distribution and will be therefore suitable for a statistical test.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-log-transformation-of-intensities"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Log transformation of intensities</div>
+  <div class="box-title hands-on-title" id="hands-on-log-transformation-of-intensities"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Log transformation of intensities</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1278,7 +1278,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>Finally, we want to get rid of the peptides which do have a high missing rate in order to keep only the most reliable identifications. We set the percent of missing values, meaning that peptides exhibiting a higher number of missing values will be removed from the analysis. Here, the pNA is set to 99, meaning peptides containing more than 99% of missing data will be excluded.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-na-values-removal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: NA values removal</div>
+  <div class="box-title hands-on-title" id="hands-on-na-values-removal"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: NA values removal</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1300,7 +1300,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>For the aggregation of peptides to the protein level, we will use again the colMedians function, and as a column specifying the protein identifiers, we will use <strong>Leading.razor.protein</strong>. The peptides which share the same Leading razor protein ID will be aggregated together and based on the function chosen, in our case the colMedians (meaning computation of sample-wise medians).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-aggregation-to-the-protein-level"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Aggregation to the protein level</div>
+  <div class="box-title hands-on-title" id="hands-on-aggregation-to-the-protein-level"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Aggregation to the protein level</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1318,7 +1318,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>Next, we will also normalize the intensities on the protein level - again firstly in the column-wise manner and then in the row-wise manner. For the columns, we will use the colMedians and for the rows the rowMeans.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-protein-normalization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Protein normalization</div>
+  <div class="box-title hands-on-title" id="hands-on-protein-normalization"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Protein normalization</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1336,7 +1336,7 @@ computed in a way that intensities in the single cell channels are divided by th
 <p>Finally, we have to deal with the missing values as their presence is problematic for some multivariate analyses such as Principal Component Analysis (PCA) and leads to reduced statistical power as incomplete data limits the ability to detect significant differences between experimental groups. The most common way how to approach them is by the process called <strong>missing values imputation</strong>. By the imputation, we can replace the missing values with the artificial counterparts. Missing values can be of two major types: missing completely at random (MCAR) and missing not at random (MNAR) and they should be treated separately. In the SCP data, the MCAR type is more prevalent, and for MCAR data k-Nearest Neighbors (kNN) approach is often employed. The kNN approach will replace the missing values based on the weighted average of k-most similar proteins - it assumes that the missingness is due to a stochastic factor (e.g. instrumentation problem, but the protein is actually present). For the kNN, we have to choose the number of k-nearest neighbors beforehand, which we can set to 3.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-missing-values-imputation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Missing values imputation</div>
+  <div class="box-title hands-on-title" id="hands-on-missing-values-imputation"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Missing values imputation</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1373,7 +1373,7 @@ of the number of samples in the dataset.</p>
 <p>In the bioconductor-scp, there are two batch removal methods implemented: already mentioned <strong>ComBat</strong> from the sva R package and <strong>removeBatchEffect</strong> method from limma R package. In principle, both methods perform well for the SCP data: ComBat is preferred if the sample size is small (&lt;10) <span class="citation"><a href="#Goh2017">Goh <i>et al.</i> 2017</a></span>, whereas removeBatchEffect is preferred for large sample sizes, but in general it is up to the users preferences or previous experience which method they will choose. A good strategy would be also to run both methods and then check the PCA and Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP) plots or inspect the batch corrected data. In this tutorial, we will use ComBat. The only thing we need to select is the batch variable to be corrected (e.g. day when the samples were run, sorting day, digestion, … - in general column in the sampleAnnotation table) - here we will use the RunCol.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-batch-effect-correction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Batch effect correction</div>
+  <div class="box-title hands-on-title" id="hands-on-batch-effect-correction"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Batch effect correction</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1403,7 +1403,7 @@ which variable is responsible for the batch effect. The output is then a batch-c
 <p>The next step is the dimensionality reduction. We will firstly use the PCA to reduce the dimensions, followed by the UMAP. Because PCA cannot deal with the missing values, we will use the imputed and batch-corrected data. We will select the number of components to obtain [is there any optimal number to choose?] and we can also choose according to which variable the PCA plot will be colored by. Usually, we expect that the first few components will account for the most of the variability (the long accepted approach was to choose the number of components retained would be equal to the number of variables being analyzed <span class="citation"><a href="#number-pca-components">O’Brien</a></span>).</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-batch-effect-correction-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Batch effect correction: PCA</div>
+  <div class="box-title hands-on-title" id="hands-on-batch-effect-correction-pca"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Batch effect correction: PCA</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1420,7 +1420,7 @@ which variable is responsible for the batch effect. The output is then a batch-c
 <p>In contrast to PCA, which is a linear dimension reduction, UMAP is a non-linear approach. Similarly to the PCA, we need to select the number of components to retain.</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-batch-effect-correction-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: Batch effect correction: UMAP</div>
+  <div class="box-title hands-on-title" id="hands-on-batch-effect-correction-umap"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: Batch effect correction: UMAP</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1491,7 +1491,7 @@ careful fine-tuning of parameters is still crucial in order to correctly interpr
 <p>Let’s once again recapitulate how did we set the form: below we will mention only the parameters where we adjusted values, the other parameters were left to the default settings. Now we can finally run the tool!</p>
 
 <blockquote class="notranslate hands_on">
-  <div class="box-title hands-on-title" id="hands-on-bioconductor-scp-full-example"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands-on: bioconductor-scp: Full example</div>
+  <div class="box-title hands-on-title" id="hands-on-bioconductor-scp-full-example"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On: bioconductor-scp: Full example</div>
 
   <ol>
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/recetox/bioconductor_scp/bioconductor_scp/1.16.0+galaxy0" title="bioconductor-scp tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>bioconductor-scp</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.16.0+galaxy0)</span> with the following parameters
@@ -1553,9 +1553,18 @@ careful fine-tuning of parameters is still crucial in order to correctly interpr
                 
 
                 <h1>Frequently Asked Questions</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/proteomics/faqs/">FAQ page for the Proteomics topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/proteomics/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -1708,7 +1717,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -1788,7 +1797,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

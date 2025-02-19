@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e93d02d1af21d5990175a075355de334d69b9604",
+		release: "galaxy-training-network@5ecb656da2fa06df0dc450f99f42f2e22ad7acd6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -980,7 +980,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <table class="contributions">
 	
 	<tr>
-		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Author(s)</abbr></td>
+		<td><abbr title="These people wrote the bulk of the tutorial, they may have done the analysis, built the workflow, and wrote the text themselves.">Autores/as</abbr></td>
 		<td>
 			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
     Wendi Bacon</a><a href="/training-material/hall-of-fame/pinin4fjords/" class="contributor-badge contributor-pinin4fjords"><img src="https://avatars.githubusercontent.com/pinin4fjords?s=36" alt="Jonathan Manning avatar" width="36" class="avatar" />
@@ -1005,7 +1005,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	<tr class="reviewers">
-		<td><abbr title="These people reviewed this material for accuracy and correctness">Reviewers</abbr></td>
+		<td><abbr title="These people reviewed this material for accuracy and correctness">Revisores/as</abbr></td>
 		<td>
 			<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge contributor-badge-small contributor-hexylena"><img src="https://avatars.githubusercontent.com/hexylena?s=36" alt="Helena Rasche avatar" width="36" class="avatar" /></a><a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-badge-small contributor-nomadscientist"><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" /></a><a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge contributor-badge-small contributor-shiltemann"><img src="https://avatars.githubusercontent.com/shiltemann?s=36" alt="Saskia Hiltemann avatar" width="36" class="avatar" /></a></td>
 	</tr>
@@ -1468,11 +1468,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Última modificación:</strong> Nov 9, 2023 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> Licencia:</strong>
 		
-            GTN Framework tiene licencia del MIT
+            El contenido de este tutorial tiene la licencia
             
               <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
             
-            The GTN Framework is licensed under <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
+            GTN Framework tiene licencia del MIT <a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a>
         </div>
         
 
@@ -2578,7 +2578,7 @@ https://zenodo.org/record/4574153/files/N707-400k-AnnData.h5ad
                 </section>
 
                 <section aria-label="Tutorial Footer, Feedback, Citation" id="tutorial-footer">
-                        <h3>You've Finished the Tutorial</h3>
+                        <h3>You've finished the tutorial</h3>
                         <button id="tutorial-finish-button" class="btn btn-primary" onclick="tutorial_finish()">I finished this tutorial 👍</button>
                         <p style="display: none" id="tutorial-finish-text">Please also consider filling out the <a href="#gtn-feedback">Feedback Form</a> as well!</p>
                         <script>
@@ -2616,9 +2616,18 @@ https://zenodo.org/record/4574153/files/N707-400k-AnnData.h5ad
                 
 
                 <h1>Preguntas frecuentes</h1>
-                Have questions about this tutorial? Check out the <a href="faqs/">tutorial FAQ page</a> or the  <a href="/training-material/topics/single-cell/faqs/">FAQ page for the Single Cell topic</a> to see if your question is listed there.
-                If not, please ask your question on the <a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Gitter Channel</a> or the
-                <a href="https://help.galaxyproject.org">Galaxy Help Forum</a>
+                Have questions about this tutorial? Have a look at the available FAQ pages and support channels
+                <ul>
+                
+                  <li><a href="faqs/">Tutorial FAQs</a></li>
+                
+                
+                  <li><a href="/training-material/topics/single-cell/faqs/">Topic  FAQs</a></li>
+                
+                  <li><a href="/training-material/faqs/galaxy/">Galaxy FAQs</a> </li>
+                  <li><a href="https://gitter.im/Galaxy-Training-Network/Lobby">GTN Matrix Chat</a></li>
+                  <li><a href="https://help.galaxyproject.org">Galaxy Help Forum</a></li>
+                </ul>
 
 		<!--
                 
@@ -2720,8 +2729,8 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
 
                 
                 <blockquote class="agenda follow-up">
-                    <div class="box-title">Go Further</div>
-                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Do you want to extend your knowledge? Follow one of our recommended follow-up trainings:</strong>
+                    <div class="box-title">¿Quieres expandir tus conocimientos?</div>
+                    <strong class="follow-up"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Continúa tu aprendizaje completando uno de nuestros entrenamientos recomendados:</strong>
                     <ul>
                         
     
@@ -2880,7 +2889,7 @@ tools:
                   <div id="feedback-response-c" class="box-title">
                     <button type="button" aria-controls="feedback-response-c" aria-expanded="false">
                       <i class="fas fa-info-circle" aria-hidden="true"></i>
-                      <span class="visually-hidden"></span> Feedback<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
+                      <span class="visually-hidden"></span> Retroalimentación<span role="button" class="fold-unfold fa fa-minus-square" aria-hidden="true"></span>
                     </button>
                    </div>
 
@@ -2893,7 +2902,7 @@ tools:
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form from <a href="#gtn-feedback">above</a>. </p>
+            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
         
 		</blockquote>
 
@@ -2973,7 +2982,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e93d02d1af21d5990175a075355de334d69b9604">e93d02d</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5ecb656da2fa06df0dc450f99f42f2e22ad7acd6">5ecb656</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
