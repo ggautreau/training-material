@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@91adf797fabc544752b03e6ef696c3d55284f733",
+		release: "galaxy-training-network@10a5adea64fb5bec57e7b7f647f4ca383b55d7c6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -265,7 +265,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffd3c8; --color-darker: #ffb19b; --color-dimmed: #ffc3b3;">microbiome</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffc4b5; --color-darker: #ffa386; --color-dimmed: #ffb49f;">microbiome</div>
 			
 			</br>
 			
@@ -356,20 +356,20 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 2;
   3["Kraken2"];
   0 -->|output| 3;
-  1f83e628-35f8-4bdc-a3db-f184004cd9a9["Output\nkraken_report"];
-  3 --> 1f83e628-35f8-4bdc-a3db-f184004cd9a9;
-  style 1f83e628-35f8-4bdc-a3db-f184004cd9a9 stroke:#2c3143,stroke-width:4px;
+  9bdfc478-fc98-4a07-ac67-7c7f3e114cfc["Output\nkraken_report"];
+  3 --> 9bdfc478-fc98-4a07-ac67-7c7f3e114cfc;
+  style 9bdfc478-fc98-4a07-ac67-7c7f3e114cfc stroke:#2c3143,stroke-width:4px;
   4["MetaPhlAn"];
   2 -->|forward| 4;
   2 -->|reverse| 4;
-  ff46b6c7-f4b1-4629-a457-77cd48a0315b["Output\nmetaphlan_output"];
-  4 --> ff46b6c7-f4b1-4629-a457-77cd48a0315b;
-  style ff46b6c7-f4b1-4629-a457-77cd48a0315b stroke:#2c3143,stroke-width:4px;
+  d6468bb6-324b-436d-bd81-bf1efd684b68["Output\nmetaphlan_output"];
+  4 --> d6468bb6-324b-436d-bd81-bf1efd684b68;
+  style d6468bb6-324b-436d-bd81-bf1efd684b68 stroke:#2c3143,stroke-width:4px;
   5["Krakentools: Convert kraken report file"];
   3 -->|report_output| 5;
-  4606e81e-3911-49f9-aaa4-c83b15414fa0["Output\nkrakentool_report"];
-  5 --> 4606e81e-3911-49f9-aaa4-c83b15414fa0;
-  style 4606e81e-3911-49f9-aaa4-c83b15414fa0 stroke:#2c3143,stroke-width:4px;
+  3aef7f60-c7a0-409f-beac-cf731e538f1b["Output\nkrakentool_report"];
+  5 --> 3aef7f60-c7a0-409f-beac-cf731e538f1b;
+  style 3aef7f60-c7a0-409f-beac-cf731e538f1b stroke:#2c3143,stroke-width:4px;
   6["Kraken-biom"];
   3 -->|report_output| 6;
   1 -->|output| 6;
@@ -654,7 +654,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/91adf797fabc544752b03e6ef696c3d55284f733">91adf79</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/10a5adea64fb5bec57e7b7f647f4ca383b55d7c6">10a5ade</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
