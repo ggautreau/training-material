@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@e94f458d44b4a23a132c3a147b606347ab76b4e0",
+		release: "galaxy-training-network@75ad7bcf8d6971aa2e9cf81b0d4d70a5bdc5eb50",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -205,10 +205,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <hgroup>
 	<h1>
-		Download and Extract Reads in FASTA/Q:
+		Download and Extract Reads in FASTQ:
 		format from NCBI SRA
 	</h1>
-	<pre>toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/2.11.0+galaxy0</pre>
+	<pre>toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/3.1.1+galaxy1</pre>
 </hgroup>
 
 <section>
@@ -221,8 +221,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				<ul>
 					
 					<li>
-						<a href="https://bio.tools/">
-						bio.tools: 
+						<a href="https://bio.tools/sra-tools">
+						bio.tools: SRA Software Toolkit
 						</a>
 					</li>
 					
@@ -231,8 +231,46 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 				
 				
+				<h3>EDAM Operations</h3>
+				<ul>
+				
+					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_2422">
+							Data retrieval
+						</a>
+					</li>
+				
+					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Foperation_0335">
+							Formatting
+						</a>
+					</li>
+				
+				</ul>
+				
 
 				
+				
+				<h3>EDAM Topics</h3>
+				<ul>
+				
+					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_0622">
+							Genomics
+						</a>
+					</li>
+				
+					<li>
+						
+						<a href="https://www.ebi.ac.uk/ols4/ontologies/edam/classes/http%253A%252F%252Fedamontology.org%252Ftopic_0091">
+							Bioinformatics
+						</a>
+					</li>
+				
+				</ul>
 				
 
 				<hgroup>
@@ -240,6 +278,43 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 					<p>Within GTN tutorials</p>
 				</hgroup>
 
+				
+				<details>
+					<summary>3.1.1+galaxy1</summary>
+					
+					
+					
+					
+
+					<ul>
+						
+						<li>
+							<a href="https://usegalaxy.eu?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/3.1.1+galaxy1&version=3.1.1+galaxy1">
+								UseGalaxy.eu <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.fr/?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/3.1.1+galaxy1&version=3.1.1+galaxy1">
+								UseGalaxy.fr <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/3.1.1+galaxy1&version=3.1.1+galaxy1">
+								UseGalaxy.org (Main) <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						<li>
+							<a href="https://usegalaxy.org.au?tool_id=toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/3.1.1+galaxy1&version=3.1.1+galaxy1">
+								UseGalaxy.org.au <abbr title="This is a UseGalaxy.* server which meets minimum requirements for a public Galaxy">⭐️</abbr>
+							</a>
+						</li>
+						
+						
+					</ul>
+				</details>
 				
 				<details>
 					<summary>2.11.0+galaxy0</summary>
@@ -295,6 +370,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 						Using Galaxy and Managing your Data /
 						<a href="/training-material/topics/galaxy-interface/tutorials/ncbi-sarf/tutorial.html">
 						SRA Aligned Read Format to Speed Up SARS-CoV-2 data Analysis
+						</a>
+					</li>
+					
+					<li>
+						Variant Analysis /
+						<a href="/training-material/topics/variant-analysis/tutorials/baculovirus-isolate-variation/tutorial.html">
+						Deciphering Virus Populations - Single Nucleotide Variants (SNVs) and Specificities in Baculovirus Isolates
 						</a>
 					</li>
 					
@@ -381,7 +463,7 @@ details:active {
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/e94f458d44b4a23a132c3a147b606347ab76b4e0">e94f458</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/75ad7bcf8d6971aa2e9cf81b0d4d70a5bdc5eb50">75ad7bc</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
