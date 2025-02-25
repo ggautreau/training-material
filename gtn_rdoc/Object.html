@@ -1311,9 +1311,9 @@
           <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">updated</span>(<span class="ruby-constant">Gtn</span><span class="ruby-operator">::</span><span class="ruby-constant">PublicationTimes</span>.<span class="ruby-identifier">obtain_time</span>(<span class="ruby-identifier">page</span>.<span class="ruby-identifier">path</span>).<span class="ruby-identifier">to_datetime</span>.<span class="ruby-identifier">rfc3339</span>)
 
           <span class="ruby-comment"># TODO: find a better solution maybe with namespaces?</span>
-          <span class="ruby-comment"># xml.category(term: &quot;starts:#{page.data[&#39;date_start&#39;].to_datetime.rfc3339}&quot;)</span>
-          <span class="ruby-comment"># xml.category(term: &quot;ends:#{(page.data[&#39;date_end&#39;] || page.data[&#39;date_start&#39;]).to_datetime.rfc3339}&quot;)</span>
-          <span class="ruby-comment"># xml.category(term: &quot;days:#{page.data[&#39;duration&#39;]}&quot;)</span>
+          <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">category</span>(<span class="ruby-value">term:</span> <span class="ruby-node">&quot;starts:#{page.data[&#39;date_start&#39;].to_datetime.rfc3339}&quot;</span>)
+          <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">category</span>(<span class="ruby-value">term:</span> <span class="ruby-node">&quot;ends:#{(page.data[&#39;date_end&#39;] || page.data[&#39;date_start&#39;]).to_datetime.rfc3339}&quot;</span>)
+          <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">category</span>(<span class="ruby-value">term:</span> <span class="ruby-node">&quot;days:#{page.data[&#39;duration&#39;]}&quot;</span>)
 
           <span class="ruby-comment"># xml.path(page.path)</span>
           <span class="ruby-identifier">xml</span>.<span class="ruby-identifier">category</span>(<span class="ruby-value">term:</span> <span class="ruby-node">&quot;new #{page[&#39;layout&#39;]}&quot;</span>)

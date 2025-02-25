@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@75ad7bcf8d6971aa2e9cf81b0d4d70a5bdc5eb50",
+		release: "galaxy-training-network@c980e3c83117f03e764f68233c5178ce36d5e9f3",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -264,7 +264,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #00daab; --color-darker: #00c298; --color-dimmed: #00cea1;">variant-analysis</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #00e3b2; --color-darker: #00cb9e; --color-dimmed: #00d7a8;">variant-analysis</div>
 			
 			</br>
 			
@@ -329,11 +329,11 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy France</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy Europe</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy France</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy Main</a></li>
 					
@@ -361,20 +361,20 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 5;
   1 -->|output| 5;
   3 -->|output| 5;
-  47f685d5-1aa6-4b0e-b4ce-0ab4f7a7ab61["Output\nsnippy_fasta"];
-  5 --> 47f685d5-1aa6-4b0e-b4ce-0ab4f7a7ab61;
-  style 47f685d5-1aa6-4b0e-b4ce-0ab4f7a7ab61 stroke:#2c3143,stroke-width:4px;
-  227588a5-d44b-4e45-93db-527446a5c6f3["Output\nsnippy_tabular"];
-  5 --> 227588a5-d44b-4e45-93db-527446a5c6f3;
-  style 227588a5-d44b-4e45-93db-527446a5c6f3 stroke:#2c3143,stroke-width:4px;
+  a5aa8d16-203e-40bc-9b16-8fae42acd97f["Output\nsnippy_fasta"];
+  5 --> a5aa8d16-203e-40bc-9b16-8fae42acd97f;
+  style a5aa8d16-203e-40bc-9b16-8fae42acd97f stroke:#2c3143,stroke-width:4px;
+  ff28541d-520b-43c9-adcb-47ff6e55ffd6["Output\nsnippy_tabular"];
+  5 --> ff28541d-520b-43c9-adcb-47ff6e55ffd6;
+  style ff28541d-520b-43c9-adcb-47ff6e55ffd6 stroke:#2c3143,stroke-width:4px;
   6["JBrowse"];
   5 -->|snpgff| 6;
   4 -->|output| 6;
   5 -->|snpsbam| 6;
   2 -->|output| 6;
-  2a0937aa-5d27-44b3-a973-b57390fb8c65["Output\njbrowse_html"];
-  6 --> 2a0937aa-5d27-44b3-a973-b57390fb8c65;
-  style 2a0937aa-5d27-44b3-a973-b57390fb8c65 stroke:#2c3143,stroke-width:4px;</pre>
+  d2f3bf3f-95fa-4cb8-8117-ba41b1dfaabc["Output\njbrowse_html"];
+  6 --> d2f3bf3f-95fa-4cb8-8117-ba41b1dfaabc;
+  style d2f3bf3f-95fa-4cb8-8117-ba41b1dfaabc stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
@@ -614,7 +614,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/75ad7bcf8d6971aa2e9cf81b0d4d70a5bdc5eb50">75ad7bc</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/c980e3c83117f03e764f68233c5178ce36d5e9f3">c980e3c</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
