@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@cfe851eee69ff67ebcc3288f3ec3ffcf505b49a0",
+		release: "galaxy-training-network@afa070050e066382c62443079a378c721233dae7",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Refining Genome Annotations with Apollo (eukaryotes)">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-02-29 13:37:23 +0000">
+<meta name="DC.date" content="2025-02-26 13:56:33 +0000">
 <meta name="DC.creator" content="Anthony Bretaudeau"><meta name="description" content="Genome annotation is a multi-level process that includes prediction of protein-coding genes, as well as other functional genome units such as structural RNAs, tRNAs, small RNAs, pseudogenes, control regions, direct and inverted repeats, insertion sequences, transposons and other mobile elements. ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Genome Annotation / Refining Genome Annotations with Apollo (eukaryotes) / Hands-on: Refining Genome Annotations with Apollo (eukaryotes)">
@@ -186,7 +186,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-02-29 13:37:23 +0000",
+  "dateModified": "2025-02-26 13:56:33 +0000",
   "datePublished": "2022-08-22 19:31:27 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -283,7 +283,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Refining Genome Annotations with Apollo (eukaryotes)",
   "url": "https://training.galaxyproject.org/training-material/topics/genome-annotation/tutorials/apollo-euk/tutorial.html",
-  "version": 13,
+  "version": 14,
   "timeRequired": "PT3H",
   "teaches": "- Load a genome into Galaxy\n- View annotations in JBrowse\n- Learn how to load JBrowse data into Apollo\n- Learn how to manually refine genome annotations within Apollo\n- Export refined genome annotations",
   "keywords": [
@@ -1059,7 +1059,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     },
     {
       "@type": "Thing",
-      "url": "https://zenodo.org/record/3270822",
+      "url": "https://zenodo.org/record/6920962",
       "name": "Associated Training Datasets"
     }
   ]
@@ -1491,7 +1491,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                 <li class="btn btn-default supporting_material">
 
 
-<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/3270822">
+<a class="btn btn-default topic-icon" title="Zenodo datasets used in this tutorial" href="https://zenodo.org/record/6920962">
     <i class="far fa-copy" aria-hidden="true"></i>&nbsp;Datasets
 </a>
 
@@ -1587,7 +1587,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Aug 22, 2022 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 29, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 26, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1605,7 +1605,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 13 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 14 </div>
 
     </blockquote>
     </section>
@@ -1646,7 +1646,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	
 		<input id="cyoa-opt1" type="radio" name="cyoa" value="Create-your-own-organism" onclick="cyoaChoice('Create-your-own-organism', 'gtn-cyoa')" />
-		<label for="cyoa-opt1" class="select btn btn-secondary">Create your own organism</label>
+		<label for="cyoa-opt1" class="select btn btn-secondary">Create-your-own-organism</label>
 	
 	
 		<input id="cyoa-opt2" type="radio" name="cyoa" value="Use-a-pre-created-organism" onclick="cyoaChoice('Use-a-pre-created-organism', 'gtn-cyoa')" />
@@ -1738,13 +1738,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         <p><!--END_SNIPPET--></p>
       </li>
       <li>
-        <p>Import the files from <a href="https://zenodo.org/record/3270822">Zenodo</a> or from
+        <p>Import the files from <a href="https://zenodo.org/record/6920962">Zenodo</a> or from
 the shared data library (<code class="language-plaintext highlighter-rouge">GTN - Material</code> -&gt; <code class="language-plaintext highlighter-rouge">genome-annotation</code>
  -&gt; <code class="language-plaintext highlighter-rouge">Refining Genome Annotations with Apollo (eukaryotes)</code>):</p>
 
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/3270822/files/genome.fasta
-https://zenodo.org/record/3270822/files/annotation.gff3
-https://zenodo.org/record/3270822/files/rnaseq.bam
+        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://zenodo.org/record/6920962/files/genome.fasta
+https://zenodo.org/record/6920962/files/annotation.gff3
+https://zenodo.org/record/6920962/files/rnaseq.bam
 </code></pre></div>        </div>
 
         <!--SNIPPET-->
@@ -2603,7 +2603,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/cfe851eee69ff67ebcc3288f3ec3ffcf505b49a0">cfe851e</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/afa070050e066382c62443079a378c721233dae7">afa0700</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
