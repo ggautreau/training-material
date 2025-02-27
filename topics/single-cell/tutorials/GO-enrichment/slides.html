@@ -21,7 +21,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@afa070050e066382c62443079a378c721233dae7",
+		release: "galaxy-training-network@bffa3d3abf82ad7b96a726538283edf28a546365",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,9 +68,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="GO Enrichment Analysis on Single-Cell RNA-Seq Data">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-09-17 07:09:29 +0000">
+<meta name="DC.date" content="2025-02-27 08:41:58 +0000">
 <meta name="DC.creator" content="Wendi Bacon">
 <meta name="DC.creator" content="Menna Gamal">
+<meta name="DC.creator" content="Gokce Oguz">
 
         
         
@@ -197,7 +198,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2024-09-17 07:09:29 +0000",
+  "dateModified": "2025-02-27 08:41:58 +0000",
   "datePublished": "2024-09-17 07:09:29 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -255,7 +256,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "slides",
   "name": "GO Enrichment Analysis on Single-Cell RNA-Seq Data",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/GO-enrichment/slides.html",
-  "version": 1,
+  "version": 2,
   "timeRequired": "PT1H",
   "teaches": "- Aim to identify enriched GO terms associated with the DEGs.\n- Enhance understanding of biological processes, molecular functions, and cellular components involved.",
   "keywords": [
@@ -398,6 +399,49 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
           "type": "project"
         }
       ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "http://purl.org/dc/terms/conformsTo": {
+        "@id": "https://bioschemas.org/profiles/Person/0.3-DRAFT",
+        "@type": "CreativeWork"
+      },
+      "url": "https://training.galaxyproject.org/training-material/hall-of-fame/GokceOGUZ/",
+      "mainEntityOfPage": "https://training.galaxyproject.org/training-material/hall-of-fame/GokceOGUZ/",
+      "name": "Gokce Oguz",
+      "image": "https://avatars.githubusercontent.com/GokceOGUZ",
+      "description": "A contributor to the GTN project.",
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "http://purl.org/dc/terms/conformsTo": {
+            "@id": "https://bioschemas.org/profiles/Organization/0.2-DRAFT-2019_07_19",
+            "@type": "Organization"
+          },
+          "id": "https://training.galaxyproject.org",
+          "email": "galaxytrainingnetwork@gmail.com",
+          "name": "Galaxy Training Network",
+          "legalName": "Galaxy Training Network",
+          "alternateName": "GTN",
+          "url": "https://training.galaxyproject.org",
+          "logo": "https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png",
+          "fundingModel": "The GTN's infrastructure relies on GitHub and the Galaxy Project for hosting costs. There are no full time paid staff members of the GTN. Individuals are occasionally funded on GTN-adjacent projects.",
+          "keywords": [
+            "galaxy",
+            "bioinformatics",
+            "training",
+            "fair",
+            "accessible"
+          ],
+          "status": "active",
+          "foundingDate": "2015-06-29",
+          "socialMedia": "https://mstdn.science/@gtn",
+          "type": "project"
+        }
+      ],
+      "identifier": "https://orcid.org/0000-0003-1044-7204",
+      "orcid": "https://orcid.org/0000-0003-1044-7204"
     }
   ],
   "contributor": [
@@ -710,7 +754,10 @@ class: center, middle, inverse
     Wendi Bacon</a>
 			<li>
 				<a href="/training-material/hall-of-fame/MennaGamal/" class="contributor-badge contributor-MennaGamal"><img src="https://avatars.githubusercontent.com/MennaGamal?s=36" alt="Menna Gamal avatar" width="36" class="avatar" />
-    Menna Gamal</a></li>
+    Menna Gamal</a>
+			<li>
+				<a href="/training-material/hall-of-fame/GokceOGUZ/" class="contributor-badge contributor-GokceOGUZ"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/GokceOGUZ?s=36" alt="Gokce Oguz avatar" width="36" class="avatar" />
+    Gokce Oguz</a></li>
 </ul>
 	
 
@@ -817,16 +864,17 @@ Before diving into this slide deck, we recommend you to have a look at:
 
 ### scRNA-Seq data analysis roadmap
 
-.image-100[![slide5](../../images/GO-enrichment/slides_images/roadmap_1.png)]
+.image-100[![slide5](../../images/GO-enrichment/slides_images/roadmap_1_v2.png)]
 
+.footnote[Adapted from &lt;span class=&quot;citation&quot;&gt;&lt;a href=&quot;https://doi.org/10.1002/ctm2.694&quot;&gt;Jovic &lt;i&gt;et al.&lt;/i&gt; 2022&lt;/a&gt;&lt;/span&gt; ]
 
 ???
 Here is a typical workflow for analyzing single-cell RNA sequencing data.
 We can break this process down into three main sections:
 - Data Preprocessing: This is the initial step, where we focus on quality control, alignment, and quantification of the data. It’s crucial to ensure that our data is clean and reliable.
-- General Analyses: In this phase, we filter out low-quality cells, normalize the data, and select highly variable genes, or HVGs. We then perform dimensionality reduction, cluster the cells, and annotate the different cell types. This step allows us to make sense of the data and identify distinct cell populations.
+- General Analyses: In this phase, we filter out low-quality cells, normalize the data, and select highly variable genes. We then perform dimensionality reduction, cluster the cells, and annotate the different cell types. This step helps us understand the data and identify distinct cell populations.
 - Exploratory Analyses: Finally, we delve into exploratory analyses. This includes differential expression gene (DEG) analysis, functional enrichment studies, gene set variation analysis (GSVA), and transcription factor (TF) prediction. We also investigate cell trajectories, interactions between cells, cell cycles, and even spatial transcriptomics.
-This tutorial will focus on Gene Ontology (GO) Enrichment exploratory analysis.
+This tutorial will focus on Gene Ontology (GO) Enrichment Analysis as part of the exploratory analysis process.
 
 
 ---
@@ -834,17 +882,23 @@ This tutorial will focus on Gene Ontology (GO) Enrichment exploratory analysis.
 ### Ontology
 
 .center[A standardized vocabulary for expressing knowledge within a specific domain.]
-.image-100[![slide6](../../images/GO-enrichment/slides_images/ontology_2.png)]
+.image-100[![slide6](../../images/GO-enrichment/slides_images/ontology_2_v2.png)]
+
+.footnote [Adapted from &lt;span class=&quot;citation&quot;&gt;&lt;a href=&quot;https://medium.com/analytics-vidhya/ontologies-an-overview-b23ccc7e976&quot;&gt;Parlar&lt;/a&gt;&lt;/span&gt; ]
 
 ???
-- Before we introduce “GO enrichment analysis” let us first understand what it means by Ontology and Gene Ontology (GO).
-- Ontology is a set of terms with their precise definitions and defined relationships between them. For example, imagine you are organizing a library of books. You want to classify and organize these books so that others can easily find what they are looking for. Ontology in this context would be a structured system for categorizing books. 
+- Before we introduce GO enrichment analysis, let&apos;s first understand what Ontology and Gene Ontology (GO) mean.
+- Ontology is a set of terms with precise definitions and defined relationships between them. For example, imagine you are organizing a library of books. You want to classify and organize these books so that others can easily find what they are looking for. In this context, ontology refers to a structured system for categorizing books.
 
 ---
 
 ### Gene Ontology (GO): Unifying Biology
 
-.image-100[![slide7](../../images/GO-enrichment/slides_images/go_3.png)]
+.image-80[![slide7](../../images/GO-enrichment/slides_images/go_3.png)]
+
+
+.footnote [Adapted from &lt;span class=&quot;citation&quot;&gt;&lt;a href=&quot;https://doi.org/10.1016/b978-0-323-89775-4.00015-8&quot;&gt;Saxena &lt;i&gt;et al.&lt;/i&gt; 2022&lt;/a&gt;&lt;/span&gt; ]
+ 
 
 ???
 Gene Ontology has 3 main classifications (Biological process, Molecular function, and Cellular component) this allows scientists to precisely describe what a gene does, how it does it, and where it happens in the cell.
@@ -926,7 +980,7 @@ Each gene can be &quot;tagged&quot; with one or more GO terms, similar to how bo
 
 ---
 
-.left[3- Count How Many Times Each GO Term Appears]
+.left[3- Count how many times each GO term appears]
 .image-60[![slide14](../../images/GO-enrichment/slides_images/step3_11.png)]
 
 ???
@@ -957,7 +1011,7 @@ We then count the number of times each GO term shows up in your list of genes. F
 
 ???
 - In real-world scenarios where we have hundreds or thousands of genes we need to formally assess whether this difference is statistically significant (i.e., whether GO term A is truly enriched or if this difference is by chance). Fisher&apos;s Exact Test and the hypergeometric test are the most commonly used tests in this situation.
-- Fischer’s Exact test substitutes the values of the contingency table in a formula to calculate the probability (P-value) that corresponds to how likely the observed distribution is by chance. A lower P-value suggests that the GO term is truly enriched in the list of marker genes.
+- Fisher’s Exact test substitutes the values of the contingency table in a formula to calculate the probability (P-value) that corresponds to how likely the observed distribution is by chance. A lower P-value suggests that the GO term is truly enriched in the list of marker genes.
 
 ---
 
@@ -965,8 +1019,7 @@ We then count the number of times each GO term shows up in your list of genes. F
 .image-60[![slide18](../../images/GO-enrichment/slides_images/step7_15.png)]
 
 ???
-After we have transformed the long list of marker genes into a short list of biological themes in the form of GO terms we can proceed with the interpretation of the results through visualization of the most common themes to identify patterns or relationships between GO terms, we can also analyze the GO hierarchy where higher-level categories (parent terms) provide broader biological contexts, while lower-level categories (child terms) offer more specific insights, in addition to relating the enriched GO terms to existing biological knowledge.
-
+After transforming the long list of marker genes into a shorter list of biological themes in the form of GO terms, we can proceed with the interpretation of the results. This can be done by visualizing the most common themes to identify patterns or relationships between the GO terms. Additionally, we can analyze the GO hierarchy, where higher-level categories (parent terms) provide broader biological contexts, while lower-level categories (child terms) offer more specific insights. We can also relate the enriched GO terms to existing biological knowledge.
 ---
 
 ### Example 1: GO Enrichment Analysis of Platelet Proteins in Early-Stage Cancer
@@ -1055,7 +1108,8 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 		<td>
 			<a href="/training-material/hall-of-fame/nomadscientist/" class="contributor-badge contributor-nomadscientist"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/nomadscientist?s=36" alt="Wendi Bacon avatar" width="36" class="avatar" />
     Wendi Bacon</a><a href="/training-material/hall-of-fame/MennaGamal/" class="contributor-badge contributor-MennaGamal"><img src="https://avatars.githubusercontent.com/MennaGamal?s=36" alt="Menna Gamal avatar" width="36" class="avatar" />
-    Menna Gamal</a>
+    Menna Gamal</a><a href="/training-material/hall-of-fame/GokceOGUZ/" class="contributor-badge contributor-GokceOGUZ"><img src="/training-material/assets/images/orcid.png" alt="orcid logo" width="36" height="36"/><img src="https://avatars.githubusercontent.com/GokceOGUZ?s=36" alt="Gokce Oguz avatar" width="36" class="avatar" />
+    Gokce Oguz</a>
 		</td>
 	</tr>
 	
