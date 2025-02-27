@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@60133d854ab0116aa8657571562373c6aba2cc9e",
+		release: "galaxy-training-network@a22bf32273d5ce2a4c663e72cd0b0fbb7d6af978",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2056,6 +2056,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
+	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">4.5</a> (0 recent ratings, 2 all time)</div>
+	
 	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 27 </div>
 
     </blockquote>
@@ -2636,12 +2638,44 @@ tools: []
 		   
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
+			<tr>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
+				<td style="--size: 1.0">1</td>
+			</tr>
+		   
+			<tr>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
+				<td style="--size: 1.0">1</td>
+			</tr>
+		   
 		   </table>
 		   </p>
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
+		    
+		    <b>July 2021</b>
+		    <ul>
+				
+				<li>
+					<span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>:
+					<b>Liked</b>: Clear explanation of the subject
+					<b>Disliked</b>: object_store_config_file: "{{ galaxy_config_dir }}/object_store_conf.xml.j2" should be object_store_config_file: "{{ galaxy_config_dir }}/object_store_conf.xml"
+				</li>
+				
+		    </ul>
+		    
+		    <b>January 2021</b>
+		    <ul>
+				
+				<li>
+					<span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>:
+					<b>Liked</b>: Easy to add local storage, the dropbox integration is good
+					<b>Disliked</b>: "Warning: switching object store types will cause issues" - suggest putting that at the top and emphasise that this is a tutorial that shouldn't be blindly followed on a proper install.  The S3 section assumed quite a lot of knowledge - I didn't understand, but expect someone who manages data in an S3 bucket will!  
+				</li>
+				
+		    </ul>
+		    
         
 		</blockquote>
 
@@ -2723,7 +2757,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/60133d854ab0116aa8657571562373c6aba2cc9e">60133d8</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/a22bf32273d5ce2a4c663e72cd0b0fbb7d6af978">a22bf32</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

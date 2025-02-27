@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@60133d854ab0116aa8657571562373c6aba2cc9e",
+		release: "galaxy-training-network@a22bf32273d5ce2a4c663e72cd0b0fbb7d6af978",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -2196,6 +2196,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
+	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">3.0</a> (1 recent ratings, 9 all time)</div>
+	
 	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 13 </div>
 
     </blockquote>
@@ -3797,12 +3799,76 @@ tools:
 		   
 		   <table class="charts-css bar show-labels" style="--labels-size: 8rem; overflow-y: hidden">
 		   
+			<tr>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
+				<td style="--size: 0.75">3</td>
+			</tr>
+		   
+			<tr>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
+				<td style="--size: 1.0">4</td>
+			</tr>
+		   
+			<tr>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
+				<td style="--size: 0.25">1</td>
+			</tr>
+		   
+			<tr>
+				<th scope="row">t{ hist[0] | to_stars }}</th>
+				<td style="--size: 0.25">1</td>
+			</tr>
+		   
 		   </table>
 		   </p>
 		
         
         
-            <p>No feedback has been recieved yet for this training. Be the first one by filling in the feedback form. </p>
+		    
+		    <b>December 2024</b>
+		    <ul>
+				
+				<li>
+					<span class="sr-only">3 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>:
+					<b>Liked</b>: Step-by-step-tutorial --> very clear what to do
+					<b>Disliked</b>: I personally often did not understand why we do this step. I would need a lot more explanations. Like that, I just followed the instructions without understanding what I was doing.
+				</li>
+				
+		    </ul>
+		    
+		    <b>June 2022</b>
+		    <ul>
+				
+				<li>
+					<span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>:
+					<b>Liked</b>: it was clear 
+					<b>Disliked</b>: maybe you could explain the file formats and what the tools do in a more clean way 
+				</li>
+				
+		    </ul>
+		    
+		    <b>December 2021</b>
+		    <ul>
+				
+				<li>
+					<span class="sr-only">5 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>:
+					<b>Liked</b>: Well detailed method of ChIPseq and associated explanations
+					<b>Disliked</b>: The title in itself doesn't really reflect the final results of the tutorial, with the data used one do not really identify TAD on the inactive X chromosome... 
+				</li>
+				
+		    </ul>
+		    
+		    <b>January 2020</b>
+		    <ul>
+				
+				<li>
+					<span class="sr-only">4 stars</span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i>:
+					
+					<b>Disliked</b>: In step 6 it is explained to insert each of the datasets one after the other (with Concatenate datasets tail-to-head). However, one can insert more than one dataset at once with this tool, so why not do that? Also, it should read "Redo for the remaining four outputs of MACS2 callpeak" - it is six in total and in the first step you concatenate two and then add the remaining.  Why are the bedgraph files created if they are not used for anything?
+				</li>
+				
+		    </ul>
+		    
         
 		</blockquote>
 
@@ -3884,7 +3950,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/60133d854ab0116aa8657571562373c6aba2cc9e">60133d8</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/a22bf32273d5ce2a4c663e72cd0b0fbb7d6af978">a22bf32</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

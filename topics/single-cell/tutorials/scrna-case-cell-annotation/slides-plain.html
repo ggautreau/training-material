@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@60133d854ab0116aa8657571562373c6aba2cc9e",
+		release: "galaxy-training-network@a22bf32273d5ce2a4c663e72cd0b0fbb7d6af978",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,11 +68,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Automated Cell Annotation">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-14 11:24:16 +0000">
-<meta name="DC.creator" content="Morgan Howells"><meta name="description" content="### What is Cell Annotation?  - Categorising cells into cell type categories based on transcriptomic data  - Can be done manually or automatically  - Is possible due to single-cell sequencing technology  ![Basic pipeline for automated cell annotation](../../images/scrna-cell-annotation/cell-annotation.png)  ???  Automated cell annotation uses gene expression data to classify unknown cells (often referred to as queries) into discrete “cell type” categories.  This process can be done manually or automatically using a wide range of algorithms and statistical methods  ---  ### Why is it Important?  - Able to process and analyse single cell data much faster than manual analysis  - Can produce results more consistently allowing for reproducibility of results  - Can uncover complex patterns in large amounts of data  ???  Manually annotating cells can be time consuming and require domain expertise, with the advent of single-cell RNA sequencing (scRNA-seq) large amounts of individual cell da...">
+<meta name="DC.date" content="2025-02-27 13:17:12 +0000">
+<meta name="DC.creator" content="Morgan Howells"><meta name="description" content="### What is Cell Annotation?  - Classify cells in your data into different cell types based on gene expression data  - Can be done manually or automatically  - Is possible because single-cell sequencing technology provides higher resolution than bulk RNA-seq  ![Basic pipeline for automated cell annotation](../../images/scrna-cell-annotation/cell-annotation.png)  ???  Automated cell annotation uses gene expression data to classify unknown cells (often referred to as queries) into discrete “cell type” categories.  This process can be done manually or automatically using a wide range of algorithms and statistical methods  ---  ### Why is Cell Annotation Important?   - To understand the composition of cell types in samples (cellular heterogeneity)   - To compare changes in cell populations or states across different conditions and phenotypes  - To perform differential expression within each cell type to avoid signal dilution from mixed cell type population  - To identify novel cell stat...">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Single Cell / Automated Cell Annotation / Slides: Automated Cell Annotation">
-        <meta property="og:description" content="### What is Cell Annotation?  - Categorising cells into cell type categories based on transcriptomic data  - Can be done manually or automatically  - Is possible due to single-cell sequencing technology  ![Basic pipeline for automated cell annotation](../../images/scrna-cell-annotation/cell-annotation.png)  ???  Automated cell annotation uses gene expression data to classify unknown cells (often referred to as queries) into discrete “cell type” categories.  This process can be done manually or automatically using a wide range of algorithms and statistical methods  ---  ### Why is it Important?  - Able to process and analyse single cell data much faster than manual analysis  - Can produce results more consistently allowing for reproducibility of results  - Can uncover complex patterns in large amounts of data  ???  Manually annotating cells can be time consuming and require domain expertise, with the advent of single-cell RNA sequencing (scRNA-seq) large amounts of individual cell da...">
+        <meta property="og:description" content="### What is Cell Annotation?  - Classify cells in your data into different cell types based on gene expression data  - Can be done manually or automatically  - Is possible because single-cell sequencing technology provides higher resolution than bulk RNA-seq  ![Basic pipeline for automated cell annotation](../../images/scrna-cell-annotation/cell-annotation.png)  ???  Automated cell annotation uses gene expression data to classify unknown cells (often referred to as queries) into discrete “cell type” categories.  This process can be done manually or automatically using a wide range of algorithms and statistical methods  ---  ### Why is Cell Annotation Important?   - To understand the composition of cell types in samples (cellular heterogeneity)   - To compare changes in cell populations or states across different conditions and phenotypes  - To perform differential expression within each cell type to avoid signal dilution from mixed cell type population  - To identify novel cell stat...">
         <meta property="og:image" content="https://training.galaxyproject.org/training-material/assets/images/GTNLogo1000.png"></head>
     <body data-spy="scroll" data-target="#toc" data-brightness="auto" data-contrast="auto">
         <script  src='/training-material/assets/js/bundle.theme.f1f2de89.js'></script>
@@ -389,7 +389,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 		
 
 		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Published:</strong> Sep 4, 2023 </div>
-		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last Updated:</strong> Feb 14, 2025 </div>
+		<div><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last Updated:</strong> Feb 27, 2025 </div>
 
 	<hr />
 
@@ -398,13 +398,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <ul>
   <li>
-    <p>Categorising cells into cell type categories based on transcriptomic data</p>
+    <p>Classify cells in your data into different cell types based on gene expression data</p>
   </li>
   <li>
     <p>Can be done manually or automatically</p>
   </li>
   <li>
-    <p>Is possible due to single-cell sequencing technology</p>
+    <p>Is possible because single-cell sequencing technology provides higher resolution than bulk RNA-seq</p>
   </li>
 </ul>
 
@@ -418,11 +418,43 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <hr />
 
-<h3 id="why-is-it-important">Why is it Important?</h3>
+<h3 id="why-is-cell-annotation-important">Why is Cell Annotation Important?</h3>
 
 <ul>
   <li>
-    <p>Able to process and analyse single cell data much faster than manual analysis</p>
+    <p>To understand the composition of cell types in samples (cellular heterogeneity)</p>
+  </li>
+  <li>
+    <p>To compare changes in cell populations or states across different conditions and phenotypes</p>
+  </li>
+  <li>
+    <p>To perform differential expression within each cell type to avoid signal dilution from mixed cell type population</p>
+  </li>
+  <li>
+    <p>To identify novel cell states and study some cell population further</p>
+  </li>
+</ul>
+
+<p><span>Speaker Notes</span></p>
+
+<p>The power of single-cell RNA-seq lies in its ability to capture the transcriptome at single-cell resolution.</p>
+
+<p>However, a significant challenge is accurately classifying cells into distinct types before beginning downstream analysis.</p>
+
+<p>Once cells are annotated, we can examine the composition of cell types within each sample and compare them across conditions.</p>
+
+<p>This precise classification enables differential expression analysis within specific cell types, a key objective of single-cell experiments.</p>
+
+<hr />
+
+<h3 id="why-automate-cell-annotation">Why Automate Cell Annotation?</h3>
+
+<ul>
+  <li>
+    <p>Each single-cell experiment can generate data for thousands of cells</p>
+  </li>
+  <li>
+    <p>Manual annotation is time consuming and requires domain expertise</p>
   </li>
   <li>
     <p>Can produce results more consistently allowing for reproducibility of results</p>
@@ -459,7 +491,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     <p>Cell annotation uses sc-RNA seq data</p>
   </li>
   <li>
-    <p>Gene expressions are stored in a gene expression matrix (X)</p>
+    <p>Gene expressions are stored in a gene expression matrix (X) <br /><br /></p>
   </li>
 </ul>
 
@@ -485,14 +517,20 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <hr />
 
-<h3 id="challenges">Challenges</h3>
+<h3 id="challenges-in-automated-cell-type-annotation">Challenges in Automated Cell Type Annotation</h3>
 
 <ul>
   <li>
-    <p>Data is often noisy due to amplification techniques, varying sequencing depths, and errors in the reads</p>
+    <p>Noise due to amplification techniques, varying sequencing depths, and sequencing errors</p>
+  </li>
+  <li>
+    <p>Difference in QC steps for reference and query dataset may introduce a bias</p>
   </li>
   <li>
     <p>Cell type definitions are inherently subjective and may be suboptimal</p>
+  </li>
+  <li>
+    <p>Lack of a suitable reference panel for the query dataset can result in inaccurate classification, especially when dealing with unknown cell states</p>
   </li>
   <li>
     <p>Dealing with unknown cell types due to undiscovered classifications</p>
@@ -521,10 +559,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <ul>
   <li>
-    <p>Generate a cluster map and manually annotate each clusters</p>
+    <p>Requires known marker genes for cell types of interest</p>
   </li>
   <li>
-    <p>Requires the researchers to find known marker genes in the data</p>
+    <p>Generate the UMAP/tSNE (see below) to visualize the expression values</p>
+  </li>
+  <li>
+    <p>If you have clustered the cells, you can use dotplots or violin plots to measure the average expression of these genes</p>
   </li>
 </ul>
 
@@ -552,7 +593,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 <ul>
   <li>
-    <p>The process of identifying unique gene expressions that can be used for identifying cell types</p>
+    <p>The process of identifying genes that are uniquely expressed in certain cell types</p>
   </li>
   <li>
     <p>Genes are selected based on how differently they are expressed across different cell types</p>
@@ -925,7 +966,7 @@ Tutorial Content is licensed under
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/60133d854ab0116aa8657571562373c6aba2cc9e">60133d8</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/a22bf32273d5ce2a4c663e72cd0b0fbb7d6af978">a22bf32</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
