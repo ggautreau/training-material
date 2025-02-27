@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@bffa3d3abf82ad7b96a726538283edf28a546365",
+		release: "galaxy-training-network@47ca7fabba8b87529b07827ca4c7e4e37c0642ae",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -333,9 +333,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy France</a></li>
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy Main</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy Australia</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Galaxy Main</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/variant-analysis-microbial-variants/versions/microbial-variant-calling">Import to another server (≥23.0+ only!)</a>
@@ -361,20 +361,20 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 5;
   1 -->|output| 5;
   3 -->|output| 5;
-  bc4167bc-5b2f-4acd-abe9-53cd5ebe6a3d["Output\nsnippy_fasta"];
-  5 --> bc4167bc-5b2f-4acd-abe9-53cd5ebe6a3d;
-  style bc4167bc-5b2f-4acd-abe9-53cd5ebe6a3d stroke:#2c3143,stroke-width:4px;
-  2455bbf8-5313-40fc-bf93-3a34f62fe28f["Output\nsnippy_tabular"];
-  5 --> 2455bbf8-5313-40fc-bf93-3a34f62fe28f;
-  style 2455bbf8-5313-40fc-bf93-3a34f62fe28f stroke:#2c3143,stroke-width:4px;
+  a5f90987-a7bf-4ce4-85df-2a279b8e59ee["Output\nsnippy_fasta"];
+  5 --> a5f90987-a7bf-4ce4-85df-2a279b8e59ee;
+  style a5f90987-a7bf-4ce4-85df-2a279b8e59ee stroke:#2c3143,stroke-width:4px;
+  a74f59f6-2c54-42cb-be9a-5b526483aa99["Output\nsnippy_tabular"];
+  5 --> a74f59f6-2c54-42cb-be9a-5b526483aa99;
+  style a74f59f6-2c54-42cb-be9a-5b526483aa99 stroke:#2c3143,stroke-width:4px;
   6["JBrowse"];
   5 -->|snpgff| 6;
   4 -->|output| 6;
   5 -->|snpsbam| 6;
   2 -->|output| 6;
-  9fc31789-44b0-4060-a536-1efae5e057e0["Output\njbrowse_html"];
-  6 --> 9fc31789-44b0-4060-a536-1efae5e057e0;
-  style 9fc31789-44b0-4060-a536-1efae5e057e0 stroke:#2c3143,stroke-width:4px;</pre>
+  04afa677-f6fe-42ad-8b17-ac1d8698a4fc["Output\njbrowse_html"];
+  6 --> 04afa677-f6fe-42ad-8b17-ac1d8698a4fc;
+  style 04afa677-f6fe-42ad-8b17-ac1d8698a4fc stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
@@ -614,7 +614,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/bffa3d3abf82ad7b96a726538283edf28a546365">bffa3d3</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/47ca7fabba8b87529b07827ca4c7e4e37c0642ae">47ca7fa</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

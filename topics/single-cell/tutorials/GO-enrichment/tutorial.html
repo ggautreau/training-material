@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@bffa3d3abf82ad7b96a726538283edf28a546365",
+		release: "galaxy-training-network@47ca7fabba8b87529b07827ca4c7e4e37c0642ae",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="GO Enrichment Analysis on Single-Cell RNA-Seq Data">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-13 14:11:24 +0000">
+<meta name="DC.date" content="2025-02-27 09:19:19 +0000">
 <meta name="DC.creator" content="Menna Gamal"><meta name="description" content="Training material and practicals for all kinds of single cell analysis (particularly scRNA-seq!). ">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Single Cell / GO Enrichment Analysis on Single-Cell RNA-Seq Data / Hands-on: GO Enrichment Analysis on Single-Cell RNA-Seq Data">
@@ -186,7 +186,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-02-13 14:11:24 +0000",
+  "dateModified": "2025-02-27 09:19:19 +0000",
   "datePublished": "2024-09-17 07:09:29 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -244,7 +244,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "GO Enrichment Analysis on Single-Cell RNA-Seq Data",
   "url": "https://training.galaxyproject.org/training-material/topics/single-cell/tutorials/GO-enrichment/tutorial.html",
-  "version": 6,
+  "version": 7,
   "timeRequired": "PT3H",
   "teaches": "- Understand the role of GO Enrichment in Single-Cell Analysis.\n- Use marker genes from different cell clusters or conditions for GO enrichment analysis.\n- Compare enrichment across experimental conditions (e.g., wild type vs. knockout) to uncover functional changes associated with genetic or environmental perturbations.\n- Link GO enrichment results with previously annotated cell clusters, providing a clearer picture of the functional roles of different cell populations.",
   "keywords": [
@@ -1441,7 +1441,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Sep 17, 2024 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 13, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 27, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -1461,7 +1461,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 	<div><strong><i class="far fa-star" aria-hidden="true"></i><span class="visually-hidden">rating</span> Rating:</strong> <a href="#feedback-responses">5.0</a> (1 recent ratings, 1 all time)</div>
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 6 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 7 </div>
 
     </blockquote>
     </section>
@@ -1511,8 +1511,8 @@ We will perform GO enrichment analysis as a type of over-representation analysis
 
 <p>We’ll start with two input datasets of marker genes (Study sets):</p>
 <ul>
-  <li><strong>Marker genes per cell cluster:</strong> This dataset lists the genes that are significantly different in each cell cluster.</li>
-  <li><strong>Marker genes per condition (wt and ko):</strong> This dataset lists the genes that are significantly different between the wild-type (wt) and knockout (ko) conditions.</li>
+  <li><strong>Marker genes per cell cluster:</strong> This dataset lists the genes that are differentially enriched in each cell cluster.</li>
+  <li><strong>Marker genes per condition (wt and ko):</strong> This dataset lists the genes that are differentially enriched between the wild-type (wt) and knockout (ko) conditions.</li>
 </ul>
 
 <p><em>Note:</em> Marker genes were obtained using Scanpy FindMarkers tool. The top 50 marker genes were included in the downstream GO enrichment analysis. Scanpy FindMarkers tool selects the marker genes based on their log2 fold change and p-values. Focusing on the top-ranked genes helps to filter out less relevant genes, thereby addressing the concern of high false positives that can arise from traditional methods.</p>
@@ -2161,7 +2161,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/bffa3d3abf82ad7b96a726538283edf28a546365">bffa3d3</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/47ca7fabba8b87529b07827ca4c7e4e37c0642ae">47ca7fa</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
