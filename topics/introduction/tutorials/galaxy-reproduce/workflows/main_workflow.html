@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@47ca7fabba8b87529b07827ca4c7e4e37c0642ae",
+		release: "galaxy-training-network@20a3cbe43803cc282569afb937be3dd829bff791",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -264,7 +264,7 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffc4b4; --color-darker: #ffa383; --color-dimmed: #ffb49d;">introduction</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffc8b9; --color-darker: #ffa789; --color-dimmed: #ffb8a2;">introduction</div>
 			
 			</br>
 			
@@ -329,13 +329,13 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Main</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Europe</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.org.au/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Australia</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy France</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Galaxy Main</a></li>
 					
 					<li class="dropdown-item hide-when-galaxy-proxy-active">
 						<a href="https://my.galaxy.training/?path=/workflows/trs_import%3Frun_form=true%26trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/introduction-galaxy-reproduce/versions/main-workflow">Import to another server (≥23.0+ only!)</a>
@@ -353,23 +353,23 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   0 -->|output| 1;
   2["Datamash"];
   1 -->|tabular| 2;
-  0e4042b3-4ae2-4ea8-b9e3-7044ebad7023["Output\ndatamash_output"];
-  2 --> 0e4042b3-4ae2-4ea8-b9e3-7044ebad7023;
-  style 0e4042b3-4ae2-4ea8-b9e3-7044ebad7023 stroke:#2c3143,stroke-width:4px;
+  3a36a636-a074-4a20-b50b-c92083b6358c["Output\ndatamash_output"];
+  2 --> 3a36a636-a074-4a20-b50b-c92083b6358c;
+  style 3a36a636-a074-4a20-b50b-c92083b6358c stroke:#2c3143,stroke-width:4px;
   3["Remove beginning"];
   1 -->|tabular| 3;
   4["Cut"];
   3 -->|out_file1| 4;
   5["Group"];
   3 -->|out_file1| 5;
-  4de0f08f-545d-4c97-8b74-16f064a94f72["Output\ngroup1"];
-  5 --> 4de0f08f-545d-4c97-8b74-16f064a94f72;
-  style 4de0f08f-545d-4c97-8b74-16f064a94f72 stroke:#2c3143,stroke-width:4px;
+  ca7cf874-9520-4ba0-b909-52de74b64466["Output\ngroup1"];
+  5 --> ca7cf874-9520-4ba0-b909-52de74b64466;
+  style ca7cf874-9520-4ba0-b909-52de74b64466 stroke:#2c3143,stroke-width:4px;
   6["Group"];
   3 -->|out_file1| 6;
-  923ca994-61af-4fb7-92af-633ca39c680d["Output\ngroup2"];
-  6 --> 923ca994-61af-4fb7-92af-633ca39c680d;
-  style 923ca994-61af-4fb7-92af-633ca39c680d stroke:#2c3143,stroke-width:4px;
+  b0dd877f-42ab-4e4c-b323-703f61be03b5["Output\ngroup2"];
+  6 --> b0dd877f-42ab-4e4c-b323-703f61be03b5;
+  style b0dd877f-42ab-4e4c-b323-703f61be03b5 stroke:#2c3143,stroke-width:4px;
   7["Scatterplot w ggplot2"];
   3 -->|out_file1| 7;
   8["Scatterplot w ggplot2"];
@@ -634,7 +634,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/47ca7fabba8b87529b07827ca4c7e4e37c0642ae">47ca7fa</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/20a3cbe43803cc282569afb937be3dd829bff791">20a3cbe</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@47ca7fabba8b87529b07827ca4c7e4e37c0642ae",
+		release: "galaxy-training-network@20a3cbe43803cc282569afb937be3dd829bff791",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Data manipulation with Pandas">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2024-02-20 16:10:07 +0000">
+<meta name="DC.date" content="2025-02-27 09:23:34 +0000">
 <meta name="DC.creator" content="Anton Nekrutenko"><meta name="description" content="These lessons will help you get your feet in data science and give you tools to help you slice and dice your data into results.">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Foundations of Data Science / Data manipulation with Pandas / Hands-on: Data manipulation with Pandas">
@@ -186,7 +186,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Draft",
-  "dateModified": "2024-02-20 16:10:07 +0000",
+  "dateModified": "2025-02-27 09:23:34 +0000",
   "datePublished": "2024-02-20 06:18:29 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -244,7 +244,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Data manipulation with Pandas",
   "url": "https://training.galaxyproject.org/training-material/topics/data-science/tutorials/gnmx-lecture6/tutorial.html",
-  "version": 2,
+  "version": 4,
   "timeRequired": "PT1H",
   "teaches": "- Understand data manipulation in Pandas",
   "keywords": [
@@ -826,7 +826,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 20, 2024 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 20, 2024 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 27, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -844,7 +844,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 4 </div>
 
     </blockquote>
     </section>
@@ -926,7 +926,7 @@ it contains a variety of accessory proteins interspersed throughout the genome (
 <p>The long replicase gene encodes a number of non-structural proteins (nsps) and occupies 2/3 of the genome. Because of -1 ribosomal frameshifting within ORFab approx. in 25% of the cases
 polyprotein pp1ab is produced in place of pp1a. pp1a encodes 11 nsps while pp1ab encodes 15 (Fig. below from <a href="https://www.annualreviews.org/doi/full/10.1146/annurev-virology-100114-055218">Sola:2015</a>).</p>
 
-<figure id="figure-2" style="max-width: 90%;"><img src="https://www.annualreviews.org/na101/home/literatum/publisher/ar/journals/content/virology/2015/virology.2015.2.issue-1/annurev-virology-100114-055218/20151024/images/large/vi20265.f1.jpeg" alt="Discontinuous transcription. " loading="lazy" /><a target="_blank" href="https://www.annualreviews.org/na101/home/literatum/publisher/ar/journals/content/virology/2015/virology.2015.2.issue-1/annurev-virology-100114-055218/20151024/images/large/vi20265.f1.jpeg" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Coronavirus genome structure and gene expression. (a) Coronavirus genome structure. The upper scheme represents the TGEV genome. Labels indicate gene names; L corresponds to the leader sequence. Also represented are the nsps derived from the processing of the pp1a and pp1ab polyproteins. PLP1, PLP2, and 3CL protease sites are depicted as inverted triangles with the corresponding color code of each protease. Dark gray rectangles represent transmembrane domains, and light gray rectangles indicate other functional domains. (b) Coronavirus genome strategy of sgmRNA expression. The upper scheme represents the TGEV genome. Short lines represent the nested set of sgmRNAs, each containing a common leader sequence (black) and a specific gene to be translated (dark gray). (c) Key elements in coronavirus transcription. A TRS precedes each gene (TRS-B) and includes the core sequence (CS-B) and variable 5′ and 3′ flanking sequences. The TRS of the leader (TRS-L), containing the core sequence (CS-L), is present at the 5′ end of the genome, in an exposed location (orange box in the TRS-L loop). Discontinuous transcription occurs during the synthesis of the negative-strand RNA (light blue), when the copy of the TRS-B hybridizes with the TRS-L. Dotted lines indicate the complementarity between positive-strand and negative-strand RNA sequences. Abbreviations: EndoU, endonuclease; ExoN, exonuclease; HEL, helicase; MTase, methyltransferase (green, N7-methyltransferase; dark purple, 2′-O-methyltransferase); nsp, nonstructural protein; PLP, papain-like protease; RdRp, RNA-dependent RNA polymerase; sgmRNA, subgenomic RNA; TGEV, transmissible gastroenteritis virus; TRS, transcription-regulating sequence; UTR, untranslated region.</figcaption></figure>
+<figure id="figure-2" style="max-width: 90%;"><img src="https://www.annualreviews.org/docserver/fulltext/virology/2/1/vi20265.f1.gif" alt="Discontinuous transcription. " loading="lazy" /><a target="_blank" href="https://www.annualreviews.org/docserver/fulltext/virology/2/1/vi20265.f1.gif" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 2</strong>:</span> Coronavirus genome structure and gene expression. (a) Coronavirus genome structure. The upper scheme represents the TGEV genome. Labels indicate gene names; L corresponds to the leader sequence. Also represented are the nsps derived from the processing of the pp1a and pp1ab polyproteins. PLP1, PLP2, and 3CL protease sites are depicted as inverted triangles with the corresponding color code of each protease. Dark gray rectangles represent transmembrane domains, and light gray rectangles indicate other functional domains. (b) Coronavirus genome strategy of sgmRNA expression. The upper scheme represents the TGEV genome. Short lines represent the nested set of sgmRNAs, each containing a common leader sequence (black) and a specific gene to be translated (dark gray). (c) Key elements in coronavirus transcription. A TRS precedes each gene (TRS-B) and includes the core sequence (CS-B) and variable 5′ and 3′ flanking sequences. The TRS of the leader (TRS-L), containing the core sequence (CS-L), is present at the 5′ end of the genome, in an exposed location (orange box in the TRS-L loop). Discontinuous transcription occurs during the synthesis of the negative-strand RNA (light blue), when the copy of the TRS-B hybridizes with the TRS-L. Dotted lines indicate the complementarity between positive-strand and negative-strand RNA sequences. Abbreviations: EndoU, endonuclease; ExoN, exonuclease; HEL, helicase; MTase, methyltransferase (green, N7-methyltransferase; dark purple, 2′-O-methyltransferase); nsp, nonstructural protein; PLP, papain-like protease; RdRp, RNA-dependent RNA polymerase; sgmRNA, subgenomic RNA; TGEV, transmissible gastroenteritis virus; TRS, transcription-regulating sequence; UTR, untranslated region.</figcaption></figure>
 
 <h2 id="virion-structure">Virion structure</h2>
 
@@ -959,7 +959,7 @@ and M protein possible tethering viral genome and replicase-transcriptase comple
 
 <p>Furthermore, <a href="https://www.annualreviews.org/doi/full/10.1146/annurev-virology-100114-055218">Sola:2015</a> suggests the coronavirus transcription model in which transcription initiation complex forms at the 3’-end of (+)-strand genomic RNA:</p>
 
-<figure id="figure-5" style="max-width: 90%;"><img src="https://www.annualreviews.org/na101/home/literatum/publisher/ar/journals/content/virology/2015/virology.2015.2.issue-1/annurev-virology-100114-055218/20151024/images/large/vi20265.f3.jpeg" alt="Coronavirus transcription. " loading="lazy" /><a target="_blank" href="https://www.annualreviews.org/na101/home/literatum/publisher/ar/journals/content/virology/2015/virology.2015.2.issue-1/annurev-virology-100114-055218/20151024/images/large/vi20265.f3.jpeg" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Three-step model of coronavirus transcription. (1) Complex formation. Proteins binding transcription-regulating sequences are represented by ellipsoids, the leader sequence is indicated with a red bar, and core sequences are indicated with orange boxes. (2) Base-pairing scanning. Negative-strand RNA is shown in light blue; the transcription complex is represented by a hexagon. Vertical lines indicate complementarity between the genomic RNA and the nascent negative strand. (3) Template switch. Due to the complementarity between the newly synthesized negative-strand RNA and the transcription-regulating sequence of the leader, template switch to the leader is made by the transcription complex to complete the copy of the leader sequence</figcaption></figure>
+<figure id="figure-5" style="max-width: 90%;"><img src="https://www.annualreviews.org/docserver/fulltext/virology/2/1/vi20265.f3.gif" alt="Coronavirus transcription. " loading="lazy" /><a target="_blank" href="https://www.annualreviews.org/docserver/fulltext/virology/2/1/vi20265.f3.gif" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 5</strong>:</span> Three-step model of coronavirus transcription. (1) Complex formation. Proteins binding transcription-regulating sequences are represented by ellipsoids, the leader sequence is indicated with a red bar, and core sequences are indicated with orange boxes. (2) Base-pairing scanning. Negative-strand RNA is shown in light blue; the transcription complex is represented by a hexagon. Vertical lines indicate complementarity between the genomic RNA and the nascent negative strand. (3) Template switch. Due to the complementarity between the newly synthesized negative-strand RNA and the transcription-regulating sequence of the leader, template switch to the leader is made by the transcription complex to complete the copy of the leader sequence</figcaption></figure>
 
 <h2 id="how-virus-is-screened">How virus is screened</h2>
 
@@ -2209,7 +2209,7 @@ tools: []
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/47ca7fabba8b87529b07827ca4c7e4e37c0642ae">47ca7fa</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/20a3cbe43803cc282569afb937be3dd829bff791">20a3cbe</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
