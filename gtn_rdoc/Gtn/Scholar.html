@@ -336,7 +336,7 @@
  
                           <button class="toggle-source">toggle source</button>
                           <div class="method-source-code" id="discover_bib-source">
-                            <pre><span class="ruby-comment"># File _plugins/gtn/scholar.rb, line 36</span>
+                            <pre><span class="ruby-comment"># File _plugins/gtn/scholar.rb, line 38</span>
 <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">discover_bib</span>
   <span class="ruby-constant">Jekyll</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span> <span class="ruby-string">&#39;[GTN/scholar] Creating global bib cache&#39;</span>
   <span class="ruby-identifier">global_bib</span> = <span class="ruby-constant">BibTeX</span><span class="ruby-operator">::</span><span class="ruby-constant">Bibliography</span>.<span class="ruby-identifier">new</span>
@@ -438,6 +438,8 @@
   <span class="ruby-identifier">text</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; &lt;a href=\&quot;https://doi.org/#{doi}\&quot;&gt;#{doi}&lt;/a&gt;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">doi</span>
   <span class="ruby-identifier">url</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-string">&#39;url&#39;</span>, <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">text</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; &lt;a href=\&quot;#{url}\&quot;&gt;#{url}&lt;/a&gt;&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">url</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">url</span>.<span class="ruby-identifier">index</span>(<span class="ruby-string">&#39;doi.org&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">doi</span>)
+  <span class="ruby-identifier">isbn</span> = <span class="ruby-identifier">entry</span>.<span class="ruby-identifier">fetch</span>(<span class="ruby-string">&#39;isbn&#39;</span>, <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">text</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; ISBN: #{isbn}&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">isbn</span>
 
   <span class="ruby-identifier">text</span>
 <span class="ruby-keyword">end</span></pre>
