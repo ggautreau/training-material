@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@86179ea6e4102bd6b01ad10a8bff542d5529e58c",
+		release: "galaxy-training-network@8ab532ae844a7d4d5ab89f0c20772e0036c67efc",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -267,9 +267,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 			<br/>
 
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ffbbe0; --color-darker: #ff96d2; --color-dimmed: #ffa9d9;">assembly</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #ffb7de; --color-darker: #ff92d1; --color-dimmed: #ffa5d7;">assembly</div>
 			
-			<div class="label label-default tutorial_tag" style="--color-primary: #ddd400; --color-darker: #c4bc00; --color-dimmed: #d0c800;">microgalaxy</div>
+			<div class="label label-default tutorial_tag" style="--color-primary: #dad100; --color-darker: #c2ba00; --color-dimmed: #cec500;">microgalaxy</div>
 			
 			</br>
 			
@@ -361,29 +361,29 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   3["fastp"];
   1 -->|output| 3;
   0 -->|output| 3;
-  ad136b14-cdab-4527-8f90-25725b2f3327["Output\nfastp_json"];
-  3 --> ad136b14-cdab-4527-8f90-25725b2f3327;
-  style ad136b14-cdab-4527-8f90-25725b2f3327 stroke:#2c3143,stroke-width:4px;
+  a64d621e-174d-4020-b1a7-502eda8c4c03["Output\nfastp_json"];
+  3 --> a64d621e-174d-4020-b1a7-502eda8c4c03;
+  style a64d621e-174d-4020-b1a7-502eda8c4c03 stroke:#2c3143,stroke-width:4px;
   4["FastQC"];
   1 -->|output| 4;
   5["Shovill"];
   3 -->|out1| 5;
   3 -->|out2| 5;
-  da3770d2-32cf-4fad-9643-84a048f759d6["Output\nshovill_log"];
-  5 --> da3770d2-32cf-4fad-9643-84a048f759d6;
-  style da3770d2-32cf-4fad-9643-84a048f759d6 stroke:#2c3143,stroke-width:4px;
+  3ce965c9-3004-4275-b346-3c522b7c82d7["Output\nshovill_log"];
+  5 --> 3ce965c9-3004-4275-b346-3c522b7c82d7;
+  style 3ce965c9-3004-4275-b346-3c522b7c82d7 stroke:#2c3143,stroke-width:4px;
   6["Quast"];
   5 -->|contigs| 6;
-  22330544-c5c1-4e78-8c2d-ad78dbe71d8c["Output\nquast_output"];
-  6 --> 22330544-c5c1-4e78-8c2d-ad78dbe71d8c;
-  style 22330544-c5c1-4e78-8c2d-ad78dbe71d8c stroke:#2c3143,stroke-width:4px;
+  fb1b4bc3-6306-4182-8577-9dc5be83dcc2["Output\nquast_output"];
+  6 --> fb1b4bc3-6306-4182-8577-9dc5be83dcc2;
+  style fb1b4bc3-6306-4182-8577-9dc5be83dcc2 stroke:#2c3143,stroke-width:4px;
   7["Bandage Image"];
   5 -->|contigs_graph| 7;
   8["Bandage Info"];
   5 -->|contigs_graph| 8;
-  0cd15e69-c9f2-4fdb-b3c8-3353d196d6c1["Output\nbandage_info_output"];
-  8 --> 0cd15e69-c9f2-4fdb-b3c8-3353d196d6c1;
-  style 0cd15e69-c9f2-4fdb-b3c8-3353d196d6c1 stroke:#2c3143,stroke-width:4px;</pre>
+  941759ed-d42e-4be9-a348-0dfbc92523c9["Output\nbandage_info_output"];
+  8 --> 941759ed-d42e-4be9-a348-0dfbc92523c9;
+  style 941759ed-d42e-4be9-a348-0dfbc92523c9 stroke:#2c3143,stroke-width:4px;</pre>
 			<h2>Inputs</h2>
 			<table class="table table-striped">
 				<thead>
@@ -682,7 +682,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/86179ea6e4102bd6b01ad10a8bff542d5529e58c">86179ea</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/8ab532ae844a7d4d5ab89f0c20772e0036c67efc">8ab532a</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
