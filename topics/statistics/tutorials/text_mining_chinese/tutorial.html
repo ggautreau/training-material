@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@bbdf8c3f95f039a2be08badbc6cf42a6fdb08e67",
+		release: "galaxy-training-network@7e717488d9fc2b0baccd206f12046928d427dc35",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Text-Mining Differences in Chinese Newspaper Articles">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-02-28 12:12:48 +0000">
+<meta name="DC.date" content="2025-03-04 10:25:42 +0000">
 <meta name="DC.creator" content="Daniela Schneider"><meta name="description" content="Statistical Analyses for omics data and machine learning using Galaxy tools">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Statistics and machine learning / Text-Mining Differences in Chinese Newspaper Articles / Hands-on: Text-Mining Differences in Chinese Newspaper Articles">
@@ -186,7 +186,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Draft",
-  "dateModified": "2025-02-28 12:12:48 +0000",
+  "dateModified": "2025-03-04 10:25:42 +0000",
   "datePublished": "2025-02-28 12:12:48 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -240,11 +240,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "description": "Statistical Analyses for omics data and machine learning using Galaxy tools",
     "url": "https://training.galaxyproject.org/training-material/topics/statistics/"
   },
-  "abstract": "The British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s. Those redactions were visibly marked by replacement characters like ×, making them visible even to those who did not read any Chinese.",
+  "abstract": "The British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s.",
   "learningResourceType": "e-learning",
   "name": "Text-Mining Differences in Chinese Newspaper Articles",
   "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/text_mining_chinese/tutorial.html",
-  "version": 1,
+  "version": 2,
   "timeRequired": "PT1H",
   "teaches": "- Learn to clean and compare two texts.\n- Extract specific information out of texts.\n- Visualise your results in a word cloud.",
   "keywords": [
@@ -253,7 +253,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "Text_mining",
     "work-in-progress"
   ],
-  "description": "## Abstract\n\nThe British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s. Those redactions were visibly marked by replacement characters like ×, making them visible even to those who did not read any Chinese.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How can I automatically compare two Chinese newspaper articles?\n - What characters were censored in a Chinese newspaper published in Hong Kong in the 1930s?\n\n\n## Learning Objectives\n\n- Learn to clean and compare two texts.\n- Extract specific information out of texts.\n- Visualise your results in a word cloud.\n\n",
+  "description": "## Abstract\n\nThe British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How can I automatically compare two Chinese newspaper articles?\n - What characters were censored in a Chinese newspaper published in Hong Kong in the 1930s?\n\n\n## Learning Objectives\n\n- Learn to clean and compare two texts.\n- Extract specific information out of texts.\n- Visualise your results in a word cloud.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -759,7 +759,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 28, 2025 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Feb 28, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 4, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -775,7 +775,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 1 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
 
     </blockquote>
     </section>
@@ -790,7 +790,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                  
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
-                <p>The British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s (<span class="citation"><a href="#Ng2022">Ng 2022</a></span>). Those redactions were visibly marked by replacement characters like ×, making them visible even to those who did not read any Chinese.</p>
+                <p>The British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s (<span class="citation"><a href="#Ng2022">Ng 2022</a></span>).
+Replacement characters like <code class="language-plaintext highlighter-rouge">×</code> visibly marked those redactions, making them visible even to those who did not read any Chinese.</p>
 
 <figure id="figure-1" style="max-width: 90%;"><img src="/training-material/topics/statistics/tutorials/text_mining_chinese/images/Example_x_censored_Chinese_article.svg" alt="Example of a Chinese article with symbol × marking censored characters. " width="176" height="125" loading="lazy" /><a target="_blank" href="/training-material/topics/statistics/tutorials/text_mining_chinese/images/Example_x_censored_Chinese_article.svg" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of a Chinese article with symbol × marking censored characters</figcaption></figure>
 
@@ -806,17 +807,14 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   <p>In this tutorial, we will cover:</p>
 
 <ol id="markdown-toc">
-  <li><a href="#uploading-the-texts" id="markdown-toc-uploading-the-texts">Uploading the Texts</a></li>
+  <li><a href="#uploading-the-texts" id="markdown-toc-uploading-the-texts">Uploading the texts</a></li>
   <li><a href="#pre-processing" id="markdown-toc-pre-processing">Pre-processing</a>    <ol>
       <li><a href="#clean-up-both-texts" id="markdown-toc-clean-up-both-texts">Clean up both texts</a></li>
       <li><a href="#comparing-the-censored-and-uncensored-text" id="markdown-toc-comparing-the-censored-and-uncensored-text">Comparing the censored and uncensored text</a></li>
-      <li><a href="#create-a-file-for-further-processing" id="markdown-toc-create-a-file-for-further-processing">Create a file for further processing</a></li>
     </ol>
   </li>
-  <li><a href="#select-only-censored-lines" id="markdown-toc-select-only-censored-lines">Select only censored lines</a>    <ol>
-      <li><a href="#ensure-consistent-file-format" id="markdown-toc-ensure-consistent-file-format">Ensure Consistent File Format</a></li>
-    </ol>
-  </li>
+  <li><a href="#select-only-censored-lines" id="markdown-toc-select-only-censored-lines">Select only censored lines</a></li>
+  <li><a href="#ensure-consistent-file-format" id="markdown-toc-ensure-consistent-file-format">Ensure consistent file format</a></li>
   <li><a href="#summarise-your-findings" id="markdown-toc-summarise-your-findings">Summarise your findings</a></li>
   <li><a href="#sort-your-findings" id="markdown-toc-sort-your-findings">Sort your findings</a></li>
   <li><a href="#cut-out-the-censored-characters-only" id="markdown-toc-cut-out-the-censored-characters-only">Cut out the censored characters only</a></li>
@@ -826,7 +824,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 </blockquote>
 
-<h1 id="uploading-the-texts">Uploading the Texts</h1>
+<h1 id="uploading-the-texts">Uploading the texts</h1>
 
 <p>The machine-readable versions of the Chinese newspaper articles I originally used in my dissertation come from a proprietary database and can not be shared here. Instead, I generated a dummy article with a similar setup in GPT and manually adapted the censorship symbols based on my research. The articles differ in style and punctuation, as is consistent with the articles in my research. Therefore, the input files are two texts in traditional Chinese. The first is censored, containing ×, and the second one is uncensored and does not contain replacement symbols. Both texts slightly differ in their layout, which will be unified later.</p>
 
@@ -854,7 +852,7 @@ https://zenodo.org/records/14899614/files/Example_Chinese_newspaper_uncensored.t
     </li>
     <li>Rename the datasets</li>
     <li>
-      <p>Check that the datatype</p>
+      <p>Check that the datatype is <code class="language-plaintext highlighter-rouge">txt</code>.</p>
 
       <!--SNIPPET-->
       <blockquote class="tip">   <div class="box-title tip-title" id="tip-changing-the-datatype"><button class="gtn-boxify-button tip" type="button" aria-controls="tip-changing-the-datatype" aria-expanded="true"><i class="far fa-lightbulb" aria-hidden="true"></i> <span>Tip: Changing the datatype</span><span class="fold-unfold fa fa-minus-square"></span></button></div>   <ul>   <li>Click on the <i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">galaxy-pencil</span> <strong>pencil icon</strong> for the dataset to edit its attributes</li>   <li>In the central panel, click <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Datatypes</strong> tab on the top</li>   <li>In the <i class="fas fa-database" aria-hidden="true"></i><span class="visually-hidden">galaxy-chart-select-data</span> <strong>Assign Datatype</strong>, select <code class="language-plaintext highlighter-rouge">datatypes</code> from “<em>New type</em>” dropdown     <ul>       <li>Tip: you can start typing the datatype into the field to filter the dropdown menu</li>     </ul>   </li>   <li>Click the <strong>Save</strong> button</li> </ul> </blockquote>
@@ -984,7 +982,7 @@ The result is a clean and reformatted text.</p>
 
 <p>We can now compare the two cleaned texts. This will visualise the differences between the two texts and mark them by colour. Make sure to upload the cleaned censored text with the replacement characters like ‘×’ first. As text two, upload the cleaned uncensored text without the replacement characters.  This version (HTML version) creates an HTML file, which colour codes differences as additions (green) or extractions (red) when comparing the texts.</p>
 
-<h3 id="for-researchers">For Researchers</h3>
+<h3 id="create-a-diff-file-for-researchers">Create a <em>diff</em> file for researchers</h3>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-comparing-the-texts-using-em-diff-em-tool"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Comparing the texts using <em>diff</em> tool</div>
@@ -1026,7 +1024,7 @@ The result is a clean and reformatted text.</p>
 <p>It shows what passages differ in the two texts. Red parts show deletions and green-coloured areas are additions.
 This output is very convenient for researchers, as it shows differences quickly. However, it is not helpful for further processing with Galaxy. For this, we run this tool a second time with slightly changed parameters. The output is the basis for our further analysis.</p>
 
-<h2 id="create-a-file-for-further-processing">Create a file for further processing</h2>
+<h3 id="create-a-diff-file-for-further-processing">Create a <em>diff</em> file for further processing</h3>
 <p>This step runs the text comparison line by line again to create a raw file that the computer can work with.
 It is less intuitive to understand at first glance. Again, clean the censored text with the replacement characters like ‘×’ first and the uncensored text second.</p>
 
@@ -1116,7 +1114,7 @@ Copy the character you want to filter for in the “input” window and select �
 
 </blockquote>
 
-<h2 id="ensure-consistent-file-format">Ensure Consistent File Format</h2>
+<h1 id="ensure-consistent-file-format">Ensure consistent file format</h1>
 
 <p>After filtering for the censored lines, we insert a sub-step to ensure smooth computing. The previous setup could cause an error if the characters filtered in the last step were erased. Then, the extracted file would miss the last column, which would cause an error. This is invisible to the researchers in the file. The compute step covers this potential error and ensures all necessary columns exist.</p>
 
@@ -1158,7 +1156,7 @@ Copy the character you want to filter for in the “input” window and select �
 
 <h1 id="summarise-your-findings">Summarise your findings</h1>
 
-<p>This step sums up how often each character appeared on the table before.</p>
+<p>This step sums up how often each character appeared in the table before.</p>
 
 <blockquote class="notranslate hands_on">
   <div class="box-title hands-on-title" id="hands-on-task-description"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
@@ -1248,7 +1246,7 @@ If you are only interested in the quantitative results, this can be your final o
 
 <h1 id="cut-out-the-censored-characters-only">Cut out the censored characters only</h1>
 
-<p>If you want to visualise of your results, this step gets you there. We select only the uncensored characters from text two. The result is only one column with different rows of Chinese characters.
+<p>If you want to visualise your results, this step gets you there. We select only the uncensored characters from text two. The result is only one column with different rows of Chinese characters.
 It allows scaling words by frequency in the word cloud in the next step. As a result, characters that appear more often appear bigger, making the results evident at first sight.</p>
 
 <blockquote class="notranslate hands_on">
@@ -1313,7 +1311,7 @@ It allows scaling words by frequency in the word cloud in the next step. As a re
 
 <p>Within this workflow, we first unified the layout of both texts, showing one character per line for an easier comparison with <em>diff</em> tool. The tool marked the differences between both texts in colour. Afterwards, we extracted only lines censored with ×. The extraction of the results ran in two strands: One was counting and sorting the results. This will answer what characters the British Hong Kong Government censored in their Chinese newspapers in the 1930s: Based on the (simplified) dummy texts, the characters were 敵 (enemy), 寇 (brave) and 日 (Japan). The character for <em>enemy</em> dominates and was censored five times more often than the character for <em>brave</em>.</p>
 
-<p>What do those findings tell us? The British Hong Kong Government avoided publishing newspapers with a strong stand against Japan. Why? Because the British colony Hong Kong, with a large Chinese population, is located very close to the Chinese mainland. Especially after the Japanese army invaded China in the summer of 1937, the British had to walk a tightrope. They tried to support the Chinese efforts without offending Japan. As a British outpost, Hong Kong had little military power and would not withstand a Japanese attack for long. Therefore, the British tried to appease the Japanese Government and avoid an attack. Calling them brave or enemy openly would have been dangerous. The one redaction of 日 (Japan) is very uncommon. This shows that the censorship practices were adaptable and not always unified. Censoring Hong Kong’s newspapers to avoid anti-Japanese content is therefore a practical example of how appeasement policies from the British Government were implemented locally. This newspaper comparison is consistent with the findings in archival sources that I also researched for my dissertation (<span class="citation"><a href="#Schneider2024">Schneider 2024</a></span>) and lays the censored characters open for the first time.</p>
+<p>What do those findings tell us? The British Hong Kong Government avoided publishing newspapers with a strong stand against Japan. Why? Because the British colony Hong Kong, with a large Chinese population, is located very close to the Chinese mainland. Especially after the Japanese army invaded China in the summer of 1937, the British had to walk a tightrope. They tried to support the Chinese efforts without offending Japan. As a British outpost, Hong Kong had little military power and would not withstand a Japanese attack for long. Therefore, the British tried to appease the Japanese Government and avoid an attack. Calling them brave or enemy openly would have been dangerous. The one redaction of 日 (Japan) is very uncommon. This shows that the censorship practices were adaptable and not always unified. Censoring Hong Kong’s newspapers to avoid anti-Japanese content is, therefore, a practical example of how appeasement policies from the British Government were implemented locally. This newspaper comparison is consistent with the findings in archival sources that I also researched for my dissertation (<span class="citation"><a href="#Schneider2024">Schneider 2024</a></span>) and lays the censored characters open for the first time.</p>
 
                 </section>
 
@@ -1345,7 +1343,7 @@ It allows scaling words by frequency in the word cloud in the next step. As a re
                     <div class="box-title"><i class="fas fa-key" aria-hidden="true"></i> Key points</div>
                     <ul>
                         
-                        <li><p>The <em>diff</em> tool allows to automatically compare two similar texts</p>
+                        <li><p>The <em>diff</em> tool allows comparing two similar texts automatically</p>
 </li>
                         
                         <li><p>The word cloud shows redactions from the texts at one glance</p>
@@ -1610,7 +1608,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/bbdf8c3f95f039a2be08badbc6cf42a6fdb08e67">bbdf8c3</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/7e717488d9fc2b0baccd206f12046928d427dc35">7e71748</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
