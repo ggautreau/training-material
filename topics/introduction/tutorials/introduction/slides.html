@@ -21,7 +21,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@8fc4950307915a93a3d618ff691f688e1e3c365d",
+		release: "galaxy-training-network@27f28da2f4683210a5f543962099b03386e6bba4",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Introduction to Galaxy">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-03-10 10:45:44 +0000">
+<meta name="DC.date" content="2025-03-10 13:42:06 +0000">
 <meta name="DC.creator" content="Andrea Bagnacani">
 <meta name="DC.creator" content="Bérénice Batut">
 <meta name="DC.creator" content="Saskia Hiltemann">
@@ -205,7 +205,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-03-10 10:45:44 +0000",
+  "dateModified": "2025-03-10 13:42:06 +0000",
   "datePublished": "2016-09-30 12:51:14 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -263,7 +263,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "slides",
   "name": "Introduction to Galaxy",
   "url": "https://training.galaxyproject.org/training-material/topics/introduction/tutorials/introduction/slides.html",
-  "version": 4,
+  "version": 5,
   "keywords": [
     "Introduction to Galaxy Analyses"
   ],
@@ -2172,12 +2172,12 @@ Link            | Usage
 
 ### Tool interface
 
-.pull-left[.image-50[![Screenshot of the tool interface for the Sort tool showing some inputs and an execute button.](../../images/galaxy_tool.png)]]
+.pull-left[.image-50[![Screenshot of the tool interface for the Sort tool showing some inputs and a Run Tool button.](../../images/galaxy_tool.png)]]
 .pull-right[
 - A tool form contains:
   - input datasets and parameters
   - help, citations, metadata
-  - an `Execute` button to start a job, which will add some output datasets to the history
+  - a `Run Tool` button to start a job, which will add some output datasets to the history
 - New tool versions can be installed without removing old ones to ensure reproducibility
 ]
 
@@ -2187,7 +2187,7 @@ The tool form is generated from a simple XML file describing:
 - the input datasets and their datatypes
 - the tool parameters (numerical, text, boolean, selections, colour)
 - the dependencies required to run the tool
-- how to generate a command to execute the tool with the specified inputs and parameters
+- how to generate a command to run the tool with the specified inputs and parameters
 - the output datasets the tool should produce and their datatypes
 - tests
 - help, citations
