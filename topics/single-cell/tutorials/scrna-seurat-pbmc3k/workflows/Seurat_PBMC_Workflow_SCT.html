@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@fbcf2c21e9ca02f24b057ec8d54567ec84d6ae38",
+		release: "galaxy-training-network@b373a2fb7e7964b831fc7d79e07bb64668b1001f",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -368,9 +368,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   2 -->|output| 4;
   1 -->|output| 4;
   0 -->|output| 4;
-  9c5ff14c-d3a8-4bc4-8dab-78d2d6a08f22["Output\nInput 3k PBMC"];
-  4 --> 9c5ff14c-d3a8-4bc4-8dab-78d2d6a08f22;
-  style 9c5ff14c-d3a8-4bc4-8dab-78d2d6a08f22 stroke:#2c3143,stroke-width:4px;
+  e0afaa6c-cd4c-4be3-9d73-38a1b1de1723["Output\nInput 3k PBMC"];
+  4 --> e0afaa6c-cd4c-4be3-9d73-38a1b1de1723;
+  style e0afaa6c-cd4c-4be3-9d73-38a1b1de1723 stroke:#2c3143,stroke-width:4px;
   5["Seurat Data Management"];
   4 -->|rds_out| 5;
   6["Mitochondrial Annotations"];
@@ -385,9 +385,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   6 -->|rds_out| 10;
   11["Preprocessed Data"];
   10 -->|rds_out| 11;
-  69493623-72a8-4bdf-9cf9-0b3229557567["Output\nPreprocessed Data"];
-  11 --> 69493623-72a8-4bdf-9cf9-0b3229557567;
-  style 69493623-72a8-4bdf-9cf9-0b3229557567 stroke:#2c3143,stroke-width:4px;
+  1490f4b6-b6ea-41be-b164-b686eb612610["Output\nPreprocessed Data"];
+  11 --> 1490f4b6-b6ea-41be-b164-b686eb612610;
+  style 1490f4b6-b6ea-41be-b164-b686eb612610 stroke:#2c3143,stroke-width:4px;
   12["Seurat Data Management"];
   11 -->|rds_out| 12;
   13["Seurat Visualize"];
@@ -432,9 +432,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   24 -->|rds_out| 32;
   33["Annotated Clusters"];
   24 -->|rds_out| 33;
-  01c830ce-807e-41fa-b175-0a610c6121aa["Output\nAnnotated Clusters"];
-  33 --> 01c830ce-807e-41fa-b175-0a610c6121aa;
-  style 01c830ce-807e-41fa-b175-0a610c6121aa stroke:#2c3143,stroke-width:4px;
+  0e0f3b68-2335-4ea4-acd0-a790c736033b["Output\nAnnotated Clusters"];
+  33 --> 0e0f3b68-2335-4ea4-acd0-a790c736033b;
+  style 0e0f3b68-2335-4ea4-acd0-a790c736033b stroke:#2c3143,stroke-width:4px;
   34["DE Markers Tabular"];
   28 -->|markers_tabular| 34;
   35["Seurat Visualize"];
@@ -444,9 +444,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   33 -->|rds_out| 36;
   37["Input DE Markers"];
   34 -->|tabular| 37;
-  8ae37310-b7c1-4ee2-8f10-8c1fcdfaea5d["Output\nInput DE Markers"];
-  37 --> 8ae37310-b7c1-4ee2-8f10-8c1fcdfaea5d;
-  style 8ae37310-b7c1-4ee2-8f10-8c1fcdfaea5d stroke:#2c3143,stroke-width:4px;
+  a317086b-b870-4c8b-b0e9-ac3a1b17a9b5["Output\nInput DE Markers"];
+  37 --> a317086b-b870-4c8b-b0e9-ac3a1b17a9b5;
+  style a317086b-b870-4c8b-b0e9-ac3a1b17a9b5 stroke:#2c3143,stroke-width:4px;
   38["Seurat Visualize"];
   37 -->|out_file1| 38;
   33 -->|rds_out| 38;</pre>
@@ -765,7 +765,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/fbcf2c21e9ca02f24b057ec8d54567ec84d6ae38">fbcf2c2</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/b373a2fb7e7964b831fc7d79e07bb64668b1001f">b373a2f</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>

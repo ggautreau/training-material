@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@fbcf2c21e9ca02f24b057ec8d54567ec84d6ae38",
+		release: "galaxy-training-network@b373a2fb7e7964b831fc7d79e07bb64668b1001f",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -338,9 +338,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
 				<ul class="dropdown-menu">
 					
 					
-					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Europe</a></li>
-					
 					<li class="dropdown-item"><a href="https://usegalaxy.org/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Main</a></li>
+					
+					<li class="dropdown-item"><a href="https://usegalaxy.eu/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy Europe</a></li>
 					
 					<li class="dropdown-item"><a href="https://usegalaxy.fr/workflows/trs_import?run_form=true&trs_url=https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/single-cell-scrna-seurat-pbmc3k/versions/seurat-pbmc-workflow">Galaxy France</a></li>
 					
@@ -368,9 +368,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   2 -->|output| 4;
   1 -->|output| 4;
   0 -->|output| 4;
-  1677937a-743c-49ec-9f22-017fbf7d03a2["Output\nInput 3k PBMC"];
-  4 --> 1677937a-743c-49ec-9f22-017fbf7d03a2;
-  style 1677937a-743c-49ec-9f22-017fbf7d03a2 stroke:#2c3143,stroke-width:4px;
+  0e84981d-75d6-4d69-9c18-393ac35e6de5["Output\nInput 3k PBMC"];
+  4 --> 0e84981d-75d6-4d69-9c18-393ac35e6de5;
+  style 0e84981d-75d6-4d69-9c18-393ac35e6de5 stroke:#2c3143,stroke-width:4px;
   5["Seurat Data Management"];
   4 -->|rds_out| 5;
   6["Mitochondrial Annotations"];
@@ -395,9 +395,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   14 -->|rds_out| 15;
   16["Preprocessed Data"];
   15 -->|rds_out| 16;
-  886d4ee5-1b01-4729-a3ac-a6ae8d7c0f43["Output\nPreprocessed Data"];
-  16 --> 886d4ee5-1b01-4729-a3ac-a6ae8d7c0f43;
-  style 886d4ee5-1b01-4729-a3ac-a6ae8d7c0f43 stroke:#2c3143,stroke-width:4px;
+  7aff64a5-6b06-472d-9a00-07eee6f63995["Output\nPreprocessed Data"];
+  16 --> 7aff64a5-6b06-472d-9a00-07eee6f63995;
+  style 7aff64a5-6b06-472d-9a00-07eee6f63995 stroke:#2c3143,stroke-width:4px;
   17["Seurat Visualize"];
   16 -->|rds_out| 17;
   18["PCA Results"];
@@ -440,9 +440,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   28 -->|rds_out| 36;
   37["Annotated Clusters"];
   28 -->|rds_out| 37;
-  734bc8b5-8425-4bb0-946d-09ee8ffe8baa["Output\nAnnotated Clusters"];
-  37 --> 734bc8b5-8425-4bb0-946d-09ee8ffe8baa;
-  style 734bc8b5-8425-4bb0-946d-09ee8ffe8baa stroke:#2c3143,stroke-width:4px;
+  d5885c18-549a-4e19-9a47-d9cb1fdbd966["Output\nAnnotated Clusters"];
+  37 --> d5885c18-549a-4e19-9a47-d9cb1fdbd966;
+  style d5885c18-549a-4e19-9a47-d9cb1fdbd966 stroke:#2c3143,stroke-width:4px;
   38["DE Markers Tabular"];
   32 -->|markers_tabular| 38;
   39["Seurat Visualize"];
@@ -452,9 +452,9 @@ hgroup p { font-family: monospace; font-size: 0.8rem;}
   37 -->|rds_out| 40;
   41["Input DE Markers"];
   38 -->|tabular| 41;
-  419daedb-3217-4db1-916b-d2e31e1ec508["Output\nInput DE Markers"];
-  41 --> 419daedb-3217-4db1-916b-d2e31e1ec508;
-  style 419daedb-3217-4db1-916b-d2e31e1ec508 stroke:#2c3143,stroke-width:4px;
+  e3be8cef-e1ea-4a5c-b060-bd61ce2330c3["Output\nInput DE Markers"];
+  41 --> e3be8cef-e1ea-4a5c-b060-bd61ce2330c3;
+  style e3be8cef-e1ea-4a5c-b060-bd61ce2330c3 stroke:#2c3143,stroke-width:4px;
   42["Seurat Visualize"];
   41 -->|out_file1| 42;
   37 -->|rds_out| 42;</pre>
@@ -773,7 +773,7 @@ workflow-install -g GALAXY -a API_KEY -w workflow.ga --publish-workflows
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/fbcf2c21e9ca02f24b057ec8d54567ec84d6ae38">fbcf2c2</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/b373a2fb7e7964b831fc7d79e07bb64668b1001f">b373a2f</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
