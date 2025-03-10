@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@27f28da2f4683210a5f543962099b03386e6bba4",
+		release: "galaxy-training-network@5d8f2dfb83cf07e1324258a4d2862a161ddae3b6",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Text-Mining Differences in Chinese Newspaper Articles">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-03-04 10:25:42 +0000">
+<meta name="DC.date" content="2025-03-10 13:49:16 +0000">
 <meta name="DC.creator" content="Daniela Schneider"><meta name="description" content="Statistical Analyses for omics data and machine learning using Galaxy tools">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Statistics and machine learning / Text-Mining Differences in Chinese Newspaper Articles / Hands-on: Text-Mining Differences in Chinese Newspaper Articles">
@@ -185,8 +185,8 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "type": "project"
   },
   "workTranslation": [],
-  "creativeWorkStatus": "Draft",
-  "dateModified": "2025-03-04 10:25:42 +0000",
+  "creativeWorkStatus": "Active",
+  "dateModified": "2025-03-10 13:49:16 +0000",
   "datePublished": "2025-02-28 12:12:48 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -244,14 +244,13 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Text-Mining Differences in Chinese Newspaper Articles",
   "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/text_mining_chinese/tutorial.html",
-  "version": 2,
+  "version": 3,
   "timeRequired": "PT1H",
   "teaches": "- Learn to clean and compare two texts.\n- Extract specific information out of texts.\n- Visualise your results in a word cloud.",
   "keywords": [
     "Statistics and machine learning",
     "Humanities",
-    "Text_mining",
-    "work-in-progress"
+    "Text_mining"
   ],
   "description": "## Abstract\n\nThe British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How can I automatically compare two Chinese newspaper articles?\n - What characters were censored in a Chinese newspaper published in Hong Kong in the 1930s?\n\n\n## Learning Objectives\n\n- Learn to clean and compare two texts.\n- Extract specific information out of texts.\n- Visualise your results in a word cloud.\n\n",
   "inLanguage": {
@@ -718,12 +717,6 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <article class="tutorial topic-statistics">
     <h1 data-toc-skip>Text-Mining Differences in Chinese Newspaper Articles</h1>
     
-    <div class="alert alert-warning" role="alert">
-        <h4 class="alert-heading">Under Development!</h4>
-        <p>This tutorial is not in its final state. The content may change a lot in the next months.
-        Because of this status, it is also not listed in the topic pages.</p>
-    </div>
-    
 
     <section aria-labelledby="overview-box" id="tutorial-metadata">
     <div markdown="0">
@@ -940,7 +933,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 28, 2025 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 4, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 10, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -956,7 +949,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 3 </div>
 
     </blockquote>
     </section>
@@ -972,7 +965,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
                 <p>The British Hong Kong Government censored Chinese newspapers before their publication in the colony in the 1930s (<span class="citation"><a href="#Ng2022">Ng 2022</a></span>).
-Replacement characters like <code class="language-plaintext highlighter-rouge">×</code> visibly marked those redactions, making them visible even to those who did not read any Chinese.</p>
+Replacement characters like × visibly marked those redactions, making them visible even to those who did not read any Chinese.</p>
 
 <figure id="figure-1" style="max-width: 90%;"><img src="/training-material/topics/statistics/tutorials/text_mining_chinese/images/Example_x_censored_Chinese_article.svg" alt="Example of a Chinese article with symbol × marking censored characters. " width="176" height="125" loading="lazy" /><a target="_blank" href="/training-material/topics/statistics/tutorials/text_mining_chinese/images/Example_x_censored_Chinese_article.svg" rel="noopener noreferrer"><small>Open image in new tab</small></a><br /><br /><figcaption><span class="figcaption-prefix"><strong>Figure 1</strong>:</span> Example of a Chinese article with symbol × marking censored characters</figcaption></figure>
 
@@ -1461,7 +1454,8 @@ It allows scaling words by frequency in the word cloud in the next step. As a re
     <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/wordcloud/wordcloud/1.9.4+galaxy0" title="Generate a word cloud tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generate a word cloud</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.4+galaxy0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file”</em>: <code class="language-plaintext highlighter-rouge">out_file1</code> (output of <strong>Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
-        <li><em>” Smallest font size to use”</em>: <code class="language-plaintext highlighter-rouge">8</code></li>
+        <li>*“Do you want to select a special font?”: <code class="language-plaintext highlighter-rouge">Select from a list of fonts</code>: <code class="language-plaintext highlighter-rouge">Noto Sans Traditional Chinese</code></li>
+        <li><em>“Smallest font size to use”</em>: <code class="language-plaintext highlighter-rouge">8</code></li>
         <li><em>“Color option”</em>: <code class="language-plaintext highlighter-rouge">Color</code></li>
         <li><em>“Ratio of times to try horizontal fitting as opposed to vertical”</em>: <code class="language-plaintext highlighter-rouge">1.0</code></li>
         <li><em>“Scaling of words by frequency (0 - 1)”</em>: <code class="language-plaintext highlighter-rouge">0.9</code></li>
@@ -1789,7 +1783,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/27f28da2f4683210a5f543962099b03386e6bba4">27f28da</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/5d8f2dfb83cf07e1324258a4d2862a161ddae3b6">5d8f2df</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
