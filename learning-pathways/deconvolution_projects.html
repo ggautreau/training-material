@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@45b72935638900d475815f74da700fdc478a4bf9",
+		release: "galaxy-training-network@0548eb2da46dfe6c3a58831b9191be3363017e65",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Bioinformatics Projects: Using deconvolution to get new insights from old bulk RNA-seq data">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-03-06 11:13:12 +0000"><meta name="description" content="Are you an educator looking for project ideas for students to practice independent enquiry and research skills? Are you a student looking for a project idea? Look no more - here, you will find a learning pathway of tutorials that can guide you through the skills to find old data and transform it into new results!  To be clear, we will only provide the methods - you will need to come up with your own research question by exploring the literature and available public datasets, apply these analyses, and interpret the results. Your research question will take the form of, ** How does `variable X` impact the cell type proportions in `issue/sample/organism Y`? **  Note: You will need to be familiar with the Galaxy interface and single-cell RNA-seq analysis in general to follow this Learning Pathway. You can do so by completing the [Introduction to single-cell analysis learning pathway]({% link learning-pathways/intro_single_cell.md %}). It would be a bonus to also complete the [Beyond sin...">
+<meta name="DC.date" content="2025-03-11 21:14:37 +0000"><meta name="description" content="Are you an educator looking for project ideas for students to practice independent enquiry and research skills? Are you a student looking for a project idea? Look no more - here, you will find a learning pathway of tutorials that can guide you through the skills to find old data and transform it into new results!  To be clear, we will only provide the methods - you will need to come up with your own research question by exploring the literature and available public datasets, apply these analyses, and interpret the results. Your research question will take the form of, ** How does `variable X` impact the cell type proportions in `issue/sample/organism Y`? **  Note: You will need to be familiar with the Galaxy interface and single-cell RNA-seq analysis in general to follow this Learning Pathway. You can do so by completing the [Introduction to single-cell analysis learning pathway]({% link learning-pathways/intro_single_cell.md %}). It would be a bonus to also complete the [Beyond sin...">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Learning Pathway: Bioinformatics Projects: Using deconvolution to get new insights from old bulk RNA-seq data">
         <meta property="og:description" content="Are you an educator looking for project ideas for students to practice independent enquiry and research skills? Are you a student looking for a project idea? Look no more - here, you will find a learning pathway of tutorials that can guide you through the skills to find old data and transform it into new results!  To be clear, we will only provide the methods - you will need to come up with your own research question by exploring the literature and available public datasets, apply these analyses, and interpret the results. Your research question will take the form of, ** How does `variable X` impact the cell type proportions in `issue/sample/organism Y`? **  Note: You will need to be familiar with the Galaxy interface and single-cell RNA-seq analysis in general to follow this Learning Pathway. You can do so by completing the [Introduction to single-cell analysis learning pathway]({% link learning-pathways/intro_single_cell.md %}). It would be a bonus to also complete the [Beyond sin...">
@@ -261,10 +261,10 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
           "@id": "https://bioschemas.org/profiles/Organization/0.3-DRAFT",
           "@type": "CreativeWork"
         },
-        "name": "ELIXIR-UK: FAIR Data Stewardship training",
-        "description": "This work has been funded by the ELIXIR-UK FAIR Data Stewardship training UKRI award (MR/V038966/1)\n",
-        "url": "https://training.galaxyproject.org/training-material/hall-of-fame/elixir-fair-data/",
-        "logo": "https://github.com/elixir-fair-data.png"
+        "name": "DASH UK",
+        "description": "This Fellowship was funded through the ELIXIR-UK DaSH project as part of the UKRI Innovation Scholars: Data Science Training in Health and Bioscience call (DaSH). (MR/V038966/1). The project aims to embed Research Data Management (RDM) know-how into UK universities and institutes by producing and delivering training in FAIR data stewardship using ELIXIR-UK knowledge and resources.\n",
+        "url": "https://elixiruknode.org/projects/elixir-uk-dash/",
+        "logo": "/training-material/shared/images/dash.png"
       }
     }
   ],
@@ -347,7 +347,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
       "description": "And now you're done! We hope that you generated interesting results that you are able to write up in a fantastic project. We would love to hear from you if you have! Contact us via our Galaxy [single cell chat group on Matrix](https://matrix.to/#/#Galaxy-Training-Network_galaxy-single-cell:gitter.im). Alternatively, if you prefer Slack, join the [GTN's Slack workspace](https://gxy.io/gtn-slack) and message our #single-cell-users channel.\n\nYou will find more features, tips and tricks in our general [Galaxy Single-cell Training page](/training-material/topics/single-cell/index.html).\n"
     }
   ],
-  "dateModified": "2025-03-06 11:13:12 +0000",
+  "dateModified": "2025-03-11 21:14:37 +0000",
   "datePublished": "2025-03-06 11:13:12 +0000",
   "isAccessibleForFree": true,
   "offers": [
@@ -2125,20 +2125,18 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 	
 <div class="d-flex flex-wrap">
 
-	<a href="/training-material/hall-of-fame/elixir-fair-data/" class="funder-badge">
+	<a href="/training-material/hall-of-fame/elixir-uk-dash/" class="funder-badge">
 		
 		<div class="avatar">
 			
-				
-				<img class="funder-avatar" src="https://avatars.githubusercontent.com/elixir-fair-data" alt="Logo">
-				
+			<img class="funder-avatar" src="/training-material/shared/images/dash.png" alt="Logo">
 			
 		</div>
 
 		<div class="info">
-			<div class="name">ELIXIR Fair Data</div>
+			<div class="name">DASH UK</div>
 			<div class="description">
-			This work has been funded by the ELIXIR-UK FAIR Data Stewardship training UKRI award (MR/V038966/1)
+			This Fellowship was funded through the ELIXIR-UK DaSH project as part of the UKRI Innovation Scholars: Data Science Training in Health and Bioscience call (DaSH). (MR/V038966/1). The project aims to embed Research Data Management (RDM) know-how into UK universities and institutes by producing and delivering training in FAIR data stewardship using ELIXIR-UK knowledge and resources.
 
             
 			</div>
@@ -2213,7 +2211,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/45b72935638900d475815f74da700fdc478a4bf9">45b7293</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/0548eb2da46dfe6c3a58831b9191be3363017e65">0548eb2</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
