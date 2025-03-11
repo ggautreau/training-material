@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@2a016a1fa5c004e10d1da78c06d559868373a1d5",
+		release: "galaxy-training-network@6054cbedde88718ccbb368fc83f5763c5df9a856",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Text-Mining Differences in Chinese Newspaper Articles">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-03-10 13:49:16 +0000">
+<meta name="DC.date" content="2025-03-11 08:44:30 +0000">
 <meta name="DC.creator" content="Daniela Schneider"><meta name="description" content="Statistical Analyses for omics data and machine learning using Galaxy tools">
         <meta property="og:site_name" content="Galaxy Training Network">
 	<meta property="og:title" content="Statistics and machine learning / Text-Mining Differences in Chinese Newspaper Articles / Hands-on: Text-Mining Differences in Chinese Newspaper Articles">
@@ -186,7 +186,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-03-10 13:49:16 +0000",
+  "dateModified": "2025-03-11 08:44:30 +0000",
   "datePublished": "2025-02-28 12:12:48 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -244,7 +244,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   "learningResourceType": "e-learning",
   "name": "Text-Mining Differences in Chinese Newspaper Articles",
   "url": "https://training.galaxyproject.org/training-material/topics/statistics/tutorials/text_mining_chinese/tutorial.html",
-  "version": 3,
+  "version": 4,
   "timeRequired": "PT1H",
   "teaches": "- Learn to clean and compare two texts.\n- Extract specific information out of texts.\n- Visualise your results in a word cloud.",
   "keywords": [
@@ -933,7 +933,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Feb 28, 2025 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 10, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 11, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -949,7 +949,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 3 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 4 </div>
 
     </blockquote>
     </section>
@@ -1081,7 +1081,7 @@ You can check what your input matches in <a href="https://regex101.com">Regex 10
   <div class="box-title hands-on-title" id="hands-on-cleaning-the-text-with-regular-expressions"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Cleaning the Text with Regular Expressions</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/9.3+galaxy1" title="Replace Text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.3+galaxy1)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/9.5+galaxy0" title="Replace Text tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Replace Text</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 9.5+galaxy0)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“File to process”</em>: <code class="language-plaintext highlighter-rouge">output</code> (Input dataset)</li>
         <li>In <em>“Replacement”</em>:
@@ -1089,6 +1089,7 @@ You can check what your input matches in <a href="https://regex101.com">Regex 10
             <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Replacement”</em>
               <ul>
                 <li><em>“Find pattern”</em>: <code class="language-plaintext highlighter-rouge">\r</code></li>
+                <li><em>“Additional sed commands before replacement”</em>: <code class="language-plaintext highlighter-rouge">:a;N;$!ba;</code></li>
               </ul>
             </li>
             <li><i class="far fa-plus-square" aria-hidden="true"></i><span class="visually-hidden">param-repeat</span> <em>“Insert Replacement”</em>
@@ -1116,7 +1117,10 @@ You can check what your input matches in <a href="https://regex101.com">Regex 10
         <p>Regular expressions can not only find particular words, as you might be familiar with from regular text editors.
 It is more powerful and can find particular patterns, for example, only capitalised words or all numbers.
 In this step, we mostly delete unnecessary placeholders.
-The first pattern we want to find is <code class="language-plaintext highlighter-rouge">\r</code>. It catches a specific form of invisible linebreaks that would create unwanted gaps in the comparison later. We delete those by leaving the optional “Replace with” field blank.
+The first pattern we want to find is <code class="language-plaintext highlighter-rouge">\r</code>. It catches a specific form of invisible linebreaks that would create unwanted gaps in the comparison later.
+We delete those by leaving the optional “Replace with” field blank.
+The additional sed commands before replacement <code class="language-plaintext highlighter-rouge">:a;N;$!ba;</code> catch all blank spaces with this tool.
+It is necessary only once to ensure that particular end-of-line characters are removed consistently.
 Similarly, <code class="language-plaintext highlighter-rouge">\n</code> marks linebreaks. We also delete those by leaving the optional “Replace with” field blank.
 The next expression we search for is <code class="language-plaintext highlighter-rouge">\s</code>. Those are spaces as you see them between words on your computer. We delete those.
 As a result, there are no gaps in our text anymore.
@@ -1451,7 +1455,7 @@ It allows scaling words by frequency in the word cloud in the next step. As a re
   <div class="box-title hands-on-title" id="hands-on-task-description-1"><i class="fas fa-pencil-alt" aria-hidden="true" ></i> Hands On:  Task description</div>
 
   <ol>
-    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/wordcloud/wordcloud/1.9.4+galaxy0" title="Generate a word cloud tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generate a word cloud</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.4+galaxy0)</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/wordcloud/wordcloud/1.9.4+galaxy1" title="Generate a word cloud tool" aria-role="button"><i class="fas fa-wrench" aria-hidden="true"></i> <strong>Generate a word cloud</strong> (<i class="fas fa-cubes" aria-hidden="true"></i> Galaxy version 1.9.4+galaxy1)</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input file”</em>: <code class="language-plaintext highlighter-rouge">out_file1</code> (output of <strong>Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>)</li>
         <li>*“Do you want to select a special font?”: <code class="language-plaintext highlighter-rouge">Select from a list of fonts</code>: <code class="language-plaintext highlighter-rouge">Noto Sans Traditional Chinese</code></li>
@@ -1667,9 +1671,19 @@ tools:
   revisions: 86755160afbf
   tool_panel_section_label: Text Manipulation
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: text_processing
+  owner: bgruening
+  revisions: 3dc70b59608c
+  tool_panel_section_label: Text Manipulation
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: wordcloud
   owner: bgruening
   revisions: 54c2d8ebf0cf
+  tool_panel_section_label: Graph/Display Data
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: wordcloud
+  owner: bgruening
+  revisions: b98bcfdec481
   tool_panel_section_label: Graph/Display Data
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
 - name: column_maker
@@ -1783,7 +1797,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/2a016a1fa5c004e10d1da78c06d559868373a1d5">2a016a1</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/6054cbedde88718ccbb368fc83f5763c5df9a856">6054cbe</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
