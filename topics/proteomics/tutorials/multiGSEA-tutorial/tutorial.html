@@ -18,7 +18,7 @@ if(localStorage.getItem('sentry-opt-out') !== 'opt-out' && navigator.doNotTrack 
 	console.log("Sentry: opt-in");
 	Sentry.init({
 		dsn: "https://45e0ec6e4373462b92969505df37cf40@sentry.galaxyproject.org/10",
-		release: "galaxy-training-network@6054cbedde88718ccbb368fc83f5763c5df9a856",
+		release: "galaxy-training-network@d29ede79c710c1cb2b07a4b9b64374aab37131c9",
 		integrations: [new Sentry.BrowserTracing(), new Sentry.Replay()],
 		sampleRate: 0.1,
 		tracesSampleRate: 0.1,
@@ -68,7 +68,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 <meta name="DC.type" content="text">
 <meta name="DC.title" content="Multiomics data analysis using MultiGSEA">
 <meta name="DC.publisher" content="Galaxy Training Network">
-<meta name="DC.date" content="2025-03-10 15:22:38 +0000">
+<meta name="DC.date" content="2025-03-11 10:20:42 +0000">
 <meta name="DC.creator" content="Thorben Stehling">
 <meta name="DC.creator" content="Matthias Bernt"><meta name="description" content="Training material for proteomics workflows in Galaxy">
         <meta property="og:site_name" content="Galaxy Training Network">
@@ -187,7 +187,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
   },
   "workTranslation": [],
   "creativeWorkStatus": "Active",
-  "dateModified": "2025-03-10 15:22:38 +0000",
+  "dateModified": "2025-03-11 10:20:42 +0000",
   "datePublished": "2025-03-10 15:22:38 +0000",
   "copyrightHolder": {
     "@type": "Organization",
@@ -241,11 +241,11 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "description": "Training material for proteomics workflows in Galaxy",
     "url": "https://training.galaxyproject.org/training-material/topics/proteomics/"
   },
-  "abstract": "The multiGSEA package was designed to run a robust GSEA-based pathway enrichment for multiple omics layers. The enrichment is calculated for each omics layer separately and aggregated p-values are calculated afterwards to derive a composite multi-omics pathway enrichment.",
+  "abstract": "The multiGSEA package was designed to run a robust GSEA-based pathway enrichment for multiple omics layers (Canzler and Hackermüller, 2020). The enrichment is calculated for each omics layer separately and aggregated p-values are calculated afterwards to derive a composite multi-omics pathway enrichment.",
   "learningResourceType": "e-learning",
   "name": "Multiomics data analysis using MultiGSEA",
   "url": "https://training.galaxyproject.org/training-material/topics/proteomics/tutorials/multiGSEA-tutorial/tutorial.html",
-  "version": 1,
+  "version": 2,
   "timeRequired": "PT1H",
   "teaches": "- Perform GSEA-based pathway enrichment for transcriptomics, proteomics, and metabolomics data.\n- Understand how to combine p-values across multiple omics layers.",
   "keywords": [
@@ -255,7 +255,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
     "proteomics",
     "metabolomics"
   ],
-  "description": "## Abstract\n\nThe multiGSEA package was designed to run a robust GSEA-based pathway enrichment for multiple omics layers. The enrichment is calculated for each omics layer separately and aggregated p-values are calculated afterwards to derive a composite multi-omics pathway enrichment.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How to use MultiGSEA for GSEA-based pathway enrichment for multiple omics layers?\n\n\n## Learning Objectives\n\n- Perform GSEA-based pathway enrichment for transcriptomics, proteomics, and metabolomics data.\n- Understand how to combine p-values across multiple omics layers.\n\n",
+  "description": "## Abstract\n\nThe multiGSEA package was designed to run a robust GSEA-based pathway enrichment for multiple omics layers (Canzler and Hackermüller, 2020). The enrichment is calculated for each omics layer separately and aggregated p-values are calculated afterwards to derive a composite multi-omics pathway enrichment.\n\n\n## About This Material\n\nThis is a Hands-on Tutorial from the GTN which is usable either for individual self-study, or as a teaching material in a classroom.\n\n\n## Questions this  will address\n\n - How to use MultiGSEA for GSEA-based pathway enrichment for multiple omics layers?\n\n\n## Learning Objectives\n\n- Perform GSEA-based pathway enrichment for transcriptomics, proteomics, and metabolomics data.\n- Understand how to combine p-values across multiple omics layers.\n\n",
   "inLanguage": {
     "@type": "Language",
     "name": "English",
@@ -790,7 +790,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
         </ul>
 
         <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Published:</strong> Mar 10, 2025 </div>
-        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 10, 2025 </div>
+        <div><strong><i class="far fa-calendar" aria-hidden="true"></i> Last modification:</strong> Mar 11, 2025 </div>
         <div><strong><i class="fas fa-balance-scale" aria-hidden="true"></i> License:</strong>
 		
             Tutorial Content is licensed under
@@ -806,7 +806,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
 
 	
 	
-	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 1 </div>
+	<div><strong><i class="fas fa-code-commit" aria-hidden="true"></i><span class="visually-hidden">version</span> Revision:</strong> 2 </div>
 
     </blockquote>
     </section>
@@ -821,7 +821,7 @@ if(localStorage.getItem('plausible-opt-out') !== 'opt-out' && navigator.doNotTra
                  
 
                 <section aria-label="Tutorial Content" id="tutorial-content">
-                <p>The multiGSEA package was designed to run a robust GSEA-based pathway enrichment for multiple omics layers. The enrichment is calculated for each omics layer separately and aggregated p-values are calculated afterwards to derive a composite multi-omics pathway enrichment.</p>
+                <p>The multiGSEA package was designed to run a robust GSEA-based pathway enrichment for multiple omics layers (Canzler and Hackermüller, 2020) <span class="citation"><a href="#Canzler2020">Canzler and Hackermüller 2020</a></span>. The enrichment is calculated for each omics layer separately and aggregated p-values are calculated afterwards to derive a composite multi-omics pathway enrichment.</p>
 
 <p>Pathway definitions can be downloaded from up to eight different pathway databases by means of the graphite Bioconductor package (Sales, Calura, and Romualdi 2018). Feature mapping for transcripts and proteins is supported towards Entrez Gene IDs, Uniprot, Gene Symbol, RefSeq, and Ensembl IDs. The mapping is accomplished through the AnnotationDbi package (Pagès et al. 2019) and currently supported for 11 different model organisms including human, mouse, and rat. ID conversion of metabolite features to Comptox Dashboard IDs (DTXCID, DTXSID), CAS-numbers, Pubchem IDs (CID), HMDB, KEGG, ChEBI, Drugbank IDs, or common metabolite names is accomplished through the AnnotationHub package metabliteIDmapping. This package provides a comprehensive ID mapping for more than 1.1 million entries.</p>
 
@@ -1076,7 +1076,8 @@ Our results also reveal the enrichment of amino acid-related pathways. This can 
                 
                 <h1 id="bibliography">References</h1>
                 <ol class="bibliography"><li id="LOUGHIN2004467">Loughin, T. M., 2004 <b>A systematic comparison of methods for combining p-values from independent tests</b>. Computational Statistics &amp; Data Analysis 47: 467–485. <a href="https://doi.org/10.1016/j.csda.2003.11.020">10.1016/j.csda.2003.11.020</a></li>
-<li id="quiros2017multi">Quirós, P. M., M. A. Prado, N. Zamboni, D. D’Amico, R. W. Williams <i>et al.</i>, 2017 <b>Multi-omics analysis identifies ATF4 as a key regulator of the mitochondrial stress response in mammals</b>. Journal of Cell Biology 216: 2027–2045. <a href="https://doi.org/10.1083/jcb.201702058">10.1083/jcb.201702058</a></li></ol>
+<li id="quiros2017multi">Quirós, P. M., M. A. Prado, N. Zamboni, D. D’Amico, R. W. Williams <i>et al.</i>, 2017 <b>Multi-omics analysis identifies ATF4 as a key regulator of the mitochondrial stress response in mammals</b>. Journal of Cell Biology 216: 2027–2045. <a href="https://doi.org/10.1083/jcb.201702058">10.1083/jcb.201702058</a></li>
+<li id="Canzler2020">Canzler, S., and J. Hackermüller, 2020 <b>multiGSEA: a GSEA-based pathway enrichment analysis for multi-omics data</b>. BMC bioinformatics 21: 1–13. <a href="https://doi.org/10.1186/s12859-020-03910-x">10.1186/s12859-020-03910-x</a></li></ol>
                 
 
                 
@@ -1290,7 +1291,7 @@ tools:
 				</ul>
 				<span style="font-size: 1.3em">Framework</span>
 				<ul class="no-bullets">
-					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/6054cbedde88718ccbb368fc83f5763c5df9a856">6054cbe</a></li>
+					<li>Revision <a href="https://github.com/galaxyproject/training-material/commit/d29ede79c710c1cb2b07a4b9b64374aab37131c9">d29ede7</a></li>
 					<li><a rel="license" href="https://github.com/galaxyproject/training-material/blob/main/LICENSE.md">MIT</a> Licensed</li>
 					<li><a href="https://jekyllrb.com/">Jekyll(4.3.2 | production)</a></li>
 				</ul>
