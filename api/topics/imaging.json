@@ -224,6 +224,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -371,6 +376,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -506,6 +515,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -638,6 +651,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -778,6 +795,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -912,6 +933,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -1043,6 +1068,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -1353,26 +1382,32 @@
       "id": "imaging/multiplex-tissue-imaging-TMA",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2024-10-15 12:19:56 +0000",
+      "mod_date": "2025-03-13 20:28:14 +0000",
       "pub_date": "2023-02-14 08:03:56 +0000",
-      "version": 4,
+      "version": 5,
       "workflows": [
         {
-          "workflow": "main_workflow.ga",
-          "tests": false,
-          "url": "https://training.galaxyproject.org/training-material/topics/imaging/tutorials/multiplex-tissue-imaging-TMA/workflows/main_workflow.ga",
-          "url_html": "https://training.galaxyproject.org/training-material/topics/imaging/tutorials/multiplex-tissue-imaging-TMA/workflows/main_workflow.html",
-          "path": "topics/imaging/tutorials/multiplex-tissue-imaging-TMA/workflows/main_workflow.ga",
+          "workflow": "GTN_Exemplar_002_TMA_workflow_Feb2025.ga",
+          "tests": true,
+          "url": "https://training.galaxyproject.org/training-material/topics/imaging/tutorials/multiplex-tissue-imaging-TMA/workflows/GTN_Exemplar_002_TMA_workflow_Feb2025.ga",
+          "url_html": "https://training.galaxyproject.org/training-material/topics/imaging/tutorials/multiplex-tissue-imaging-TMA/workflows/GTN_Exemplar_002_TMA_workflow_Feb2025.html",
+          "path": "topics/imaging/tutorials/multiplex-tissue-imaging-TMA/workflows/GTN_Exemplar_002_TMA_workflow_Feb2025.ga",
           "wfid": "imaging-multiplex-tissue-imaging-TMA",
-          "wfname": "main-workflow",
-          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/imaging-multiplex-tissue-imaging-TMA/versions/main-workflow",
-          "license": null,
+          "wfname": "gtn-exemplar-002-tma-workflow-feb2025",
+          "trs_endpoint": "https://training.galaxyproject.org/training-material/api/ga4gh/trs/v2/tools/imaging-multiplex-tissue-imaging-TMA/versions/gtn-exemplar-002-tma-workflow-feb2025",
+          "license": "MIT",
           "parent_id": "imaging/multiplex-tissue-imaging-TMA",
           "topic_id": "imaging",
           "tutorial_id": "multiplex-tissue-imaging-TMA",
-          "creators": [],
-          "name": "GTN_Exemplar_002_TMA_workflow",
-          "title": "GTN_Exemplar_002_TMA_workflow",
+          "creators": [
+            {
+              "class": "Person",
+              "identifier": "https://orcid.org/0000-0002-6942-2469",
+              "name": "Cameron Watson"
+            }
+          ],
+          "name": "GTN_Exemplar_002_TMA_workflow_Feb2025",
+          "title": "GTN_Exemplar_002_TMA_workflow_Feb2025",
           "version": 1,
           "description": "End-to-End Tissue Microarray Analysis with Galaxy-ME",
           "tags": [
@@ -1384,88 +1419,63 @@
             "comments": false,
             "parameters": false
           },
-          "workflowhub_id": "1267",
+          "workflowhub_id": null,
           "history": [
             {
-              "hash": "74c571972f6c9c00bca6242b05cab50a0c947af0",
-              "unix": "1675987355",
-              "message": "update tool IDs, params to tutorial; add updated workflow; add hands-on avivator example to tutorial",
-              "short_hash": "74c571972",
+              "hash": "5ec91efd385ab2d43425a0eed3349fc50134ca1d",
+              "unix": "1741710374",
+              "message": "add redirect. Use smaller test data for CI. add workflow annotations",
+              "short_hash": "5ec91efd3",
+              "num": 4
+            },
+            {
+              "hash": "ca2c7b0af78699fd1ad8e68ad14dc9cbf04c8107",
+              "unix": "1741192563",
+              "message": "add workflow step annotations, labels. rename -tests.yml file for linter",
+              "short_hash": "ca2c7b0af",
               "num": 3
             },
             {
-              "hash": "b0bac741569e5790eca8b5f21619220cea4ab902",
-              "unix": "1657213046",
-              "message": "update tool IDs in MTI workflow for linting",
-              "short_hash": "b0bac7415",
+              "hash": "dc3710c1a53b3cc7c92f6fe05bfa9b1d07fd5af7",
+              "unix": "1741124171",
+              "message": "add orcid to workflow for linting",
+              "short_hash": "dc3710c1a",
               "num": 2
             },
             {
-              "hash": "aa2aba190643cbb000c0c2916d4c3656c1988e2d",
-              "unix": "1656910720",
-              "message": "Multiplex Imaging tutorial - initial push",
-              "short_hash": "aa2aba190",
+              "hash": "5fe1d4e055a887fab78cd9dcd34d7fcda957dc57",
+              "unix": "1741123635",
+              "message": "fix small workflow errors, update answer key history, add workflow tests",
+              "short_hash": "5fe1d4e05",
               "num": 1
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:34 +0000",
-          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\nInput Dataset Collection\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nmarkers.csv\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Dataset\\nPhenotypeWorkflow\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"BaSiC Illumination\"];\n  0 -->|output| 3;\n  4[\"ASHLAR\"];\n  3 -->|output_dfp| 4;\n  3 -->|output_ffp| 4;\n  0 -->|output| 4;\n  1 -->|output| 4;\n  5[\"UNetCoreograph\"];\n  4 -->|output| 5;\n  6[\"Mesmer\"];\n  5 -->|tma_sections| 6;\n  ee73bee3-59e7-4e1c-87fd-197b8eac7e15[\"Output\\nMesmer on input dataset(s): Mask\"];\n  6 --> ee73bee3-59e7-4e1c-87fd-197b8eac7e15;\n  style ee73bee3-59e7-4e1c-87fd-197b8eac7e15 stroke:#2c3143,stroke-width:4px;\n  7[\"Convert image\"];\n  5 -->|tma_sections| 7;\n  8[\"MCQUANT\"];\n  1 -->|output| 8;\n  5 -->|tma_sections| 8;\n  6 -->|mask| 8;\n  fe28534a-2b3f-4ecc-8ba9-a106b2d1425c[\"Output\\nPrimary Mask Quantification\"];\n  8 --> fe28534a-2b3f-4ecc-8ba9-a106b2d1425c;\n  style fe28534a-2b3f-4ecc-8ba9-a106b2d1425c stroke:#2c3143,stroke-width:4px;\n  9[\"Rename OME-TIFF Channels\"];\n  1 -->|output| 9;\n  7 -->|output| 9;\n  10[\"Convert McMicro Output to Anndata\"];\n  8 -->|cellmask| 10;\n  11[\"Single Cell Phenotyping\"];\n  10 -->|outfile| 11;\n  2 -->|output| 11;\n  12[\"Vitessce Visualization\"];\n  11 -->|output| 12;\n  9 -->|renamed_image| 12;\n  6 -->|mask| 12;",
-          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\nInput Dataset Collection\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nmarkers.csv\"]\n  2[color=lightblue,label=\"ℹ️ Input Dataset\\nPhenotypeWorkflow\"]\n  3[label=\"BaSiC Illumination\"]\n  0 -> 3 [label=\"output\"]\n  4[label=\"ASHLAR\"]\n  3 -> 4 [label=\"output_dfp\"]\n  3 -> 4 [label=\"output_ffp\"]\n  0 -> 4 [label=\"output\"]\n  1 -> 4 [label=\"output\"]\n  5[label=\"UNetCoreograph\"]\n  4 -> 5 [label=\"output\"]\n  6[label=\"Mesmer\"]\n  5 -> 6 [label=\"tma_sections\"]\n  kee73bee359e74e1c87fd197b8eac7e15[color=lightseagreen,label=\"Output\\nMesmer on input dataset(s): Mask\"]\n  6 -> kee73bee359e74e1c87fd197b8eac7e15\n  7[label=\"Convert image\"]\n  5 -> 7 [label=\"tma_sections\"]\n  8[label=\"MCQUANT\"]\n  1 -> 8 [label=\"output\"]\n  5 -> 8 [label=\"tma_sections\"]\n  6 -> 8 [label=\"mask\"]\n  kfe28534a2b3f4ecc8ba9a106b2d1425c[color=lightseagreen,label=\"Output\\nPrimary Mask Quantification\"]\n  8 -> kfe28534a2b3f4ecc8ba9a106b2d1425c\n  9[label=\"Rename OME-TIFF Channels\"]\n  1 -> 9 [label=\"output\"]\n  7 -> 9 [label=\"output\"]\n  10[label=\"Convert McMicro Output to Anndata\"]\n  8 -> 10 [label=\"cellmask\"]\n  11[label=\"Single Cell Phenotyping\"]\n  10 -> 11 [label=\"outfile\"]\n  2 -> 11 [label=\"output\"]\n  12[label=\"Vitessce Visualization\"]\n  11 -> 12 [label=\"output\"]\n  9 -> 12 [label=\"renamed_image\"]\n  6 -> 12 [label=\"mask\"]\n}",
+          "modified": "2025-03-13 20:29:30 +0000",
+          "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\nmarkers.csv\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nPhenotypeWorkflow\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ℹ️ Input Collection\\nRaw cycle images\"];\n  style 2 stroke:#2c3143,stroke-width:4px;\n  3[\"Illumination correction with Basic\"];\n  2 -->|output| 3;\n  8a05fb69-9e2b-4fa4-ab8c-77d3241f7a86[\"Output\\nDFP images\"];\n  3 --> 8a05fb69-9e2b-4fa4-ab8c-77d3241f7a86;\n  style 8a05fb69-9e2b-4fa4-ab8c-77d3241f7a86 stroke:#2c3143,stroke-width:4px;\n  a5432ed5-980f-4f04-83a2-b5514019b11b[\"Output\\nFFP images\"];\n  3 --> a5432ed5-980f-4f04-83a2-b5514019b11b;\n  style a5432ed5-980f-4f04-83a2-b5514019b11b stroke:#2c3143,stroke-width:4px;\n  4[\"Stitching and registration with Ashlar\"];\n  3 -->|output_dfp| 4;\n  3 -->|output_ffp| 4;\n  2 -->|output| 4;\n  0 -->|output| 4;\n  81f2c552-cd84-4d48-af14-eb252550f35a[\"Output\\nRegistered image\"];\n  4 --> 81f2c552-cd84-4d48-af14-eb252550f35a;\n  style 81f2c552-cd84-4d48-af14-eb252550f35a stroke:#2c3143,stroke-width:4px;\n  5[\"TMA dearray with UNetCoreograph\"];\n  4 -->|output| 5;\n  d79b4449-f879-42a9-9c79-0e0a6df0fa79[\"Output\\nDearray images\"];\n  5 --> d79b4449-f879-42a9-9c79-0e0a6df0fa79;\n  style d79b4449-f879-42a9-9c79-0e0a6df0fa79 stroke:#2c3143,stroke-width:4px;\n  c3ae2005-725a-487c-a77a-437636f3a296[\"Output\\nTMA dearray map\"];\n  5 --> c3ae2005-725a-487c-a77a-437636f3a296;\n  style c3ae2005-725a-487c-a77a-437636f3a296 stroke:#2c3143,stroke-width:4px;\n  0ed3e920-42ce-457d-9ebe-f0cd0baa1dea[\"Output\\nDearray masks\"];\n  5 --> 0ed3e920-42ce-457d-9ebe-f0cd0baa1dea;\n  style 0ed3e920-42ce-457d-9ebe-f0cd0baa1dea stroke:#2c3143,stroke-width:4px;\n  6[\"Nuclear segmentation\"];\n  5 -->|tma_sections| 6;\n  65c32086-b193-440f-b1a1-e5731bda0820[\"Output\\nNuclear mask\"];\n  6 --> 65c32086-b193-440f-b1a1-e5731bda0820;\n  style 65c32086-b193-440f-b1a1-e5731bda0820 stroke:#2c3143,stroke-width:4px;\n  7[\"Convert dearray images to OME-TIFF\"];\n  5 -->|tma_sections| 7;\n  d1c85ec4-1aea-48ce-88c3-ede346d9b34f[\"Output\\nConverted image\"];\n  7 --> d1c85ec4-1aea-48ce-88c3-ede346d9b34f;\n  style d1c85ec4-1aea-48ce-88c3-ede346d9b34f stroke:#2c3143,stroke-width:4px;\n  8[\"Cell feature quantification with MC-Quant\"];\n  0 -->|output| 8;\n  5 -->|tma_sections| 8;\n  6 -->|mask| 8;\n  a277be13-b5af-4591-b86b-a8679f561677[\"Output\\nPrimary Mask Quantification\"];\n  8 --> a277be13-b5af-4591-b86b-a8679f561677;\n  style a277be13-b5af-4591-b86b-a8679f561677 stroke:#2c3143,stroke-width:4px;\n  9[\"Rename OME-TIFF channels\"];\n  0 -->|output| 9;\n  7 -->|output| 9;\n  0867cba2-0ac1-413d-b6d0-aba8b2dcbe0c[\"Output\\nRenamed image\"];\n  9 --> 0867cba2-0ac1-413d-b6d0-aba8b2dcbe0c;\n  style 0867cba2-0ac1-413d-b6d0-aba8b2dcbe0c stroke:#2c3143,stroke-width:4px;\n  10[\"Convert to Anndata\"];\n  8 -->|cellmask| 10;\n  a10efe57-5e36-4625-8ac8-a4bd27b3ce7e[\"Output\\nAnndata feature table\"];\n  10 --> a10efe57-5e36-4625-8ac8-a4bd27b3ce7e;\n  style a10efe57-5e36-4625-8ac8-a4bd27b3ce7e stroke:#2c3143,stroke-width:4px;\n  11[\"Scimap phenotyping\"];\n  10 -->|outfile| 11;\n  1 -->|output| 11;\n  1711b39d-79db-4012-80b6-abfae28439ae[\"Output\\nPhenotyped feature table\"];\n  11 --> 1711b39d-79db-4012-80b6-abfae28439ae;\n  style 1711b39d-79db-4012-80b6-abfae28439ae stroke:#2c3143,stroke-width:4px;\n  12[\"Create a Vitessce dashboard\"];\n  11 -->|output| 12;\n  9 -->|renamed_image| 12;\n  6 -->|mask| 12;\n  9093603f-8ee1-424b-8520-c5f5d3e9dc3d[\"Output\\nVitessce dashboard\"];\n  12 --> 9093603f-8ee1-424b-8520-c5f5d3e9dc3d;\n  style 9093603f-8ee1-424b-8520-c5f5d3e9dc3d stroke:#2c3143,stroke-width:4px;",
+          "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\nmarkers.csv\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nPhenotypeWorkflow\"]\n  2[color=lightblue,label=\"ℹ️ Input Collection\\nRaw cycle images\"]\n  3[label=\"Illumination correction with Basic\"]\n  2 -> 3 [label=\"output\"]\n  k8a05fb699e2b4fa4ab8c77d3241f7a86[color=lightseagreen,label=\"Output\\nDFP images\"]\n  3 -> k8a05fb699e2b4fa4ab8c77d3241f7a86\n  ka5432ed5980f4f0483a2b5514019b11b[color=lightseagreen,label=\"Output\\nFFP images\"]\n  3 -> ka5432ed5980f4f0483a2b5514019b11b\n  4[label=\"Stitching and registration with Ashlar\"]\n  3 -> 4 [label=\"output_dfp\"]\n  3 -> 4 [label=\"output_ffp\"]\n  2 -> 4 [label=\"output\"]\n  0 -> 4 [label=\"output\"]\n  k81f2c552cd844d48af14eb252550f35a[color=lightseagreen,label=\"Output\\nRegistered image\"]\n  4 -> k81f2c552cd844d48af14eb252550f35a\n  5[label=\"TMA dearray with UNetCoreograph\"]\n  4 -> 5 [label=\"output\"]\n  kd79b4449f87942a99c790e0a6df0fa79[color=lightseagreen,label=\"Output\\nDearray images\"]\n  5 -> kd79b4449f87942a99c790e0a6df0fa79\n  kc3ae2005725a487ca77a437636f3a296[color=lightseagreen,label=\"Output\\nTMA dearray map\"]\n  5 -> kc3ae2005725a487ca77a437636f3a296\n  k0ed3e92042ce457d9ebef0cd0baa1dea[color=lightseagreen,label=\"Output\\nDearray masks\"]\n  5 -> k0ed3e92042ce457d9ebef0cd0baa1dea\n  6[label=\"Nuclear segmentation\"]\n  5 -> 6 [label=\"tma_sections\"]\n  k65c32086b193440fb1a1e5731bda0820[color=lightseagreen,label=\"Output\\nNuclear mask\"]\n  6 -> k65c32086b193440fb1a1e5731bda0820\n  7[label=\"Convert dearray images to OME-TIFF\"]\n  5 -> 7 [label=\"tma_sections\"]\n  kd1c85ec41aea48ce88c3ede346d9b34f[color=lightseagreen,label=\"Output\\nConverted image\"]\n  7 -> kd1c85ec41aea48ce88c3ede346d9b34f\n  8[label=\"Cell feature quantification with MC-Quant\"]\n  0 -> 8 [label=\"output\"]\n  5 -> 8 [label=\"tma_sections\"]\n  6 -> 8 [label=\"mask\"]\n  ka277be13b5af4591b86ba8679f561677[color=lightseagreen,label=\"Output\\nPrimary Mask Quantification\"]\n  8 -> ka277be13b5af4591b86ba8679f561677\n  9[label=\"Rename OME-TIFF channels\"]\n  0 -> 9 [label=\"output\"]\n  7 -> 9 [label=\"output\"]\n  k0867cba20ac1413db6d0aba8b2dcbe0c[color=lightseagreen,label=\"Output\\nRenamed image\"]\n  9 -> k0867cba20ac1413db6d0aba8b2dcbe0c\n  10[label=\"Convert to Anndata\"]\n  8 -> 10 [label=\"cellmask\"]\n  ka10efe575e3646258ac8a4bd27b3ce7e[color=lightseagreen,label=\"Output\\nAnndata feature table\"]\n  10 -> ka10efe575e3646258ac8a4bd27b3ce7e\n  11[label=\"Scimap phenotyping\"]\n  10 -> 11 [label=\"outfile\"]\n  1 -> 11 [label=\"output\"]\n  k1711b39d79db401280b6abfae28439ae[color=lightseagreen,label=\"Output\\nPhenotyped feature table\"]\n  11 -> k1711b39d79db401280b6abfae28439ae\n  12[label=\"Create a Vitessce dashboard\"]\n  11 -> 12 [label=\"output\"]\n  9 -> 12 [label=\"renamed_image\"]\n  6 -> 12 [label=\"mask\"]\n  k9093603f8ee1424b8520c5f5d3e9dc3d[color=lightseagreen,label=\"Output\\nVitessce dashboard\"]\n  12 -> k9093603f8ee1424b8520c5f5d3e9dc3d\n}",
           "workflow_tools": [
-            "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy2",
-            "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.1+galaxy1",
-            "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/0.17.7+galaxy0",
-            "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/0.17.7+galaxy0",
-            "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/1.0.4+galaxy0",
+            "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy3",
+            "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.2+galaxy1",
+            "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/2.1.0+galaxy2",
+            "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/2.1.0+galaxy2",
+            "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/3.5.1+galaxy0",
             "toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/6.7.0+galaxy0",
-            "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.14.0+galaxy1",
-            "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.0.3+galaxy1",
+            "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.18.0+galaxy1",
+            "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.1.1+galaxy2",
             "toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/2.2.8+galaxy1",
-            "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.5.3+galaxy1"
+            "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.6.0+galaxy0"
           ],
           "inputs": [
             {
-              "annotation": "",
+              "annotation": "CSV file containing marker names",
               "content_id": null,
               "errors": null,
               "id": 0,
               "input_connections": {},
               "inputs": [
                 {
-                  "description": "",
-                  "name": "Input Dataset Collection"
-                }
-              ],
-              "label": "Input Dataset Collection",
-              "name": "Input dataset collection",
-              "outputs": [],
-              "position": {
-                "bottom": 371.28125,
-                "height": 82.1953125,
-                "left": -742,
-                "right": -542,
-                "top": 289.0859375,
-                "width": 200,
-                "x": -742,
-                "y": 289.0859375
-              },
-              "tool_id": null,
-              "tool_state": "{\"optional\": false, \"tag\": \"\", \"collection_type\": \"list\"}",
-              "tool_version": null,
-              "type": "data_collection_input",
-              "uuid": "df4b5b73-b816-4362-b95b-f4571766abfe",
-              "workflow_outputs": []
-            },
-            {
-              "annotation": "",
-              "content_id": null,
-              "errors": null,
-              "id": 1,
-              "input_connections": {},
-              "inputs": [
-                {
-                  "description": "",
+                  "description": "CSV file containing marker names",
                   "name": "markers.csv"
                 }
               ],
@@ -1473,31 +1483,31 @@
               "name": "Input dataset",
               "outputs": [],
               "position": {
-                "bottom": 760.8828125,
-                "height": 61.796875,
-                "left": -408,
-                "right": -208,
-                "top": 699.0859375,
-                "width": 200,
-                "x": -408,
-                "y": 699.0859375
+                "bottom": 661.8984375,
+                "height": 30.8984375,
+                "left": -685,
+                "right": -585,
+                "top": 631,
+                "width": 100,
+                "x": -685,
+                "y": 631
               },
               "tool_id": null,
               "tool_state": "{\"optional\": false, \"tag\": \"\"}",
               "tool_version": null,
               "type": "data_input",
-              "uuid": "8d2425da-b96c-4955-81c3-9303bec9cf9a",
+              "uuid": "25572610-4522-4ff0-abdd-88bb5ca24d78",
               "workflow_outputs": []
             },
             {
-              "annotation": "",
+              "annotation": "Scimap formatted phenotype workflow",
               "content_id": null,
               "errors": null,
-              "id": 2,
+              "id": 1,
               "input_connections": {},
               "inputs": [
                 {
-                  "description": "",
+                  "description": "Scimap formatted phenotype workflow",
                   "name": "PhenotypeWorkflow"
                 }
               ],
@@ -1505,32 +1515,64 @@
               "name": "Input dataset",
               "outputs": [],
               "position": {
-                "bottom": 704.28125,
-                "height": 82.1953125,
-                "left": 911,
-                "right": 1111,
-                "top": 622.0859375,
-                "width": 200,
-                "x": 911,
-                "y": 622.0859375
+                "bottom": 790.09765625,
+                "height": 41.09765625,
+                "left": 897,
+                "right": 997,
+                "top": 749,
+                "width": 100,
+                "x": 897,
+                "y": 749
               },
               "tool_id": null,
               "tool_state": "{\"optional\": false, \"format\": [\"csv\"], \"tag\": \"\"}",
               "tool_version": null,
               "type": "data_input",
-              "uuid": "9748c022-951a-40b6-9371-fc35ee908110",
+              "uuid": "4054ab54-4ac3-4577-ab70-3d8a17f0df49",
+              "workflow_outputs": []
+            },
+            {
+              "annotation": "Raw TIFF images (CZI, TIFF) in an round-ordered list",
+              "content_id": null,
+              "errors": null,
+              "id": 2,
+              "input_connections": {},
+              "inputs": [
+                {
+                  "description": "Raw TIFF images (CZI, TIFF) in an round-ordered list",
+                  "name": "Raw cycle images"
+                }
+              ],
+              "label": "Raw cycle images",
+              "name": "Input dataset collection",
+              "outputs": [],
+              "position": {
+                "bottom": 611.09765625,
+                "height": 41.09765625,
+                "left": -1221,
+                "right": -1121,
+                "top": 570,
+                "width": 100,
+                "x": -1221,
+                "y": 570
+              },
+              "tool_id": null,
+              "tool_state": "{\"optional\": false, \"tag\": \"\", \"collection_type\": \"list\"}",
+              "tool_version": null,
+              "type": "data_collection_input",
+              "uuid": "319b84a9-8bb4-459d-8808-236bef8c5326",
               "workflow_outputs": []
             }
           ],
           "outputs": [
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.0.3+galaxy1",
+              "annotation": "Illumination correction",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.1.1+galaxy2",
               "errors": null,
               "id": 3,
               "input_connections": {
                 "in_files": {
-                  "id": 0,
+                  "id": 2,
                   "output_name": "output"
                 }
               },
@@ -1540,7 +1582,7 @@
                   "name": "in_files"
                 }
               ],
-              "label": null,
+              "label": "Illumination correction with Basic",
               "name": "BaSiC Illumination",
               "outputs": [
                 {
@@ -1553,43 +1595,43 @@
                 }
               ],
               "position": {
-                "bottom": 475.875,
-                "height": 184.7890625,
-                "left": -430,
-                "right": -230,
-                "top": 291.0859375,
-                "width": 200,
-                "x": -430,
-                "y": 291.0859375
+                "bottom": 537.99609375,
+                "height": 71.99609375,
+                "left": -941,
+                "right": -841,
+                "top": 466,
+                "width": 100,
+                "x": -941,
+                "y": 466
               },
               "post_job_actions": {},
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.0.3+galaxy1",
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.1.1+galaxy2",
               "tool_shed_repository": {
-                "changeset_revision": "acc6f509968c",
+                "changeset_revision": "7ee5b6f7533e",
                 "name": "basic_illumination",
                 "owner": "perssond",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
               "tool_state": "{\"in_files\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_version": "1.1.1+galaxy2",
               "type": "tool",
-              "uuid": "d8dcb396-6420-4fd4-9ac8-8b4a86bc1767",
+              "uuid": "be2b9559-acd5-433d-94a3-ab932d8a7be9",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "DFP images",
                   "output_name": "output_dfp",
-                  "uuid": "1c6a93d0-6f2b-442a-a255-bfea77cb9c4f"
+                  "uuid": "8a05fb69-9e2b-4fa4-ab8c-77d3241f7a86"
                 },
                 {
-                  "label": null,
+                  "label": "FFP images",
                   "output_name": "output_ffp",
-                  "uuid": "b30ada0d-9d98-4cb4-aeac-570d42683135"
+                  "uuid": "a5432ed5-980f-4f04-83a2-b5514019b11b"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.14.0+galaxy1",
+              "annotation": "Stitching and registration",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.18.0+galaxy1",
               "errors": null,
               "id": 4,
               "input_connections": {
@@ -1602,33 +1644,16 @@
                   "output_name": "output_ffp"
                 },
                 "lraw": {
-                  "id": 0,
+                  "id": 2,
                   "output_name": "output"
                 },
-                "upgrade|markers_file": {
-                  "id": 1,
+                "rename|markers_file": {
+                  "id": 0,
                   "output_name": "output"
                 }
               },
-              "inputs": [
-                {
-                  "description": "runtime parameter for tool ASHLAR",
-                  "name": "ldfp"
-                },
-                {
-                  "description": "runtime parameter for tool ASHLAR",
-                  "name": "lffp"
-                },
-                {
-                  "description": "runtime parameter for tool ASHLAR",
-                  "name": "lraw"
-                },
-                {
-                  "description": "runtime parameter for tool ASHLAR",
-                  "name": "upgrade"
-                }
-              ],
-              "label": null,
+              "inputs": [],
+              "label": "Stitching and registration with Ashlar",
               "name": "ASHLAR",
               "outputs": [
                 {
@@ -1637,37 +1662,37 @@
                 }
               ],
               "position": {
-                "bottom": 493.875,
-                "height": 204.7890625,
-                "left": -168,
-                "right": 32,
-                "top": 289.0859375,
-                "width": 200,
-                "x": -168,
-                "y": 289.0859375
+                "bottom": 555.39453125,
+                "height": 102.39453125,
+                "left": -443,
+                "right": -343,
+                "top": 453,
+                "width": 100,
+                "x": -443,
+                "y": 453
               },
               "post_job_actions": {},
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.14.0+galaxy1",
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.18.0+galaxy1",
               "tool_shed_repository": {
-                "changeset_revision": "33ab2058c6d9",
+                "changeset_revision": "0b8423c7ee3e",
                 "name": "ashlar",
                 "owner": "perssond",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"adv\": {\"align_channel\": \"0\", \"filter_sigma\": null, \"tile_size\": null, \"flip_mosaic_x\": \"false\", \"flip_mosaic_y\": \"false\", \"pyramid\": \"true\"}, \"flip_x\": \"false\", \"flip_y\": \"false\", \"ldfp\": {\"__class__\": \"RuntimeValue\"}, \"lffp\": {\"__class__\": \"RuntimeValue\"}, \"lraw\": {\"__class__\": \"RuntimeValue\"}, \"max_shift\": \"30\", \"upgrade\": {\"decide\": \"do_upgrade\", \"__current_case__\": 0, \"markers_file\": {\"__class__\": \"RuntimeValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"adv\": {\"align_channel\": \"0\", \"stitch_alpha\": null, \"filter_sigma\": null, \"tile_size\": null, \"flip_mosaic_x\": \"false\", \"flip_mosaic_y\": \"false\"}, \"flip_x\": \"false\", \"flip_y\": \"false\", \"ldfp\": {\"__class__\": \"ConnectedValue\"}, \"lffp\": {\"__class__\": \"ConnectedValue\"}, \"lraw\": {\"__class__\": \"ConnectedValue\"}, \"max_shift\": \"30\", \"rename\": {\"decide\": \"do_rename\", \"__current_case__\": 0, \"markers_file\": {\"__class__\": \"ConnectedValue\"}}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "1.18.0+galaxy1",
               "type": "tool",
-              "uuid": "01551249-f885-48f6-95de-45d12c255066",
+              "uuid": "c107e2b5-7558-4841-a8a0-694398bb4882",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "Registered image",
                   "output_name": "output",
-                  "uuid": "d86f47ed-259c-47f9-b61c-1538653c0733"
+                  "uuid": "81f2c552-cd84-4d48-af14-eb252550f35a"
                 }
               ]
             },
             {
-              "annotation": "",
+              "annotation": "TMA dearray",
               "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/2.2.8+galaxy1",
               "errors": null,
               "id": 5,
@@ -1677,13 +1702,8 @@
                   "output_name": "output"
                 }
               },
-              "inputs": [
-                {
-                  "description": "runtime parameter for tool UNetCoreograph",
-                  "name": "source_image"
-                }
-              ],
-              "label": null,
+              "inputs": [],
+              "label": "TMA dearray with UNetCoreograph",
               "name": "UNetCoreograph",
               "outputs": [
                 {
@@ -1700,14 +1720,14 @@
                 }
               ],
               "position": {
-                "bottom": 585.8671875,
-                "height": 296.78125,
-                "left": 81,
-                "right": 281,
-                "top": 289.0859375,
-                "width": 200,
-                "x": 81,
-                "y": 289.0859375
+                "bottom": 604.1953125,
+                "height": 87.1953125,
+                "left": -165,
+                "right": -65,
+                "top": 517,
+                "width": 100,
+                "x": -165,
+                "y": 517
               },
               "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/2.2.8+galaxy1",
@@ -1717,31 +1737,31 @@
                 "owner": "perssond",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"buffer\": \"2.0\", \"channel\": \"0\", \"cluster\": \"false\", \"downsamplefactor\": \"5\", \"sensitivity\": \"0.3\", \"source_image\": {\"__class__\": \"RuntimeValue\"}, \"tissue\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"buffer\": \"2.0\", \"channel\": \"0\", \"cluster\": \"false\", \"downsamplefactor\": \"5\", \"sensitivity\": \"0.3\", \"source_image\": {\"__class__\": \"ConnectedValue\"}, \"tissue\": \"false\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "2.2.8+galaxy1",
               "type": "tool",
-              "uuid": "307e61ea-1b23-41dc-82c8-3df1988179c1",
+              "uuid": "3313c99a-963d-422e-bec4-e3888c443260",
               "workflow_outputs": [
                 {
-                  "label": null,
-                  "output_name": "masks",
-                  "uuid": "69ca4dab-bd1f-49bc-84c5-71360be56577"
-                },
-                {
-                  "label": null,
-                  "output_name": "TMA_MAP",
-                  "uuid": "e4f74e11-7d44-4cea-a065-8c15af8171df"
-                },
-                {
-                  "label": null,
+                  "label": "Dearray images",
                   "output_name": "tma_sections",
-                  "uuid": "b031e518-f1cc-4bef-9b90-429d36234b1b"
+                  "uuid": "d79b4449-f879-42a9-9c79-0e0a6df0fa79"
+                },
+                {
+                  "label": "TMA dearray map",
+                  "output_name": "TMA_MAP",
+                  "uuid": "c3ae2005-725a-487c-a77a-437636f3a296"
+                },
+                {
+                  "label": "Dearray masks",
+                  "output_name": "masks",
+                  "uuid": "0ed3e920-42ce-457d-9ebe-f0cd0baa1dea"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy2",
+              "annotation": "Nuclear segmentation",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy3",
               "errors": null,
               "id": 6,
               "input_connections": {
@@ -1750,14 +1770,9 @@
                   "output_name": "tma_sections"
                 }
               },
-              "inputs": [
-                {
-                  "description": "runtime parameter for tool Mesmer",
-                  "name": "image"
-                }
-              ],
-              "label": null,
-              "name": "Mesmer",
+              "inputs": [],
+              "label": "Nuclear segmentation",
+              "name": "Perform segmentation of multiplexed tissue data",
               "outputs": [
                 {
                   "name": "mask",
@@ -1765,37 +1780,37 @@
                 }
               ],
               "position": {
-                "bottom": 422.9921875,
-                "height": 133.9921875,
-                "left": 371,
-                "right": 571,
-                "top": 289,
-                "width": 200,
-                "x": 371,
-                "y": 289
+                "bottom": 501.99609375,
+                "height": 66.99609375,
+                "left": 123,
+                "right": 223,
+                "top": 435,
+                "width": 100,
+                "x": 123,
+                "y": 435
               },
               "post_job_actions": {},
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy2",
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy3",
               "tool_shed_repository": {
-                "changeset_revision": "187918c47051",
+                "changeset_revision": "2675ff99a53b",
                 "name": "mesmer",
                 "owner": "goeckslab",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"compartment_select\": {\"compartment\": \"nuclear\", \"__current_case__\": 0, \"nuclear_options\": {\"pixel_expansion\": null, \"maxima_threshold\": \"0.1\", \"adv_options\": {\"maxima_smooth\": \"0\", \"interior_threshold\": \"0.2\", \"interior_smooth\": \"2\", \"small_objects_threshold\": \"15\", \"fill_holes_threshold\": \"15\", \"radius\": \"1\"}}}, \"image\": {\"__class__\": \"RuntimeValue\"}, \"image_mpp\": \"0.65\", \"nuclear_channels\": \"0\", \"squeeze\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"compartment_select\": {\"compartment\": \"nuclear\", \"__current_case__\": 0, \"nuclear_options\": {\"pixel_expansion\": null, \"maxima_threshold\": \"0.1\", \"adv_options\": {\"maxima_smooth\": \"0\", \"interior_threshold\": \"0.2\", \"interior_smooth\": \"2\", \"small_objects_threshold\": \"15\", \"fill_holes_threshold\": \"15\", \"radius\": \"1\"}}}, \"image\": {\"__class__\": \"ConnectedValue\"}, \"image_mpp\": \"0.65\", \"nuclear_channels\": \"0\", \"squeeze\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "0.12.3+galaxy3",
               "type": "tool",
-              "uuid": "d15a2489-42d5-47f2-8da2-a4d86c293af0",
+              "uuid": "17d89ea7-98f6-4a1f-bc2b-276a0a00f726",
               "workflow_outputs": [
                 {
-                  "label": "Mesmer on input dataset(s): Mask",
+                  "label": "Nuclear mask",
                   "output_name": "mask",
-                  "uuid": "ee73bee3-59e7-4e1c-87fd-197b8eac7e15"
+                  "uuid": "65c32086-b193-440f-b1a1-e5731bda0820"
                 }
               ]
             },
             {
-              "annotation": "",
+              "annotation": "Convert to OME-TIFF",
               "content_id": "toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/6.7.0+galaxy0",
               "errors": null,
               "id": 7,
@@ -1805,13 +1820,8 @@
                   "output_name": "tma_sections"
                 }
               },
-              "inputs": [
-                {
-                  "description": "runtime parameter for tool Convert image",
-                  "name": "input_file"
-                }
-              ],
-              "label": null,
+              "inputs": [],
+              "label": "Convert dearray images to OME-TIFF",
               "name": "Convert image",
               "outputs": [
                 {
@@ -1820,14 +1830,14 @@
                 }
               ],
               "position": {
-                "bottom": 729.59375,
-                "height": 113.59375,
-                "left": 345,
-                "right": 545,
-                "top": 616,
-                "width": 200,
-                "x": 345,
-                "y": 616
+                "bottom": 726.796875,
+                "height": 56.796875,
+                "left": 123,
+                "right": 223,
+                "top": 670,
+                "width": 100,
+                "x": 123,
+                "y": 670
               },
               "post_job_actions": {},
               "tool_id": "toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/6.7.0+galaxy0",
@@ -1837,26 +1847,26 @@
                 "owner": "imgteam",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"bigtiff\": \"false\", \"channel_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"compression\": \"False\", \"crop_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"input_file\": {\"__class__\": \"RuntimeValue\"}, \"noflat\": \"true\", \"out_format\": \"ome.tiff\", \"pyramid_options\": {\"generate\": \"True\", \"__current_case__\": 0, \"pyramid_resolutions\": \"4\", \"pyramid_scale\": \"2\"}, \"range_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"series_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"tile_options\": {\"extract\": \"True\", \"__current_case__\": 1, \"tile_x\": \"512\", \"tile_y\": \"512\"}, \"timepoint_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"z_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"bigtiff\": \"false\", \"channel_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"compression\": \"False\", \"crop_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"input_file\": {\"__class__\": \"ConnectedValue\"}, \"noflat\": \"true\", \"out_format\": \"ome.tiff\", \"pyramid_options\": {\"generate\": \"True\", \"__current_case__\": 0, \"pyramid_resolutions\": \"4\", \"pyramid_scale\": \"2\"}, \"range_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"series_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"tile_options\": {\"extract\": \"True\", \"__current_case__\": 1, \"tile_x\": \"512\", \"tile_y\": \"512\"}, \"timepoint_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"z_options\": {\"extract\": \"False\", \"__current_case__\": 0}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "6.7.0+galaxy0",
               "type": "tool",
-              "uuid": "0bb1cbe2-35ee-4711-a37c-8ffe769a953a",
+              "uuid": "48525e3f-e21f-453b-9b3f-5d29ea433c5c",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "Converted image",
                   "output_name": "output",
-                  "uuid": "e4bd4c1a-00b4-47f9-8e75-7968b5824e19"
+                  "uuid": "d1c85ec4-1aea-48ce-88c3-ede346d9b34f"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.5.3+galaxy1",
+              "annotation": "Quantify cell features",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.6.0+galaxy0",
               "errors": null,
               "id": 8,
               "input_connections": {
                 "channel_names": {
-                  "id": 1,
+                  "id": 0,
                   "output_name": "output"
                 },
                 "image": {
@@ -1886,7 +1896,7 @@
                   "name": "supp_mask"
                 }
               ],
-              "label": null,
+              "label": "Cell feature quantification with MC-Quant",
               "name": "MCQUANT",
               "outputs": [
                 {
@@ -1899,14 +1909,14 @@
                 }
               ],
               "position": {
-                "bottom": 544.5859375,
-                "height": 255.5859375,
-                "left": 638,
-                "right": 838,
-                "top": 289,
-                "width": 200,
-                "x": 638,
-                "y": 289
+                "bottom": 649.79296875,
+                "height": 127.79296875,
+                "left": 401,
+                "right": 501,
+                "top": 522,
+                "width": 100,
+                "x": 401,
+                "y": 522
               },
               "post_job_actions": {
                 "HideDatasetActionsuppmask": {
@@ -1915,33 +1925,33 @@
                   "output_name": "suppmask"
                 }
               },
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.5.3+galaxy1",
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.6.0+galaxy0",
               "tool_shed_repository": {
-                "changeset_revision": "3a916c4e9f5f",
+                "changeset_revision": "e11d5fafd0cc",
                 "name": "quantification",
                 "owner": "perssond",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
               "tool_state": "{\"channel_names\": {\"__class__\": \"RuntimeValue\"}, \"image\": {\"__class__\": \"RuntimeValue\"}, \"intensity_props\": \"\", \"mask_props\": \"\", \"primary_mask\": {\"__class__\": \"RuntimeValue\"}, \"supp_mask\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_version": "1.6.0+galaxy0",
               "type": "tool",
-              "uuid": "e743e3d4-538c-475c-95be-94af7805246c",
+              "uuid": "82ff3a13-840c-4450-8b4a-43befc0c6f24",
               "workflow_outputs": [
                 {
                   "label": "Primary Mask Quantification",
                   "output_name": "cellmask",
-                  "uuid": "fe28534a-2b3f-4ecc-8ba9-a106b2d1425c"
+                  "uuid": "a277be13-b5af-4591-b86b-a8679f561677"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.1+galaxy1",
+              "annotation": "Rename OME-TIFF channels",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.2+galaxy1",
               "errors": null,
               "id": 9,
               "input_connections": {
                 "channel_csv": {
-                  "id": 1,
+                  "id": 0,
                   "output_name": "output"
                 },
                 "image": {
@@ -1951,16 +1961,16 @@
               },
               "inputs": [
                 {
-                  "description": "runtime parameter for tool Rename OME-TIFF Channels",
+                  "description": "runtime parameter for tool Rename OME-TIFF channels",
                   "name": "channel_csv"
                 },
                 {
-                  "description": "runtime parameter for tool Rename OME-TIFF Channels",
+                  "description": "runtime parameter for tool Rename OME-TIFF channels",
                   "name": "image"
                 }
               ],
-              "label": null,
-              "name": "Rename OME-TIFF Channels",
+              "label": "Rename OME-TIFF channels",
+              "name": "Rename OME-TIFF channels",
               "outputs": [
                 {
                   "name": "renamed_image",
@@ -1968,38 +1978,38 @@
                 }
               ],
               "position": {
-                "bottom": 825.1875,
-                "height": 205.1875,
-                "left": 651,
-                "right": 851,
-                "top": 620,
-                "width": 200,
-                "x": 651,
-                "y": 620
+                "bottom": 952.39453125,
+                "height": 92.39453125,
+                "left": 1213,
+                "right": 1313,
+                "top": 860,
+                "width": 100,
+                "x": 1213,
+                "y": 860
               },
               "post_job_actions": {},
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.1+galaxy1",
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.2+galaxy1",
               "tool_shed_repository": {
-                "changeset_revision": "09e240a12897",
+                "changeset_revision": "4763362914f4",
                 "name": "rename_tiff_channels",
                 "owner": "goeckslab",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
               "tool_state": "{\"channel_csv\": {\"__class__\": \"RuntimeValue\"}, \"image\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_version": "0.0.2+galaxy1",
               "type": "tool",
-              "uuid": "48533f44-e13e-4dc2-aa36-c8b2ab7fc18f",
+              "uuid": "a04a5ec4-72c1-4f8f-b0c8-b39d9eb28560",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "Renamed image",
                   "output_name": "renamed_image",
-                  "uuid": "4d9e9fea-2636-4b36-9b8c-d8db49dedb23"
+                  "uuid": "0867cba2-0ac1-413d-b6d0-aba8b2dcbe0c"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/0.17.7+galaxy0",
+              "annotation": "Convert to Anndata",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/2.1.0+galaxy2",
               "errors": null,
               "id": 10,
               "input_connections": {
@@ -2008,13 +2018,8 @@
                   "output_name": "cellmask"
                 }
               },
-              "inputs": [
-                {
-                  "description": "runtime parameter for tool Convert McMicro Output to Anndata",
-                  "name": "image_path"
-                }
-              ],
-              "label": null,
+              "inputs": [],
+              "label": "Convert to Anndata",
               "name": "Convert McMicro Output to Anndata",
               "outputs": [
                 {
@@ -2023,38 +2028,38 @@
                 }
               ],
               "position": {
-                "bottom": 423.9921875,
-                "height": 133.9921875,
-                "left": 929,
-                "right": 1129,
-                "top": 290,
-                "width": 200,
-                "x": 929,
-                "y": 290
+                "bottom": 650.1953125,
+                "height": 77.1953125,
+                "left": 679,
+                "right": 779,
+                "top": 573,
+                "width": 100,
+                "x": 679,
+                "y": 573
               },
               "post_job_actions": {},
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/0.17.7+galaxy0",
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/2.1.0+galaxy2",
               "tool_shed_repository": {
-                "changeset_revision": "8ca435ec19be",
+                "changeset_revision": "49c178651194",
                 "name": "scimap_mcmicro_to_anndata",
                 "owner": "goeckslab",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"drop_markers\": \"\", \"image_path\": {\"__class__\": \"RuntimeValue\"}, \"options\": {\"remove_dna\": \"false\", \"remove_string_from_name\": \"\", \"log\": \"true\", \"random_sample\": null, \"CellId\": \"CellID\", \"unique_CellId\": \"false\", \"split\": \"X_centroid\", \"custom_imageid\": \"\", \"min_cells\": null}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"drop_markers\": \"\", \"image_path\": {\"__class__\": \"ConnectedValue\"}, \"options\": {\"remove_dna\": \"false\", \"remove_string_from_name\": \"\", \"log\": \"true\", \"random_sample\": null, \"CellId\": \"CellID\", \"unique_CellId\": \"false\", \"split\": \"X_centroid\", \"custom_imageid\": \"\", \"min_cells\": null}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "2.1.0+galaxy2",
               "type": "tool",
-              "uuid": "9d492127-f07a-4d1b-8e0f-f40ddcdc657a",
+              "uuid": "87db8083-cc54-4583-a6d1-dd80031cbc4f",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "Anndata feature table",
                   "output_name": "outfile",
-                  "uuid": "f798992e-0612-4a4d-9e33-8ee4075eb74a"
+                  "uuid": "a10efe57-5e36-4625-8ac8-a4bd27b3ce7e"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/0.17.7+galaxy0",
+              "annotation": "Scimap phenotyping",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/2.1.0+galaxy2",
               "errors": null,
               "id": 11,
               "input_connections": {
@@ -2063,7 +2068,7 @@
                   "output_name": "outfile"
                 },
                 "gating_workflow": {
-                  "id": 2,
+                  "id": 1,
                   "output_name": "output"
                 }
               },
@@ -2081,57 +2086,47 @@
                   "name": "manual_gates"
                 }
               ],
-              "label": null,
+              "label": "Scimap phenotyping",
               "name": "Single Cell Phenotyping",
               "outputs": [
-                {
-                  "name": "gmm_plots",
-                  "type": "input"
-                },
                 {
                   "name": "output",
                   "type": "h5ad"
                 }
               ],
               "position": {
-                "bottom": 581.3828125,
-                "height": 286.3828125,
-                "left": 1192,
-                "right": 1392,
-                "top": 295,
-                "width": 200,
-                "x": 1192,
-                "y": 295
+                "bottom": 633.9921875,
+                "height": 127.9921875,
+                "left": 1113,
+                "right": 1213,
+                "top": 506,
+                "width": 100,
+                "x": 1113,
+                "y": 506
               },
-              "post_job_actions": {
-                "HideDatasetActiongmm_plots": {
-                  "action_arguments": {},
-                  "action_type": "HideDatasetAction",
-                  "output_name": "gmm_plots"
-                }
-              },
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/0.17.7+galaxy0",
+              "post_job_actions": {},
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/2.1.0+galaxy2",
               "tool_shed_repository": {
-                "changeset_revision": "dcfcad35e847",
+                "changeset_revision": "88fca6e905be",
                 "name": "scimap_phenotyping",
                 "owner": "goeckslab",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"anndata\": {\"__class__\": \"RuntimeValue\"}, \"gating_workflow\": {\"__class__\": \"RuntimeValue\"}, \"manual_gates\": {\"__class__\": \"RuntimeValue\"}, \"rescale_plots\": \"true\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"anndata\": {\"__class__\": \"RuntimeValue\"}, \"gating_workflow\": {\"__class__\": \"RuntimeValue\"}, \"log\": \"true\", \"manual_gates\": {\"__class__\": \"RuntimeValue\"}, \"random_state\": \"0\", \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "2.1.0+galaxy2",
               "type": "tool",
-              "uuid": "c0617ff6-1681-4ab2-a217-b61d71e50e5d",
+              "uuid": "61a05d40-8d52-4c7d-ab68-29e1484628e5",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "Phenotyped feature table",
                   "output_name": "output",
-                  "uuid": "2e53afc6-9a31-43fd-8795-92889b92bcea"
+                  "uuid": "1711b39d-79db-4012-80b6-abfae28439ae"
                 }
               ]
             },
             {
-              "annotation": "",
-              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/1.0.4+galaxy0",
+              "annotation": "Create a Vitessce dashboard",
+              "content_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/3.5.1+galaxy0",
               "errors": null,
               "id": 12,
               "input_connections": {
@@ -2150,53 +2145,63 @@
               },
               "inputs": [
                 {
-                  "description": "runtime parameter for tool Vitessce Visualization",
+                  "description": "runtime parameter for tool Vitessce",
                   "name": "do_phenotyping"
                 },
                 {
-                  "description": "runtime parameter for tool Vitessce Visualization",
+                  "description": "runtime parameter for tool Vitessce",
                   "name": "image"
                 },
                 {
-                  "description": "runtime parameter for tool Vitessce Visualization",
+                  "description": "runtime parameter for tool Vitessce",
                   "name": "masks"
                 }
               ],
-              "label": null,
-              "name": "Vitessce Visualization",
+              "label": "Create a Vitessce dashboard",
+              "name": "Vitessce",
               "outputs": [
                 {
                   "name": "output",
                   "type": "html"
+                },
+                {
+                  "name": "vitessce_config",
+                  "type": "json"
                 }
               ],
               "position": {
-                "bottom": 533.5859375,
-                "height": 235.5859375,
-                "left": 1455,
-                "right": 1655,
-                "top": 298,
-                "width": 200,
-                "x": 1455,
-                "y": 298
+                "bottom": 691.79296875,
+                "height": 122.79296875,
+                "left": 1439,
+                "right": 1539,
+                "top": 569,
+                "width": 100,
+                "x": 1439,
+                "y": 569
               },
-              "post_job_actions": {},
-              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/1.0.4+galaxy0",
+              "post_job_actions": {
+                "HideDatasetActionvitessce_config": {
+                  "action_arguments": {},
+                  "action_type": "HideDatasetAction",
+                  "output_name": "vitessce_config"
+                }
+              },
+              "tool_id": "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/3.5.1+galaxy0",
               "tool_shed_repository": {
-                "changeset_revision": "9f60ef2d586e",
+                "changeset_revision": "068da7f7cd83",
                 "name": "vitessce_spatial",
                 "owner": "goeckslab",
                 "tool_shed": "toolshed.g2.bx.psu.edu"
               },
-              "tool_state": "{\"do_phenotyping\": {\"phenotyping_choice\": \"true\", \"__current_case__\": 0, \"anndata\": {\"__class__\": \"RuntimeValue\"}, \"scatterplot_embeddings\": {\"embedding\": \"umap\", \"__current_case__\": 0, \"options\": {\"n_neighbors\": \"30\", \"n_pcs\": \"10\", \"knn\": \"true\", \"random_state\": \"0\"}}, \"phenotype_factory\": {\"phenotype_mode\": \"choices\", \"__current_case__\": 0, \"phenotypes\": [\"phenotype\"]}}, \"image\": {\"__class__\": \"RuntimeValue\"}, \"masks\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
-              "tool_version": null,
+              "tool_state": "{\"do_phenotyping\": {\"phenotyping_choice\": \"add_h5ad\", \"__current_case__\": 1, \"anndata\": {\"__class__\": \"RuntimeValue\"}, \"scatterplot_embeddings\": {\"embedding\": \"umap\", \"__current_case__\": 0, \"options\": {\"n_neighbors\": \"30\", \"n_pcs\": \"10\", \"knn\": \"true\", \"random_state\": \"0\"}}, \"phenotype_factory\": {\"phenotype_mode\": \"choices\", \"__current_case__\": 0, \"phenotypes\": [\"phenotype\"]}}, \"image\": {\"__class__\": \"RuntimeValue\"}, \"masks\": {\"__class__\": \"RuntimeValue\"}, \"__page__\": null, \"__rerun_remap_job_id__\": null}",
+              "tool_version": "3.5.1+galaxy0",
               "type": "tool",
-              "uuid": "8f4881b5-437e-4ef5-a10f-7ae2275fe758",
+              "uuid": "f3e7aa93-3c92-45ba-aca9-d3a42bc60490",
               "workflow_outputs": [
                 {
-                  "label": null,
+                  "label": "Vitessce dashboard",
                   "output_name": "output",
-                  "uuid": "8f6096d5-f5ae-4eb5-a8bd-d1f79b9b2e47"
+                  "uuid": "9093603f-8ee1-424b-8520-c5f5d3e9dc3d"
                 }
               ]
             }
@@ -2205,31 +2210,25 @@
       ],
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/multiplex-tissue-imaging-TMA/tutorial.json",
       "tools": [
-        "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy2",
-        "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.1+galaxy1",
-        "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/0.17.7+galaxy0",
-        "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/0.17.7+galaxy0",
-        "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/1.0.4+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.9.3+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/celesta/celesta/0.0.0.9+galaxy3",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/gate_finder/gate_finder/3.5.1+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy3",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.2+galaxy1",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/2.1.0+galaxy2",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/2.1.0+galaxy2",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/squidpy_spatial/squidpy_spatial/1.5.0+galaxy2",
+        "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/3.5.1+galaxy0",
         "toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/6.7.0+galaxy0",
-        "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.14.0+galaxy1",
-        "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.0.3+galaxy1",
+        "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.18.0+galaxy1",
+        "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.1.1+galaxy2",
         "toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/2.2.8+galaxy1",
-        "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.5.3+galaxy1"
+        "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.6.0+galaxy0",
+        "toolshed.g2.bx.psu.edu/repos/watsocam/palom/palom/2022.8.2+galaxy0"
       ],
       "supported_servers": {
         "exact": [],
-        "inexact": [
-          {
-            "url": "https://usegalaxy.be/",
-            "name": "UseGalaxy.be",
-            "usegalaxy": false
-          },
-          {
-            "url": "https://usegalaxy.no/",
-            "name": "UseGalaxy.no",
-            "usegalaxy": false
-          }
-        ]
+        "inexact": []
       },
       "supported_servers_matrix": {
         "servers": [
@@ -2329,6 +2328,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -2396,7 +2400,7 @@
         ],
         "tools": [
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy2",
+            "id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/scanpy_compute_graph/scanpy_compute_graph/1.9.3+galaxy0",
             "servers": [
               {
                 "state": "missing",
@@ -2476,6 +2480,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -2495,20 +2503,452 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "inexact",
-                "versions": [
-                  "0.12.3+galaxy3"
-                ],
+                "state": "missing",
                 "server": "https://usegalaxy.be/"
               },
               {
-                "state": "exact",
-                "version": "0.12.3+galaxy2",
+                "state": "inexact",
+                "versions": [
+                  "1.4.3+galaxy0"
+                ],
                 "server": "https://usegalaxy.cz/"
               },
               {
                 "state": "exact",
-                "version": "0.12.3+galaxy2",
+                "version": "1.9.3+galaxy0",
+                "server": "https://usegalaxy.eu"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.fr/"
+              },
+              {
+                "state": "inexact",
+                "versions": [
+                  "1.4.3+galaxy0"
+                ],
+                "server": "https://usegalaxy.no/"
+              },
+              {
+                "state": "exact",
+                "version": "1.9.3+galaxy0",
+                "server": "https://usegalaxy.org"
+              },
+              {
+                "state": "exact",
+                "version": "1.9.3+galaxy0",
+                "server": "https://usegalaxy.org.au"
+              },
+              {
+                "state": "missing",
+                "server": "https://viralvariant.anses.fr/"
+              }
+            ],
+            "version": "1.9.3+galaxy0"
+          },
+          {
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/celesta/celesta/0.0.0.9+galaxy3",
+            "servers": [
+              {
+                "state": "missing",
+                "server": "http://apostl.moffitt.org/"
+              },
+              {
+                "state": "missing",
+                "server": "https://iris.angers.inra.fr/galaxypub-cfbp"
+              },
+              {
+                "state": "missing",
+                "server": "https://vm-chemflow-francegrille.eu/"
+              },
+              {
+                "state": "missing",
+                "server": "https://hyperbrowser.uio.no/coloc-stats"
+              },
+              {
+                "state": "missing",
+                "server": "http://corgat.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://coralsnp.science.psu.edu/galaxy/"
+              },
+              {
+                "state": "missing",
+                "server": "http://cropgalaxy.excellenceinbreeding.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://dintor.eurac.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://www.freebioinfo.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://igg.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.mesocentre.uca.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.pasteur.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
+                "server": "http://gigagalaxy.net/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy-web.ipk-gatersleben.de"
+              },
+              {
+                "state": "missing",
+                "server": "https://www.immportgalaxy.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.interactomix.com/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://neo.engr.uconn.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://mapping-by-sequencing.vm.uni-freiburg.de:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.inf.ethz.ch"
+              },
+              {
+                "state": "missing",
+                "server": "https://palfinder.ls.manchester.ac.uk/"
+              },
+              {
+                "state": "missing",
+                "server": "http://pepsimili.e-nios.com:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.be/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.cz/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.eu"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.no/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org.au"
+              },
+              {
+                "state": "missing",
+                "server": "https://viralvariant.anses.fr/"
+              }
+            ],
+            "version": "0.0.0.9+galaxy3"
+          },
+          {
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/gate_finder/gate_finder/3.5.1+galaxy0",
+            "servers": [
+              {
+                "state": "missing",
+                "server": "http://apostl.moffitt.org/"
+              },
+              {
+                "state": "missing",
+                "server": "https://iris.angers.inra.fr/galaxypub-cfbp"
+              },
+              {
+                "state": "missing",
+                "server": "https://vm-chemflow-francegrille.eu/"
+              },
+              {
+                "state": "missing",
+                "server": "https://hyperbrowser.uio.no/coloc-stats"
+              },
+              {
+                "state": "missing",
+                "server": "http://corgat.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://coralsnp.science.psu.edu/galaxy/"
+              },
+              {
+                "state": "missing",
+                "server": "http://cropgalaxy.excellenceinbreeding.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://dintor.eurac.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://www.freebioinfo.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://igg.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.mesocentre.uca.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.pasteur.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
+                "server": "http://gigagalaxy.net/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy-web.ipk-gatersleben.de"
+              },
+              {
+                "state": "missing",
+                "server": "https://www.immportgalaxy.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.interactomix.com/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://neo.engr.uconn.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://mapping-by-sequencing.vm.uni-freiburg.de:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.inf.ethz.ch"
+              },
+              {
+                "state": "missing",
+                "server": "https://palfinder.ls.manchester.ac.uk/"
+              },
+              {
+                "state": "missing",
+                "server": "http://pepsimili.e-nios.com:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.be/"
+              },
+              {
+                "state": "inexact",
+                "versions": [
+                  "1.0.4+galaxy0"
+                ],
+                "server": "https://usegalaxy.cz/"
+              },
+              {
+                "state": "exact",
+                "version": "3.5.1+galaxy0",
+                "server": "https://usegalaxy.eu"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.fr/"
+              },
+              {
+                "state": "inexact",
+                "versions": [
+                  "1.0.4+galaxy0"
+                ],
+                "server": "https://usegalaxy.no/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org.au"
+              },
+              {
+                "state": "missing",
+                "server": "https://viralvariant.anses.fr/"
+              }
+            ],
+            "version": "3.5.1+galaxy0"
+          },
+          {
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/mesmer/mesmer/0.12.3+galaxy3",
+            "servers": [
+              {
+                "state": "missing",
+                "server": "http://apostl.moffitt.org/"
+              },
+              {
+                "state": "missing",
+                "server": "https://iris.angers.inra.fr/galaxypub-cfbp"
+              },
+              {
+                "state": "missing",
+                "server": "https://vm-chemflow-francegrille.eu/"
+              },
+              {
+                "state": "missing",
+                "server": "https://hyperbrowser.uio.no/coloc-stats"
+              },
+              {
+                "state": "missing",
+                "server": "http://corgat.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://coralsnp.science.psu.edu/galaxy/"
+              },
+              {
+                "state": "missing",
+                "server": "http://cropgalaxy.excellenceinbreeding.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://dintor.eurac.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://www.freebioinfo.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://igg.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.mesocentre.uca.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.pasteur.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
+                "server": "http://gigagalaxy.net/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy-web.ipk-gatersleben.de"
+              },
+              {
+                "state": "missing",
+                "server": "https://www.immportgalaxy.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.interactomix.com/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://neo.engr.uconn.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://mapping-by-sequencing.vm.uni-freiburg.de:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.inf.ethz.ch"
+              },
+              {
+                "state": "missing",
+                "server": "https://palfinder.ls.manchester.ac.uk/"
+              },
+              {
+                "state": "missing",
+                "server": "http://pepsimili.e-nios.com:8080/"
+              },
+              {
+                "state": "exact",
+                "version": "0.12.3+galaxy3",
+                "server": "https://usegalaxy.be/"
+              },
+              {
+                "state": "inexact",
+                "versions": [
+                  "0.3.1+galaxy0",
+                  "0.3.1+galaxy1",
+                  "0.12.3+galaxy2"
+                ],
+                "server": "https://usegalaxy.cz/"
+              },
+              {
+                "state": "exact",
+                "version": "0.12.3+galaxy3",
                 "server": "https://usegalaxy.eu"
               },
               {
@@ -2535,10 +2975,10 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "0.12.3+galaxy2"
+            "version": "0.12.3+galaxy3"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.1+galaxy1",
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/rename_tiff_channels/rename_tiff_channels/0.0.2+galaxy1",
             "servers": [
               {
                 "state": "missing",
@@ -2618,6 +3058,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -2637,18 +3081,22 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "0.0.1+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "0.0.1+galaxy1"
+                ],
                 "server": "https://usegalaxy.be/"
               },
               {
-                "state": "exact",
-                "version": "0.0.1+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "0.0.1+galaxy1"
+                ],
                 "server": "https://usegalaxy.cz/"
               },
               {
                 "state": "exact",
-                "version": "0.0.1+galaxy1",
+                "version": "0.0.2+galaxy1",
                 "server": "https://usegalaxy.eu"
               },
               {
@@ -2656,8 +3104,10 @@
                 "server": "https://usegalaxy.fr/"
               },
               {
-                "state": "exact",
-                "version": "0.0.1+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "0.0.1+galaxy1"
+                ],
                 "server": "https://usegalaxy.no/"
               },
               {
@@ -2673,10 +3123,10 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "0.0.1+galaxy1"
+            "version": "0.0.2+galaxy1"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/0.17.7+galaxy0",
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_mcmicro_to_anndata/scimap_mcmicro_to_anndata/2.1.0+galaxy2",
             "servers": [
               {
                 "state": "missing",
@@ -2756,6 +3206,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -2775,8 +3229,10 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "0.17.7+galaxy0",
+                "state": "inexact",
+                "versions": [
+                  "0.17.7+galaxy0"
+                ],
                 "server": "https://usegalaxy.be/"
               },
               {
@@ -2792,8 +3248,10 @@
                 "server": "https://usegalaxy.fr/"
               },
               {
-                "state": "exact",
-                "version": "0.17.7+galaxy0",
+                "state": "inexact",
+                "versions": [
+                  "0.17.7+galaxy0"
+                ],
                 "server": "https://usegalaxy.no/"
               },
               {
@@ -2809,10 +3267,10 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "0.17.7+galaxy0"
+            "version": "2.1.0+galaxy2"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/0.17.7+galaxy0",
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/scimap_phenotyping/scimap_phenotyping/2.1.0+galaxy2",
             "servers": [
               {
                 "state": "missing",
@@ -2892,6 +3350,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -2911,8 +3373,10 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "0.17.7+galaxy0",
+                "state": "inexact",
+                "versions": [
+                  "0.17.7+galaxy0"
+                ],
                 "server": "https://usegalaxy.be/"
               },
               {
@@ -2928,8 +3392,10 @@
                 "server": "https://usegalaxy.fr/"
               },
               {
-                "state": "exact",
-                "version": "0.17.7+galaxy0",
+                "state": "inexact",
+                "versions": [
+                  "0.17.7+galaxy0"
+                ],
                 "server": "https://usegalaxy.no/"
               },
               {
@@ -2945,10 +3411,10 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "0.17.7+galaxy0"
+            "version": "2.1.0+galaxy2"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/1.0.4+galaxy0",
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/squidpy_spatial/squidpy_spatial/1.5.0+galaxy2",
             "servers": [
               {
                 "state": "missing",
@@ -3028,6 +3494,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -3047,18 +3517,16 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "1.0.4+galaxy0",
+                "state": "missing",
                 "server": "https://usegalaxy.be/"
               },
               {
-                "state": "exact",
-                "version": "1.0.4+galaxy0",
+                "state": "missing",
                 "server": "https://usegalaxy.cz/"
               },
               {
                 "state": "exact",
-                "version": "1.0.4+galaxy0",
+                "version": "1.5.0+galaxy2",
                 "server": "https://usegalaxy.eu"
               },
               {
@@ -3066,16 +3534,162 @@
                 "server": "https://usegalaxy.fr/"
               },
               {
-                "state": "exact",
-                "version": "1.0.4+galaxy0",
+                "state": "missing",
                 "server": "https://usegalaxy.no/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org.au"
+              },
+              {
+                "state": "missing",
+                "server": "https://viralvariant.anses.fr/"
+              }
+            ],
+            "version": "1.5.0+galaxy2"
+          },
+          {
+            "id": "toolshed.g2.bx.psu.edu/repos/goeckslab/vitessce_spatial/vitessce_spatial/3.5.1+galaxy0",
+            "servers": [
+              {
+                "state": "missing",
+                "server": "http://apostl.moffitt.org/"
+              },
+              {
+                "state": "missing",
+                "server": "https://iris.angers.inra.fr/galaxypub-cfbp"
+              },
+              {
+                "state": "missing",
+                "server": "https://vm-chemflow-francegrille.eu/"
+              },
+              {
+                "state": "missing",
+                "server": "https://hyperbrowser.uio.no/coloc-stats"
+              },
+              {
+                "state": "missing",
+                "server": "http://corgat.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://coralsnp.science.psu.edu/galaxy/"
+              },
+              {
+                "state": "missing",
+                "server": "http://cropgalaxy.excellenceinbreeding.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://dintor.eurac.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://www.freebioinfo.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://igg.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.mesocentre.uca.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.pasteur.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
+                "server": "http://gigagalaxy.net/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy-web.ipk-gatersleben.de"
+              },
+              {
+                "state": "missing",
+                "server": "https://www.immportgalaxy.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.interactomix.com/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://neo.engr.uconn.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://mapping-by-sequencing.vm.uni-freiburg.de:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.inf.ethz.ch"
+              },
+              {
+                "state": "missing",
+                "server": "https://palfinder.ls.manchester.ac.uk/"
+              },
+              {
+                "state": "missing",
+                "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
                 "state": "inexact",
                 "versions": [
                   "1.0.4+galaxy5",
-                  "3.5.1+galaxy0"
+                  "1.0.4+galaxy0",
+                  "1.0.4+galaxy3"
                 ],
+                "server": "https://usegalaxy.be/"
+              },
+              {
+                "state": "inexact",
+                "versions": [
+                  "1.0.4+galaxy0"
+                ],
+                "server": "https://usegalaxy.cz/"
+              },
+              {
+                "state": "exact",
+                "version": "3.5.1+galaxy0",
+                "server": "https://usegalaxy.eu"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.fr/"
+              },
+              {
+                "state": "inexact",
+                "versions": [
+                  "1.0.4+galaxy0"
+                ],
+                "server": "https://usegalaxy.no/"
+              },
+              {
+                "state": "exact",
+                "version": "3.5.1+galaxy0",
                 "server": "https://usegalaxy.org"
               },
               {
@@ -3090,7 +3704,7 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "1.0.4+galaxy0"
+            "version": "3.5.1+galaxy0"
           },
           {
             "id": "toolshed.g2.bx.psu.edu/repos/imgteam/bfconvert/ip_convertimage/6.7.0+galaxy0",
@@ -3173,6 +3787,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -3245,7 +3863,7 @@
             "version": "6.7.0+galaxy0"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.14.0+galaxy1",
+            "id": "toolshed.g2.bx.psu.edu/repos/perssond/ashlar/ashlar/1.18.0+galaxy1",
             "servers": [
               {
                 "state": "missing",
@@ -3325,6 +3943,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -3344,18 +3966,24 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "1.14.0+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.14.0+galaxy1"
+                ],
                 "server": "https://usegalaxy.be/"
               },
               {
-                "state": "exact",
-                "version": "1.14.0+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.14.0+galaxy1"
+                ],
                 "server": "https://usegalaxy.cz/"
               },
               {
-                "state": "exact",
-                "version": "1.14.0+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.14.0+galaxy1"
+                ],
                 "server": "https://usegalaxy.eu"
               },
               {
@@ -3363,8 +3991,10 @@
                 "server": "https://usegalaxy.fr/"
               },
               {
-                "state": "exact",
-                "version": "1.14.0+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.14.0+galaxy1"
+                ],
                 "server": "https://usegalaxy.no/"
               },
               {
@@ -3380,10 +4010,10 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "1.14.0+galaxy1"
+            "version": "1.18.0+galaxy1"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.0.3+galaxy1",
+            "id": "toolshed.g2.bx.psu.edu/repos/perssond/basic_illumination/basic_illumination/1.1.1+galaxy2",
             "servers": [
               {
                 "state": "missing",
@@ -3463,6 +4093,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -3482,18 +4116,24 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "1.0.3+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.0.3+galaxy1"
+                ],
                 "server": "https://usegalaxy.be/"
               },
               {
-                "state": "exact",
-                "version": "1.0.3+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.0.3+galaxy1"
+                ],
                 "server": "https://usegalaxy.cz/"
               },
               {
-                "state": "exact",
-                "version": "1.0.3+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.0.3+galaxy1"
+                ],
                 "server": "https://usegalaxy.eu"
               },
               {
@@ -3501,8 +4141,10 @@
                 "server": "https://usegalaxy.fr/"
               },
               {
-                "state": "exact",
-                "version": "1.0.3+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.0.3+galaxy1"
+                ],
                 "server": "https://usegalaxy.no/"
               },
               {
@@ -3518,7 +4160,7 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "1.0.3+galaxy1"
+            "version": "1.1.1+galaxy2"
           },
           {
             "id": "toolshed.g2.bx.psu.edu/repos/perssond/coreograph/unet_coreograph/2.2.8+galaxy1",
@@ -3601,6 +4243,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -3659,7 +4305,7 @@
             "version": "2.2.8+galaxy1"
           },
           {
-            "id": "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.5.3+galaxy1",
+            "id": "toolshed.g2.bx.psu.edu/repos/perssond/quantification/quantification/1.6.0+galaxy0",
             "servers": [
               {
                 "state": "missing",
@@ -3739,6 +4385,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -3758,8 +4408,10 @@
                 "server": "http://pepsimili.e-nios.com:8080/"
               },
               {
-                "state": "exact",
-                "version": "1.5.3+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.5.3+galaxy1"
+                ],
                 "server": "https://usegalaxy.be/"
               },
               {
@@ -3789,12 +4441,14 @@
               },
               {
                 "state": "exact",
-                "version": "1.5.3+galaxy1",
+                "version": "1.6.0+galaxy0",
                 "server": "https://usegalaxy.org"
               },
               {
-                "state": "exact",
-                "version": "1.5.3+galaxy1",
+                "state": "inexact",
+                "versions": [
+                  "1.5.3+galaxy1"
+                ],
                 "server": "https://usegalaxy.org.au"
               },
               {
@@ -3802,7 +4456,145 @@
                 "server": "https://viralvariant.anses.fr/"
               }
             ],
-            "version": "1.5.3+galaxy1"
+            "version": "1.6.0+galaxy0"
+          },
+          {
+            "id": "toolshed.g2.bx.psu.edu/repos/watsocam/palom/palom/2022.8.2+galaxy0",
+            "servers": [
+              {
+                "state": "missing",
+                "server": "http://apostl.moffitt.org/"
+              },
+              {
+                "state": "missing",
+                "server": "https://iris.angers.inra.fr/galaxypub-cfbp"
+              },
+              {
+                "state": "missing",
+                "server": "https://vm-chemflow-francegrille.eu/"
+              },
+              {
+                "state": "missing",
+                "server": "https://hyperbrowser.uio.no/coloc-stats"
+              },
+              {
+                "state": "missing",
+                "server": "http://corgat.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://coralsnp.science.psu.edu/galaxy/"
+              },
+              {
+                "state": "missing",
+                "server": "http://cropgalaxy.excellenceinbreeding.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://dintor.eurac.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://www.freebioinfo.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://igg.cloud.ba.infn.it/galaxy"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.mesocentre.uca.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy.pasteur.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxytrakr.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://hyperbrowser.uio.no/hb/"
+              },
+              {
+                "state": "missing",
+                "server": "http://gigagalaxy.net/"
+              },
+              {
+                "state": "missing",
+                "server": "https://galaxy-web.ipk-gatersleben.de"
+              },
+              {
+                "state": "missing",
+                "server": "https://www.immportgalaxy.org/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.interactomix.com/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
+                "server": "https://neo.engr.uconn.edu/"
+              },
+              {
+                "state": "missing",
+                "server": "http://mapping-by-sequencing.vm.uni-freiburg.de:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "http://galaxy.inf.ethz.ch"
+              },
+              {
+                "state": "missing",
+                "server": "https://palfinder.ls.manchester.ac.uk/"
+              },
+              {
+                "state": "missing",
+                "server": "http://pepsimili.e-nios.com:8080/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.be/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.cz/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.eu"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.fr/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.no/"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org"
+              },
+              {
+                "state": "missing",
+                "server": "https://usegalaxy.org.au"
+              },
+              {
+                "state": "missing",
+                "server": "https://viralvariant.anses.fr/"
+              }
+            ],
+            "version": "2022.8.2+galaxy0"
           }
         ]
       },
@@ -3813,37 +4605,65 @@
         "install_resolver_dependencies": true,
         "tools": [
           {
+            "name": "scanpy_compute_graph",
+            "owner": "ebi-gxa",
+            "revisions": "22bd5861706d",
+            "tool_panel_section_label": "Single-cell",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "celesta",
+            "owner": "goeckslab",
+            "revisions": "283636dbfba5",
+            "tool_panel_section_label": "Imaging",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "gate_finder",
+            "owner": "goeckslab",
+            "revisions": "5f4a4dd06bc9",
+            "tool_panel_section_label": "Imaging",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
             "name": "mesmer",
             "owner": "goeckslab",
-            "revisions": "187918c47051",
+            "revisions": "2675ff99a53b",
             "tool_panel_section_label": "Spatial Omics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "rename_tiff_channels",
             "owner": "goeckslab",
-            "revisions": "09e240a12897",
+            "revisions": "4763362914f4",
             "tool_panel_section_label": "Imaging",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "scimap_mcmicro_to_anndata",
             "owner": "goeckslab",
-            "revisions": "8ca435ec19be",
+            "revisions": "49c178651194",
             "tool_panel_section_label": "Imaging",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "scimap_phenotyping",
             "owner": "goeckslab",
-            "revisions": "dcfcad35e847",
+            "revisions": "88fca6e905be",
+            "tool_panel_section_label": "Imaging",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "squidpy_spatial",
+            "owner": "goeckslab",
+            "revisions": "2a5036c29889",
             "tool_panel_section_label": "Imaging",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "vitessce_spatial",
             "owner": "goeckslab",
-            "revisions": "9f60ef2d586e",
+            "revisions": "068da7f7cd83",
             "tool_panel_section_label": "Imaging",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -3857,14 +4677,14 @@
           {
             "name": "ashlar",
             "owner": "perssond",
-            "revisions": "33ab2058c6d9",
+            "revisions": "0b8423c7ee3e",
             "tool_panel_section_label": "Spatial Omics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
           {
             "name": "basic_illumination",
             "owner": "perssond",
-            "revisions": "acc6f509968c",
+            "revisions": "7ee5b6f7533e",
             "tool_panel_section_label": "Spatial Omics",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           },
@@ -3878,13 +4698,20 @@
           {
             "name": "quantification",
             "owner": "perssond",
-            "revisions": "3a916c4e9f5f",
+            "revisions": "e11d5fafd0cc",
             "tool_panel_section_label": "Spatial Omics",
+            "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
+          },
+          {
+            "name": "palom",
+            "owner": "watsocam",
+            "revisions": "e30f622ef2c3",
+            "tool_panel_section_label": "Imaging",
             "tool_shed_url": "https://toolshed.g2.bx.psu.edu/"
           }
         ]
       },
-      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: mesmer\n  owner: goeckslab\n  revisions: 187918c47051\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rename_tiff_channels\n  owner: goeckslab\n  revisions: '09e240a12897'\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: scimap_mcmicro_to_anndata\n  owner: goeckslab\n  revisions: 8ca435ec19be\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: scimap_phenotyping\n  owner: goeckslab\n  revisions: dcfcad35e847\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: vitessce_spatial\n  owner: goeckslab\n  revisions: 9f60ef2d586e\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: bfconvert\n  owner: imgteam\n  revisions: f3360fbeda64\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: ashlar\n  owner: perssond\n  revisions: 33ab2058c6d9\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: basic_illumination\n  owner: perssond\n  revisions: acc6f509968c\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: coreograph\n  owner: perssond\n  revisions: ee92746d141a\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: quantification\n  owner: perssond\n  revisions: 3a916c4e9f5f\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
+      "admin_install_yaml": "---\ninstall_tool_dependencies: true\ninstall_repository_dependencies: true\ninstall_resolver_dependencies: true\ntools:\n- name: scanpy_compute_graph\n  owner: ebi-gxa\n  revisions: 22bd5861706d\n  tool_panel_section_label: Single-cell\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: celesta\n  owner: goeckslab\n  revisions: 283636dbfba5\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: gate_finder\n  owner: goeckslab\n  revisions: 5f4a4dd06bc9\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: mesmer\n  owner: goeckslab\n  revisions: 2675ff99a53b\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: rename_tiff_channels\n  owner: goeckslab\n  revisions: 4763362914f4\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: scimap_mcmicro_to_anndata\n  owner: goeckslab\n  revisions: 49c178651194\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: scimap_phenotyping\n  owner: goeckslab\n  revisions: 88fca6e905be\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: squidpy_spatial\n  owner: goeckslab\n  revisions: 2a5036c29889\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: vitessce_spatial\n  owner: goeckslab\n  revisions: '068da7f7cd83'\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: bfconvert\n  owner: imgteam\n  revisions: f3360fbeda64\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: ashlar\n  owner: perssond\n  revisions: 0b8423c7ee3e\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: basic_illumination\n  owner: perssond\n  revisions: 7ee5b6f7533e\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: coreograph\n  owner: perssond\n  revisions: ee92746d141a\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: quantification\n  owner: perssond\n  revisions: e11d5fafd0cc\n  tool_panel_section_label: Spatial Omics\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n- name: palom\n  owner: watsocam\n  revisions: e30f622ef2c3\n  tool_panel_section_label: Imaging\n  tool_shed_url: https://toolshed.g2.bx.psu.edu/\n",
       "tours": false,
       "video": false,
       "slides_recordings": false,
@@ -4121,7 +4948,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:34 +0000",
+          "modified": "2025-03-13 20:29:30 +0000",
           "mermaid": "flowchart TD\n  0[\"Starting modules\"];\n  1[\"Download images\"];\n  2[\"Segment complete nuclei\"];\n  0 -->|output_pipeline| 2;\n  3[\"Segmentation mask complete nuclei\"];\n  2 -->|output_pipeline| 3;\n  4[\"Label nuclei\"];\n  3 -->|output_pipeline| 4;\n  5[\"Save labelled nuclei\"];\n  4 -->|output_pipeline| 5;\n  6[\"Detect dark holes in nuclei\"];\n  5 -->|output_pipeline| 6;\n  7[\"Segment nucleoli that fall inside nuclei\"];\n  6 -->|output_pipeline| 7;\n  8[\"Segment nucleoli\"];\n  7 -->|output_pipeline| 8;\n  9[\"Convert the segmented nucleoli into an image\"];\n  8 -->|output_pipeline| 9;\n  10[\"Combine masks nuclei + nucleoli\"];\n  9 -->|output_pipeline| 10;\n  11[\"Save combined segmentation masks\"];\n  10 -->|output_pipeline| 11;\n  12[\"Segment all nuclei\"];\n  11 -->|output_pipeline| 12;\n  13[\"Segmentation mask nucleoli including cells touching borders\"];\n  12 -->|output_pipeline| 13;\n  14[\"Extract background\"];\n  13 -->|output_pipeline| 14;\n  15[\"Measure the image granularity\"];\n  14 -->|output_pipeline| 15;\n  16[\"Measure the nuclei texture\"];\n  15 -->|output_pipeline| 16;\n  17[\"Measure the nuclei intensity\"];\n  16 -->|output_pipeline| 17;\n  18[\"Measure size and shape of nuclei and nucleoli\"];\n  17 -->|output_pipeline| 18;\n  19[\"Relate nucleoli with their parent nuclei\"];\n  18 -->|output_pipeline| 19;\n  20[\"Measure the image quality\"];\n  19 -->|output_pipeline| 20;\n  21[\"Measure the area occupied by nuclei and nucleoli\"];\n  20 -->|output_pipeline| 21;\n  22[\"Measure the image intensity\"];\n  21 -->|output_pipeline| 22;\n  23[\"Export measurements\"];\n  22 -->|output_pipeline| 23;\n  24[\"Run CellProfiler\"];\n  1 -->|output_tar| 24;\n  23 -->|output_pipeline| 24;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[label=\"Starting modules\"]\n  1[label=\"Download images\"]\n  2[label=\"Segment complete nuclei\"]\n  0 -> 2 [label=\"output_pipeline\"]\n  3[label=\"Segmentation mask complete nuclei\"]\n  2 -> 3 [label=\"output_pipeline\"]\n  4[label=\"Label nuclei\"]\n  3 -> 4 [label=\"output_pipeline\"]\n  5[label=\"Save labelled nuclei\"]\n  4 -> 5 [label=\"output_pipeline\"]\n  6[label=\"Detect dark holes in nuclei\"]\n  5 -> 6 [label=\"output_pipeline\"]\n  7[label=\"Segment nucleoli that fall inside nuclei\"]\n  6 -> 7 [label=\"output_pipeline\"]\n  8[label=\"Segment nucleoli\"]\n  7 -> 8 [label=\"output_pipeline\"]\n  9[label=\"Convert the segmented nucleoli into an image\"]\n  8 -> 9 [label=\"output_pipeline\"]\n  10[label=\"Combine masks nuclei + nucleoli\"]\n  9 -> 10 [label=\"output_pipeline\"]\n  11[label=\"Save combined segmentation masks\"]\n  10 -> 11 [label=\"output_pipeline\"]\n  12[label=\"Segment all nuclei\"]\n  11 -> 12 [label=\"output_pipeline\"]\n  13[label=\"Segmentation mask nucleoli including cells touching borders\"]\n  12 -> 13 [label=\"output_pipeline\"]\n  14[label=\"Extract background\"]\n  13 -> 14 [label=\"output_pipeline\"]\n  15[label=\"Measure the image granularity\"]\n  14 -> 15 [label=\"output_pipeline\"]\n  16[label=\"Measure the nuclei texture\"]\n  15 -> 16 [label=\"output_pipeline\"]\n  17[label=\"Measure the nuclei intensity\"]\n  16 -> 17 [label=\"output_pipeline\"]\n  18[label=\"Measure size and shape of nuclei and nucleoli\"]\n  17 -> 18 [label=\"output_pipeline\"]\n  19[label=\"Relate nucleoli with their parent nuclei\"]\n  18 -> 19 [label=\"output_pipeline\"]\n  20[label=\"Measure the image quality\"]\n  19 -> 20 [label=\"output_pipeline\"]\n  21[label=\"Measure the area occupied by nuclei and nucleoli\"]\n  20 -> 21 [label=\"output_pipeline\"]\n  22[label=\"Measure the image intensity\"]\n  21 -> 22 [label=\"output_pipeline\"]\n  23[label=\"Export measurements\"]\n  22 -> 23 [label=\"output_pipeline\"]\n  24[label=\"Run CellProfiler\"]\n  1 -> 24 [label=\"output_tar\"]\n  23 -> 24 [label=\"output_pipeline\"]\n}",
           "workflow_tools": [
@@ -5432,6 +6259,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -5579,6 +6411,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -5720,6 +6556,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -5867,6 +6707,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -6008,6 +6852,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -6155,6 +7003,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -6296,6 +7148,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -6443,6 +7299,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -6584,6 +7444,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -6731,6 +7595,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -6872,6 +7740,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -7019,6 +7891,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -7160,6 +8036,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -7307,6 +8187,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -7448,6 +8332,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -7595,6 +8483,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -7736,6 +8628,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -7883,6 +8779,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -8024,6 +8924,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -8171,6 +9075,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -8315,6 +9223,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -8353,8 +9265,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.45",
-                  "0.44.1"
+                  "0.44.1",
+                  "0.45"
                 ],
                 "server": "https://usegalaxy.fr/"
               },
@@ -8374,8 +9286,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.45",
-                  "0.44.1"
+                  "0.44.1",
+                  "0.45"
                 ],
                 "server": "https://usegalaxy.org.au"
               },
@@ -8787,7 +9699,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:33 +0000",
+          "modified": "2025-03-13 20:29:30 +0000",
           "mermaid": "flowchart TD\n  0[\"Mitochondrion detection\"];\n  b84bfb33-15eb-4984-b109-fab32f3813df[\"Output\\nSpot Detection of Mitoflashes\"];\n  0 --> b84bfb33-15eb-4984-b109-fab32f3813df;\n  style b84bfb33-15eb-4984-b109-fab32f3813df stroke:#2c3143,stroke-width:4px;\n  1[\"Mitochondrion tracking\"];\n  0 -->|fn_out| 1;\n  a25e8913-0019-4dd3-aed4-8138e7dd8da3[\"Output\\nSpot Detection Across Frames\"];\n  1 --> a25e8913-0019-4dd3-aed4-8138e7dd8da3;\n  style a25e8913-0019-4dd3-aed4-8138e7dd8da3 stroke:#2c3143,stroke-width:4px;\n  2[\"Curve fitting to measured intensities\"];\n  1 -->|fn_out| 2;\n  a978b043-f089-4d41-8f5d-0df99915dd45[\"Output\\nCurve Fitting for Mitoflash Detection\"];\n  2 --> a978b043-f089-4d41-8f5d-0df99915dd45;\n  style a978b043-f089-4d41-8f5d-0df99915dd45 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[label=\"Mitochondrion detection\"]\n  kb84bfb3315eb4984b109fab32f3813df[color=lightseagreen,label=\"Output\\nSpot Detection of Mitoflashes\"]\n  0 -> kb84bfb3315eb4984b109fab32f3813df\n  1[label=\"Mitochondrion tracking\"]\n  0 -> 1 [label=\"fn_out\"]\n  ka25e891300194dd3aed48138e7dd8da3[color=lightseagreen,label=\"Output\\nSpot Detection Across Frames\"]\n  1 -> ka25e891300194dd3aed48138e7dd8da3\n  2[label=\"Curve fitting to measured intensities\"]\n  1 -> 2 [label=\"fn_out\"]\n  ka978b043f0894d418f5d0df99915dd45[color=lightseagreen,label=\"Output\\nCurve Fitting for Mitoflash Detection\"]\n  2 -> ka978b043f0894d418f5d0df99915dd45\n}",
           "workflow_tools": [
@@ -9063,6 +9975,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -9210,6 +10127,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -9235,9 +10156,9 @@
               {
                 "state": "inexact",
                 "versions": [
+                  "0.0.3",
                   "0.0.2",
-                  "0.0.1",
-                  "0.0.3"
+                  "0.0.1"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -9350,6 +10271,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -9375,9 +10300,9 @@
               {
                 "state": "inexact",
                 "versions": [
+                  "0.0.2",
                   "0.0.1",
-                  "0.0.3",
-                  "0.0.2"
+                  "0.0.3"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -9487,6 +10412,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -9890,7 +10819,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:33 +0000",
+          "modified": "2025-03-13 20:29:30 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Collection\\ninput images\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nrules\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"🛠️ Subworkflow\\nfeature_extraction\"];\n  style 2 fill:#edd,stroke:#900,stroke-width:4px;\n  1 -->|output| 2;\n  0 -->|output| 2;\n  3[\"Collapse Collection\"];\n  2 -->|output| 3;\n  189572e7-e0e6-4818-91b1-441beced67a4[\"Output\\noutput\"];\n  3 --> 189572e7-e0e6-4818-91b1-441beced67a4;\n  style 189572e7-e0e6-4818-91b1-441beced67a4 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Collection\\ninput images\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nrules\"]\n  2[color=lightcoral,label=\"🛠️ Subworkflow\\nfeature_extraction\"]\n  1 -> 2 [label=\"output\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Collapse Collection\"]\n  2 -> 3 [label=\"output\"]\n  k189572e7e0e6481891b1441beced67a4[color=lightseagreen,label=\"Output\\noutput\"]\n  3 -> k189572e7e0e6481891b1441beced67a4\n}",
           "workflow_tools": [
@@ -10110,7 +11039,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:33 +0000",
+          "modified": "2025-03-13 20:29:30 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\ninput image\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"ℹ️ Input Dataset\\nfilter rules\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"Filter 2-D image\"];\n  0 -->|output| 2;\n  3[\"Threshold image\"];\n  2 -->|output| 3;\n  4[\"Convert binary image to label map\"];\n  3 -->|output| 4;\n  5[\"Extract image features\"];\n  4 -->|output| 5;\n  6[\"Filter label map by rules\"];\n  5 -->|output| 6;\n  4 -->|output| 6;\n  1 -->|output| 6;\n  f6f7f638-0f3c-404e-ab2e-5281a0393060[\"Output\\noutput\"];\n  6 --> f6f7f638-0f3c-404e-ab2e-5281a0393060;\n  style f6f7f638-0f3c-404e-ab2e-5281a0393060 stroke:#2c3143,stroke-width:4px;\n  7[\"Extract image features\"];\n  6 -->|output| 7;\n  0 -->|output| 7;\n  31da5e27-19fe-465e-95f0-96d3f6dcaba4[\"Output\\noutput\"];\n  7 --> 31da5e27-19fe-465e-95f0-96d3f6dcaba4;\n  style 31da5e27-19fe-465e-95f0-96d3f6dcaba4 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\ninput image\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nfilter rules\"]\n  2[label=\"Filter 2-D image\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Threshold image\"]\n  2 -> 3 [label=\"output\"]\n  4[label=\"Convert binary image to label map\"]\n  3 -> 4 [label=\"output\"]\n  5[label=\"Extract image features\"]\n  4 -> 5 [label=\"output\"]\n  6[label=\"Filter label map by rules\"]\n  5 -> 6 [label=\"output\"]\n  4 -> 6 [label=\"output\"]\n  1 -> 6 [label=\"output\"]\n  kf6f7f6380f3c404eab2e5281a0393060[color=lightseagreen,label=\"Output\\noutput\"]\n  6 -> kf6f7f6380f3c404eab2e5281a0393060\n  7[label=\"Extract image features\"]\n  6 -> 7 [label=\"output\"]\n  0 -> 7 [label=\"output\"]\n  k31da5e2719fe465e95f096d3f6dcaba4[color=lightseagreen,label=\"Output\\noutput\"]\n  7 -> k31da5e2719fe465e95f096d3f6dcaba4\n}",
           "workflow_tools": [
@@ -10426,6 +11355,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -10573,6 +11507,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -10594,8 +11532,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.0.3",
-                  "0.0.4"
+                  "0.0.4",
+                  "0.0.3"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -10719,6 +11657,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -10867,6 +11809,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -11009,6 +11955,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -11157,6 +12107,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -11309,6 +12263,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -11452,6 +12410,11 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "exact",
+                "version": "5.1.0",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -12028,7 +12991,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:34 +0000",
+          "modified": "2025-03-13 20:29:30 +0000",
           "mermaid": "flowchart TD\n  0[\"ℹ️ Input Dataset\\ninput_image\"];\n  style 0 stroke:#2c3143,stroke-width:4px;\n  1[\"Show image info\"];\n  0 -->|output| 1;\n  2[\"Filter 2-D image\"];\n  0 -->|output| 2;\n  3[\"Perform histogram equalization\"];\n  2 -->|output| 3;\n  4[\"Threshold image\"];\n  2 -->|output| 4;\n  5[\"Convert binary image to label map\"];\n  4 -->|output| 5;\n  6[\"Overlay images\"];\n  3 -->|output| 6;\n  5 -->|output| 6;\n  d362c206-756d-4f04-82f0-bd6f24907e04[\"Output\\nout_png\"];\n  6 --> d362c206-756d-4f04-82f0-bd6f24907e04;\n  style d362c206-756d-4f04-82f0-bd6f24907e04 stroke:#2c3143,stroke-width:4px;\n  7[\"Count objects in label map\"];\n  5 -->|output| 7;\n  9c56017b-20c7-4ad3-8340-d36dd6b2e7b4[\"Output\\noutput\"];\n  7 --> 9c56017b-20c7-4ad3-8340-d36dd6b2e7b4;\n  style 9c56017b-20c7-4ad3-8340-d36dd6b2e7b4 stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[color=lightblue,label=\"ℹ️ Input Dataset\\ninput_image\"]\n  1[label=\"Show image info\"]\n  0 -> 1 [label=\"output\"]\n  2[label=\"Filter 2-D image\"]\n  0 -> 2 [label=\"output\"]\n  3[label=\"Perform histogram equalization\"]\n  2 -> 3 [label=\"output\"]\n  4[label=\"Threshold image\"]\n  2 -> 4 [label=\"output\"]\n  5[label=\"Convert binary image to label map\"]\n  4 -> 5 [label=\"output\"]\n  6[label=\"Overlay images\"]\n  3 -> 6 [label=\"output\"]\n  5 -> 6 [label=\"output\"]\n  kd362c206756d4f0482f0bd6f24907e04[color=lightseagreen,label=\"Output\\nout_png\"]\n  6 -> kd362c206756d4f0482f0bd6f24907e04\n  7[label=\"Count objects in label map\"]\n  5 -> 7 [label=\"output\"]\n  k9c56017b20c74ad38340d36dd6b2e7b4[color=lightseagreen,label=\"Output\\noutput\"]\n  7 -> k9c56017b20c74ad38340d36dd6b2e7b4\n}",
           "workflow_tools": [
@@ -12306,6 +13269,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -12453,6 +13421,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -12474,8 +13446,8 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.0.3",
-                  "0.0.4"
+                  "0.0.4",
+                  "0.0.3"
                 ],
                 "server": "https://usegalaxy.be/"
               },
@@ -12599,6 +13571,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -12746,6 +13722,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -12897,6 +13877,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -13040,6 +14024,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -13191,6 +14179,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -13337,6 +14329,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -13362,9 +14358,9 @@
               {
                 "state": "inexact",
                 "versions": [
-                  "0.0.2",
+                  "0.0.3",
                   "0.0.1",
-                  "0.0.3"
+                  "0.0.2"
                 ],
                 "server": "https://usegalaxy.cz/"
               },
@@ -13480,6 +14476,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -14021,7 +15021,7 @@
             }
           ],
           "test_results": null,
-          "modified": "2025-03-13 15:48:34 +0000",
+          "modified": "2025-03-13 20:29:30 +0000",
           "mermaid": "flowchart TD\n  0[\"Starting Modules\"];\n  1[\"ℹ️ Input Dataset\\nInput dataset\"];\n  style 1 stroke:#2c3143,stroke-width:4px;\n  2[\"ColorToGray\"];\n  0 -->|output_pipeline| 2;\n  3[\"Unzip\"];\n  1 -->|output| 3;\n  4[\"IdentifyPrimaryObjects\"];\n  2 -->|output_pipeline| 4;\n  5[\"MeasureObjectSizeShape\"];\n  4 -->|output_pipeline| 5;\n  6[\"MeasureObjectIntensity\"];\n  5 -->|output_pipeline| 6;\n  7[\"TrackObjects\"];\n  6 -->|output_pipeline| 7;\n  8[\"OverlayOutlines\"];\n  7 -->|output_pipeline| 8;\n  9[\"Tile\"];\n  8 -->|output_pipeline| 9;\n  10[\"SaveImages\"];\n  9 -->|output_pipeline| 10;\n  11[\"ExportToSpreadsheet\"];\n  10 -->|output_pipeline| 11;\n  12[\"CellProfiler\"];\n  3 -->|unzipped| 12;\n  11 -->|output_pipeline| 12;\n  dab4a9ee-fb53-4c74-93f5-8a0c7f7eb13e[\"Output\\nCellProfiler pipeline output files\"];\n  12 --> dab4a9ee-fb53-4c74-93f5-8a0c7f7eb13e;\n  style dab4a9ee-fb53-4c74-93f5-8a0c7f7eb13e stroke:#2c3143,stroke-width:4px;",
           "graph_dot": "digraph main {\n  node [fontname=\"Atkinson Hyperlegible\", shape=box, color=white,style=filled,color=peachpuff,margin=\"0.2,0.2\"];\n  edge [fontname=\"Atkinson Hyperlegible\"];\n  0[label=\"Starting Modules\"]\n  1[color=lightblue,label=\"ℹ️ Input Dataset\\nInput dataset\"]\n  2[label=\"ColorToGray\"]\n  0 -> 2 [label=\"output_pipeline\"]\n  3[label=\"Unzip\"]\n  1 -> 3 [label=\"output\"]\n  4[label=\"IdentifyPrimaryObjects\"]\n  2 -> 4 [label=\"output_pipeline\"]\n  5[label=\"MeasureObjectSizeShape\"]\n  4 -> 5 [label=\"output_pipeline\"]\n  6[label=\"MeasureObjectIntensity\"]\n  5 -> 6 [label=\"output_pipeline\"]\n  7[label=\"TrackObjects\"]\n  6 -> 7 [label=\"output_pipeline\"]\n  8[label=\"OverlayOutlines\"]\n  7 -> 8 [label=\"output_pipeline\"]\n  9[label=\"Tile\"]\n  8 -> 9 [label=\"output_pipeline\"]\n  10[label=\"SaveImages\"]\n  9 -> 10 [label=\"output_pipeline\"]\n  11[label=\"ExportToSpreadsheet\"]\n  10 -> 11 [label=\"output_pipeline\"]\n  12[label=\"CellProfiler\"]\n  3 -> 12 [label=\"unzipped\"]\n  11 -> 12 [label=\"output_pipeline\"]\n  kdab4a9eefb534c7493f58a0c7f7eb13e[color=lightseagreen,label=\"Output\\nCellProfiler pipeline output files\"]\n  12 -> kdab4a9eefb534c7493f58a0c7f7eb13e\n}",
           "workflow_tools": [
@@ -14857,6 +15857,11 @@
             "usegalaxy": false
           },
           {
+            "url": "https://mississippi.sorbonne-universite.fr",
+            "name": "MISSISSIPPI",
+            "usegalaxy": false
+          },
+          {
             "url": "https://neo.engr.uconn.edu/",
             "name": "Mandoiu Lab",
             "usegalaxy": false
@@ -15004,6 +16009,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -15148,6 +16157,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -15282,6 +16295,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -15429,6 +16446,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -15570,6 +16591,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -15717,6 +16742,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -15858,6 +16887,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -16005,6 +17038,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -16139,6 +17176,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -16286,6 +17327,10 @@
               },
               {
                 "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
+              },
+              {
+                "state": "missing",
                 "server": "https://neo.engr.uconn.edu/"
               },
               {
@@ -16420,6 +17465,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -16558,6 +17607,10 @@
               {
                 "state": "missing",
                 "server": "http://galaxy.ul.edu.lb/"
+              },
+              {
+                "state": "missing",
+                "server": "https://mississippi.sorbonne-universite.fr"
               },
               {
                 "state": "missing",
@@ -16925,8 +17978,8 @@
       "id": "imaging/bioimage-metadata",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2025-03-13 15:48:33 +0000",
-      "pub_date": "2025-03-13 15:48:33 +0000",
+      "mod_date": "2025-03-13 20:29:29 +0000",
+      "pub_date": "2025-03-13 20:29:29 +0000",
       "version": 0,
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/bioimage-metadata/tutorial.json",
       "tools": [],
@@ -17223,8 +18276,8 @@
       "id": "imaging/bioimage-REMBI",
       "hands_on": true,
       "slides": false,
-      "mod_date": "2025-03-13 15:48:33 +0000",
-      "pub_date": "2025-03-13 15:48:33 +0000",
+      "mod_date": "2025-03-13 20:29:29 +0000",
+      "pub_date": "2025-03-13 20:29:29 +0000",
       "version": 0,
       "api": "https://training.galaxyproject.org/training-material/api/topics/imaging/tutorials/bioimage-REMBI/tutorial.json",
       "tools": [],
